@@ -1,0 +1,58 @@
+.login{
+	display: flex;
+	justify-content: space-around;
+	min-height: calc(100vh - (3rem + #{$navbar-brand-padding-y}*2 + #{$navbar-padding-y}*2));
+	overflow-x: hidden;
+}
+.login-text{ 
+	h3 {
+		color: #fff;
+		text-shadow: 5px 5px 5px rgba(#000, .25);
+	}
+	p{
+		font-size: .9rem;
+		color: #fff;
+	}
+}
+.login-panel{ 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.login-panel-frame{
+		background-color: rgba($white, .75);;
+		border-radius: $border-radius*.5 $border-radius*5 $border-radius*5 $border-radius*5;
+		//面板-上平-右洞-下凹-左凹
+		-webkit-clip-path: polygon(   0%   0%, 100%   0%, 
+									100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+									100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+									100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+									100% 100%,
+									 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+									  0% 100%);	
+				clip-path: polygon(   0%   0%, 100%   0%, 
+									100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+									100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+									100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+									100% 100%,
+									 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+									  0% 100%);
+		@media screen and (min-width: 576px) {
+		-webkit-clip-path: polygon(   0%   0%, 100%   0%, 
+									100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+									100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+									100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+									100% 100%,
+									 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+									  0% 100%,
+									  0% calc(6rem + 30%), 1rem calc(6rem + 30% - 1rem), 1rem calc(6rem + 1rem), 0% 6rem);	
+				clip-path: polygon(   0%   0%, 100%   0%, 
+									100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+									100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+									100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+									100% 100%,
+									 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+									  0% 100%,
+									  0% calc(6rem + 30%), 1rem calc(6rem + 30% - 1rem), 1rem calc(6rem + 1rem), 0% 6rem);
+		}
+	}
+}

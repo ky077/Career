@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@import "bootstrap-5.3.3/scss/functions";
+@import "bootstrap-5.3.3/variables-custom";
+@import "bootstrap-5.3.3/scss/maps";
+@import "bootstrap-5.3.3/scss/mixins";
+@import "bootstrap-5.3.3/scss/utilities";
+
+@import "base/master";
+
+@import "mend/bootstrap-fileinput";
+@import "mend/googleFontWeight";
+@import "mend/keyframes";
+@import "mend/record";
+@import "mend/textColor";
+@import "mend/ui";
+
+
+@import "pages/bot";
+
+@import "pages/chat";
+@import "pages/guide";
+
+@import "pages/index";
+@import "pages/end";
+@import "pages/history";
+

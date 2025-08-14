@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 734 512">
+  <defs>
+    <style>
+	#cylinder, #bolt{
+		fill: #006767;
+	}
+	@keyframes boltAn {
+		0% { transform: rotateY(0deg); }
+		50% { transform: rotateY(180deg); }
+		100% { transform: rotateY(0deg); }
+	}
+	#bolt {
+		animation: boltAn 3s infinite ease-in-out;
+		transform-origin: 478px 224px;      
+	}
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.8, SVG Export Plug-In . SVG Version: 1.2.0 Build 200)  -->
+  <g>
+    <g id="lock-an">
+      <g id="lock">
+        <path id="cylinder" d="M399,192h-192c-35.3,0-64,28.7-64,64v192c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64v-192c0-35.3-28.7-64-64-64h-128Z"/>
+        <path id="bolt" d="M590,0C510.5,0,446,64.5,446,144v48c0,17.7,14.3,32,32,32s32-14.3,32-32v-48c0-44.2,35.8-80,80-80s80,35.8,80,80v48c0,17.7,14.3,32,32,32s32-14.3,32-32v-48C734,64.5,669.5,0,590,0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

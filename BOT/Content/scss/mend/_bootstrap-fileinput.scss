@@ -1,0 +1,196 @@
+.file-preview {
+    border-radius:10px;
+    border: 1px solid transparent;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    /*.fileinput-remove{
+        display: none;
+    }*/
+}
+.file-drop-zone { 
+    border: 1px dashed $primary;
+    min-height: 290px;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0; 
+}
+.file-drop-zone.clickable {
+    &:hover, &:focus, &:active{
+        border-width: 1px;
+        border-color: $primary;    
+    }
+}
+.file-drop-zone-title {
+    color: $gray-700;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0 10px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1.8;
+    > i{
+        line-height: 1;
+        font-size: 2.5rem;
+    }
+    > small{
+        color: #999;
+        font-size: .9rem;
+    }
+    &:hover{
+        .btn{
+            background-color: $red-100;
+        }
+    }
+}
+.file-preview-status{
+    color: $red !important;
+}
+.file-highlighted {
+    border: 1px dashed $primary !important;
+    background-color: #eee;
+}
+.file-error-message {
+    color: #a94442;
+    background-color: #f2dede;
+    margin: 5px;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    padding: 15px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+.krajee-default.file-preview-frame { 
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    padding: 6px;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.krajee-default.file-preview-frame .kv-file-content {
+    width: 100%;
+    height: 225px;
+    *{
+        width: 100%;    
+    }
+}
+
+.krajee-default.file-preview-frame .kv-file-content.kv-pdf-rendered {
+    width: 100%;
+}
+
+.krajee-default.file-preview-frame[data-template="audio"] .kv-file-content { 
+    width: 100%;
+    height: 225px;
+}
+.krajee-default.file-preview-frame .file-thumbnail-footer {
+    height: .9rem*1.5*2;
+}
+.krajee-default.file-preview-frame:not(.file-preview-error):hover {
+    border: none;
+    box-shadow: none;
+}
+
+.krajee-default .file-footer-caption {
+    display: block;
+    text-align: center;
+    padding-top: 0;
+    font-size: .9rem;
+    color: #999;
+    margin-bottom: 0;
+    font-family: 'Noto Sans',
+                 'Noto Sans TC', 
+                 'Microsoft JhengHei', 
+                 'PingFang TC',
+                 'Heiti TC', 
+                 'LiHei Pro',
+                 sans-serif !important; 
+    *{
+        font-family: 'Noto Sans',
+                 'Noto Sans TC', 
+                 'Microsoft JhengHei', 
+                 'PingFang TC',
+                 'Heiti TC', 
+                 'LiHei Pro',
+                 sans-serif !important;    
+    }
+}
+samp {
+    font-family: 'Noto Sans',
+                 'Noto Sans TC', 
+                 'Microsoft JhengHei', 
+                 'PingFang TC',
+                 'Heiti TC', 
+                 'LiHei Pro',
+                 sans-serif !important; 
+}
+.krajee-default .file-caption-info, 
+.krajee-default .file-size-info {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: .9rem*1.5;
+    margin: auto;
+    line-height: 1.5;
+}
+.krajee-default .file-drag-handle, 
+.krajee-default .file-upload-indicator{
+    position: absolute;
+    bottom: 0;
+    left: 0;  
+    display: none;
+}
+.krajee-default .file-footer-buttons {
+    float: right;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    button{
+        color: $primary;
+        border-color: transparent;
+        &:hover, &:focus, &:active{
+            color: $red-600;
+            border-color: transparent !important;
+            background-color: transparent !important;
+        }
+    }
+}
+.kv-zoom-actions{
+    text-align: right;
+    button:not(.btn-kv-close){
+        display: none; 
+    }
+    button{
+        color: $primary;
+        border-color: transparent;
+        &:hover, &:focus, &:active{
+            color: $red-600;
+            border-color: transparent !important;
+            background-color: transparent !important;
+        }
+    }  
+    .btn-kv-close{
+       color: $gray-500; 
+    }
+}
+
