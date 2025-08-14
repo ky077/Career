@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 250 250">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #0068b7;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        fill: #adb5bd;
+        stroke: #fff;
+      }
+
+      .cls-4 {
+        fill: #00a1e9;
+      }
+		
+		@keyframes hand-an {
+			  0%   { transform: translate(30%, 0) scale(1.0);  }
+			 50%   { transform: translate(30%, 0) scale(1.0);  }
+		
+		     66.6% { transform: translate(0, -10%) scale(1.0); }
+			 83.3% { transform: translate(0, -10%) scale(.9);  }
+			100%   { transform: translate(30%,  0) scale(1.0); }
+		}
+		#hand { 
+			animation: hand-an 2s ease-in-out infinite;
+		    animation-delay: 2s;
+			transform-origin: 124.5px 74.3px;
+			transform: translate(0, -10%) scale(1.0);
+		}
+		
+		@keyframes heart-an {
+			   0% { transform: translateY(-10%) scale(1.0); }
+		 	  50% { transform: translateY(-10%) scale(1.0); }
+		
+		     66.6% { transform: translateY(-10%) scale(1.0); }
+			 83.3% { transform: translateY(-10%) scale(1.1); }
+			100% {   transform: translateY( 16%) scale(1.0); }
+		}
+		#heart {
+			animation: heart-an 2s ease-in-out infinite;
+		    animation-delay: 2.25s;
+			transform-origin: center;
+		    transform: translateY(-10%) scale(1.0);
+		}
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <polygon id="boxBack" class="cls-3" points="187.5 97.3 62.5 97.3 75.9 74.3 174.1 74.3 187.5 97.3"/>
+      <path id="heart" class="cls-4" d="M114.3,56.1c5.9,0,10.6,4.6,10.6,10.4,0-5.7,4.7-10.4,10.6-10.4s10.6,4.6,10.6,10.4c0,8.6-8.5,11.7-20.1,25.5-.5.5-1.4.6-1.9.2l-.2-.2c-11.6-13.8-20.1-16.7-20.1-25.5s4.7-10.4,10.5-10.4"/>
+      <path id="boxFront" class="cls-3" d="M187.5,97.3v76.9c0,4.1-3.3,7.4-7.4,7.4h-110.2c-4.1,0-7.4-3.3-7.4-7.4v-76.9h125Z"/>
+      <g id="hand">
+        <g>
+          <path class="cls-1" d="M152.7,106.4h5.6c3.2,0,5.6,2.6,5.6,5.6v8.8h0c-.2,10.7-2.1,21.3-5.4,31.5-1.1,3.3-1.5,5.9-1.5,5.9h-36.1s-1.9-10.7-8.8-18.4c-1.9-2.1-3.5-4.5-4.8-6.7-3.5-5.7-5.3-12.4-5.3-19.2h0c0-3.6,2.9-6.7,6.7-6.7h0c2.7,0,5.3,1.8,6.2,4.3l3.9,10.2v-41.8c0-3,2.5-5.6,5.6-5.6h0c3,0,5.6,2.5,5.6,5.6v15h5.6c2.7,0,4.9,1.8,5.6,4.2h5.8c3.2,0,5.6,2.6,5.6,5.6v13.7"/>
+          <rect class="cls-1" x="116.3" y="165.8" width="43.9" height="17.4"/>
+          <circle class="cls-1" cx="150.5" cy="174.5" r="1.1"/>
+        </g>
+        <g>
+          <g>
+            <path class="cls-2" d="M130.1,109.3v-14.4h5.6c3.2,0,5.6,2.6,5.6,5.6"/>
+            <path class="cls-2" d="M130.1,94.9v-15c0-3.2-2.6-5.6-5.6-5.6h0c-3.2,0-5.6,2.6-5.6,5.6v41.9l-3.9-10.2c-.9-2.6-3.5-4.3-6.2-4.3h0c-3.8,0-6.7,3-6.7,6.7h0c0,6.8,1.8,13.5,5.3,19.2,1.3,2.2,2.9,4.6,4.8,6.7,6.9,7.7,8.8,18.3,8.8,18.3h36.1s.5-2.6,1.5-5.9c3.3-10.2,5.2-20.9,5.4-31.5"/>
+            <path class="cls-2" d="M141.4,113.5v-14.4h5.6c3.2,0,5.6,2.6,5.6,5.6v13.7"/>
+            <path class="cls-2" d="M152.7,106.4h5.6c3.2,0,5.6,2.6,5.6,5.6v8.8"/>
+          </g>
+          <rect class="cls-2" x="116.3" y="165.8" width="43.9" height="17.4"/>
+          <circle class="cls-2" cx="150.5" cy="174.5" r="1.1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

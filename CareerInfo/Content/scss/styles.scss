@@ -1,0 +1,50 @@
+//使用客製化bs參數及bs參數
+@import "bootstrap-5.3.3/scss/functions";
+@import "bootstrap-5.3.3/variables-custom";
+@import "bootstrap-5.3.3/scss/maps";
+@import "bootstrap-5.3.3/scss/mixins";
+@import "bootstrap-5.3.3/scss/utilities";
+
+@import "modules/var"; 
+ 
+@import "master/header";   
+@import "master/footer";
+@import "master/main";
+
+@import "modules/animate"; 
+@import "modules/back-to-top"; 
+@import "modules/academic";   
+@import "modules/metrics";   
+@import "modules/mend-bs"; 
+@import "modules/page-header"; 
+@import "modules/spinner"; 
+@import "modules/UI";  
+
+@import "pages/index"; 
+@import "pages/explore";
+@import "pages/exploreTip";
+@import "pages/compare";
+@import "pages/compareList";
+@import "pages/test";
+@import "pages/collection";
+@import "pages/news"; 
+@import "pages/qa"; 
+@import "pages/about"; 
+@import "pages/contact"; 
+@import "pages/login"; 
+@import "pages/register"; 
+@import "pages/resetPD"; 
+@import "pages/myRecommend"; 
+
+/* ******* ******* ******* ******* ******* ******* ******* 
+[Author] 
+  =>  KyLin at NTNU, 2024-2025
+
+[References]
+  =>  Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/
+  =>  Bootstrap Icons - https://icons.getbootstrap.com/
+  =>  Solartec - Renewable Energy Website Template - https://htmlcodex.com/renewable-energy-website-template
+  =>  SVGBackgrounds - https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/
+  =>  Font Awesome - https://fontawesome.com/
+******* ******* ******* ******* ******* ******* ******* */
+

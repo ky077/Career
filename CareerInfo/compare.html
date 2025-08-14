@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>首頁 | 讚生涯高中生生涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中生生涯資訊系統" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header> </header>
+<main class="compare"> 
+  <!-- page-header Start -->
+  <div class="container-fluid page-header">
+    <div class="container-md">
+      <h2 class="display-4 text-center fw-bold mb-3 wow animate__animated animate__slideInDown">檢視比較</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i></a></li>
+          <li class="breadcrumb-item">探索</li>
+          <li class="breadcrumb-item">探索學門</li>
+          <li class="breadcrumb-item active" aria-current="page">檢視比較</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- page-header End --> 
+  
+  <!-- Content Start -->
+  <div class="container-fluid compare-items py-3">
+    <div class="container-xl">
+      <div class="row justify-content-center mb-5">
+        <div class="col-1 pe-0"></div>
+        <div class="col">
+          <div class="academic disc">
+            <div class="academic-img"><img src="Content/img/discipline/1.png" alt="教育學門代表圖片"/></div>
+            <div class="academic-name">教育學門</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="academic disc">
+            <div class="academic-img"><img src="Content/img/discipline/2.png" alt="藝術學門代表圖片"/></div>
+            <div class="academic-name">藝術學門</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="academic disc">
+            <div class="academic-img"><img src="Content/img/discipline/3.png" alt="外語學門代表圖片"/></div>
+            <div class="academic-name">外語學門</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid compare-result">
+    <div class="container-xl">
+      <div id="myResult">
+        <h2 class="h4 text-cmp">我的比較結果<small><img src="Content/img/logo-icon.svg" alt=""/>代表這個學門或學類，與你的讚生涯測驗結果最相符！</small></h2>
+        <hr class="text-cmp">
+        <div class="row compare-result-my">
+          <div class="col-1 px-0">優勢能力</div>
+          <!-- 未測驗 -->
+          <div class="col py-3 data-empty">尚無測驗資料。<a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a> <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a></div>
+          <!-- 已測驗 -->
+          <div class="col data-tested">
+            <div class="metric"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+          <div class="col data-tested">
+            <div class="metric compare-match"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+          <div class="col data-tested">
+            <div class="metric"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+        </div>
+        <div class="row compare-result-my">
+          <div class="col-1 px-0">興趣類型</div>
+          <!-- 未測驗 -->
+          <div class="col py-3 data-empty">尚無測驗資料。<a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a> <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a></div>
+          <!-- 已測驗 -->
+          <div class="col data-tested">
+            <div class="metric compare-match"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+          <div class="col data-tested">
+            <div class="metric compare-match"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+          <div class="col data-tested">
+            <div class="metric"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+        </div>
+        <div class="row compare-result-my">
+          <div class="col-1 px-0">工作價值</div>
+          <!-- 未測驗 -->
+          <div class="col py-3 data-empty">尚無測驗資料。<a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a> <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a></div>
+          <!-- 已測驗 -->
+          <div class="col data-tested">
+            <div class="metric"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+          <div class="col data-tested">
+            <div class="metric compare-match"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+          <div class="col data-tested">
+            <div class="metric compare-match"><img src="Content/img/logo-icon.svg" alt=""/></div>
+          </div>
+        </div>
+        <div class="row compare-result-my">
+          <div class="col-1 px-0">核心課程</div>
+          <div class="col py-2">教育心理學<br>
+            教育概論<br>
+            教育研究方法 </div>
+          <div class="col py-2"> 藝術概論<br>
+            藝術史<br>
+            藝術理論與批評 </div>
+          <div class="col py-2"> 語言學概論<br>
+            翻譯與口譯基礎<br>
+            外語閱讀與寫作 </div>
+        </div>
+        <div class="row compare-result-my">
+          <div class="col-1 px-0">職涯發展</div>
+          <div class="col py-2">教師 <br>
+            教育行政人員 <br>
+            課程設計研發人員<br>
+            教育政策分析師 <br>
+          </div>
+          <div class="col py-2"> 美術老師 <br>
+            平面設計師 <br>
+            藝術策展人 <br>
+            創意總監 </div>
+          <div class="col py-2"> 外語教師 <br>
+            翻譯人員 <br>
+            外交官 <br>
+            國際企業經理 </div>
+        </div>
+      </div>
+      <!-- -->
+      <h2 class="h4 text-cmp">優勢能力</h2>
+      <hr class="text-cmp">
+      <div class="row justify-content-center mb-5">
+        <div class="col-1 px-0"></div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/TA-1.svg" alt=""/>語文</div>
+          <div class="metric"><img src="Content/img/testIcon/TA-5.svg" alt=""/>邏輯推理</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TA-8.svg" alt=""/>創意</div>
+        </div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/TA-7.svg" alt=""/>美感</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TA-8.svg" alt=""/>創意</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TA-1.svg" alt=""/>語文</div>
+        </div>
+        <div class="col">
+          <div class="metric"><img src="Content/img/testIcon/TA-2.svg" alt=""/>外語</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TA-1.svg" alt=""/>語文</div>
+          <div class="metric"><img src="Content/img/testIcon/TA-5.svg" alt=""/>邏輯推理</div>
+        </div>
+      </div>
+      <!-- -->
+      <h2 class="h4 text-cmp">讚生涯興趣類型</h2>
+      <hr class="text-cmp">
+      <div class="row justify-content-center mb-5">
+        <div class="col-1 pe-0"></div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-27.svg" alt=""/>教育</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-26.svg" alt=""/>心理</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-35.svg" alt=""/>文史哲</div>
+        </div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-1.svg" alt=""/>美術</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-2.svg" alt=""/>表演</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-5.svg" alt=""/>設計</div>
+        </div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-36.svg" alt=""/>外國語言</div>
+          <div class="metric"><img src="Content/img/testIcon/TI-21.svg" alt=""/>國際事務</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/TI-27.svg" alt=""/>教育</div>
+        </div>
+      </div>
+      <!-- -->
+      <h2 class="h4 text-cmp">工作價值</h2>
+      <hr class="text-cmp">
+      <div class="row justify-content-center mb-5">
+        <div class="col-1 pe-0"></div>
+        <div class="col">
+          <div class="metric"><img src="Content/img/testIcon/WV-7.svg" alt=""/>安定舒適</div>
+        </div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/WV-1.svg" alt=""/>自我實現</div>
+          <div class="metric"><img src="Content/img/testIcon/WV-6.svg" alt=""/>自主彈性</div>
+        </div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/WV-1.svg" alt=""/>自我實現</div>
+          <div class="metric"><img src="Content/img/testIcon/WV-6.svg" alt=""/>自主彈性</div>
+        </div>
+      </div>
+      <!-- -->
+      <h2 class="h4 text-cmp" data-bs-toggle="collapse" href="#collapseHolland" role="button">Holland興趣類型</h2>
+      <hr class="text-cmp">
+      <div class="row justify-content-center mb-5 collapse" id="collapseHolland">
+        <div class="col-1 pe-0"></div>
+        <div class="col">
+          <div class="metric"><img src="Content/img/testIcon/Holland-S.svg" alt=""/>社會型</div>
+          <div class="metric"><img src="Content/img/testIcon/Holland-I.svg" alt=""/>研究型</div>
+          <div class="metric compare-match"><img src="Content/img/testIcon/Holland-A.svg" alt=""/>藝術型</div>
+        </div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/Holland-A.svg" alt=""/>藝術型</div>
+          <div class="metric"><img src="Content/img/testIcon/Holland-S.svg" alt=""/>社會型</div>
+          <div class="metric"><img src="Content/img/testIcon/Holland-I.svg" alt=""/>研究型</div>
+        </div>
+        <div class="col">
+          <div class="metric compare-match"><img src="Content/img/testIcon/Holland-A.svg" alt=""/>藝術型</div>
+          <div class="metric"><img src="Content/img/testIcon/Holland-S.svg" alt=""/>社會型</div>
+          <div class="metric"><img src="Content/img/testIcon/Holland-I.svg" alt=""/>研究型</div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="my-5 text-center">
+        <button class="btn btn-danger rounded-pill px-4 text-white btn-favorite">將此次比較<span>加入</span>收藏</button>
+      </div>
+    </div>
+  </div>
+  <!-- Content End --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+//比較項目sticky-top位置
+$(window).scroll(function () {   
+	var scrollTop = $(this).scrollTop();
+	var footerOffset = $('footer').offset().top;
+	var windowHeight = $(window).height();
+
+	if (scrollTop > 300) {
+		$('.compare-items').addClass('sticky-top')
+						   .find('.academic-img').hide();
+		
+		if (scrollTop + windowHeight < footerOffset) {
+			$('.compare-items').css('top', $('header').outerHeight());
+		} else{
+			$('.compare-items').css('top', '0px');
+		}
+		
+	} else{
+		$('.compare-items').removeClass('sticky-top')	
+						   .find('.academic-img').show();
+	}
+	
+	$('.data-empty').hide();
+});
+</script>
+</body>
+</html>

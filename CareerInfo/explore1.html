@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>探索學門 | 讚生涯高中生生涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中生生涯資訊系統" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header> </header>
+<main class="explore-disc"> 
+  <!-- page-header Start -->
+  <div class="container-fluid page-header">
+    <div class="container-md">
+      <h2 class="display-4 text-center fw-bold mb-3">探索學門</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i></a></li>
+          <li class="breadcrumb-item">探索</li>
+          <li class="breadcrumb-item active" aria-current="page">探索學門</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- page-header End --> 
+  
+  <!-- Content Start --> 
+  <!-- 介紹 開始 -->
+  <div class="container-fluid explore-intro">
+    <div class="row flex-nowrap justify-content-center align-items-center">
+      <div class="col-3 col-sm-2 col-xxl-1 text-end"><img src="Content/img/explore/building.svg" alt="房子示意圖-每一個學門就像一間房子" style="max-width: 150px;"/></div>
+      <div class="col col-md-auto">
+        <h2>你想探索哪個<big>學門</big>？</h2>
+        <div>
+          <p>「學門」是最大的分類，每一個學門就像一間房子。<br class="d-none d-sm-block">
+            探索目標時可以先從學門開始，現在就立即探索你想了解的學門！</p>
+          <div class="text-end"> <a href="#" class="small link-light" role="button" data-bs-toggle="modal" data-bs-target="#modal-exploreTip">學門、學類、學系是什麼<i class="bi bi-question-circle-fill ms-1"></i></a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 介紹 結束 --> 
+  
+  <!-- 學門頁籤 開始 -->
+  <div class="container-fluid p-5 explore-tab-disc">
+    <div class="text-end mb-2"> <a href="#" role="button" class="btn explore-collapse-btn" aria-expanded="false"><i class="explore-collapse-icon me-1"></i><span>展開/收合</span>學門</a> </div>
+    <div class="explore-collapse-body row mx-0 gy-4" id="discCarousel">
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/1.png" alt="教育學門圖片"/></div>
+        <div class="academic-name">教育</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/2.png" alt="藝術學門圖片"/></div>
+        <div class="academic-name">藝術</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/3.png" alt="外語學門圖片"/></div>
+        <div class="academic-name">外語</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/4.png" alt="本國語文及文學學門圖片"/></div>
+        <div class="academic-name">本國語文及文學</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/5.png" alt="歷史與哲學學門圖片"/></div>
+        <div class="academic-name">歷史與哲學</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/6.png" alt="設計學門圖片"/></div>
+        <div class="academic-name">設計</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/7.png" alt="政治學門圖片"/></div>
+        <div class="academic-name">政治</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"> <img src="Content/img/discipline/8.png" alt="社會學門圖片"/></div>
+        <div class="academic-name">社會</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"> <img src="Content/img/discipline/9.png" alt="心理學門圖片"/></div>
+        <div class="academic-name">心理</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"> <img src="Content/img/discipline/10.png" alt="傳播學門圖片"/></div>
+        <div class="academic-name">傳播</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/11.png" alt="商業學門圖片"/></div>
+        <div class="academic-name">商業</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/12.png" alt="管理學門圖片"/></div>
+        <div class="academic-name">管理</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/13.png" alt="貿易行銷學門圖片"/></div>
+        <div class="academic-name">貿易行銷</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/14.png" alt="法律學門圖片"/></div>
+        <div class="academic-name">法律</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"> <img src="Content/img/discipline/15.png" alt="生命科學學門圖片"/></div>
+        <div class="academic-name">生命科學</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/16.png" alt="自然科學學門圖片"/></div>
+        <div class="academic-name">自然科學</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"> <img src="Content/img/discipline/17.png" alt="數學及統計學門圖片"/></div>
+        <div class="academic-name">數學及統計</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/18.png" alt="電算機學門圖片"/></div>
+        <div class="academic-name">電算機</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/19.png" alt="工程學門圖片"/></div>
+        <div class="academic-name">工程</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"> <img src="Content/img/discipline/20.png" alt="建築及都市規劃學門圖片"/></div>
+        <div class="academic-name">建築及都市規劃</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/21.png" alt="農業科學學門圖片"/></div>
+        <div class="academic-name">農業科學</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/22.png" alt="獸醫學門圖片"/></div>
+        <div class="academic-name">獸醫</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/23.png" alt="醫藥衛生學門圖片"/></div>
+        <div class="academic-name">醫藥衛生</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/24.png" alt="社會服務學門圖片"/></div>
+        <div class="academic-name">社會服務</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/25.png" alt="民生學門圖片"/></div>
+        <div class="academic-name">民生</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/26.png" alt="運輸服務學門圖片"/></div>
+        <div class="academic-name">運輸服務</div>
+        </a></div>
+      <div class="item col-auto"><a role="button" class="academic disc">
+        <div class="academic-img"><img src="Content/img/discipline/27.png" alt="環境保護學門圖片"/></div>
+        <div class="academic-name">環境保護</div>
+        </a> </div>
+    </div>
+  </div>
+  <!-- 學門頁籤 結束 --> 
+  
+  <!-- 學門內文 開始 -->
+  <div class="explore-content" style="display: none;" id="disciplineContent"> 
+    <!-- demo 教育學門 開始 -->
+    <div class="container-fluid" id="1">
+      <div class="row justify-content-center">
+        <div class="col-xl-3 col-xxxxl-2">
+          <div class="explore-slider sticky-xl-top">
+            <h3 class="explore-slider-title">
+              <div class="mb-2"><img src="Content/img/discipline/1.png" alt="教育學門代表圖片"/></div>
+              <div>教育學門</div>
+            </h3>
+            <div class="explore-slider-tool">
+              <button type="button" class="btn btn-link btn-sm btn-favorite"><span>加入</span>最愛</button>
+              <button type="button" class="btn btn-link btn-sm btn-compare"><span>加入</span>比較</button>
+			  <button type="button" class="btn btn-link btn-sm btn-xmind">心智圖</button>
+            </div>
+            <ul class="explore-slider-list">
+              <li class="course"><a href="#course">核心課程</a>
+                <ul>
+                  <li>教育心理學</li>
+                  <li>教育概論</li>
+                  <li>教育研究方法</li>
+                </ul>
+              </li>
+              <li class="skill"><a href="#skill">優勢能力</a>
+                <ul>
+                  <li>語文</li>
+                  <li>邏輯推理</li>
+                  <li>創意</li>
+                </ul>
+              </li>
+              <li class="interest"><a href="#interest">興趣類型</a>
+                <ul>
+                  <li>教育</li>
+                  <li>心理</li>
+                  <li>文史哲</li>
+                </ul>
+              </li>
+              <li class="career"><a href="#career">職涯發展</a>
+                <ul>
+                  <li>教師</li>
+                  <li>教育行政人員</li>
+                  <li>教育學研究員</li>
+                  <li>教育督學</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-9 col-xxxxl-8">
+          <div class="row gy-5 p-5">
+            <div class="card" id="introDisc">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>學門簡介</span></h4>
+                <div class="card-text">
+                  <p>教育學門主要研究教育理論與實踐，涵蓋了基礎學科教學、專業領域教育、不同群體的教育、教育行政、科技應用和測驗評量等方面。其目的是培養具備專業知識和技能的教育工作者，能夠在各級學校及其他教育機構中有效地進行教學和管理。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="course">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>核心課程</span></h4>
+                <div class="card-text">
+                  <h5>教育心理學</h5>
+                  <p>探討學習過程中的心理機制，了解如何運用心理學知識來提升教學效果。</p>
+                  <h5>教育概論</h5>
+                  <p>介紹教育的基本概念、教育制度的歷史演變及主要理論,幫助學生建立對教育的整體認識。</p>
+                  <h5>教育研究方法</h5>
+                  <p>教授如何進行教育研究,培養學生基於實證研究來評估和改進實際的教學和操作的能力。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="skill">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>優勢能力</span></h4>
+                <div class="card-text">
+                  <h5>語文</h5>
+                  <p>教育工作者需要具備良好的語文能力,以便清晰地傳達知識和指導學生。</p>
+                  <h5>邏輯推理</h5>
+                  <p>在設計課程和評估教學效果時,邏輯推理能力有助於做出合理的決策。</p>
+                  <h5>創意</h5>
+                  <p>創意能力有助於設計有趣且有效的教學活動,激發學生的學習興趣。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="interest">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>興趣類型</span>
+                  <ul class="nav nav-pills" id="interestTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="nice-tab" data-bs-toggle="tab" data-bs-target="#nice-tab-pane" type="button" role="tab" aria-controls="nice-tab-pane" aria-selected="true">讚生涯</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="holland-tab" data-bs-toggle="tab" data-bs-target="#holland-tab-pane" type="button" role="tab" aria-controls="holland-tab-pane" aria-selected="false">Holland</button>
+                    </li>
+                  </ul>
+                </h4>
+                <div class="card-text">
+                  <div class="tab-content" id="interestTabContent">
+                    <div class="tab-pane fade show active" id="nice-tab-pane" role="tabpanel" aria-labelledby="nice-tab" tabindex="0">
+                      <h5>教育</h5>
+                      <p>對與他人互動並傳遞知識和培養品德有興趣的人，通常適合在教育學門中學習及發展。</p>
+                      <h5>心理</h5>
+                      <p>了解學生的心理狀態和學習動機，有助於提升教學效果，是教育學門中學習的重點之一。</p>
+                      <h5>文史哲</h5>
+                      <p>對文學、歷史和哲學的興趣，有助於培養人文素養和批判性思維，是教育學門中重要的基礎之一，對於教育工作有重大的影響。</p>
+                    </div>
+                    <div class="tab-pane fade" id="holland-tab-pane" role="tabpanel" aria-labelledby="holland-tab" tabindex="0">
+                      <h5>社會型 Ⓢ</h5>
+                      <h5>研究型 Ⓘ</h5>
+                      <h5>藝術型 Ⓐ</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="career">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>職涯發展</span></h4>
+                <div class="card-text">
+                  <h5>職涯起點</h5>
+                  <p><strong>教師：</strong>在國中、國小、高中或補習班教導特定科目，設計教學內容並評估學生學習成果。</p>
+                  <p><strong>教育行政人員：</strong>在學校、政府單位或教育機構擔任行政職位，負責教育相關的行政事務，例如教學單位的營運和管理、教育政策的規劃和執行等。</p>
+                  <h5>專業進階</h5>
+                  <p><strong>教育學研究員：</strong>進行教育相關的理論或實務的研究，並提供專業建議，改善教育系統、教學方法及學習效果。</p>
+                  <p><strong>教育督學：</strong>監督和視導地區內所有學校的教學情況和教育政策執行情況。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="myth">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>常見迷思</span></h4>
+                <div class="card-text">
+                  <div class="accordion accordion-flush" id="accordionExample">
+                    <div class="accordion-item">
+                      <h5 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">教育學門只適合想當老師的人？</button>
+                      </h5>
+                      <div class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">事實上，教育學門的畢業生可以從事多種職業，如教育政策分析師、教育行政人員、教學設計人員等，不僅限於當老師。</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h5 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">教育學門不需要科學和數學能力？</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">教育研究方法和教育心理學等課程需要學生具備一定的科學推理和數學能力，以進行有效的研究和分析。</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h5 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">教育學門的課程內容很單調？</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">實際上，教育學門的課程設計非常多樣化，涵蓋了心理學、社會學、語言學等多個領域，並且強調實踐和創意教學。</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="aboutDisc">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>相關的學門</span></h4>
+                <div class="card-text">
+                  <div class="row">
+                    <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=9">
+                      <div class="academic-img"> <img src="Content/img/discipline/9.png" alt="心理學門圖片"/></div>
+                      <div class="academic-name">心理</div>
+                      </a></div>
+                    <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=8">
+                      <div class="academic-img"> <img src="Content/img/discipline/8.png" alt="社會學門圖片"/></div>
+                      <div class="academic-name">社會</div>
+                      </a></div>
+                    <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=4">
+                      <div class="academic-img"><img src="Content/img/discipline/4.png" alt="本國語文及文學學門圖片"/></div>
+                      <div class="academic-name">本國語文及文學</div>
+                      </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="includeCate">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>教育學門</small>包含的學類</span></h4>
+                <div class="card-text">
+                  <div class="row">
+                    <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=6">
+                      <div class="academic-img"><img src="Content/img/category/3.png" alt="特殊教育學類圖片"/></div>
+                      <div class="academic-name">特殊教育學類</div>
+                      </a></div>
+                    <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=1">
+                      <div class="academic-img"><img src="Content/img/category/1.png" alt="藝術學門代表圖片"/></div>
+                      <div class="academic-name">綜合教育學類</div>
+                      </a></div>
+                    <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=4">
+                      <div class="academic-img"><img src="Content/img/category/2.png" alt="藝術學門代表圖片"/></div>
+                      <div class="academic-name">學前教育學類</div>
+                      </a></div>
+                    <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=8">
+                      <div class="academic-img"><img src="Content/img/category/4.png" alt="教育科技學類圖片"/></div>
+                      <div class="academic-name">教育科技學類</div>
+                      </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- demo 教育學門 結束 --> 
+    <!-- demo 心理學門 開始 -->
+    <div class="container-fluid" id="9">
+      <div class="row justify-content-center">
+        <div class="col-xl-3 col-xxxxl-2">
+          <div class="explore-slider sticky-xl-top">
+            <h3 class="explore-slider-title">
+              <div class="mb-2"><img src="Content/img/discipline/9.png" alt="心理學門代表圖片"/></div>
+              <div>心理學門</div>
+            </h3>
+            <div class="explore-slider-tool">
+              <button type="button" class="btn btn-link btn-sm btn-favorite"><span>加入</span>最愛</button>
+              <button type="button" class="btn btn-link btn-sm btn-compare"><span>加入</span>比較</button>
+			  <button type="button" class="btn btn-link btn-sm btn-xmind">心智圖</button>	
+            </div>
+            <ul class="explore-slider-list">
+              <li class="course"><a href="#course">核心課程</a>
+                <ul>
+                  <li>普通心理學</li>
+                  <li>發展心理學</li>
+                  <li>社會心理學</li>
+                </ul>
+              </li>
+              <li class="skill"><a href="#skill">優勢能力</a>
+                <ul>
+                  <li>邏輯推理</li>
+                  <li>語文</li>
+                  <li>科學推理</li>
+                </ul>
+              </li>
+              <li class="interest"><a href="#interest">興趣類型</a>
+                <ul>
+                  <li>心理</li>
+                  <li>教育</li>
+                  <li>助人/照護</li>
+                </ul>
+              </li>
+              <li class="career"><a href="#career">職涯發展</a>
+                <ul>
+                  <li>心理師</li>
+                  <li>輔導教師</li>
+                  <li>心理學研究員</li>
+                  <li>人資經理</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-9 col-xxxxl-8">
+          <div class="row gy-5 p-5">
+            <div class="card" id="introDisc">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>學門簡介</span></h4>
+                <div class="card-text">
+                  <p>心理學是一門研究人類行為和心理過程的科學。它涵蓋了從生物學基礎到社會互動的廣泛領域，目的是理解、預測和改善人類行為。心理學家通過實驗、觀察和臨床研究來探索情感、認知、行為和社會互動等方面。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="course">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>核心課程</span></h4>
+                <div class="card-text">
+                  <h5>普通心理學</h5>
+                  <p>這門課程介紹心理學的基本概念和理論，包括感知、學習、記憶、情感和動機等。</p>
+                  <h5>發展心理學</h5>
+                  <p>這門課程探討人類在生命各階段的心理變化，包括嬰兒期、童年、青春期、成年期和老年期。</p>
+                  <h5>社會心理學</h5>
+                  <p>研究個體在社會環境中的行為，探討群體影響、社會認知、態度變化和人際關係等主題。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="skill">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>優勢能力</span></h4>
+                <div class="card-text">
+                  <h5>邏輯推理</h5>
+                  <p>心理學研究需要嚴謹的邏輯推理能力，以便從數據中得出可靠的結論，並能夠設計和評估實驗。</p>
+                  <h5>語文</h5>
+                  <p>心理學家需要具備良好的語文能力，以便撰寫研究報告、發表論文和進行有效的溝通。</p>
+                  <h5>科學推理</h5>
+                  <p>心理學的研究需要科學推理能力來設計實驗、分析資料，並得到可靠的結論。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="interest">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>興趣類型</span>
+                  <ul class="nav nav-pills" id="interestTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="nice-tab" data-bs-toggle="tab" data-bs-target="#nice-tab-pane" type="button" role="tab" aria-controls="nice-tab-pane" aria-selected="true">讚生涯</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="holland-tab" data-bs-toggle="tab" data-bs-target="#holland-tab-pane" type="button" role="tab" aria-controls="holland-tab-pane" aria-selected="false">Holland</button>
+                    </li>
+                  </ul>
+                </h4>
+                <div class="card-text">
+                  <div class="tab-content" id="interestTabContent">
+                    <div class="tab-pane fade show active" id="nice-tab-pane" role="tabpanel" aria-labelledby="nice-tab" tabindex="0">
+                      <h5>心理</h5>
+                      <p>心理學門探討人類行為、情感、認知和心理過程，對於相關議題感到好奇，有助於進行研究並深入了解相關知識。</p>
+                      <h5>教育</h5>
+                      <p>教育過程中的學習、教學方法常與心理學的理論密切相關，心理學門中的知識能幫助教育者理解學生的學習需求、動機和發展，也適合對教育有興趣的學生。</p>
+                      <h5>助人/照護</h5>
+                      <p>心理學的許多應用領域涉及幫助個體應對情緒、行為和心理健康相關的問題，適合對協助他人解決心理層面煩惱有興趣的學生。</p>
+                    </div>
+                    <div class="tab-pane fade" id="holland-tab-pane" role="tabpanel" aria-labelledby="holland-tab" tabindex="0">
+                      <h5>研究型 Ⓘ</h5>
+                      <h5>社交型 Ⓢ</h5>
+                      <h5>藝術型 Ⓐ</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="career">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>職涯發展</span></h4>
+                <div class="card-text">
+                  <h5>職涯起點</h5>
+                  <p><strong>心理師：</strong>在心理諮商中心、醫院或私人診所工作，提供專業的心理治療服務。</p>
+                  <p><strong>輔導教師：</strong>在學校提供心理支持和輔導，協助學生處理學習與生活中的問題。</p>
+                  <h5>專業進階</h5>
+                  <p><strong>心理學研究員：</strong>在研究機構或大學進行心理學相關的研究，探索和解答心理學領域的重大問題。</p>
+                  <p><strong>人資經理：</strong>負責招聘、薪資福利、員工關係和人才培訓等事務，並制定相關策略，確保組織運作順暢並提升員工績效。</p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="myth">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>常見迷思</span></h4>
+                <div class="card-text">
+                  <div class="accordion accordion-flush" id="accordionExample">
+                    <div class="accordion-item">
+                      <h5 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">心理學只是常識？</button>
+                      </h5>
+                      <div class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">很多人認為心理學只是對日常生活經驗的總結，但實際上，心理學是基於嚴謹的科學研究和實驗數據。</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h5 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">心理學家可以讀心？</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">心理學家並不能讀心，他們通過觀察和測試來了解人的行為和心理狀態，而不是直接知道你的想法。</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h5 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">心理學只關注心理疾病？</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">心理學不僅僅關注心理疾病，還包括正常行為、學習、記憶、情感和社會互動等多方面的研究。</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="aboutDisc">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>相關的學門</span></h4>
+                <div class="card-text">
+                  <div class="row">
+                    <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=1">
+                      <div class="academic-img"> <img src="Content/img/discipline/1.png" alt="教育學門圖片"/></div>
+                      <div class="academic-name">教育學門</div>
+                      </a></div>
+                    <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=8">
+                      <div class="academic-img"> <img src="Content/img/discipline/8.png" alt="社會學門圖片"/></div>
+                      <div class="academic-name">社會學門</div>
+                      </a></div>
+                    <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=23">
+                      <div class="academic-img"><img src="Content/img/discipline/23.png" alt="醫藥衛生學門圖片"/></div>
+                      <div class="academic-name">醫藥衛生學門</div>
+                      </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="includeCate">
+              <div class="card-body">
+                <h4 class="card-title"><span class="card-title-icon"></span><span class="card-title-text"><small>心理學門</small>包含的學類</span></h4>
+                <div class="card-text">
+                  <div class="row">
+                    <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=6">
+                      <div class="academic-img"><img src="Content/img/category/22.png" alt="心理學類圖片"/></div>
+                      <div class="academic-name">心理學類</div>
+                      </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- demo 心理學門 結束 --> 
+  </div>
+  <!-- 學門內文 結束 --> 
+  
+  <!-- Content End --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+$(document).ready(function () {
+	//nav當前頁active
+	navActive('explore');
+	
+	//點選學門頁籤項目
+	$('#discCarousel .item a').click(function() {
+		//demo
+		if( $(this).find('img').attr('src').includes('9.png') ){
+			$('#9').show().siblings().hide();   
+		} else{
+			$('#1').show().siblings().hide();   
+		}
+		
+		
+		//顯示學門內文
+		$('#disciplineContent').slideDown();
+
+		//滑動到學門內文
+		$('html, body').animate({
+			scrollTop: $('#disciplineContent').offset().top - $('header nav').outerHeight()
+		}, 500);
+
+		//explore-slider [加入/取消最愛]、[加入/取消比較]位置
+		sliderToolPosition();
+	});
+	
+	//load 比較清單
+	$.get('compareList.html', function(data) {
+		$('body').append(data);
+	});
+	
+	//URL參數存在時，展開內容
+	var searchParams = new URLSearchParams(document.location.search); 
+	if (searchParams.has('disc')) {
+		var disc = searchParams.get('disc');
+		
+		$('.explore-tab-disc img').each(function() { 
+			if ($(this).attr('src').includes(disc + '.png')) { 
+				$(this).trigger('click'); console.log($(this));
+			}
+		});
+	}
+
+});	
+	
+</script>
+</body>
+</html>

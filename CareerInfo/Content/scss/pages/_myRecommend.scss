@@ -1,0 +1,311 @@
+.svgbackground-myRecommend{
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='0 0 100 100'%3E%3C!-- https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ --%3E%3Crect fill='%23CCECFB' width='100' height='100'/%3E%3Crect x='0' y='0' width='50' height='50' fill-opacity='0.15' fill='%2399D9F6'/%3E%3C/svg%3E");
+}
+.myRecommend{
+	background-color: $sky-200;
+	background-attachment: fixed;
+	@extend .svgbackground-myRecommend;
+}
+//左
+.user-data{
+	background: linear-gradient(135deg, $sky-400 0%, $sky-500 50%, $primary 100%);
+	border-radius:  $border-radius;	
+	padding: $spacer;
+	box-shadow: $box-shadow;
+	color: $white;
+	text-align: center;
+	&.sticky-top{
+		top: 1rem;
+	}
+	.avater{
+		width: 5rem;
+		height: 5rem;
+		font-size: calc(5rem*.4);
+		margin: 0 auto;
+		background-color: #fff;
+		color: $primary;
+	}
+	.user-data-name{
+		text-align: center;
+		margin-top: .25rem;
+		margin-bottom: 1rem;
+		color: $tertiary;
+	}
+	.user-data-list{
+		display: inline-block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: .9rem;
+		margin-bottom: 1rem;
+		text-align: left;
+		li{
+			margin-bottom: .5rem;
+		}
+	}
+}
+
+//右				
+[class*="myRecommend-"]{
+	h2{
+		font-size: $h4-font-size;
+		color: $primary;
+	}
+	hr{
+		color: $primary;
+		width: 75%;
+	}
+	> .row{
+		&:not(:last-child){
+			margin-bottom: map-get($spacers, 5); 
+		}
+	}
+	.myRecommend-card{
+		border-color: transparent;	
+		background-color: transparent;	
+		height: 100%;
+		.card-body{
+			background-color: $white;
+			border-radius: $border-radius;
+		}
+	}	
+	
+	.data-empty{//未測驗
+		.myRecommend-card{
+			min-height: 250px;
+			@media screen and (min-width: 992px) {
+			min-height: 300px;	
+			}
+			.card-body{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				@extend .clip-path-card;
+				border-radius: $border-radius;
+				h3{
+					color: $red;
+					font-size: $h5-font-size;
+				}
+			}
+		}	
+	}
+	.data-tested{//已測驗
+		> [class*="col"]:nth-child(1) {
+			.myRecommend-card{
+				position: relative;
+				&::before{
+					content: "";
+					display: block;
+					background-color: $sky-100;
+					@extend .svgbackground-myRecommend;
+					width: 60%;
+					height: 1.5rem;
+					-webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 1rem 100%);
+							clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 1rem 100%);
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: 1;
+				}
+				&::after{
+					content: "";
+					display: block;
+					background-color: $white;
+					width: 60%;
+					height: 1.5rem;
+					-webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 1rem 100%);
+							clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 1rem 100%);
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					transform: translate(-50%, -2px);
+					z-index: 2;
+				}
+				.card-body{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding-top: 2rem;
+					-webkit-clip-path: polygon(   0%   0%, 
+												 25%   0%, calc(25% + 1rem) 1.5rem, calc(75% - 1rem) 1.5rem, 75% 0%, 
+												100%   0%, 
+												100% 100%, 
+												  0% 100%);
+					clip-path: polygon(   0%   0%, 
+										 25%   0%, calc(25% + 1rem) 1.5rem, calc(75% - 1rem) 1.5rem, 75% 0%, 
+										100%   0%, 
+										100% 100%, 
+										  0% 100%);
+				}
+				
+				@media screen and (min-width: 992px) {
+				&::before{
+					width: 1.5rem;
+					height: 50%;
+					-webkit-clip-path: polygon(0% 0%, 100% 1rem, 100% calc(100% - 1rem), 0 100%);
+							clip-path: polygon(0% 0%, 100% 1rem, 100% calc(100% - 1rem), 0 100%);
+					top: 50%;
+					left: 100%;
+					transform: translateY(-50%);
+				}
+				&::after{
+					width: 1.5rem;
+					height: 50%;
+					-webkit-clip-path: polygon(0% 0%, 100% 1rem, 100% calc(100% - 1rem), 0 100%);
+							clip-path: polygon(0% 0%, 100% 1rem, 100% calc(100% - 1rem), 0 100%);
+					top: 50%;
+					left: 100%;
+					transform: translate(-2px, -50%);
+				}
+				.card-body{
+					padding-top: 1rem;
+					padding-left: 2rem;
+					-webkit-clip-path: polygon(   0%   0%, 
+										100%   0%, 
+										100% 100%, 
+										  0% 100%, 
+										  0%  75%, 1.5rem calc(75% - 1rem), 1.5rem calc(25% + 1rem), 0% 25%);	
+							clip-path: polygon(   0%   0%, 
+										100%   0%, 
+										100% 100%, 
+										  0% 100%, 
+										  0%  75%, 1.5rem calc(75% - 1rem), 1.5rem calc(25% + 1rem), 0% 25%);	
+				}	
+				}
+			}		
+		}
+		> [class*="col"]:nth-child(2) {
+			.myRecommend-card{
+				position: relative;
+				.myRecommend-suit-text{  
+					writing-mode: vertical-lr;
+					font-size: 1rem;
+					letter-spacing: .25em;
+					color: $primary;
+					position: absolute;	
+					display: inline-block;
+					padding: 2rem .75rem 2rem .5rem;
+					margin: 0;
+					top: 1.5rem;
+					left: 0;
+					background-color: $sky-100;
+					@extend .svgbackground-myRecommend;
+					-webkit-clip-path: polygon(0 0, 100% 1rem, 100% calc(100% - 1rem), 0% 100%);
+					clip-path: polygon(0 0, 100% 1rem, 100% calc(100% - 1rem), 0% 100%);
+					z-index: 3;
+				}
+				.card-body{
+					background-color: $white;
+					border-radius: $border-radius;
+					-webkit-clip-path: polygon(   0%   0%, 
+										100%   0%, 
+										100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+										100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+										100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+										100% 100%, 
+										  0% 100%);
+							clip-path: polygon(   0%   0%, 
+												100%   0%, 
+												100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+												100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+												100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+												100% 100%, 
+												  0% 100%);
+					[class*="explore-tab"] .explore-collapse-body.owl-carousel .owl-stage-outer {
+						margin-top: 0;
+					}
+				}	
+				
+				@media screen and (min-width: 992px) {
+				.myRecommend-suit-text{  
+					writing-mode: horizontal-tb;
+					letter-spacing: .05em;
+					padding: .5rem 2rem .5rem 2rem;
+					top: 0;
+					left: auto;
+					right: 1.5rem;
+					transform: translateY(calc(-100% + 1px));
+					background-color: $white;
+					background-image: none;
+					-webkit-clip-path: polygon(1rem 0%, calc(100% - 1rem) 0%, 100% 100%, 0% 100%);
+							clip-path: polygon(1rem 0%, calc(100% - 1rem) 0%, 100% 100%, 0% 100%);
+				}		
+				}
+			}
+		}
+	}
+}
+//.myRecommend-ti{}
+//.myRecommend-ta{}
+.myRecommend-wv{
+	counter-reset: wvNum; 
+	.data-tested{ 
+		counter-increment: wvNum; 
+		> [class*="col"]:nth-child(1){ 
+			position: relative;
+			&::before{ 
+				content: ""; 
+				display: flex; 
+				justify-content: center; 
+				align-items: center; 
+				width: 4rem;
+				height: 4rem; 
+				background-color: $sky-100;
+				@extend .svgbackground-myRecommend;
+				border-radius: 100%;
+				position: absolute; 
+				top: 0; 
+				left: 50%; 
+				transform: translate(-50%, -.375rem);
+				z-index: 3;
+				@media screen and (min-width: 992px) {
+				top: 50%; 
+				left: 0;
+				transform: translate(-.375rem, -50%);	
+				}
+			}
+			&::after{ 
+				content: counter(wvNum); 
+				display: flex; 
+				justify-content: center; 
+				align-items: center; 
+				width: calc(4rem - .375rem*2);
+				height: calc(4rem - .375rem*2); 
+				background-color: $white; 
+				border-radius: 100%;
+				position: absolute; 
+				top: 0; 
+				left: 50%; 
+				transform: translate(-50%, 0);
+				z-index: 4;
+				color: $primary; 
+				font-size: 2.5rem; 
+				font-style: italic; 
+				font-weight: 600; 
+				text-shadow:  1px  1px #ffffff, 
+							 -1px -1px #ffffff,
+							 -1px  1px #ffffff, 
+							  1px -1px #ffffff, 
+							  2px  2px #ffffff, 
+							 -2px -2px #ffffff,
+							 -2px  2px #ffffff, 
+							  2px -2px #ffffff,
+							  3px  3px $primary;
+				box-shadow: 2px 2px 10px rgba(0,0,0, .1);
+				@media screen and (min-width: 992px) {
+				top: 50%; 
+				left: 0;
+				transform: translate(0, -50%);	
+				}
+			}
+			.myRecommend-card{
+				.card-body{
+					padding-top: 3.5rem;
+				}	
+			}
+		}
+	}
+}
+

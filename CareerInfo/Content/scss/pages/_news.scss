@@ -1,0 +1,35 @@
+.news{
+	background-color: $gray-100;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='0 0 100 100'%3E%3C!-- https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ --%3E%3Crect fill='%23f8f9fa' width='100' height='100'/%3E%3Crect x='0' y='0' width='50' height='50' fill-opacity='0.15' fill='%23e9ecef'/%3E%3C/svg%3E");
+	padding-bottom: map-get($spacers, 5);
+	.futuristic-frame{
+		.pagination{
+			.btn {
+				box-shadow: inset 0 0 .5rem rgba($sky, 0.08);
+			}
+			.pagination-input{
+				background-color: $gray-100;	
+				border-color: transparent;
+				box-shadow: inset 0 0 .5rem rgba($sky, 0.08);
+			}
+		}
+	}
+}
+
+.news-list{
+	.list-group-item{
+		padding-left: 0;
+		.badge{
+			font-weight: 400;
+			margin-right: .25rem;
+		}
+		.text-muted.float-end{
+			margin-top: .25rem;
+		}
+		&:hover{
+			color: $primary;
+			font-weight: 500;
+			text-decoration: none;
+		}
+	}
+}

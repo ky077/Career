@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>我的推薦 | 讚生涯高中生生涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中生生涯資訊系統" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header> </header>
+<main class="myRecommend"> 
+  <!-- Content Start -->
+  <div class="container-fluid">
+    <div class="row justify-content-center"> 
+      <!-- 左 開始 -->
+      <div class="col-xl-3 col-xxxxl-2 py-5">
+        <div class="user-data sticky-top">
+          <div class="avater">宥</div>
+          <div class="user-data-name">宥之</div>
+          <ul class="user-data-list">
+            <li>帳號：<span>aaa123@gmail.com</span></li>
+            <li>學校：<span>閱讀高中</span></li>
+            <li>班級：<span>一年二班</span></li>
+            <li>註冊時間：<span>2024-01-01</span></li>
+            <li>上次登入時間：<span>2024-11-01</span></li>
+          </ul>
+          <div class="text-center mb-2">
+            <button type="button" class="btn btn-tertiary text-primary rounded-pill px-4 btn-sm link-scale" data-bs-toggle="modal" data-bs-target="#modalEditUser">編輯個人資料</button>
+          </div>
+        </div>
+        <!-- Modal#modalEditUser -->
+        <div class="modal fade futuristic-modal" id="modalEditUser" tabindex="-1" aria-labelledby="modalEditUserLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+				<h5 class="modal-title">編輯個人資料</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="inputName" class="form-label mb-1">姓名</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="請填寫真實中文姓名" value="宥之">
+                </div>
+                <div class="mb-3">
+                  <label for="inputEmail" class="form-label mb-1">帳號</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="請輸入您的Email" value="aaa123@gmail.com" disabled>
+                </div>
+                <div class="mb-3">
+                  <label for="inputPassword" class="form-label mb-1">密碼</label>
+                  <div class="input-group ">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="請輸入6至15位英數字混和之密碼" aria-label="密碼" aria-describedby="passwordHelp">
+                    <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+                  </div>
+                  <div class="form-text text-primary">如不修改請空白。</div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputCheckPassword" class="form-label mb-1">確認密碼</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="inputCheckPassword" placeholder="請再次輸入密碼" aria-label="確認密碼" aria-describedby="passwordCheckHelp">
+                    <button class="btn btn-showHidePD" type="button" id="toggleCheckPassword" aria-label="顯示或隱藏確認密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+                  </div>
+                  <div class="form-text text-primary">如不修改請空白。</div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputsSchool" class="form-label mb-1">學校</label>
+                  <input type="text" class="form-control" id="inputsSchool" placeholder="請填寫學校" value="閱讀高中">
+                </div>
+                <div class="mb-3">
+                  <label for="inputClass" class="form-label mb-1">班級</label>
+                  <input type="text" class="form-control" id="inputClass" placeholder="請填寫班級" value="一年二班">
+                </div>
+                <div class="mb-3 text-center">
+                  <button type="button" class="btn btn-primary rounded-pill px-4 link-scale" id="" data-bs-dismiss="modal">修改</button>
+                </div>
+              </div>
+			  <div class="modal-footer"></div>	
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 左 結束 --> 
+      <!-- 右 開始 -->
+      <div class="col-xl-9 col-xxxxl-8 py-5">
+        <div class="row gy-5 px-xxxxl-5"> 
+          <!-- 我的優勢能力 開始-->
+          <div class="myRecommend-ti">
+            <h2>我的優勢能力</h2>
+            <hr>
+            <!-- 未測驗 -->
+            <div class="row g-0 align-items-stretch data-empty">
+              <div class="col">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <h3>您尚未進行讚生涯性向測驗！ </h3>
+                    <div class="text-center"> <a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a> <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 已測驗 -->
+            <div class="row g-0 align-items-stretch data-tested">
+              <div class="col-auto col-lg-5 col-xxl-4 mx-auto">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <div class="metric compare-match"><img src="Content/img/testIcon/TA-1.svg" alt=""/>語文</div>
+                    <div class="metric compare-match"><img src="Content/img/testIcon/TA-8.svg" alt=""/>創意</div>
+                    <div class="metric"><img src="Content/img/testIcon/TA-7.svg" alt=""/>美感</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7 col-xxl-8">
+                <div class="card myRecommend-card">
+				  <h4 class="myRecommend-suit-text">適配學門</h4> 	
+                  <div class="card-body">
+                    <div class="px-5 explore-tab-discipline">
+                      <div class="explore-collapse-body owl-carousel" id="">
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=1">
+                          <div class="academic-img"><img src="Content/img/discipline/1.png" alt="教育學門圖片"/></div>
+                          <div class="academic-name">教育學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=2">
+                          <div class="academic-img"><img src="Content/img/discipline/2.png" alt="藝術學門圖片"/></div>
+                          <div class="academic-name">藝術學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=3">
+                          <div class="academic-img"><img src="Content/img/discipline/3.png" alt="外語學門圖片"/></div>
+                          <div class="academic-name">外語學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=4">
+                          <div class="academic-img"><img src="Content/img/discipline/4.png" alt="本國語文及文學學門圖片"/></div>
+                          <div class="academic-name">本國語文及文學學門</div>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 我的優勢能力 結束--> 
+          <!-- 我的興趣類型 開始-->
+          <div class="myRecommend-ta">
+            <h2>我的興趣類型</h2>
+            <hr>
+            <!-- 未測驗 -->
+            <div class="row g-0 align-items-stretch data-empty">
+              <div class="col">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <h3>您尚未進行讚生涯興趣測驗！ </h3>
+                    <div class="text-center"> <a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a> <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 已測驗 -->
+            <div class="row g-0 align-items-stretch data-tested">
+              <div class="col-auto col-lg-5 col-xxl-4 mx-auto">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <div class="metric compare-match"><img src="Content/img/testIcon/TI-Art.svg" alt=""/>藝術</div>
+                    <div class="metric compare-match"><img src="Content/img/testIcon/TI-Society.svg" alt=""/>社會</div>
+                    <div class="metric compare-match"><img src="Content/img/testIcon/TI-Services.svg" alt=""/>服務</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7 col-xxl-8">
+                <div class="card myRecommend-card">
+				  <h4 class="myRecommend-suit-text">適配學類</h4>	
+                  <div class="card-body">
+                    <div class="px-5 explore-tab-category">
+                      <div class="explore-collapse-body owl-carousel" id="">
+                        <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=4">
+                          <div class="academic-img"><img src="Content/img/category/4.png" alt="學前教育學類圖片"/></div>
+                          <div class="academic-name">學前教育學類</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=5">
+                          <div class="academic-img"><img src="Content/img/category/5.png" alt="成人教育學類圖片"/></div>
+                          <div class="academic-name">生活應用科學學類</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=6">
+                          <div class="academic-img"><img src="Content/img/category/6.png" alt="特殊教育學類圖片"/></div>
+                          <div class="academic-name">特殊教育學類</div>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 我的興趣類型 結束--> 
+          <!-- 我最重視的工作價值 開始-->
+          <div class="myRecommend-wv">
+            <h2>我最重視的工作價值</h2>
+            <hr>
+            <!-- 未測驗 -->
+            <div class="row g-0 align-items-stretch data-empty">
+              <div class="col">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <h3>您尚未進行讚生涯工作價值組合測驗！ </h3>
+                    <div class="text-center"> <a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a> <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 已測驗 -->
+            <div class="row g-0 align-items-stretch data-tested wv-1">
+              <div class="col-auto col-lg-5 col-xxl-4 mx-auto">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <div class="metric compare-match"><img src="Content/img/testIcon/WV-1.svg" alt=""/>自我實現</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7 col-xxl-8">
+                <div class="card myRecommend-card">
+				  <h4 class="myRecommend-suit-text">對應學門</h4>	
+                  <div class="card-body">
+                    <div class="px-5 explore-tab-discipline">
+                      <div class="explore-collapse-body owl-carousel" id="">
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=2">
+                          <div class="academic-img"><img src="Content/img/discipline/2.png" alt="藝術學門圖片"/></div>
+                          <div class="academic-name">藝術學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=5">
+                          <div class="academic-img"><img src="Content/img/discipline/5.png" alt="歷史與哲學學門圖片"/></div>
+                          <div class="academic-name">歷史與哲學學門</div>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-0 align-items-stretch data-tested wv-2">
+              <div class="col-auto col-lg-5 col-xxl-4 mx-auto">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <div class="metric compare-match"><img src="Content/img/testIcon/WV-2.svg" alt=""/>利他取向</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7 col-xxl-8">
+                <div class="card myRecommend-card">
+				  <h4 class="myRecommend-suit-text">對應學門</h4>	
+                  <div class="card-body">
+                    <div class="px-5 explore-tab-discipline">
+                      <div class="explore-collapse-body owl-carousel" id="">
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=23">
+                          <div class="academic-img"><img src="Content/img/discipline/23.png" alt="醫藥衛生學門圖片"/></div>
+                          <div class="academic-name">醫藥衛生學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=24">
+                          <div class="academic-img"><img src="Content/img/discipline/24.png" alt="社會服務學門圖片"/></div>
+                          <div class="academic-name">社會服務學門</div>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-0 align-items-stretch data-tested wv-3">
+              <div class="col-auto col-lg-5 col-xxl-4 mx-auto">
+                <div class="card myRecommend-card">
+                  <div class="card-body">
+                    <div class="metric compare-match"><img src="Content/img/testIcon/WV-3.svg" alt=""/>社會尊嚴</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7 col-xxl-8">
+                <div class="card myRecommend-card">
+				  <h4 class="myRecommend-suit-text">對應學門</h4>	
+                  <div class="card-body">
+                    <div class="px-5 explore-tab-discipline">
+                      <div class="explore-collapse-body owl-carousel" id="">
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=23">
+                          <div class="academic-img"><img src="Content/img/discipline/23.png" alt="醫藥衛生學門圖片"/></div>
+                          <div class="academic-name">醫藥衛生學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=14">
+                          <div class="academic-img"><img src="Content/img/discipline/14.png" alt="法律學門圖片"/></div>
+                          <div class="academic-name">法律學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=11">
+                          <div class="academic-img"><img src="Content/img/discipline/11.png" alt="商業學門圖片"/></div>
+                          <div class="academic-name">商業學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=12">
+                          <div class="academic-img"><img src="Content/img/discipline/12.png" alt="管理學門圖片"/></div>
+                          <div class="academic-name">管理學門</div>
+                          </a></div>
+                        <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=13">
+                          <div class="academic-img"><img src="Content/img/discipline/13.png" alt="貿易行銷學門圖片"/></div>
+                          <div class="academic-name">貿易行銷學門</div>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 我最重視的工作價值  結束--> 
+        </div>
+      </div>
+      <!-- 右 結束 --> 
+    </div>
+  </div>
+  <!-- Content End --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+$(document).ready(function () {
+	
+	//nav當前頁active
+	navActive('myRecommend');
+	
+	//個人資料 sticky-top
+	$(window).scroll(function () { 
+		var scrollTop = $(this).scrollTop();
+		var footerOffset = $('footer').offset().top;
+		var windowHeight = $(window).height();
+
+		if (scrollTop > 300 && scrollTop + windowHeight < footerOffset) {
+			$('.user-data.sticky-top').css('top', $('header').outerHeight() + 20);
+
+		} else {
+			$('.user-data.sticky-top').css('top', '20px');
+		}
+	});
+
+	//適配、對應owl-carousel
+	$('.owl-carousel').owlCarousel({
+		autoplay: false,
+		smartSpeed: 300,
+		loop: false,
+		nav: true,
+		navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>'],
+		dots: false,
+		autoWidth: true,  
+		responsiveClass: true,
+		items: 1
+	})	
+});	
+</script>
+</body>
+</html>

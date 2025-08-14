@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>登入 | 讚生涯高中生生涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中生生涯資訊系統" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header> </header>
+<main class="login"> 
+  <!-- Content Start -->
+  <div class="container-fluid px-0">
+    <div class="row w-100 h-100 mx-0"> 
+      <!-- 左 開始-->
+      <div class="col-xl-7 col-xxl-8 login-text wow animate__animated animate__fadeIn">
+        <div class="row gy-4 py-5">
+          <div class="col-12 text-center">
+            <h3 class="h2 text-center">登入使用更多服務</h3>
+          </div>
+          <div class="col-12 text-center">
+            <div class="login-text-dialog mx-auto">
+              <h4>更多詳細資訊</h4>
+              <hr class="text-primary w-25">
+              <p>這個學類有什麼核心必修課程？有什麼未來可以發展的職業？<br>
+                 哪些學校有這個學系？高中階段可以做什麼準備？</p>
+              <a class="link-info" href="#loginPanel"> <i class="bi bi-arrow-right-square-fill me-1"></i>登入獲得更多詳細資訊</a> </div>
+          </div>
+          <div class="col-12 text-center">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12 col-sm-auto order-sm-2">
+                <div class="login-text-dialog">
+                  <h4>個人化服務</h4>
+                  <hr class="text-primary w-25">
+                  <p><span class="text-fav me-1"><i class="bi bi-suit-heart-fill me-1"></i>收藏</span>幫你紀錄有興趣的資訊</p>
+                  <p><span class="text-cmp me-1"><i class="bi bi-intersect me-1"></i>比較</span>幫你對照測驗結果和有興趣的學門或學類</p>
+                </div>
+              </div>
+              <div class="col-5 col-sm-3 order-sm-1"><img src="Content/img/nice-hi.gif" alt="讚寶寶" class="img-fluid d-block mx-auto"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 左 結束--> 
+      <!-- 右 開始-->
+      <div class="col-xl-5 col-xxl-4 login-panel wow animate__animated animate__fadeInRight" id="loginPanel">
+        <div class="row py-5">
+          <div class="col-auto mx-auto">
+            <h2 class="text-center">登入</h2>
+            <p class="small text-center text-secondary mb-5">還沒有帳號？<a href="register.html">立即註冊</a></p>
+            <div class="mb-4">
+              <label for="inputEmail" class="form-label mb-1">帳號</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="身分證字號/帳號/Email">
+            </div>
+            <div class="mb-4">
+              <label for="inputPassword" class="form-label mb-1">密碼</label>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" id="inputPassword" placeholder="密碼" aria-label="密碼" aria-describedby="passwordHelp">
+                <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+              </div>
+            </div>
+            <div class="mb-1"><a href="myRecommend.html?uid=0" class="btn btn-primary w-100">登入</a></div>
+            <div class="form-text text-center mb-4"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#forgetPdModal">忘記密碼？</a></div>
+            <div class="divider-text mb-4 mx-n4">或</div>
+            <div> <a href="http://140.122.118.58/CareerTest/indexSSO.html" class="btn btn-outline-primary w-100 fw-medium"><img src="Content/img/logo-career-senior.png" width="24" alt="高中版生涯測驗系統LOGO" class="me-1"/>高中版生涯測驗系統登入</a> </div>
+          </div>
+        </div>
+      </div>
+      <!-- 右 結束--> 
+    </div>
+  </div>
+  <!-- Content End --> 
+  
+  <!-- 忘記密碼Modal START -->
+  <div class="modal fade" id="forgetPdModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="forgetPdModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header pb-0 border-bottom-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row py-5">
+            <div class="col-auto mx-auto">
+              <h2 class="text-center mb-4">忘記密碼</h2>
+              <div class="mb-4">
+                <label for="inputGetEmail" class="form-label mb-1">請輸入您的信箱帳號以收取重製密碼信</label>
+                <input type="email" class="form-control" id="inputGetEmail" placeholder="example@email.com">
+              </div>
+              <div class="mb-4">
+                <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" id="btnGetPd">送出</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 忘記密碼Modal  END  --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+//[登入獲得更多詳細資訊]
+$('a[href="#loginPanel"]').click(function(){
+	$('html,body').animate({
+		scrollTop:$('#loginPanel').offset().top - $('header').outerHeight() 
+	}, 800);
+});	
+	
+//[忘記密碼]	
+$('#btnGetPd').click(function(){
+    alertModalDOM('已將重製密碼信寄送至您的電子信箱<div class="text-info">a***a@gmail.com</div>', 'md', '確定');
+});
+</script>
+</body>
+</html>

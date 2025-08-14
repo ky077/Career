@@ -1,0 +1,115 @@
+//修改BS樣式
+.disabled{
+    pointer-events: none;
+    opacity: .65;
+}
+
+.placeholder {
+    display: inline-block;
+    min-height: 1rem;
+    vertical-align: middle;
+    cursor: wait;
+    background-color: $gray-400;
+    opacity: .5;
+}
+.placeholder.btn::before {
+    display: inline-block;
+    content: "";
+}
+
+.nav-underline{
+	.nav-link {
+		&.active {
+			font-weight: 500;
+			&:hover, &:focus{
+				border-bottom-color: currentColor;	
+			}
+		}
+		&:hover, &:focus{
+			border-bottom-color: transparent;	
+		}
+	}
+}
+
+.accordion-flush > .accordion-item:last-child {
+	border-bottom: #{$accordion-border-width} solid var(--#{$prefix}accordion-border-color);
+}
+.accordion-button{
+	flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.accordion-button{
+	font-size: 1.125rem;
+	/*position: relative;
+	z-index: 1;*/
+	&:not(.collapsed){
+		box-shadow: none;
+		font-weight: 500;
+	}
+	&.collapsed:hover{
+		color: $body-color;
+		font-weight: 500;
+	}
+	&::after {
+		margin-left: 0;
+		margin-right: .5rem;
+	}
+	
+}
+.accordion-body{
+	padding-left: calc(#{$accordion-padding-x} + #{$accordion-icon-width} + .5rem);
+	padding-top: 0;
+	position: relative;
+	&::before{ //客製化增加有向上箭頭樣式
+		content: "";
+		width: 1.5px;
+		height: 0;
+		background-color: $primary;
+		position: absolute;
+		bottom: #{$accordion-padding-y};
+		left: calc(#{$accordion-padding-x} + #{$accordion-icon-width}/2);
+		z-index: 5;
+		transform: translateX(-25%);
+		transition: height 0.3s ease-in-out;
+	}
+}
+.accordion-collapse.collapse.show{
+	.accordion-body{
+		&::before{
+			height: calc(100% + 1rem*.8);
+			transition: height 0.3s ease-in-out;
+		}	
+	}
+}
+
+.input-group {
+	[class*="btn"]{
+		color: $input-color;
+		background-color: $input-bg;
+		border-color: $input-border-color;
+		&:hover{
+			background-color: $primary-100;
+		}
+	}
+}
+
+.badge{
+	font-weight: 400;
+	&.sys{
+		background-color: $teal;	
+	}
+	&.act{
+		background-color: tint-color($orange, 20%);
+	}
+}
+.sticky-top {
+	transition: .5s;
+}
+.pagination{
+	.btn{
+		&:disabled, &.disabled{
+			visibility: hidden;
+			
+		}
+	}
+}

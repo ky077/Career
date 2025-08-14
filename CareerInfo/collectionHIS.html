@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>我的收藏 | 讚生涯高中生生涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中生生涯資訊系統" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header> </header>
+<main class="collection"> 
+  <!-- page-header Start -->
+  <div class="container-fluid page-header">
+    <div class="container-md">
+      <h2 class="display-4 text-center fw-bold mb-3 wow animate__animated animate__slideInDown">我的收藏</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i></a></li>
+          <li class="breadcrumb-item">我的收藏</li>
+          <li class="breadcrumb-item active" aria-current="page">最近看過</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- page-header End --> 
+  
+  <!-- Content Start -->
+  <div class="futuristic-shadow wow animate__animated animate__fadeIn animate__slower"> 
+    <!-- 頁籤 開始 -->
+    <div class="collection-nav">
+      <div class="container-md">
+        <ul class="nav nav-pills nav-fill justify-content-center futuristic-nav">
+          <li class="nav-item"> <a class="nav-link" href="collectionFAV.html">我的最愛</a> </li>
+          <li class="nav-item"> <a class="nav-link active" aria-current="page" href="collectionHIS.html">最近看過</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="collectionCMP.html">比較列表</a> </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 頁籤 結束 --> 
+    
+    <!-- 學門 開始 -->
+    <div class="container-fluid collection-disc">
+      <h2 class="collection-title">學門</h2>
+      <!-- 無資料 -->
+      <div class="futuristic-frame data-empty">
+        <div>尚無看過的學門 <a href="explore1.html" class="btn btn-outline-disc btn-sm rounded-pill px-4 m-1">立即前往查看</a></div>
+      </div>
+      <!-- 有資料 -->
+      <div class="futuristic-frame data-filled">
+        <div class="explore-tab-disc">
+          <div class="explore-collapse-body owl-carousel" id="discCarousel">
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=1">
+              <div class="academic-img"><img src="Content/img/discipline/1.png" alt="教育學門圖片"/></div>
+              <div class="academic-name">教育</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=2">
+              <div class="academic-img"><img src="Content/img/discipline/2.png" alt="藝術學門圖片"/></div>
+              <div class="academic-name">藝術</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=4">
+              <div class="academic-img"><img src="Content/img/discipline/4.png" alt="本國語文及文學學門圖片"/></div>
+              <div class="academic-name">本國語文及文學</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=6">
+              <div class="academic-img"><img src="Content/img/discipline/6.png" alt="設計學門圖片"/></div>
+              <div class="academic-name">設計</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=8">
+              <div class="academic-img"> <img src="Content/img/discipline/8.png" alt="社會學門圖片"/></div>
+              <div class="academic-name">社會</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=10">
+              <div class="academic-img"> <img src="Content/img/discipline/10.png" alt="傳播學門圖片"/></div>
+              <div class="academic-name">傳播</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=11">
+              <div class="academic-img"><img src="Content/img/discipline/11.png" alt="商業學門圖片"/></div>
+              <div class="academic-name">商業</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=13">
+              <div class="academic-img"><img src="Content/img/discipline/13.png" alt="貿易行銷學門圖片"/></div>
+              <div class="academic-name">貿易行銷</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=16">
+              <div class="academic-img"><img src="Content/img/discipline/16.png" alt="自然科學學門圖片"/></div>
+              <div class="academic-name">自然科學</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=18">
+              <div class="academic-img"><img src="Content/img/discipline/18.png" alt="電算機學門圖片"/></div>
+              <div class="academic-name">電算機</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=19">
+              <div class="academic-img"><img src="Content/img/discipline/19.png" alt="工程學門圖片"/></div>
+              <div class="academic-name">工程</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=22">
+              <div class="academic-img"><img src="Content/img/discipline/22.png" alt="獸醫學門圖片"/></div>
+              <div class="academic-name">獸醫</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic disc" href="explore1.html?disc=23">
+              <div class="academic-img"><img src="Content/img/discipline/23.png" alt="醫藥衛生學門圖片"/></div>
+              <div class="academic-name">醫藥衛生</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 學門 結束 --> 
+    
+    <!-- 學類 開始 -->
+    <div class="container-fluid collection-cate">
+      <h2 class="collection-title">學類</h2>
+      <!-- 無資料 -->
+      <div class="futuristic-frame data-empty">
+        <div>尚無看過的學類 <a href="explore1.html" class="btn btn-outline-cate btn-sm rounded-pill px-4 m-1">立即前往查看</a></div>
+      </div>
+      <!-- 有資料 -->
+      <div class="futuristic-frame data-filled">
+        <div class="explore-tab-cate">
+          <div class="explore-collapse-body owl-carousel" id="cateCarousel">
+            <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=6">
+              <div class="academic-img"><img src="Content/img/category/6.png" alt="特殊教育學類圖片"/></div>
+              <div class="academic-name">特殊教育學類</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=1">
+              <div class="academic-img"><img src="Content/img/category/1.png" alt="綜合教育學類圖片"/></div>
+              <div class="academic-name">綜合教育學類</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic cate" href="explore2.html?cate=4">
+              <div class="academic-img"><img src="Content/img/category/4.png" alt="學前教育學類圖片"/></div>
+              <div class="academic-name">學前教育學類</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 學類 結束 --> 
+    
+    <!-- 學系 開始 -->
+    <div class="container-fluid collection-dept">
+      <h2 class="collection-title">學系</h2>
+      <!-- 無資料 -->
+      <div class="futuristic-frame data-empty">
+        <div>尚無看過的學系 <a href="explore1.html" class="btn btn-outline-dept btn-sm rounded-pill px-4 m-1">立即前往查看</a></div>
+      </div>
+      <!-- 有資料 -->
+      <div class="futuristic-frame data-filled">
+        <div class="explore-tab-dept">
+          <div class="explore-collapse-body owl-carousel" id="deptCarousel">
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">特殊教育學系</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系2</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系3</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系4</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系5</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系6</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系7</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系8</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系9</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+            <div class="item col-auto"><a role="button" class="academic dept" href="explore3.html?dept=">
+              <div class="academic-name">學系10</div>
+              </a>
+              <div class="text-center">
+                <button type="button" class="btn btn-link btn-sm btn-favorite active">最愛</button>
+                <button type="button" class="btn btn-link btn-sm btn-compare">比較</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 學系 結束 --> 
+  </div>
+  <!-- Content End --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+$(document).ready(function () {
+	
+	//nav當前頁active
+	navActive('collection');
+	
+	//carousel
+	initCarousel('.owl-carousel');
+	
+	//load 比較清單
+	$.get('compareList.html', function(data) {
+		$('body').append(data);
+	});
+	
+	
+	$('.data-empty').hide();
+	//$('.data-filled').hide();
+});
+</script>
+</body>
+</html>
