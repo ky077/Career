@@ -668,6 +668,49 @@ $(document).ready(function () {
 			}
 		});
 	}
+	
+	//[心智圖]點擊
+	$('.btn-xmind').click(function(){
+		if ($('#modal-xmind').length === 0) {
+			$('body').append(`<div class="modal fade futuristic-modal" id="modal-xmind" tabindex="-1" aria-labelledby="modal-xmind" aria-hidden="true">
+							  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<h5 class="modal-title"></h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								  </div>
+								  <div class="modal-body">
+								  </div>
+								  <div class="modal-footer"></div>
+								</div>
+							  </div>
+							</div>
+							`);
+			 
+			
+			// 載入 SVG txt
+			$('#modal-xmind .modal-body').load('Content/img/xmind/a19.txt', function () {
+				$.getJSON('Content/js/xmindHref.json', function (svgLinks) {
+					Object.keys(svgLinks).forEach(function (id) {
+						let url = svgLinks[id];
+						let $target = $('#' + id);
+
+						if ($target.length) {
+							$target.css('cursor', 'pointer');
+							$target.off('click').on('click', function () {
+								window.open(url, '_blank');
+							});
+						}
+					});
+				});
+			});
+			
+			 $('#modal-xmind').modal('show');
+        } else {
+            // 顯示已經加載的模態框
+            $('#modal-xmind').modal('show');
+        }
+	});
 
 });	
 	
