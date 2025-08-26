@@ -409,6 +409,7 @@ small, .small{
     	display: flex;
 		flex-wrap: wrap;
 		transform: scale(.9);
+		transform-origin: left top;
 		@media screen and (min-width: 768px) {
 		align-items: center;	
 		transform: scale(1.0);	
