@@ -408,8 +408,10 @@ small, .small{
 		width: auto;
     	display: flex;
 		flex-wrap: wrap;
+		transform: scale(.9);
 		@media screen and (min-width: 768px) {
 		align-items: center;	
+		transform: scale(1.0);	
 		}
 		.plot-btn{
 			display: flex;
