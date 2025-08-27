@@ -359,7 +359,7 @@ small, .small { font-size: .9em; }
 .main-bottom .info-tools .btn::before { margin-right: .25rem; vertical-align: middle; margin-top: -.25em; }
 
 .info-panel-section { margin-bottom: 3rem; }
-.info-panel-section .info-panel-title { font-size: 1.25rem; font-weight: 500; margin-bottom: .75rem; }
+.info-panel-section .info-panel-title { font-size: 1.25rem; font-weight: 500; margin-top: 0; margin-bottom: .75rem; }
 .info-panel-section .info-panel-card { font-size: .9rem; color: #333; margin-bottom: 1rem; }
 .info-panel-section .info-panel-card p { margin-top: 0; margin-bottom: .75rem; }
 .info-panel-section .info-panel-card p:last-child { margin-bottom: 0; }
