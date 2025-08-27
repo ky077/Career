@@ -79,6 +79,7 @@ body{
 	line-height: 1.8;
 	padding-right: 0.5rem;
 	outline: none;
+	color: $body-color;
 	&[list]::-webkit-calendar-picker-indicator {
 		padding-bottom: .75em !important;
 	}
@@ -175,6 +176,7 @@ body{
 		flex: 1 1 auto;
 		width: 1%;
 		min-width: 0;
+		color: $body-color;
 	}
 	.btn{
 		position: relative;
