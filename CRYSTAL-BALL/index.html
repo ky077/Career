@@ -31,7 +31,7 @@
     <div id="plotArea" class="plot-area">
       <div id="myDiv" class="js-plotly-plot" style="width: 100%; height: 100%; position: relative;"> 
         <!--  demo圖，請刪掉 --> 
-        <img src="img/ball-bg.png"   alt=""  style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; max-width: 100%; width: auto; max-height: 95%; height: auto;"/> <img src="img/ball-demo.png" alt=""  style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; max-width: 100%; width: auto; max-height: 95%; height: auto;"/> <img src="img/ball-demo2.png" alt="" style="position: absolute; right: 1%; bottom: 10%;  width: 7.8%; max-width: 100px; min-width: 70px;"/> <!--  demo圖，請刪掉 --> 
+        <img src="img/ball-bg.png"   alt=""  style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; max-width: 100%; width: auto; max-height: 95%; height: auto;"/> <img src="img/ball-demo.png" alt=""  style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; max-width: 100%; width: auto; max-height: 95%; height: auto;"/> <img src="img/ball-demo2.png" alt="" style="position: absolute; right: 3rem; bottom: 10%;  width: 7.8%; max-width: 100px; min-width: 70px;"/> <!--  demo圖，請刪掉 --> 
       </div>
       <div class="plot-tools">
         <div class="plot-btn">
@@ -728,20 +728,6 @@ window.addEventListener("resize", setOffcanvasPlacement);
         }
         // 點擊搜尋後觸發
         document.getElementById("button-addon2").addEventListener("click", function () { 
-			// 滾動到結果顯示區域
-const container = document.querySelector('#resultOffcanvas .offcanvas-body');
-const target = document.querySelector('#resultdiv');
-
-if (container && target) {
-  const offset = target.getBoundingClientRect().bottom - container.getBoundingClientRect().top;
-  container.scrollTo({
-    top: container.scrollTop + offset - container.clientHeight,
-    behavior: 'smooth'
-  });
-}
-
-
-
 			
             const inputStr = document.getElementById("Searchdeptstr").value.trim();
             if (!inputStr) return;
