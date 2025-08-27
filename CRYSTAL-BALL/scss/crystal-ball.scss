@@ -641,6 +641,8 @@ small, .small{
 
 
 .offcanvas-body{
+	height: 100vh;
+	overflow-y: auto;
 	&::-webkit-scrollbar{  
         width: 8px;     
         background-color: transparent;

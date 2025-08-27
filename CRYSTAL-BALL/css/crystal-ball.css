@@ -370,6 +370,7 @@ small, .small { font-size: .9em; }
 .tooltip { display: none; position: absolute; padding: .5rem; background-color: #15A83D; color: #fff; border: 0; border-radius: 0 .5rem .5rem .5rem; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); max-width: 300px; font-size: .8rem; line-height: 1.5; z-index: 1080; }
 .tooltip::before { content: ""; display: block; width: 0; height: 0; border-style: solid; border-width: 0 1rem .5rem 0; border-color: transparent #15A83D transparent transparent; position: absolute; top: 0; left: 0; transform: translateX(-100%); }
 
+.offcanvas-body { height: 100vh; overflow-y: auto; }
 .offcanvas-body::-webkit-scrollbar { width: 8px; background-color: transparent; }
 .offcanvas-body::-webkit-scrollbar-track { background-color: transparent; }
 .offcanvas-body::-webkit-scrollbar-thumb { background-color: #006767; border-radius: 8px; }
