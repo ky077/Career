@@ -353,21 +353,13 @@ small, .small{
 		width: auto;    
 		height: 2rem; 
 		margin-right: .25rem;
-	}
-	span {
-		display: block;
-		font-size: 1.75rem;
-		font-weight: 700;
-		letter-spacing: .15em;
-		color: $tertiary;
-		filter: drop-shadow(1px 1px $primary) drop-shadow(-1px -1px $primary) drop-shadow(-1px 1px $primary) drop-shadow(1px -1px $primary) 
-			    drop-shadow(0.15rem 0.15rem rgba(lighten($primary, 20%), .75));
-		font-style: italic;
+		font-size: 2rem;
+		color: $primary;
 	}
 	small{
 		display: block;
 		color: #333;
-		font-size: .9rem;
+		font-size: 1.25rem;
 		font-weight: 400;
 		background: linear-gradient(to right, $primary 0%, $yellow 33%, $purple 67%, $red 100%);
 		-webkit-background-clip: text;
@@ -378,6 +370,7 @@ small, .small{
 		background-size: 100% 100%;
 		background-position: left center;
 		animation: gradientFadeIn-span 3s infinite alternate;
+		margin-top: .5rem;
 	}
 }
 
