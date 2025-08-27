@@ -26,6 +26,17 @@ $red: #FF0000;
 *{
 	box-sizing: border-box;
 	transition: all .3s ease-in;
+	&::-webkit-scrollbar{  
+        width: 8px;     
+        background-color: transparent;
+    }  
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    } 
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border-radius: 8px;
+    } 
 }
 html, body{
 	font-family: $font-family;
@@ -98,6 +109,10 @@ body{
 	> i {
 		font-size: 1rem;	
 	}
+}
+.btn-lg {
+	padding: 0.5rem 1rem;
+    font-size: 1.1rem;
 }
 .btn-primary{
 	color: #fff;
@@ -373,6 +388,49 @@ small, .small{
 		margin-top: .5rem;
 	}
 }
+.futuristic-modal{
+	$border-radius-xl:        1rem;
+	$modal-header-padding-x:  1rem;
+	$modal-header-padding-y:  1rem;
+	.modal-content{
+		border: 5px solid $primary;
+		border-radius: $border-radius-xl*2;
+	}
+	
+	.modal-header{
+		border-bottom-color: transparent;
+		padding: 0 calc(#{$modal-header-padding-x}*3);
+		position: relative;
+		.modal-title{
+			font-weight: 500;
+			min-width: 50%;
+			min-height: calc(1.25rem*1.5 + .25rem*2);
+			text-align: center;
+			background-color: $primary;
+			color: #fff;
+			padding: $modal-header-padding-y*.5 $modal-header-padding-x*3;
+			margin-left: auto;
+			margin-right: auto;
+			clip-path: polygon(0% -1px, 100% -1px, calc(100% - #{$modal-header-padding-x}*2) 100%, $modal-header-padding-x*2 100%);
+		}
+		.btn-close{
+			position: absolute;
+			right: $modal-header-padding-x;
+			cursor: pointer;
+		}
+	}
+	.modal-footer{
+		border-top-color: transparent;
+		background-color: $primary;
+		color: #fff;
+		justify-content: center;
+		width: 50%;
+    	margin-left: auto;
+    	margin-right: auto;
+		border-radius: 0;
+		clip-path: polygon($modal-header-padding-x*2 0%, calc(100% - #{$modal-header-padding-x}*2) 0%, 100% calc(100% + 1px), 0% calc(100% + 1px));
+	}
+}
 
 
 //template
@@ -541,9 +599,6 @@ small, .small{
 		font-size: 1.25rem;
 		font-weight: 500;
 		margin-bottom: .75rem;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
 	}
 	.info-panel-card {
 		font-size: .9rem;
@@ -636,19 +691,9 @@ small, .small{
 .offcanvas-body{
 	height: 100vh;
 	overflow-y: auto;
-	&::-webkit-scrollbar{  
-        width: 8px;     
-        background-color: transparent;
-    }  
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    } 
-    &::-webkit-scrollbar-thumb {
-        background-color: $primary;
-        border-radius: 8px;
-    } 
 }
 
+// /////// /////// /////// /////// /////// /////// ///////
 .guide-main{ border: 1px solid red;
 	$carousel-control-width: 3rem;
 	width: 100%;
@@ -692,6 +737,8 @@ small, .small{
 	.guide-carousel{border: 1px solid orange;
 		width: calc(100% - #{$carousel-control-width}*2);
 		max-width: 1320px;
+		height: calc(100% - 3rem*3);
+		margin-top: 3rem;
 		border: 1px solid rgba(#fff, .25);
 		background: radial-gradient(ellipse at 10% 10%, rgba(255,255,255, .25) 0%,  rgba(255,255,255, .9) 100%);
 		border-radius: 2rem;
@@ -705,7 +752,7 @@ small, .small{
 			}
 		}
 		.carousel-inner{border: 1px solid yellow;
-			height: calc(100% - #{$carousel-control-width}*2);
+			height: 100%;
 			padding: 3rem 1rem 1rem 1rem;
 			.carousel-item{border: 1px solid green;
 				height: 100%;
