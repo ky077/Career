@@ -27,8 +27,6 @@
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselGuide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselGuide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselGuide" data-bs-slide-to="2" aria-label="Slide 3"></button>
-		<button type="button" data-bs-target="#carouselGuide" data-bs-slide-to="3" aria-label="Slide 4"></button>   
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -53,14 +51,13 @@
           </div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-content"><img src="img/guide-2.png" alt=""/></div>
+          <div class="carousel-content">
+			  <div class="video-wrap">
+            <video controls preload="metadata" playsinline controlsList="nodownload nofullscreen" aria-label="教學影片：按鈕說明">
+              <source src="img/slide2.mp4" type="video/mp4">
+              您的瀏覽器不支援 video 元素。 </video></div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <div class="carousel-content"> 333 </div>
-        </div>
-        <div class="carousel-item">
-          <div class="carousel-content"> 444 </div>
-        </div>		  
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselGuide" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselGuide" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
