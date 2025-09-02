@@ -42,11 +42,12 @@
       <div class="info-tools">
         <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#whatModal">認識水晶球</button>
         <button type="button" class="btn btn-light showing" data-bs-toggle="offcanvas" data-bs-target="#resultOffcanvas" aria-controls="resultOffcanvas">測驗結果</button>
+        <button type="button" class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#searchOffcanvas" aria-controls="searchOffcanvas">搜尋</button>
       </div>
     </div>
   </div>
   
-  <!-- Modal -->
+  <!-- Modal#whatModal -->
   <div class="modal fade futuristic-modal" id="whatModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -56,27 +57,28 @@
         </div>
         <div class="modal-body">
           <p>生涯水晶球是用三個向度進行學類的分類：<br>
-                X軸是「自由」和「規準」，Y軸是「事」和「人」，Z軸是「思考」和「實踐」。<br>
-                /<br>
-                如果你喜歡自己決定、創意發想、彈性大，代表你偏向自由；<br>
-                如果你喜歡有計畫、照規則做事，則偏向規準。<br>
-                /<br>
-                偏好「事」的人喜歡操作、分析、處理資料或解決問題；<br>
-                偏好「人」的人則喜歡互動、幫助別人或一起合作。<br>
-                /<br>
-                傾向「思考」的人愛分析、推理與理解背後原理；<br>
-                「實踐」的人則喜歡動手做、從實際經驗中學習。<br><br>
-                了解自己在哪些向度比較有興趣，有助於找到適合自己的學習與發展方向。 </p>
-			<div class="text-center">
-			<button type="button" class="btn btn-lg btn-secondary rounded-pill px-4" data-bs-dismiss="modal">我瞭解了</button></div>
+            X軸是「自由」和「規準」，Y軸是「事」和「人」，Z軸是「思考」和「實踐」。<br>
+            /<br>
+            如果你喜歡自己決定、創意發想、彈性大，代表你偏向自由；<br>
+            如果你喜歡有計畫、照規則做事，則偏向規準。<br>
+            /<br>
+            偏好「事」的人喜歡操作、分析、處理資料或解決問題；<br>
+            偏好「人」的人則喜歡互動、幫助別人或一起合作。<br>
+            /<br>
+            傾向「思考」的人愛分析、推理與理解背後原理；<br>
+            「實踐」的人則喜歡動手做、從實際經驗中學習。<br>
+            <br>
+            了解自己在哪些向度比較有興趣，有助於找到適合自己的學習與發展方向。 </p>
+          <div class="text-center">
+            <button type="button" class="btn btn-lg btn-secondary rounded-pill px-4" data-bs-dismiss="modal">我瞭解了</button>
+          </div>
         </div>
-        <div class="modal-footer">
-        </div>
+        <div class="modal-footer"> </div>
       </div>
     </div>
   </div>
   
-  <!-- Offcanvas -->
+  <!-- Offcanvas#resultOffcanvas -->
   <div class="offcanvas offcanvas-end show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="resultOffcanvas" aria-labelledby="resultOffcanvasLabel">
     <div class="offcanvas-body">
       <div class="info-panel-section info-interest">
@@ -162,10 +164,16 @@
           </div>--> 
         </div>
       </div>
-	  <div class="info-panel-section info-search">
-        <h2 class="info-panel-title"> 
+    </div>
+  </div>
+  <!-- Offcanvas#searchOffcanvas -->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="searchOffcanvas" aria-labelledby="searchOffcanvasLabel">
+    <div class="offcanvas-body">
+      <div class="info-panel-section info-search">
+        <h2 class="info-panel-title">搜尋</h2>
+        <div class="info-panel-card">
           <div class="input-group">
-            <input type="text" class="form-control btn-light" list="Drop_dept" placeholder="輸入學系關鍵字..." aria-label="輸入學系關鍵字" aria-describedby="button-addon2" id="Searchdeptstr">
+            <input type="text" class="form-control btn-secondary" list="Drop_dept" placeholder="輸入學系關鍵字..." aria-label="輸入學系關鍵字" aria-describedby="button-addon2" id="Searchdeptstr">
             <datalist id="Drop_dept">
               <option value="科學教育學系"></option>
               <option value="教育學系"></option>
@@ -331,7 +339,6 @@
               <option value="輪機工程學系"></option>
               <option value="生物機電工程學系"></option>
               <option value="機械工程學系"></option>
-
               <option value="車輛工程學系"></option>
               <option value="航空工程學系"></option>
               <option value="機電工程學系"></option>
@@ -435,12 +442,12 @@
               <option value="水土保持學系"></option>
               <option value="生態人文學系"></option>
             </datalist>
-			<button class="btn btn-light" type="button" id="btnClearSearch"><i class="fa-solid fa-xmark"></i></button>    
-            <button class="btn btn-light" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="btn btn-secondary" type="button" id="btnClearSearch" title="清除"><i class="fa-solid fa-xmark"></i></button>
+            <button class="btn btn-secondary" type="button" id="button-addon2" title="搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
-        </h2>
+        </div>
         <div id="resultdiv"> </div>
-      </div>	
+      </div>
     </div>
   </div>
   
@@ -455,46 +462,57 @@ var interval = setTimeout(function() {
 	document.getElementById("loadingMessage").style.display = "none";
 }, 1000);
 
-	
-//[測驗結果]推出
-const main = document.querySelector('.main'); 		
-const infoTools = document.querySelector('.info-tools'); 					//資訊工具區塊		
-const resultBtn = document.querySelector('[data-bs-toggle="offcanvas"]'); 	//測驗結果按鈕
-const resultOffcanvas = document.getElementById('resultOffcanvas'); 		//測驗結果區塊
-const plotArea = document.getElementById('plotArea'); 						//水晶球區塊
 
-resultOffcanvas.addEventListener('show.bs.offcanvas', () => {
-	main.classList.add('pushed');
-	
-	resultBtn.classList.add('showing');//變換icon樣式
+const main = document.querySelector('.main');
+// 所有 offcanvas 元素
+const offcanvasList = [
+  {
+    btn: document.querySelector('[data-bs-target="#resultOffcanvas"]'),
+    panel: document.getElementById('resultOffcanvas')
+  },
+  {
+    btn: document.querySelector('[data-bs-target="#searchOffcanvas"]'),
+    panel: document.getElementById('searchOffcanvas')
+  }
+];
+
+// 為每個 offcanvas 設定 show/hide 事件
+offcanvasList.forEach(({ btn, panel }) => {
+  panel.addEventListener('show.bs.offcanvas', () => {
+    main.classList.add('pushed');
+    btn.classList.add('showing'); // 變換icon樣式
+  });
+
+  panel.addEventListener('hide.bs.offcanvas', () => {
+    main.classList.remove('pushed');
+    btn.classList.remove('showing');
+	btn.blur();
+  });
 });
 
-resultOffcanvas.addEventListener('hide.bs.offcanvas', () => {
-	main.classList.remove('pushed');
-	
-	resultBtn.classList.remove('showing');//變換icon樣式
-});
-	
 
 // 設定方向的 function
 function setOffcanvasPlacement() {
-  if (window.matchMedia("(orientation: portrait)").matches) {  
-    // 直拿：Offcanvas置下
-    resultOffcanvas.classList.add('offcanvas-bottom');
-    resultOffcanvas.classList.remove('offcanvas-end');
-	  
-	// 直拿：main下面被推
-	main.classList.add('main-bottom');
-    main.classList.remove('main-end');
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
-  } else {
-    // 橫拿：Offcanvas置右
-    resultOffcanvas.classList.add('offcanvas-end');
-    resultOffcanvas.classList.remove('offcanvas-bottom');
-	  
-	// 橫拿：main右面被推  
-	main.classList.add('main-end');
-    main.classList.remove('main-bottom');
+  offcanvasList.forEach(({ panel }) => {
+    if (isPortrait) {
+      panel.classList.add('offcanvas-bottom');
+      panel.classList.remove('offcanvas-end');
+    } else {
+      panel.classList.add('offcanvas-end');
+      panel.classList.remove('offcanvas-bottom');
+    }
+  });
+
+  if (main) {
+    if (isPortrait) {
+      main.classList.add('main-bottom');
+      main.classList.remove('main-end');
+    } else {
+      main.classList.add('main-end');
+      main.classList.remove('main-bottom');
+    }
   }
 }
 
@@ -503,8 +521,8 @@ setOffcanvasPlacement();
 
 // 監聽方向改變
 window.addEventListener("orientationchange", setOffcanvasPlacement);
-window.addEventListener("resize", setOffcanvasPlacement);
-</script> 	
+window.addEventListener("resize", setOffcanvasPlacement);	
+</script> 
 <script>
         console.log("開始讀取");
         const rawData = [

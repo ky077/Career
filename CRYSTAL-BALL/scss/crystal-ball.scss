@@ -23,9 +23,14 @@ $red: #FF0000;
 }
 	
 //base
+.bg-gradient{
+	background: radial-gradient(ellipse at center, rgba(#e5d792, .5) 0%, rgba($secondary, .5) 60%, rgba($primary, .5) 100%);
+}
+.transition-all{
+	transition: all .3s ease-in;
+}
 *{
 	box-sizing: border-box;
-	transition: all .3s ease-in;
 	&::-webkit-scrollbar{  
         width: 8px;     
         background-color: transparent;
@@ -52,12 +57,11 @@ html, body{
 }
 html{
 	scroll-behavior:smooth;
-	background: radial-gradient(circle at 33.333333% 50%, rgba(#e5d792, .6) 0%, rgba($secondary, .6) 60%, rgba($primary, .6) 100%); 
-	background-attachment: fixed;
+	background-color: #fff;
 }
 body{
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	padding: 0;
 	margin: 0;
 	color: $body-color;
@@ -66,7 +70,9 @@ body{
 		overflow: hidden;
 	}
 }
-
+body > form {
+	height: 100%;
+}
 
 //UI
 .visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
@@ -191,7 +197,6 @@ body{
 		flex: 1 1 auto;
 		width: 1%;
 		min-width: 0;
-		color: $body-color;
 	}
 	.btn{
 		position: relative;
@@ -354,7 +359,7 @@ small, .small{
 	bottom: 0;
 	padding: 1rem 1.25rem; 
 	z-index: 9999; 
-	background-color: rgba(#fff, .65);
+	background-color: rgba(#fff, 1.0);
 	box-shadow: inset 0 -10px 20px rgba(#fff, .25),
  				inset 0 -5px   8px rgba(#fff, .25),		
 					  0   0    8px rgba(#000, .15),
@@ -438,8 +443,14 @@ small, .small{
 	width: 100%;
 	height: 100%;
 	position: relative;
-	//.plot-area{ 
-//	}
+	.plot-area{ 
+		height: 100%;
+    	padding: 3rem 0;
+		@extend .bg-gradient;
+		@media screen and (orientation:landscape){
+		padding: 3rem 4rem;	
+		}
+	}
 	.plot-tools{  
 		position: absolute; 
 		top: 0; 
@@ -476,8 +487,9 @@ small, .small{
 				background-size: 100% 100%;
 			}
 			&.showing{
-			border-color: transparent;
-			box-shadow: none;
+				background-color: rgba(#fff, 1.0);
+				border-color: transparent;
+				box-shadow: none;
 			}
 		}
 		//按鈕icon
@@ -504,7 +516,6 @@ small, .small{
 				/* search + plus */
 			}
 			&.showing::before{
-				
 				background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='search-minus' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cpath d='M11.7,10.3c2.1-2.9,1.5-7-1.4-9.1s-7-1.5-9.1,1.4s-1.5,7,1.4,9.1c2.3,1.7,5.4,1.7,7.7,0h0c0,0,0.1,0.1,0.1,0.1l3.8,3.8 c0.4,0.4,1,0.4,1.4,0s0.4-1,0-1.4l-3.8-3.9C11.8,10.4,11.8,10.4,11.7,10.3L11.7,10.3z M12,6.5c0,3-2.5,5.5-5.5,5.5S1,9.5,1,6.5 S3.5,1,6.5,1S12,3.5,12,6.5'/%3E %3Cpath d='M4,6.5C4,6.2,4.2,6,4.5,6h4C8.8,6,9,6.2,9,6.5S8.8,7,8.5,7h-4C4.2,7,4,6.8,4,6.5'/%3E %3C/svg%3E ");
 				/* Bootstrap Icons - https://icons.getbootstrap.com/ */
 				/* search + minus */
@@ -676,21 +687,24 @@ small, .small{
 }
 
 // /////// /////// /////// /////// /////// /////// ///////
-.guide-main{ border: 1px solid red;
+.guide-main{ 
 	$carousel-control-width: 3rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	.slogan{ border: 1px solid orange; 
+	padding-top: 5rem;
+	padding-bottom: 4rem;
+	@extend .bg-gradient;
+	.slogan{ 
 		position: absolute;
-		top: 0;
+		top: 5rem;
 		left: 0;
 		right: 0;
 		margin: 0;
-		padding: .25rem 1rem;
-		height: 6rem;
+		height: 9rem;
+		transform: translateY(-50%);
 		z-index: 2;
 		display: flex;
 		align-items: center;	
@@ -716,15 +730,14 @@ small, .small{
 			}
 		}
 	}
-	.guide-carousel{border: 1px solid orange;
+	.guide-carousel{
 		width: calc(100% - #{$carousel-control-width}*2);
 		max-width: 1320px;
-		height: calc(100% - 3rem*3);
-		margin-top: 3rem;
+		height: 100%;
 		border: 1px solid rgba(#fff, .25);
 		background: radial-gradient(ellipse at 10% 10%, rgba(255,255,255, .25) 0%,  rgba(255,255,255, .9) 100%);
 		border-radius: 2rem;
-		.carousel-indicators{border: 1px solid yellow;
+		.carousel-indicators{
 			top: 100%;
 			bottom: auto;
 			[data-bs-target] {
@@ -733,31 +746,32 @@ small, .small{
 				border-radius: 100%;
 			}
 		}
-		.carousel-inner{border: 1px solid yellow;
+		.carousel-inner{
 			height: 100%;
-			padding: 3rem 1rem 1rem 1rem;
-			.carousel-item{border: 1px solid green;
+			padding-top: 9rem*.5;
+			padding-bottom: 1.5rem;
+			.carousel-item{
 				height: 100%;
 				img, svg{
 					width: auto;
 					max-width: 100%;
 				}
 			}
-			
 		}
-		.carousel-control-prev {border: 1px solid yellow;
+		.carousel-control-prev {
 			width: $carousel-control-width;
 			left: $carousel-control-width*-1;
 			
 			cursor: pointer;
 		}
-		.carousel-control-next{ border: 1px solid yellow;
+		.carousel-control-next{ 
 			width: $carousel-control-width;
 			right: $carousel-control-width*-1;
 			
 			cursor: pointer;
 		}
-		.carousel-control-skip{border: 1px solid yellow;
+		
+		.carousel-control-skip{
 			position: absolute;
 			top: 100%;
 			right: 1.5rem;
@@ -777,7 +791,48 @@ small, .small{
 				text-underline-offset: 4px;
 			}
 		}
+		.carousel-content{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 0 1rem;
+		}
+		.carousel-content-scroller{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-height: 100%;
+			overflow: auto;
+			padding: 0 1rem;
+		}
+		
+		.slide1-content{
+			text-shadow: 1px 1px rgba(#fff, .25);
+			.slide1-title{
+				margin-bottom: 0;
+				+ hr{
+					margin-top: 0;
+					margin-bottom: 1rem;
+					border: 0;
+					height: 1px;
+					background-color: $primary;
+					width: 75%;
+					opacity: .5;
+					margin-left: 0;
+				}
+			}
+			p{
+				color: #444;
+			}
+		}
 	}
 }
 
-
+.modebar {
+	display: none;
+}
