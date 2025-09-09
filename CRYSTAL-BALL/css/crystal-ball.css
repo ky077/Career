@@ -377,7 +377,7 @@ small, .small { font-size: .9em; }
 .main-end .info-tools .btn { writing-mode: vertical-rl; padding-top: .75rem; padding-bottom: .75rem; border-top-right-radius: 0; border-bottom-right-radius: 0; margin: .5rem 0; border-right: 0; }
 .main-end .info-tools .btn::before { margin-bottom: .25rem; margin-left: .125em; }
 
-.main-bottom.pushed { height: calc(100% - 40vh); margin-bottom: 40vh; }
+.main-bottom.pushed { height: calc(100% - 40%); margin-bottom: 40%; }
 .main-bottom.pushed .info-tools { margin-bottom: -1px; }
 .main-bottom .info-tools { position: absolute; top: auto; left: 0; right: 0; bottom: 0; display: flex; flex-direction: row; z-index: 1045; }
 .main-bottom .info-tools .btn { writing-mode: horizontal-tb; border-bottom-left-radius: 0; border-bottom-right-radius: 0; margin: 0 .5rem; border-bottom: 0; }
@@ -406,7 +406,9 @@ small, .small { font-size: .9em; }
 .tooltip { display: none; position: absolute; padding: .5rem; background-color: #15A83D; color: #fff; border: 0; border-radius: 0 .5rem .5rem .5rem; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); max-width: 300px; font-size: .8rem; line-height: 1.5; z-index: 1080; }
 .tooltip::before { content: ""; display: block; width: 0; height: 0; border-style: solid; border-width: 0 1rem .5rem 0; border-color: transparent #15A83D transparent transparent; position: absolute; top: 0; left: 0; transform: translateX(-100%); }
 
-.offcanvas-body { height: 100vh; overflow-y: auto; }
+.offcanvas-body { height: 100%; overflow-y: auto; }
+
+.offcanvas.offcanvas-bottom { height: 40%; }
 
 .guide-main { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; padding-top: 5rem; padding-bottom: 4rem; }
 .guide-main .slogan { position: absolute; top: 5rem; left: 0; right: 0; margin: 0; height: 9rem; transform: translateY(-50%); z-index: 2; display: flex; align-items: center; justify-content: center; }

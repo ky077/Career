@@ -559,10 +559,10 @@ small, .small{
 		}
 	}
 }
-.main-bottom{ 
+.main-bottom{ //offcanvas在下邊
 	&.pushed{
-		height: calc(100% - 40vh);
-		margin-bottom: 40vh;
+		height: calc(100% - 40%);
+		margin-bottom: 40%;
 		.info-tools{
 			margin-bottom: -1px;
 		}
@@ -701,9 +701,13 @@ small, .small{
 
 
 .offcanvas-body{
-	height: 100vh;
+	height: 100%;
 	overflow-y: auto;
 }
+.offcanvas.offcanvas-bottom{
+	height: 40%;
+}
+
 
 // /////// /////// /////// /////// /////// /////// ///////
 .guide-main{ 
