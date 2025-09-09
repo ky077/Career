@@ -67,7 +67,7 @@ html{
 	background-color: #fff;
 }
 body{
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	padding: 0;
 	margin: 0;
@@ -562,8 +562,8 @@ small, .small{
 }
 .main-bottom{ //offcanvas在下邊
 	&.pushed{
-		height: calc(100% - 40%);
-		margin-bottom: 40%;
+		height: calc(100% - 40vh);
+		margin-bottom: 40vh;
 		.info-tools{
 			margin-bottom: -1px;
 		}
@@ -706,7 +706,7 @@ small, .small{
 	overflow-y: auto;
 }
 .offcanvas.offcanvas-bottom{
-	height: 40%;
+	height: 40vh;
 	.info-tools .btn{
 		padding-left: .5rem;
 		padding-right: .5rem;

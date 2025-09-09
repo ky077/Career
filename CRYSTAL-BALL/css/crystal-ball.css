@@ -253,7 +253,7 @@ html, body { font-family: "Noto Sans", "Noto Sans TC", "Microsoft JhengHei", "Pi
 
 html { scroll-behavior: smooth; background-color: #fff; }
 
-body { width: 100%; height: 100vh; padding: 0; margin: 0; color: #333; overflow: hidden; }
+body { width: 100vw; height: 100vh; padding: 0; margin: 0; color: #333; overflow: hidden; }
 @media screen and (min-width: 992px) { body { overflow: hidden; } }
 
 body > form { height: 100%; }
@@ -377,7 +377,7 @@ small, .small { font-size: .9em; }
 .main-end .info-tools .btn { writing-mode: vertical-rl; padding-top: .75rem; padding-bottom: .75rem; border-top-right-radius: 0; border-bottom-right-radius: 0; margin: .5rem 0; border-right: 0; }
 .main-end .info-tools .btn::before { margin-bottom: .25rem; margin-left: .125em; }
 
-.main-bottom.pushed { height: calc(100% - 40%); margin-bottom: 40%; }
+.main-bottom.pushed { height: calc(100% - 40vh); margin-bottom: 40vh; }
 .main-bottom.pushed .info-tools { margin-bottom: -1px; }
 .main-bottom .info-tools { position: absolute; top: auto; left: 0; right: 0; bottom: 0; display: flex; flex-direction: row; z-index: 1045; }
 .main-bottom .info-tools .btn { writing-mode: horizontal-tb; border-bottom-left-radius: 0; border-bottom-right-radius: 0; margin: 0 .5rem; border-bottom: 0; }
@@ -408,7 +408,7 @@ small, .small { font-size: .9em; }
 
 .offcanvas-body { height: 100%; overflow-y: auto; }
 
-.offcanvas.offcanvas-bottom { height: 40%; }
+.offcanvas.offcanvas-bottom { height: 40vh; }
 .offcanvas.offcanvas-bottom .info-tools .btn { padding-left: .5rem; padding-right: .5rem; }
 
 .guide-main { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; padding-top: 5rem; padding-bottom: 4rem; }
