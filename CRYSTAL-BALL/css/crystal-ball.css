@@ -253,7 +253,7 @@ html, body { font-family: "Noto Sans", "Noto Sans TC", "Microsoft JhengHei", "Pi
 
 html { scroll-behavior: smooth; background-color: #fff; }
 
-body { width: 100%; height: 100vh; padding: 0; margin: 0; color: #333; }
+body { width: 100%; height: 100vh; padding: 0; margin: 0; color: #333; overflow: hidden; }
 @media screen and (min-width: 992px) { body { overflow: hidden; } }
 
 body > form { height: 100%; }
@@ -351,7 +351,7 @@ small, .small { font-size: .9em; }
 .futuristic-modal .modal-footer { border-top-color: transparent; background-color: #006767; color: #fff; justify-content: center; width: 50%; margin-left: auto; margin-right: auto; border-radius: 0; clip-path: polygon(2rem 0%, calc(100% - 1rem*2) 0%, 100% calc(100% + 1px), 0% calc(100% + 1px)); }
 
 .main { width: 100%; height: 100%; position: relative; }
-.main .plot-area { height: 100%; padding: 3.5rem 0 2rem 0; }
+.main .plot-area { height: 100%; padding: 3.5rem 0 2.5rem 0; }
 @media screen and (orientation: landscape) { .main .plot-area { padding: 3.5rem 4rem 0 4rem; } }
 .main .plot-tools { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; flex-wrap: wrap; transform: scale(0.9); transform-origin: left top; width: 110%; padding: .5rem .75rem; }
 @media screen and (min-width: 768px) { .main .plot-tools { align-items: center; transform: scale(1); width: 100%; } }
@@ -409,6 +409,7 @@ small, .small { font-size: .9em; }
 .offcanvas-body { height: 100%; overflow-y: auto; }
 
 .offcanvas.offcanvas-bottom { height: 40%; }
+.offcanvas.offcanvas-bottom .info-tools .btn { padding-left: .5rem; padding-right: .5rem; }
 
 .guide-main { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; padding-top: 5rem; padding-bottom: 4rem; }
 .guide-main .slogan { position: absolute; top: 5rem; left: 0; right: 0; margin: 0; height: 9rem; transform: translateY(-50%); z-index: 2; display: flex; align-items: center; justify-content: center; }
