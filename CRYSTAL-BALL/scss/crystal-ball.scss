@@ -11,6 +11,13 @@ $yellow: #FFD700;
 $purple: #4B0082;
 $red: #FF0000;
 
+@import "btn-close";
+@import "modal";
+@import "offcanvas";
+@import "carousel";
+
+@import "icon";
+
 
 //an
 @keyframes gradientFadeIn-span {
@@ -113,7 +120,7 @@ body > form {
 	cursor: pointer;
 	outline: none;
 	> i {
-		font-size: 1rem;	
+		font-size: 1em;	
 	}
 }
 .btn-lg {
@@ -246,13 +253,6 @@ small, .small{
 }
 
 
-//import
-@import "btn-close";
-@import "modal";
-@import "offcanvas";
-@import "carousel";
-
-
 //customization
 .btn-cs-primary{
 	color: #fff;
@@ -298,56 +298,7 @@ small, .small{
 		box-shadow: inset 0 3px 6px rgba(0,0,0, .15);
 	}
 }
-.btn-rotation{
-	padding-left: 1.125rem;
-	padding-right: 1.125rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	&::before{//預設[旋轉]
-		content: "";
-		display: inline-block;
-		width: 1.25em;
-		height: 1.25em;
-		margin-right: .25rem;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='rotation' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cg%3E %3Cpath d='M15.7,7h-1.6c-0.2-1.5-1-2.8-2.2-3.8C9.3,1,5.4,1.4,3.2,4c0,0,0,0,0,0C3,4.3,3,4.6,3.3,4.8S3.8,4.9,4,4.7 c1-1.2,2.4-1.9,4-1.9c2.5,0,4.6,1.7,5.1,4.1h-1.4c-0.1,0-0.1,0-0.2,0.1c-0.1,0.1-0.1,0.3,0,0.4l2,2.4c0,0,0,0,0,0 c0.1,0.1,0.3,0.1,0.4,0l2-2.4c0,0,0.1-0.1,0.1-0.2C16,7.1,15.9,7,15.7,7z'/%3E %3Cpath d='M12,11.3c-0.8,0.9-1.8,1.5-3,1.8c-2.8,0.6-5.5-1.2-6.1-4h1.4c0.1,0,0.3-0.1,0.3-0.3c0-0.1,0-0.1-0.1-0.2l-2-2.4 C2.4,6.1,2.2,6,2.1,6.1c0,0,0,0,0,0l-2,2.4C0,8.7,0,8.9,0.1,9C0.1,9,0.2,9,0.3,9h1.6c0.2,1.5,1,2.8,2.2,3.8 c2.6,2.2,6.6,1.8,8.8-0.8c0,0,0,0,0,0c0.2-0.2,0.1-0.6-0.1-0.7C12.5,11,12.2,11.1,12,11.3z'/%3E %3Cpath d='M6.3,10.6l3.8-2.2c0.1,0,0.1-0.1,0.2-0.2c0.1-0.2,0.1-0.5-0.2-0.7L6.3,5.4C6,5.2,5.6,5.4,5.6,5.8v4.4 C5.6,10.6,6,10.8,6.3,10.6z'/%3E %3C/g%3E %3C/svg%3E ");
-		/* Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. */
-		/* rotate + play */
-	}
-	&:active, &.active{//按下去、動作[暫停]
-		&::before{
-			background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='rotation_stop' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cpath d='M20.4,4.9l3.8-2.2c0.1,0,0.1-0.1,0.2-0.2c0.1-0.2,0.1-0.5-0.2-0.7l-3.8-2.2c-0.3-0.2-0.7,0-0.7,0.4v4.4 C19.6,4.9,20.1,5.1,20.4,4.9z'/%3E %3Cg%3E %3Cpath d='M15.7,7h-1.6c-0.2-1.5-1-2.8-2.2-3.8C9.3,1,5.4,1.4,3.2,4c0,0,0,0,0,0C3,4.3,3,4.6,3.3,4.8S3.8,4.9,4,4.7 c1-1.2,2.4-1.9,4-1.9c2.5,0,4.6,1.7,5.1,4.1h-1.4c-0.1,0-0.1,0-0.2,0.1c-0.1,0.1-0.1,0.3,0,0.4l2,2.4c0,0,0,0,0,0 c0.1,0.1,0.3,0.1,0.4,0l2-2.4c0,0,0.1-0.1,0.1-0.2C16,7.1,15.9,7,15.7,7z'/%3E %3Cpath d='M12,11.3c-0.8,0.9-1.8,1.5-3,1.8c-2.8,0.6-5.5-1.2-6.1-4h1.4c0.1,0,0.3-0.1,0.3-0.3c0-0.1,0-0.1-0.1-0.2l-2-2.4 C2.4,6.1,2.2,6,2.1,6.1c0,0,0,0,0,0l-2,2.4C0,8.7,0,8.9,0.1,9C0.1,9,0.2,9,0.3,9h1.6c0.2,1.5,1,2.8,2.2,3.8 c2.6,2.2,6.6,1.8,8.8-0.8c0,0,0,0,0,0c0.2-0.2,0.1-0.6-0.1-0.7C12.5,11,12.2,11.1,12,11.3z'/%3E %3Cpath d='M9.6,10.4c0.4,0,0.8-0.4,0.8-0.8V6.4c0-0.4-0.4-0.8-0.8-0.8H6.4C6,5.6,5.6,6,5.6,6.4v3.2c0,0.4,0.4,0.8,0.8,0.8H9.6z'/%3E %3C/g%3E %3C/svg%3E");
-			/* Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. */
-			/* rotate + stop*/
-		}	
-	}
-}
-.btn-move {
-	padding-left: 1.125rem;
-	padding-right: 1.125rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	&::before{//預設[宏觀視角]
-		content: "";
-		display: inline-block;
-		width: 1.25em;
-		height: 1.25em;
-		margin-right: .25rem;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='_x33_D' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E %3Cpath id='XYZ' d='M510.9,441c-3.5,9.9-14.4,15-24.2,11.5L256,370.4L25.3,452.5C15.4,456,4.6,450.9,1.1,441s1.6-20.7,11.5-24.2 L237,336.9V19c0-10.5,8.5-19,19-19s19,8.5,19,19v317.9l224.4,79.9C509.3,420.3,514.4,431.2,510.9,441z'/%3E %3C/svg%3E");
-	}
-	&:active, &.active{//按下去、動作[個人視角]
-		&::before{
-			background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='_x33_D-center' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E %3Cellipse id='hand' transform='matrix(0.9732 -0.2298 0.2298 0.9732 -44.8453 64.8356)' cx='256' cy='225' rx='64' ry='64'/%3E %3Cpath id='body' d='M278.9,313h-45.7c-49.2,0-89.1,39.9-89.1,89.1c0,8.2,6.7,14.9,14.9,14.9h194.3c8.2,0,14.8-6.7,14.8-14.9 C368,352.9,328.1,313,278.9,313z'/%3E %3Cpath id='Y' d='M94.8,387.6l-82.2,29.3c-9.9,3.5-15,14.3-11.5,24.2c3.5,9.9,14.3,15,24.2,11.5l73.4-26.1c-3-7.5-4.7-15.7-4.7-24.3 C94,397.3,94.3,392.4,94.8,387.6z'/%3E %3Cpath id='X' d='M499.4,416.8l-82.2-29.3c0.5,4.8,0.8,9.7,0.8,14.6c0,8.6-1.7,16.8-4.7,24.3l73.4,26.1c9.8,3.5,20.7-1.6,24.2-11.5 C514.4,431.2,509.3,420.3,499.4,416.8z'/%3E %3Cpath id='Z' d='M275,112.6V19c0-10.5-8.5-19-19-19s-19,8.5-19,19v93.6c6.2-1,12.6-1.6,19-1.6C262.4,111,268.8,111.5,275,112.6z'/%3E %3C/svg%3E ");
-			/* Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. */
-			/* (custom) + user*/
-		}	
-	}
-}
+
 .loading-msg{
 	display: none; 
 	position: fixed; 
@@ -359,11 +310,7 @@ small, .small{
 	bottom: 0;
 	padding: 1rem 1.25rem; 
 	z-index: 9999; 
-	background-color: rgba(#fff, 1.0);
-	box-shadow: inset 0 -10px 20px rgba(#fff, .25),
- 				inset 0 -5px   8px rgba(#fff, .25),		
-					  0   0    8px rgba(#000, .15),
-					  0   2px  3px rgba(#000, .15);
+	background: radial-gradient(ellipse at center, rgba(#e5d792, .2) 0%, rgba($secondary, .2) 60%, rgba($primary, .2) 100%), #fff;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -445,13 +392,13 @@ small, .small{
 	position: relative;
 	.plot-area{ 
 		height: 100%;
-    	padding: 3rem 0;
+    	padding: 3.5rem 0 2rem 0;
 		@extend .bg-gradient;
 		@media screen and (orientation:landscape){
-		padding: 3rem 4rem;	
+		padding: 3.5rem 4rem 0 4rem;	
 		}
 	}
-	.plot-tools{  
+	.plot-tools{ 
 		position: absolute; 
 		top: 0; 
 		left: 0; 
@@ -462,6 +409,7 @@ small, .small{
 		transform: scale(.9);
 		transform-origin: left top;
 		width: 100%*1.1;
+		padding: .5rem .75rem;
 		@media screen and (min-width: 768px) {
 		align-items: center;	
 		transform: scale(1);
@@ -470,8 +418,68 @@ small, .small{
 		.plot-btn{
 			display: flex;
 			flex-direction: row;
-			.btn{
-				margin: .5rem;
+			background-color: rgba(255,255,255, .5);
+			border-radius: 5rem;
+			padding: .125rem 1rem 0 1rem;
+			.btn{ 
+				width: 2.25rem;
+				height: 2.25rem;
+				background-color: transparent;
+				border: 0;
+				border-radius: 0;
+				padding: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $primary;
+				font-size: 1.125rem;
+				position: relative;
+				//custom tooltips
+				&:hover, &.hover{
+					&::before{
+						content: "";
+						display: block;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 5px 8px;
+						border-color: transparent transparent rgba($primary, 1);  
+						position: absolute;
+						top: 100%;
+						left: .5rem;
+					}
+					&::after{
+						content: attr(aria-label);
+						display: block;
+						background-color: rgba($primary, 1);
+						color: #fff;
+						font-size: .75rem;
+						position: absolute;
+						top: calc(100% + 8px);
+						left: 0;
+						width: auto;
+						white-space: nowrap;
+						padding: 0 .5rem;
+						border-radius: .25rem;	
+					}	
+				}
+				
+				&:hover, &.hover {
+					color: lighten($primary, 10%);
+				}
+				&:active, &.active{
+					color: $secondary;
+					font-size: 1.5rem;
+				}
+				&:disabled, &.disabled{
+					opacity: .35;
+					cursor: default;
+					&:hover, &.hover,
+					&:active, &.active{
+						color: $primary;
+						font-size: 1rem;
+					}
+				}
 			}
 		}
 		
@@ -512,13 +520,11 @@ small, .small{
 		[data-bs-target="#searchOffcanvas"]{
 			&::before{
 				background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='search-plus' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cpath d='M11.7,10.3c2.1-2.9,1.5-7-1.4-9.1s-7-1.5-9.1,1.4s-1.5,7,1.4,9.1c2.3,1.7,5.4,1.7,7.7,0h0c0,0,0.1,0.1,0.1,0.1l3.8,3.8 c0.4,0.4,1,0.4,1.4,0s0.4-1,0-1.4l-3.8-3.9C11.8,10.4,11.8,10.4,11.7,10.3L11.7,10.3z M12,6.5c0,3-2.5,5.5-5.5,5.5S1,9.5,1,6.5 S3.5,1,6.5,1S12,3.5,12,6.5'/%3E %3Cpath d='M6.5,4C6.8,4,7,4.2,7,4.5V6h1.5C8.8,6,9,6.2,9,6.5S8.8,7,8.5,7H7v1.5C7,8.8,6.8,9,6.5,9C6.2,9,6,8.8,6,8.5V7H4.5 C4.2,7,4,6.8,4,6.5S4.2,6,4.5,6H6V4.5C6,4.2,6.2,4,6.5,4'/%3E %3C/svg%3E");
-				/* Bootstrap Icons - https://icons.getbootstrap.com/ */
-				/* search + plus */
+				/* Bootstrap Icons - https://icons.getbootstrap.com/ - search & plus*/
 			}
 			&.showing::before{
 				background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='search-minus' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cpath d='M11.7,10.3c2.1-2.9,1.5-7-1.4-9.1s-7-1.5-9.1,1.4s-1.5,7,1.4,9.1c2.3,1.7,5.4,1.7,7.7,0h0c0,0,0.1,0.1,0.1,0.1l3.8,3.8 c0.4,0.4,1,0.4,1.4,0s0.4-1,0-1.4l-3.8-3.9C11.8,10.4,11.8,10.4,11.7,10.3L11.7,10.3z M12,6.5c0,3-2.5,5.5-5.5,5.5S1,9.5,1,6.5 S3.5,1,6.5,1S12,3.5,12,6.5'/%3E %3Cpath d='M4,6.5C4,6.2,4.2,6,4.5,6h4C8.8,6,9,6.2,9,6.5S8.8,7,8.5,7h-4C4.2,7,4,6.8,4,6.5'/%3E %3C/svg%3E ");
-				/* Bootstrap Icons - https://icons.getbootstrap.com/ */
-				/* search + minus */
+				/* Bootstrap Icons - https://icons.getbootstrap.com/ - search & minus */
 			}
 		}
 	}
@@ -611,6 +617,18 @@ small, .small{
 			font-weight: 500;
 			font-size: .95rem;
 		}	
+	}
+}
+
+.info-search{
+	.info-panel-card{
+		a{
+			color: $secondary;
+			text-underline-offset: 5px;
+			&:hover{
+				color: darken($secondary, 10%);
+			}
+		}
 	}
 }
 
