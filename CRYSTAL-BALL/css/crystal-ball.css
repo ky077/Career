@@ -164,7 +164,7 @@
 
 .offcanvas-title { margin-bottom: 0; line-height: var(--bs-offcanvas-title-line-height); }
 
-.offcanvas-body { flex-grow: 1; padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x); overflow-y: auto; }
+.offcanvas-body { flex-grow: 1; padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x); overflow-y: auto; overflow-x: hidden; }
 
 .carousel { position: relative; }
 
@@ -253,7 +253,7 @@ html, body { font-family: "Noto Sans", "Noto Sans TC", "Microsoft JhengHei", "Pi
 
 html { scroll-behavior: smooth; background-color: #fff; }
 
-body { width: 100vw; height: 100vh; padding: 0; margin: 0; color: #333; overflow: hidden; }
+body { width: 100vw; height: 100vh; padding: 0; margin: 0; color: #333; }
 @media screen and (min-width: 992px) { body { overflow: hidden; } }
 
 body > form { height: 100%; }
