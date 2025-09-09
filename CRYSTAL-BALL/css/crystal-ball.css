@@ -374,13 +374,13 @@ small, .small { font-size: .9em; }
 
 .main-end.pushed { width: calc(100% - 400px); margin-right: 400px; }
 .main-end .info-tools { position: absolute; top: 0; left: auto; right: 0; bottom: 0; display: flex; flex-direction: column; z-index: 1045; }
-.main-end .info-tools .btn { writing-mode: vertical-rl; padding-top: .75rem; padding-bottom: .75rem; border-top-right-radius: 0; border-bottom-right-radius: 0; margin: .5rem 0; border-right: 0; }
+.main-end .info-tools .btn { writing-mode: vertical-rl; padding-top: .75rem; padding-bottom: .75rem; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-top: .5rem; border-right: 0; }
 .main-end .info-tools .btn::before { margin-bottom: .25rem; margin-left: .125em; }
 
 .main-bottom.pushed { height: calc(100% - 40vh); margin-bottom: 40vh; }
 .main-bottom.pushed .info-tools { margin-bottom: -1px; }
 .main-bottom .info-tools { position: absolute; top: auto; left: 0; right: 0; bottom: 0; display: flex; flex-direction: row; z-index: 1045; }
-.main-bottom .info-tools .btn { writing-mode: horizontal-tb; border-bottom-left-radius: 0; border-bottom-right-radius: 0; margin: 0 .5rem; border-bottom: 0; }
+.main-bottom .info-tools .btn { writing-mode: horizontal-tb; border-bottom-left-radius: 0; border-bottom-right-radius: 0; margin-left: .5rem; border-bottom: 0; }
 .main-bottom .info-tools .btn::before { margin-right: .25rem; vertical-align: middle; margin-top: -.25em; }
 
 .info-panel-section { margin-bottom: 3rem; }

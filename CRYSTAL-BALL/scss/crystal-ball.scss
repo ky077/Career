@@ -550,7 +550,7 @@ small, .small{
 			padding-bottom: .75rem;
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
-			margin: .5rem 0;
+			margin-top: .5rem;
 			border-right: 0;
 			&::before{
 				margin-bottom: .25rem;
@@ -580,7 +580,7 @@ small, .small{
 			writing-mode: horizontal-tb;
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
-			margin: 0 .5rem;
+			margin-left: .5rem;
 			border-bottom: 0;
 			&::before{
 				margin-right: .25rem;
