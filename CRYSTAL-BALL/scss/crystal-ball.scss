@@ -442,11 +442,12 @@ small, .small{
 						width: 0;
 						height: 0;
 						border-style: solid;
-						border-width: 0 5px 8px;
+						border-width: 0 5px 6px;
 						border-color: transparent transparent rgba($primary, 1);  
 						position: absolute;
-						top: 100%;
-						left: .5rem;
+						top: calc(100% - .25rem);
+						left: 2.25rem*.5;
+						transform: translateX(-50%);
 					}
 					&::after{
 						content: attr(aria-label);
@@ -455,7 +456,7 @@ small, .small{
 						color: #fff;
 						font-size: .75rem;
 						position: absolute;
-						top: calc(100% + 8px);
+						top: calc(100% - .25rem + 6px);
 						left: 0;
 						width: auto;
 						white-space: nowrap;
@@ -477,7 +478,7 @@ small, .small{
 					&:hover, &.hover,
 					&:active, &.active{
 						color: $primary;
-						font-size: 1rem;
+						font-size: 1.125rem;
 					}
 				}
 			}
