@@ -41,8 +41,8 @@
             <br>
             了解自己在哪些向度比較有興趣，有助於找到適合自己的學習與發展方向。 </p>
         </div>
-        <div class="guide-content-video">
-          <video controls preload="metadata" playsinline controlsList="nodownload" aria-label="教學影片：按鈕說明">
+        <div class="guide-content-video"> <img src="img/direction-cover.png" alt="" id="guideVideoCover"/>
+          <video id="guideVideo" controls preload="metadata" playsinline controlsList="nodownload" aria-label="教學影片：按鈕說明">
             <source src="img/direction.mp4" type="video/mp4">
             您的瀏覽器不支援 video 元素。 </video>
           <div class="guide-link"><a href="index.html">略過</a></div>
@@ -51,8 +51,39 @@
     </div>
   </div>
 </form>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script> 
 <script>
+const video = document.getElementById('guideVideo');
+const cover = document.getElementById('guideVideoCover');
+
+// 點擊封面 → 顯示影片、播放、進入全螢幕
+cover.addEventListener('click', () => {
+  cover.style.display = 'none';
+  video.style.display = 'block';
+  video.play();
+
+  // 嘗試進入全螢幕（桌機、手機支援不同）
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // Safari
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE/Edge
+    video.msRequestFullscreen();
+  }
+});
+
+// 播放結束 → 退出全螢幕 + 回到封面
+video.addEventListener('ended', () => {  
+  // 退出全螢幕
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+
+  cover.style.display = 'block';
+});
 </script>
 </body>
 </html>

@@ -424,8 +424,9 @@ align-items: flex-end;*/ padding-left: 1rem; padding-right: 1rem; padding-top: 1
 .guide-main .guide-content .guide-content-text .guide-text-title { margin: 0; }
 .guide-main .guide-content .guide-content-text .guide-text-title + hr { margin-top: 0; margin-bottom: 1rem; border: 0; height: 1px; background-color: #006767; width: 75%; opacity: .5; margin-left: 0; }
 .guide-main .guide-content .guide-content-text .guide-text-title p { color: #444; }
-.guide-main .guide-content .guide-content-video { width: 100%; padding: 1rem; }
+.guide-main .guide-content .guide-content-video { width: 100%; padding: 1rem; position: relative; }
 @media screen and (min-width: 1200px) { .guide-main .guide-content .guide-content-video { width: 50%; } }
+.guide-main .guide-content .guide-content-video > img { width: calc(100% - 1rem*2); position: absolute; top: 1rem; left: 1rem; right: 1rem; bottom: 1rem; cursor: pointer; z-index: 1; }
 .guide-main .guide-content .guide-content-video > video { width: 100%; }
 .guide-main .guide-content .guide-content-video .guide-link { display: block; text-align: right; }
 .guide-main .guide-content .guide-content-video .guide-link a { color: #006767; font-size: .9rem; text-underline-offset: 5px; display: inline-flex; align-items: center; }
