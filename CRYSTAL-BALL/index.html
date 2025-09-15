@@ -12,8 +12,7 @@
 <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>--> 
 <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
 <style id="plotly.js-style-global"></style>
-<!-- Icon Font Stylesheet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <!-- web Stylesheet -->
 <link rel="stylesheet" href="css/crystal-ball.css">
 </head>
@@ -26,7 +25,6 @@
     <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="72DD9A14">
   </div>
   <div class="main main-end pushed">
-    <h1 class="visually-hidden">生涯水晶球</h1>
     <h1 class="visually-hidden">生涯水晶球</h1>
     <!-- 左側：3D 圖表區 -->
     <div id="plotArea" class="plot-area">
@@ -466,7 +464,7 @@
 //demo 關閉loading視窗
 var interval = setTimeout(function() {
 	document.getElementById("loadingMessage").style.display = "none";
-}, 100);
+}, 3000);
 
 const main = document.querySelector('.main');
 // 所有 offcanvas 元素
@@ -491,7 +489,6 @@ offcanvasList.forEach(({ btn, panel }) => {
   panel.addEventListener('hide.bs.offcanvas', () => {
     main.classList.remove('pushed');
     btn.classList.remove('showing');
-	btn.blur();
   });
 });
 

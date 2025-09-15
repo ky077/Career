@@ -12,8 +12,7 @@
 <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>--> 
 <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
 <style id="plotly.js-style-global"></style>
-<!-- Icon Font Stylesheet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <!-- web Stylesheet -->
 <link rel="stylesheet" href="css/crystal-ball.css">
 </head>
@@ -22,52 +21,81 @@
 <form>
   <div class="guide-main">
     <h1 class="visually-hidden">生涯水晶球</h1>
-    <h2 class="slogan"><img src="img/nice-hi.gif" alt=""/><span>找方向不靠猜，一起解鎖你的生涯水晶球！</span></h2>
-    <div id="carouselGuide" class="carousel slide guide-carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselGuide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselGuide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="carousel-content-scroller">
-            <div class="slide1-content">
-              <h3 class="slide1-title">認識生涯水晶球</h3>
-              <hr>
-              <p>生涯水晶球是用三個向度進行學類的分類：<br>
-                X軸是「自由」和「規準」，Y軸是「事」和「人」，Z軸是「思考」和「實踐」。<br>
-                /<br>
-                如果你喜歡自己決定、創意發想、彈性大，代表你偏向自由；<br>
-                如果你喜歡有計畫、照規則做事，則偏向規準。<br>
-                /<br>
-                偏好「事」的人喜歡操作、分析、處理資料或解決問題；<br>
-                偏好「人」的人則喜歡互動、幫助別人或一起合作。<br>
-                /<br>
-                傾向「思考」的人愛分析、推理與理解背後原理；<br>
-                「實踐」的人則喜歡動手做、從實際經驗中學習。<br>
-                <br>
-                了解自己在哪些向度比較有興趣，有助於找到適合自己的學習與發展方向。 </p>
-            </div>
-          </div>
+    <h2 class="guide-slogan"><img src="img/nice-hi.gif" alt=""/><span>找方向不靠猜，一起解鎖你的生涯水晶球！</span></h2>
+    <div class="guide-content">
+      <div class="guide-scroller">
+        <div class="guide-content-text">
+          <h3 class="guide-text-title">認識生涯水晶球</h3>
+          <hr>
+          <p>生涯水晶球是用三個向度進行學類的分類：<br>
+            X軸是「自由」和「規準」，Y軸是「事」和「人」，Z軸是「思考」和「實踐」。<br>
+            <br>
+            如果你喜歡自己決定、創意發想、彈性大，代表你偏向自由；<br>
+            如果你喜歡有計畫、照規則做事，則偏向規準。<br>
+            <br>
+            偏好「事」的人喜歡操作、分析、處理資料或解決問題；<br>
+            偏好「人」的人則喜歡互動、幫助別人或一起合作。<br>
+            <br>
+            傾向「思考」的人愛分析、推理與理解背後原理；<br>
+            「實踐」的人則喜歡動手做、從實際經驗中學習。<br>
+            <br>
+            了解自己在哪些向度比較有興趣，有助於找到適合自己的學習與發展方向。 </p>
         </div>
-        <div class="carousel-item">
-          <div class="carousel-content">
-			  <div class="video-wrap">
-            <video controls preload="metadata" playsinline controlsList="nodownload nofullscreen" aria-label="教學影片：按鈕說明">
-              <source src="img/slide2.mp4" type="video/mp4">
-              您的瀏覽器不支援 video 元素。 </video></div>
-          </div>
+        <div class="guide-content-video"> 
+          <!-- --> 
+          <div class="guide-cover" id="guideCover" style="display: none;"><img src="img/direction-cover.png" alt=""/></div>
+          <!-- -->
+          <video class="guide-video" id="guideVideo" controls preload="metadata" playsinline controlsList="nodownload" aria-label="教學影片：按鈕說明">
+            <source src="img/direction.mp4" type="video/mp4">
+            您的瀏覽器不支援 video 元素。 </video>
+          <!-- --> 
+			<div class="guide-end" id="guideEnd">
+				<img src="img/direction-end.png" alt=""/>
+				<div class="guide-end-btn"><a href="index.html" class="btn btn-tertiary rounded-pill px-4">開始探索</a><button id="play" class="btn btn-secondary rounded-pill px-4">再看一次</button></div>
+			</div>
+          <!-- -->
+          <div class="guide-link"><a href="index.html">略過</a></div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselGuide" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselGuide" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
-      <button class="carousel-control-skip" type="button" onClick="window.location='index.html'">略過</button>
     </div>
   </div>
 </form>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script> 
 <script>
+const video = document.getElementById('guideVideo');
+const cover = document.getElementById('guideCover');
+const end   = document.getElementById('guideEnd');	
 
-	</script>
+// 點擊封面 → 顯示影片、播放、進入全螢幕
+cover.addEventListener('click', () => {
+  cover.style.display = 'none';
+  video.style.display = 'block';
+    end.style.display = 'none';	
+  video.play();
+
+  // 嘗試進入全螢幕（桌機、手機支援不同）
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // Safari
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE/Edge
+    video.msRequestFullscreen();
+  }
+});
+
+// 播放結束 → 退出全螢幕 + 回到封面
+video.addEventListener('ended', () => {  
+  // 退出全螢幕
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+
+  cover.style.display = 'none';
+    end.style.display = 'block';	
+});
+</script>
 </body>
 </html>
