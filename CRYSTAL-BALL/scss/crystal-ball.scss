@@ -800,9 +800,9 @@ small, .small{
 				}
 			}
 		}
-		.guide-content-video{
+		.guide-content-video{ 
 			width: 100%;
-			padding: 1rem;
+			margin: 1rem;
 			position: relative;
 			@media screen and (min-width: 1200px) {
 			width: 50%;	
@@ -850,15 +850,20 @@ small, .small{
 					}
 				}	
 			}
+			
 			.guide-video{
 				width: 100%;
+				position: relative;
 				> video {
 					width: 100%;
 				}
 			}
-			.guide-link{ 
+		}
+		.guide-content-skip{ 
 				display: block;
 				text-align: right;
+				position: relative;
+				z-index: 5;
 				a{
 					color: $primary;
 					font-size: .9rem;
@@ -882,7 +887,6 @@ small, .small{
 					}
 				}
 			}
-		}
 	}
 }
 

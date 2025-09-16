@@ -41,60 +41,68 @@
             <br>
             了解自己在哪些向度比較有興趣，有助於找到適合自己的學習與發展方向。 </p>
         </div>
-        <div class="guide-content-video"> 
-          <!-- --> 
-          <div class="guide-cover" id="guideCover" style="display: none;"><img src="img/direction-cover.png" alt=""/></div>
-          <!-- -->
-          <video class="guide-video" id="guideVideo" controls preload="metadata" playsinline controlsList="nodownload" aria-label="教學影片：按鈕說明">
-            <source src="img/direction.mp4" type="video/mp4">
-            您的瀏覽器不支援 video 元素。 </video>
-          <!-- --> 
-			<div class="guide-end" id="guideEnd">
-				<img src="img/direction-end.png" alt=""/>
-				<div class="guide-end-btn"><a href="index.html" class="btn btn-tertiary rounded-pill px-4">開始探索</a><button id="play" class="btn btn-secondary rounded-pill px-4">再看一次</button></div>
-			</div>
-          <!-- -->
-          <div class="guide-link"><a href="index.html">略過</a></div>
+        <div class="guide-content-video">
+          <div> 
+            <!-- -->
+            <div class="guide-cover" id="guideCover"><img src="img/direction-cover.png" alt="生涯水晶球操作說明"/></div>
+            <!-- -->
+            <video class="guide-video" id="guideVideo" controls preload="metadata" playsinline controlsList="nodownload" aria-label="教學影片：按鈕說明">
+              <source src="img/direction.mp4" type="video/mp4">
+              您的瀏覽器不支援 video 元素。 </video>
+            <!-- -->
+            <div class="guide-end" id="guideEnd" style="display: none;"> <img src="img/direction-end.png" alt="恭喜完成操作說明！現在你已經熟悉主要功能，快來探索你的生涯水晶球吧！"/>
+              <div class="guide-end-btn"><a href="index.html" class="btn btn-tertiary rounded-pill px-4">開始探索</a>
+                <button type="button" id="replay" class="btn btn-secondary rounded-pill px-4">再看一次</button>
+              </div>
+            </div>
+            <!-- --> 
+          </div>
+          <div class="guide-content-skip"><a href="index.html">略過</a></div>
         </div>
       </div>
     </div>
   </div>
 </form>
 <script>
-const video = document.getElementById('guideVideo');
-const cover = document.getElementById('guideCover');
-const end   = document.getElementById('guideEnd');	
+const video  = document.getElementById('guideVideo');
+const cover  = document.getElementById('guideCover');
+const end    = document.getElementById('guideEnd');	
+const replay = document.getElementById('replay');		
 
-// 點擊封面 → 顯示影片、播放、進入全螢幕
-cover.addEventListener('click', () => {
-  cover.style.display = 'none';
-  video.style.display = 'block';
-    end.style.display = 'none';	
-  video.play();
+// 把播放影片 + 進入全螢幕的邏輯封裝	
+function playVideoFullscreen() {
+	cover.style.display = 'none';
+	video.style.display = 'block';
+	end.style.display = 'none';	
+	video.play();
 
-  // 嘗試進入全螢幕（桌機、手機支援不同）
-  if (video.requestFullscreen) {
-    video.requestFullscreen();
-  } else if (video.webkitRequestFullscreen) { // Safari
-    video.webkitRequestFullscreen();
-  } else if (video.msRequestFullscreen) { // IE/Edge
-    video.msRequestFullscreen();
-  }
-});
+	// 嘗試進入全螢幕（桌機、手機支援不同）
+	if (video.requestFullscreen) {
+	  video.requestFullscreen();
+	} else if (video.webkitRequestFullscreen) { // Safari
+	  video.webkitRequestFullscreen();
+	} else if (video.msRequestFullscreen) { // IE/Edge
+	  video.msRequestFullscreen();
+	}	
+}
+
+// → 播放影片
+cover.addEventListener('click', playVideoFullscreen);
+replay.addEventListener('click', playVideoFullscreen);	
 
 // 播放結束 → 退出全螢幕 + 回到封面
 video.addEventListener('ended', () => {  
-  // 退出全螢幕
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  }
+	// 退出全螢幕
+	if (document.exitFullscreen) {
+	  document.exitFullscreen();
+	} else if (document.webkitExitFullscreen) {
+	  document.webkitExitFullscreen();
+	} else if (document.msExitFullscreen) {
+	  document.msExitFullscreen();
+	}
 
-  cover.style.display = 'none';
-    end.style.display = 'block';	
+	cover.style.display = 'none';
+	end.style.display = 'block';	
 });
 </script>
 </body>
