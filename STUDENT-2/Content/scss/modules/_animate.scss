@@ -1,0 +1,32 @@
+// use in index
+@keyframes fadeIn {
+  0% { opacity: 0;   }
+100% {   opacity: 1; }
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+100% {   opacity: 0; }
+}
+@keyframes slideInLeft {
+  0% { left: -100%; }
+100% { left: 0;}
+}
+@keyframes slideInRight {
+  0% { right: -100%; }
+100% { right: 0;}
+}
+
+
+// use in explore
+@keyframes pulse_right {
+  0% { transform: rotate(-90deg) translateY(0); }
+100% { transform: rotate(-90deg) translateY(.5rem); }
+}
+
+
+// use in test
+@keyframes rotate {
+  0% { transform: rotate(0);}
+100% { transform: rotate(359deg); }	
+}
+

@@ -1,0 +1,61 @@
+<div class="avater">王</div>
+<div class="user-data-name">王小明</div>
+<ul class="user-data-list">
+  <li>帳號：<span>A123******</span></li>
+  <li>學校：<span>國立臺灣師範高中</span></li>
+  <li>班級：<span>一年二班</span></li>
+  <li>學號：<span>123456798</span></li>
+</ul>
+<div class="text-center mb-2">
+  <button type="button" class="btn btn-primary rounded-pill px-4 btn-sm link-scale" data-bs-toggle="modal" data-bs-target="#modalEditUser">編輯個人資料</button>
+</div>
+
+<!-- Modal#modalEditUser -->
+<div class="modal fade futuristic-modal" id="modalEditUser" tabindex="-1" aria-labelledby="modalEditUserLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">編輯個人資料</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="inputName" class="form-label mb-1">姓名</label>
+          <input type="text" class="form-control" id="inputName" placeholder="請填寫真實中文姓名" value="宥之">
+        </div>
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label mb-1">帳號</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="請輸入您的Email" value="aaa123@gmail.com" disabled>
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label mb-1">密碼</label>
+          <div class="input-group ">
+            <input type="password" class="form-control" id="inputPassword" placeholder="請輸入6至15位英數字混和之密碼" aria-label="密碼" aria-describedby="passwordHelp">
+            <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+          </div>
+          <div class="form-text text-primary">如不修改請空白。</div>
+        </div>
+        <div class="mb-3">
+          <label for="inputCheckPassword" class="form-label mb-1">確認密碼</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="inputCheckPassword" placeholder="請再次輸入密碼" aria-label="確認密碼" aria-describedby="passwordCheckHelp">
+            <button class="btn btn-showHidePD" type="button" id="toggleCheckPassword" aria-label="顯示或隱藏確認密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+          </div>
+          <div class="form-text text-primary">如不修改請空白。</div>
+        </div>
+        <div class="mb-3">
+          <label for="inputsSchool" class="form-label mb-1">學校</label>
+          <input type="text" class="form-control" id="inputsSchool" placeholder="請填寫學校" value="閱讀高中">
+        </div>
+        <div class="mb-3">
+          <label for="inputClass" class="form-label mb-1">班級</label>
+          <input type="text" class="form-control" id="inputClass" placeholder="請填寫班級" value="一年二班">
+        </div>
+        <div class="mb-3 text-center">
+          <button type="button" class="btn btn-primary rounded-pill px-4 link-scale" id="" data-bs-dismiss="modal">修改</button>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
