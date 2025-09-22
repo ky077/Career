@@ -1,0 +1,1064 @@
+//explore UI /////////////////////////////////////////////////
+.bg-gradient-discipline, .bg-gradient-disc { background: $gradient-disc !important; }
+.bg-gradient-category, .bg-gradient-cate {   background: $gradient-cate !important; }
+.bg-gradient-department, .bg-gradient-dept { background: $gradient-dept !important; }
+
+//explore mixin /////////////////////////////////////////////////
+@mixin cardStyle($color, $svg) {
+	.card-body{
+		background-color: tint-color($color, 85%);	
+	}
+	.card-title{ 
+		 color: $color;  
+		.card-title-icon{
+			background-color: $color;
+			-webkit-mask: url($svg) no-repeat center/contain; 
+			mask: url($svg) no-repeat center/contain; 
+		}
+		.nav-pills {
+			.nav-link{
+				border-color: $color;
+				color: $color;
+				&:hover, &:focus{
+					background-color: rgba($color, .25);
+				}
+				&:active, &.active{
+					background-color: $color;
+					color: #fff;
+				}
+			}	
+		}
+	}
+	.card-text{ 
+		.accordion {
+			--bs-accordion-border-color: transparent;
+			--bs-accordion-active-color: #{$color};
+			margin-left: -1rem;
+			margin-top: -.75rem;
+			@media screen and (min-width: 576px) {
+			margin-left: calc((#{$accordion-padding-x} + #{$accordion-icon-width} + .5rem) *-1);	
+			}
+		}
+		.accordion-button{
+			&.collapsed:hover{
+				color: $color;
+			}
+		}
+		.accordion-button:not(.collapsed)::after {
+			background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>"));
+		}
+		.accordion-body{
+			&::before{ 
+				background-color: $color;
+			}
+		}
+	}
+}
+
+//explore /////////////////////////////////////////////////
+.explore-disc, .explore-cate, .explore-dept{
+	.page-header{  
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;	
+		nav[aria-label="breadcrumb"]{
+			border-bottom: 1px solid $white;
+		}
+	}
+	.explore-intro{
+		padding-bottom: 2rem;
+		position: relative;
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 3rem;
+			background: inherit;
+			@extend .clip-path-triangle-down;
+		}
+		h2{
+			color: $tertiary;
+		}
+		p{
+			color: $tertiary;	
+		}	
+	}
+	.explore-slect{
+		background-color: rgba($white, .85);
+		.explore-btn-group{
+			align-items: flex-end;
+			margin: map-get($spacers, 1);
+			.btn{
+				color: #fff; 
+				border-color: transparent;
+				&:first-child{
+					padding-right: 0;
+				}
+				&:last-child{
+					padding-left: 0;
+				}
+			}
+			.explore-select-icon{
+				height: 1em; 
+				margin-left: .25em; 
+				margin-right: .5em; 
+				transform: scale(1.5);
+			}
+			&:hover, &:focus, &:active{
+				.btn{
+					color: $tertiary !important;	
+					border-color: transparent !important;
+					&:disabled, &[disabled], &[disabled="disabled"]{
+						color: #fff !important;		
+					}
+				}	
+			}
+
+			.academic-img img{
+				height: 6rem;
+			}
+		}
+	}
+	[class*="explore-tab"]{
+		background-color: rgba($white, .85);	
+	}		
+	.explore-modal{
+		.modal-dialog{
+			max-width:  calc(100% - #{$grid-gutter-width}) ;
+		}
+		.modal-content{
+			overflow: hidden;
+		}
+		.modal-body{
+			.btn-close{
+				position: absolute;
+				top: .75rem;
+				right: .75rem;
+			}
+			.explore-tab{
+				padding-top: 0 !important;
+			}
+		}
+	}
+	.explore-content{
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3C!--!https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/--%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-opacity='0.11' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23FFFFFF' fill-opacity='0.11' %3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+		background-attachment: fixed;
+		padding-top: 3rem;
+		position: relative;
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 1px;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 3rem;
+			background-color: rgba(#fff, .85);
+			@extend .clip-path-triangle-down;
+		}	
+		.card{
+			background-color: transparent; 
+			border-color: transparent;
+			padding: 0;
+			filter: drop-shadow(0 0 .5rem rgba($tertiary, .08));
+			.card-body{ 
+				padding: 1.5rem 2rem 1.5rem 1.5rem;
+				border-radius: $border-radius*.5 $border-radius*5 $border-radius*5 $border-radius*5;
+				//面板-上凸-右洞-下凹-左凹
+				-webkit-clip-path: polygon(   0%   0%,   
+											 50%   0%,    calc(50% + 1rem) 1.5rem,    calc(90% - 1rem) 1.5rem,    90% 0%, 
+											100%   0%, 
+											100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+											100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+											100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+											100% 100%,
+											 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+											  0% 100%);	
+						clip-path: polygon(   0%   0%,   
+											 50%   0%,    calc(50% + 1rem) 1.5rem,    calc(90% - 1rem) 1.5rem,    90% 0%, 
+											100%   0%, 
+											100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+											100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+											100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+											100% 100%,
+											 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+											  0% 100%);
+				@media screen and (min-width: 576px) {
+				-webkit-clip-path: polygon(   0%   0%,   
+											 50%   0%,    calc(50% + 1rem) 1.5rem,    calc(90% - 1rem) 1.5rem,    90% 0%, 
+											100%   0%, 
+											100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+											100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+											100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+											100% 100%,
+											 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+											  0% 100%,
+											  0% calc(6rem + 30%), 1rem calc(6rem + 30% - 1rem), 1rem calc(6rem + 1rem), 0% 6rem);	
+						clip-path: polygon(   0%   0%,   
+											 50%   0%,    calc(50% + 1rem) 1.5rem,    calc(90% - 1rem) 1.5rem,    90% 0%, 
+											100%   0%, 
+											100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
+											100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
+											100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
+											100% 100%,
+											 30% 100%,    calc(30% - 1rem) calc(100% - 1rem),    calc(10% + 1rem) calc(100% - 1rem),    10% 100%,		
+											  0% 100%,
+											  0% calc(6rem + 30%), 1rem calc(6rem + 30% - 1rem), 1rem calc(6rem + 1rem), 0% 6rem);
+				}
+			}
+			.card-title{ 
+				font-weight: bold;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				font-size: 1.75rem;
+				color: $primary;
+				.card-title-icon{
+					display: block;
+					width: 4rem;
+					height: 4rem;
+					margin-right: .25rem;
+					background-color: $primary;
+					//mask: ;
+					flex-grow: 0;
+  					flex-shrink: 0; 
+  					flex-basis: auto; 
+				}
+				.card-title-text{
+					flex-grow: 0; 
+					flex-shrink: 0;
+					flex-basis: auto; 
+					small{
+						display: block;
+						font-size: 1rem;
+						font-weight: 500;
+					}		
+				}
+				.nav-pills {
+					font-size: 1rem;
+					margin-left: .5rem;
+					.nav-link{
+						border-radius: 5em;
+						background-color: transparent;
+						border: 1px solid $primary;
+						color: $primary;
+						margin-left: .5rem;
+						margin-top: .5rem;
+						&:hover, &:focus{
+							background-color: rgba($primary-100, .25);
+						}
+						&:active, &.active{
+							background-color: $primary;
+							color: #fff;
+						}
+					}	
+				}
+			}
+			.card-text{  
+				margin-top: .75rem;
+				margin-bottom: 1rem;
+				color: $gray-700;
+				@media screen and (min-width: 576px) {
+				margin-left: 4rem + .25rem;	
+				}
+				p{
+					color: $gray-600;	
+				}
+			}
+			&#introDisc, &#introCate, &#introDept {
+				.card-text{ 
+					line-height: $line-height-lg;
+				}
+			}
+			&#career, &#tour{
+				.card-text{
+					@media screen and (min-width: 576px) {
+					position: relative;	
+					&::before, &::after{
+						content: "";
+						display: block;
+						height: calc(100% + .75rem + .5rem);
+						position: absolute;
+						top: calc((.75rem + .5rem + .5rem)*-1);
+						left: calc((4rem + .25rem)/2*-1);
+						bottom: 0;
+						transform: translateX(-50%);
+						border-radius: 0 0 10px 10px;
+					}
+					&::before{
+						width: 10px;
+						background-color: inherit;
+					}
+					&::after{
+						width: 2px;
+						//background-image: repeating-linear-gradient(transparent 0px, 	transparent 5px, 
+						//											  #fff 5px, 		#fff 15px, 
+						//											  transparent 15px, transparent 20px);
+						background-size: 100px 100%;
+					}	
+					}
+					h5{ 
+						display: inline-block;
+						padding: .25rem 1rem .25rem calc((4rem + .25rem)/2);
+						-webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 55%, 0 45%);
+								clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 55%, 0 45%);
+						border-radius: 1rem 5rem 5rem 1rem;
+						background-color: currentColor;
+						position: relative;
+						z-index: 1;
+						&::before{
+							content: "●";
+							display: inline;
+							margin-left: -1em - .125em;
+							margin-right: .125em;
+						}
+						&::after {
+							content: "";
+							display: block;
+							position: absolute;
+							top: 1px;
+							left: 1px;
+							right: 1px;
+							bottom: 1px;
+							-webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 55%, 0 45%);
+									clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 55%, 0 45%);
+							border-radius: 1rem 5rem 5rem 1rem;
+							background-color: tint-color($color-career, 85%);
+							z-index: -1;
+						}
+						@media screen and (min-width: 576px) {
+							margin-left: calc((4rem + .25rem)/2*-1);
+						}
+					}
+				}
+			}
+			&#career{
+				.card-text{
+					@media screen and (min-width: 576px) {
+					&::before, &::after{
+						top: calc((.75rem + .5rem)*-1);
+					}
+					}
+				}
+			}
+			&#tour{
+				.card-text{
+					@media screen and (min-width: 576px) {
+					&::before, &::after{
+						top: calc((.75rem + .25rem)*-1);
+					}
+					}
+				}
+			}
+		}
+		//學門簡介
+		.card#introDisc	{ 
+			@include cardStyle($color-introDisc, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-building' viewBox='0 0 16 16'%3E %3Cpath d='M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z'/%3E %3Cpath d='M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z'/%3E %3C/svg%3E"); }
+		//學類簡介
+		.card#introCate	{ 
+			@include cardStyle($color-introCate, 
+				"data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E %3Csvg version='1.1' id='room' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cpath d='M15.4,3L8.2,0.1c-0.1,0-0.3,0-0.4,0L0.6,3C0.2,3.1,0,3.5,0,3.9v8.7C0,12.8,0.1,13,0.3,13l7.1,2.9c0.4,0.1,0.8,0.1,1.1,0 l7.1-2.9c0.2-0.1,0.3-0.3,0.3-0.5V3.9C16,3.5,15.8,3.1,15.4,3z M1.2,12.2V11l2.3,0.9v1.2L1.2,12.2z M7.3,9C7,8.8,6.6,8.6,6.2,8.6 l0,0c0,0,0,0,0,0V7.7l1.1,0.5L7.3,9C7.3,9,7.3,9,7.3,9z M6.2,8.6c0.8,0,1.6,0.7,1.7,0.9c-0.1,0-0.5,0.1-0.9,0.6 C6.1,9.4,5.5,9.3,5.3,9.3c0,0,0,0,0,0c0,0,0,0,0,0C5.6,8.8,6.2,8.6,6.2,8.6z M7.9,9.6C7.6,9.9,7.3,10,7.1,10.1 C7.4,9.7,7.8,9.6,7.9,9.6z M6.9,10.1C6.6,10,6,9.7,5.4,9.3C5.6,9.4,6.2,9.5,6.9,10.1z M8.5,10v1.2l-4.7,2v-1.2L8.5,10z M8.6,9.7 L8.6,9.7L8.5,9.6l0.1-0.1c0,0,0,0,0,0S8.7,9.6,8.6,9.7L8.6,9.7 M7.8,9.3l1.4-0.7v0.1L7.8,9.3L7.8,9.3z M8.2,8.4 C8.2,8.4,8.2,8.4,8.2,8.4l0.4-0.3c0,0,0,0,0,0.1c0,0.1,0,0.1,0,0.1L8.2,8.4C8.2,8.5,8.2,8.5,8.2,8.4z M7.5,7.9l-1-0.5l1.5-0.7H8 l1,0.4L7.5,7.9z M7.9,1.2v5.3c0,0,0,0,0,0L6,7.4c0,0-0.1,0.1-0.1,0.1v1.2l0.1,0l-5,2.1c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0.1 c0,0,0,0,0,0V3.9L7.9,1.2z M8,15l-4.2-1.6l4.8-2c0,0,0.1-0.1,0.1-0.1v-0.8l0.6-0.3l5.4,2.2L8,15z M15,12.2L9.5,9.9c0,0,0-0.1,0-0.1 V7.2c0-0.1,0-0.1-0.1-0.1L8.1,6.5c0,0,0,0,0,0V1.2L15,3.9V12.2z'/%3E %3C/svg%3E "); }	
+		//學系簡介
+		.card#introDept	 { 
+			@include cardStyle($color-introDept, 
+				"data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E %3Csvg version='1.1' id='cabinet' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cg%3E %3Cg id='cabinet'%3E %3Cpath d='M15.6,2.1l-5.7-2C9.5-0.1,9-0.1,8.6,0.1L0.4,3.2C0.2,3.2,0,3.5,0,3.7V13c0,0.4,0.3,0.8,0.7,1l5.9,2H7l8.3-3.1 c0.4-0.2,0.7-0.6,0.7-1V2.6C16,2.4,15.9,2.2,15.6,2.1z M6.3,14.7L1.2,13V4.5l5.1,1.7V14.7z M6.9,5.2L2.2,3.6L9,1 c0.2,0,0.2,0,0.4,0l4.5,1.5C13.9,2.5,6.9,5.2,6.9,5.2z M12.4,6.3c0,0.2,0,0.2-0.2,0.3l-1.8,0.6l0,0c-0.1,0.1-0.2,0-0.2-0.2 c0-0.1-0.1-0.2,0.2-0.3l1.8-0.6C12.2,6.1,12.4,6,12.4,6.3z M12.2,11.5l-1.8,0.6l0,0c-0.1,0-0.2,0-0.2-0.2c0-0.1,0-0.2,0.2-0.3 l1.8-0.6c0.1-0.1,0.2,0,0.2,0.1c0,0.1,0.1,0.3-0.1,0.4L12.2,11.5z M15,8.1l-7.4,2.8v-0.3L15,7.8V8.1z'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E "); }	
+		//核心課程
+		.card#course { 
+			@include cardStyle($color-course, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-book' viewBox='0 0 16 16'%3E %3Cpath d='M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783'/%3E %3C/svg%3E"); }	
+		//優勢能力
+		.card#skill { 
+			@include cardStyle($color-skill, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-award' viewBox='0 0 16 16'%3E %3Cpath d='M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z'/%3E %3Cpath d='M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z'/%3E %3C/svg%3E"); }	
+		//興趣類型
+		.card#interest { 
+			@include cardStyle($color-interest, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-hearts' viewBox='0 0 16 16'%3E %3Cpath fill-rule='evenodd' d='M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358'/%3E %3C/svg%3E"); }
+		//職涯發展
+		.card#career { 
+			@include cardStyle($color-career, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-briefcase-fill' viewBox='0 0 16 16'%3E %3Cpath d='M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5'/%3E %3Cpath d='M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z'/%3E %3C/svg%3E"); 
+			.card-text{
+				@media screen and (min-width: 576px) {
+				&::before{
+					background-color: $color-career;
+				}
+				&::after{
+					background-image: repeating-linear-gradient(transparent 0px, 					 transparent 5px, 
+																tint-color($color-career, 80%) 5px, tint-color($color-career, 80%) 15px, 
+																transparent 15px, 					 transparent 20px);
+				}		
+				}
+				h5{
+					&::after {
+						background-color: tint-color($color-career, 85%);
+					}
+				}
+			}
+		}	
+		//常見迷思
+		.card#myth { 
+			@include cardStyle($color-myth, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chat-right-dots' viewBox='0 0 16 16'%3E %3Cpath d='M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z'/%3E %3Cpath d='M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0'/%3E %3C/svg%3E"); }	
+		
+		//相關的學門
+		.card#aboutDisc { 
+			@include cardStyle($color-aboutDisc, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-buildings' viewBox='0 0 16 16'%3E %3Cpath d='M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022M6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z'/%3E %3Cpath d='M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z'/%3E %3C/svg%3E"); }
+		//相關的學系
+		.card#aboutDept { 
+			@include cardStyle($color-aboutDept, 
+				"data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E %3Csvg version='1.1' id='cabinets' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cpath d='M15.8,4.8l-3.7-2.1c-0.1-0.1-0.2-0.1-0.2-0.1c0,0-0.1,0-0.1,0H4.2c0,0-0.1,0-0.1,0c-0.1,0-0.2,0-0.2,0.1L0.2,4.8 C0.1,4.8,0,5,0,5.2v6.2c0,0.3,0.1,0.5,0.3,0.7L3,13.3c0,0,0.1,0,0.2,0l3.7-2.1C7,11.2,7,11.1,7.1,11c0.1,0.1,0.2,0.1,0.3,0.1h1.3 c0.1,0,0.2-0.1,0.2-0.1C9,11.1,9,11.2,9.1,11.3l3.7,2.1c0,0,0.1,0,0.2,0l2.7-1.3c0.2-0.1,0.3-0.4,0.3-0.7V5.2 C16,5,15.9,4.8,15.8,4.8z M7.2,4.8h1.6v3.1H7.2V4.8z M10.5,3.3L9,4.1H7L5.5,3.3H10.5z M2.8,12.5l-2.3-1.1V5.7l2.3,1.1V12.5z M3.1,6.2L1,5.1l3.1-1.7c0.1,0,0.1,0,0.2,0l2,1L3.1,6.2z M5.6,6.9c0,0.1,0,0.2-0.1,0.2L4.7,7.5c0,0,0,0,0,0c0,0-0.1,0-0.1-0.1 c0-0.1,0-0.2,0.1-0.2l0.8-0.4C5.5,6.8,5.5,6.8,5.6,6.9z M5.5,10.4l-0.8,0.4c0,0,0,0,0,0c0,0-0.1,0-0.1-0.1c0-0.1,0-0.2,0.1-0.2 L5.4,10c0.1,0,0.1,0,0.1,0.1C5.6,10.2,5.5,10.3,5.5,10.4z M6.7,8.1L3.4,10V9.8l3.3-1.9V8.1z M8.7,10.5H7.4H7.2V8h1.6v2.5H8.7 L8.7,10.5z M11.4,10.8C11.3,10.8,11.3,10.8,11.4,10.8l-0.8-0.4c-0.1,0-0.1-0.1-0.1-0.2c0-0.1,0.1-0.1,0.1-0.1l0.8,0.4 c0.1,0,0.1,0.1,0.1,0.2C11.4,10.8,11.4,10.8,11.4,10.8z M12.6,10L9.3,8.1V7.9l3.3,1.9V10z M10.4,6.9c0-0.1,0.1-0.1,0.1-0.1l0.8,0.4 c0.1,0,0.1,0.1,0.1,0.2c0,0.1-0.1,0.1-0.1,0.1c0,0,0,0,0,0l-0.8-0.4C10.5,7.1,10.4,7,10.4,6.9z M12.9,6.2L9.8,4.4l2-1 c0.1,0,0.1,0,0.2,0L15,5.1L12.9,6.2z M15.5,11.3l-2.3,1.1V6.8l2.3-1.1V11.3z'/%3E %3C/svg%3E "); }
+		
+		//包含的學類
+		.card#includeCate  { 
+			@include cardStyle($color-includeCate, 
+				"data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E %3Csvg version='1.1' id='room' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cpath d='M15.4,3L8.2,0.1c-0.1,0-0.3,0-0.4,0L0.6,3C0.2,3.1,0,3.5,0,3.9v8.7C0,12.8,0.1,13,0.3,13l7.1,2.9c0.4,0.1,0.8,0.1,1.1,0 l7.1-2.9c0.2-0.1,0.3-0.3,0.3-0.5V3.9C16,3.5,15.8,3.1,15.4,3z M1.2,12.2V11l2.3,0.9v1.2L1.2,12.2z M7.3,9C7,8.8,6.6,8.6,6.2,8.6 l0,0c0,0,0,0,0,0V7.7l1.1,0.5L7.3,9C7.3,9,7.3,9,7.3,9z M6.2,8.6c0.8,0,1.6,0.7,1.7,0.9c-0.1,0-0.5,0.1-0.9,0.6 C6.1,9.4,5.5,9.3,5.3,9.3c0,0,0,0,0,0c0,0,0,0,0,0C5.6,8.8,6.2,8.6,6.2,8.6z M7.9,9.6C7.6,9.9,7.3,10,7.1,10.1 C7.4,9.7,7.8,9.6,7.9,9.6z M6.9,10.1C6.6,10,6,9.7,5.4,9.3C5.6,9.4,6.2,9.5,6.9,10.1z M8.5,10v1.2l-4.7,2v-1.2L8.5,10z M8.6,9.7 L8.6,9.7L8.5,9.6l0.1-0.1c0,0,0,0,0,0S8.7,9.6,8.6,9.7L8.6,9.7 M7.8,9.3l1.4-0.7v0.1L7.8,9.3L7.8,9.3z M8.2,8.4 C8.2,8.4,8.2,8.4,8.2,8.4l0.4-0.3c0,0,0,0,0,0.1c0,0.1,0,0.1,0,0.1L8.2,8.4C8.2,8.5,8.2,8.5,8.2,8.4z M7.5,7.9l-1-0.5l1.5-0.7H8 l1,0.4L7.5,7.9z M7.9,1.2v5.3c0,0,0,0,0,0L6,7.4c0,0-0.1,0.1-0.1,0.1v1.2l0.1,0l-5,2.1c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0.1 c0,0,0,0,0,0V3.9L7.9,1.2z M8,15l-4.2-1.6l4.8-2c0,0,0.1-0.1,0.1-0.1v-0.8l0.6-0.3l5.4,2.2L8,15z M15,12.2L9.5,9.9c0,0,0-0.1,0-0.1 V7.2c0-0.1,0-0.1-0.1-0.1L8.1,6.5c0,0,0,0,0,0V1.2L15,3.9V12.2z'/%3E %3C/svg%3E "); }
+		//包含的學系
+		.card#includeDept { 
+			@include cardStyle($color-includeDept, 
+				"data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 9.03 Build 54978) --%3E %3Csvg version='1.1' id='cabinet' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E %3Cg%3E %3Cg id='cabinet'%3E %3Cpath d='M15.6,2.1l-5.7-2C9.5-0.1,9-0.1,8.6,0.1L0.4,3.2C0.2,3.2,0,3.5,0,3.7V13c0,0.4,0.3,0.8,0.7,1l5.9,2H7l8.3-3.1 c0.4-0.2,0.7-0.6,0.7-1V2.6C16,2.4,15.9,2.2,15.6,2.1z M6.3,14.7L1.2,13V4.5l5.1,1.7V14.7z M6.9,5.2L2.2,3.6L9,1 c0.2,0,0.2,0,0.4,0l4.5,1.5C13.9,2.5,6.9,5.2,6.9,5.2z M12.4,6.3c0,0.2,0,0.2-0.2,0.3l-1.8,0.6l0,0c-0.1,0.1-0.2,0-0.2-0.2 c0-0.1-0.1-0.2,0.2-0.3l1.8-0.6C12.2,6.1,12.4,6,12.4,6.3z M12.2,11.5l-1.8,0.6l0,0c-0.1,0-0.2,0-0.2-0.2c0-0.1,0-0.2,0.2-0.3 l1.8-0.6c0.1-0.1,0.2,0,0.2,0.1c0,0.1,0.1,0.3-0.1,0.4L12.2,11.5z M15,8.1l-7.4,2.8v-0.3L15,7.8V8.1z'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E "); }		
+		
+
+		//解決的問題
+		.card#solved { 
+			@include cardStyle($color-solved, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-tools' viewBox='0 0 16 16'%3E %3Cpath d='M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z'/%3E %3C/svg%3E"); }	
+		
+		//學習旅程
+		.card#tour { 
+			@include cardStyle($color-tour, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-map' viewBox='0 0 16 16'%3E %3Cpath fill-rule='evenodd' d='M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z'/%3E %3C/svg%3E");
+			.card-text{
+				@media screen and (min-width: 576px) {
+				&::before{
+					background-color: $color-tour;
+				}
+				&::after{
+					background-image: repeating-linear-gradient(transparent 0px, 					 transparent 5px, 
+																tint-color($color-tour, 80%) 5px, tint-color($color-tour, 80%) 15px, 
+																transparent 15px, 					 transparent 20px);
+				}		
+				}
+				h5{
+					&::after {
+						background-color: tint-color($color-tour, 85%);
+					}
+				}
+			}
+		}
+		//隸屬於
+		.card#belong  { 
+			@include cardStyle($color-belong, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M256 64l128 0 0 64-128 0 0-64zM240 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l48 0 0 32L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0 0 32-48 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l160 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-48 0 0-32 256 0 0 32-48 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l160 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-48 0 0-32 96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-256 0 0-32 48 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48L240 0zM96 448l0-64 128 0 0 64L96 448zm320-64l128 0 0 64-128 0 0-64z'/%3E%3C/svg%3E"); 
+			.card-text{
+				.row{
+					--bs-gutter-x: 0;
+					flex-direction: column;
+					.item{
+						.academic{
+							padding: 1rem 1.5rem;
+							position: relative;
+							&::before{
+								content: "";
+								display: block;
+								width: 100%;
+								height: 100%;
+								position: absolute;
+								top:0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								//background: $gradient-disc;	
+								z-index: -2;
+								border-radius: 1rem;
+							}
+							&::after{
+								content: "";
+								display: block;
+								width: calc(100% - .16rem*2);
+								height: calc(100% - .16rem*2);
+								position: absolute;
+								top: .16rem;
+								left: .16rem;
+								right: .16rem;
+								bottom: .16rem;
+								background-color: tint-color($color-belong, 85%);	
+								z-index: -1;
+								border-radius: .8rem;
+							}
+							&.disc::before{
+								background: $gradient-disc;
+								
+
+							}
+							&.cate::before{
+								background: $gradient-cate;
+							}
+						}
+						.academic:hover{
+							filter: brightness(1.0);
+							.academic-img, .academic-name{
+								filter: brightness(1.05);
+							}
+						}
+						.bi {
+							background-color: tint-color($color-belong, 85%);
+							font-size: 3rem;
+							color: $purple;
+							transform: rotate(90deg) translateX(-.75rem - .16rem);
+							display: inline-block;
+						}
+					}
+					@media screen and (min-width: 768px) {
+					flex-direction: row;
+						.item{
+							.bi {
+								transform: rotate(0deg) translateX(-.75rem - .16rem);
+							}	
+						}	
+					}
+				}
+			}
+		}
+		//校系列表
+		.card#school { 
+			@include cardStyle($color-school, 
+				"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M288 0L400 0c8.8 0 16 7.2 16 16l0 64c0 8.8-7.2 16-16 16l-79.3 0 89.6 64L512 160c35.3 0 64 28.7 64 64l0 224c0 35.3-28.7 64-64 64l-176 0 0-112c0-26.5-21.5-48-48-48s-48 21.5-48 48l0 112L64 512c-35.3 0-64-28.7-64-64L0 224c0-35.3 28.7-64 64-64l101.7 0L256 95.5 256 32c0-17.7 14.3-32 32-32zm48 240a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM80 224c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-32 0zm368 16l0 64c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zM80 352c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-32 0zm384 0c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-32 0z'/%3E%3C/svg%3E"); 
+			.card-text {
+				margin-left: 0;
+				min-height: 15rem;
+			}
+		}
+	}
+	.explore-slider{ 
+		@media screen and (min-width: 1200px) {
+		height: calc(100vh - #{$header-height});	
+		display: flex;
+		flex-direction: column;
+			&.sticky-xl-top{
+				top: $header-height;
+				z-index: 1020 - 1;
+			}	
+		}
+		.explore-slider-title { 
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			padding-top: 1.5rem;
+			color: $white !important;
+			@media screen and (min-width: 1200px) {
+			padding-top: .75rem;	
+			}
+			img{
+				width: 100%;
+				max-height: 6rem;	
+			}
+		}
+		.explore-slider-tool {  
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: .75rem;
+			position: relative;
+			z-index: 1;
+			&.position-fixed{
+				background-color: rgba(#fff, .75);
+				margin-left: $grid-gutter-width*.5*-1; 
+				margin-left: $grid-gutter-width*.5*-1; 
+				width: calc(100% + $grid-gutter-width);
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1020;
+				margin-bottom: 0;
+			}
+			&.position-absolute{
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin-bottom: .75rem*.5;
+			}
+			.btn-favorite{
+				color: $white;
+				filter: brightness(3);
+			}
+			.btn-compare{
+				color: $white;
+				filter: brightness(3);
+			}
+		}
+		.explore-slider-list{ 
+			display: none;
+			@media screen and (min-width: 1200px) {
+			display: block;	
+			}
+			margin: 0;
+			padding: 0 .25rem;
+			flex-grow: 1;
+			overflow-y: auto; 
+			&::-webkit-scrollbar{  
+				width: 6px;  
+				background-color: transparent;
+			}  
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+			} 
+			&::-webkit-scrollbar-thumb {
+				background-color: $white;
+				border-radius: 6px;
+			} 
+			> li{
+				margin-bottom: 1rem;
+				list-style: none;
+				a {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					color: #fff;
+					text-shadow: 0 0 .25rem rgba($black, .25);
+					padding: .25rem 1rem;
+					border-radius: 5em;
+					text-decoration: none;
+					&::after{
+						content: "";
+						display: inline-block;
+						width: 1em;
+						height: 1em;
+						background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#ffffff' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>"));
+						background-repeat: no-repeat;
+						background-size: contain;
+						background-position: center right;
+						transform: rotate(-90deg);
+					}
+					&:hover{
+						&::after{
+							animation: pulse_right .8s infinite alternate ease-out;	
+						}	
+					}
+				}
+				> ul {
+					margin-top: .25rem;
+					li{
+						font-size: .9rem;
+						color: $white;
+					}
+				}
+			}
+			> li.course{
+				a {
+					background-color: $color-course;
+				}
+				> ul li{
+					//color: $color-course;
+				}
+			}
+			> li.skill{
+				a {
+					background-color: $color-skill;
+				}
+				> ul li{
+					//color: $color-skill;
+				}
+			}
+			> li.interest{
+				a {
+					background-color: $color-interest;
+				}
+				> ul li{
+					//color: $color-interest;
+				}
+			}
+			> li.career{
+				a {
+					background-color: $color-career;
+				}
+				> ul li{
+					//color: $color-career;
+				}
+			}
+
+			> li.introDept{
+				a {
+					background-color: $color-introDept;
+				}
+				> ul li{
+					//color: $color-introDept;
+				}
+			}
+			> li.tour{
+				a {
+					background-color: $color-tour;
+				}
+				> ul li{
+					//color: $color-tour;
+				}
+			}
+			> li.myth{
+				a {
+					background-color: $color-myth;
+				}
+				> ul li{
+					//color: $color-myth;
+				}
+			}
+			> li.aboutDept{
+				a {
+					background-color: $color-aboutDept;
+				}
+				> ul li{
+					//color: $color-myth;
+				}
+			}
+			> li.school{
+				a {
+					background-color: $color-school;
+				}
+				> ul li{
+					//color: $color-school;
+				}
+			}
+		}
+	}
+}
+.explore-disc{ //學門
+	min-height: 100%;
+	background: $gradient-disc;
+	.page-header{   
+		background: $gradient-disc;
+	}
+	.explore-intro{ 
+		background: $gradient-disc;
+		&::after{
+			background: $gradient-disc;
+		}
+		h2{
+			filter: drop-shadow(    1px     1px $primary-600) 
+					drop-shadow(   -1px    -1px $primary-600) 
+					drop-shadow(   -1px     1px $primary-600) 
+					drop-shadow(    1px    -1px $primary-600)
+					drop-shadow( .15rem  .15rem $cyan);
+		}
+	}
+	//.explore-slect{}
+	//.explore-content{}
+	.explore-slider{
+		.explore-slider-tool{
+			&.position-fixed { 
+				background: $gradient-disc;
+			}	
+		}
+		.explore-slider-list{
+			&::-webkit-scrollbar-thumb { 
+				background-color: $disc-100; 
+			}	
+		}  	
+	}
+}
+.explore-cate{ //學類
+	min-height: 100%;
+	background: $gradient-cate;
+	.page-header{   
+		background: $gradient-cate;
+	}
+	.explore-intro{ 
+		background: $gradient-cate;
+		&::after{
+			background: $gradient-cate;
+		}
+		h2{
+			filter: drop-shadow(    1px     1px $pink-700) 
+					drop-shadow(   -1px    -1px $pink-700) 
+					drop-shadow(   -1px     1px $pink-700) 
+					drop-shadow(    1px    -1px $pink-700)
+					drop-shadow( .15rem  .15rem $teal-300);
+		}
+	}
+	.explore-slect{
+		//background-color: $cate-100;	
+	}
+	.explore-content{
+		&::before{
+			//background-color: $cate-100;
+		}
+	}
+	.explore-slider{
+		.explore-slider-tool{
+			&.position-fixed { 
+				background: $gradient-cate;
+			}	
+		}
+		.explore-slider-list{
+			&::-webkit-scrollbar-thumb { 
+				background-color: $cate-100; 
+			}	
+		}  	
+	}
+}
+.explore-dept { //學系
+	min-height: 100%;
+	background: $gradient-dept;
+	.page-header{   
+		background: $gradient-dept;
+	}
+	.explore-intro{ 
+		background: $gradient-dept;
+		&::after{
+			background: $gradient-dept;	
+		}
+		h2{
+			filter: drop-shadow(    1px     1px $red-600) 
+					drop-shadow(   -1px    -1px $red-600) 
+					drop-shadow(   -1px     1px $red-600) 
+					drop-shadow(    1px    -1px $red-600)
+					drop-shadow( .15rem  .15rem $cyan-300);
+		}
+	}
+	.explore-slect{
+		//background-color: $dept-100;	
+		//background-color: $yellow-200;	
+	}
+	.explore-content{
+		&::before{
+			//background-color: $dept-100;
+			//background-color: $yellow-200;	
+		}
+	}
+	.explore-slider{
+		.explore-slider-tool{
+			&.position-fixed { 
+				background: $gradient-dept;
+			}	
+		}
+		.explore-slider-list{
+			&::-webkit-scrollbar-thumb { 
+				background-color: $dept-100; 
+			}	
+		}  	
+	}
+}
+
+[class*="explore-tab"]{
+	.explore-collapse-btn{
+		display: inline-flex;
+		align-items: center;
+		color: inherit; 
+		position: relative;
+		padding-left: calc(#{$btn-padding-x} + .25rem);
+		&:hover, &:focus, &:active{
+			border-color: transparent;
+		}
+		.explore-collapse-icon{
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 1rem;
+			height: 1rem;
+			border: .1em solid currentColor;
+			border-radius: .15em;	
+			position: relative;
+			&::before, &::after{ 
+				content: "";
+				display: block;
+				position: absolute;
+				width: .5em;
+				height: .1em;
+				border-radius: 2em;
+				top:  calc(50% - .1em/2);
+				left: calc(50% - .5em/2);
+				background-color: currentColor;
+				transition: transform .35s ease;
+			}
+			//預設+
+			&::before{
+				transform: rotate(0deg);
+			}
+			&::after{ 
+				transform: rotate(90deg);
+			}
+		}
+	}
+	.explore-collapse-btn[aria-expanded="true"]{//展開中，顯示我要收合-
+		.explore-collapse-icon{
+			&::before{
+				transform: rotate(180deg);
+			}
+			&::after{ 
+				transform: rotate(0deg);
+			}	
+		}
+	}
+	.explore-collapse-btn[aria-expanded="false"]{ //收合中，顯示我要展開+
+		.explore-collapse-icon{
+			&::before{
+				transform: rotate(0deg);
+			}
+			&::after{ 
+				transform: rotate(90deg);
+			}
+		}
+	}
+	.explore-collapse-body{ 
+		&.owl-carousel{
+			.owl-stage-outer{
+				margin-top: -1.5rem;
+				padding-top: 1.5rem;
+				padding-bottom: 1.5rem;
+			}
+			.owl-item img {
+				width: auto; 
+			}
+			.item{
+				padding-right:$grid-gutter-width*.5;
+				padding-left: $grid-gutter-width*.5;
+			}
+			.owl-nav{
+				.owl-prev{
+					position: absolute;
+					top: 50%;
+					left: 0;
+					font-size: 2rem !important;
+					transform: translate(calc(-100% - .5rem), -50%);
+					color: inherit !important;
+				}
+				.owl-next{
+					position: absolute;
+					top: 50%;
+					right: 0;
+					font-size: 2rem !important;
+					transform: translate(calc(100% + .5rem), -50%);
+					color: inherit !important;
+				}
+				.disabled{
+					opacity: 0;
+				}
+			}
+		}
+	}	
+}
+.explore-tab-disc{
+	//background-color: $disc-100;
+	.explore-collapse-btn{
+		color: $disc;
+		&:hover, &:focus, &:active{
+			color: $disc-700;	
+		}
+	}
+	.explore-collapse-body{ 
+		&.owl-carousel{
+			.owl-nav{
+				.owl-prev{
+					color: $disc !important;
+				}
+				.owl-next{
+					color: $disc !important;
+				}
+			}
+		}
+	}
+}
+.explore-tab-cate{
+	//background-color: $cate-100;
+	.explore-collapse-btn{
+		color: $cate;	
+		&:hover, &:focus, &:active{
+			color: $cate-700;	
+		}
+	}
+	.explore-collapse-body{ 
+		&.owl-carousel{
+			.owl-nav{
+				.owl-prev{
+					color: $cate !important;
+				}
+				.owl-next{
+					color: $cate !important;
+				}
+			}	
+		}
+	}
+}
+.explore-tab-dept{
+	.explore-collapse-btn{
+		color: $orange;	
+		&:hover, &:focus, &:active{
+			color: $orange-700;	
+		}
+	}
+	.explore-collapse-body{ 
+		&.owl-carousel{
+			.owl-nav{
+				.owl-prev{
+					color: $orange !important;
+				}
+				.owl-next{
+					color: $orange !important;
+				}
+			}
+		}
+	}
+}
+
+
+.school-chart{
+	width: 200%;
+	transform: translateX(-25%);
+}
+.school-filter-btn{
+	label {
+		margin-left: .25rem;
+	}
+}
+.school-filter-table{
+	--bs-table-bg: transparent;	
+	table-layout: fixed;
+	thead, thead, tr{
+		display: table;
+		width: 100%;
+	}
+	thead{
+		tr {
+			th, td{
+				width: 50%;
+				background-color: $color-school;
+				color: $white;
+				vertical-align: middle;	
+			}
+		}
+	}
+	tbody{
+		tr {
+			th, td{
+				width: 50%;	
+				border-color: $color-school;
+				vertical-align: middle;
+				a{
+					color: $color-school;
+					text-decoration: none;
+					display: inline-block;
+					@extend .link-scale;
+					transform-origin: 0;
+					&::after{ 
+						content: "\F1C5";
+						display: inline;
+						font-family: "Bootstrap-Icons";
+						font-size: .75rem;
+						margin-left: .25rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
