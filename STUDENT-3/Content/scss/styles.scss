@@ -18,32 +18,14 @@
 @import "modules/mend-bs"; 
 @import "modules/page-header"; 
 @import "modules/spinner"; 
-@import "modules/UI";  
+@import "modules/UI"; 
+
+@import "modules/exam-item"; 
+@import "modules/user"; 
+
 
 @import "pages/index"; 
-@import "pages/user"; 
-@import "pages/exam-item"; 
-/*@import "pages/explore";
-@import "pages/exploreTip";
-@import "pages/compare";
-@import "pages/compareList";
-@import "pages/test";
-@import "pages/collection";
-@import "pages/news"; 
-@import "pages/qa"; 
-@import "pages/about"; 
-@import "pages/contact"; 
-@import "pages/login"; 
-@import "pages/register"; 
-@import "pages/resetPD"; 
-@import "pages/myRecommend"; */
+@import "pages/apply"; 
 
-/* ******* ******* ******* ******* ******* ******* ******* 
-[References]
-  =>  Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/
-  =>  Bootstrap Icons - https://icons.getbootstrap.com/
-  =>  Solartec - Renewable Energy Website Template - https://htmlcodex.com/renewable-energy-website-template
-  =>  SVGBackgrounds - https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/
-  =>  Font Awesome - https://fontawesome.com/
-******* ******* ******* ******* ******* ******* ******* */
+
 

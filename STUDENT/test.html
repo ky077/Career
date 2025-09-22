@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
-<title>測驗入口 | 讚生涯高中版生涯測驗系統 - 學生端</title>
+<title>讚生涯高中版生涯測驗系統 - 學生端</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
 <meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
@@ -63,7 +63,9 @@
                   <div class="exam-name">適性化生涯性向測驗<small>Computerized Adaptive Career Aptitude Test</small> </div>
                 </h3>
                 <div class="exam-text">
-                  <div>測驗時間：<label>2017-10-31  第7節</label></div>
+                  <div>測驗時間：
+                    <label>2017-10-31  第7節</label>
+                  </div>
                   <div>
                     <input type="submit" name="button" class="btn btn-lg btn-primary rounded-pill px-4 link-scale" value="開始測驗">
                   </div>
@@ -79,7 +81,9 @@
                   <div class="exam-name">電腦化生涯興趣測驗<small>Computerized Career Interest Test</small></div>
                 </h3>
                 <div class="exam-text">
-                  <div>測驗時間：<label>2017-10-31  第7節</label></div>
+                  <div>測驗時間：
+                    <label>2017-10-31  第7節</label>
+                  </div>
                   <div>
                     <input type="submit" name="button" class="btn btn-lg btn-primary rounded-pill px-4 link-scale" value="開始測驗">
                   </div>
@@ -95,7 +99,9 @@
                   <div class="exam-name">工作價值組合<small>Work Value Assembly</small></div>
                 </h3>
                 <div class="exam-text">
-                  <div>測驗時間：<label>2017-10-31  第7節</label></div>
+                  <div>測驗時間：
+                    <label>2017-10-31  第7節</label>
+                  </div>
                   <div>
                     <input type="submit" name="button" class="btn btn-lg btn-primary rounded-pill px-4 link-scale" value="開始測驗" disabled>
                   </div>
@@ -109,6 +115,10 @@
     </div>
   </div>
   <!-- Content End --> 
+  
+  <!-- Modal#modalEditUser Start -->
+  <div class="modal fade futuristic-modal" id="modalEditUser" tabindex="-1" aria-labelledby="modalEditUserLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"> </div>
+  <!-- Modal#modalEditUser End --> 
 </main>
 <footer> </footer>
 <!-- Back to Top --> 
@@ -146,19 +156,6 @@ $(document).ready(function () {
 			$('.user-data.sticky-top').css('top', '20px');
 		}
 	});
-
-	//適配、對應owl-carousel
-	$('.owl-carousel').owlCarousel({
-		autoplay: false,
-		smartSpeed: 300,
-		loop: false,
-		nav: true,
-		navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>'],
-		dots: false,
-		autoWidth: true,  
-		responsiveClass: true,
-		items: 1
-	})	
 });	
 </script>
 </body>

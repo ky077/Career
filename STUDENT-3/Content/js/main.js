@@ -10,7 +10,10 @@
 	$('footer').load('master-footer.html');  
 	
 	//load user
-	$('.user-data').load('master-user.html'); 
+	$('.user-data').load('master-user.html');
+	
+	//load user
+	$('#modalEditUser').load('data.html');
 	
 	logState();
 

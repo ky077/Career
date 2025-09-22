@@ -77,19 +77,21 @@
         <div class="row p-5 login-panel-frame">
           <div class="col-auto mx-auto">
             <h2 class="text-center">登入</h2>
-            <div class="mb-4">
+            <div class="mb-3">
               <label for="inputEmail" class="form-label mb-1">帳號</label>
               <input type="email" class="form-control rounded-pill" id="inputEmail" placeholder="身分證字號/帳號">
+              <div class="form-text text-danger">請輸入帳號。</div>
             </div>
             <div class="mb-4">
               <label for="inputPassword" class="form-label mb-1">密碼</label>
-              <div class="input-group mb-3">
+              <div class="input-group">
                 <input type="password" class="form-control rounded-start-pill" id="inputPassword" placeholder="密碼" aria-label="密碼" aria-describedby="passwordHelp">
                 <button class="btn btn-showHidePD rounded-end-pill" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
               </div>
+              <div class="form-text text-danger">請輸入密碼。</div>
             </div>
             <div class="mb-1"><a href="test.html?uid=0" class="btn btn-primary w-100 rounded-pill">登入</a></div>
-            <div class="form-text mb-4 d-flex justify-content-between"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#forgetPdModal">忘記密碼？</a><a href="register.html">申請帳號</a></div>
+            <div class="form-text mb-4 d-flex justify-content-between"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#forgetPdModal">忘記密碼？</a><a href="apply.html">申請帳號</a></div>
           </div>
         </div>
       </div>
@@ -112,7 +114,8 @@
               <div class="mb-4">
                 <label for="inputGetEmail" class="form-label mb-1">請輸入您的身分證字號/帳號：</label>
                 <input type="email" class="form-control" id="inputGetEmail" placeholder="身分證字號/帳號">
-				  <div class="form-text">*驗證碼需在十五分鐘內輸入，逾期失效。</div>
+                <div class="form-text text-danger">必填，格式：英數。</div>
+                <div class="form-text">*驗證碼需在十五分鐘內輸入，逾期失效。</div>
               </div>
               <div class="mb-4">
                 <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" id="btnGetPd">發送驗證碼</button>
