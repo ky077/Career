@@ -41,13 +41,21 @@
 </div>
 <!-- Spinner End -->
 
-<header> </header>
+<header>
+  <nav class="navbar navbar-expand-xl sticky-top bg-white bg-opacity-75 shadow-sm">
+    <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯高中生生涯資訊系統">
+      <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯高中生生涯資訊系統"/></h1>
+      </a>
+      <!--<div id="header-menu"> </div>-->
+    </div>
+  </nav>
+</header>
 <main class="index"> 
   <!-- Content Start -->
   <div class="container-fluid px-0">
     <div class="row w-100 h-100 mx-0"> 
       <!-- 左 開始-->
-      <div class="col-xl-7 col-xxl-8 intro-panel wow animate__animated animate__fadeIn">
+      <div class="col-xl-7 col-xxl-8 intro-panel wow animate__animated animate__fadeIn order-2 order-xl-1">
         <div class="row row-cols-1 row-cols-sm-2 h-100 justify-content-center">
           <div class="col col-xl-5 intro-item">
             <div class="intro-img"><img src="Content/img/index/intro1.png" alt="" class="img-fluid"/></div>
@@ -73,20 +81,20 @@
       </div>
       <!-- 左 結束--> 
       <!-- 右 開始-->
-      <div class="col-xl-5 col-xxl-4 login-panel wow animate__animated animate__fadeInRight" id="loginPanel">
+      <div class="col-xl-5 col-xxl-4 py-5 login-panel wow animate__animated animate__fadeInRight order-1 order-xl-2" id="loginPanel">
         <div class="row p-5 login-panel-frame">
           <div class="col-auto mx-auto">
             <h2 class="text-center">登入</h2>
             <div class="mb-3">
               <label for="inputEmail" class="form-label mb-1">帳號</label>
-              <input type="email" class="form-control rounded-pill" id="inputEmail" placeholder="身分證字號/帳號">
+              <input type="email" class="form-control" id="inputEmail" placeholder="身分證字號/帳號">
               <div class="form-text text-danger">請輸入帳號。</div>
             </div>
             <div class="mb-4">
               <label for="inputPassword" class="form-label mb-1">密碼</label>
               <div class="input-group">
-                <input type="password" class="form-control rounded-start-pill" id="inputPassword" placeholder="密碼" aria-label="密碼" aria-describedby="passwordHelp">
-                <button class="btn btn-showHidePD rounded-end-pill" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+                <input type="password" class="form-control" id="inputPassword" placeholder="密碼" aria-label="密碼" aria-describedby="passwordHelp">
+                <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
               </div>
               <div class="form-text text-danger">請輸入密碼。</div>
             </div>
@@ -108,17 +116,20 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="row py-5">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="text-center">忘記密碼</h2>
+              <hr class="text-primary mb-4 w-75 mx-auto">
+            </div>
             <div class="col-auto mx-auto">
-              <h2 class="text-center mb-4">忘記密碼</h2>
               <div class="mb-4">
-                <label for="inputGetEmail" class="form-label mb-1">請輸入您的身分證字號/帳號：</label>
-                <input type="email" class="form-control" id="inputGetEmail" placeholder="身分證字號/帳號">
+                <label for="inputGetEmail" class="form-label mb-1">請輸入您的身分證統一編號/帳號：</label>
+                <input type="email" class="form-control" id="inputGetEmail" placeholder="身分證統一編號/帳號">
                 <div class="form-text text-danger">必填，格式：英數。</div>
                 <div class="form-text">*驗證碼需在十五分鐘內輸入，逾期失效。</div>
               </div>
               <div class="mb-4">
-                <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" id="btnGetPd">發送驗證碼</button>
+                <button type="button" class="btn btn-primary rounded-pill w-100" data-bs-dismiss="modal" id="btnGetPd">發送驗證碼</button>
               </div>
             </div>
           </div>
@@ -146,9 +157,9 @@
 <script src="Content/js/fn.js"></script> 
 <script src="Content/js/main.js"></script> 
 <script>
-$('header').load('header.html', function () {
-		$('.nav-menu').hide();
-	});	
+//$('header').load('master-header.html', function () {
+//	$('.navbar-toggler, #navbarCollapse').hide();
+//});	
 	
 	
 //[登入獲得更多詳細資訊]

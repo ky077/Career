@@ -2,9 +2,7 @@
     "use strict";
 	
 	//load header
-	$('header').load('master-header.html', function () {
-		logState();
-	});
+	$('#header-menu').load('master-header.html');
 
 	//load header
 	$('footer').load('master-footer.html');  

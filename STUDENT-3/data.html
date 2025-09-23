@@ -1,44 +1,224 @@
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
   <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title">編輯個人資料</h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-      <div class="mb-3">
-        <label for="inputName" class="form-label mb-1">姓名</label>
-        <input type="text" class="form-control" id="inputName" placeholder="請填寫真實中文姓名" value="宥之">
-      </div>
-      <div class="mb-3">
-        <label for="inputEmail" class="form-label mb-1">帳號</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="請輸入您的Email" value="aaa123@gmail.com" disabled>
-      </div>
-      <div class="mb-3">
-        <label for="inputPassword" class="form-label mb-1">密碼</label>
-        <div class="input-group ">
-          <input type="password" class="form-control" id="inputPassword" placeholder="請輸入6至15位英數字混和之密碼" aria-label="密碼" aria-describedby="passwordHelp">
-          <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+      <div class="mb-3 row">
+        <label for="" class="col-lg-3 col-form-label text-lg-end"></label>
+        <div class="col-lg-8">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="Radio3" name="Radio_isCitizen" type="radio" value="1" checked="checked" onclick="ChangeID_placeholder(1)" disabled>
+            <label class="form-check-label" for="Radio3">本國籍</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="Radio4" name="Radio_isCitizen" type="radio" value="0" onclick="ChangeID_placeholder(0)" disabled>
+            <label class="form-check-label" for="Radio4">非本國籍</label>
+          </div>
         </div>
-        <div class="form-text text-primary">如不修改請空白。</div>
       </div>
-      <div class="mb-3">
-        <label for="inputCheckPassword" class="form-label mb-1">確認密碼</label>
-        <div class="input-group">
-          <input type="password" class="form-control" id="inputCheckPassword" placeholder="請再次輸入密碼" aria-label="確認密碼" aria-describedby="passwordCheckHelp">
-          <button class="btn btn-showHidePD" type="button" id="toggleCheckPassword" aria-label="顯示或隱藏確認密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+      <div class="mb-3 row">
+        <label for="Text_sid" class="col-lg-3 col-form-label text-lg-end">帳號：</label>
+        <div class="col-lg-8">
+          <input id="Text_sid" name="Text_sid" type="text" class="form-control" placeholder="請輸入身分證統一編號" value="身分證統一編號" disabled>
+          <div class="form-text text-danger">請設定帳號。</div>
         </div>
-        <div class="form-text text-primary">如不修改請空白。</div>
       </div>
-      <div class="mb-3">
-        <label for="inputsSchool" class="form-label mb-1">學校</label>
-        <input type="text" class="form-control" id="inputsSchool" placeholder="請填寫學校" value="閱讀高中">
+      <div class="mb-3 row">
+        <label for="Text_pwd1" class="col-lg-3 col-form-label text-lg-end">密碼：</label>
+        <div class="col-lg-8">
+          <input id="Text_pwd1" name="Text_pwd1" type="password" class="form-control" placeholder="請輸入以英數字元設置6-20位的密碼" value="0000000000">
+          <div class="form-text text-danger">請設定密碼。格式：6-20碼英數字元。</div>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="inputClass" class="form-label mb-1">班級</label>
-        <input type="text" class="form-control" id="inputClass" placeholder="請填寫班級" value="一年二班">
+      <div class="mb-3 row">
+        <label for="Text_name" class="col-lg-3 col-form-label text-lg-end">姓名：</label>
+        <div class="col-lg-8">
+          <input id="Text_name" name="Text_name" type="text" class="form-control" placeholder="請輸入姓名" value="王小明">
+          <div class="form-text text-danger">請輸入姓名。</div>
+        </div>
       </div>
-      <div class="mb-3 text-center">
-        <button type="button" class="btn btn-primary rounded-pill px-4 link-scale" id="" data-bs-dismiss="modal">修改</button>
+      <fieldset class="mb-3 row">
+        <legend class="col-lg-3 col-form-label text-lg-end">性別：</legend>
+        <div class="col-lg-8">
+          <div class="form-control border-0 px-0">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="radioGender" id="radioGenderMale" checked>
+              <label class="form-check-label" for="radioGenderMale">男</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="radioGender" id="radioGenderFemale">
+              <label class="form-check-label" for="radioGenderFemale">女</label>
+            </div>
+          </div>
+          <div class="form-text text-danger">請選填性別。</div>
+        </div>
+      </fieldset>
+      <fieldset class="mb-3 row">
+        <legend class="col-lg-3 col-form-label text-lg-end">生日： </legend>
+        <div class="col-lg-8">
+          <div class="row g-2 align-items-center">
+            <div class="col-auto">
+              <select id="Drop_year" name="Drop_year" class="form-select">
+                <option value="">請選擇</option>
+                <option value="2000" selected>2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+              </select>
+            </div>
+            <div class="col-auto">年</div>
+            <div class="col-auto">
+              <select id="Drop_month" name="Drop_month" class="form-select">
+                <option value="">請選擇</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <div class="col-auto">月</div>
+            <div class="col-auto">
+              <select id="Drop_date" name="Drop_date" class="form-select">
+                <option value="">請選擇</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+            </div>
+            <div class="col-auto">日</div>
+            <div class="form-text text-danger">請選生日-年、月、日。</div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="mb-3 row">
+        <label for="Text_email" class="col-lg-3 col-form-label text-lg-end">E-Mail：</label>
+        <div class="col-lg-8">
+          <input id="Text_email" name="Text_email" type="email" class="form-control" placeholder="請輸入E-Mail" value="a123@gmail.com">
+          <div class="form-text text-danger">請輸入有效的E-Mail。</div>
+        </div>
+      </div>
+      <fieldset class="mb-3 row">
+        <legend class="col-lg-3 col-form-label text-lg-end">學校：</legend>
+        <div class="col-lg-8">
+          <div class="row g-2">
+            <div class="col-auto">
+              <select id="Drop_area" name="Drop_area" class="form-select" onchange="LoadDegree()">
+                <option>縣市</option>
+                <option selected>台中市</option>
+                <option>台北市</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <select id="Drop_degree" name="Drop_degree" class="form-select" onchange="LoadBelong()">
+                <option>學校類型</option>
+                <option selected>高中</option>
+                <option>高職</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <select id="Drop_belong" name="Drop_belong" class="form-select" onchange="LoadSchool()">
+                <option>學校屬性</option>
+                <option selected>市立</option>
+                <option>私立</option>
+                <option>國立</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <select id="Drop_school" name="Drop_school" class="form-select">
+                <option>學校名稱</option>
+                <option selected>OO學校</option>
+              </select>
+            </div>
+            <div class="form-text text-danger">請選填學校。</div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="mb-3 row">
+        <label for="Drop_dep" class="col-lg-3 col-form-labell text-lg-end">群組/組別：</label>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-auto">
+              <select id="Drop_dep" name="Drop_dep" class="form-select">
+                <option value="">請選擇</option>
+                <option value="11" selected>[11]未分組</option>
+                <option value="12">[12]社會組</option>
+                <option value="13">[13]自然組</option>
+                <option value="14">[14]機械群</option>
+                <option value="15">[15]動力機械群</option>
+                <option value="16">[16]電機與電子群</option>
+                <option value="17">[17]化工群</option>
+                <option value="18">[18]土木與建築群</option>
+                <option value="19">[19]商業與管理群</option>
+                <option value="20">[20]外語群</option>
+                <option value="21">[21]設計群</option>
+                <option value="22">[22]農業群</option>
+                <option value="23">[23]食品群</option>
+                <option value="24">[24]家政群</option>
+                <option value="25">[25]餐旅群</option>
+                <option value="26">[26]水產群</option>
+                <option value="27">[27]海事群</option>
+                <option value="28">[28]藝術群</option>
+              </select>
+            </div>
+            <div class="form-text text-danger">請選填群別/組別。</div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="" class="col-lg-3 col-form-label"></label>
+        <div class="col-lg-8">
+          <button type="button" class="btn btn-outline-primary rounded-pill px-4" data-bs-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-primary rounded-pill px-4">確認修改</button>
+        </div>
       </div>
     </div>
     <div class="modal-footer"></div>
