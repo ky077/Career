@@ -9,11 +9,7 @@
 	
 	//load user
 	$('.user-data').load('master-user.html');
-	
-	//load user
 	$('#modalEditUser').load('data.html');
-	
-	logState();
 
     //Spinner
     var spinner = function () {

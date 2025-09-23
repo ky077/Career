@@ -45,8 +45,8 @@
   <nav class="navbar navbar-expand-xl sticky-top bg-white bg-opacity-75 shadow-sm">
     <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯高中生生涯資訊系統">
       <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯高中生生涯資訊系統"/></h1>
-      </a>
-      <!--<div id="header-menu"> </div>-->
+      </a> 
+      <!--<div id="header-menu"> </div>--> 
     </div>
   </nav>
 </header>
@@ -55,27 +55,35 @@
   <div class="container-fluid px-0">
     <div class="row w-100 h-100 mx-0"> 
       <!-- 左 開始-->
-      <div class="col-xl-7 col-xxl-8 intro-panel wow animate__animated animate__fadeIn order-2 order-xl-1">
+      <div class="col-xl-7 col-xxl-8 intro-panel order-2 order-xl-1">
         <div class="row row-cols-1 row-cols-sm-2 h-100 justify-content-center">
-          <div class="col col-xl-5 intro-item">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeInLeft">
             <div class="intro-img"><img src="Content/img/index/intro1.png" alt="" class="img-fluid"/></div>
             <h3 class="intro-title">生涯測驗</h3>
-            <p class="intro-text">透過智能測驗模組，掃描你的興趣、能力與價值觀，建立個人職涯基因圖譜，為後續分析打下基礎。</p>
+            <p class="intro-text">透過智能測驗模組，<br>
+              掃描你的興趣、能力與價值觀，<br>
+              建立個人職涯基因圖譜，為後續分析打下基礎。</p>
           </div>
-          <div class="col col-xl-5 intro-item">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeInLeft">
             <div class="intro-img"><img src="Content/img/index/intro2.png" alt="" class="img-fluid"/></div>
             <h3 class="intro-title">測驗結果</h3>
-            <p class="intro-text">結合圖像化與演算法分析，解碼你的職涯特質與類型輪廓。透過量化資料與多維特質，啟動「生涯水晶球」，讓你一眼看透自己的職涯走向。</p>
+            <p class="intro-text">結合圖像化與演算法分析，解碼你的職涯特質與類型輪廓。<br>
+              透過量化資料與多維特質，啟動「生涯水晶球」，<br>
+              讓你一眼看透自己的職涯走向。</p>
           </div>
-          <div class="col col-xl-5 intro-item">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeInLeft">
             <div class="intro-img"><img src="Content/img/index/intro3.png" alt="" class="img-fluid"/></div>
             <h3 class="intro-title">生涯資訊系統</h3>
-            <p class="intro-text">整合校系與職涯大數據，支援搜尋、比對與推薦，成為你的決策情報庫。</p>
+            <p class="intro-text">整合校系與職涯大數據，<br>
+              支援搜尋、比對與推薦，<br>
+              成為你的決策情報庫。</p>
           </div>
-          <div class="col col-xl-5 intro-item">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeInLeft">
             <div class="intro-img"><img src="Content/img/index/intro4.png" alt="" class="img-fluid"/></div>
             <h3 class="intro-title">自動化生涯諮詢系統</h3>
-            <p class="intro-text">由 AI 模型整合測驗結果與目標需求，自動規劃適性選項與未來路徑，成為你的個人職涯導航員。</p>
+            <p class="intro-text">由 AI 模型整合測驗結果與目標需求，<br>
+              自動規劃適性選項與未來路徑，<br>
+              成為你的個人職涯導航員。</p>
           </div>
         </div>
       </div>
@@ -157,18 +165,6 @@
 <script src="Content/js/fn.js"></script> 
 <script src="Content/js/main.js"></script> 
 <script>
-//$('header').load('master-header.html', function () {
-//	$('.navbar-toggler, #navbarCollapse').hide();
-//});	
-	
-	
-//[登入獲得更多詳細資訊]
-$('a[href="#loginPanel"]').click(function(){
-	$('html,body').animate({
-		scrollTop:$('#loginPanel').offset().top - $('header').outerHeight() 
-	}, 800);
-});	
-	
 //[忘記密碼]	
 $('#btnGetPd').click(function(){
     alertModalDOM('已將重製密碼信寄送至您的電子信箱<div class="text-info">a***a@gmail.com</div>', 'md', '確定');
