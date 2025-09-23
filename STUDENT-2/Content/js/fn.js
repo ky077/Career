@@ -12,36 +12,9 @@ function logState() {
 
   //登入
   if (logState === true) {
-    //所有連結都加searchParams
-
-    //header
-    //$('.nav-menu').show();
-
-    //探索學類
-    /*if( fileName == 'explore2.html' || fileName == 'explore3.html'){
-    	$('.login-divider').hide();						 
-    								 
-    	$('.card').show();   
-     }*/
-
   }
   //未登入
   else {
-    //header
-	//$('.nav-menu').hide();
-
-    //探索
-    /*if (fileName.indexOf('explore') !== -1){
-    	$('.btn-favorite').porp('disabled', true);
-    }*/
-
-    //探索學類、探索學系
-    /*if( fileName == 'explore2.html' || fileName == 'explore3.html'){
-    	$('.login-divider').show();						 
-    								 
-    	$('#introCate').show().siblings('.card').hide();   
-     }*/
-
   }
 }
 

@@ -41,69 +41,79 @@
 </div>
 <!-- Spinner End -->
 
-<header> </header>
+<header>
+  <nav class="navbar navbar-expand-xl sticky-top bg-white bg-opacity-75 shadow-sm">
+    <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯高中生生涯資訊系統">
+      <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯高中生生涯資訊系統"/></h1>
+      </a>
+      <div id="header-menu"> </div>
+    </div>
+  </nav>
+</header>
 <main class="apply"> 
   <!-- Content Start -->
-  <div class="futuristic-shadow wow animate__animated animate__fadeIn animate__slower">
-    <div class="container-md futuristic-frame">
-      <div>
+  <div class="container-fluid">
+    <div class="futuristic-shadow wow animate__animated animate__fadeIn animate__slower">
+      <div class="container-md futuristic-frame">
         <h2 class="text-center">申請帳號</h2>
         <hr class="text-primary mb-4">
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label"></label>
+        <div class="mb-3 row gx-2">
+          <div class="col-lg-2"></div>
           <div class="col-lg-9">
-            <label class="radio-inline">
-              <input id="Radio3" name="Radio_isCitizen" type="radio" value="1" checked="checked" onclick="ChangeID_placeholder(1)">
-              本國籍 </label>
-            <label class="radio-inline">
-              <input id="Radio4" name="Radio_isCitizen" type="radio" value="0" onclick="ChangeID_placeholder(0)">
-              非本國籍</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="Radio3" name="Radio_isCitizen" type="radio" value="1" checked="checked" onclick="ChangeID_placeholder(1)">
+              <label class="form-check-label" for="Radio3"> 本國籍 </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="Radio4" name="Radio_isCitizen" type="radio" value="0" onclick="ChangeID_placeholder(0)">
+              <label class="form-check-label" for="Radio4"> 非本國籍 </label>
+            </div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">帳號：</label>
+        <div class="mb-3 row gx-2">
+          <label for="Text_sid" class="col-lg-2 col-form-label text-lg-end">帳號：</label>
           <div class="col-lg-9">
             <input id="Text_sid" name="Text_sid" type="text" class="form-control" placeholder="請輸入身分證統一編號">
             <div class="form-text text-danger">請設定帳號。</div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">密碼：</label>
+        <div class="mb-3 row gx-2">
+          <label for="Text_pwd1" class="col-lg-2 col-form-label text-lg-end">密碼：</label>
           <div class="col-lg-9">
             <input id="Text_pwd1" name="Text_pwd1" type="password" class="form-control" placeholder="請輸入以英數字元設置6-20位的密碼">
             <div class="form-text text-danger">請設定密碼。格式：6-20碼英數字元。</div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">確認密碼：</label>
+        <div class="mb-3 row gx-2">
+          <label for="Text_pwd2" class="col-lg-2 col-form-label text-lg-end">確認密碼：</label>
           <div class="col-lg-9">
             <input id="Text_pwd2" name="Text_pwd2" type="password" class="form-control" placeholder="請再次輸入密碼">
             <div class="form-text text-danger">兩次輸入的密碼必須相同。</div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">姓名：</label>
+        <div class="mb-3 row gx-2">
+          <label for="Text_name" class="col-lg-2 col-form-label text-lg-end">姓名：</label>
           <div class="col-lg-9">
             <input id="Text_name" name="Text_name" type="text" class="form-control" placeholder="請輸入姓名">
             <div class="form-text text-danger">請輸入姓名。</div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">性別：</label>
+        <fieldset class="mb-3 row gx-2">
+          <legend class="col-lg-2 col-form-label text-lg-end">性別：</legend>
           <div class="col-lg-9">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="radioGender" id="radioGenderMale">
-              <label class="form-check-label" for="radioGenderMale"> 男 </label>
+              <label class="form-check-label" for="radioGenderMale">男</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="radioGender" id="radioGenderFemale">
-              <label class="form-check-label" for="radioGenderFemale"> 女 </label>
+              <label class="form-check-label" for="radioGenderFemale">女</label>
             </div>
             <div class="form-text text-danger">請選填性別。</div>
           </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="inputPassword3" class="col-lg-3 col-form-label">生日： </label>
+        </fieldset>
+        <fieldset class="mb-3 row gx-2">
+          <legend class="col-lg-2 col-form-label text-lg-end">生日： </legend>
           <div class="col-lg-9">
             <div class="row g-2 align-items-center">
               <div class="col-auto">
@@ -185,60 +195,52 @@
               <div class="form-text text-danger">請選生日-年、月、日。</div>
             </div>
           </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">E-Mail：</label>
+        </fieldset>
+        <div class="mb-3 row gx-2">
+          <label for="Text_email" class="col-lg-2 col-form-label text-lg-end">E-Mail：</label>
           <div class="col-lg-9">
             <input id="Text_email" name="Text_email" type="email" class="form-control" placeholder="請輸入E-Mail">
             <div class="form-text text-danger">請輸入有效的E-Mail。</div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="inputPassword3" class="col-lg-3 col-form-label">學校：</label>
+        <fieldset class="mb-3 row gx-2">
+          <legend class="col-lg-2 col-form-label text-lg-end">學校：</legend>
           <div class="col-lg-9">
             <div class="row g-2">
               <div class="col-auto">
                 <select id="Drop_area" name="Drop_area" class="form-select" onchange="LoadDegree()">
                   <option>縣市</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>台中市</option>
+                  <option>台北市</option>
                 </select>
               </div>
               <div class="col-auto">
                 <select id="Drop_degree" name="Drop_degree" class="form-select" onchange="LoadBelong()">
                   <option>學校類型</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>高中</option>
+                  <option>高職</option>
                 </select>
               </div>
               <div class="col-auto">
                 <select id="Drop_belong" name="Drop_belong" class="form-select" onchange="LoadSchool()">
                   <option>學校屬性</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>市立</option>
+                  <option>私立</option>
+                  <option>國立</option>
                 </select>
               </div>
               <div class="col-auto">
                 <select id="Drop_school" name="Drop_school" class="form-select">
                   <option>學校名稱</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>OO學校</option>
                 </select>
               </div>
               <div class="form-text text-danger">請選填學校。</div>
             </div>
           </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">群組/組別：</label>
+        </fieldset>
+        <div class="mb-3 row gx-2">
+          <label for="Drop_dep" class="col-lg-2 col-form-labell text-lg-end">群組/組別：</label>
           <div class="col-lg-9">
             <div class="row">
               <div class="col-auto">
@@ -268,20 +270,24 @@
             </div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">驗證碼：</label>
+        <div class="mb-3 row gx-2">
+          <label for="Text_checkCode" class="col-lg-2 col-form-label text-lg-end">驗證碼：</label>
           <div class="col-lg-9">
             <div class="row g-2">
               <div class="col-auto">
-                <input type="text" class="form-control" id="" placeholder="">
+                <input id="Text_checkCode" name="Text_checkCode" type="text" class="form-control" placeholder="">
               </div>
-              <div class="col-auto"> <img id="codeImage" src="https://career.ntnu.edu.tw/junior/Validate/ValidateCode.ashx" style="border-width:0px; width:110px ; height:46px; border:1px solid #ccc; border-radius:6px 0 0 6px;"><img src="https://career.ntnu.edu.tw/junior/images/autorenew.jpg" onclick="RenewCode()" style="border:1px solid #ccc; width:33px ; height:46px; padding:12px 8px; background-color:#FFF; border-radius:0 4px 4px 0; margin-left:-1px;"> </div>
+              <div class="col-auto">
+                <div class="input-group"> <img id="codeImage" src="https://career.ntnu.edu.tw/junior/Validate/ValidateCode.ashx" style="border-width:0px; width:110px ; height:46px; border:1px solid #ccc; border-radius:6px 0 0 6px;" alt="">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2"> <i class="bi bi-arrow-repeat"></i></button>
+                </div>
+              </div>
               <div class="form-text text-danger">請輸入驗證碼。</div>
             </div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label"></label>
+        <div class="mb-3 row gx-2">
+          <div class="col-lg-2"></div>
           <div class="col-lg-9">
             <button type="button" class="btn btn-outline-primary rounded-pill px-4" onclick="location.href='index.html';">取消</button>
             <button type="submit" class="btn btn-primary rounded-pill px-4">註冊</button>
@@ -291,7 +297,6 @@
     </div>
   </div>
   <!-- Content End --> 
-  
 </main>
 <footer> </footer>
 <!-- Back to Top --> 

@@ -41,35 +41,43 @@
 </div>
 <!-- Spinner End -->
 
-<header> </header>
+<header>
+  <nav class="navbar navbar-expand-xl sticky-top bg-white bg-opacity-75 shadow-sm">
+    <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯高中生生涯資訊系統">
+      <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯高中生生涯資訊系統"/></h1>
+      </a>
+      <div id="header-menu"> </div>
+    </div>
+  </nav>
+</header>
 <main class="apply"> 
   <!-- Content Start -->
-  <div class="futuristic-shadow wow animate__animated animate__fadeIn animate__slower">
-    <div class="container-md futuristic-frame">
-      <div>
+  <div class="container-fluid">
+    <div class="futuristic-shadow wow animate__animated animate__fadeIn animate__slower">
+      <div class="container-md futuristic-frame">
         <h2 class="text-center">修改密碼</h2>
         <hr class="text-primary mb-4">
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">帳號：</label>
-          <div class="col-lg-9">
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">帳號：</label>
+          <div class="col-lg-7">
             <input type="text" class="form-control" id="" placeholder="請輸入身分證統一編號" value="身分證字號" disabled="">
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">新密碼：</label>
-          <div class="col-lg-9">
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">新密碼：</label>
+          <div class="col-lg-7">
             <input type="text" class="form-control" id="" placeholder="請輸入以英數字元設置4-20位的密碼">
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">確認新密碼：</label>
-          <div class="col-lg-9">
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">確認新密碼：</label>
+          <div class="col-lg-7">
             <input type="text" class="form-control" id="" placeholder="請再次輸入新密碼">
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label">驗證碼：</label>
-          <div class="col-lg-9">
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">驗證碼：</label>
+          <div class="col-lg-7">
             <div class="row g-2">
               <div class="col-auto">
                 <input type="text" class="form-control" id="" placeholder="">
@@ -78,9 +86,9 @@
             </div>
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="" class="col-lg-3 col-form-label"></label>
-          <div class="col-lg-9">
+        <div class="mb-3 row gx-2 justify-content-center">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-7">
             <button type="submit" class="btn btn-primary rounded-pill px-4" onclick="alert('已修改密碼，請重新登錄！')">確認修改</button>
           </div>
         </div>
@@ -88,7 +96,6 @@
     </div>
   </div>
   <!-- Content End --> 
-  
 </main>
 <footer> </footer>
 <!-- Back to Top --> 
