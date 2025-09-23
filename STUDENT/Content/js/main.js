@@ -2,20 +2,14 @@
     "use strict";
 	
 	//load header
-	$('header').load('master-header.html', function () {
-		logState();
-	});
+	$('#header-menu').load('master-header.html');
 
 	//load header
 	$('footer').load('master-footer.html');  
 	
 	//load user
 	$('.user-data').load('master-user.html');
-	
-	//load user
 	$('#modalEditUser').load('data.html');
-	
-	logState();
 
     //Spinner
     var spinner = function () {

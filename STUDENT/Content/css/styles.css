@@ -90,6 +90,8 @@ z-index: 1;*/ }
 .input-group [class*="btn"] { color: var(--bs-body-color); background-color: var(--bs-body-bg); border-color: var(--bs-border-color); }
 .input-group [class*="btn"]:hover { background-color: #cce1f1; }
 
+.form-check { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+
 .badge { font-weight: 400; }
 .badge.sys { background-color: #20c997; }
 .badge.act { background-color: #ff8c33; }
@@ -188,7 +190,7 @@ a { text-underline-offset: 5px; word-break: break-all; }
 .futuristic-nav { padding-top: 3rem; font-size: 1.25rem; transform: translateY(1px); }
 .futuristic-nav .nav-link.active { background-color: #fff; color: #0068b7; border-bottom-left-radius: 0; border-bottom-right-radius: 0; -webkit-clip-path: polygon(1rem 0%, calc(100% - 1rem) 0%, 100% 100%, 0% 100%); clip-path: polygon(1rem 0%, calc(100% - 1rem) 0%, 100% 100%, 0% 100%); }
 
-.futuristic-frame { padding: 3rem; background-color: #fff; border-radius: 1rem; clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem), 100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem), 100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem), 100% 100%, 30% 100%, calc(30% - 1.5rem) calc(100% - 1.5rem), calc(10% + 1.5rem) calc(100% - 1.5rem), 10% 100%, 0% 100%, 0% 75%, 1.5rem calc(75% - 1.5rem), 1.5rem calc(25% + 1.5rem), 0% 25%); }
+.futuristic-frame { padding: 3rem; background-color: rgba(255, 255, 255, 0.9); border-radius: 1rem; clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem), 100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem), 100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem), 100% 100%, 30% 100%, calc(30% - 1.5rem) calc(100% - 1.5rem), calc(10% + 1.5rem) calc(100% - 1.5rem), 10% 100%, 0% 100%, 0% 75%, 1.5rem calc(75% - 1.5rem), 1.5rem calc(25% + 1.5rem), 0% 25%); }
 
 .futuristic-modal .modal-content { border: 5px solid #0068b7; border-radius: 2rem; }
 .futuristic-modal .modal-header { border-bottom-color: transparent; padding: 0 calc(1rem*3); position: relative; }
@@ -251,7 +253,7 @@ a { text-underline-offset: 5px; word-break: break-all; }
 .intro-panel .intro-img { margin-bottom: 1rem; }
 .intro-panel .intro-img > img { max-height: 25vh; }
 .intro-panel .intro-title { color: #fff; font-size: 1.5rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); }
-.intro-panel .intro-text { color: #fff; font-size: .9rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); }
+.intro-panel .intro-text { color: #fff; font-size: .9rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); text-align: center; }
 
 .login-panel { display: flex; justify-content: center; align-items: center; }
 .login-panel .login-panel-frame { background-color: rgba(255, 255, 255, 0.75); border-radius: 0.1875rem 1.875rem 1.875rem 1.875rem; -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem), 100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem), 100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem), 100% 100%, 30% 100%, calc(30% - 1rem) calc(100% - 1rem), calc(10% + 1rem) calc(100% - 1rem), 10% 100%, 0% 100%); clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem), 100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem), 100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem), 100% 100%, 30% 100%, calc(30% - 1rem) calc(100% - 1rem), calc(10% + 1rem) calc(100% - 1rem), 10% 100%, 0% 100%); }
