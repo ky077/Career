@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <title>Career</title>
 <style>
+* {
+	transition: all .3s ease-in;
+}
 body {
 	font-size: 20px;
 }
@@ -33,12 +36,20 @@ table tfoot td a {
 	color: #FFF;
 }
 a {
+	display: inline-block;
 	text-underline-offset: 4px;
+}
+a:hover {
+	transform: scale(1.2);
+	font-weight: bold;
 }
 table tr:hover {
 	background-color: #ffffee;
-	
 }
+.text-muted, .text-muted *{
+	color: #bbb;
+}
+	
 </style>
 </head>
 
@@ -48,29 +59,35 @@ table tr:hover {
     <tr>
       <th>名稱</th>
       <th>DEMO網頁</th>
+      <th>工程師網頁</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>讚生涯高中生生涯資訊系統</td>
       <td><a href="CareerInfo/index.html" target="_blank">DEMO</a></td>
+      <td class="text-muted"><a href="http://140.122.118.47/careerinfo/" target="_blank">莘倫</a></td>
     </tr>
-	<tr>
+    <tr>
       <td>讚生涯高中版生涯測驗系統 - 學生端</td>
-      <td><a href="STUDENT/index.html" target="_blank">DEMO</a></td>
-    </tr>  
-	<tr>
+      <td><a href="STUDENT/index.html" target="_blank">A</a>、 <a href="STUDENT-3/index.html" target="_blank">A2</a>、 <a href="STUDENT-2/index.html" target="_blank">B</a></td>
+      <td class="text-muted"></td>
+    </tr>
+    <tr>
       <td>生涯水晶球</td>
       <td><a href="CRYSTAL-BALL/guide.html" target="_blank">DEMO</a></td>
-    </tr>  
+      <td class="text-muted"><a href="http://140.122.118.47/careerinfo/3d3.aspx" target="_blank">莘倫</a></td>
+    </tr>
     <tr>
       <td>自動化生涯諮詢系統</td>
       <td><a href="BOT/index.html" target="_blank">DEMO</a></td>
+      <td class="text-muted"><a href="https://teemi.tw/MOE_chatbot/career/Chat.aspx" target="_blank">盈芳</a></td>
     </tr>
-	<tr>
+    <tr>
       <td>興趣測驗-高中版-英語版</td>
       <td><a href="TI-EN/Default-APP.html" target="_blank">DEMO</a></td>
-    </tr>  
+      <td class="text-muted"></td>
+    </tr>
   </tbody>
 </table>
 </body>
