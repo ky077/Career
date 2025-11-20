@@ -56,12 +56,10 @@
     <div class="row w-100 h-100 mx-0"> 
       <!-- 左 開始-->
       <div class="col-xl-7 col-xxl-8 intro-panel order-2 order-xl-1">
-		<svg class="intro-line-svg" xmlns="http://www.w3.org/2000/svg">
-    <path id="intro-line-path" fill="none" stroke="#ff8800" stroke-width="5"
+        <svg class="intro-line-svg" xmlns="http://www.w3.org/2000/svg">
+          <path id="intro-line-path" fill="none" stroke="#ff8800" stroke-width="5"
           stroke-linecap="round"/>
-  </svg>  
-		  
-		  
+        </svg>
         <div class="row row-cols-1 row-cols-sm-2 h-100">
           <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn">
             <div class="intro-img"><img src="Content/img/index/intro1.png" alt="" class="img-fluid"/>
@@ -185,7 +183,7 @@
 $('#btnGetPd').click(function(){
     alertModalDOM('已將重製密碼信寄送至您的電子信箱<div class="text-info">a***a@gmail.com</div>', 'md', '確定');
 });
-</script>
+</script> 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const svg = document.querySelector(".intro-line-svg");
@@ -208,34 +206,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-function getBlockHeights() {
-  const introImg = document.querySelector(".intro-img-title");	
-  const introTitle = document.querySelector(".intro-title");
-  const introText  = document.querySelector(".intro-text");
+  function getBlockHeights() {
+    const introImg   = document.querySelector(".intro-img-title");	
+    const introTitle = document.querySelector(".intro-title");
+    const introText  = document.querySelector(".intro-text");
 
-  if (!introTitle || !introText) return 0;
+    if (!introImg || !introTitle || !introText) return 0;
 
-  const imgStyles = getComputedStyle(introImg);	
-  const titleStyles = getComputedStyle(introTitle);
-  const textStyles  = getComputedStyle(introText);
+    const imgStyles   = getComputedStyle(introImg);	
+    const titleStyles = getComputedStyle(introTitle);
+    const textStyles  = getComputedStyle(introText);
 
-  const imgHeight =
-	  introImg.offsetHeight +
-	  parseFloat(imgStyles.marginTop) +
-	  parseFloat(imgStyles.marginBottom);
-	
-  const titleHeight =
-	  introTitle.offsetHeight +
-	  parseFloat(titleStyles.marginTop) +
-	  parseFloat(titleStyles.marginBottom);
+    const imgHeight =
+      introImg.offsetHeight +
+      parseFloat(imgStyles.marginTop) +
+      parseFloat(imgStyles.marginBottom);
+    
+    const titleHeight =
+      introTitle.offsetHeight +
+      parseFloat(titleStyles.marginTop) +
+      parseFloat(titleStyles.marginBottom);
 
-  const textHeight =
-	  introText.offsetHeight +
-	  parseFloat(textStyles.marginTop) +
-	  parseFloat(textStyles.marginBottom);
+    const textHeight =
+      introText.offsetHeight +
+      parseFloat(textStyles.marginTop) +
+      parseFloat(textStyles.marginBottom);
 
-  return imgHeight + titleHeight + textHeight;
-}
+    return imgHeight + titleHeight + textHeight;
+  }
 
   // 把一串 {x,y} 點，轉成「有圓角」的 path d 字串
   function buildRoundedPath(points, radius) {
@@ -286,28 +284,55 @@ function getBlockHeights() {
     if (pts.length < 4) return;
 
     const h = getBlockHeights();
+    const panel = svg.closest(".intro-panel") || svg.parentElement || svg;
+    const panelRect = panel.getBoundingClientRect();
 
-    // 依你指定順序組成折線節點
-    const P1 = { x: 0,               y: pts[0].center.y };
-    const P2 = { x: pts[3].center.x, y: pts[1].center.y };
-    const P3 = { x: pts[3].center.x, y: pts[1].center.y + h };
-    const P4 = { x: pts[0].center.x, y: pts[1].center.y + h };
-    const P5 = { x: pts[0].center.x, y: pts[2].left.y };
-    const P6 = { x: pts[2].right.x,  y: pts[2].right.y };
-    const P7 = { x: pts[3].left.x,   y: pts[3].left.y };
+    // =======================
+    // ① 視窗寬度 < 576px：不畫線（清空 path）
+    // =======================
+    if (window.innerWidth < 576) {
+      path.setAttribute("d", "");
+      return;
+    }
+
+    // =======================
+    // ② 視窗寬度 >= 576px：原本的圓角路線（用父層 .intro-item 的左右邊）
+    // =======================
+
+    const smartItem = items[1]?.closest(".intro-item"); // 智能資料艙
+    const decodeItem = items[2]?.closest(".intro-item"); // 特質解碼站
+
+    let smartRightX = pts[1].right.x;
+    let decodeLeftX = pts[2].left.x;
+
+    if (smartItem) {
+      const smartRect = smartItem.getBoundingClientRect();
+      smartRightX = smartRect.right - panelRect.left;
+    }
+    if (decodeItem) {
+      const decodeRect = decodeItem.getBoundingClientRect();
+      decodeLeftX = decodeRect.left - panelRect.left;
+
+    }
+
+    const P1 = { x: 0,           y: pts[0].left.y };
+    const P2 = { x: smartRightX - 10, y: pts[1].right.y };
+    const P3 = { x: smartRightX - 10, y: pts[1].center.y + h };
+    const P4 = { x: decodeLeftX + 10, y: pts[1].center.y + h };
+    const P5 = { x: decodeLeftX + 10, y: pts[2].left.y };
+    const P6 = { x: pts[2].right.x, y: pts[2].right.y };
+    const P7 = { x: pts[3].left.x,  y: pts[3].left.y };
 
     const points = [P1, P2, P3, P4, P5, P6, P7];
-
-    // 這裡可以調整圓角半徑，例如 16, 24, 32...
     const d = buildRoundedPath(points, 24);
 
     path.setAttribute("d", d);
   }
-
+						  
   window.addEventListener("resize", drawLine);
+  window.addEventListener("orientationchange", drawLine);
   drawLine();
 });
-
 </script>
 </body>
 </html>
