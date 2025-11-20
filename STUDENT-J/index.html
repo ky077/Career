@@ -79,7 +79,7 @@
               運用智慧分析測驗結果，就能發現你的特質，<br>
               找到最適合你的未來方向！</p>
           </div>
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeInms-auto mt-xl-n3">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn ms-auto mt-xl-n3">
             <div class="intro-img"><img src="Content/img/index/intro3.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">特質解碼站</div>
             </div>
@@ -327,6 +327,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const d = buildRoundedPath(points, 24);
 
     path.setAttribute("d", d);
+	
+	// 清除舊動畫 class
+	path.classList.remove("intro-line-animate");
+
+	// 下一個 event-loop 再啟動動畫（避免 class 無效）
+	requestAnimationFrame(() => {
+	  const length = path.getTotalLength();
+
+	  // 將 length 寫入 CSS 變數
+	  path.style.setProperty("--line-length", length);
+
+	  // 設定 dash
+	  path.style.strokeDasharray = length;
+	  path.style.strokeDashoffset = length;
+
+	  // 加上動畫 class
+	  path.classList.add("intro-line-animate");
+	});
   }
 						  
   window.addEventListener("resize", drawLine);

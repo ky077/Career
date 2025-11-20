@@ -134,3 +134,15 @@
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 2s ease;
 }
+@keyframes draw-intro-line {
+  from {
+    stroke-dashoffset: var(--line-length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.intro-line-animate {
+  animation: draw-intro-line 5s linear forwards;
+}
