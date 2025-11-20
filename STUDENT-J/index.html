@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>讚生涯高中版生涯測驗系統 - 學生端</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中版生涯測驗系統 - 學生端" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header>
+  <nav class="navbar navbar-expand-xl sticky-top bg-white bg-opacity-75 shadow-sm">
+    <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯高中生生涯資訊系統">
+      <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯高中生生涯資訊系統"/></h1>
+      </a> 
+      <!--<div id="header-menu"> </div>--> 
+    </div>
+  </nav>
+</header>
+<main class="index"> 
+  <!-- Content Start -->
+  <div class="container-fluid px-0">
+    <div class="row w-100 h-100 mx-0"> 
+      <!-- 左 開始-->
+      <div class="col-xl-7 col-xxl-8 intro-panel order-2 order-xl-1">
+		<svg class="intro-line-svg" xmlns="http://www.w3.org/2000/svg">
+    <path id="intro-line-path" fill="none" stroke="#ff8800" stroke-width="5"
+          stroke-linecap="round"/>
+  </svg>  
+		  
+		  
+        <div class="row row-cols-1 row-cols-sm-2 h-100">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn">
+            <div class="intro-img"><img src="Content/img/index/intro1.png" alt="" class="img-fluid"/>
+              <div class="intro-img-title">特質掃描儀</div>
+            </div>
+            <h3 class="intro-title">生涯測驗</h3>
+            <p class="intro-text">準備好探索未來的自己了嗎？<br>
+              透過智慧測驗，<br>
+              帶你一步步發現自己的潛力與興趣！</p>
+          </div>
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn me-auto">
+            <div class="intro-img"><img src="Content/img/index/intro2.png" alt="" class="img-fluid"/>
+              <div class="intro-img-title">智能資料艙</div>
+            </div>
+            <h3 class="intro-title">測驗結果</h3>
+            <p class="intro-text">想知道未來的你，可能走哪條路嗎？<br>
+              運用智慧分析測驗結果，就能發現你的特質，<br>
+              找到最適合你的未來方向！</p>
+          </div>
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn ms-auto mt-xl-n3">
+            <div class="intro-img"><img src="Content/img/index/intro3.png" alt="" class="img-fluid"/>
+              <div class="intro-img-title">特質解碼站</div>
+            </div>
+            <h3 class="intro-title">生涯資訊系統</h3>
+            <p class="intro-text">未來的學習路線，不用再靠猜！<br>
+              生涯資訊系統幫你整理各群科的大數據，<br>
+              不論你對哪一方面有興趣，<br>
+              都能找到屬於你的那條路！</p>
+          </div>
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn mt-xl-n3">
+            <div class="intro-img"><img src="Content/img/index/intro4.png" alt="" class="img-fluid"/>
+              <div class="intro-img-title">AI導航員</div>
+            </div>
+            <h3 class="intro-title">自動化生涯諮詢系統</h3>
+            <p class="intro-text">想更了解自己嗎？<br>
+              AI 會根據你的測驗結果進行分析，<br>
+              用互動式對話陪你探索，不受時間和地點限制，<br>
+              讓你隨時發現自己的特質與可能的未來道路！</p>
+          </div>
+        </div>
+      </div>
+      <!-- 左 結束--> 
+      <!-- 右 開始-->
+      <div class="col-xl-5 col-xxl-4 py-5 login-panel wow animate__animated animate__fadeInRight order-1 order-xl-2" id="loginPanel">
+        <div class="row p-5 login-panel-frame">
+          <div class="col-auto mx-auto">
+            <h2 class="text-center">登入</h2>
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label mb-1">帳號</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="身分證字號/帳號">
+              <div class="form-text text-danger">請輸入帳號。</div>
+            </div>
+            <div class="mb-4">
+              <label for="inputPassword" class="form-label mb-1">密碼</label>
+              <div class="input-group">
+                <input type="password" class="form-control" id="inputPassword" placeholder="密碼" aria-label="密碼" aria-describedby="passwordHelp">
+                <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+              </div>
+              <div class="form-text text-danger">請輸入密碼。</div>
+            </div>
+            <div class="mb-1"><a href="test.html?uid=0" class="btn btn-primary w-100 rounded-pill">登入</a></div>
+            <div class="form-text mb-4 d-flex justify-content-between"><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#forgetPdModal">忘記密碼？</a><a href="apply.html">申請帳號</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- 右 結束--> 
+    </div>
+  </div>
+  <!-- Content End --> 
+  
+  <!-- 忘記密碼Modal START -->
+  <div class="modal fade" id="forgetPdModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="forgetPdModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header pb-0 border-bottom-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="text-center">忘記密碼</h2>
+              <hr class="text-primary mb-4 w-75 mx-auto">
+            </div>
+            <div class="col-auto mx-auto">
+              <div class="mb-4">
+                <label for="inputGetEmail" class="form-label mb-1">請輸入您的身分證統一編號/帳號：</label>
+                <input type="email" class="form-control" id="inputGetEmail" placeholder="身分證統一編號/帳號">
+                <div class="form-text text-danger">必填，格式：英數。</div>
+                <div class="form-text">*驗證碼需在十五分鐘內輸入，逾期失效。</div>
+              </div>
+              <div class="mb-4">
+                <button type="button" class="btn btn-primary rounded-pill w-100" data-bs-dismiss="modal" id="btnGetPd">發送驗證碼</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 忘記密碼Modal  END  --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+//[忘記密碼]	
+$('#btnGetPd').click(function(){
+    alertModalDOM('已將重製密碼信寄送至您的電子信箱<div class="text-info">a***a@gmail.com</div>', 'md', '確定');
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const svg = document.querySelector(".intro-line-svg");
+  const path = document.querySelector("#intro-line-path");
+  const items = [...document.querySelectorAll(".intro-img-title")];
+
+  function collectPoints() {
+    const panel = svg.closest(".intro-panel") || svg.parentElement || svg;
+    const panelRect = panel.getBoundingClientRect();
+
+    return items.map((item) => {
+      const rect = item.getBoundingClientRect();
+      const midY = rect.top + rect.height / 2 - panelRect.top;
+
+      return {
+        left:   { x: rect.left - panelRect.left, y: midY },
+        center: { x: rect.left + rect.width / 2 - panelRect.left, y: midY },
+        right:  { x: rect.right - panelRect.left, y: midY }
+      };
+    });
+  }
+
+  function getBlockHeights() {
+	const introImgTitle = document.querySelector(".intro-img-title");  
+    const introTitle = document.querySelector(".intro-title");
+    const introText  = document.querySelector(".intro-text");
+    return {
+      total: introImgTitle.offsetHeight + introTitle.offsetHeight + introText.offsetHeight + 20
+    };
+	  console.log(introImgTitle);
+	  console.log(introTitle);
+	  console.log(introText);
+  }
+
+  function drawLine() {
+    const pts = collectPoints();
+    const h = getBlockHeights().total;
+
+    /*
+      你的指定路線：
+
+      1. (0, pts[0].left.x)
+      2. (pts[3].center.x, pts[1].center.y)
+      3. (pts[3].center.x, pts[1].center.y + h)
+      4. (pts[0].center.x, pts[1].center.y + h)
+      5. (pts[0].center.x, pts[2].left.y)
+      6. pts[2].right
+      7. pts[3].left
+    */
+
+    const P1 = { x: 0, y: pts[0].center.y };
+    const P2 = { x: pts[3].center.x, y: pts[1].center.y };
+    const P3 = { x: pts[3].center.x, y: pts[1].center.y + h };
+    const P4 = { x: pts[0].center.x, y: pts[1].center.y + h };
+    const P5 = { x: pts[0].center.x, y: pts[2].left.y };
+    const P6 = pts[2].right;
+    const P7 = pts[3].left;
+
+    const d = `
+      M ${P1.x},${P1.y}
+      L ${P2.x},${P2.y}
+      L ${P3.x},${P3.y}
+      L ${P4.x},${P4.y}
+      L ${P5.x},${P5.y}
+      L ${P6.x},${P6.y}
+      L ${P7.x},${P7.y}
+    `.trim();
+
+    path.setAttribute("d", d);
+  }
+
+  window.addEventListener("resize", drawLine);
+  drawLine();
+});
+
+
+</script>
+
+
+
+
+</body>
+</html>

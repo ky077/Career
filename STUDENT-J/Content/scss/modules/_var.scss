@@ -1,0 +1,32 @@
+$header-height: calc(3rem + #{$navbar-brand-padding-y}*2 + #{$navbar-padding-y}*2);
+
+
+$gradient-disc: linear-gradient(to right, $blue   0%, $purple 100%);
+$gradient-cate: linear-gradient(to right, $purple 0%, $pink   100%);
+$gradient-dept: linear-gradient(to right, $pink   0%, $orange 100%);
+
+
+
+$color-introDisc:   $disc; 			//學門簡介
+$color-introCate:   $cate; 			//學類簡介
+$color-introDept:   $dept; 			//學系簡介
+
+$color-course:   	#FF6F61;		//核心課程
+$color-skill:    	#00bbff;		//優勢能力
+$color-interest: 	#00ab28; 		//興趣類型
+$color-career:   	#e89716; 		//職涯發展
+$color-myth:     	#FDD000; 		//常見迷思
+
+$color-aboutDisc:	$disc-600; 		//相關的學門
+//$color-aboutCate:	$cate-600; 		//相關的學類
+$color-aboutDept:	$dept-600; 		//相關的學系
+
+//$color-includeDisc: $disc-400; 	//包含的學門
+$color-includeCate:	$cate-400; 		//包含的學類
+$color-includeDept: $dept-400;		//包含的學系
+
+$color-solved:   	#4682B4;		//解決的問題
+
+$color-tour:		#00C59B; 		//學習旅程
+$color-belong:		$pink; 			//隸屬於
+$color-school:		#AA6A39; 		//校系列表

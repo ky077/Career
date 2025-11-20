@@ -1,0 +1,27 @@
+.page-header {
+	padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+	position: relative;
+	@extend .bg-primary-gradient;
+	h2{
+		color: #fff;
+    	filter: opacity(0.9);
+	}
+	nav{
+		filter: opacity(.75);
+	}
+	.breadcrumb{
+		color: $white;
+		--bs-breadcrumb-divider-color: var(--bs-white);
+		--bs-breadcrumb-item-active-color: var(--bs-white);
+		a{
+			color: $white;
+			&:hover{
+				color: $tertiary;
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>讚生涯高中版生涯測驗系統 - 學生端</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中版生涯測驗系統 - 學生端" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header>
+  <nav class="navbar navbar-expand-xl sticky-top bg-white bg-opacity-75 shadow-sm">
+    <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯高中生生涯資訊系統">
+      <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯高中生生涯資訊系統"/></h1>
+      </a>
+      <div id="header-menu"> </div>
+    </div>
+  </nav>
+</header>
+<main class="apply"> 
+  <!-- Content Start -->
+  <div class="container-fluid">
+    <div class="futuristic-shadow wow animate__animated animate__fadeIn animate__slower">
+      <div class="container-md futuristic-frame">
+        <h2 class="text-center">修改密碼</h2>
+        <hr class="text-primary mb-4">
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">帳號：</label>
+          <div class="col-lg-7">
+            <input type="text" class="form-control" id="" placeholder="請輸入身分證統一編號" value="身分證字號" disabled="">
+          </div>
+        </div>
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">新密碼：</label>
+          <div class="col-lg-7">
+            <input type="text" class="form-control" id="" placeholder="請輸入以英數字元設置4-20位的密碼">
+          </div>
+        </div>
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">確認新密碼：</label>
+          <div class="col-lg-7">
+            <input type="text" class="form-control" id="" placeholder="請再次輸入新密碼">
+          </div>
+        </div>
+        <div class="mb-3 row gx-2 justify-content-center">
+          <label for="" class="col-lg-2 col-form-label text-lg-end">驗證碼：</label>
+          <div class="col-lg-7">
+            <div class="row g-2">
+              <div class="col-auto">
+                <input type="text" class="form-control" id="" placeholder="">
+              </div>
+              <div class="col-auto"> <img id="codeImage" src="https://career.ntnu.edu.tw/junior/Validate/ValidateCode.ashx" style="border-width:0px; width:110px ; height:46px; border:1px solid #ccc; border-radius:6px 0 0 6px;"><img src="https://career.ntnu.edu.tw/junior/images/autorenew.jpg" onclick="RenewCode()" style="border:1px solid #ccc; width:33px ; height:46px; padding:12px 8px; background-color:#FFF; border-radius:0 4px 4px 0; margin-left:-1px;"> </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 row gx-2 justify-content-center">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-7">
+            <button type="submit" class="btn btn-primary rounded-pill px-4" onclick="alert('已修改密碼，請重新登錄！')">確認修改</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Content End --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+$('header').load('header.html', function () {
+		$('.nav-menu').hide();
+	});	
+	
+	
+//[登入獲得更多詳細資訊]
+$('a[href="#loginPanel"]').click(function(){
+	$('html,body').animate({
+		scrollTop:$('#loginPanel').offset().top - $('header').outerHeight() 
+	}, 800);
+});	
+	
+//[忘記密碼]	
+$('#btnGetPd').click(function(){
+    alertModalDOM('已將重製密碼信寄送至您的電子信箱<div class="text-info">a***a@gmail.com</div>', 'md', '確定');
+});
+</script>
+</body>
+</html>
