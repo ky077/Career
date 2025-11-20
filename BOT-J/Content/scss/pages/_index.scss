@@ -1,0 +1,17 @@
+.index-btn {
+	display: flex;
+    flex-direction: column-reverse;
+	text-align: center;
+	i{
+		font-size: 5rem;
+		color: $primary;
+		margin-bottom: 1rem;
+	}
+	.btn:not(:hover){
+		color: $primary;
+		border-color: $primary;
+		&::after{
+			border:  1px solid $primary;
+		}
+	}
+}

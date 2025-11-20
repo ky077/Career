@@ -1,0 +1,18 @@
+@keyframes flashAn {
+    from { opacity: 1.0; }
+    to {   opacity: 0.25; }
+}
+
+@keyframes volume {
+    0%   { background-image: none; }
+    25%  { background-image: url("../images/volume-1.svg");}
+    50%  { background-image: url("../images/volume-2.svg");}
+    75%  { background-image: url("../images/volume-3.svg");} 
+    100% { background-image: none; }
+}
+
+@keyframes rec {
+    0%   { box-shadow: 0 0 0 0.25rem rgba($primary, .5);}
+    50%  { box-shadow: 0 0 0 0.25rem rgba($primary, 0); }
+    100% { box-shadow: 0 0 0 0.25rem rgba($primary, .5);}    
+}

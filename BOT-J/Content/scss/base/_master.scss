@@ -1,0 +1,302 @@
+html, body{
+    width:100%;
+    height:100%;
+	min-width: 100%;
+    min-height: 100%;
+	font-family: 'Noto Sans',
+                 'Noto Sans TC', 
+                 'Microsoft JhengHei', 
+                 'PingFang TC',
+                 'Heiti TC', 
+                 'LiHei Pro',
+                 sans-serif !important;
+	letter-spacing: 0.05em;
+    font-size: 14px; 
+    @media screen and (min-width: 768px) {
+    font-size: 16px;    
+    }
+    @media screen and (min-width: 1200px) {
+    font-size: 18px;    
+    }
+	@media screen and (min-width: 1400px) {
+    font-size: 20px;    
+    }
+}
+body{
+	background-color: $green-100;
+	//background: url("../images/bg.png"), radial-gradient(circle at 80% 80%, #{$tertiary-300} 0%, #{$primary} 50%, #{$primary-900} 100%);
+	//background: url("../images/bg.png"), linear-gradient(to bottom,  #{$primary-700} 0%, #{$primary} 44%,#{$tertiary-300} 100%);
+//background: url("../images/bg.png"), linear-gradient(120deg,  #{$tertiary-300} 0%,  #{$primary} 50%, #{$primary-700} 100%);
+	background:  url("../images/bg.png"), radial-gradient(ellipse at center,  $tertiary-100 0%, $tertiary 50%, $primary 100%); 
+
+
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	&::-webkit-scrollbar{  
+		width: 10px;     
+		background-color: transparent;
+	}  
+	&::-webkit-scrollbar-track {
+		background-color:  transparent;
+	} 
+	&::-webkit-scrollbar-thumb {
+		background-color: $primary;
+		border-radius: 10px;
+	}
+}
+
+//主體模板// ************************************************* //
+$chat-color:     $primary;  
+
+$slash-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='145' height='36' viewBox='0 0 145 36'%3E %3Cg id='Group_185' data-name='Group 185' transform='translate(-9408 -1018)'%3E %3Crect id='Rectangle_66' data-name='Rectangle 66' width='25' height='36' transform='translate(9408 1018)' fill='%23000000'/%3E %3Crect id='Rectangle_67' data-name='Rectangle 67' width='25' height='36' transform='translate(9448 1018)' fill='%23000000'/%3E %3Crect id='Rectangle_68' data-name='Rectangle 68' width='25' height='36' transform='translate(9488 1018)' fill='%23000000'/%3E %3Crect id='Rectangle_69' data-name='Rectangle 69' width='25' height='36' transform='translate(9528 1018)' fill='%23000000'/%3E %3C/g%3E %3C/svg%3E ";
+
+header {
+	.header-logo{ 
+		padding: 0 .75rem;
+		line-height: 1;
+		width: 6rem;
+		height: auto;
+		position: absolute;
+		top:0;
+		left: 0;
+		@media screen and (min-width: 1200px) {
+		width: 10%;	
+		}
+		img, svg{
+			width: 100%;	
+		}
+	}
+}
+main{ 
+	width: 100%;
+	height: 100%;
+	> [class*="container"]{
+		height: 100%;	
+	}
+}
+
+.robot-frame{  //限制高度，故 dialog::before
+	height: 20vh;
+	max-height: 20vh;
+	padding: 1rem 1rem 0 1rem;
+	position: relative;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	.avatar{  
+		flex: 0 0 auto;
+		width: auto;
+		height: 20vh;
+		margin: 0 1rem 0 0;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 1rem 100%, 1rem calc(100% - 1rem), 0 calc(100% - 1rem));
+		@media screen and (min-width: 992px) {
+		//height: 22.5vh;	
+		margin: 0 1rem;	
+		}
+		> img, > svg{  
+			width: auto;
+			height: 100%;
+		}
+	}
+	.dialog{ 
+		background-color: $white;
+		border-radius: $border-radius;
+		border-top-left-radius: 0;
+		position: relative;
+		box-shadow: $box-shadow-sm;
+		.dialog-text{
+			padding: .75rem 1rem;	
+			max-height: 16vh;
+			overflow-y: auto;
+			h2, .h4{
+				@media screen and (max-width: 575px) {
+				font-size: 1rem;	
+				}
+			}
+			h2:last-child, .h4:last-child{
+				margin-bottom: 0;
+			}
+			&::-webkit-scrollbar{  
+				width: 10px;     
+				background-color: transparent;
+			}  
+			&::-webkit-scrollbar-track {
+				background-color:  transparent;
+			} 
+			&::-webkit-scrollbar-thumb {
+				background-color: $gray-500;
+				border: 2px solid $white;
+				border-radius: 10px;
+			}
+		}
+		&::before{ 
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 1rem 1rem 0;
+			border-color: transparent $white transparent transparent;
+			position: absolute;
+			top: 0;
+			left: -1rem;
+			z-index: 1;
+		}
+		&::after{ 
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 1rem 1rem 0;
+			border-color: transparent rgba($black, .075) transparent transparent;
+			position: absolute;
+			top: .125rem;
+			left: -1rem;
+			z-index: -1;
+			filter: blur(.25rem);
+		}
+	}
+}
+
+@mixin futuristicFrame($color) {
+///*.futuristic-frame{  */
+	$futuristic-border: .325rem;
+	height: calc(100% - 1rem);
+	max-height: calc(100% - 1rem);
+	padding-top: 1rem;
+	position: relative;
+	color: $color;
+//	&::before{ 
+//		content: "";
+//		display: block;
+//		width: 55%;
+//		height: 25%;
+//		max-width: 100%;
+//		border-radius: 0 0 $border-radius-xl*1.2 0;
+//		border-bottom: $futuristic-border solid $color;
+//		border-right: $futuristic-border solid $color;
+//		position: absolute;
+//		z-index: -1;
+//		bottom: -.75rem;
+//		right: -.75rem;
+//	}
+//	&::after{
+//		content: "";
+//		display: block;
+//		position: absolute;
+//		z-index: 5;
+//		bottom: -.75rem;
+//		right: 3rem;
+//		min-width: 145px;
+//		min-height: 36px;
+//		min-width: 145px;
+//		min-height: 36px;
+//		background-color: $color; 
+//		mask-image: url($slash-svg);
+//		mask-repeat: no-repeat;
+//		mask-size: cover;
+//		transform-origin: bottom;
+//		transform: skewX(-30deg);
+//	}
+	
+	.futuristic-frame-border{
+		height: 100%;
+		max-height: 100%;
+		background-color: rgba($white, .75); 
+		border: $futuristic-border solid $color;
+		border-radius: $border-radius-xl;
+		position: relative;
+		padding-left: 0;
+		padding-right: 3px;
+		box-shadow: 0 0 30px rgba(#fff, .75);
+		&::before{
+			content: "";
+			display: block;
+			width: 70%;
+			height: calc(1.5rem + #{$futuristic-border});
+			clip-path: polygon(0 0%, 100% 0, 100% 100%, 1.5rem 100%);
+			background-color: $color;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 5;
+			border-radius: 0 $border-radius-xl*.5 0 0;
+		}
+	}
+	.futuristic-frame-content{ 
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-evenly;
+		align-items: stretch;
+		height: calc(100% - (1.5rem + #{$futuristic-border}));
+		max-height: calc(100% - (1.5rem + #{$futuristic-border}));
+		overflow-X: hidden;
+		overflow-y: scroll;
+		padding: 3rem 1.5rem;
+		margin-top: calc(1.5rem + #{$futuristic-border});
+		@media screen and (min-width: 576px) and (max-width: 991px) {
+		padding: 3rem 6rem;	
+		}
+		@media screen and (min-width: 1400px) {
+		padding: 3rem 6rem;		
+		}
+		&::-webkit-scrollbar{  
+			width: 7px;     
+			background-color: transparent;
+		}  
+		&::-webkit-scrollbar-track {
+			background-color:  transparent;
+		} 
+		&::-webkit-scrollbar-thumb {
+			background-color: $color;
+			border-radius: 7px;
+		}
+		.futuristic-frame-tool{  
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 9;
+			height: calc(1.5rem + 0.325rem);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 0 .75rem;
+			a {
+				color: shade-color($color, 5%);
+				line-height: 1;
+				> span{
+					display: none;
+					@media screen and (min-width: 992px) {
+					display: inline;
+					}
+				}
+				i{
+					font-size: 1.25rem; 
+				}
+			}
+			
+		}
+	}
+}
+.futuristic-frame{
+	@include futuristicFrame($primary);
+}
+.futuristic-frame.chat{
+	@include futuristicFrame($chat-color);
+}
+.robot-frame + .futuristic-frame{
+	padding-top: 1rem;
+	height: calc(80% - 1rem);
+	max-height: calc(80% - 1rem);
+}
+
+.pdf-iframe{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+

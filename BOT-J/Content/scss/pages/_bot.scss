@@ -1,0 +1,263 @@
+$bot-primary:   #0ADA86;  //body green
+$bot-secondary: #F4CE36;  //dialogue yellow
+$bot-tertiary:  #237DAF;  //shadow blue
+[id*="TEEMI-Bot-"]{
+	#face {
+		fill: #fff;
+	}
+	#body, #rightHand, #leftHand{
+		fill: $bot-primary;
+	}
+	#foot, #rightEye, #leftEye, #mouth, #tele, #bodyShadow{
+		fill: $bot-tertiary;
+	}
+
+	//announce
+	#leftHand2{
+		fill: $bot-primary;
+	}
+	#trumpetMain{
+		fill: $bot-secondary;
+	}
+	#trumpetTrump{
+		fill: #F5CF37;
+	}
+	#trumpetGrip, #trumpetEdge1, #trumpetEdge2{
+		fill: #F5B935;
+	}
+	
+	//love
+	#heart {
+		fill: $bot-secondary;
+	}
+}
+
+@keyframes footAn {
+  0% {transform: translateX(-5px) rotate( 2.5deg);}
+ 50% {transform: translateX( 5px) rotate(-2.5deg);}
+100% {transform: translateX(-5px) rotate( 2.5deg);}
+}
+[id*="TEEMI-Bot-"] #foot {
+	transform-origin: 335px 530px;
+	animation: footAn 2s infinite;
+}
+
+@keyframes Wave1An {
+  0% {opacity: 0;}
+ 33.3% {opacity: 1;}
+ 66.4% {opacity: 1;}	
+100% {opacity: 0;}
+}
+[id*="TEEMI-Bot-"] #leftWave1,
+[id*="TEEMI-Bot-"] #rightWave1{
+	transform-origin: 335px 530px;
+	animation: Wave1An 2s infinite;
+}
+@keyframes Wave2An {
+  0% {opacity: 0;}
+ 33.3% {opacity: 0;}
+ 66.4% {opacity: 1;}	
+100% {opacity: 0;}
+}
+[id*="TEEMI-Bot-"] #leftWave2,
+[id*="TEEMI-Bot-"] #rightWave2{
+	transform-origin: 335px 530px;
+	animation: Wave2An 2s infinite;
+}
+
+//index  hi.svg
+@keyframes sayHiAn {
+  0% {transform: rotate(10deg);}
+ 15% {transform: rotate( 0deg);}
+ 30% {transform: rotate(10deg);}
+ 45% {transform: rotate( 0deg);}
+ 60% {transform: rotate(10deg);}
+100% {transform: rotate(10deg);}
+}
+#TEEMI-Bot-hi #rightHand {
+	transform-origin: 189.4px 352.9px;
+	animation: sayHiAn 2s infinite;
+}
+
+
+//chatTopic  announce.svg
+@keyframes liftTrumpetRightAn {
+  0% {transform: rotate(-10deg);}
+ 30% {transform: rotate(  0deg);}
+ 45% {transform: rotate(  0deg);}
+ 60% {transform: rotate(-10deg);}
+100% {transform: rotate(-10deg);}
+}
+#TEEMI-Bot-announce #rightHand {
+	transform-origin: 161px 337px;
+	animation: liftTrumpetRightAn 2s infinite;
+}
+@keyframes liftTrumpetLeftAn {
+  0% {transform: rotate(  0deg);}
+ 30% {transform: rotate(-10deg);}
+ 45% {transform: rotate(-10deg);}
+ 60% {transform: rotate(  0deg);}
+100% {transform: rotate(  0deg);}
+}
+#TEEMI-Bot-announce #leftHand, 
+#TEEMI-Bot-announce #leftHand2, 
+#TEEMI-Bot-announce #trumpet {
+	transform-origin: 436.5px 357.8px;
+	animation: liftTrumpetLeftAn 2s infinite;
+}
+
+//practiceTopic  love.svg
+@keyframes heartBotAn{
+  0% { transform:scaleY(1.0);}  	
+ 20% { transform:scaleY(1.05);}  
+ 40% { transform:scaleY(1.0);}  
+ 60% { transform:scaleY(1.0);}  
+ 80% { transform:scaleY(1.0);}	
+100% { transform:scaleY(1.0);}  	
+}
+#TEEMI-Bot-love {
+	transform-origin: bottom center;
+	animation: heartBotAn 4s infinite;
+}
+@keyframes heartEyeAn{
+  0% { transform: scale(1.0);}  
+ 20% { transform: scale(1.0);}
+	21%   { transform: scale(1.0);}
+	25.5% { transform: scale(0.1);}
+	30%   { transform: scale(1.0);}  
+	34.5% { transform: scale(0.1);}
+	39%   { transform: scale(1.0);}  
+ 40% { transform: scale(1.0);}  
+ 60% { transform: scale(1.0);}  
+ 80% { transform: scale(1.0);}  
+100% { transform: scale(1.0);}  	
+}
+#TEEMI-Bot-love #leftEye {
+	transform-origin: 395.5px 221.2px;
+	animation: heartEyeAn 4s infinite;
+}
+#TEEMI-Bot-love #rightEye {
+	transform-origin: 260px 225.1px;
+	animation: heartEyeAn 4s infinite; 
+}
+@keyframes heart1fadeAn{
+  0% { opacity: 0; }  
+ 20% { opacity: 0; } 
+ 40% { opacity: 1; } 	
+ 60% { opacity: 1; }  
+ 80% { opacity: 1; } 	
+100% { opacity: 0; } 
+}
+@keyframes heart2fadeAn {
+  0% { opacity: 0; }  
+ 20% { opacity: 0; } 
+ 40% { opacity: 0; } 	
+ 60% { opacity: 1; }  
+ 80% { opacity: 1; } 	
+100% { opacity: 0; } 
+}
+@keyframes heart3fadeAn {
+  0% { opacity: 0; }  
+ 20% { opacity: 0; } 
+ 40% { opacity: 0; } 	
+ 60% { opacity: 0; }  
+ 80% { opacity: 1; } 	
+100% { opacity: 0; } 
+}
+#TEEMI-Bot-love #heart1{ animation: heart1fadeAn 4s infinite; }
+#TEEMI-Bot-love #heart2{ animation: heart2fadeAn 4s infinite; }
+#TEEMI-Bot-love #heart3{ animation: heart3fadeAn 4s infinite; }
+
+
+//chatDecision high.svg
+@keyframes highRightAn {
+  0% {transform: rotate(-5deg);}
+  5% {transform: rotate( 0deg);}
+ 10% {transform: rotate(-6deg);}
+ 15% {transform: rotate( 0deg);}
+ 20% {transform: rotate(-5deg);}
+100% {transform: rotate(-5deg);}
+}
+#TEEMI-Bot-high #rightHand {
+	transform-origin: 224.3px 349.6px;
+	animation: highRightAn 2s infinite;
+}
+@keyframes highLeftAn {
+  0% {transform: rotate( 0deg);}
+  5% {transform: rotate(-5deg);}
+ 10% {transform: rotate( 0deg);}
+ 15% {transform: rotate(-5deg);}
+ 20% {transform: rotate( 0deg);}
+100% {transform: rotate( 0deg);}
+}
+#TEEMI-Bot-high #leftHand {
+	transform-origin: 465.6px 349.6px;
+	animation: highLeftAn 2s infinite;
+}
+@keyframes highBotAn {
+  0% {transform: translateY( 0px);}
+  5% {transform: translateY(-3px);}
+ 10% {transform: translateY( 0px);}
+ 15% {transform: translateY(-3px);}
+ 20% {transform: translateY( 0px);}
+100% {transform: translateY( 0px);}
+}
+#TEEMI-Bot-high {
+	transform-origin: 335.1px 529.9px;
+	animation: highBotAn 2s infinite;
+}
+
+
+//chatDifficulty、practiceDifficulty  bend.svg
+@keyframes bendRightAn {
+  0% {transform: rotate( 0deg);}
+ 50% {transform: rotate(10deg);}
+100% {transform: rotate( 0deg);}
+}
+#TEEMI-Bot-bend #rightHand {
+	transform-origin: 225.7px 353.6px;
+	animation: bendRightAn 2s infinite;
+}
+@keyframes bendLeftAn {
+  0% {transform: rotate( 5deg);}
+ 50% {transform: rotate(20deg);}
+100% {transform: rotate( 5deg);}
+}
+#TEEMI-Bot-bend #leftHand {
+	transform-origin: 503.6px 314.2px;
+	animation: bendLeftAn 2s infinite;
+}
+@keyframes bendBotAn {
+  0% {transform: rotate(.5deg);}
+ 50% {transform: rotate( 0deg);}
+100% {transform: rotate(.5deg);}
+}
+#TEEMI-Bot-bend {
+	transform-origin: 335px 530px;
+	animation: bendBotAn 2s infinite;
+}
+
+
+//chatEnd、practiceEnd  hi.svg
+@keyframes tossBallAn {
+  0% {transform: rotate(10deg) translateY(-5px);}
+ 50% {transform: rotate( 0deg) translateY( 0px);}
+100% {transform: rotate(10deg) translateY(-5px);}	
+}
+.end-an-robot #TEEMI-Bot-hi #rightHand {
+	transform-origin: 189.4px 352.9px;
+	animation: tossBallAn 2s infinite;
+	animation-delay: 1s;
+}
+
+
+//history  here.svg
+@keyframes hereLeftAn {
+  0% {transform: rotate( 0deg) translate( 0px,  0px);}
+ 50% {transform: rotate(20deg) translate(10px, 20px);}
+100% {transform: rotate( 0deg) translate( 0px,  0px);}	
+}
+#TEEMI-Bot-here #leftHand {
+	transform-origin: 463.6px 265.4px;
+	animation: hereLeftAn 3s infinite;
+}

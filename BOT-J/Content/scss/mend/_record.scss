@@ -1,0 +1,204 @@
+//播放題目
+.btn__playTitle{  
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 0 !important;
+    position: relative;
+    &::before{
+        content: "\f028";
+		display: inline-block;
+        font-family: "Font Awesome 6 Free"; 
+	    font-weight: 900;
+        width: 1.3em;
+		height: 1.3em;
+		line-height: 1.3em;
+        vertical-align: middle;
+        overflow: hidden;
+        text-align: left;
+        margin-top: -.125em;
+        margin-right: .25rem;
+        border-radius: 0;
+		font-size: 1.25rem;
+    }
+}
+.btn__playTitle.current{
+    &::before{ 
+        width: .7em;
+        margin-right: calc(.25rem + .2em + .2em + .2em);    
+    }
+    &::after{ 
+        content: "";
+        display: inline-block;
+        width: .6em;
+        height: 1.3em;
+        position: absolute;
+        top: 50%;
+        left: .7em;
+        margin-top: -.7em;
+        background-image: url("../../images/volume-3.svg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        animation: volume 3s infinite;
+    }
+	&.disabled, &:disabled, &[disabled], &[disabled="disabled"]{
+		filter: opacity(1);
+		opacity: 1.0;
+		color: $primary;
+	}
+}
+
+//錄製音檔、播放錄音、下一句 樣式
+//.btn__record, 
+.btn__playRec, 
+.btn__next, .btn-next,
+.btn__end, .btn-end{
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    box-shadow: 0 0 0.2rem lighten($primary, 15%);
+    background-color: #fff;
+    border-color: transparent;
+	&.btn-lg{
+		width: calc(2em + 1rem + 1rem - 2px);
+    	height: calc(2em + 1rem + 1rem - 2px);	
+		> i{
+        	font-size: 1.5rem;
+    	}
+	}
+	&.btn-sm{
+		width: calc(1em + 1rem + 1rem - 2px);
+    	height: calc(1em + 1rem + 1rem - 2px);	
+		> i{
+        	font-size: 1rem;
+    	}
+	}
+    > i{
+        color: $primary;
+    }
+	&::after{ 
+		border-radius:  100%;
+	}
+    &:hover, &:active,
+    &.hover, &.active{
+        > i{
+            color: #fff !important;
+        }  
+		&::after{
+			transform: scale(1.5, 1.5) !important;
+		}
+    }
+    &:disabled,
+    &.disabled,
+    &disabled, &[disabled="disabled"]{
+        background-color: #fff !important;
+        border-color: transparent !important;   
+    }
+	
+	&.btn-empty{
+		--bs-btn-border-color: transparent;
+		box-shadow: none !important; 
+   		background-color: transparent !important; 
+    	border-color: transparent !important; 
+		pointer-events: none;
+		
+		> i{
+			color: transparent !important; 
+		}
+	}
+}
+//.btn__record.current, 
+.btn__playRec.current{
+    animation: rec 2s infinite;
+    box-shadow: 0 0 0 0.25rem rgba($primary, .5);
+	background-color: $primary;
+	> i{
+        color: #fff;
+    }
+	&::after{ 
+		display: none;
+	}
+}
+
+//語速
+.btn__speed{ 
+	--bs-btn-padding-x: 0.375rem;
+	min-width: 4rem;
+	font-size: .75rem;
+	margin-top: -.325rem;
+	i{
+		margin-right: .25rem;
+	}
+	+ .dropdown-menu{
+		background-color: rgba($tooltip-bg, $tooltip-opacity);
+		border-color: transparent;
+		font-size: 0.75rem;
+		min-width: auto;
+		padding: 0;
+		margin-top: $tooltip-arrow-height;
+		&::before{
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-color: transparent;
+			border-style: solid;
+    		border-width: 0 $tooltip-arrow-height $tooltip-arrow-height;
+    		border-bottom-color: rgba($tooltip-bg, $tooltip-opacity);
+			position: absolute;
+			top: 0;
+    		right: 0;
+			transform: translate(-1.5rem, -100%);
+		}
+		.dropdown-header{
+			color: $primary;
+		}
+		.dropdown-item {
+			color: $tooltip-color;
+		}
+		.dropdown-item:hover, 
+		.dropdown-item:focus {
+			background-color: rgba($primary, .5);
+		}
+		.dropdown-item.active, 
+		.dropdown-item:active {
+			background-color: var(--bs-dropdown-link-active-bg);
+		}
+		li:last-child .dropdown-item{
+			border-radius: 0 0 0.375rem 0.375rem;
+		}
+	}
+}
+
+
+.btn__record{
+    &:hover, &.hover{
+    }
+	&:active, &.active{
+        /*> i{
+            color: #fff !important;
+        }  
+		&::after{
+			transform: scale(1.5, 1.5) !important;
+		}*/
+    }
+    &:disabled,
+    &.disabled,
+    &disabled, &[disabled="disabled"]{
+        //background-color: #fff !important;
+        //border-color: transparent !important;   
+    }
+	
+	&.current{
+		animation: rec 2s infinite;
+		box-shadow: 0 0 0 0.25rem rgba($primary, .5);
+		background-color: $primary;
+		> i{
+			color: #fff;
+		}
+		&::after{ 
+			display: none;
+		}
+	}
+}
