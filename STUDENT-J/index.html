@@ -61,7 +61,7 @@
           stroke-linecap="round"/>
         </svg>
         <div class="row row-cols-1 row-cols-sm-2 h-100">
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn" style="animation-delay: 0.15s;">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn" data-delay="0.15s">
             <div class="intro-img"><img src="Content/img/index/intro1.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">特質掃描儀</div>
             </div>
@@ -70,7 +70,7 @@
               透過智慧測驗，<br>
               帶你一步步發現自己的潛力與興趣！</p>
           </div>
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn me-auto" style="animation-delay: 0.1s;">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn me-auto" data-delay="1s">
             <div class="intro-img"><img src="Content/img/index/intro2.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">智能資料艙</div>
             </div>
@@ -79,7 +79,7 @@
               運用智慧分析測驗結果，就能發現你的特質，<br>
               找到最適合你的未來方向！</p>
           </div>
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn ms-auto mt-xl-n3" style="animation-delay: 4s;">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn ms-auto mt-xl-n3" data-delay="4s">
             <div class="intro-img"><img src="Content/img/index/intro3.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">特質解碼站</div>
             </div>
@@ -89,7 +89,7 @@
               不論你對哪一方面有興趣，<br>
               都能找到屬於你的那條路！</p>
           </div>
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn mt-xl-n3" style="animation-delay: 4.5s;">
+          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn mt-xl-n3" data-delay="4.5s">
             <div class="intro-img"><img src="Content/img/index/intro4.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">AI導航員</div>
             </div>
@@ -278,6 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return d;
   }
+	
 
   function drawLine() {
     const pts = collectPoints();
@@ -347,9 +348,29 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
   }
 						  
+// 動態控制 intro-item 的 animation-delay
+function updateIntroItemAnimationDelay() {
+  const introItems = document.querySelectorAll(".intro-item");
+
+  introItems.forEach(item => {
+    const delay = item.dataset.delay; // 儲存在 custom data-attribute 裡
+
+    if (window.innerWidth < 576) {
+      // 手機版：清除 animation-delay
+      item.style.animationDelay = "0s";
+    } else {
+      // 桌機版：還原原本的 delay
+      if (delay) item.style.animationDelay = delay;
+    }
+  });
+}  						  
+						  
   window.addEventListener("resize", drawLine);
   window.addEventListener("orientationchange", drawLine);
   drawLine();
+	
+	updateIntroItemAnimationDelay();
+window.addEventListener("resize", updateIntroItemAnimationDelay);
 });
 </script>
 </body>
