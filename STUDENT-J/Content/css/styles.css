@@ -220,21 +220,21 @@ a { text-underline-offset: 5px; word-break: break-all; }
 
 .exam-item:hover .exam-title .exam-icon::after { animation: rotate 30s linear infinite; }
 
-.exam-item.TA .exam-body { background-color: rgba(204, 241, 255, 0.75); }
+.exam-item.TA .exam-body { background-color: rgba(204, 241, 255, 0.65); }
 .exam-item.TA .exam-title { color: #00bbff; }
 .exam-item.TA .exam-title .exam-icon { background: linear-gradient(to right, #1779b8 0%, #2892c9 100%); }
 .exam-item.TA .exam-title .exam-name::after { background-color: rgba(0, 187, 255, 0.25); }
 .exam-item.TA .exam-title .exam-name small { color: #0039ac; }
 .exam-item.TA [class*="btn-"] { background-color: #0039ac; border-color: #0039ac; }
 
-.exam-item.TI .exam-body { background-color: rgba(204, 238, 212, 0.75); }
+.exam-item.TI .exam-body { background-color: rgba(204, 238, 212, 0.65); }
 .exam-item.TI .exam-title { color: #00ab28; }
 .exam-item.TI .exam-title .exam-icon { background: linear-gradient(to right, #91bf42 0%, #cad432 100%); }
 .exam-item.TI .exam-title .exam-name::after { background-color: rgba(0, 171, 40, 0.25); }
 .exam-item.TI .exam-title .exam-name small { color: #006500; }
 .exam-item.TI [class*="btn-"] { background-color: #006500; border-color: #006500; }
 
-.exam-item.WV .exam-body { background-color: rgba(250, 234, 208, 0.75); }
+.exam-item.WV .exam-body { background-color: rgba(250, 234, 208, 0.65); }
 .exam-item.WV .exam-title { color: #e89716; }
 .exam-item.WV .exam-title .exam-icon { background: linear-gradient(to right, #f1b13f 0%, #f1db38 100%); }
 .exam-item.WV .exam-title .exam-name::after { background-color: rgba(232, 151, 22, 0.25); }
@@ -269,3 +269,6 @@ a { text-underline-offset: 5px; word-break: break-all; }
 #intro-line-path { stroke: #ff8800; stroke-width: 5; fill: none; stroke-linecap: round; stroke-dasharray: 0; stroke-dashoffset: 0; transition: stroke-dashoffset 2s ease; }
 
 .apply { padding-top: 3rem; padding-bottom: 3rem; }
+
+.nice-bot-icon { position: relative; }
+.nice-bot-icon::after { content: ""; display: block; width: 4rem; height: 4rem; background-image: url("../img/nice-hi.apng"); background-size: 80% auto; background-repeat: no-repeat; background-position: center; position: absolute; top: 50%; left: 100%; transform: translate(-1.5rem, -50%); }

@@ -1,0 +1,20 @@
+.nice-bot-icon{
+	position: relative;
+
+	&::after{
+		content: "";
+		display: block;
+		width: 4rem;
+		height: 4rem;
+		background-image: url("../img/nice-hi.apng");
+		background-size: 80% auto;
+		background-repeat: no-repeat;
+		background-position: center;
+			
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		transform: translate(-1.5rem, -50%);
+	}
+	
+}
