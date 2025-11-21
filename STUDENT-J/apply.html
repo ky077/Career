@@ -2,14 +2,14 @@
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
-<title>讚生涯高中版生涯測驗系統 - 學生端</title>
+<title>讚生涯國中版生涯測驗系統 - 學生端</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
-<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<meta content="生涯,資訊,讚,國中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
 <link href="Content/img/favicon.ico" rel="icon">
 
 <!-- Open Graph -->
-<meta property="og:title" content="讚生涯高中版生涯測驗系統 - 學生端" />
+<meta property="og:title" content="讚生涯國中版生涯測驗系統 - 學生端" />
 <meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
 <meta property="og:image" content="https://example.com/path/to/image.jpg" />
 <meta property="og:url" content="https://example.com/page-url" />
@@ -43,8 +43,8 @@
 
 <header>
   <nav class="navbar navbar-expand-xl sticky-top bg-white bg-opacity-75 shadow-sm">
-    <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯高中生生涯資訊系統">
-      <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯高中生生涯資訊系統"/></h1>
+    <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯國中生生涯資訊系統">
+      <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯國中生生涯資訊系統"/></h1>
       </a>
       <div id="header-menu"> </div>
     </div>
@@ -215,13 +215,6 @@
                 </select>
               </div>
               <div class="col-auto">
-                <select id="Drop_degree" name="Drop_degree" class="form-select" onchange="LoadBelong()">
-                  <option>學校類型</option>
-                  <option>高中</option>
-                  <option>高職</option>
-                </select>
-              </div>
-              <div class="col-auto">
                 <select id="Drop_belong" name="Drop_belong" class="form-select" onchange="LoadSchool()">
                   <option>學校屬性</option>
                   <option>市立</option>
@@ -239,37 +232,6 @@
             </div>
           </div>
         </fieldset>
-        <div class="mb-3 row gx-2">
-          <label for="Drop_dep" class="col-lg-2 col-form-labell text-lg-end">群組/組別：</label>
-          <div class="col-lg-9">
-            <div class="row">
-              <div class="col-auto">
-                <select id="Drop_dep" name="Drop_dep" class="form-select">
-                  <option value="">請選擇</option>
-                  <option value="11">[11]未分組</option>
-                  <option value="12">[12]社會組</option>
-                  <option value="13">[13]自然組</option>
-                  <option value="14">[14]機械群</option>
-                  <option value="15">[15]動力機械群</option>
-                  <option value="16">[16]電機與電子群</option>
-                  <option value="17">[17]化工群</option>
-                  <option value="18">[18]土木與建築群</option>
-                  <option value="19">[19]商業與管理群</option>
-                  <option value="20">[20]外語群</option>
-                  <option value="21">[21]設計群</option>
-                  <option value="22">[22]農業群</option>
-                  <option value="23">[23]食品群</option>
-                  <option value="24">[24]家政群</option>
-                  <option value="25">[25]餐旅群</option>
-                  <option value="26">[26]水產群</option>
-                  <option value="27">[27]海事群</option>
-                  <option value="28">[28]藝術群</option>
-                </select>
-              </div>
-              <div class="form-text text-danger">請選填群別/組別。</div>
-            </div>
-          </div>
-        </div>
         <div class="mb-3 row gx-2">
           <label for="Text_checkCode" class="col-lg-2 col-form-label text-lg-end">驗證碼：</label>
           <div class="col-lg-9">
