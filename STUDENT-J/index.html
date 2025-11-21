@@ -60,8 +60,8 @@
           <path id="intro-line-path" fill="none" stroke="#ff8800" stroke-width="5"
           stroke-linecap="round"/>
         </svg>
-        <div class="row row-cols-1 row-cols-sm-2 h-100">
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn" data-delay="0.15s">
+        <div class="row row-cols-1 row-cols-sm-2 h-100 gx-xl-0">
+          <div class="col col-xxl-5 intro-item wow animate__animated animate__fadeIn" data-delay="0.15s">
             <div class="intro-img"><img src="Content/img/index/intro1.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">特質掃描儀</div>
             </div>
@@ -70,7 +70,7 @@
               透過智慧測驗，<br>
               帶你一步步發現自己的潛力與興趣！</p>
           </div>
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn me-auto" data-delay="1s">
+          <div class="col col-xxl-5 intro-item wow animate__animated animate__fadeIn me-auto" data-delay="1s">
             <div class="intro-img"><img src="Content/img/index/intro2.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">智能資料艙</div>
             </div>
@@ -79,7 +79,7 @@
               運用智慧分析測驗結果，就能發現你的特質，<br>
               找到最適合你的未來方向！</p>
           </div>
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn ms-auto mt-xl-n3" data-delay="4s">
+          <div class="col col-xxl-5 intro-item wow animate__animated animate__fadeIn ms-auto mt-xl-n3" data-delay="4s">
             <div class="intro-img"><img src="Content/img/index/intro3.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">特質解碼站</div>
             </div>
@@ -89,7 +89,7 @@
               不論你對哪一方面有興趣，<br>
               都能找到屬於你的那條路！</p>
           </div>
-          <div class="col col-xl-5 intro-item wow animate__animated animate__fadeIn mt-xl-n3" data-delay="4.5s">
+          <div class="col col-xxl-5 intro-item wow animate__animated animate__fadeIn mt-xl-n3" data-delay="4.5s">
             <div class="intro-img"><img src="Content/img/index/intro4.png" alt="" class="img-fluid"/>
               <div class="intro-img-title">AI導航員</div>
             </div>
@@ -210,32 +210,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getBlockHeights() {
-    const introImg   = document.querySelector(".intro-img-title");	
-    const introTitle = document.querySelector(".intro-title");
-    const introText  = document.querySelector(".intro-text");
+    const introImg      = document.querySelector(".intro-img");	
+	const introImgTitle = document.querySelector(".intro-img-title");  
+    const introTitle    = document.querySelector(".intro-title");
+    const introText     = document.querySelector(".intro-text");
 
-    if (!introImg || !introTitle || !introText) return 0;
+    if (!introImg || !introImgTitle || !introTitle || !introText) return 0;
 
-    const imgStyles   = getComputedStyle(introImg);	
-    const titleStyles = getComputedStyle(introTitle);
-    const textStyles  = getComputedStyle(introText);
+    const imgStyles   	 = getComputedStyle(introImg);	
+	const imgTitleStyles = getComputedStyle(introImgTitle);	  
+    const titleStyles 	 = getComputedStyle(introTitle);
+    const textStyles  	 = getComputedStyle(introText);
 
-    const imgHeight =
-      introImg.offsetHeight +
-      parseFloat(imgStyles.marginTop) +
-      parseFloat(imgStyles.marginBottom);
+    const imgTitleHeight =
+      introImgTitle.offsetHeight/2 +
+      parseFloat(imgStyles.marginBottom);   
     
     const titleHeight =
       introTitle.offsetHeight +
       parseFloat(titleStyles.marginTop) +
       parseFloat(titleStyles.marginBottom);
+	 
 
     const textHeight =
       introText.offsetHeight +
       parseFloat(textStyles.marginTop) +
       parseFloat(textStyles.marginBottom);
 
-    return imgHeight + titleHeight + textHeight;
+    return imgTitleHeight + titleHeight + textHeight;
   }
 
   // 把一串 {x,y} 點，轉成「有圓角」的 path d 字串
@@ -298,12 +300,20 @@ document.addEventListener("DOMContentLoaded", () => {
       path.setAttribute("d", "");
       return;
     }
+	  
+	// ==========================
+	// space 判斷 (RWD 給的空隙)
+	// ==========================
+	let space = 0;
+	  if (window.innerWidth < 1200) {
+	  space = 10; 
+	}  
 
     // =======================
     // ② 視窗寬度 >= 576px：原本的圓角路線（用父層 .intro-item 的左右邊）
     // =======================
 
-    const smartItem = items[1]?.closest(".intro-item"); // 智能資料艙
+    const smartItem = items[1]?.closest(".intro-item");  // 智能資料艙
     const decodeItem = items[2]?.closest(".intro-item"); // 特質解碼站
 
     let smartRightX = pts[1].right.x;
@@ -320,10 +330,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const P1 = { x: 0,           y: pts[0].left.y };
-    const P2 = { x: smartRightX - 10, y: pts[1].right.y };
-    const P3 = { x: smartRightX - 10, y: pts[1].center.y + h };
-    const P4 = { x: decodeLeftX + 10, y: pts[1].center.y + h };
-    const P5 = { x: decodeLeftX + 10, y: pts[2].left.y };
+    const P2 = { x: smartRightX - space, y: pts[1].right.y };
+    const P3 = { x: smartRightX - space, y: pts[1].center.y + h };
+    const P4 = { x: decodeLeftX + space, y: pts[1].center.y + h };
+    const P5 = { x: decodeLeftX + space, y: pts[2].left.y };
     const P6 = { x: pts[2].right.x, y: pts[2].right.y };
     const P7 = { x: pts[3].left.x,  y: pts[3].left.y };
 
