@@ -46,7 +46,7 @@
     <div class="container-fluid px-5"> <a href="index.html" class="navbar-brand" aria-label="讚生涯國中生生涯資訊系統">
       <h1 class="logo"><img src="Content/img/logo-sys.svg" alt="讚生涯國中生生涯資訊系統"/></h1>
       </a> 
-      <!--<div id="header-menu"> </div>--> 
+      <div id="header-menu"> </div> 
     </div>
   </nav>
 </header>
@@ -179,6 +179,9 @@
 <script src="Content/js/fn.js"></script> 
 <script src="Content/js/main.js"></script> 
 <script>
+//模擬未登入無法看到選單
+$('#header-menu').remove();	
+	
 //[忘記密碼]	
 $('#btnGetPd').click(function(){
     alertModalDOM('已將重製密碼信寄送至您的電子信箱<div class="text-info">a***a@gmail.com</div>', 'md', '確定');
