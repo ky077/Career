@@ -1,0 +1,334 @@
+@charset "UTF-8";
+body{
+	font-size:18px;
+	line-height:1.4em;
+	font-family: "微軟正黑體", Arial, sans-serif;
+	color:#000;
+}
+.paper-wrapper{
+	width:980px;
+	margin:0 auto;
+	height:1386px;
+	overflow:hidden;
+	position:relative;
+}
+.header{
+	h1{
+		height:115px;
+		background-image:url(../images/junior/TI/header.png);
+		background-size:100% 110px;
+		background-repeat:no-repeat;
+		text-indent:-9999px;
+		overflow:hidden;
+	}
+}
+.section{
+	padding-left:35px;
+	padding-right:35px;
+	padding-bottom:10px;
+}
+.footer{
+	text-align:center;
+	background-color:#008000;
+	position:absolute;
+	bottom:0;
+	margin-left:35px;
+	margin-right:35px;
+	width: calc(100% - 35px - 35px);
+	line-height:40px;
+	color:#FFF;
+	.version{
+		font-size: 0.8em;
+		position: absolute;
+		top: 2px;
+		right: 15px;
+	}
+}
+h2{ 
+	height:37px;
+	line-height:37px;
+	font-size:1.15em;
+	text-align:center;
+	background-image:url(../images/junior/TI/h2.png);
+	background-size:100% 37px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	color:#007f56;
+	border:1px solid #a2e09d;
+}
+/* ******* ******* ******* ******* ******* ******* ******* */
+.dataSection{
+	.data-table{ 
+		margin-top:15px;
+		td{
+			background-image:url(../images/junior/TI/data-spot.png);
+			background-repeat:no-repeat;
+			background-position:left 4px center;
+			padding-left:4px+15px+4px;
+			line-height:36px;
+			width:33.33%;
+			>div{
+				border-bottom:2px solid #006c49;
+				white-space:nowrap; 
+			}
+		}
+	}
+
+}
+/* ******* ******* ******* ******* ******* ******* ******* */
+.scoreSection{
+	img {
+		vertical-align:middle;
+	}
+	.scoreSection-graph{ 
+		width:47%;
+		float:left;
+		.graph-chart{ 
+			margin-top:70px;
+			position:relative;
+		}
+		.graph-chart-icon{
+			position:absolute;
+			text-align: center;
+			> img {
+				display:block;
+			}
+			&.R{
+				top: -50px;
+				left:50%;
+				margin-left:-19px;
+			}
+			&.I{
+				top: 10%;
+				left:85%;
+				margin-left:-38px;
+			}
+			&.A{
+				bottom: 10%;
+				left:85%;
+				margin-left:-38px;
+			}
+			&.S{
+				bottom: -60px;
+				left:50%;
+				margin-left:-19px;
+			}
+			&.E{
+				bottom: 10%;
+				left:15%;
+			}
+			&.C{
+				top: 10%;
+				left:15%;
+			}
+		}
+	}
+	.scoreSection-score{ 
+		width:53%;
+		float:left;
+		.score-table{
+			margin-top:10px;
+			th, td{
+				padding:8px 0;
+				vertical-align:middle; 
+			}
+			thead{
+				th{
+					border-top:2px solid #0068B7;					
+					border-bottom:2px solid #0068B7;
+					color:#0068B7;
+					border-right: 1px dashed #ccc;
+					text-align:center;
+					vertical-align:middle;
+					font-size:1.1em;
+					&:last-child{
+						border-right: none;
+					}
+					&:nth-child(1){ width:40%;}
+					&:nth-child(2){ width:40%;}
+					&:nth-child(3){ width:20%;}
+				}
+			}
+			tbody{
+				td{
+					border-right: 1px dashed #ccc;
+					border-bottom: 1px dashed #ccc;
+					text-align:center;
+					vertical-align:middle;
+					&:last-child{border-right: none;}
+				}
+			}
+			tfoot{
+				td{ 
+					color:#0068B7;
+					text-align:right;
+					vertical-align:middle;
+					padding:15px 0 0 0;
+					
+					> img{vertical-align:bottom;
+					}
+				}
+			}
+		}
+	}
+	.scoreSection-descript{
+		position:relative;
+		padding-top:10px;
+		.descript-text{
+			position:absolute;
+			top:-34px;
+			left:0;
+			> img{
+				margin-right:4px;
+				position:relative;
+				margin-top:-4px;
+			}
+		}
+		.descript-table{
+			border-collapse: separate;
+			border-spacing: 8px;
+			width:calc(100% + 8px + 8px);
+			margin-left:-8px;
+			tbody{
+				th{
+					width:15%;
+					vertical-align:top;
+					> div{
+						background-color: #007f56;
+						color:#FFF;
+						text-align:center;
+						border-radius:15px;
+						padding:2px 0;
+						
+					}
+				}
+				td{
+					vertical-align:top;
+					padding:2px 0;
+				}
+			}
+		}
+	}
+	.scoreSection-highest{
+		.highest-table{
+			border-collapse: separate;
+			border-spacing: 5px;
+			width:calc(100% + 5px + 5px);
+			margin-left:-5px;
+			thead{
+				th{
+					background-color:#007f56;
+					color:#FFF;
+					text-align:center;
+					line-height:30px;
+					vertical-align:middle;
+					&:nth-child(1){ width:10%;}
+					&:nth-child(2){ width:70%;}
+					&:nth-child(3){ width:20%;}
+				}
+			}
+			tbody{
+				th{
+					background-color:#acffac;
+					text-align:center;
+					vertical-align:middle;
+					height:155px;
+					font-size:1.2em;
+				}
+				td{
+					border:2px solid #007f56;
+					vertical-align:top;
+					padding:5px;
+				}
+			}
+		}
+	}
+}
+/* ******* ******* ******* ******* ******* ******* ******* */
+.developSection{
+	margin-bottom:10px;
+	h2{
+		margin-bottom:10px;
+	}
+	.develop-table{
+		border-collapse: separate;
+		border-spacing: 10px;
+		> thead{
+			th{
+				color:#FFF;
+				text-align:center;
+				height:30px;
+				font-size:1.08em;
+				vertical-align:middle;
+				&:nth-child(1){ background-color:#0068B7;}
+				&:nth-child(2){ background-color:#00AE86;}
+			}
+		}
+		
+		> tbody{
+			font-size:0.98em;
+			td{
+				background-image:url(../images/junior/TI/checkbox.png);
+				background-repeat:no-repeat;
+				background-position: left center;
+				padding-left:25px;
+				vertical-align:middle;
+			}
+			td.none{
+				background-image: none;
+			}
+			td.checked{
+				background-image:url(../images/junior/TI/checked.png);
+			}
+		}	
+	}
+}
+/* ******* ******* ******* ******* ******* ******* ******* */
+.descripSection{
+	.descrip-table{
+		border-collapse: separate;
+		border-spacing: 5px;
+		width:calc(100% + 5px + 5px);
+		margin-left:-5px;
+		thead{
+			th{
+				background-color:#00A73C;
+				color:#FFF;
+				text-align:center;
+				line-height:30px;
+				vertical-align:middle;
+				&:nth-child(1){ width:15%;}
+				&:nth-child(2){ width:85%;}
+			}
+		}
+		tbody{
+			th{
+				border:2px solid #00A73C;
+				background-color:#F2F2F3;
+				text-align:center;
+				vertical-align:middle;
+				height:150px;
+				font-size:1.1em;
+			}
+			td{
+				border-bottom:1px solid #000;
+				vertical-align:top;
+				padding:5px;
+				border:2px solid #00A73C;
+				line-height:1.6em;
+			}
+		}
+	}
+}
+/* ******* ******* ******* ******* ******* ******* ******* */
+.warningNote{
+	border-top: 1px dashed #ccc;
+	margin-top:20px;
+	padding-top:20px;
+	text-align:left;
+	line-height:1.6em;
+}
+
+.errorText{
+	color:#F00;
+}

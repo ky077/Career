@@ -1,0 +1,283 @@
+@charset "UTF-8";
+body {
+  font-size: 18px;
+  line-height: 1.4em;
+  font-family: "微軟正黑體", Arial, sans-serif;
+  color: #000; }
+
+.paper-wrapper {
+  width: 980px;
+  margin: 0 auto;
+  height: 1386px;
+  overflow: hidden;
+  position: relative; }
+
+.header h1 {
+  height: 115px;
+  background-image: url(../images/junior/TA/header.png);
+  background-size: 100% 110px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden; }
+
+.section {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 10px; }
+
+.footer {
+  text-align: center;
+  background-color: #efd713;
+  position: absolute;
+  bottom: 0;
+  margin-left: 35px;
+  margin-right: 35px;
+  width: calc(100% - 35px - 35px);
+  line-height: 40px; }
+  .footer .version {
+    font-size: 0.8em;
+    position: absolute;
+    top: 2px;
+    right: 15px; }
+
+h2 {
+  height: 37px;
+  line-height: 37px;
+  font-size: 1.15em;
+  text-align: center;
+  background-image: url(../images/junior/TA/h2.png);
+  background-size: 100% 37px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #0068B7;
+  border: 1px solid #a8d3e9; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.dataSection .data-table {
+  margin-top: 15px; }
+  .dataSection .data-table td {
+    background-image: url(../images/junior/TA/data-spot.png);
+    background-repeat: no-repeat;
+    background-position: left 4px center;
+    padding-left: 23px;
+    line-height: 36px;
+    width: 33.33%; }
+    .dataSection .data-table td > div {
+      border-bottom: 2px solid #0068B7;
+      white-space: nowrap; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.scoreSection .scoreSection-score {
+  width: 40%;
+  float: left; }
+  .scoreSection .scoreSection-score .score-table {
+    width: 100%;
+    margin-left: -10px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    font-size: 1.08em; }
+    .scoreSection .scoreSection-score .score-table thead th {
+      background-color: #0068B7;
+      color: #FFF;
+      text-align: center;
+      line-height: 40px;
+      vertical-align: middle; }
+    .scoreSection .scoreSection-score .score-table tbody td {
+      text-align: center;
+      line-height: 34px;
+      background-color: #F2F2F3;
+      vertical-align: middle; }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(1) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(1) > td:nth-child(2) {
+      background-color: #EF8AA0;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(2) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(2) > td:nth-child(2) {
+      background-color: #FACB00;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(3) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(3) > td:nth-child(2) {
+      background-color: #F39800;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(4) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(4) > td:nth-child(2) {
+      background-color: #9072B1;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(5) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(5) > td:nth-child(2) {
+      background-color: #00A8C6;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(6) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(6) > td:nth-child(2) {
+      background-color: #00AE86;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(7) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(7) > td:nth-child(2) {
+      background-color: #3B88C9;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+    .scoreSection .scoreSection-score .score-table tbody tr:nth-child(8) > td:nth-child(1), .scoreSection .scoreSection-score .score-table tbody tr:nth-child(8) > td:nth-child(2) {
+      background-color: #B4D349;
+      color: #FFF;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.25); }
+.scoreSection .scoreSection-graph {
+  width: 60%;
+  float: left; }
+  .scoreSection .scoreSection-graph .graph-bg {
+    width: 100%;
+    background-image: url(../images/junior/TA/chart.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    padding: 5px 2px 0px 56px; }
+    .scoreSection .scoreSection-graph .graph-bg .graph-table th {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.8em;
+      line-height: 1.4em;
+      padding: 5px 0 0 0; }
+    .scoreSection .scoreSection-graph .graph-bg .graph-table td {
+      height: 323px;
+      vertical-align: bottom; }
+    .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar {
+      width: 24px;
+      margin: 0px auto;
+      background-color: yellow;
+      position: relative;
+      /*語文*/
+      /*數學*/
+      /*觀察*/
+      /*科學推理*/
+      /*邏輯推理*/
+      /*空間*/
+      /*美感*/
+      /*創意*/ }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.L {
+        background-color: #EF8AA0; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.M {
+        background-color: #FACB00; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.O {
+        background-color: #9072B1; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.SA {
+        background-color: #F39800; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.T {
+        background-color: #00A8C6; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.S {
+        background-color: #00AE86; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.A {
+        background-color: #3B88C9; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar.C {
+        background-color: #B4D349; }
+      .scoreSection .scoreSection-graph .graph-bg .graph-table .chart-bar .chart-num {
+        position: absolute;
+        margin-top: -1.4em;
+        width: 24px;
+        text-align: center;
+        font-size: 0.9em; }
+  .scoreSection .scoreSection-graph .graph-mark {
+    font-size: 0.7em;
+    color: #0068B7;
+    text-align: right; }
+.scoreSection .scoreSection-highest {
+  padding-top: 10px; }
+  .scoreSection .scoreSection-highest .highest-table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: calc(100% + 5px + 5px);
+    margin-left: -5px; }
+    .scoreSection .scoreSection-highest .highest-table thead th {
+      background-color: #0068B7;
+      color: #FFF;
+      text-align: center;
+      line-height: 30px;
+      vertical-align: middle; }
+      .scoreSection .scoreSection-highest .highest-table thead th:nth-child(1) {
+        width: 15%; }
+      .scoreSection .scoreSection-highest .highest-table thead th:nth-child(2) {
+        width: 85%; }
+    .scoreSection .scoreSection-highest .highest-table tbody th {
+      border: 2px solid #0068B7;
+      background-color: #F2F2F3;
+      text-align: center;
+      vertical-align: middle;
+      height: 94px;
+      font-size: 1.1em; }
+    .scoreSection .scoreSection-highest .highest-table tbody td {
+      border-bottom: 1px solid #000;
+      vertical-align: middle;
+      padding-left: 10px; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.developSection h2 {
+  margin-bottom: 10px; }
+.developSection .develop-table {
+  border-collapse: separate;
+  border-spacing: 10px; }
+  .developSection .develop-table > thead th {
+    color: #FFF;
+    text-align: center;
+    height: 30px;
+    font-size: 1.08em;
+    vertical-align: middle; }
+    .developSection .develop-table > thead th:nth-child(1) {
+      background-color: #0068B7; }
+    .developSection .develop-table > thead th:nth-child(2) {
+      background-color: #00AE86; }
+  .developSection .develop-table > tbody {
+    font-size: 0.98em; }
+    .developSection .develop-table > tbody td {
+      background-image: url(../images/junior/TA/checkbox.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: 25px;
+      vertical-align: middle; }
+    .developSection .develop-table > tbody td.none {
+      background-image: none; }
+    .developSection .develop-table > tbody td.checked {
+      background-image: url(../images/junior/TA/checked.png); }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.descripSection .descrip-table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  width: calc(100% + 5px + 5px);
+  margin-left: -5px;
+  margin-top: 60px; }
+  .descripSection .descrip-table thead th {
+    background-color: #00A73C;
+    color: #FFF;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle; }
+    .descripSection .descrip-table thead th:nth-child(1) {
+      width: 15%; }
+    .descripSection .descrip-table thead th:nth-child(2) {
+      width: 85%; }
+  .descripSection .descrip-table tbody th {
+    border: 2px solid #00A73C;
+    background-color: #F2F2F3;
+    text-align: center;
+    vertical-align: middle;
+    height: 94px;
+    font-size: 1.1em; }
+  .descripSection .descrip-table tbody td {
+    border-bottom: 1px solid #000;
+    vertical-align: middle;
+    padding-left: 10px; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.mark {
+  font-size: 0.9em;
+  padding-left: 5em;
+  text-indent: -5em; }
+  .mark strong {
+    font-weight: bold; }
+
+.warningNote {
+  border-top: 1px dashed #ccc;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.6em; }
+
+/*# sourceMappingURL=TAstyles-twJ.css.map */

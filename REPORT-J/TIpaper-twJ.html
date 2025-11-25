@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>情境式職涯興趣測驗結果報表(國中版)</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/TIstyles-twJ.css">
+</head>
+
+<body>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="paper-wrapper">
+  <div class="header">
+    <h1>適性化職涯性向測驗結果報表(國中版)</h1>
+  </div>
+  <!-- 基本資料 start -->
+  <div class="section dataSection">
+    <h2>基本資料</h2>
+    <table class="data-table">
+      <tbody>
+        <tr>
+          <td><div>
+              學校：台北市金華國民中學
+            </div></td>
+          <td><div>
+              姓名：王雅婷
+            </div></td>
+          <td><div>
+              日期：2019/12/6
+            </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- 基本資料 end --> 
+  <!-- 測驗分數與說明 start -->
+  <div class="section scoreSection">
+    <h2>測驗分數與說明</h2>
+    <div class="clearfix">
+      <!-- -->
+      <div class="scoreSection-graph">
+        <div class="graph-chart">
+          <canvas id="myChart"></canvas>
+          <div class="graph-chart-icon R">
+            <img src="images/junior/TI/R.png" width="38" height="32"> 23
+          </div>
+          <div class="graph-chart-icon I">
+            <img src="images/junior/TI/I.png" width="38" height="32"> 17
+          </div>
+          <div class="graph-chart-icon A">
+            <img src="images/junior/TI/A.png" width="38" height="32"> 51
+          </div>
+          <div class="graph-chart-icon S">
+            <img src="images/junior/TI/S.png" width="38" height="32"> 59
+          </div>
+          <div class="graph-chart-icon E">
+            <img src="images/junior/TI/E.png" width="38" height="32"> 30
+          </div>
+          <div class="graph-chart-icon C">
+            <img src="images/junior/TI/C.png" width="38" height="32"> 27
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="scoreSection-score">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>興趣類型</th>
+              <th>原始分數</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/junior/TI/R.png" width="38" height="32">&nbsp;&nbsp;&nbsp;&nbsp;實用型</td>
+              <td>23</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><img src="images/junior/TI/I.png" width="38" height="32">&nbsp;&nbsp;&nbsp;&nbsp;研究型</td>
+              <td>17</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><img src="images/junior/TI/A.png" width="38" height="32">&nbsp;&nbsp;&nbsp;&nbsp;藝術型</td>
+              <td>51</td>
+              <td><img src="images/junior/TI/star.png"></td>
+            </tr>
+            <tr>
+              <td><img src="images/junior/TI/S.png" width="38" height="32">&nbsp;&nbsp;&nbsp;&nbsp;社會型</td>
+              <td>59</td>
+              <td><img src="images/junior/TI/star.png"></td>
+            </tr>
+            <tr>
+              <td><img src="images/junior/TI/E.png" width="38" height="32">&nbsp;&nbsp;&nbsp;&nbsp;企業型</td>
+              <td>30</td>
+              <td><img src="images/junior/TI/star.png"></td>
+            </tr>
+            <tr>
+              <td><img src="images/junior/TI/C.png" width="38" height="32">&nbsp;&nbsp;&nbsp;&nbsp;事務型</td>
+              <td>27</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"><img src="images/junior/TI/star.png">&nbsp;為得最高分的類型</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <!-- -->
+    </div>
+    <!-- -->
+    <div class="scoreSection-descript">
+      <div class="descript-text">
+       <!-- <img src="images/junior/TI/descript-icon.png" width="48" height="48">你的作答一致性高，測驗分析結果可以適當反映你的情況。-->
+       <img src="images/junior/TI/descript-error.png" width="48" height="48">你因作答動機不高或其他因素干擾，導致結果可能無法反映真實情況。
+      </div>
+      <table class="descript-table">
+        <tbody>
+          <tr>
+            <th><div>
+                分化程度
+              </div></th>
+            <td colspan="2">明顯：你清楚了解自己喜歡的事物，且能區分出不同興趣間的喜好程度。</td>
+          </tr>
+          <tr>
+            <th><div>
+                興趣探索方向
+              </div></th>
+            <td colspan="2">請回想自己的作答過程是否有受到干擾，並建議從每天會接觸到的職業或活動中多加觀察感興趣的事物，並與他人分享心得。</td>
+          </tr>
+          <tr>
+            <th><div>
+                興趣代碼類型
+              </div></th>
+            <td>SAE</td>
+            <td class="errorText">請注意！由於你的分化程度不明顯，SAE可能無法適切反映你的主要興趣，請參考性去探索方向之建議，嘗試發掘出你的興趣。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- -->
+    <div class="scoreSection-highest">
+      <table class="highest-table">
+        <thead>
+          <tr>
+            <th>代碼</th>
+            <th>敘述</th>
+            <th>典型職業</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>S</th>
+            <td>在此分數越高，代表你越喜歡與人群互動，重視人的需求感受。對於運用自身的知識教導他人有高度的興趣。也喜歡聆聽別人的困難，並主動提供關懷和協助。相較於其他興趣類型，更看重人際間的和諧。較喜歡從事與人相處或幫助他人的工作。</td>
+            <td>教師、輔導教師、諮商師、社會工作師、護理人員、幼兒保育人員、導遊</td>
+          </tr>
+          <tr>
+            <th>A</th>
+            <td>在此分數越高，代表你越喜歡與人群互動，重視人的需求感受。對於運用自身的知識教導他人有高度的興趣。也喜歡聆聽別人的困難，並主動提供關懷和協助。相較於其他興趣類型，更看重人際間的和諧。較喜歡從事與人相處或幫助他人的工作。</td>
+            <td>教師、輔導教師、諮商師、社會工作師、護理人員、幼兒保育人員、導遊</td>
+          </tr>
+          <tr>
+            <th>E</th>
+            <td>在此分數越高，代表你越喜歡與人群互動，重視人的需求感受。對於運用自身的知識教導他人有高度的興趣。也喜歡聆聽別人的困難，並主動提供關懷和協助。相較於其他興趣類型，更看重人際間的和諧。較喜歡從事與人相處或幫助他人的工作。</td>
+            <td>教師、輔導教師、諮商師、社會工作師、護理人員、幼兒保育人員、導遊</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- -->
+  </div>
+  <!-- 測驗分數與說明 end -->
+  <div class="footer">
+    國立臺灣師範大學心測中心 ‧ 數位學習研究室 版權所有<span class="version">v1.0</span>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div style="page-break-after:always">
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="paper-wrapper">
+  <div class="header">
+    <h1>適性化職涯性向測驗結果報表(國中版)</h1>
+  </div>
+  <!-- error -->
+  <div class="section errorText">根據測驗結果顯示，由於你的興趣分化程度不明顯，以下高中職群科探索領域之建議，請斟酌參考！</div>
+  <!-- 建議探索之領域 start -->
+  <div class="section developSection">
+    <h2>建議探索之領域</h2>
+    在高中職類群當中，與你的興趣分數組型較相關的領域為：
+    <table class="develop-table">
+      <thead>
+        <tr>
+          <th>一般高中</th>
+          <th>高職類群</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="checked">普通高中班</td>
+          <td class="">商業管理群</td>
+          <td class="">動力機械群</td>
+          <td class="checked">電機電子群</td>
+          <td class="">土木建築群</td>
+          <td class="">藝術群</td>
+        </tr>
+        <tr>
+          <td class="none">&nbsp;</td>
+          <td class="">機械群</td>
+          <td class="">外語群</td>
+          <td class="">設計群</td>
+          <td class="">化工群</td>
+          <td class="">食品群</td>
+        </tr>
+        <tr>
+          <td class="none">&nbsp;</td>
+          <td class="checked">家政群</td>
+          <td class="">水產群</td>
+          <td class="">海事群</td>
+          <td class="">農業群</td>
+          <td class="">餐飲群</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- 建議探索之領域 end --> 
+  <!-- 建議探索之領域說明 start -->
+  <div class="section descripSection">
+    <h2>建議探索之領域說明</h2>
+    <table class="descrip-table">
+      <thead>
+        <tr>
+          <th>類群</th>
+          <th>敘述</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>土木建築群</th>
+          <td>在這個類群當中，您需要了解土木建築的施工圖，且認識工程施工的規範與技術。學習台灣建築環境現況與全球建築環境的關係，體驗土木建築文化背景，並協助您取得相關技術士證照。測驗結果顯示您具備發展上述技能的相關能力。</td>
+        </tr>
+        <tr>
+          <th>設計群</th>
+          <td>在這個類群當中，您需要了解土木建築的施工圖，且認識工程施工的規範與技術。學習台灣建築環境現況與全球建築環境的關係，體驗土木建築文化背景，並協助您取得相關技術士證照。測驗結果顯示您具備發展上述技能的相關能力。</td>
+        </tr>
+        <tr>
+          <th>餐飲群</th>
+          <td>在這個類群當中，您需要了解土木建築的施工圖，且認識工程施工的規範與技術。學習台灣建築環境現況與全球建築環境的關係，體驗土木建築文化背景，並協助您取得相關技術士證照。測驗結果顯示您具備發展上述技能的相關能力。</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="warningNote">
+      提醒同學，本報表結果，僅反映你的興趣類型喜好程度，建議在做職涯規劃時，還是需要考量你的能力（例如：性向測驗結果和學業成績），以及其他因素（例如：家長和教師的想法）。若有任何問題，請與輔導老師討論！
+    </div>
+  </div>
+  <!-- 建議探索之領域說明 end -->
+  <div class="footer">
+    國立臺灣師範大學心測中心 ‧ 數位學習研究室 版權所有<span class="version">v1.0</span>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="js/jquery.min.js"></script> 
+<script src="widgets/Chart.js-master/dist/Chart.min.js"></script> 
+<script>
+var ctx = document.getElementById("myChart");
+Chart.defaults.global.defaultFontColor = "rgba(0,0,0,0.0)";//轉pdf時，會顯示，故透明
+var myChart = new Chart(ctx, {
+	type: 'radar',
+	data: {
+		//labels: ["實用型（R）", "研究型（I）", "藝術型（A）", "社會型（S）", "企業型（E）", "事務型（C）"],
+		labels: ["", "", "", "", "", ""],	//轉pdf時，會顯示，故空白	
+		datasets: [{
+			data: [23, 17, 51, 59, 30, 27],
+			label:	"興趣雷達圖",
+			backgroundColor:		"rgba(0,0,0,0.0)",
+			borderColor:			"#CC0000",
+			borderWidth:			1,
+			pointBackgroundColor:	"rgba(0,0,0,0.0)",
+			pointBorderColor:		"rgba(0,0,0,0.0)",
+			pointBorderWidth:		0,
+		}]
+	},
+	options: {
+		title: {
+			display: false,
+		},
+		legend: {
+			display: false,
+		},
+		scale: {
+			display: true,	
+			pointLabels: 
+			{
+			  fontSize: 0,
+			  fontColor: "rgba(255,255,255,0.0)",//轉pdf時，會顯示，故透明
+			},
+			angleLines: {
+                color: '#999999',
+            },
+			gridLines: {
+                color: '#999999',
+            },
+			ticks: {
+                beginAtZero: true,
+				max: 100,
+				min: 0,
+				stepSize: 100,
+				fontSize: 0,
+				backdropColor: "transparent", 
+				
+            },
+		},
+		tooltips: false,
+		hover: {
+		  animationDuration: 0
+		},
+	},
+	
+});
+</script>
+</body>
+</html>
