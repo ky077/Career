@@ -36,20 +36,21 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #0068b7 !default;//#0d6efd !default;
-$indigo:  #4b0082 !default;//#6610f2 !default;
-$purple:  #8a2be2 !default;//#6f42c1 !default;
-$pink:    #d63384 !default;//#d63384 !default;
+$blue:    #0091c7 !default;//#0d6efd !default;
+$indigo:  #4862d9 !default;//#6610f2 !default;
+$purple:  #7d4bcc !default;//#6f42c1 !default;
+$pink:    #e6619b !default;//#d63384 !default;
 $red:     #e63946 !default;//#dc3545 !default;
-$orange:  #ff6f00 !default;//#fd7e14 !default;
+$orange:  #fd7e14 !default;//#fd7e14 !default;
 $yellow:  #fff799 !default;//#ffc107 !default;
-$green:   #2a9d8f !default;//#198754 !default;
-$teal:    #20c997 !default;//#20c997 !default;
-$cyan:    #00bcd4 !default;//#0dcaf0 !default;
-$sky:	  #00a1e9 !default;//
+$green:   #006500 !default;//#198754 !default;
+$teal:    #00918e !default;//#20c997 !default;
+$cyan:    #47cacc !default;//#0dcaf0 !default;
+$sky:	  #15a9dd !default;//
 $disc:    #454acd !default;//
 $cate:    #b02fb3 !default;//
 $dept:    #eb5143 !default;//
+$golden:  #ffb703 !default;//
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -68,7 +69,8 @@ $colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "golden":     $golden
 ) !default;
 // scss-docs-end colors-map
 
@@ -191,26 +193,6 @@ $sky-700: shade-color($sky, 40%) !default;//
 $sky-800: shade-color($sky, 60%) !default;//
 $sky-900: shade-color($sky, 80%) !default;//
 
-$primary-100: tint-color($blue, 80%) !default; //
-$primary-200: tint-color($blue, 60%) !default; //
-$primary-300: tint-color($blue, 40%) !default; //
-$primary-400: tint-color($blue, 20%) !default; //
-$primary-500: $blue !default;				   //
-$primary-600: shade-color($blue, 20%) !default;//
-$primary-700: shade-color($blue, 40%) !default;//
-$primary-800: shade-color($blue, 60%) !default;//
-$primary-900: shade-color($blue, 80%) !default;//
-
-$tertiary-100: tint-color($yellow, 80%) !default; //
-$tertiary-200: tint-color($yellow, 60%) !default; //
-$tertiary-300: tint-color($yellow, 40%) !default; //
-$tertiary-400: tint-color($yellow, 20%) !default; //
-$tertiary-500: $yellow !default;				  //
-$tertiary-600: shade-color($yellow, 20%) !default;//
-$tertiary-700: shade-color($yellow, 40%) !default;//
-$tertiary-800: shade-color($yellow, 60%) !default;//
-$tertiary-900: shade-color($yellow, 80%) !default;//
-
 $disc-100: tint-color($disc, 80%) !default; //
 $disc-200: tint-color($disc, 60%) !default; //
 $disc-300: tint-color($disc, 40%) !default; //
@@ -260,6 +242,16 @@ $cmp-600: shade-color($teal, 20%) !default;//
 $cmp-700: shade-color($teal, 40%) !default;// 
 $cmp-800: shade-color($teal, 60%) !default;//
 $cmp-900: shade-color($teal, 80%) !default;//
+
+$golden-100: tint-color($golden, 80%) !default; //
+$golden-200: tint-color($golden, 60%) !default; //
+$golden-300: tint-color($golden, 40%) !default; //
+$golden-400: tint-color($golden, 20%) !default; //
+$golden-500: $golden !default;				   //
+$golden-600: shade-color($golden, 20%) !default;//
+$golden-700: shade-color($golden, 40%) !default;// 
+$golden-800: shade-color($golden, 60%) !default;//
+$golden-900: shade-color($golden, 80%) !default;//
 
 $blues: (
   "blue-100": $blue-100,
@@ -381,30 +373,6 @@ $cyans: (
   "cyan-900": $cyan-900
 ) !default;
 
-$primarys: (
-  "sky-100": $sky-100,
-  "sky-200": $sky-200,
-  "sky-300": $sky-300,
-  "sky-400": $sky-400,
-  "sky-500": $sky-500,
-  "sky-600": $sky-600,
-  "sky-700": $sky-700,
-  "sky-800": $sky-800,
-  "sky-900": $sky-900
-) !default;
-
-$tertiarys: (
-  "tertiary-100": $tertiary-100,
-  "tertiary-200": $tertiary-200,
-  "tertiary-300": $tertiary-300,
-  "tertiary-400": $tertiary-400,
-  "tertiary-500": $tertiary-500,
-  "tertiary-600": $tertiary-600,
-  "tertiary-700": $tertiary-700,
-  "tertiary-800": $tertiary-800,
-  "tertiary-900": $tertiary-900
-) !default;
-
 $discs: (
   "disc-100": $disc-100,
   "disc-200": $disc-200,
@@ -464,10 +432,22 @@ $cmps: (
   "cmp-800": $cmp-800,
   "cmp-900": $cmp-900
 ) !default;
+
+$goldens: (
+  "golden-100": $golden-100,
+  "golden-200": $golden-200,
+  "golden-300": $golden-300,
+  "golden-400": $golden-400,
+  "golden-500": $golden-500,
+  "golden-600": $golden-600,
+  "golden-700": $golden-700,
+  "golden-800": $golden-800,
+  "golden-900": $golden-900
+) !default;
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $teal !default;//$blue !default;
 $secondary:     $gray-600 !default;
 $tertiary:      $yellow !default;//
 $success:       $green !default;
@@ -478,7 +458,7 @@ $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 $disc:          $disc !default;//
 $cate:          $cate !default;//
-$dept:          $dept!default;//
+$dept:          $dept !default;//
 $fav:           $red !default;//
 $cmp:           $teal !default;//
 
@@ -502,6 +482,52 @@ $theme-colors: (
   "cmp":        $cmp//
 ) !default;
 // scss-docs-end theme-colors-map
+
+//custom fusv-disable
+$primary-100: tint-color($primary, 80%) !default; //
+$primary-200: tint-color($primary, 60%) !default; //
+$primary-300: tint-color($primary, 40%) !default; //
+$primary-400: tint-color($primary, 20%) !default; //
+$primary-500: $primary !default;				  //
+$primary-600: shade-color($primary, 20%) !default;//
+$primary-700: shade-color($primary, 40%) !default;//
+$primary-800: shade-color($primary, 60%) !default;//
+$primary-900: shade-color($primary, 80%) !default;//
+
+$tertiary-100: tint-color($tertiary, 80%) !default; //
+$tertiary-200: tint-color($tertiary, 60%) !default; //
+$tertiary-300: tint-color($tertiary, 40%) !default; //
+$tertiary-400: tint-color($tertiary, 20%) !default; //
+$tertiary-500: $tertiary !default;				    //
+$tertiary-600: shade-color($tertiary, 20%) !default;//
+$tertiary-700: shade-color($tertiary, 40%) !default;//
+$tertiary-800: shade-color($tertiary, 60%) !default;//
+$tertiary-900: shade-color($tertiary, 80%) !default;//
+
+$primarys: (
+  "sky-100": $sky-100,
+  "sky-200": $sky-200,
+  "sky-300": $sky-300,
+  "sky-400": $sky-400,
+  "sky-500": $sky-500,
+  "sky-600": $sky-600,
+  "sky-700": $sky-700,
+  "sky-800": $sky-800,
+  "sky-900": $sky-900
+) !default;
+
+$tertiarys: (
+  "tertiary-100": $tertiary-100,
+  "tertiary-200": $tertiary-200,
+  "tertiary-300": $tertiary-300,
+  "tertiary-400": $tertiary-400,
+  "tertiary-500": $tertiary-500,
+  "tertiary-600": $tertiary-600,
+  "tertiary-700": $tertiary-700,
+  "tertiary-800": $tertiary-800,
+  "tertiary-900": $tertiary-900
+) !default;
+//custom fusv-enable
 
 // scss-docs-start theme-text-variables
 $primary-text-emphasis:   shade-color($primary, 60%) !default;
