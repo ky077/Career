@@ -76,13 +76,13 @@
               </div>
             </div>
             <div class="chatInterface-frame right">
-                  <div class="avatar"><span class="avatar-text">胡</span></div>
-                  <div class="dialog">
-                    <div class="dialog-text"> 
-                      <div class="dialog-text-content">準備好了。</div>
-                    </div>
-                  </div>
-                </div> 
+              <div class="avatar"><span class="avatar-text">胡</span></div>
+              <div class="dialog">
+                <div class="dialog-text">
+                  <div class="dialog-text-content">準備好了。</div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- -->
           <div class="chatInterface-footer">
@@ -99,6 +99,36 @@
     <!-- futuristic-frame END --> 
   </div>
 </main>
+
+<!-- Modal#start -->
+<div class="modal fade show modal-start" tabindex="-1" style="display: block;" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-body py-0 text-center">
+        <div class="d-inline-flex flex-column"> 
+          <!-- robot-frame START -->
+          <div class="robot-frame">
+            <div class="avatar"> <img src="Content/images/nice-hi.apng" alt=""/> </div>
+            <div class="dialog">
+              <div class="dialog-text">
+                <div class="h4 lh-base">
+                  <div class="text-danger text-center fs-6">以下文字、流程待確認</div>
+                  嗨！我是Nice Career-Bot，專屬你的「生涯AI 導航員」。<br>
+                  <div class="text-muted fw-normal text-center fs-5">透過你的測驗結果，它就能快速分析你的興趣和潛力，<br>
+                    搭配學群、科系等資料，為你描繪一條專屬的職涯藍圖。 </div>
+                  <br>
+                  <div class="text-center fs-5"> 請先選擇你要進行的功能：<br>
+                    <a class="btn btn-outline-primary btn-lg rounded-pill m-2 px-5 link-scale" href="#" id="start">我要聊天</a> <a class="btn btn-outline-primary btn-lg rounded-pill m-2 px-5 link-scale" href="history.html">我要看使用紀錄</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- robot-frame END --> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
 <!-- ------- ------- ------- ------- ------- ------- ------- --> 
@@ -110,6 +140,11 @@
 <!-- This web Javascript --> 
 <script src="Content/js/main.js"></script> 
 <script>
+//開始
+$('[id*="start"]').click(function () { 
+  	$(".modal-start").hide();
+});	
+	
 //[結束對話]
 $('#END, #CHAT_END').click(function (e) { 
 	e.preventDefault();
