@@ -46,10 +46,33 @@ a:hover {
 table tr:hover {
 	background-color: #ffffee;
 }
-.text-muted, .text-muted *{
+.text-muted, .text-muted * {
 	color: #bbb;
 }
-	
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+}
+footer > div {
+	display: inline-block;
+}
+footer > div > a {
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+	color: #333;
+}
+footer > div > a:hover {
+	transform: scale(1);
+}
+footer > div > a.active {
+	background-color: #333;
+	color: #fff;
+}
 </style>
 </head>
 
@@ -57,21 +80,21 @@ table tr:hover {
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>DEMO網頁</th>
-      <th>工程師網頁</th>
+      <th width="50%">高中名稱</th>
+      <th width="25%">DEMO網頁</th>
+      <th width="25%">工程師網頁</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>讚生涯<b>高中生</b>生涯資訊系統</td>
+      <td>讚生涯高中生生涯資訊系統</td>
       <td><a href="CareerInfo/index.html" target="_blank">DEMO</a></td>
       <td class="text-muted"><a href="http://140.122.118.47/careerinfo/" target="_blank">莘倫</a></td>
     </tr>
     <tr>
-      <td>讚生涯<b>高中版</b>生涯測驗系統 - 學生端</td>
+      <td>讚生涯高中版生涯測驗系統 - 學生端</td>
       <td><a href="STUDENT/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"></td>
+      <td class="text-muted"><small><small>(2025.12.11已給盈芳檔案)</small></small></td>
     </tr>
     <tr>
       <td>生涯水晶球</td>
@@ -84,34 +107,37 @@ table tr:hover {
       <td class="text-muted"><a href="https://teemi.tw/MOE_chatbot/career/Chat.aspx" target="_blank">盈芳</a></td>
     </tr>
     <tr>
-      <td>興趣測驗-<b>高中版</b>-英語版</td>
+      <td>興趣測驗-英語版</td>
       <td><a href="TI-EN/Default-APP.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"></td>
+      <td class="text-muted">???</td>
     </tr>
   </tbody>
 </table>
-	<br>
-
-	<table>
+<br>
+<table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>DEMO網頁</th>
-      <th>工程師網頁</th>
+      <th width="50%">國中名稱</th>
+      <th width="25%">DEMO網頁</th>
+      <th width="25%">工程師網頁</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>讚生涯<b>國中版</b>生涯測驗系統 - 學生端</td>
+      <td>讚生涯國中版生涯測驗系統 - 學生端</td>
       <td><a href="STUDENT-J/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"></td>
+      <td class="text-muted"><small><small>(2025.12.10已給盈芳檔案)</small></small></td>
     </tr>
-	    <tr>
-      <td><b>國中版</b>自動化生涯諮詢系統(待改色系、流程)</td>
+    <tr>
+      <td>自動化生涯諮詢系統</td>
       <td><a href="BOT-J/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"></td>
-    </tr>  
+      <td class="text-muted"><small><small>(未確定，但2025.12.11已給盈芳檔案)</small></small></td>
+    </tr>
   </tbody>
 </table>
+<footer>
+  <div><a href="https://ky077.github.io/CareerCN/">陸版</a></div>
+  <div><a href="https://ky077.github.io/Career/" class="active">台版</a></div>
+</footer>
 </body>
 </html>
