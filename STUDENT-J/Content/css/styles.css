@@ -223,7 +223,8 @@ a { text-underline-offset: 5px; word-break: break-all; }
 .exam-item .exam-title .exam-name { position: relative; }
 .exam-item .exam-title .exam-name::after { content: ""; display: block; width: 75%; height: 1px; position: absolute; bottom: -1rem; left: 0; background-color: rgba(253, 126, 20, 0.25); }
 .exam-item .exam-title .exam-name small { display: block; font-size: .65em; }
-.exam-item .exam-text { padding-left: 5.5rem; color: #6c757d; }
+.exam-item .exam-text { padding-left: 2rem; color: #6c757d; }
+@media screen and (min-width: 992px) { .exam-item .exam-text { padding-left: 5.5rem; } }
 .exam-item .exam-text label { color: #212529; }
 .exam-item .exam-text > div { margin-bottom: 1rem; }
 .exam-item .exam-text .btn { margin-right: 0.25rem; }
@@ -235,21 +236,24 @@ a { text-underline-offset: 5px; word-break: break-all; }
 .exam-item.TA .exam-title .exam-icon { background: linear-gradient(to right, #1779b8 0%, #2892c9 100%); }
 .exam-item.TA .exam-title .exam-name::after { background-color: rgba(0, 187, 255, 0.25); }
 .exam-item.TA .exam-title .exam-name small { color: #0039ac; }
-.exam-item.TA [class*="btn-"] { background-color: #0039ac; border-color: #0039ac; }
+.exam-item.TA .btn-primary { background-color: #0039ac; border-color: #0039ac; }
+.exam-item.TA .btn-outline-primary { background-color: transparent; border-color: #0039ac; color: #0039ac; }
 
 .exam-item.TI .exam-body { background-color: rgba(204, 238, 212, 0.65); }
 .exam-item.TI .exam-title { color: #00ab28; }
 .exam-item.TI .exam-title .exam-icon { background: linear-gradient(to right, #91bf42 0%, #cad432 100%); }
 .exam-item.TI .exam-title .exam-name::after { background-color: rgba(0, 171, 40, 0.25); }
 .exam-item.TI .exam-title .exam-name small { color: #006500; }
-.exam-item.TI [class*="btn-"] { background-color: #006500; border-color: #006500; }
+.exam-item.TI .btn-primary { background-color: #006500; border-color: #006500; }
+.exam-item.TI .btn-outline-primary { background-color: transparent; border-color: #006500; color: #006500; }
 
 .exam-item.WV .exam-body { background-color: rgba(250, 234, 208, 0.65); }
 .exam-item.WV .exam-title { color: #e89716; }
 .exam-item.WV .exam-title .exam-icon { background: linear-gradient(to right, #f1b13f 0%, #f1db38 100%); }
 .exam-item.WV .exam-title .exam-name::after { background-color: rgba(232, 151, 22, 0.25); }
 .exam-item.WV .exam-title .exam-name small { color: #773d09; }
-.exam-item.WV [class*="btn-"] { background-color: #773d09; border-color: #773d09; }
+.exam-item.WV .btn-primary { background-color: #773d09; border-color: #773d09; }
+.exam-item.WV .btn-outline-primary { background-color: transparent; border-color: #773d09; color: #773d09; }
 
 .modal.exam-item { border-color: transparent; box-shadow: none; }
 .modal.exam-item .modal-content { background-color: transparent; border-color: transparent; }
