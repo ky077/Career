@@ -59,7 +59,10 @@
 		}
 	}
 	.exam-text{
-		padding-left: 5rem + .5rem;
+		padding-left: 2rem;
+		@media screen and (min-width: 992px) {
+		padding-left: 5rem + .5rem;	
+		}
 		color: $gray-600;
 		label {
 			color: $body-color;	
@@ -100,9 +103,14 @@
 			}
 		}
 	}
-	[class*="btn-"]{
+	.btn-primary{
 		background-color: #0039ac;	
 		border-color: #0039ac;	
+	}
+	.btn-outline-primary{
+		background-color: transparent;	
+		border-color: #0039ac;	
+		color: #0039ac;
 	}
 }
 .exam-item.TI{
@@ -122,10 +130,15 @@
 				color: #006500;	
 			}
 		}
-	}	
-	[class*="btn-"]{
+	}
+	.btn-primary{
 		background-color: #006500;	
 		border-color: #006500;	
+	}
+	.btn-outline-primary{
+		background-color: transparent;	
+		border-color: #006500;	
+		color: #006500;
 	}
 }
 .exam-item.WV{
@@ -146,9 +159,14 @@
 			}
 		}
 	}
-	[class*="btn-"]{
+	.btn-primary{
 		background-color: #773d09;	
 		border-color: #773d09;	
+	}
+	.btn-outline-primary{
+		background-color: transparent;	
+		border-color: #773d09;	
+		color: #773d09;
 	}
 }
 
