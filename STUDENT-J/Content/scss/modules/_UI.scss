@@ -391,3 +391,36 @@ a{
 		clip-path: polygon(0% -1px, 100% -1px, calc(100% - #{$modal-header-padding-x}*2) 100%, $modal-header-padding-x*2 100%);
 	}
 }
+
+//test.html
+.futuristic-modal.TA{
+	.modal-content{
+		background-color: rgba( tint-color(#00bbff, 80%), 1.0 );
+		.exam-item{
+			filter: none;
+			.exam-body{
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+	}
+}
+.futuristic-modal.TI{
+	.modal-content{
+		background-color: rgba( tint-color(#00ab28, 80%), 1.0 );
+		.exam-body{
+			box-shadow: none;
+		}
+	}
+}
+.futuristic-modal.WV{
+	.modal-content{
+		background-color: rgba( tint-color(#e89716, 80%), 1.0 );
+		.exam-body{
+			box-shadow: none;
+		}
+	}
+}
+
+
+

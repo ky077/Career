@@ -75,7 +75,7 @@
                     <label>2017-10-31  第7節</label>
                   </div>
                   <div>
-                    <input type="submit" name="button" class="btn btn-lg btn-primary rounded-pill px-4 link-scale" value="開始測驗">
+                    <input id="btn_TA" type="button" class="btn btn-lg btn-primary rounded-pill px-4 link-scale"  data-exam-class="TA" value="開始測驗" onclick="preGotoExam('ta')">
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@
                     <label>2017-10-31  第7節</label>
                   </div>
                   <div>
-                    <input type="submit" name="button" class="btn btn-lg btn-primary rounded-pill px-4 link-scale" value="開始測驗">
+                    <input id="btn_TI" type="button" class="btn btn-lg btn-primary rounded-pill px-4 link-scale"  data-exam-class="TI" value="開始測驗" onclick="preGotoExam('ti')">
                   </div>
                 </div>
               </div>
@@ -109,6 +109,61 @@
   <!-- Modal#modalEditUser Start -->
   <div class="modal fade futuristic-modal" id="modalEditUser" tabindex="-1" aria-labelledby="modalEditUserLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"> </div>
   <!-- Modal#modalEditUser End --> 
+  
+  <!-- Modal#modal-goTest Start -->
+  <div class="modal fade exam-item" id="modal-goTest" tabindex="-1" aria-labelledby="modal-goTestLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body exam-body">
+          <h3 class="exam-title">
+            <div class="exam-icon"><img src="Content/img/test/TA.png" class="img-fluid" alt=""/></div>
+            <div class="exam-name">適性化生涯性向測驗<small>Computerized Adaptive Career Aptitude Test</small> </div>
+          </h3>
+          <div class="exam-text">
+            <div class="mb-3 row g-2">
+              <label for="" class="col-sm-2 col-form-label text-end">學校：</label>
+              <div class="col-sm-8">
+                <input type="text" disabled="disabled" class="form-control" value="體驗學校">
+                <div class="form-text">若有轉學情況，請<a href="Data.aspx">修改學校資料</a>後，才進行測驗。 </div>
+              </div>
+            </div>
+            <div class="mb-3 row g-2">
+              <label for="" class="col-sm-2 col-form-label text-end">班級：</label>
+              <div class="col-sm-8">
+                <select id="Drop_test" name="Drop_test" class="form-select" aria-required="true" aria-invalid="false">
+                  <option value="">請選擇</option>
+                  <option value="9">體驗版場次</option>
+                </select>
+                <div class="form-text">欲進行測驗，但無班級可選，請洽貴校老師詢問。 </div>
+              </div>
+            </div>
+            <div class="mb-3 row g-2">
+              <label for="" class="col-sm-2 col-form-label text-end">座號：</label>
+              <div class="col-sm-8">
+                <input id="Text_number" name="Text_number" type="text" class="form-control" placeholder="請輸入座號" value="3" aria-required="true" aria-invalid="false">
+              </div>
+            </div>
+            <div class="mb-3 row g-2">
+              <label for="" class="col-sm-2 col-form-label text-end">測驗通行碼：</label>
+              <div class="col-sm-8">
+                <input id="Text_code" name="Text_code" type="text" class="form-control" placeholder="請輸入測驗通行碼">
+              </div>
+            </div>
+          </div>
+          <div class="text-center my-3">
+            <button type="button" class="btn btn-secondary rounded-pill px-4 link-scale m-1" data-bs-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary rounded-pill px-4 link-scale m-1">開始測驗</button>
+          </div>
+        </div>
+        <div class="modal-footer"> </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal#modal-goTest End --> 
 </main>
 <footer> </footer>
 <!-- Back to Top --> 
@@ -145,6 +200,31 @@ $(document).ready(function () {
 		} else {
 			$('.user-data.sticky-top').css('top', '20px');
 		}
+	});
+	
+	//[開始測驗]
+	$('.exam-item [id*="btn_"]').click(function(){ 
+		//取得測驗樣式名稱
+		var exam = $(this).attr('data-exam-class');
+		
+		//複製測驗title
+		var $examItem = $(this).closest('.exam-item');
+		var $clonedTitle = $examItem.find('.exam-title').clone();
+		
+		//清除DOM.exam-title，寫入當前測驗.exam-title
+    	$('#modal-goTest .modal-body .exam-title').remove();
+    	$('#modal-goTest .modal-body').prepend($clonedTitle); 
+
+		$('#modal-goTest').addClass(exam).modal('show');
+	});
+	
+	//modal關閉時清除
+	$('#modal-goTest').on('hidden.bs.modal', function () {
+		//清除樣式名稱
+		$(this).removeClass('TI TA');
+		
+		//清除DOM.exam-title
+	  	$(this).find('.modal-body .exam-title').remove();
 	});
 });	
 </script>

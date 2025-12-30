@@ -458,7 +458,7 @@ $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 $disc:          $disc !default;//
 $cate:          $cate !default;//
-$dept:          $dept!default;//
+$dept:          $dept !default;//
 $fav:           $red !default;//
 $cmp:           $teal !default;//
 
@@ -488,7 +488,7 @@ $primary-100: tint-color($primary, 80%) !default; //
 $primary-200: tint-color($primary, 60%) !default; //
 $primary-300: tint-color($primary, 40%) !default; //
 $primary-400: tint-color($primary, 20%) !default; //
-$primary-500: $primary !default;				   //
+$primary-500: $primary !default;				  //
 $primary-600: shade-color($primary, 20%) !default;//
 $primary-700: shade-color($primary, 40%) !default;//
 $primary-800: shade-color($primary, 60%) !default;//
@@ -498,7 +498,7 @@ $tertiary-100: tint-color($tertiary, 80%) !default; //
 $tertiary-200: tint-color($tertiary, 60%) !default; //
 $tertiary-300: tint-color($tertiary, 40%) !default; //
 $tertiary-400: tint-color($tertiary, 20%) !default; //
-$tertiary-500: $tertiary !default;				  //
+$tertiary-500: $tertiary !default;				    //
 $tertiary-600: shade-color($tertiary, 20%) !default;//
 $tertiary-700: shade-color($tertiary, 40%) !default;//
 $tertiary-800: shade-color($tertiary, 60%) !default;//
