@@ -151,3 +151,19 @@
 		border-color: #773d09;	
 	}
 }
+
+.modal.exam-item{
+	border-color: transparent;
+	box-shadow: none;
+	.modal-content{
+		background-color: transparent;
+		border-color: transparent;
+	}
+	.modal-header, .modal-footer{
+		border-color: transparent;
+	}
+	.btn-close{
+		background-color: transparent;
+		border-color: transparent;
+	}
+}

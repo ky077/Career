@@ -242,6 +242,11 @@ a { text-underline-offset: 5px; word-break: break-all; }
 .exam-item.WV .exam-title .exam-name small { color: #773d09; }
 .exam-item.WV [class*="btn-"] { background-color: #773d09; border-color: #773d09; }
 
+.modal.exam-item { border-color: transparent; box-shadow: none; }
+.modal.exam-item .modal-content { background-color: transparent; border-color: transparent; }
+.modal.exam-item .modal-header, .modal.exam-item .modal-footer { border-color: transparent; }
+.modal.exam-item .btn-close { background-color: transparent; border-color: transparent; }
+
 .user-data { background: rgba(255, 255, 255, 0.75); border-radius: 0.375rem; padding: 1rem; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); color: #212529; text-align: center; }
 .user-data.sticky-top { top: 1rem; }
 .user-data .avater { width: 5rem; height: 5rem; font-size: calc(5rem*.4); margin: 0 auto; background-color: #0068b7; color: #fff; }
