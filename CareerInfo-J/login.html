@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>讚生涯國中版職涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="------------------" name="description">
+<meta content="職涯,資訊,系統,職涯資訊系統,讚生涯,讚,生涯,國中,國中生,職科,高中職科" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯國中版職涯資訊系統" />
+<meta property="og:description" content="------------------" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<form>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+  
+  <header> </header>
+  <main class="login"> 
+    <!-- Content Start -->
+    <div class="container-fluid">
+      <div class="row justify-content-center"> 
+        <!-- panel 开始-->
+        <div class="col col-sm-7 col-lg-5 col-xxl-4 wow animate__animated animate__fadeInUp">
+          <div class="login-panel futuristic-shadow ">
+						<div class="futuristic-frame">
+            <h2 class="text-center fw-medium">登入</h2>
+            <p class="small text-center text-secondary mb-5">立即探索高中職科</p>
+            <div class="row">
+              <div class="col-9 col-xxl-8 mx-auto">
+                <div class="mb-4">
+                  <label for="inputEmail" class="form-label mb-1">帳號</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="帳號格式">
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label for="inputPassword" class="form-label mb-1">密碼</label>
+                    <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#forgetPdModal" class="fs-8">忘記密碼？</a></div>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="請輸入您的密碼" aria-label="密码" aria-describedby="passwordHelp">
+                    <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+                  </div>
+                </div>
+                <div class="mb-1"><a href="myRecommend.html?uid=0" class="btn btn-primary w-100">立即登入</a></div>
+                <p class="small text-center mb-5 text-body-secondary">還沒有帳號？<a href="register.html">免費註冊</a></p>
+              </div>
+            </div>
+          </div></div>
+        </div>
+        <!-- panel 结束--> 
+      </div>
+    </div>
+    <!-- Content End --> 
+    
+    <!-- 忘记密码Modal START -->
+    <div class="modal fade" id="forgetPdModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="forgetPdModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header pb-0 border-bottom-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row py-5">
+              <div class="col-auto mx-auto">
+                <h2 class="text-center mb-4">忘記密碼</h2>
+                <div class="mb-4">
+                  <label for="inputGetEmail" class="form-label mb-1">請輸入您註冊時的信箱以收取重製密碼信</label>
+                  <input type="email" class="form-control" id="inputGetEmail" placeholder="example@email.com">
+                </div>
+                <div class="mb-4">
+                  <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" id="btnGetPd">送出</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 忘记密码Modal  END  --> 
+  </main>
+  <footer> </footer>
+  <!-- Back to Top --> 
+  <a href="#" class="btn btn-outline-primary rounded-circle back-to-top" aria-label="返回顶端" style="display: none;"><i class="bi bi-arrow-up"></i></a>
+</form>
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+//[忘記密碼]	
+$('#btnGetPd').click(function(){
+    alertModalDOM('已将重制密码信寄送至您的邮箱<div class="text-info">a***a@gmail.com</div>', 'md', '确定');
+});
+</script>
+</body>
+</html>

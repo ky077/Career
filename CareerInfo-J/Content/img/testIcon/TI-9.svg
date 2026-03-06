@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1d135;
+      }
+
+      .cls-2 {
+        font-family: AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std';
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #344154;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g id="_圖層_1-2" data-name="_圖層_1">
+        <g id="_圖層_1-2">
+          <g>
+            <g>
+              <g>
+                <path class="cls-3" d="M24.2,25.5h-12.7c-2.2,0-4-1.8-4-4h0c0-2.2,1.8-4,4-4h12.7c2.2,0,4,1.8,4,4h0c0,2.2-1.8,4-4,4Z"/>
+                <path class="cls-3" d="M24.2,46.7h-12.7c-2.2,0-4-1.8-4-4h0c0-2.2,1.8-4,4-4h12.7c2.2,0,4,1.8,4,4h0c0,2.2-1.8,4-4,4Z"/>
+                <path class="cls-3" d="M11.5,60h12.7c2.2,0,4,1.8,4,4h0c0,2.2-1.8,4-4,4h-12.7c-2.2,0-4-1.8-4-4h0c0-2.2,1.8-4,4-4Z"/>
+                <path class="cls-3" d="M24.2,89.3h-12.7c-2.2,0-4-1.8-4-4h0c0-2.2,1.8-4,4-4h12.7c2.2,0,4,1.8,4,4h0c0,2.2-1.8,4-4,4Z"/>
+                <path class="cls-3" d="M24.2,110.5h-12.7c-2.2,0-4-1.8-4-4h0c0-2.2,1.8-4,4-4h12.7c2.2,0,4,1.8,4,4h0c0,2.2-1.8,4-4,4Z"/>
+                <line class="cls-3" x1="17.8" y1="25.5" x2="17.8" y2="38.7"/>
+                <line class="cls-3" x1="17.8" y1="46.7" x2="17.8" y2="60"/>
+                <line class="cls-3" x1="17.8" y1="68" x2="17.8" y2="81.3"/>
+                <line class="cls-3" x1="17.8" y1="89.3" x2="17.8" y2="102.5"/>
+                <path class="cls-3" d="M17.8,110.5v10c0,3.3,2.7,6,6,6h96.8V1.5H23.7c-3.3,0-6,2.7-6,6v10"/>
+              </g>
+              <g>
+                <path class="cls-3" d="M82.6,102.5V32.1s16.7,3.1,16.7,23.2v22.5h-11.1"/>
+                <g>
+                  <line class="cls-3" x1="56.1" y1="57" x2="56.1" y2="102.5"/>
+                  <path class="cls-3" d="M69,32.1v17.2c0,4.3-3.5,7.6-7.6,7.6h-10.4c-4.3,0-7.6-3.5-7.6-7.6v-17.2"/>
+                  <g>
+                    <line class="cls-3" x1="51.8" y1="48.1" x2="51.8" y2="32.1"/>
+                    <line class="cls-3" x1="60.5" y1="48.1" x2="60.5" y2="32.1"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <polygon class="cls-1" points="81.9 7.2 114.9 40.2 114.9 7.2 81.9 7.2"/>
+          </g>
+        </g>
+      </g>
+      <text class="cls-2" transform="translate(52 157.6)"><tspan x="0" y="0">餐飲</tspan></text>
+    </g>
+  </g>
+</svg>

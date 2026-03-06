@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 5px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linecap: round;
+      }
+
+      .cls-3 {
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g>
+        <line class="cls-3" x1="30.5" y1="102.3" x2="99.9" y2="102.3"/>
+        <line class="cls-3" x1="30.5" y1="113.3" x2="99.9" y2="113.3"/>
+        <line class="cls-3" x1="30.5" y1="124.4" x2="99.9" y2="124.4"/>
+        <line class="cls-3" x1="30.5" y1="135.3" x2="99.9" y2="135.3"/>
+      </g>
+      <g>
+        <path class="cls-3" d="M61.4,40.4c-14,0-25.2,11.3-25.2,25.2s11.3,25.2,25.2,25.2,25.2-11.3,25.2-25.2h-25.2s0-25.2,0-25.2Z"/>
+        <path class="cls-3" d="M69,32.8v25.2h25.2c0-14-11.3-25.2-25.2-25.2Z"/>
+        <path class="cls-3" d="M58.6,56.5c-3.9,1.2-6.8,4.9-6.8,9.1s4.2,9.5,9.5,9.5,8-2.8,9.1-6.8"/>
+      </g>
+      <path class="cls-1" d="M113.9,29v112.8c0,3.2-3.2,5.7-7.1,5.7H22.9c-3.9,0-7.1-2.6-7.1-5.7V29c0-3.2,3.2-5.7,7.1-5.7h83.8c3.9,0,7.1,2.6,7.1,5.7h0Z"/>
+      <path class="cls-2" d="M25.9,23.3v-4.3c0-3.2,3.2-5.7,7.1-5.7h83.8c3.9,0,7.1,2.6,7.1,5.7v112.8c0,3.2-3.2,5.7-7.1,5.7h-2.9"/>
+      <path class="cls-2" d="M35.9,12.6v-4.3c0-3.2,3.2-5.7,7.1-5.7h83.8c3.9,0,7.1,2.6,7.1,5.7v112.8c0,3.2-3.2,5.7-7.1,5.7h-2.9"/>
+    </g>
+  </g>
+</svg>

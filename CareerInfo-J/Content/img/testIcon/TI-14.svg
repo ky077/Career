@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00ab28;
+      }
+
+      .cls-2 {
+        font-family: AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std';
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #344154;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g id="_圖層_1-2" data-name="_圖層_1">
+        <g id="_圖層_1-2">
+          <g id="_圖層_1-2-2" data-name="_圖層_1-2">
+            <g>
+              <rect class="cls-3" x="18.4" y="18.3" width="91.3" height="89.2"/>
+              <polygon class="cls-3" points="95.8 31.8 32.2 31.8 32.2 93.9 75.7 93.9 95.8 73.8 95.8 31.8"/>
+              <line class="cls-3" x1="35.7" y1="116.9" x2="35.7" y2="126.5"/>
+              <line class="cls-3" x1="54.6" y1="116.9" x2="54.6" y2="126.5"/>
+              <line class="cls-3" x1="73.4" y1="116.9" x2="73.4" y2="126.5"/>
+              <line class="cls-3" x1="92.3" y1="116.9" x2="92.3" y2="126.5"/>
+              <line class="cls-3" x1="35.7" y1="1.5" x2="35.7" y2="11.1"/>
+              <line class="cls-3" x1="54.6" y1="1.5" x2="54.6" y2="11.1"/>
+              <line class="cls-3" x1="73.4" y1="1.5" x2="73.4" y2="11.1"/>
+              <line class="cls-3" x1="92.3" y1="1.5" x2="92.3" y2="11.1"/>
+              <line class="cls-3" x1="126.4" y1="34.5" x2="116.8" y2="34.5"/>
+              <line class="cls-3" x1="126.4" y1="53.4" x2="116.8" y2="53.4"/>
+              <line class="cls-3" x1="126.4" y1="72.2" x2="116.8" y2="72.2"/>
+              <line class="cls-3" x1="126.4" y1="91.1" x2="116.8" y2="91.1"/>
+              <line class="cls-3" x1="11.2" y1="34.5" x2="1.6" y2="34.5"/>
+              <line class="cls-3" x1="11.2" y1="53.4" x2="1.6" y2="53.4"/>
+              <line class="cls-3" x1="11.2" y1="72.2" x2="1.6" y2="72.2"/>
+              <line class="cls-3" x1="11.2" y1="91.1" x2="1.6" y2="91.1"/>
+              <path class="cls-1" d="M76.3,38.3h-37.6v36.1s0-.2.2-.3c7.4-14.4,19.1-26.2,33.5-33.7l3.9-2h0Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <text class="cls-2" transform="translate(52 158.5)"><tspan x="0" y="0">電資</tspan></text>
+    </g>
+  </g>
+</svg>

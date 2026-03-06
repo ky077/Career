@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.2 115.52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2f006a;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-6 {
+        fill: #9f22a2;
+      }
+
+      .cls-7 {
+        fill: #530fb4;
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-9 {
+        fill: #721777;
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="35.6" y1="115.52" x2="35.6" y2="4.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b925c1"/>
+      <stop offset=".24" stop-color="#ce46c1"/>
+      <stop offset=".58" stop-color="#e86fc1"/>
+      <stop offset=".84" stop-color="#f988c1"/>
+      <stop offset="1" stop-color="#ff92c1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="27.65" x2="71.2" y2="27.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#172fd3"/>
+      <stop offset=".33" stop-color="#287ae3"/>
+      <stop offset=".65" stop-color="#37bcf1"/>
+      <stop offset=".88" stop-color="#40e5f9"/>
+      <stop offset="1" stop-color="#44f5fd"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="4.73" y1="27.65" x2="66.04" y2="27.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#449cfd"/>
+      <stop offset=".04" stop-color="#4094fa"/>
+      <stop offset=".23" stop-color="#3170ec"/>
+      <stop offset=".42" stop-color="#2653e1"/>
+      <stop offset=".62" stop-color="#1d3fd9"/>
+      <stop offset=".81" stop-color="#1833d4"/>
+      <stop offset="1" stop-color="#172fd3"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="35.6" y1="40.98" x2="35.6" y2="0" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="14.38" y1="13.78" x2="56.82" y2="13.78" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-6" x1="17.88" y1="13.53" x2="53" y2="13.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#44f5fd"/>
+      <stop offset=".2" stop-color="#38c2f2"/>
+      <stop offset=".48" stop-color="#2a83e4"/>
+      <stop offset=".72" stop-color="#1f55db"/>
+      <stop offset=".9" stop-color="#1939d5"/>
+      <stop offset="1" stop-color="#172fd3"/>
+    </linearGradient>
+  </defs>
+  <g id="OBJECTS">
+    <g>
+      <path class="cls-10" d="M71.2,27.11L32.1,4.53,6.29,19.43C2.1,21.85,0,25.02,0,28.19H0v63.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.81,40.99-23.67V27.11Z"/>
+      <path class="cls-6" d="M30.21,50.78L6.29,19.43C2.1,21.85,0,25.02,0,28.19H0v63.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.81V50.78Z"/>
+      <path class="cls-9" d="M.11,82.03H0v4.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.81v-4.49l-23.93-13.81c-4.75-2.74-6.8-6.45-6.17-10.02Z"/>
+      <path class="cls-9" d="M.11,73.93H0v4.49h.11c-.63,3.58,1.43,7.28,6.17,10.03l23.93,13.81v-4.49l-23.93-13.81c-4.75-2.74-6.8-6.45-6.17-10.02Z"/>
+      <path class="cls-9" d="M.11,65.83H0v4.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.81v-4.49l-23.93-13.82c-4.75-2.74-6.8-6.45-6.17-10.02Z"/>
+      <path class="cls-9" d="M.11,57.73H0v4.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.82v-4.49l-23.93-13.81C1.54,65.01-.52,61.31.11,57.73Z"/>
+      <path class="cls-9" d="M.11,49.63H0v4.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.81v-4.49l-23.93-13.81C1.54,56.91-.52,53.21.11,49.63Z"/>
+      <path class="cls-9" d="M.11,41.53H0v4.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.81v-4.49l-23.93-13.82C1.54,48.81-.52,45.11.11,41.53Z"/>
+      <path class="cls-9" d="M.11,33.43H0v4.49h.11c-.63,3.58,1.43,7.28,6.17,10.02l23.93,13.81v-4.49l-23.93-13.82C1.54,40.71-.52,37.01.11,33.43Z"/>
+      <path class="cls-2" d="M71.2,27.11L32.1,4.53,6.29,19.43c-8.38,4.84-8.38,12.69,0,17.53l23.93,13.81,40.99-23.67Z"/>
+      <path class="cls-4" d="M66.04,27.19L32.37,7.75l-22.22,12.83c-7.22,4.17-7.22,10.92,0,15.09l20.6,11.89,35.29-20.38Z"/>
+      <path class="cls-1" d="M10.15,22.19l22.22-12.83,32.27,18.63,1.4-.81L32.37,7.75l-22.22,12.83c-3.96,2.29-5.75,5.36-5.35,8.35.32-2.46,2.1-4.86,5.35-6.74Z"/>
+      <g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-7" points="37.07 57.63 32.9 60.03 32.9 55.22 37.07 52.81 37.07 57.63"/>
+              <polygon class="cls-7" points="42.43 54.54 38.26 56.94 38.26 52.13 42.43 49.72 42.43 54.54"/>
+              <polygon class="cls-7" points="47.79 51.44 43.61 53.85 43.62 49.04 47.79 46.62 47.79 51.44"/>
+              <polygon class="cls-7" points="53.14 48.35 48.97 50.76 48.97 45.94 53.15 43.53 53.14 48.35"/>
+            </g>
+            <g>
+              <polygon class="cls-7" points="37.07 65.82 32.9 68.23 32.9 63.41 37.07 61 37.07 65.82"/>
+              <polygon class="cls-7" points="42.43 62.73 38.26 65.14 38.26 60.32 42.43 57.91 42.43 62.73"/>
+              <polygon class="cls-7" points="47.79 59.64 43.62 62.04 43.62 57.23 47.79 54.82 47.79 59.64"/>
+              <polygon class="cls-7" points="53.14 56.54 48.97 58.95 48.97 54.13 53.14 51.72 53.14 56.54"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-7" points="58.47 45.28 54.3 47.69 54.3 42.87 58.47 40.46 58.47 45.28"/>
+              <polygon class="cls-7" points="63.82 42.19 59.65 44.6 59.65 39.78 63.83 37.37 63.82 42.19"/>
+              <polygon class="cls-7" points="69.18 39.09 65.01 41.5 65.01 36.69 69.18 34.28 69.18 39.09"/>
+            </g>
+            <g>
+              <polygon class="cls-7" points="58.47 53.47 54.3 55.88 54.3 51.06 58.47 48.65 58.47 53.47"/>
+              <polygon class="cls-7" points="63.82 50.38 59.65 52.79 59.65 47.97 63.83 45.56 63.82 50.38"/>
+              <polygon class="cls-7" points="69.18 47.29 65.01 49.7 65.01 44.88 69.18 42.47 69.18 47.29"/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-7" points="37.07 74.11 32.9 76.52 32.9 71.7 37.07 69.29 37.07 74.11"/>
+              <polygon class="cls-7" points="42.43 71.02 38.26 73.42 38.26 68.61 42.43 66.2 42.43 71.02"/>
+              <polygon class="cls-7" points="47.79 67.92 43.61 70.33 43.62 65.52 47.79 63.11 47.79 67.92"/>
+              <polygon class="cls-7" points="53.14 64.83 48.97 67.24 48.97 62.42 53.15 60.01 53.14 64.83"/>
+            </g>
+            <g>
+              <polygon class="cls-7" points="37.07 82.3 32.9 84.71 32.9 79.9 37.07 77.49 37.07 82.3"/>
+              <polygon class="cls-7" points="42.43 79.21 38.26 81.62 38.26 76.8 42.43 74.39 42.43 79.21"/>
+              <polygon class="cls-7" points="47.79 76.12 43.62 78.53 43.62 73.71 47.79 71.3 47.79 76.12"/>
+              <polygon class="cls-7" points="53.14 73.03 48.97 75.43 48.97 70.62 53.14 68.21 53.14 73.03"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-7" points="58.47 61.76 54.3 64.17 54.3 59.35 58.47 56.94 58.47 61.76"/>
+              <polygon class="cls-7" points="63.82 58.67 59.65 61.08 59.65 56.26 63.83 53.85 63.82 58.67"/>
+              <polygon class="cls-7" points="69.18 55.58 65.01 57.98 65.01 53.17 69.18 50.76 69.18 55.58"/>
+            </g>
+            <g>
+              <polygon class="cls-7" points="58.47 69.96 54.3 72.36 54.3 67.55 58.47 65.14 58.47 69.96"/>
+              <polygon class="cls-7" points="63.82 66.86 59.65 69.27 59.65 64.45 63.83 62.04 63.82 66.86"/>
+              <polygon class="cls-7" points="69.18 63.77 65.01 66.18 65.01 61.36 69.18 58.95 69.18 63.77"/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <g>
+              <polygon class="cls-7" points="37.07 90.59 32.9 93 32.9 88.18 37.07 85.77 37.07 90.59"/>
+              <polygon class="cls-7" points="42.43 87.5 38.26 89.91 38.26 85.09 42.43 82.68 42.43 87.5"/>
+              <polygon class="cls-7" points="47.79 84.41 43.61 86.82 43.62 82 47.79 79.59 47.79 84.41"/>
+              <polygon class="cls-7" points="53.14 81.32 48.97 83.72 48.97 78.91 53.15 76.5 53.14 81.32"/>
+            </g>
+            <g>
+              <polygon class="cls-7" points="37.07 98.79 32.9 101.2 32.9 96.38 37.07 93.97 37.07 98.79"/>
+              <polygon class="cls-7" points="42.43 95.7 38.26 98.1 38.26 93.29 42.43 90.88 42.43 95.7"/>
+              <polygon class="cls-7" points="47.79 92.6 43.62 95.01 43.62 90.19 47.79 87.78 47.79 92.6"/>
+              <polygon class="cls-7" points="53.14 89.51 48.97 91.92 48.97 87.1 53.14 84.69 53.14 89.51"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <polygon class="cls-7" points="58.47 78.24 54.3 80.65 54.3 75.83 58.47 73.42 58.47 78.24"/>
+              <polygon class="cls-7" points="63.82 75.15 59.65 77.56 59.65 72.74 63.83 70.33 63.82 75.15"/>
+              <polygon class="cls-7" points="69.18 72.06 65.01 74.47 65.01 69.65 69.18 67.24 69.18 72.06"/>
+            </g>
+            <g>
+              <polygon class="cls-7" points="58.47 86.44 54.3 88.85 54.3 84.03 58.47 81.62 58.47 86.44"/>
+              <polygon class="cls-7" points="63.82 83.34 59.65 85.75 59.65 80.94 63.83 78.53 63.82 83.34"/>
+              <polygon class="cls-7" points="69.18 80.25 65.01 82.66 65.01 77.84 69.18 75.43 69.18 80.25"/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <polygon class="cls-7" points="37.07 107.08 32.9 109.48 32.9 104.66 37.07 102.26 37.07 107.08"/>
+            <polygon class="cls-7" points="42.43 103.98 38.26 106.39 38.26 101.57 42.43 99.16 42.43 103.98"/>
+            <polygon class="cls-7" points="47.79 100.89 43.61 103.3 43.62 98.48 47.79 96.07 47.79 100.89"/>
+            <polygon class="cls-7" points="53.14 97.8 48.97 100.21 48.97 95.39 53.15 92.98 53.14 97.8"/>
+          </g>
+          <g>
+            <polygon class="cls-7" points="58.47 94.73 54.3 97.13 54.3 92.32 58.47 89.91 58.47 94.73"/>
+            <polygon class="cls-7" points="63.82 91.63 59.65 94.04 59.65 89.23 63.83 86.82 63.82 91.63"/>
+            <polygon class="cls-7" points="69.18 88.54 65.01 90.95 65.01 86.13 69.18 83.72 69.18 88.54"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <path class="cls-3" d="M56.82,13.46L33.51,0l-15.38,8.88c-2.5,1.44-3.74,3.33-3.75,5.22h0v12.67h.07c-.38,2.13.85,4.34,3.68,5.98l14.26,8.23,24.43-14.11v-13.42Z"/>
+        <path class="cls-6" d="M32.39,27.56l-14.26-18.68c-2.5,1.44-3.74,3.33-3.75,5.22h0v12.67h.07c-.38,2.13.85,4.34,3.68,5.98l14.26,8.23v-13.42Z"/>
+        <path class="cls-5" d="M56.82,13.46L33.51,0l-15.38,8.88c-5,2.89-5,7.56,0,10.45l14.26,8.23,24.43-14.11Z"/>
+        <path class="cls-8" d="M53,13.26L33.71,2.12l-12.73,7.35c-4.14,2.39-4.14,6.26,0,8.65l11.8,6.82,20.22-11.67Z"/>
+        <path class="cls-1" d="M20.98,11.89l12.73-7.35,17.2,9.93,2.09-1.21L33.71,2.12l-12.73,7.35c-2.6,1.5-3.56,3.59-2.89,5.53.4-1.14,1.36-2.23,2.89-3.12Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+.explore-tip{
+	.modal-content{
+		background: linear-gradient(135deg, $yellow 30%, $cyan 100%);
+		text-align: center;
+	}
+	.modal-body{
+		text-shadow: 1px 1px rgba($white, .25);
+		&::-webkit-scrollbar{  
+			background-color: transparent;
+		}  
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		} 
+		&::-webkit-scrollbar-thumb {	
+			border: none;
+			border-right: 3px solid $cyan-300;
+		}
+	}
+}

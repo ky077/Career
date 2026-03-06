@@ -1,0 +1,109 @@
+.news-nav{
+	.nav-item{
+		
+	}
+	.nav-link{
+		font-size: $font-size-lg;
+		&.active{
+			color: $primary;
+			position: relative;
+			&::before{
+				content: "";
+				display: block;
+				width: 50%;
+				height: 2px;
+				background: -webkit-linear-gradient(left,     $primary 0%, $tertiary 100%);
+				background:      -o-linear-gradient(left,     $primary 0%, $tertiary 100%);
+				background:         linear-gradient(to right, $primary 0%, $tertiary 100%); 
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+		
+	}
+}
+
+.news-badge{
+	font-weight: 400;
+	margin-right: .5rem;
+	border-radius: 0;
+	clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+	flex: 0 0 auto;
+	&.sys{
+		background-color: $secondary;	
+	}
+	&.act{
+		background-color: $primary;
+	}
+}
+.news-date{ 
+	color: $body-secondary-color;
+	font-size: $h8-font-size;
+}
+
+.news-list{
+	margin-bottom: 1rem;
+	.list-group-item{//a
+		border-color: transparent;
+		border-bottom-color: $border-color;
+		border-radius: 0;
+		padding: $list-group-item-padding-y*2 $list-group-item-padding-x;
+		clip-path: polygon(0% 0%, 100% 0%, calc(100% - 1rem) 100%, 0% 100%);
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		&::before{
+			content: "";
+			display: block;
+			width: 4px;
+			height: 60%;
+			background-color: $primary;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			opacity: 0;
+			left: .5rem;
+		}
+		.news-title{
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			flex: 1;
+		}
+		.news-date{
+			margin-left: .5rem;
+		}	
+	}
+	.list-group-item:hover{
+		font-weight: 500;
+		text-decoration: none;
+		background-color: #fff; 
+		border-color: $border-color;
+		transform: translateX(1.5rem) scale(1.05);
+		box-shadow: $box-shadow-sm;
+		&::before{
+			opacity: 1;
+			left: 0;
+		}
+		.news-date{ 
+			font-weight: 400;
+		}
+	}
+}
+
+.news-content{
+	.news-title{
+		line-height: $line-height-base;
+	}
+	.news-date{
+		margin-top: -1.5rem; 
+		text-align: right;
+	}
+}
+
+
+

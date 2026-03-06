@@ -1,0 +1,3 @@
+main{
+	min-height: calc(100vh - (3rem + #{$navbar-brand-padding-y}*2 + #{$navbar-padding-y}*2));
+}

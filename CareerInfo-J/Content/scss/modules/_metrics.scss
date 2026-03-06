@@ -1,0 +1,16 @@
+//指標
+.metric{
+	display: inline-flex;
+	flex-direction: column;
+	color: $body-secondary-color;
+	text-align: center;
+	position: relative;
+	margin: .125rem;
+	width: 100px;
+	height: auto;
+	img{
+		width: 80px;
+		height: 80px;
+		margin: 10px;
+	}
+}

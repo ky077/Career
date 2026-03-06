@@ -1,0 +1,177 @@
+.intro{
+	.page-header{
+	}
+	.intro-why{
+		background-color: rgba($white, .75);
+		.intro-why-title{
+			font-weight: 800;
+			margin-bottom: 1rem;
+			&::before{
+				content: "";
+				display: inline-block;
+				width: 2.5rem;
+				height: 4px;
+				background-color: $primary;
+				margin-right: .75rem;
+				vertical-align: middle;
+			}
+		}
+		.intro-why-content{
+			color: $body-secondary-color;
+			line-height: $line-height-lg;
+			strong{
+				font-weight: 600;
+				color: $primary;
+				display: inline-block;
+				position: relative;
+				&::after{
+					content: "";
+					display: block;
+					width: 100%;
+					height: 1px;
+					background-color: rgba($primary, .25);
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+			}
+		}
+		.intro-why-frame{
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='12' fill='currentColor' class='bi bi-circle-fill' viewBox='0 0 48 12'%3E %3Ccircle cx='6' cy='6' r='6' fill='%23f87171'/%3E %3Ccircle cx='24' cy='6' r='6' fill='%23facc15'/%3E %3Ccircle cx='42' cy='6' r='6' fill='%234ade80'/%3E %3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: top .75rem right 1rem;
+			background-color: mix($secondary, $black, 25%);
+			border-radius: $border-radius-lg;
+			padding: 1.5rem;
+			font-size: $font-size-sm;
+			color: $gray-500;
+			animation: float 6s ease-in-out infinite;
+			box-shadow: $box-shadow;
+		}
+		.intro-why-counter{
+			background-color: $white;
+			border: 1px solid $border-color;
+			box-shadow: $box-shadow-sm;
+			text-align: center;
+			padding: 1rem;
+			border-radius: $border-radius-lg;
+			
+		}
+		
+	}
+	.intro-help{
+		background-color: rgba(mix($secondary, $black, 25%), .9);
+		.card{
+			background-color: rgba($white, .05);
+			border-color: rgba($white, .1);
+			border-radius: $border-radius-lg;
+			color: $gray-500;
+			.card-body{
+				padding: 1.5rem;
+				&::before{
+					content: "01";
+					display: inline;
+					position: absolute;
+					top: 0;
+					right: 1.5rem;
+					font-size: $font-size-base * 3.5;
+					font-weight: 900;
+					color: transparent;
+    			-webkit-text-stroke: 1px rgba(255, 255, 255, 0.08);
+					text-stroke: 1px rgba(255, 255, 255, 0.08);
+				}
+				&:after{
+					content: "";
+					display: block;
+					width: 100%;
+					height: 2px;
+					background: linear-gradient(to right, transparent, $cyan, transparent);
+					position: absolute;
+					top: -2px;
+					left: 0;
+					opacity: 0;
+				}
+				.card-title{
+					color: $white;	
+					font-size: $font-size-lg;
+					font-weight: 600;
+					margin-bottom: 1.5rem;
+					i{
+						margin-right: .75rem;
+						color: $primary;
+            background: linear-gradient(135deg,  rgba($primary, .25) 0%,rgba($primary, 0) 100%);
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+						width: 2em;
+						height: 2em;
+						border: 1px solid rgba($primary, .25);
+						border-radius: $border-radius;
+						vertical-align: middle;
+					}
+				}
+				.card-text{
+					border-left: 2px solid rgba($primary, .5);
+					padding-left: 1rem;
+					font-size: .9rem;
+				}
+			}
+			&:hover{
+				background-color: rgba($white, .075);
+				filter: brightness(1.25);
+				box-shadow: $box-shadow;
+				.card-body{
+					&:after{
+						opacity: 1;
+						animation: scanMove 2.5s linear infinite;
+					}
+					.card-title{
+						color: $primary;	
+						i{
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+		
+		@mixin introCardStyles($color, $counter){
+			.card-body{
+				&::before{
+					content: "#{$counter}";
+				}
+				.card-title{
+					i{
+						color: $color;
+            background: linear-gradient(135deg,  rgba($color, .25) 0%,rgba($color, 0) 100%);
+						border: 1px solid rgba($color, .25);
+					}
+				}
+				.card-text{
+					border-left: 2px solid rgba($color, .5);
+				}
+			}
+			&:hover{
+				.card-body{
+					.card-title{
+						color: $color;	
+						i{
+							box-shadow: 0 0 .75rem rgba($color, .1);
+						}
+					}
+				}
+			}
+		}
+		
+		.intro-help-1{ @include introCardStyles(  tint-color($pink, 20%), "01"); }
+		.intro-help-2{ @include introCardStyles(							   $yellow, "02"); }
+		.intro-help-3{ @include introCardStyles(									 $teal, "03"); }
+		.intro-help-4{ @include introCardStyles(tint-color($purple, 20%), "04"); }
+		
+		
+	}
+	
+	
+}
+
