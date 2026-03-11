@@ -181,8 +181,9 @@
 							display: inline-flex;
 							align-items: center;
 							justify-content: center;
-							font-weight: 800;
+							font-family: $font-family-monospace;
 							font-size: $font-size-sm;
+							font-weight: 800;
 							margin-right: .5rem;
 							background: rgba($body-color, .1);
 							color: rgba($body-color, .25);
@@ -253,6 +254,7 @@
 			margin-bottom: map-get($spacers, 3);
 		}
 		.feature-number{
+			font-family: $font-family-monospace;
 			font-size: 1.5em;
 			font-weight: 400;
 			color: $primary-200;
@@ -334,6 +336,7 @@
 					margin-bottom: 1.5rem;
 					margin-top: -2.5rem;
 					.testimonial-header{
+						font-family: $font-family-monospace;
 						font-size: $font-size-lg;
 						font-weight: 600;
 						text-align: center;

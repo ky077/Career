@@ -41,3 +41,23 @@
   0% { top: 0;}
 100% { top: 100%; }	
 }
+
+@keyframes scanWidth {
+  0% { width: 0;}
+100% { width: 100%; }	
+}
+@keyframes spotFadeIn {
+  0% { box-shadow: none;   }
+100% { box-shadow: 0 0 .5rem $primary;}
+}
+
+@keyframes pulse-ring {
+0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+100% {
+    transform: scale(1.4);
+    opacity: 0;
+}
+}

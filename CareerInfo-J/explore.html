@@ -34,62 +34,568 @@
 <link rel="stylesheet" href="Content/css/styles.css">
 </head>
 
-<body><form>
+<body>
+<form>
   <!-- Spinner Start -->
   <div id="spinner" class="show">
-    <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">載入中...</span>
+    </div>
   </div>
   <!-- Spinner End -->
-
-<header> </header>
-<main class="explore"> 
+  
+  <header>
+  </header>
+  <main class="explore">
     <!-- page-header Start -->
     <div class="container-fluid page-header">
       <div class="container-md">
         <h2 class="display-4 text-center fw-bold mb-3 wow animate__animated animate__slideInDown">探索高中職科</h2>
-        <nav aria-label="breadcrumb">
+        <!--<nav aria-label="breadcrumb">
           <ol class="breadcrumb justify-content-center">
             <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i></a></li>
             <li class="breadcrumb-item active" aria-current="page">探索高中職科</li>
           </ol>
-        </nav>
-      </div>
-    </div>
-    <!-- page-header End --> 
-  
- <!-- page-content Start -->
-    <div class="page-content"> 
-			
-			  <!-- 群科、職科 開始 -->
-      <div class="about-intro">
-        <div class="container-md py-5">
-         
+        </nav>-->
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <input type="text" class="form-control rounded-pill form-search" placeholder="輸入關鍵字搜尋群職科...">
+          </div>
         </div>
       </div>
-      <!-- 群科、職科 結束 --> 
-	</div>
-  
-  <!-- page-content End --> 
-</main>
-<footer> </footer>
-<!-- Back to Top --> 
-<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+    </div>
+    <!-- page-header End -->
+    
+    <!-- page-content Start -->
+    <div class="page-content">
+      <!-- 探索介紹 開始 -->
+      <div class="explore-intro">
+        <div class="container-md explore-intro-frame">
+          <div class="row">
+            <div class="col explore-intro-item">
+              <strong>16</strong>群科總數 </div>
+            <div class="col explore-intro-item">
+              <strong>72</strong>職科類別 </div>
+            <div class="col explore-intro-item">
+              <strong>07</strong>核心導覽
+              <a href="#" role="button" class="link-sky" data-bs-toggle="modal" data-bs-target="#guideModal"><i class="bi bi-question-circle-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 探索介紹 結束 -->
+      
+      <!-- 群科、職科 開始 -->
+      <div class="explore-card">
+        <div class="container-md py-5">
+          <div class="explore-card-remark">
+            <span class="ms-3"><span class="explore-badge VS">職</span>高職設有此職科</span>
+            <span class="ms-3"><span class="explore-badge JC">專</span>五專設有此職科</span>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- 機械群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h3 class="card-title">機械群</h3>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item">
+                    <span class="explore-card-title">模具科</span>
+                    <span class="explore-badge VS">職</span>
+                    </a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">機電科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">機械木模科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">製圖科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">機械科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">板金科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">鑄造科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">生物產業機電科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">配管科</span><span class="explore-badge VS">職</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 動力機械群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h3 class="card-title">動力機械群</h3>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">飛機修護科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">農業機械科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">重機科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">汽車科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">動力機械科</span><span class="explore-badge VS">職</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 電機與電子群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h3 class="card-title">電機與電子群</h3>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">冷凍空調科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">電機科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">控制科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">電子科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">資訊科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 化工群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h3 class="card-title">化工群</h3>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">紡織科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">化工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">染整科</span><span class="explore-badge VS">職</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 土木與建築群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">土木與建築群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">土木科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">消防工程科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">建築科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 商業與管理群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">商業與管理群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">航運管理科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">資料處理科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">會計事務科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">國際貿易科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">商業經營科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">流通管理科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 外語群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">外語群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">應用英語科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">應用日語科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 設計群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">設計群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">陶瓷工程科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">室內空間設計科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">圖文傳播科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">廣告設計科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">美工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">家具設計科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">室內設計科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">金屬工藝科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">多媒體設計科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 農業群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">農業群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">農場經營科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">野生動物保育科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">森林科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">園藝科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">造園科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">畜產保健科</span><span class="explore-badge VS">職</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 食品群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">食品群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">水產食品科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">食品加工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">食品科*</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 家政群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">家政群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">時尚模特兒科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">幼兒保育科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">流行服飾科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">服裝科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">美容科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">家政科</span><span class="explore-badge VS">職</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 餐旅群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">餐旅群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">觀光事業科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">餐飲管理科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 水產群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">水產群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">水產養殖科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">漁業科</span><span class="explore-badge VS">職</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 海事群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">海事群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">輪機科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">航海科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 藝術群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">藝術群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">多媒體動畫科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">音樂科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">美術科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">影劇科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">舞蹈科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">表演藝術科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">時尚工藝科</span><span class="explore-badge VS">職</span></a>
+                    <a href="#" class="list-group-item"><span class="explore-card-title">電影電視科</span><span class="explore-badge VS">職</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 護理群 -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-icon"></div>
+                  <h5 class="card-title">護理群</h5>
+                  <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item"><span class="explore-card-title">護理科</span><span class="explore-badge JC">專</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 群科、職科 結束 -->
+    </div>
+    <!-- page-content End -->
+    
+    <!-- Modal#guideModal Start -->
+    <div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="guideModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title fs-5 fw-bolder text-info" id="guideModalLabel"><i class="bi bi-rocket-takeoff-fill me-1"></i>七大核心導覽</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modalScrollTarget">
+            <div class="explore-guide">
+              <div class="guide-timeline" id="guideTimeline"></div>
+              <div class="guide-step">
+                <div class="step-num">01</div>
+                <div class="step-content">
+                  <div class="card step-card">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <div class="card-img"><img class="" src="Content/img/explore/senior_intro_01.jpg" alt=""></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">職科介紹</h5>
+                          <p class="card-text">以淺顯易懂的文字說明，並搭配各職科常使用的儀器或場地照片，幫助同學認識各職科所學在日常生活中的應用及重要性。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-step">
+                <div class="step-num">02</div>
+                <div class="step-content">
+                  <div class="card step-card">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <div class="card-img"><img class="" src="Content/img/explore/senior_intro_02.jpg" alt=""></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">知識、技能與能力</h5>
+                          <p class="card-text">在各職科將學習哪些知識及技能呢？以表格清楚呈現各職科重點課程及學習內容，同學並可透過實習課照片先一探究竟！</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-step">
+                <div class="step-num">03</div>
+                <div class="step-content">
+                  <div class="card step-card">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <div class="card-img"><img class="" src="Content/img/explore/senior_intro_03.jpg" alt=""></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">興趣及特質</h5>
+                          <p class="card-text">若就讀的職科能符合自己性向及興趣，那學習將變成一件快樂的事！可參考各職科建議學生具備的能力、特質，同時配合你/妳做的性向、興趣測驗結果，選擇適合自己的職科。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-step">
+                <div class="step-num">04</div>
+                <div class="step-content">
+                  <div class="card step-card">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <div class="card-img"><img class="" src="Content/img/explore/senior_intro_04.jpg" alt=""></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">證照及競賽</h5>
+                          <p class="card-text">進入各職科之後，將培養不同的專業能力，透過參加技能檢定及各項技能競賽，不僅能檢視自己的學習狀況，更能為升學加分喔!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-step">
+                <div class="step-num">05</div>
+                <div class="step-content">
+                  <div class="card step-card">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <div class="card-img"><img class="" src="Content/img/explore/senior_intro_05.jpg" alt=""></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">如何進入此職科</h5>
+                          <p class="card-text">找到自己想念的職科了嗎?哪些學校設有這些職科呢?依分發區列出設有各職科的高職及五專學校，方便同學查詢，並可直接連結到各校網站，取得更多資訊。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-step">
+                <div class="step-num">06</div>
+                <div class="step-content">
+                  <div class="card step-card">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <div class="card-img"><img class="" src="Content/img/explore/senior_intro_06.jpg" alt=""></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">未來進路</h5>
+                          <p class="card-text">分別介紹各職科未來的升學及就業方向，升學部分包括升學管道、大學相關科系的整理，就業部分除了介紹可從事的相關產業及職務，同時以兩位成功人士的奮鬥故事，作為同學的學習典典範。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guide-step">
+                <div class="step-num">07</div>
+                <div class="step-content">
+                  <div class="card step-card">
+                    <div class="row g-0">
+                      <div class="col-md-3">
+                        <div class="card-img"><img class="" src="Content/img/explore/senior_intro_07.jpg" alt=""></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">經驗分享談</h5>
+                          <p class="card-text">藉由學長姐的心得分享、老師提供的學習建議與相關新聞報導，同學可以更充分了解各職科，也瞭解進入各職科之前可以先做的準備，未來學習路上將更能得心應手。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal#guideModal End -->
+  </main>
+  <footer>
+  </footer>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a>
 </form>
-<!-- ------- ------- ------- ------- ------- ------- ------- --> 
-<!-- ------- ------- ------- ------- ------- ------- ------- --> 
-<!-- ------- ------- ------- ------- ------- ------- ------- --> 
-<!-- JavaScript Libraries --> 
-<script src="Content/js/jquery-3.4.1.min.js"></script> 
-<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
-<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
-<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- JavaScript Libraries -->
+<script src="Content/js/jquery-3.4.1.min.js"></script>
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
-<!-- This web Javascript --> 
-<script src="Content/js/fn.js"></script> 
-<script src="Content/js/main.js"></script> 
+<!-- This web Javascript -->
+<script src="Content/js/fn.js"></script>
+<script src="Content/js/main.js"></script>
 <script>
-
+$('.explore-card .row').masonry({
+  itemSelector: '.col'
+});
 </script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modalElement = document.getElementById('guideModal');
+            const scrollContainer = document.getElementById('modalScrollTarget');
+            const timelineLine = document.getElementById('guideTimeline');
+            const steps = document.querySelectorAll('.guide-step');
+
+            function updateTimeline() {
+                // 1. 基礎位置計算
+                const containerRect = scrollContainer.getBoundingClientRect();
+                const triggerPoint = containerRect.top + (containerRect.height * 0.7); // 判定觸發點設在容器較下方 (70%)
+                
+                // 2. 偵測是否已捲動到底部
+                const isAtBottom = Math.abs(scrollContainer.scrollHeight - scrollContainer.scrollTop - scrollContainer.clientHeight) < 5;
+
+                let lastActiveIndex = -1;
+
+                steps.forEach((step, index) => {
+                    const rect = step.getBoundingClientRect();
+                    const stepTop = rect.top;
+
+                    // 邏輯判定：如果步驟頂部超過觸發點，或是已經捲動到最底部且這是最後一項
+                    if (stepTop < triggerPoint || (isAtBottom && index === steps.length - 1)) {
+                        step.classList.add('active');
+                        lastActiveIndex = index;
+                    }
+                });
+
+                // 3. 更新進度線條
+                if (lastActiveIndex !== -1) {
+                    const totalSteps = steps.length;
+                    
+                    // 根據目前啟動到第幾個 index 來分配百分比 (平均分配進度)
+                    // 這樣即便最後一項位置捲不上來，也能確保線條視覺上能到頂
+                    let percentage = (lastActiveIndex / (totalSteps - 1)) * 100;
+                    
+                    // 強制修正：最後一個 index 啟動時，百分比一定是 100
+                    if (lastActiveIndex === totalSteps - 1) {
+                        percentage = 100;
+                    }
+
+                    timelineLine.style.setProperty('--line-height', `${percentage}%`);
+                } else {
+                    timelineLine.style.setProperty('--line-height', `0%`);
+                }
+            }
+
+            // 監聽捲動
+            scrollContainer.addEventListener('scroll', updateTimeline);
+
+            // Modal 顯示後初始化位置
+            modalElement.addEventListener('shown.bs.modal', () => {
+                updateTimeline();
+            });
+
+            // 重設狀態
+            modalElement.addEventListener('hidden.bs.modal', () => {
+                steps.forEach(s => s.classList.remove('active'));
+                timelineLine.style.setProperty('--line-height', `0%`);
+                scrollContainer.scrollTop = 0;
+            });
+        });
+    </script>
 </body>
 </html>

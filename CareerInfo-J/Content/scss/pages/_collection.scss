@@ -4,9 +4,9 @@
 	}
 }
 
-.collection-nav{
+/*.collection-nav{
 	background: linear-gradient(to bottom, $white 0%, rgba($disc, .2) 100%);	
-}
+}*/
 
 .collection-disc, .collection-cate, .collection-dept{
 	position: relative;
@@ -64,7 +64,7 @@
 .collection-disc{//學門
 	background: linear-gradient(to bottom, rgba($sky, .2)   0%, rgba($purple, .2) 100%); 
 	.collection-title{
-		color: $disc;	
+		//color: $disc;	
 	} 
 	.futuristic-frame{
 		border-bottom-left-radius: 0;

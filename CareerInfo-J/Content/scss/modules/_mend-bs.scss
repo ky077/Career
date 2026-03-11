@@ -105,3 +105,12 @@
 		}
 	}
 }
+
+.modal {
+	backdrop-filter: blur(10px);
+	box-shadow: 0 .125rem .25rem rgba($secondary, .075);
+  .modal-content {
+		background-color: rgba($white, .85);
+		box-shadow: 0 0 1rem rgba($secondary, .25);
+  }
+}

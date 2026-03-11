@@ -12,33 +12,25 @@
 @import "master/main";
 
 @import "modules/animate"; 
-@import "modules/back-to-top"; 
-@import "modules/academic";   
-@import "modules/metrics";   
+@import "modules/back-to-top";  
 @import "modules/mend-bs"; 
 @import "modules/page-header"; 
 @import "modules/spinner"; 
 @import "modules/UI";  
 
 @import "pages/index"; 
-@import "pages/explore";
-@import "pages/exploreTip";
-@import "pages/compare";
-@import "pages/compareList";
-@import "pages/test";
-@import "pages/collection";
 @import "pages/news"; 
-@import "pages/qa"; 
 @import "pages/intro"; 
+@import "pages/explore";
 @import "pages/contact"; 
 @import "pages/login"; 
 @import "pages/register"; 
 @import "pages/resetPD"; 
-@import "pages/myRecommend"; 
+
 
 /* ******* ******* ******* ******* ******* ******* ******* 
 [Author] 
-  =>  KyLin at NTNU, 2024-2025
+  =>  KyLin at NTNU, 2025-2026
 
 [References]
   =>  Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/

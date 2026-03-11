@@ -36,21 +36,17 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #0068b7 !default;//#0d6efd !default;
-$indigo:  #4b0082 !default;//#6610f2 !default;
-$purple:  #8a2be2 !default;//#6f42c1 !default;
-$pink:    #d63384 !default;//#d63384 !default;
-$red:     #d62839 !default;//#dc3545 !default;
-$orange:  #fd7e14 !default;//#FFB930 !default;//#fd7e14 !default;
-$yellow:  #fff799 !default;//#ffc107 !default;
-$green:   #38b39a !default;//#198754 !default;
-$teal:    #20c997 !default;//#20c997 !default;
-$cyan:    #00bcd4 !default;//#0dcaf0 !default;
-$sky:	  	#15a9dd !default;//
-$disc:    #454acd !default;//
-$cate:    #b02fb3 !default;//
-$dept:    #eb5143 !default;//
-$golden:  #ffb703 !default;//
+$blue:    #0068b7 !default;//cg. #0d6efd !default;
+$indigo:  #4b0082 !default;//cg. #6610f2 !default;
+$purple:  #8a2be2 !default;//cg. #6f42c1 !default;
+$pink:    #d63384 !default;//cg. #d63384 !default;
+$red:     #d62839 !default;//cg. #dc3545 !default;
+$orange:  #fd7e14 !default;//cg. #fd7e14 !default;
+$yellow:  #fff799 !default;//cg. #ffc107 !default;
+$green:   #38b39a !default;//cg. #198754 !default;
+$teal:    #20c997 !default;//cg. #20c997 !default;
+$cyan:    #15a9dd !default;//cg. #0dcaf0 !default;
+$golden:  #ffb703 !default;//cg. 
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -65,18 +61,17 @@ $colors: (
   "green":      $green,
   "teal":       $teal,
   "cyan":       $cyan,
-  "sky":        $sky,//
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800,
-  "golden":     $golden
+  "golden":     $golden//cg. 
 ) !default;
 // scss-docs-end colors-map
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio:   2.0 !default; //
+$min-contrast-ratio:   2.0 !default; //cg. 
 
 // Customize the light and dark text colors for use in our color contrast function.
 $color-contrast-dark:      $black !default;
@@ -183,75 +178,15 @@ $cyan-700: shade-color($cyan, 40%) !default;
 $cyan-800: shade-color($cyan, 60%) !default;
 $cyan-900: shade-color($cyan, 80%) !default;
 
-$sky-100: tint-color($sky, 80%) !default; //
-$sky-200: tint-color($sky, 60%) !default; //
-$sky-300: tint-color($sky, 40%) !default; //
-$sky-400: tint-color($sky, 20%) !default; //
-$sky-500: $sky !default;				  //
-$sky-600: shade-color($sky, 20%) !default;//
-$sky-700: shade-color($sky, 40%) !default;//
-$sky-800: shade-color($sky, 60%) !default;//
-$sky-900: shade-color($sky, 80%) !default;//
-
-$disc-100: tint-color($disc, 80%) !default; //
-$disc-200: tint-color($disc, 60%) !default; //
-$disc-300: tint-color($disc, 40%) !default; //
-$disc-400: tint-color($disc, 20%) !default; //
-$disc-500: $disc !default;				  //
-$disc-600: shade-color($disc, 20%) !default;//
-$disc-700: shade-color($disc, 40%) !default;//
-$disc-800: shade-color($disc, 60%) !default;//
-$disc-900: shade-color($disc, 80%) !default;//
-
-$cate-100: tint-color($cate, 80%) !default; //
-$cate-200: tint-color($cate, 60%) !default; //
-$cate-300: tint-color($cate, 40%) !default; //
-$cate-400: tint-color($cate, 20%) !default; //
-$cate-500: $cate !default;				  //
-$cate-600: shade-color($cate, 20%) !default;//
-$cate-700: shade-color($cate, 40%) !default;//
-$cate-800: shade-color($cate, 60%) !default;//
-$cate-900: shade-color($cate, 80%) !default;//
-
-$dept-100: tint-color($dept, 80%) !default; //
-$dept-200: tint-color($dept, 60%) !default; //
-$dept-300: tint-color($dept, 40%) !default; //
-$dept-400: tint-color($dept, 20%) !default; //
-$dept-500: $dept !default;				      //
-$dept-600: shade-color($dept, 20%) !default;//
-$dept-700: shade-color($dept, 40%) !default;//
-$dept-800: shade-color($dept, 60%) !default;//
-$dept-900: shade-color($dept, 80%) !default;//
-
-$fav-100: tint-color($red, 80%) !default; //
-$fav-200: tint-color($red, 60%) !default; //
-$fav-300: tint-color($red, 40%) !default; //
-$fav-400: tint-color($red, 20%) !default; //
-$fav-500: $red !default;				  //
-$fav-600: shade-color($red, 20%) !default;//
-$fav-700: shade-color($red, 40%) !default;//
-$fav-800: shade-color($red, 60%) !default;//
-$fav-900: shade-color($red, 80%) !default;//
-
-$cmp-100: tint-color($teal, 80%) !default; //
-$cmp-200: tint-color($teal, 60%) !default; //
-$cmp-300: tint-color($teal, 40%) !default; //
-$cmp-400: tint-color($teal, 20%) !default; //
-$cmp-500: $teal !default;				   //
-$cmp-600: shade-color($teal, 20%) !default;//
-$cmp-700: shade-color($teal, 40%) !default;// 
-$cmp-800: shade-color($teal, 60%) !default;//
-$cmp-900: shade-color($teal, 80%) !default;//
-
-$golden-100: tint-color($golden, 80%) !default; //
-$golden-200: tint-color($golden, 60%) !default; //
-$golden-300: tint-color($golden, 40%) !default; //
-$golden-400: tint-color($golden, 20%) !default; //
-$golden-500: $golden !default;				   //
-$golden-600: shade-color($golden, 20%) !default;//
-$golden-700: shade-color($golden, 40%) !default;// 
-$golden-800: shade-color($golden, 60%) !default;//
-$golden-900: shade-color($golden, 80%) !default;//
+$golden-100: tint-color($golden, 80%) !default; //cg.
+$golden-200: tint-color($golden, 60%) !default; //cg.
+$golden-300: tint-color($golden, 40%) !default; //cg.
+$golden-400: tint-color($golden, 20%) !default; //cg.
+$golden-500: $golden !default;				   				//cg.
+$golden-600: shade-color($golden, 20%) !default;//cg.
+$golden-700: shade-color($golden, 40%) !default;//cg.
+$golden-800: shade-color($golden, 60%) !default;//cg.
+$golden-900: shade-color($golden, 80%) !default;//cg.
 
 $blues: (
   "blue-100": $blue-100,
@@ -373,66 +308,6 @@ $cyans: (
   "cyan-900": $cyan-900
 ) !default;
 
-$discs: (
-  "disc-100": $disc-100,
-  "disc-200": $disc-200,
-  "disc-300": $disc-300,
-  "disc-400": $disc-400,
-  "disc-500": $disc-500,
-  "disc-600": $disc-600,
-  "disc-700": $disc-700,
-  "disc-800": $disc-800,
-  "disc-900": $disc-900
-) !default;
-
-$cates: (
-  "cate-100": $cate-100,
-  "cate-200": $cate-200,
-  "cate-300": $cate-300,
-  "cate-400": $cate-400,
-  "cate-500": $cate-500,
-  "cate-600": $cate-600,
-  "cate-700": $cate-700,
-  "cate-800": $cate-800,
-  "cate-900": $cate-900
-) !default;
-
-$depts: (
-  "dept-100": $dept-100,
-  "dept-200": $dept-200,
-  "dept-300": $dept-300,
-  "dept-400": $dept-400,
-  "dept-500": $dept-500,
-  "dept-600": $dept-600,
-  "dept-700": $dept-700,
-  "dept-800": $dept-800,
-  "dept-900": $dept-900
-) !default;
-
-$favs: (
-  "fav-100": $fav-100,
-  "fav-200": $fav-200,
-  "fav-300": $fav-300,
-  "fav-400": $fav-400,
-  "fav-500": $fav-500,
-  "fav-600": $fav-600,
-  "fav-700": $fav-700,
-  "fav-800": $fav-800,
-  "fav-900": $fav-900
-) !default;
-
-$cmps: (
-  "cmp-100": $cmp-100,
-  "cmp-200": $cmp-200,
-  "cmp-300": $cmp-300,
-  "cmp-400": $cmp-400,
-  "cmp-500": $cmp-500,
-  "cmp-600": $cmp-600,
-  "cmp-700": $cmp-700,
-  "cmp-800": $cmp-800,
-  "cmp-900": $cmp-900
-) !default;
-
 $goldens: (
   "golden-100": $golden-100,
   "golden-200": $golden-200,
@@ -447,20 +322,15 @@ $goldens: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $orange !default;//$blue !default;
-$secondary:     $blue !default;//$gray-600 !default;
-$tertiary:      $yellow !default;//
+$primary:       $orange !default; //cg. $blue !default;
+$secondary:     $blue !default;		//cg. $gray-600 !default;
+$tertiary:      $yellow !default; //cg. 
 $success:       $green !default;
-$info:          $sky !default;
-$warning:       $golden !default;//$yellow !default;
+$info:          $cyan !default;
+$warning:       $golden !default;//cg. $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
-$disc:          $disc !default;//
-$cate:          $cate !default;//
-$dept:          $dept !default;//
-$fav:           $red !default;//
-$cmp:           $teal !default;//
 
 // scss-docs-end theme-color-variables
 
@@ -468,62 +338,89 @@ $cmp:           $teal !default;//
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
-  "tertiary":   $tertiary,//
+  "tertiary":   $tertiary,//cg. 
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark,
-  "disc":       $disc,//
-  "cate":       $cate,//
-  "dept":       $dept,//
-  "fav":        $fav,//
-  "cmp":        $cmp//
+  "dark":       $dark
 ) !default;
 // scss-docs-end theme-colors-map
 
 //custom fusv-disable
-$primary-100: tint-color($primary, 80%) !default; //
-$primary-200: tint-color($primary, 60%) !default; //
-$primary-300: tint-color($primary, 40%) !default; //
-$primary-400: tint-color($primary, 20%) !default; //
-$primary-500: $primary !default;				  //
-$primary-600: shade-color($primary, 20%) !default;//
-$primary-700: shade-color($primary, 40%) !default;//
-$primary-800: shade-color($primary, 60%) !default;//
-$primary-900: shade-color($primary, 80%) !default;//
+$primary-100: tint-color($primary, 80%) !default; //.cg
+$primary-200: tint-color($primary, 60%) !default; //.cg
+$primary-300: tint-color($primary, 40%) !default; //.cg
+$primary-400: tint-color($primary, 20%) !default; //.cg
+$primary-500: $primary !default;				  				//.cg
+$primary-600: shade-color($primary, 20%) !default;//.cg
+$primary-700: shade-color($primary, 40%) !default;//.cg
+$primary-800: shade-color($primary, 60%) !default;//.cg
+$primary-900: shade-color($primary, 80%) !default;//.cg
 
-$secondary-100: tint-color($secondary, 80%) !default; //
-$secondary-200: tint-color($secondary, 60%) !default; //
-$secondary-300: tint-color($secondary, 40%) !default; //
-$secondary-400: tint-color($secondary, 20%) !default; //
-$secondary-500: $secondary !default;				  //
-$secondary-600: shade-color($secondary, 20%) !default;//
-$secondary-700: shade-color($secondary, 40%) !default;//
-$secondary-800: shade-color($secondary, 60%) !default;//
-$secondary-900: shade-color($secondary, 80%) !default;//
+$secondary-100: tint-color($secondary, 80%) !default; //.cg
+$secondary-200: tint-color($secondary, 60%) !default; //.cg
+$secondary-300: tint-color($secondary, 40%) !default; //.cg
+$secondary-400: tint-color($secondary, 20%) !default; //.cg
+$secondary-500: $secondary !default;				  				//.cg
+$secondary-600: shade-color($secondary, 20%) !default;//.cg
+$secondary-700: shade-color($secondary, 40%) !default;//.cg
+$secondary-800: shade-color($secondary, 60%) !default;//.cg
+$secondary-900: shade-color($secondary, 80%) !default;//.cg
 
-$tertiary-100: tint-color($tertiary, 80%) !default; //
-$tertiary-200: tint-color($tertiary, 60%) !default; //
-$tertiary-300: tint-color($tertiary, 40%) !default; //
-$tertiary-400: tint-color($tertiary, 20%) !default; //
-$tertiary-500: $tertiary !default;				    //
-$tertiary-600: shade-color($tertiary, 20%) !default;//
-$tertiary-700: shade-color($tertiary, 40%) !default;//
-$tertiary-800: shade-color($tertiary, 60%) !default;//
-$tertiary-900: shade-color($tertiary, 80%) !default;//
+$tertiary-100: tint-color($tertiary, 80%) !default; //.cg
+$tertiary-200: tint-color($tertiary, 60%) !default; //.cg
+$tertiary-300: tint-color($tertiary, 40%) !default; //.cg
+$tertiary-400: tint-color($tertiary, 20%) !default; //.cg
+$tertiary-500: $tertiary !default;				    			//.cg
+$tertiary-600: shade-color($tertiary, 20%) !default;//.cg
+$tertiary-700: shade-color($tertiary, 40%) !default;//.cg
+$tertiary-800: shade-color($tertiary, 60%) !default;//.cg
+$tertiary-900: shade-color($tertiary, 80%) !default;//.cg
+
+$info-100: tint-color($info, 80%) !default; //.cg
+$info-200: tint-color($info, 60%) !default; //.cg
+$info-300: tint-color($info, 40%) !default; //.cg
+$info-400: tint-color($info, 20%) !default; //.cg
+$info-500: $info !default;				    			//.cg
+$info-600: shade-color($info, 20%) !default;//.cg
+$info-700: shade-color($info, 40%) !default;//.cg
+$info-800: shade-color($info, 60%) !default;//.cg
+$info-900: shade-color($info, 80%) !default;//.cg
+
+$warning-100: tint-color($warning, 80%) !default; //.cg
+$warning-200: tint-color($warning, 60%) !default; //.cg
+$warning-300: tint-color($warning, 40%) !default; //.cg
+$warning-400: tint-color($warning, 20%) !default; //.cg
+$warning-500: $warning !default;				    			//.cg
+$warning-600: shade-color($warning, 20%) !default;//.cg
+$warning-700: shade-color($warning, 40%) !default;//.cg
+$warning-800: shade-color($warning, 60%) !default;//.cg
+$warning-900: shade-color($warning, 80%) !default;//.cg
 
 $primarys: (
-  "sky-100": $sky-100,
-  "sky-200": $sky-200,
-  "sky-300": $sky-300,
-  "sky-400": $sky-400,
-  "sky-500": $sky-500,
-  "sky-600": $sky-600,
-  "sky-700": $sky-700,
-  "sky-800": $sky-800,
-  "sky-900": $sky-900
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-300": $primary-300,
+  "primary-400": $primary-400,
+  "primary-500": $primary-500,
+  "primary-600": $primary-600,
+  "primary-700": $primary-700,
+  "primary-800": $primary-800,
+  "primary-900": $primary-900
+) !default;
+
+$secondarys: (
+  "secondary-100": $secondary-100,
+  "secondary-200": $secondary-200,
+  "secondary-300": $secondary-300,
+  "secondary-400": $secondary-400,
+  "secondary-500": $secondary-500,
+  "secondary-600": $secondary-600,
+  "secondary-700": $secondary-700,
+  "secondary-800": $secondary-800,
+  "secondary-900": $secondary-900
 ) !default;
 
 $tertiarys: (
@@ -598,7 +495,7 @@ $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  true !default;
 $enable-validation-icons:     true !default;
-$enable-negative-margins:     true !default;//false !default;
+$enable-negative-margins:     true !default;//cg. false !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
@@ -669,10 +566,10 @@ $body-emphasis-color:       $black !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         none !default;//underline !default;
+$link-decoration:                         none !default;//cg. underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
-$link-hover-decoration:                   underline !default;//null !default;
+$link-hover-decoration:                   underline !default;//cg. null !default;
 
 $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
@@ -740,7 +637,7 @@ $container-max-widths: (
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           1.5rem !default;
-$grid-row-columns:            12 !default;//6 !default;
+$grid-row-columns:            12 !default;//cg. 6 !default;
 
 // Container padding
 
@@ -825,8 +722,8 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Orbitron', 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Heiti TC', 'LiHei Pro', sans-serif !default;//system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:      'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Heiti TC', 'LiHei Pro', sans-serif !default;//cg. system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       'Orbitron', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
@@ -1071,7 +968,7 @@ $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 $btn-link-color:              var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color:     $gray-600 !default;
-$btn-link-focus-shadow-rgb:   to-rgb(mix($link-color, $link-color, 15%)) !default;//$btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
+$btn-link-focus-shadow-rgb:   to-rgb(mix($link-color, $link-color, 15%)) !default;//cg. $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           var(--#{$prefix}border-radius) !default;
@@ -1112,7 +1009,7 @@ $form-label-color:                      null !default;
 // scss-docs-start form-input-variables
 $input-padding-y:                       $input-btn-padding-y !default;
 $input-padding-x:                       $input-btn-padding-x !default;
-$input-font-family:                     $input-btn-font-family !default;
+$input-font-family:                     'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Heiti TC', 'LiHei Pro', sans-serif !default;//cg. $input-btn-font-family !default;
 $input-font-size:                       $input-btn-font-size !default;
 $input-font-weight:                     $font-weight-base !default;
 $input-line-height:                     $input-btn-line-height !default;
@@ -1145,10 +1042,10 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               var(--#{$prefix}gray-500) !default;//var(--#{$prefix}secondary-color) !default;
+$input-placeholder-color:               var(--#{$prefix}gray-500) !default;//cg. var(--#{$prefix}secondary-color) !default;
 $input-plaintext-color:                 var(--#{$prefix}body-color) !default;
 
-$input-height-border:                   calc(#{$input-border-width} * 2) !default; // stylelint-disable-line function-disallowed-list
+$input-height-border:                   calc(#{$input-border-width} * 2) !default; //cg. stylelint-disable-line function-disallowed-list
 
 $input-height-inner:                    add($input-line-height * 1em, $input-padding-y * 2) !default;
 $input-height-inner-half:               add($input-line-height * .5em, $input-padding-y) !default;
@@ -1388,7 +1285,7 @@ $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
-$nav-link-color:                    var(--#{$prefix}gray-700) !default;//var(--#{$prefix}link-color) !default;
+$nav-link-color:                    var(--#{$prefix}gray-700) !default;//cg. var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           var(--#{$prefix}secondary-color) !default;
@@ -1398,7 +1295,7 @@ $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
 $nav-tabs-border-width:             var(--#{$prefix}border-width) !default;
 $nav-tabs-border-radius:            var(--#{$prefix}border-radius) !default;
 $nav-tabs-link-hover-border-color:  var(--#{$prefix}secondary-bg) var(--#{$prefix}secondary-bg) $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        var(--#{$prefix}link-color) !default;//var(--#{$prefix}emphasis-color) !default;
+$nav-tabs-link-active-color:        var(--#{$prefix}link-color) !default;//cg. var(--#{$prefix}emphasis-color) !default;
 $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg !default;
 
@@ -1408,7 +1305,7 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-underline-gap:                 1rem !default;
 $nav-underline-border-width:        .125rem !default;
-$nav-underline-link-active-color:   var(--#{$prefix}link-color) !default;//var(--#{$prefix}emphasis-color) !default;
+$nav-underline-link-active-color:   var(--#{$prefix}link-color) !default;//cg. var(--#{$prefix}emphasis-color) !default;
 // scss-docs-end nav-variables
 
 
@@ -1429,7 +1326,7 @@ $navbar-brand-margin-end:           1rem !default;
 
 $navbar-toggler-padding-y:          .25rem !default;
 $navbar-toggler-padding-x:          .75rem !default;
-$navbar-toggler-font-size:          $font-size-base !default;//$font-size-lg !default;
+$navbar-toggler-font-size:          $font-size-base !default;//cg. $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
@@ -1591,12 +1488,12 @@ $card-group-margin:                 $grid-gutter-width * .5 !default;
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:                     1.5rem !default;//1rem !default;
+$accordion-padding-y:                     1.5rem !default;//cg. 1rem !default;
 $accordion-padding-x:                     1.25rem !default;
 $accordion-color:                         var(--#{$prefix}body-color) !default;
-$accordion-bg:                            transparent !default;//var(--#{$prefix}body-bg) !default;
+$accordion-bg:                            transparent !default;//cg. var(--#{$prefix}body-bg) !default;
 $accordion-border-width:                  var(--#{$prefix}border-width) !default;
-$accordion-border-color:                  tint-color($primary, 60%) !default;//var(--#{$prefix}border-color) !default;
+$accordion-border-color:                  tint-color($primary, 60%) !default;//cg. var(--#{$prefix}border-color) !default;
 $accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
 
@@ -1605,20 +1502,20 @@ $accordion-body-padding-x:                $accordion-padding-x !default;
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
-$accordion-button-color:                  var(--#{$prefix}gray-700) !default;//var(--#{$prefix}body-color) !default;
+$accordion-button-color:                  var(--#{$prefix}gray-700) !default;//cg. var(--#{$prefix}body-color) !default;
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg:              var(--#{$prefix}accordion-bg) !default; // var(--#{$prefix}primary-bg-subtle) !default;
-$accordion-button-active-color:           var(--#{$prefix}primary) !default;//var(--#{$prefix}primary-text-emphasis) !default;
+$accordion-button-active-bg:              var(--#{$prefix}accordion-bg) !default; //cg. var(--#{$prefix}primary-bg-subtle) !default;
+$accordion-button-active-color:           var(--#{$prefix}primary) !default;//cg. var(--#{$prefix}primary-text-emphasis) !default;
 
 // fusv-disable
 $accordion-button-focus-border-color:     $input-focus-border-color !default; // Deprecated in v5.3.3
 // fusv-enable
-$accordion-button-focus-box-shadow:        none !default;//$btn-focus-box-shadow !default;
+$accordion-button-focus-box-shadow:        none !default;//cg. $btn-focus-box-shadow !default;
 
 $accordion-icon-width:                    1.25rem !default;
 $accordion-icon-color:                    $body-color !default;
-$accordion-icon-active-color:             $primary !default;//$primary-text-emphasis !default;
+$accordion-icon-active-color:             $primary !default;//cg. $primary-text-emphasis !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
 $accordion-icon-transform:                rotate(-180deg) !default;
 
@@ -1629,8 +1526,8 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 // Tooltips
 
 // scss-docs-start tooltip-variables
-$tooltip-font-size:                 $font-size-sm*.85 !default;//$font-size-sm !default;
-$tooltip-max-width:                 300px !default;//200px !default;
+$tooltip-font-size:                 $font-size-sm*.85 !default;//cg. $font-size-sm !default;
+$tooltip-max-width:                 300px !default;//cg. 200px !default;
 $tooltip-color:                     var(--#{$prefix}body-bg) !default;
 $tooltip-bg:                        var(--#{$prefix}emphasis-color) !default;
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
@@ -1737,15 +1634,15 @@ $modal-title-line-height:           $line-height-base !default;
 
 $modal-content-color:               null !default;
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
-$modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
+$modal-content-border-color:        transparent !default;//cg. var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       var(--#{$prefix}box-shadow-sm) !default;
 $modal-content-box-shadow-sm-up:    var(--#{$prefix}box-shadow) !default;
 
-$modal-backdrop-bg:                 $black !default;
-$modal-backdrop-opacity:            .5 !default;
+$modal-backdrop-bg:                 $white !default;//cg. $black !default;
+$modal-backdrop-opacity:            .75 !default;//cg. .5 !default;
 
 $modal-header-border-color:         var(--#{$prefix}border-color) !default;
 $modal-header-border-width:         $modal-content-border-width !default;
@@ -1808,7 +1705,7 @@ $progress-bar-transition:           width .6s ease !default;
 
 // scss-docs-start list-group-variables
 $list-group-color:                  var(--#{$prefix}body-color) !default;
-$list-group-bg:                     inherit !default;//var(--#{$prefix}body-bg) !default;
+$list-group-bg:                     inherit !default;//cg. var(--#{$prefix}body-bg) !default;
 $list-group-border-color:           var(--#{$prefix}border-color) !default;
 $list-group-border-width:           var(--#{$prefix}border-width) !default;
 $list-group-border-radius:          var(--#{$prefix}border-radius) !default;
