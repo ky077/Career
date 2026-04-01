@@ -23,8 +23,20 @@
 		padding-bottom: 0;
 		text-align: center;
 		display: flex;
-		align-items: center;
 		justify-content: center;
+		align-items: center;    
+  	min-height: 100%;
+		&::-webkit-scrollbar{  
+			width: 10px;     
+			background-color: transparent;
+		}  
+		&::-webkit-scrollbar-track {
+			background-color:  transparent;
+		} 
+		&::-webkit-scrollbar-thumb {
+			background-color: $primary;
+			border-radius: 10px;
+		}
 	} 
 	.robot-frame{ 
 		height: auto;
