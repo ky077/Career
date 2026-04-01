@@ -8,12 +8,13 @@
 
 @import "base/master";
 
+@import "mend/var";
+@import "mend/ui";
+@import "mend/textColor";
 @import "mend/bootstrap-fileinput";
 @import "mend/googleFontWeight";
 @import "mend/keyframes";
 @import "mend/record";
-@import "mend/textColor";
-@import "mend/ui";
 
 
 @import "pages/bot";
@@ -24,4 +25,6 @@
 @import "pages/guide";
 @import "pages/end";
 @import "pages/history";
+
+
 

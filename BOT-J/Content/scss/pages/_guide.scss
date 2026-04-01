@@ -18,7 +18,7 @@
 			filter: opacity(.25);
 		}
 	}
-	.modal-body{
+	.modal-body{ 
 		padding-top: 0;
 		padding-bottom: 0;
 		text-align: center;
@@ -43,6 +43,15 @@
 			}
 		}
 	}
+	.robot-frame.mission{  
+		.dialog {
+			width: 100%;
+			max-width: 100%;
+			.dialog-text{
+				overflow-y: visible;
+			}
+		}
+	}
 }
 
 .guide-img{
@@ -59,3 +68,178 @@
 .btn-outline-guide{
 	background-color: $white;
 }
+
+
+
+
+.mission-board{
+	display: flex;
+	flex-direction: column;
+	gap: map-get($spacers, 3);
+	align-items: center;
+	justify-content: center;
+	margin-top: map-get($spacers, 5);
+	margin-bottom: map-get($spacers, 5);
+	@media screen and (min-width: 992px) {
+	flex-direction: row;	
+	}
+	.mission-list{
+		display: flex;
+		flex-direction: column;
+		gap: map-get($spacers, 3);
+		align-items: center;
+		justify-content: center;
+		margin-top: map-get($spacers, 5);
+		margin-bottom: map-get($spacers, 5);
+		position: relative;
+		@media screen and (min-width: 992px) {
+		flex-direction: row;	
+		}
+		&::after{//線
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: -1;
+			background-color: rgba($mission-active-color, .25);
+			width: 5px;
+			height:  100%;
+			top: 0;
+			left: 50%;
+			right: auto;
+			bottom: 0;
+			transform: translateX(-50%);	
+			@media screen and (min-width: 992px) {
+			width: 100%;
+			height: 5px;
+			top: 50%;
+			left: 0;
+			right: 0;
+			bottom: auto;
+			transform: translateY(-50%);	
+			}
+		}
+	}
+}
+
+.mission-btn{
+	display: flex;
+	flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+	width: 100%;
+  height: 100%;  
+	min-width: 10rem;
+	border: 3px solid rgba($mission-default-color, .25);
+	border-radius: $border-radius-xl;
+	background-color: $white;
+	padding: 1rem;
+	position: relative;
+	transition: transform .35s ease;
+	.mission-btn-icon {
+		display: flex;
+		align-items: center;  
+  	justify-content: center;
+		width: 3rem;
+		height: 3rem;
+		background-color: rgba($mission-default-color, .2);
+		border-radius: 100%;
+		color: $mission-default-color;
+		font-size: 1.25rem;
+	}
+	.mission-btn-text {
+		color: $primary;
+		font-weight: 500;
+		margin: 1rem 0;
+		white-space: nowrap;
+	}
+	.mission-btn-progress{
+		font-size: $h8-font-size;
+		color: $mission-default-color;
+		background-color: rgba($mission-default-color, .25);
+		border: 1px solid rgba($mission-default-color, .5);
+		padding: 0 .5rem;
+		border-radius: 2rem;
+		margin-bottom: .25rem;
+		&::before{
+			content: "\f135";
+			font-family: "Font Awesome 6 Free"; 
+			font-weight: 900;	
+			margin-right: .25em;
+		}	
+	}
+	.mission-btn-note {
+		color: $mission-default-color;
+		font-size: .75rem;
+		text-transform: uppercase;
+	}
+	&:hover, &:focus, &:active,
+	&.hover, &.focus, &.active, {
+		transform: translateY(-.75rem);
+		box-shadow: 0 .5rem 1rem rgba($mission-active-color, .15);
+	}
+	&:disabled, &.disabled{
+		pointer-events: none;
+		cursor: not-allowed;
+		.mission-btn-text{
+			color: $mission-default-color;
+		}
+	}
+}
+.mission-btn.doing{
+	border: 3px solid rgba($mission-doing-color, .25);
+	.mission-btn-icon {
+		background-color: rgba($mission-doing-color, .2);
+		color: $mission-doing-color;
+	}
+	.mission-btn-progress{
+		color: $mission-doing-color;
+		background-color: rgba($mission-doing-color, .125);
+		border: 1px solid rgba($mission-doing-color, .25);
+		&::before{
+			content: "\f0e7";
+		}	
+	}
+	&:hover, &:focus, &:active,
+	&.hover, &.focus, &.active, {
+		box-shadow: 0 .5rem 1rem rgba($mission-doing-color, .15);
+	}
+}
+.mission-btn.done{
+	border: 3px solid rgba($mission-done-color, .25);
+	.mission-btn-icon {
+		background-color: rgba($mission-done-color, .2);
+		color: $mission-done-color;
+	}
+	.mission-btn-progress{
+		color: $mission-done-color;
+		background-color: rgba($mission-done-color, .125);
+		border: 1px solid rgba($mission-done-color, .25);
+		&::before{
+			content: "\f058";
+		}	
+	}
+	&:hover, &:focus, &:active,
+	&.hover, &.focus, &.active, {
+		box-shadow: 0 .5rem 1rem rgba($mission-done-color, .15);
+	}
+}
+
+.result-btn{
+	&.disabled, &[disabled], &[disabled="disabled"]{
+		 @include button-outline-variant($primary);
+		> i{
+			display: none;
+		}
+		&::after{
+			content: "\f023";
+			font-family: "Font Awesome 6 Free"; 
+			font-weight: 900;	
+			margin-left: .25em;
+		}
+	}
+	
+}
+
+
+
+

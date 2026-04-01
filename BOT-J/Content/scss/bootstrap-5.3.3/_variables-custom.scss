@@ -46,7 +46,7 @@ $yellow:  #fff799 !default;//#ffc107 !default;
 $green:   #006500 !default;//#198754 !default;
 $teal:    #00918e !default;//#20c997 !default;
 $cyan:    #47cacc !default;//#0dcaf0 !default;
-$sky:	  #15a9dd !default;//
+$sky:	    #15a9dd !default;//
 $disc:    #454acd !default;//
 $cate:    #b02fb3 !default;//
 $dept:    #eb5143 !default;//
@@ -471,7 +471,7 @@ $theme-colors: (
   "tertiary":   $tertiary,//
   "success":    $success,
   "info":       $info,
-  "warning":    $warning,
+  "warning":    $warning,//
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
@@ -646,7 +646,7 @@ $body-text-align:           null !default;
 $body-color:                $gray-900 !default;
 $body-bg:                   $white !default;
 
-$body-secondary-color:      $gray-700 !default;//rgba($body-color, .75) !default;
+$body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
 
 $body-tertiary-color:       rgba($yellow, 1) !default;//rgba($body-color, .5) !default;
@@ -848,6 +848,8 @@ $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * .875  !default;	 //cg.	
+$h8-font-size:                $font-size-base * .75  !default;	 //cg.	
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -857,7 +859,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size
 ) !default;
 // scss-docs-end font-sizes
 

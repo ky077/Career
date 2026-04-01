@@ -28,13 +28,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     text-align: left;
 }
 
-.btn{
-    &:disabled,
-    &.disabled,
-    &disabled, &[disabled="disabled"]{
-        filter: opacity(.5);    
-    }
-}
 .btn__circle{
     border-radius: 100%;
     width: calc(2em + 1rem + 1rem - 2px);

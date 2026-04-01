@@ -48,26 +48,31 @@
   <h1 class="header-logo"><span class="visually-hidden">自動化生涯諮詢系統</span></h1>
 </header>
 <main id="content">
-  <div class="container-fluid px-0 d-flex flex-column flex-md-row"> 
+  <div class="container-fluid px-0 d-flex flex-column flex-md-row">
     <!-- report-frame START -->
     <div class="report-frame wow animate__animated animate__fadeInUp">
       <div class="iframeBlock">
-        <iframe src="https://ky077.github.io/Career/REPORT-J/TIpaper-twJ.html" scrolling="no"  width="980" height="2772" frameborder="0"> </iframe>
+        <iframe src="https://ky077.github.io/Career/REPORT-J/TIpaper-twJ.html" scrolling="no"  width="980" height="2772" frameborder="0">
+        </iframe>
       </div>
     </div>
-    <!-- report-frame END --> 
+    <!-- report-frame END -->
     <!-- futuristic-frame START -->
     <div class="futuristic-frame chat wow animate__animated animate__zoomIn">
       <div class="futuristic-frame-border">
-        <div class="futuristic-frame-content px-0"> 
+        <div class="futuristic-frame-content px-0">
           <!-- -->
-          <div class="futuristic-frame-tool"> <a href="chatEnd.html" id="END"><i class="fa-solid fa-arrow-right-from-bracket me-1" aria-hidden="true" title="結束聊天"></i><span>結束聊天</span></a> </div>
+          <div class="futuristic-frame-tool">
+            <a href="chatEnd.html" id="END"><i class="fa-solid fa-arrow-right-from-bracket me-1" aria-hidden="true" title="結束聊天"></i><span>結束聊天</span></a>
+          </div>
           <!-- -->
-          <div class="chatInterface-bar"> </div>
+          <div class="chatInterface-bar">
+          </div>
           <!-- -->
           <div class="chatInterface-content">
             <div class="chatInterface-frame left">
-              <div class="avatar"> <span class="avatar-img"><img src="Content/images/Bot/avatar.png" alt="機器人頭像"></span></div>
+              <div class="avatar">
+                <span class="avatar-img"><img src="Content/images/Bot/avatar.png" alt="機器人頭像"></span></div>
               <div class="dialog">
                 <div class="dialog-text">
                   <button type="button" class="btn btn-link btn__playTitle" title="播放" onClick="PLAYTITLE(this, 'Content/temp/Hi, what’s your name_.mp3')"><span class="visually-hidden">播放</span></button>
@@ -92,74 +97,216 @@
             </div>
             <button type="button" class="btn btn-primary rounded-circle btn__record" onclick="REC(null, true)"><i class="fa-solid fa-microphone" aria-hidden="true"></i><span class="visually-hidden">錄音</span></button>
           </div>
-          <!-- --> 
+          <!-- -->
         </div>
       </div>
     </div>
-    <!-- futuristic-frame END --> 
+    <!-- futuristic-frame END -->
   </div>
 </main>
 
 <!-- Modal#start -->
-<div class="modal fade show modal-start" tabindex="-1" style="display: block;" aria-modal="true" role="dialog">
+<div class="modal fade show modal-start" id="startModal" tabindex="-1" style="display: block;">
   <div class="modal-dialog modal-fullscreen modal-dialog-centered">
     <div class="modal-content border-0">
       <div class="modal-body py-0 text-center">
-        <div class="d-inline-flex flex-column"> 
+        <div class="d-inline-flex flex-column">
           <!-- robot-frame START -->
-          <div class="robot-frame">
-            <div class="avatar"> <img src="Content/images/nice-hi.apng" alt=""/> </div>
+          <div class="robot-frame mission">
             <div class="dialog">
               <div class="dialog-text">
-                <div class="h4 lh-base">
-                  <div class="text-danger text-center fs-6">以下文字、流程待確認</div>
-                  嗨！我是Nice Career-Bot，專屬你的「生涯AI 導航員」。<br>
-                  <div class="text-muted fw-normal text-center fs-5">透過你的測驗結果，它就能快速分析你的興趣和潛力，<br>
-                    搭配學群、科系等資料，為你描繪一條專屬的職涯藍圖。 </div>
-                  <br>
-                  <div class="text-center fs-5"> 請先選擇你要進行的功能：<br>
-                    <a class="btn btn-outline-primary btn-lg rounded-pill m-2 px-5 link-scale" href="#" id="start">我要聊天</a> <a class="btn btn-outline-primary btn-lg rounded-pill m-2 px-5 link-scale" href="history.html">我要看諮詢紀錄</a> </div>
+                <h2 class="fw-bold">我的未來探索任務🚀</h2>
+                <div class="text-muted fw-normal text-center fs-6">你可以自由選擇想先開始的探索主題，也建議可依照系統安排的順序逐步完成，<br>
+                  讓系統更完整了解你的興趣、特質與未來方向。</div>
+                <div class="mission-board">
+                  <div class="avatar">
+                    <img src="Content/images/nice-hi.apng" alt=""/>
+                  </div>
+									<div class="mission-list">
+                  <button type="button" class="mission-btn done">
+                  <div class="mission-btn-icon"><i class="fa-solid fa-heart"></i></div>
+                  <div class="mission-btn-text">興趣類型導覽</div>
+										<div class="mission-btn-progress">已完成</div>	
+                  <div class="mission-btn-note">MISSION 1</div>
+                  </button>
+                  <button type="button" class="mission-btn doing">
+                  <div class="mission-btn-icon"><i class="fa-solid fa-trophy"></i></div>
+                  <div class="mission-btn-text">我的前三名興趣</div>
+										<div class="mission-btn-progress">進行中</div>	
+                  <div class="mission-btn-note">MISSION 2</div>
+                  </button>
+                  <button type="button" class="mission-btn">
+                  <div class="mission-btn-icon"><i class="fa-solid fa-map"></i></div>
+                  <div class="mission-btn-text">我的興趣地圖</div>
+									<div class="mission-btn-progress">尚未開始</div>	
+                  <div class="mission-btn-note">MISSION 3</div>
+                  </button>
+                  <button type="button" class="mission-btn done">
+                  <div class="mission-btn-icon"><i class="fa-solid fa-flag"></i></div>
+                  <div class="mission-btn-text">升學與職涯探索</div>
+									<div class="mission-btn-progress">已完成</div>		
+                  <div class="mission-btn-note">MISSION 4</div>
+                  </button>
+									</div>	
                 </div>
+                <hr class="text-primary my-5">
+								<!-- 鎖住 -->
+                <div class="text-center">
+                  <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-title="完成上方MISSION 2、3、4 探索任務，<br>即可看諮詢總結！">
+                  <a class="btn btn-primary btn-lg rounded-pill m-2 px-5 link-scale result-btn disabled" href="#" id="start">點我看諮詢總結</a>
+                  </span>
+                  <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-title="完成上方MISSION 2、3、4 探索任務，<br>即可找出適合方向！">
+                  <a class="btn btn-primary btn-lg rounded-pill m-2 px-5 link-scale result-btn disabled" href="#" id="start2">找出適合我的方向</a>
+                  </span>
+                </div>
+								<!-- 開啟 -->
+								<!--<div class="text-center">
+                  <a class="btn btn-primary btn-lg rounded-pill m-2 px-5 link-scale result-btn" href="#" id="start">點我看諮詢總結<i class="fa-regular fa-file-lines ms-1"></i></a>
+                  <a class="btn btn-primary btn-lg rounded-pill m-2 px-5 link-scale result-btn" href="#" id="start2">找出適合我的方向<i class="fa-regular fa-compass ms-1"></i></a>
+                </div>-->
               </div>
             </div>
           </div>
-          <!-- robot-frame END --> 
+          <!-- robot-frame END -->
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- ------- ------- ------- ------- ------- ------- ------- --> 
-<!-- ------- ------- ------- ------- ------- ------- ------- --> 
-<!-- ------- ------- ------- ------- ------- ------- ------- --> 
-<!-- JavaScript Libraries --> 
-<script src="Content/js/jquery-3.6.0.min.js"></script> 
-<script src="Content/js/bootstrap.bundle.min.js"></script> 
-<script src="Content/widgets/WOW-master/dist/wow.min.js"></script> 
 
-<!-- This web Javascript --> 
-<script src="Content/js/main.js"></script> 
+<!-- Modal#progress -->
+<div class="modal fade modal-progress" id="progressModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pb-5">
+        <!-- 進行到一半 start -->
+        <div class="mission-progress-doing text-center">
+          <h3>你上次還沒完成這個任務</h3>
+          <div class="text-secondary">上次對話時間：2026/03/18 21:34</div>
+          <div class="my-4">
+            <button class="btn btn-outline-primary btn-lg rounded-pill m-2 px-5 link-scale" id="reStart"><i class="fa-solid fa-arrow-rotate-left me-1"></i>重新開始</button>
+            <button class="btn btn-primary btn-lg rounded-pill m-2 px-5 link-scale" id="continue">繼續上次對話<i class="fa-solid fa-play ms-1"></i></button>
+          </div>
+          <div class="text-warning fs-8"><i class="fa-solid fa-triangle-exclamation me-1"></i>小提醒：重新開始後，上⼀段對話將會被覆蓋。</div>
+        </div>
+        <!-- 進行到一半  end  -->
+        
+        <!-- 已完成 start -->
+        <div class="mission-progress-done text-center">
+          <h3>這個任務你已經完成囉！</h3>
+          <div class="text-secondary">上次對話時間：2026/03/18 21:34</div>
+          <div class="my-4">
+            <button class="btn btn-outline-primary btn-lg rounded-pill m-3 px-5 link-scale" id="reStart2"><i class="fa-solid fa-arrow-rotate-left me-1"></i>重新開始</button>
+            <button class="btn btn-primary btn-lg rounded-pill m-3 px-5 link-scale" id="previous">查看之前對話<i class="fa-solid fa-file-lines ms-1"></i></button>
+          </div>
+          <div class="text-warning fs-8"><i class="fa-solid fa-triangle-exclamation me-1"></i>小提醒：重新開始後，上⼀段對話將會被覆蓋。</div>
+        </div>
+        <!-- 已完成  end  -->
+      </div>
+    </div>
+  </div>
+</div>
+	
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- JavaScript Libraries -->
+<script src="Content/js/jquery-3.6.0.min.js"></script>
+<script src="Content/js/bootstrap.bundle.min.js"></script>
+<script src="Content/widgets/WOW-master/dist/wow.min.js"></script>
+
+<!-- This web Javascript -->
+<script src="Content/js/doubleScorollbar.js"></script>
+<script src="Content/js/main.js"></script>
 <script>
-//開始
-$('[id*="start"]').click(function () { 
-  	$(".modal-start").hide();
-});	
+$(document).ready(function () {
 	
-//[結束對話]
-$('#END, #CHAT_END').click(function (e) { 
-	e.preventDefault();
+	// 恢復BS modal (預設css開啟#startModal)
+	$('#startModal').removeAttr('style')
+									.modal('show');
 	
-	var _href= $(this).attr('href');
+  // [點選任務]
+  $('.mission-btn').click(function () {
+    var bodyContent = '';
+
+    if ($(this).hasClass('doing')) {
+      bodyContent = 'doing';
+    } else if ($(this).hasClass('done')) {
+      bodyContent = 'done';
+    } else {
+      // 如果沒有 doing/done，直接關閉 startModal，進入對話
+      $('#startModal').modal('hide');
+      return;
+    }
+
+    // 顯示對應的 progress區塊，隱藏其他
+    $('.mission-progress-' + bodyContent).show()
+																			  	.siblings('[class^="mission-progress-"]')
+																				 .hide();
+
+    // 顯示 progressModal
+		$('#progressModal').modal('show');
+  });
+
+  // [重新開始] 
+  $('[id^="reStart"]').click(function () {
+    confirmModalDOM(`<div class="text-center">
+											<i class="fa-solid fa-triangle-exclamation fs-1 text-danger mb-3"></i>
+											<h3>確定要重新開始嗎？</h3>
+											<div class="text-secondary">這個動作會清空你目前的進度，<br><span class="text-danger">一旦開始後就無法復原囉！</span></div>
+											<div class="my-4 d-flex flex-column">
+												<button class="btn btn-danger btn-lg rounded-pill m-3 px-5 link-scale" id="reStart_confirm">確定清空並重新開始</button>
+												<button class="btn btn-outline-danger btn-lg rounded-pill m-3 px-5 link-scale" id="reStart_cancel" data-bs-dismiss="modal">先不要，我按錯了</button>
+											</div>
+										</div>`);
+
+		$('#confirmModal').one('shown.bs.modal', function () {
+			$(this).find('.text-center.mt-4.mb-3').remove();
+		});
+		
+		$('#reStart_confirm').click(function () { 
+			$('.modal').modal('hide');
+		});
+  });
+
+	// [查看之前對話]、[繼續上次對話]
+	$('#continue, #previous').click(function () { 
+		$('.modal').modal('hide');
+  });
 	
-	confirmModalDOM(`<div class="text-center">確定要結束對話嗎? </div>`);
+	// [結束對話]
+	$('#END').click(function (e) { 
+		e.preventDefault();
+
+		var _href= $(this).attr('href');
+
+		confirmModalDOM(`<div class="text-center">確定要結束對話嗎? </div>`);
+
+		$('#OK').click(function () { 
+			window.location = _href;	
+		});
+	});
 	
-	$('#OK').click(function () { 
-		window.location = _href;	
+	// #userTextarea 換行/送出
+	$('#userTextarea').on('keydown', function(e) {
+			if (e.key === 'Enter') {
+					if (e.shiftKey) {
+							// Shift + Enter：插入換行
+							return;
+					} else {
+							// Enter：送出
+							e.preventDefault(); // 防止換行
+				chat_analyze('type');
+					}
+			}
 	});
 });
 
 	
-//模擬分析loading
+// 模擬分析loading
 function chat_analyze(method) { 
 	var text; 
 	if( method == 'type'){
@@ -240,22 +387,9 @@ function chat_robot() {
 		
     }, 1000); // 模擬 loading 時間：1 秒
 }
-	
-//#userTextarea 換行/送出
-$('#userTextarea').on('keydown', function(e) {
-    if (e.key === 'Enter') {
-        if (e.shiftKey) {
-            // Shift + Enter：插入換行
-            return;
-        } else {
-            // Enter：送出
-            e.preventDefault(); // 防止換行
-			chat_analyze('type');
-        }
-    }
-});
-</script> 
+</script>
 <script>
+// 報表高度	
 $(window).on('resize',function() {
     var _blockW = $('.iframeBlock').outerWidth(), 
         _blockH = $('.iframeBlock').outerHeight(),
@@ -281,5 +415,99 @@ $(window).on('load',function() {
     $(window).trigger('resize');
 });    
 </script>
+<script>	
+	//DEMO
+$(document).ready(function () {
+
+  // 讀取 status，例如 ?status=2102
+  const status = getStatusFromQuery();
+
+  // 依 status 套用任務狀態
+  applyMissionStatus(status);
+
+  // 若任務 2、3、4 都已完成，解鎖 result-btn
+  unlockResultButtonsIfReady(status);
+});
+function getStatusFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  let status = (params.get('status') || '').trim();
+
+  // 只保留 0/1/2，避免髒資料
+  status = status.replace(/[^012]/g, '');
+
+  // 不足 4 碼補 0，超過 4 碼截斷
+  status = (status + '0000').slice(0, 4);
+
+  return status;
+}
+
+function getMissionStatusConfig(code) {
+  switch (code) {
+    case '1':
+      return {
+        className: 'doing',
+        text: '進行中'
+      };
+    case '2':
+      return {
+        className: 'done',
+        text: '已完成'
+      };
+    case '0':
+    default:
+      return {
+        className: '',
+        text: '尚未開始'
+      };
+  }
+}
+
+function applyMissionStatus(status) {
+  const $missions = $('.mission-list .mission-btn');
+
+  $missions.each(function (index) {
+    const code = status.charAt(index) || '0';
+    const config = getMissionStatusConfig(code);
+    const $btn = $(this);
+
+    // 先清掉狀態 class
+    $btn.removeClass('doing done');
+
+    // 補上對應 class
+    if (config.className) {
+      $btn.addClass(config.className);
+    }
+
+    // 更新文字
+    $btn.find('.mission-btn-progress').text(config.text);
+  });
+}
+
+function unlockResultButtonsIfReady(status) {
+  // 任務 2、3、4 => index 1,2,3 都要是 2
+  const isUnlocked =
+    status.charAt(1) === '2' &&
+    status.charAt(2) === '2' &&
+    status.charAt(3) === '2';
+
+  if (!isUnlocked) return;
+
+  $('.result-btn').each(function () {
+    const $btn = $(this);
+
+    // 移除 disabled 狀態
+    $btn.removeClass('disabled');
+    $btn.removeAttr('aria-disabled');
+    $btn.removeAttr('tabindex');
+
+    // 若外層被 tooltip span 包住，拆掉它
+    const $wrapper = $btn.parent('span[data-bs-toggle="tooltip"]');
+    if ($wrapper.length) {
+      $wrapper.replaceWith($btn);
+    }
+  });
+}
+
+	</script>	
 </body>
 </html>
