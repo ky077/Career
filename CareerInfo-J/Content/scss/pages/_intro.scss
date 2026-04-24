@@ -10,8 +10,10 @@
 				content: "";
 				display: inline-block;
 				width: 2.5rem;
-				height: 4px;
-				background-color: $primary;
+				height: 3px;
+				background: -webkit-linear-gradient(left,     $primary 0%, $tertiary 100%);
+				background:      -o-linear-gradient(left,     $primary 0%, $tertiary 100%);
+				background:         linear-gradient(to right, $primary 0%, $tertiary 100%); 
 				margin-right: .75rem;
 				vertical-align: middle;
 			}

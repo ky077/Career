@@ -128,67 +128,33 @@
 				display: inline-block;
 				width:  2.5em;
 				height: 2px;
-				background: -webkit-linear-gradient(left, $color 0%, $light-color 100%);
-				background:      -o-linear-gradient(left, $color 0%, $light-color 100%);
-				background:         linear-gradient(to right, $color 0%, $light-color 100%); 
+				background: -webkit-linear-gradient(left, $color 0%, rgba($light-color, 0) 100%);
+				background:      -o-linear-gradient(left, $color 0%, rgba($light-color, 0) 100%);
+				background:         linear-gradient(to right, $color 0%, rgba($light-color, 0) 100%); 
 				position: absolute;
 				bottom: -.5rem;
 				left: 0;
 			}
 		}
-		.myRecommend-symbol{  
-		  display: flex;
-			flex-direction: row;
-			gap: 1rem;
-			.myRecommend-symbol-item{ 
-				height: 2.5rem*3*2;
-				display: flex;
-    		flex-direction: column;
-    		justify-content: flex-end;
-				&::after{ 
-					content: "";
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					width: 100%;
-					height: 2rem;
+		.myRecommend-symbol{
+			 counter-reset: ranking; 	
+			[class*="-symbol"]{
+				position: relative;
+				&::before{
+					counter-increment: ranking; 
+					content: counter(ranking);	
+					display: block;
+					font-size: 4rem;
 					font-family: $font-family-monospace;
-					font-size: $font-size-lg;
 					font-weight: 900;
-					color: $border-color;
 					text-shadow: none;
-					border: 1px solid $border-color;
-					background-color: rgba($border-color, .1);
-					border-radius: $border-radius-xl $border-radius-xl $border-radius $border-radius;
-					margin-top: .5rem;
-				}
-			}
-			.myRecommend-symbol-item:nth-child(1){
-				order: 2;
-				&::after{
-					content: "1";
-					height: 2.5rem*3;
-				}
-			}
-			.myRecommend-symbol-item:nth-child(2){
-				order: 1;
-				&::after{
-					content: "2";
-					height: 2.5rem*2;
-				}
-			}
-			.myRecommend-symbol-item:nth-child(3){
-				order: 2;
-				&::after{
-					content: "3";
-					height: 2.5rem*1;
-				}
-			}
-		}
-		.myRecommend-symbol:hover{  
-			.myRecommend-symbol-item{ 
-				[class*="symbol"]{
-					animation: float 4s ease-in-out infinite;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: rgba($black, .05);
+					-webkit-text-stroke: 2px rgba($white, .25);
+					text-stroke: 2px rgba($white, .25);
 				}
 			}
 		}

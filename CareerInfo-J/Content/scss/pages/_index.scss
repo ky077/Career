@@ -174,7 +174,7 @@
 							text-decoration: none;
 							transform: translateX(1rem);
 						}
-						&:before {
+						&::before {
 							content: counter(rank-counter, decimal-leading-zero); /* 顯示兩位數編號 */
 							width: 2.5rem;
 							height: 2rem;

@@ -1,0 +1,73 @@
+$TA-color:		   #0039ac;
+$TA-light-color: #00bbff;
+
+$TA-A-color : #1884B9; //美感
+$TA-C-color : #96C920; //創意
+$TA-L-color : #F65090; //語文
+$TA-LR-color: #64C4D8; //邏輯推理
+$TA-M-color : #E38602; //數學
+$TA-O-color : #B93898; //觀察
+$TA-S-color : #169232; //空間
+$TA-SR-color: #F86F04; //科學推理
+
+@mixin TAcircleStyles($color) {
+  //.TA-circle{
+  min-width: 6rem;
+  min-height: 6rem;
+  border-radius: 100%;
+  color: $white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-base;
+  font-weight: 500;
+  background: linear-gradient(to bottom, lighten($color, 20%) 0%, shade-color($color, 20%) 100%);
+	border: .25rem solid $white;
+	box-shadow: 0 0 .75rem rgba($black, .25);
+	position: relative;
+	text-shadow: 1px 1px rgba($black, .25), 2px 2px rgba($black, .25);
+	&::before{
+		content: "";
+		display: block;
+		width: calc(100% - .5rem);
+		height: calc(100% - .5rem);
+		border-radius: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1px dashed $white;
+	}
+}
+//美感
+.TA-circle.A {
+  @include TAcircleStyles($TA-A-color);
+}
+//創意
+.TA-circle.C {
+  @include TAcircleStyles($TA-C-color);
+}
+//語文
+.TA-circle.L {
+  @include TAcircleStyles($TA-L-color);
+}
+//邏輯推理
+.TA-circle.LR {
+  @include TAcircleStyles($TA-LR-color);
+}
+//數學
+.TA-circle.M {
+  @include TAcircleStyles($TA-M-color);
+}
+//觀察
+.TA-circle.O {
+  @include TAcircleStyles($TA-O-color);
+}
+//空間
+.TA-circle.S {
+  @include TAcircleStyles($TA-S-color);
+}
+//科學推理
+.TA-circle.SR {
+  @include TAcircleStyles($TA-SR-color);
+}

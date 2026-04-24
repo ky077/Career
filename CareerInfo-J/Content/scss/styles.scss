@@ -17,11 +17,14 @@
 @import "modules/page-header"; 
 @import "modules/spinner"; 
 @import "modules/UI";  
+@import "modules/TA";  
+@import "modules/TI";  
 
 @import "pages/index"; 
 @import "pages/news"; 
 @import "pages/intro"; 
 @import "pages/explore";
+@import "pages/myRecommend";
 @import "pages/contact"; 
 @import "pages/login"; 
 @import "pages/register"; 
@@ -29,9 +32,6 @@
 
 
 /* ******* ******* ******* ******* ******* ******* ******* 
-[Author] 
-  =>  KyLin at NTNU, 2025-2026
-
 [References]
   =>  Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/
   =>  Bootstrap Icons - https://icons.getbootstrap.com/

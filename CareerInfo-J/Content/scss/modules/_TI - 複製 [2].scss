@@ -1,0 +1,71 @@
+$TI-color:			 #006500;
+$TI-light-color: #00ab28;
+
+$TI-A-color: $orange; //藝術型
+$TI-C-color: #862E9C; //事務型
+$TI-E-color: #E64980; //企業行
+$TI-I-color: $green; //研究型
+$TI-R-color: $red; //實用型
+$TI-S-color: $blue; //社會型
+@mixin TIsymbolStyles($color) {
+  //.TI-symbol{
+  min-width: 6rem;
+  min-height: 6rem;
+  border-radius: 100%;
+  color: $white;
+  display: inline-flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-base;
+  font-weight: 500;
+	background-color:$color;
+  //background: linear-gradient(to bottom, lighten($color, 20%) 0%, shade-color($color, 20%) 100%);
+	border: .25rem solid $white;
+	box-shadow: 0 0 .75rem rgba($black, .25);
+	position: relative;
+	text-shadow: 1px 1px rgba($black, .25), 2px 2px rgba($black, .25);
+	&::before{
+		content: "";
+		display: block;
+		width: calc(100% - .5rem);
+		height: calc(100% - .5rem);
+		border-radius: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1px dashed $white;
+	}
+	.label-code{
+		font-size: $font-size-base*2;
+		font-weight: 600;
+		text-shadow: none;
+		line-height: 1;
+	}
+	.label-text{}
+}
+//藝術型
+.TI-symbol.A {
+  @include TIsymbolStyles($TI-A-color);
+}
+//事務型
+.TI-symbol.C {
+  @include TIsymbolStyles($TI-C-color);
+}
+//企業行
+.TI-symbol.E {
+  @include TIsymbolStyles($TI-E-color);
+}
+//研究型
+.TI-symbol.I {
+  @include TIsymbolStyles($TI-I-color);
+}
+//實用型
+.TI-symbol.R {
+  @include TIsymbolStyles($TI-R-color);
+}
+//社會型
+.TI-symbol.S {
+  @include TIsymbolStyles($TI-S-color);
+}

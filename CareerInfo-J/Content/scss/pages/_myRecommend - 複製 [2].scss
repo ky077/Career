@@ -1,0 +1,218 @@
+//左
+.user-data{
+	background-color:$white;
+	padding: $spacer;
+	box-shadow: $box-shadow;
+	text-align: center;
+	&::before{
+		content: "";
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		border-top: 4px solid $primary;
+		border-left: 4px solid $primary;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(calc(-.5rem - 4px), calc(-.5rem - 4px));
+		filter: drop-shadow(0 0 .25rem rgba($white, .325));
+	}
+	&.sticky-top{
+		top: 1rem;
+	}
+	.avater{
+		width: 5rem;
+		height: 5rem;
+		font-size: calc(5rem*.4);
+		margin: 0 auto;
+		background-color: $primary;
+		color: $white;
+	}
+	.user-data-name{
+		font-weight: 500;
+		text-align: center;
+		margin-top: .25rem;
+		margin-bottom: 1rem;
+	}
+	.user-data-list{
+		display: inline-block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 1rem;
+		text-align: left;
+		max-width: 100%;
+		li{
+			color: rgba($body-color, .5);	
+			font-size: $font-size-sm;
+			margin-bottom: 1rem;
+			max-width: 100%;
+			> span{
+				display: block;
+				color: $body-color;	
+				font-size: $font-size-base;
+				max-width: 100%;
+				white-space: nowrap;
+      	text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+//右				
+//[class*="myRecommend-T"]{
+@mixin myRecommendStyle($color, $light-color) {
+	> .row{
+		&:not(:last-child){
+			margin-bottom: map-get($spacers, 5); 
+		}
+	}
+	.myRecommend-card{
+		border-color: transparent;	
+		background-color: transparent;	
+		height: 100%;
+		min-height: 250px;
+		@extend .futuristic-shadow;
+		@media screen and (min-width: 992px) {
+		min-height: 300px;	
+		}
+		.card-body{
+			background-color: $white;
+			@extend .futuristic-frame;
+			padding: 1.5rem 2.5rem;
+		}
+	}	
+	.myRecommend-title{
+		font-size: $h4-font-size;
+		color: $body-color;
+	}
+	.myRecommend-group{
+		display: flex;
+		flex-direction: column;
+		gap: $spacer;
+		.myRecommend-group-title{
+			font-size: $font-size-sm;
+			color: $color;
+			margin-bottom: 0;
+		}
+		.myRecommend-group-btn{
+			text-align: left;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			border-color: $border-color;
+			color: $body-secondary-color;
+			transition: $transition-base;
+			padding: .75rem 1rem;
+			border-radius: $border-radius-xl;
+			&::before{
+				content: "";
+				display: inline-block;
+				width: .325rem;
+				height: .325rem;
+				border-radius: 100%;
+				background-color: $light-color;
+				margin-right: .75rem;
+			}
+			&::after{
+				content: "\F285";
+				display: inline;
+				font-family: "bootstrap-icons"; 
+				color: $border-color;
+				margin-left: auto;
+			}
+			&:hover{
+				border-color: $color;	
+				background-color: $white;
+				transform: translateY(-.5rem);
+				box-shadow: $box-shadow;
+				&::after{
+					color: $color;	
+				}
+			}
+		}	
+	}
+	
+	.data-empty{//未測驗
+		.myRecommend-card{
+			.card-body{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+		}	
+		.myRecommend-title{
+			margin-bottom: 1rem;
+			&::before{
+				content: "\F333";
+				display: block;
+				font-family: "bootstrap-icons"; 
+				font-size: 5rem;
+				text-align: center;
+    		color: tint-color($light-color, 60%);
+				margin-bottom: .5rem;
+			}
+		}
+		[class*="btn-outline-"] {
+			border-color: $color;
+			color: $color;
+			&:hover{
+				background-color: $color;
+				color: $white;
+			}
+		}
+	}
+	.data-tested{//已測驗
+		.myRecommend-title{ 
+			margin-left: -2.5rem;
+			margin-right: -2.5rem;
+			margin-bottom: 2rem;
+			padding-left: calc(2.5rem + .5em);
+			padding-bottom: 1rem;
+			border-bottom: 1px solid rgba($border-color, .25);
+			position: relative;
+			&::before{
+				content: "";
+				display: inline-block;
+				width: 3px;
+				height: 1em * $headings-line-height;
+				//background-color: $light-color;
+background: linear-gradient(to bottom, $color 0%, $light-color 100%); 
+
+				//border-radius: .25rem;
+				vertical-align: middle;
+				position: absolute;
+				top: 0;
+				left: 2.5rem;
+			}
+		}
+	}
+}
+
+.myRecommend-TA{
+	@include myRecommendStyle($TA-color, $TA-light-color);
+	.myRecommend-triangle{
+		display: grid;
+		grid-template-columns: 1fr 1fr; 
+		gap: 1rem; 
+		width: fit-content;
+		margin: 0 auto;
+		justify-items: center; 
+		width: 100%;
+		[class*="symbol"]{
+			&:nth-child(1){
+				grid-column: 1 / span 2;
+			}	
+		}
+	}
+	.myRecommend-triangle.counter-ranking{
+		counter-reset: ranking; 
+	}
+}
+.myRecommend-TI{
+	@include myRecommendStyle($TI-color, $TI-light-color);
+}
+
+

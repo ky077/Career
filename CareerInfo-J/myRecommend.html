@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>讚生涯國中版職涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="------------------" name="description">
+<meta content="職涯,資訊,系統,職涯資訊系統,讚生涯,讚,生涯,國中,國中生,職科,高中職科" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯國中版職涯資訊系統" />
+<meta property="og:description" content="------------------" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<form>
+  <!-- Spinner Start -->
+  <div id="spinner" class="show">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">載入中...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+  
+  <header>
+  </header>
+  <main class="myRecommend">
+    <!-- Content Start -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <!-- 左 開始 -->
+        <div class="col-xl-3 col-xxxxl-2 py-5">
+          <div class="user-data sticky-top">
+            <div class="avater">鄭</div>
+            <div class="user-data-name">小文</div>
+            <ul class="user-data-list">
+              <li>帳號<span>aaa123@gmail.com</span></li>
+              <li>學校<span>閱讀高中</span></li>
+              <li>班級<span>一年二班</span></li>
+              <li>註冊時間<span>2024-01-01</span></li>
+              <li>上次登入時間<span>2024-11-01</span></li>
+            </ul>
+            <div class="text-center mb-2">
+              <button type="button" class="btn btn-primary rounded-pill px-4 btn-sm link-scale" data-bs-toggle="modal" data-bs-target="#modalEditUser">編輯個人資料</button>
+            </div>
+          </div>
+          <!-- Modal#modalEditUser -->
+          <div class="modal fade futuristic-modal" id="modalEditUser" tabindex="-1" aria-labelledby="modalEditUserLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">編輯個人資料</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="inputName" class="form-label mb-1">姓名</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="請填寫真實中文姓名" value="宥之">
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputEmail" class="form-label mb-1">帳號</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="請輸入您的Email" value="aaa123@gmail.com" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputPassword" class="form-label mb-1">密碼</label>
+                    <div class="input-group ">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="請輸入6至15位英數字混和之密碼" aria-label="密碼" aria-describedby="passwordHelp">
+                      <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼">
+                      <i class="bi bi-eye-slash-fill"></i>
+                      </button>
+                    </div>
+                    <div class="form-text text-info">如不修改請空白。</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputCheckPassword" class="form-label mb-1">確認密碼</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control" id="inputCheckPassword" placeholder="請再次輸入密碼" aria-label="確認密碼" aria-describedby="passwordCheckHelp">
+                      <button class="btn btn-showHidePD" type="button" id="toggleCheckPassword" aria-label="顯示或隱藏確認密碼">
+                      <i class="bi bi-eye-slash-fill"></i>
+                      </button>
+                    </div>
+                    <div class="form-text text-info">如不修改請空白。</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputsSchool" class="form-label mb-1">學校</label>
+                    <input type="text" class="form-control" id="inputsSchool" placeholder="請填寫學校" value="閱讀高中">
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputClass" class="form-label mb-1">班級</label>
+                    <input type="text" class="form-control" id="inputClass" placeholder="請填寫班級" value="一年二班">
+                  </div>
+                  <div class="mb-3 text-center">
+                    <button type="button" class="btn btn-primary rounded-pill px-4 link-scale" id="" data-bs-dismiss="modal">修改</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 左 結束 -->
+        <!-- 右 開始 -->
+        <div class="col-xl-9 col-xxxxl-8 py-5">
+          <div class="row gy-5 px-xxxxl-5">
+            <!-- 我的優勢能力 開始-->
+            <div class="myRecommend-TA">
+              <!-- 未測驗 -->
+              <div class="row g-0 align-items-stretch data-empty">
+                <div class="col">
+                  <div class="card myRecommend-card">
+                    <div class="card-body">
+                      <h2 class="myRecommend-title">您尚未進行讚生涯性向測驗！ </h2>
+                      <div class="text-center">
+                        <a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 已測驗 -->
+              <div class="row g-0 align-items-stretch data-tested">
+                <div class="col">
+                  <div class="card myRecommend-card">
+                    <div class="card-body">
+                      <h2 class="myRecommend-title">我的優勢能力</h2>
+                      <div class="row align-items-center justify-content-around">
+                        <div class="col-md-5">
+                          <div class="myRecommend-symbol">
+                            <div class="myRecommend-symbol-item">
+                              <div class="TA-symbol S">空間</div>
+                            </div>
+                            <div class="myRecommend-symbol-item">
+                              <div class="TA-symbol C">創意</div>
+                            </div>
+                            <div class="myRecommend-symbol-item">
+                              <div class="TA-symbol M">數學數學</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-5">
+                          <div class="myRecommend-group">
+                            <h3 class="myRecommend-group-title">適合發展類群</h3>
+                            <button class="btn myRecommend-group-btn">電機電子群</button>
+                            <button class="btn myRecommend-group-btn">土木建築群</button>
+                            <button class="btn myRecommend-group-btn">食品群</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 我的優勢能力 結束-->
+            <!-- 我的興趣類型 開始-->
+            <div class="myRecommend-TI">
+              <!-- 未測驗 -->
+              <div class="row g-0 align-items-stretch data-empty">
+                <div class="col">
+                  <div class="card myRecommend-card">
+                    <div class="card-body">
+                      <h2 class="myRecommend-title">您尚未進行讚生涯興趣測驗！ </h2>
+                      <div class="text-center">
+                        <a href="test.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1">認識讚生涯測驗</a>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 m-1" role="button" data-bs-toggle="modal" data-bs-target="#modal-testSchedule">如何安排測驗？</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 已測驗 -->
+              <div class="row g-0 align-items-stretch data-tested">
+                <div class="col">
+                  <div class="card myRecommend-card">
+                    <div class="card-body">
+                      <h2 class="myRecommend-title">我的興趣類型</h2>
+                      <div class="row align-items-center justify-content-around">
+                        <div class="col-md-5">
+                          <div class="myRecommend-symbol">
+                            <div class="myRecommend-symbol-item">
+                              <div class="TI-symbol A"><span class="label-code">A</span><span class="label-text">藝術型</span></div>
+                            </div>
+                            <div class="myRecommend-symbol-item">
+                              <div class="TI-symbol E"><span class="label-code">E</span><span class="label-text">企業型</span></div>
+                            </div>
+                            <div class="myRecommend-symbol-item">
+                              <div class="TI-symbol I"><span class="label-code">I</span><span class="label-text">研究型</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-5">
+                          <div class="myRecommend-group">
+                            <h3 class="myRecommend-group-title">建議探索領域</h3>
+                            <button class="btn myRecommend-group-btn">普通高中</button>
+                            <button class="btn myRecommend-group-btn">藝術群</button>
+                            <button class="btn myRecommend-group-btn">外語群</button>
+                            <button class="btn myRecommend-group-btn">設計群</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 我的興趣類型 結束-->
+          </div>
+        </div>
+        <!-- 右 結束 -->
+      </div>
+    </div>
+    <!-- Content End -->
+  </main>
+  <footer>
+  </footer>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a>
+</form>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- JavaScript Libraries -->
+<script src="Content/js/jquery-3.4.1.min.js"></script>
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script>
+
+<!-- This web Javascript -->
+<script src="Content/js/fn.js"></script>
+<script src="Content/js/main.js"></script>
+<script>
+$(document).ready(function () {
+	
+	//nav當前頁active
+	navActive('myRecommend');
+	
+	//個人資料 sticky-top
+	$(window).scroll(function () { 
+		var scrollTop = $(this).scrollTop();
+		var footerOffset = $('footer').offset().top;
+		var windowHeight = $(window).height();
+
+		if (scrollTop > 300 && scrollTop + windowHeight < footerOffset) {
+			$('.user-data.sticky-top').css('top', $('header').outerHeight() + 20);
+
+		} else {
+			$('.user-data.sticky-top').css('top', '20px');
+		}
+	});
+
+	//適配、對應owl-carousel
+	$('.owl-carousel').owlCarousel({
+		autoplay: false,
+		smartSpeed: 300,
+		loop: false,
+		nav: true,
+		navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>'],
+		dots: false,
+		autoWidth: true,  
+		responsiveClass: true,
+		items: 1
+	})	
+});	
+</script>
+</body>
+</html>
