@@ -479,14 +479,17 @@ background-position: center center;*/ }
 .myRecommend-TA .data-tested .myRecommend-title::after { content: ""; display: inline-block; width: 2.5em; height: 2px; background: -webkit-linear-gradient(left, #0039ac 0%, #00bbff 100%); background: -o-linear-gradient(left, #0039ac 0%, #00bbff 100%); background: linear-gradient(to right, #0039ac 0%, #00bbff 100%); position: absolute; bottom: -.5rem; left: 0; }
 .myRecommend-TA .data-tested .myRecommend-symbol { display: flex; flex-direction: row; gap: 1rem; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item { height: 15rem; display: flex; flex-direction: column; justify-content: flex-end; }
+.myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item [class*="-symbol"] { animation: float 4s ease-in-out infinite; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item::after { content: ""; display: flex; align-items: center; justify-content: center; width: 100%; height: 2rem; font-family: "Orbitron", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1.25rem; font-weight: 900; color: #dee2e6; text-shadow: none; border: 1px solid #dee2e6; background-color: rgba(222, 226, 230, 0.1); border-radius: 1rem 1rem 0.375rem 0.375rem; margin-top: .5rem; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(1) { order: 2; }
+.myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(1) [class*="-symbol"] { animation-delay: -1.5s; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(1)::after { content: "1"; height: 7.5rem; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(2) { order: 1; }
+.myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(2) [class*="-symbol"] { animation-delay: 0s; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(2)::after { content: "2"; height: 5rem; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(3) { order: 2; }
+.myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(3) [class*="-symbol"] { animation-delay: -3s; }
 .myRecommend-TA .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(3)::after { content: "3"; height: 2.5rem; }
-.myRecommend-TA .data-tested .myRecommend-symbol:hover .myRecommend-symbol-item [class*="symbol"] { animation: float 4s ease-in-out infinite; }
 .myRecommend-TA .data-tested .myRecommend-group { display: flex; flex-direction: column; gap: 1rem; background-color: rgba(222, 226, 230, 0.2); border-radius: 1rem; padding: 1.5rem; }
 .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-title { font-size: 0.875rem; color: #0039ac; margin-bottom: 0; }
 .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn { text-align: left; display: flex; align-items: center; justify-content: flex-start; border-color: #dee2e6; color: rgba(33, 37, 41, 0.75); transition: all 0.2s ease-in-out; padding: 0.5rem 1rem; border-radius: 1rem; background-color: #fff; }
@@ -510,14 +513,17 @@ background-position: center center;*/ }
 .myRecommend-TI .data-tested .myRecommend-title::after { content: ""; display: inline-block; width: 2.5em; height: 2px; background: -webkit-linear-gradient(left, #006500 0%, #00ab28 100%); background: -o-linear-gradient(left, #006500 0%, #00ab28 100%); background: linear-gradient(to right, #006500 0%, #00ab28 100%); position: absolute; bottom: -.5rem; left: 0; }
 .myRecommend-TI .data-tested .myRecommend-symbol { display: flex; flex-direction: row; gap: 1rem; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item { height: 15rem; display: flex; flex-direction: column; justify-content: flex-end; }
+.myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item [class*="-symbol"] { animation: float 4s ease-in-out infinite; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item::after { content: ""; display: flex; align-items: center; justify-content: center; width: 100%; height: 2rem; font-family: "Orbitron", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1.25rem; font-weight: 900; color: #dee2e6; text-shadow: none; border: 1px solid #dee2e6; background-color: rgba(222, 226, 230, 0.1); border-radius: 1rem 1rem 0.375rem 0.375rem; margin-top: .5rem; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(1) { order: 2; }
+.myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(1) [class*="-symbol"] { animation-delay: -1.5s; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(1)::after { content: "1"; height: 7.5rem; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(2) { order: 1; }
+.myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(2) [class*="-symbol"] { animation-delay: 0s; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(2)::after { content: "2"; height: 5rem; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(3) { order: 2; }
+.myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(3) [class*="-symbol"] { animation-delay: -3s; }
 .myRecommend-TI .data-tested .myRecommend-symbol .myRecommend-symbol-item:nth-child(3)::after { content: "3"; height: 2.5rem; }
-.myRecommend-TI .data-tested .myRecommend-symbol:hover .myRecommend-symbol-item [class*="symbol"] { animation: float 4s ease-in-out infinite; }
 .myRecommend-TI .data-tested .myRecommend-group { display: flex; flex-direction: column; gap: 1rem; background-color: rgba(222, 226, 230, 0.2); border-radius: 1rem; padding: 1.5rem; }
 .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-title { font-size: 0.875rem; color: #006500; margin-bottom: 0; }
 .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn { text-align: left; display: flex; align-items: center; justify-content: flex-start; border-color: #dee2e6; color: rgba(33, 37, 41, 0.75); transition: all 0.2s ease-in-out; padding: 0.5rem 1rem; border-radius: 1rem; background-color: #fff; }

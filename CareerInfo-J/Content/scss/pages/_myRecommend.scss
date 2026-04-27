@@ -145,6 +145,9 @@
 				display: flex;
     		flex-direction: column;
     		justify-content: flex-end;
+				[class*="-symbol"]{
+					animation: float 4s ease-in-out infinite;
+			  }
 				&::after{ 
 					content: "";
 					display: flex;
@@ -165,6 +168,9 @@
 			}
 			.myRecommend-symbol-item:nth-child(1){
 				order: 2;
+				[class*="-symbol"]{
+					 animation-delay: -1.5s;
+			  }
 				&::after{
 					content: "1";
 					height: 2.5rem*3;
@@ -172,6 +178,9 @@
 			}
 			.myRecommend-symbol-item:nth-child(2){
 				order: 1;
+				[class*="-symbol"]{
+					animation-delay: 0s;
+			  }
 				&::after{
 					content: "2";
 					height: 2.5rem*2;
@@ -179,16 +188,12 @@
 			}
 			.myRecommend-symbol-item:nth-child(3){
 				order: 2;
+				[class*="-symbol"]{
+					animation-delay: -3s;
+			  }
 				&::after{
 					content: "3";
 					height: 2.5rem*1;
-				}
-			}
-		}
-		.myRecommend-symbol:hover{  
-			.myRecommend-symbol-item{ 
-				[class*="symbol"]{
-					animation: float 4s ease-in-out infinite;
 				}
 			}
 		}
