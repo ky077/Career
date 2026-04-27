@@ -1,148 +1,385 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">	
-<title>Career</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career | KyLin @ NTNU</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-* {
-	transition: all .3s ease-in;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
 body {
-	font-size: 20px;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	padding: 0;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 960px;
-}
-table th, table td {
-	border: 1px solid #ccc;
-	text-align: center;
-	padding: 15px;
-}
-table th {
-	background-color: #ddd;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-table tfoot td {
-	background-color: #333;
-	color: #FFF;
-}
-table tfoot td a {
-	color: #FFF;
-}
-a {
-	display: inline-block;
-	text-underline-offset: 4px;
-}
-a:hover {
-	transform: scale(1.2);
-	font-weight: bold;
-}
-table tr:hover {
-	background-color: #ffffee;
-}
-.text-muted, .text-muted * {
-	color: #bbb;
-}
-footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	/* 以 Noto Sans TC 為主要字體 */
+	font-family: 'Noto Sans TC', 'Plus Jakarta Sans', sans-serif;
+	background: #0f172a;
+	color: #f8fafc;
+	min-height: 100vh;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 20px;
+	overflow-x: hidden;
 }
-footer a {
-	display: block;
-	text-decoration: none;
-	padding: 15px;
-	background-color: #ebebeb;
-	color: #333;
+/* 動態背景光暈 */
+.bg-glow {
+	position: fixed;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle, rgba(148, 163, 184, 0.05) 0%, rgba(30, 41, 59, 0) 70%);
+	border-radius: 50%;
+	filter: blur(100px);
+	z-index: -1;
+	animation: pulse 12s infinite alternate;
 }
-footer a:hover {
-	transform: scale(1);
+@keyframes pulse {
+0% {
+transform: translate(-5%, -5%) scale(1);
 }
-footer a.active {
-	background-color: #333;
-	color: #fff;
+100% {
+transform: translate(5%, 5%) scale(1.1);
+}
+}
+/* 大標題樣式 */
+.main-title {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 50px;
+	background: linear-gradient(to right, #f8fafc, #94a3b8);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: -0.02em;
+}
+.dashboard {
+	background: rgba(30, 41, 59, 0.6);
+	backdrop-filter: blur(24px) saturate(150%);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 32px;
+	width: 100%;
+	/* 調寬最大寬度 */
+	max-width: 1024px;
+	box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+}
+.nav-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 20px;
+	padding: 32px;
+}
+.nav-card {
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-radius: 24px;
+	padding: 24px;
+	transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.nav-card:hover {
+	background: rgba(255, 255, 255, 0.04);
+	transform: translateY(-4px);
+}
+.card-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.icon-box {
+	width: 42px;
+	height: 42px;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+	flex-shrink: 0;
+}
+/* 連結容器排版：2/3 與 1/3 */
+.link-group {
+	display: flex;
+	gap: 8px;
+	width: 100%;
+}
+.sub-link {
+	padding: 10px 4px;
+	border-radius: 12px;
+	text-align: center;
+	font-size: 0.85rem;
+	font-weight: 500;
+	transition: all 0.2s;
+}
+/* 主要連結 (2/3) */
+.sub-link-primary {
+	flex: 2;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: white;
+}
+/* 次要連結 (1/3) */
+.sub-link-secondary {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.03);
+	color: rgba(255, 255, 255, 0.4); /* Muted 效果 */
+}
+/* 禁用連結樣式 (保留位置但無法點擊且呈現灰暗) */
+.sub-link-disabled {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.01);
+	border: 1px solid rgba(255, 255, 255, 0.02);
+	color: rgba(255, 255, 255, 0.15); /* 極深灰色 */
+	pointer-events: none;
+	cursor: not-allowed;
+	user-select: none;
+}
+/* --- 高中版配色 --- */
+.hs-gradient-text {
+	background: linear-gradient(135deg, #38bdf8, #a78bfa);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	display: inline-block;
+}
+.hs-card:hover {
+	border-color: rgba(167, 139, 250, 0.3);
+}
+.hs-card .icon-box {
+	background: rgba(167, 139, 250, 0.1);
+	color: #a78bfa;
+}
+.hs-card .sub-link-primary:hover {
+	background: #a78bfa;
+	color: white;
+	border-color: #a78bfa;
+}
+.hs-card .sub-link-secondary:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: #a78bfa;
+}
+/* --- 國中版配色 --- */
+.js-gradient-text {
+	background: linear-gradient(135deg, #FDE68A, #FB923C);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	display: inline-block;
+}
+.js-card:hover {
+	border-color: rgba(251, 146, 60, 0.25);
+}
+.js-card .icon-box {
+	background: rgba(253, 230, 138, 0.08);
+	color: #fde68a;
+}
+.js-card .sub-link-primary:hover {
+	background: #fb923c;
+	color: white;
+	border-color: #fb923c;
+}
+.js-card .sub-link-secondary:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: #fb923c;
+}
+.note-card {
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 14px;
+	padding: 10px 20px;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+@media (max-width: 640px) {
+.main-title {
+	font-size: 2.25rem;
+	margin-bottom: 40px;
+}
 }
 </style>
 </head>
-
 <body>
-<table>
-  <thead>
-    <tr>
-      <th width="50%">高中名稱</th>
-      <th width="25%">DEMO網頁</th>
-      <th width="25%">工程師網頁</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><!--讚生涯高中生生涯-->資訊系統</td>
-      <td><a href="CareerInfo/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"><a href="http://140.122.118.47/careerinfo/" target="_blank">莘倫</a></td>
-    </tr>
-    <tr>
-      <td><!--讚生涯高中版生涯-->測驗系統 - 學生端</td>
-      <td><a href="STUDENT/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"><small><small>(2025.12.11已給盈芳檔案)</small></small></td>
-    </tr>
-    <tr>
-      <td>生涯水晶球</td>
-      <td><a href="CRYSTAL-BALL/guide.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"><a href="http://140.122.118.47/careerinfo/3d3.aspx" target="_blank">莘倫</a></td>
-    </tr>
-    <tr>
-      <td><!--自動化生涯-->諮詢系統</td>
-      <td><a href="BOT/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"><a href="https://teemi.tw/MOE_chatbot/career/Chat.aspx" target="_blank">盈芳</a></td>
-    </tr>
-    <tr>
-      <td>興趣測驗-英語版</td>
-      <td><a href="TI-EN/Default-APP.html" target="_blank">DEMO</a></td>
-      <td class="text-muted">???</td>
-    </tr>
-  </tbody>
-</table>
-<br>
-<table>
-  <thead>
-    <tr>
-      <th width="50%">國中名稱</th>
-      <th width="25%">DEMO網頁</th>
-      <th width="25%">工程師網頁</th>
-    </tr>
-  </thead>
-  <tbody>
-		<tr>
-      <td><!--讚生涯國中版職涯-->資訊系統</td>
-      <td><a href="CareerInfo-J/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"></td>
-    </tr>
-    <tr>
-      <td><!--讚生涯國中版生涯-->測驗系統 - 學生端</td>
-      <td><a href="STUDENT-J/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"><small><small>(2025.12.10已給盈芳檔案)</small></small></td>
-    </tr>
-    <tr>
-      <td><!--自動化生涯-->諮詢系統</td>
-      <td><a href="BOT-J/index.html" target="_blank">DEMO</a></td>
-      <td class="text-muted"><a href="https://hexam.career.ntnu.edu.tw/junior_stu/Chatbot/" target="_blank">盈芳</a></td>
-    </tr>
-		 
-  </tbody>
-</table>
-<footer>
-  <div><a href="https://ky077.github.io/CareerCN/">陸版</a></div>
-  <div><a href="https://ky077.github.io/Career/" class="active">台版</a></div>
-</footer>
+<div class="bg-glow"></div>
+
+<!-- 大標題 -->
+<h1 class="main-title">Career   |   KyLin @ NTNU</h1>
+
+<!-- Career 讚生涯（高中） -->
+<div class="dashboard mb-8">
+  <div class="px-10 py-8 border-b border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div>
+      <h2 class="text-3xl font-bold">
+        <span class="hs-gradient-text">Career 讚生涯</span>
+      </h2>
+      <p class="text-slate-500 mt-1 text-sm tracking-widest uppercase">臺灣 高中</p>
+    </div>
+  </div>
+  <div class="nav-grid">
+    <!-- 資訊系統 -->
+    <div class="nav-card hs-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">資訊系統</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/CareerInfo/index.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="http://140.122.118.47/careerinfo/" class="sub-link sub-link-secondary" target="_blank">莘倫</a>
+      </div>
+    </div>
+    
+    <!-- 測驗系統 - 學生端 -->
+    <div class="nav-card hs-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">測驗系統 - 學生端</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/STUDENT/index.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="https://career.ntnu.edu.tw/SS_v2/" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
+      </div>
+    </div>
+    
+    <!-- 諮詢系統 -->
+    <div class="nav-card hs-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">諮詢系統</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/BOT/index.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="https://teemi.tw/MOE_chatbot/career/Chat.aspx" class="sub-link sub-link-secondary" target="_blank">給盈芳</a>
+      </div>
+    </div>
+    
+    <!-- 生涯水晶球 -->
+    <div class="nav-card hs-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">生涯水晶球</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/CRYSTAL-BALL/guide.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="http://140.122.118.47/careerinfo/guide.aspx" class="sub-link sub-link-secondary" target="_blank">莘倫</a>
+      </div>
+    </div>
+    
+    <!-- 興趣測驗 - 英語版 -->
+    <div class="nav-card hs-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">興趣測驗 - 英語版</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/TI-EN/Default-APP.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="#" class="sub-link sub-link-disabled" target="_blank">?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Career 讚生涯（國中） -->
+<div class="dashboard">
+  <div class="px-10 py-8 border-b border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div>
+      <h2 class="text-3xl font-bold">
+        <span class="js-gradient-text">Career 讚生涯</span>
+      </h2>
+      <p class="text-slate-500 mt-1 text-sm tracking-widest uppercase">臺灣 國中</p>
+    </div>
+  </div>
+  <div class="nav-grid">
+    <!-- 資訊系統 -->
+    <div class="nav-card js-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">資訊系統</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/CareerInfo-J/index.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="#" class="sub-link sub-link-disabled" target="_blank">?</a>
+      </div>
+    </div>
+    
+    <!-- 測驗系統 - 學生端 -->
+    <div class="nav-card js-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">測驗系統 - 學生端</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/STUDENT-J/index.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="https://hexam.career.ntnu.edu.tw/catnt/JJ/" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
+      </div>
+    </div>
+    
+    <!-- 諮詢系統 -->
+    <div class="nav-card js-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">諮詢系統</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/BOT-J/index.html" class="sub-link sub-link-primary" target="_blank">DEMO</a>
+        <a href="https://hexam.career.ntnu.edu.tw/junior_stu/index.aspx" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div class="w-full flex justify-center mt-10">
+  <a href="https://ky077.github.io/CareerCN/" class="note-card group">
+  <svg class="text-slate-500 group-hover:text-slate-300 transition-colors" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+  <span class="text-xs font-medium text-slate-400 group-hover:text-slate-200">前往 Career 讚生涯 - 陸版</span>
+  </a>
+</div>
 </body>
 </html>
