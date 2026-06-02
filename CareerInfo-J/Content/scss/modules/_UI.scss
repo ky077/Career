@@ -318,17 +318,46 @@ a {
 .futuristic-shadow { //黑陰影
   filter: drop-shadow($box-shadow-sm);
 }
-.futuristic-frame { //左上斜線 + 右下3洞
+.futuristic-frame-digital { //左上斜線 + 右下3洞
+	$futuristic-spacer: .5rem;
+	$futuristic-square: 1rem;
+	$futuristic-bottom: 3rem;
   background-color: $white;
 	border: 1px solid $border-color;
 	padding: 2.5rem;
   clip-path: polygon(
 		2rem 0%, 
 		100% 0%,
-  	100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem), 100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem), 100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem), 
+  	100% calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*3 - #{$futuristic-spacer}*2), 
+		calc(100% - #{$futuristic-spacer} - #{$futuristic-square}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*3 - #{$futuristic-spacer}*2), 
+		calc(100% - #{$futuristic-spacer} - #{$futuristic-square}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*2 - #{$futuristic-spacer}*2), 
+		calc(100% - #{$futuristic-spacer}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*2 - #{$futuristic-spacer}*2), 
+		calc(100% - #{$futuristic-spacer}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*3 - #{$futuristic-spacer}*2), 
+		100% calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*3 - #{$futuristic-spacer}*2), 
+		
+		100% calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*2 - #{$futuristic-spacer}*1), 
+		calc(100% - #{$futuristic-spacer} - #{$futuristic-square}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*2 - #{$futuristic-spacer}*1), 
+		calc(100% - #{$futuristic-spacer} - #{$futuristic-square}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*1 - #{$futuristic-spacer}*1), 
+		calc(100% - #{$futuristic-spacer}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*1 - #{$futuristic-spacer}*1), 
+		calc(100% - #{$futuristic-spacer}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*2 - #{$futuristic-spacer}*1), 
+		100% calc(100% - #{$futuristic-bottom} - #{$futuristic-square}*2 - #{$futuristic-spacer}*1), 
+		
+		100% calc(100% - #{$futuristic-bottom} - #{$futuristic-square}), 
+		calc(100% - #{$futuristic-spacer} - #{$futuristic-square}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}), 
+		calc(100% - #{$futuristic-spacer} - #{$futuristic-square}) calc(100% - #{$futuristic-bottom}), 
+		calc(100% - #{$futuristic-spacer}) calc(100% - #{$futuristic-bottom}), 
+		calc(100% - #{$futuristic-spacer}) calc(100% - #{$futuristic-bottom} - #{$futuristic-square}), 
+		100% calc(100% - #{$futuristic-bottom} - #{$futuristic-square}), 
+		
 		100% 100%, 
   	0% 100%, 
 		0% 2rem);
+}
+.futuristic-frame {
+	background-color: $white;
+	border: 1px solid $border-color;
+	padding: 2.5rem;
+	clip-path: polygon(2rem 0%, 100% 0%, 100% 100%, 0% 100%, 0 2rem);	
 }
 .futuristic-nav {
   padding-top: map-get($spacers, 5);
@@ -343,19 +372,7 @@ a {
     clip-path: polygon(1rem 0%, calc(100% - 1rem) 0%, 100% 100%, 0% 100%);
   }
 }
-/*.futuristic-frame { //右上斜線
-  padding: 2.5rem;
-  background-color: rgba($white, .75);
-  $padding-width: 2.5rem*.5;
-  clip-path: polygon(
-		2rem 0%, 
-		100% 0%,
-  	100% calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 7rem), calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem), 100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem), 100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem), 
-		100% 100%, 
-  	0% 100%, 
-		0% 2rem);
-	border: 1px solid $border-color;
-}*/
+
 
 
 .futuristic-img{

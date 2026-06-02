@@ -1,13 +1,17 @@
 .page-header {
 	padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+	padding-bottom: 3rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 	position: relative;
-	h2{
+	.page-header-title, h2{
 		color: $body-color;
-    	filter: opacity(0.9);
+    filter: opacity(0.9);
+		font-size: map-get($display-font-sizes, 4);
+		font-weight: $font-weight-bold;
+		text-align: center;
+		margin-bottom: map-get($spacers, 3);
 	}
 	nav{
 		filter: opacity(.75);

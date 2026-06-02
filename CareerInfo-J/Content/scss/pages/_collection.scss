@@ -38,28 +38,6 @@
 		min-height: 250px;
 	}
 	.data-filled{}
-	
-	.futuristic-frame{
-		padding-left: map-get($spacers, 5)*2;
-		padding-right: map-get($spacers, 5)*2;
-		position: relative;
-		clip-path: polygon(   0%   0%, 
-							100%   0%, 
-			//右洞
-						100% calc(100% - 7rem), 
-						calc(100% - 1.5rem) calc(100% - 7rem), 
-						calc(100% - 1.5rem) calc(100% - 6rem), calc(100% - .5rem) calc(100% - 6rem), 
-		calc(100% - .5rem) calc(100% - 7rem), 100% calc(100% - 7rem),
-						100% calc(100% - 5.5rem), calc(100% - 1.5rem) calc(100% - 5.5rem), 
-		calc(100% - 1.5rem) calc(100% - 4.5rem), calc(100% - .5rem) calc(100% - 4.5rem), 
-		calc(100% - .5rem) calc(100% - 5.5rem), 100% calc(100% - 5.5rem),
-						100% calc(100% - 4rem), calc(100% - 1.5rem) calc(100% - 4rem), 
-		calc(100% - 1.5rem) calc(100% - 3rem), calc(100% - .5rem) calc(100% - 3rem), 
-		calc(100% - .5rem) calc(100% - 4rem), 100% calc(100% - 4rem),
-							100% calc(100% - 1px), 
-							  0% calc(100% - 1px),
-							0% calc(50% + #{$title-height}/2), 2rem*1.5 calc(50% + #{$title-height}/2 - 1rem), 2rem*1.5 calc(50% - #{$title-height}/2 + 1rem), 0% calc(50% - #{$title-height}/2));	
-	}	
 }
 .collection-disc{//學門
 	background: linear-gradient(to bottom, rgba($sky, .2)   0%, rgba($purple, .2) 100%); 

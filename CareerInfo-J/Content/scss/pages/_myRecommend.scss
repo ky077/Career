@@ -78,8 +78,7 @@
 		min-height: 300px;	
 		}
 		.card-body{
-			background-color: $white;
-			@extend .futuristic-frame;
+			@extend .futuristic-frame-digital;
 			padding: 1.5rem 2.5rem;
 		}
 	}	
