@@ -210,6 +210,9 @@
 		&:not(:last-child){
 			margin-bottom: map-get($spacers, 5);	
 		}
+//		&:nth-of-type(1) .step-num{
+//			letter-spacing: .25em;
+//		}
 		.step-num{
 			display: flex;
 			flex-shrink: 0;

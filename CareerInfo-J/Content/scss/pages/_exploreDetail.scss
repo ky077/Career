@@ -2,39 +2,50 @@
 	.page-header {
 		.page-header-title, h2{
 			font-size: map-get($display-font-sizes, 5);
-			text-align: left;
 			display: flex;
 			align-items: center;
-			> img{
+			img{
 				width: 72px;
 				height: 72px;
+				margin-right: .5rem;
 			}
-			> small{
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				.explore-badge{
+			small{
+				font-size: $h5-font-size;
+				font-weight: $font-weight-normal;
+				color: $primary;
+				@media screen and (min-width: 1200px) {
+					margin-top: auto;
 					margin-bottom: .25rem;
+					margin-left: .5rem;
 				}
 			}
-		}
-		.page-header-back{
-			color: $body-secondary-color;
-			font-size: $input-btn-font-size;
-			font-weight: $btn-font-weight;
-			margin-left: auto;
-			margin-top: auto;
-			padding: $input-btn-padding-y 0;
-			&.icon-link-hover{
-				--bs-icon-link-transform: translate3d(-.25em, 0, 0); 	
+			.explore-badge{
+				margin-top: .5rem;
+				margin-left: .5rem;
+				@media screen and (min-width: 1200px) {
+				position: absolute;
+				top: 0;
+				left: 100%;
+					+ .explore-badge{
+						transform: translateX(calc(100% + .25rem));
+					}
+				}	
 			}
-			&:hover{
-				color: $secondary;
-				text-decoration: none;
-			}
+
 		}
 		.xmind{
 			margin-top: 3rem;
+			padding: 1rem;
+			text-align: center;
+			.futuristic-frame-digital{
+				display: inline-block;	
+				//padding: 1rem;
+			}
+			.xmind-remark{
+				color: $body-tertiary-color;
+				font-size: $font-size-sm;
+				margin-top: .5rem;
+			}
 		}
 	}
 	.page-content{
@@ -176,7 +187,6 @@
 			}
 		}
 	}
-	
 }
 
 .explore-list-group{
@@ -204,13 +214,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		//background-color: $white;
 		border: 1px solid $primary;
 		border-radius: 50%;
 		margin-top: .5rem;
 		&::before{
 			counter-increment: list-index; 
-      content: counter(list-index);
+      content: counter(list-index, decimal-leading-zero);
+			font-family: $font-family-monospace;
+			font-size: $font-size-sm;
+		}
+		&:first-child::before{
+			letter-spacing: .25em;
 		}
 		.explore-list-label{
 			display: none;
@@ -288,6 +302,22 @@
       }
     }
   }
+}
+
+.guide6-studies{
+	max-width: 8/12*100%;
+	margin: 0 auto 1rem auto;
+  display: block;
+	@media screen and (min-width: 768px) {
+		float: right;
+		max-width: 4/12*100%;
+		margin: 0 auto 1rem 1rem;
+	}
+	@media screen and (min-width: 992px) {
+		float: right;
+		max-width: 3/12*100%;
+		margin: 0 auto 1rem 1rem;
+	}
 }
 
 
