@@ -524,72 +524,79 @@
 <script src="Content/js/fn.js"></script>
 <script src="Content/js/main.js"></script>
 <script>
-$('.explore-card .row').masonry({
-  itemSelector: '.col'
-});
+$(document).ready(function () {
+	// nav當前頁active
+	navActive('explore');
+	
+	// explore-card 瀑布流
+	$('.explore-card .row').masonry({
+		itemSelector: '.col'
+	});
+});		
 </script>
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const modalElement = document.getElementById('guideModal');
-            const scrollContainer = document.getElementById('modalScrollTarget');
-            const timelineLine = document.getElementById('guideTimeline');
-            const steps = document.querySelectorAll('.guide-step');
+// modal 七大核心導覽 Timeline
+document.addEventListener('DOMContentLoaded', function() {
+		const modalElement = document.getElementById('guideModal');
+		const scrollContainer = document.getElementById('modalScrollTarget');
+		const timelineLine = document.getElementById('guideTimeline');
+		const steps = document.querySelectorAll('.guide-step');
 
-            function updateTimeline() {
-                // 1. 基礎位置計算
-                const containerRect = scrollContainer.getBoundingClientRect();
-                const triggerPoint = containerRect.top + (containerRect.height * 0.7); // 判定觸發點設在容器較下方 (70%)
-                
-                // 2. 偵測是否已捲動到底部
-                const isAtBottom = Math.abs(scrollContainer.scrollHeight - scrollContainer.scrollTop - scrollContainer.clientHeight) < 5;
+		function updateTimeline() {
+				// 1. 基礎位置計算
+				const containerRect = scrollContainer.getBoundingClientRect();
+				const triggerPoint = containerRect.top + (containerRect.height * 0.7); // 判定觸發點設在容器較下方 (70%)
 
-                let lastActiveIndex = -1;
+				// 2. 偵測是否已捲動到底部
+				const isAtBottom = Math.abs(scrollContainer.scrollHeight - scrollContainer.scrollTop - scrollContainer.clientHeight) < 5;
 
-                steps.forEach((step, index) => {
-                    const rect = step.getBoundingClientRect();
-                    const stepTop = rect.top;
+				let lastActiveIndex = -1;
 
-                    // 邏輯判定：如果步驟頂部超過觸發點，或是已經捲動到最底部且這是最後一項
-                    if (stepTop < triggerPoint || (isAtBottom && index === steps.length - 1)) {
-                        step.classList.add('active');
-                        lastActiveIndex = index;
-                    }
-                });
+				steps.forEach((step, index) => {
+						const rect = step.getBoundingClientRect();
+						const stepTop = rect.top;
 
-                // 3. 更新進度線條
-                if (lastActiveIndex !== -1) {
-                    const totalSteps = steps.length;
-                    
-                    // 根據目前啟動到第幾個 index 來分配百分比 (平均分配進度)
-                    // 這樣即便最後一項位置捲不上來，也能確保線條視覺上能到頂
-                    let percentage = (lastActiveIndex / (totalSteps - 1)) * 100;
-                    
-                    // 強制修正：最後一個 index 啟動時，百分比一定是 100
-                    if (lastActiveIndex === totalSteps - 1) {
-                        percentage = 100;
-                    }
+						// 邏輯判定：如果步驟頂部超過觸發點，或是已經捲動到最底部且這是最後一項
+						if (stepTop < triggerPoint || (isAtBottom && index === steps.length - 1)) {
+								step.classList.add('active');
+								lastActiveIndex = index;
+						}
+				});
 
-                    timelineLine.style.setProperty('--line-height', `${percentage}%`);
-                } else {
-                    timelineLine.style.setProperty('--line-height', `0%`);
-                }
-            }
+				// 3. 更新進度線條
+				if (lastActiveIndex !== -1) {
+						const totalSteps = steps.length;
 
-            // 監聽捲動
-            scrollContainer.addEventListener('scroll', updateTimeline);
+						// 根據目前啟動到第幾個 index 來分配百分比 (平均分配進度)
+						// 這樣即便最後一項位置捲不上來，也能確保線條視覺上能到頂
+						let percentage = (lastActiveIndex / (totalSteps - 1)) * 100;
 
-            // Modal 顯示後初始化位置
-            modalElement.addEventListener('shown.bs.modal', () => {
-                updateTimeline();
-            });
+						// 強制修正：最後一個 index 啟動時，百分比一定是 100
+						if (lastActiveIndex === totalSteps - 1) {
+								percentage = 100;
+						}
 
-            // 重設狀態
-            modalElement.addEventListener('hidden.bs.modal', () => {
-                steps.forEach(s => s.classList.remove('active'));
-                timelineLine.style.setProperty('--line-height', `0%`);
-                scrollContainer.scrollTop = 0;
-            });
-        });
-    </script>
+						timelineLine.style.setProperty('--line-height', `${percentage}%`);
+				} else {
+						timelineLine.style.setProperty('--line-height', `0%`);
+				}
+		}
+
+		// 監聽捲動
+		scrollContainer.addEventListener('scroll', updateTimeline);
+
+		// Modal 顯示後初始化位置
+		modalElement.addEventListener('shown.bs.modal', () => {
+				updateTimeline();
+		});
+
+		// 重設狀態
+		modalElement.addEventListener('hidden.bs.modal', () => {
+				steps.forEach(s => s.classList.remove('active'));
+				timelineLine.style.setProperty('--line-height', `0%`);
+				scrollContainer.scrollTop = 0;
+		});
+});
+</script>
 </body>
 </html>

@@ -4,11 +4,7 @@
 			font-size: map-get($display-font-sizes, 5);
 			display: flex;
 			align-items: center;
-			img{
-				width: 72px;
-				height: 72px;
-				margin-right: .5rem;
-			}
+			text-align: left;
 			small{
 				font-size: $h5-font-size;
 				font-weight: $font-weight-normal;
@@ -31,7 +27,47 @@
 					}
 				}	
 			}
-
+			.exploreDetail-header-img{
+				border-radius: $border-radius-lg;
+				border: 1px solid $border-color;
+				box-shadow: $box-shadow;
+				margin-left: .5rem;
+				margin-right: 1rem;
+				margin-bottom: auto;
+				position: relative;
+				img{
+					border-radius: $border-radius-lg;
+					display: block;
+					width: 3.6rem;
+					height: 3.6rem;
+				}
+				&::before{
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					border-radius: $border-radius-lg;
+					background-color: rgba($tertiary, .75);
+					position: absolute;
+					top: 0%;
+					left: 0%;
+					transform: translate(-.5rem, -.5rem);
+					z-index: -1;
+				}
+				&::after{
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					border-radius: $border-radius-lg;
+					background-color: rgba($primary, .5);
+					position: absolute;
+					bottom: 0%;
+					right: 0%;
+					transform: translate(.5rem, .5rem);
+					z-index: -1;
+				}
+			}
 		}
 		.xmind{
 			margin-top: 3rem;
@@ -216,7 +252,7 @@
 		align-items: center;
 		border: 1px solid $primary;
 		border-radius: 50%;
-		margin-top: .5rem;
+		margin-top: .5rem !important;
 		&::before{
 			counter-increment: list-index; 
       content: counter(list-index, decimal-leading-zero);
@@ -240,25 +276,6 @@
 		transform: translate(calc(-100% - .25rem), -50%);
 		color: $primary;
 	}
-	
-	/*
-    
-    
-	width: 2.5rem;
-	height: 2.5rem;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #fff;
-	color: $primary;
-	opacity: .75;
-	&:hover, &:focus, &:active{
-		background-color: $primary;
-		color: #fff;
-		opacity: 1.0;
-	}	*/
-	//btn btn-outline-primary rounded-circle
 }
 
 .school {
@@ -308,6 +325,7 @@
 	max-width: 8/12*100%;
 	margin: 0 auto 1rem auto;
   display: block;
+	filter: drop-shadow($box-shadow-sm);
 	@media screen and (min-width: 768px) {
 		float: right;
 		max-width: 4/12*100%;

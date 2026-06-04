@@ -63,9 +63,9 @@
           </ol>
         </nav>
         <h2 class="page-header-title wow animate__animated animate__slideInDown">
-          <img src="Content/img/senior/55/icon.jpg" alt="" class="rounded-circle"/>
+          <div class="exploreDetail-header-img"><img src="Content/img/senior/60/icon.jpg" alt=""/></div>
           <div class="d-flex flex-column flex-xl-row">
-            <div class="d-flex flex-row align-items-start position-relative">資料處理科 <span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></div>
+            <div class="d-flex flex-row flex-wrap align-items-start position-relative">資料處理科 <span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></div>
             <small>電腦化作業，將商業與資訊結合</small>
           </div>
         </h2>
@@ -93,13 +93,13 @@
       <div class="container">
         <div class="row justify-content-center gx-5">
           <div class="explore-list-group list-group">
-            <a class="list-group-item list-group-item-action guide1 active" href="#guide1"><span class="explore-list-label">職科介紹</span></a>
-            <a class="list-group-item list-group-item-action guide2" href="#guide2"><span class="explore-list-label">知識、技能與能力</span></a>
-            <a class="list-group-item list-group-item-action guide3" href="#guide3"><span class="explore-list-label">興趣及特質</span></a>
-            <a class="list-group-item list-group-item-action guide4" href="#guide4"><span class="explore-list-label">證照及競賽</span></a>
-            <a class="list-group-item list-group-item-action guide5" href="#guide5"><span class="explore-list-label">如何進入此職科</span></a>
-            <a class="list-group-item list-group-item-action guide6" href="#guide6"><span class="explore-list-label">未來進路</span></a>
-            <a class="list-group-item list-group-item-action guide7" href="#guide7"><span class="explore-list-label">經驗分享談</span></a>
+            <a class="list-group-item list-group-item-action" href="#guide1"><span class="explore-list-label">職科介紹</span></a>
+            <a class="list-group-item list-group-item-action" href="#guide2"><span class="explore-list-label">知識、技能與能力</span></a>
+            <a class="list-group-item list-group-item-action" href="#guide3"><span class="explore-list-label">興趣及特質</span></a>
+            <a class="list-group-item list-group-item-action" href="#guide4"><span class="explore-list-label">證照及競賽</span></a>
+            <a class="list-group-item list-group-item-action" href="#guide5"><span class="explore-list-label">如何進入此職科</span></a>
+            <a class="list-group-item list-group-item-action" href="#guide6"><span class="explore-list-label">未來進路</span></a>
+            <a class="list-group-item list-group-item-action" href="#guide7"><span class="explore-list-label">經驗分享談</span></a>
           </div>
           <div class="col-xl-12">
             <div class="row gy-5 pb-5">
@@ -898,7 +898,7 @@
                   <h3 class="card-title">未來進路</h3>
                   <h4 class="card-subtitle">升學<small>Further education</small></h4>
                   <h5 class="h6">一、升學管道</h5>
-                  <img src="Content/img/senior/studies-6.png" class="guide6-studies" alt=""/>
+                  <img src="Content/img/senior/studies-5.png" class="guide6-studies" alt=""/>
                   <p>分為技優保送或甄審、甄選入學、登記分發、繁星計畫及獨立招生，共六種管道。學生若是不想循傳統考試升學之路，可以選擇參加全國技能競賽，或者成為國際技能競賽的國手，進而取得技優保送或甄審的資格。</p>
                   <h5 class="h6">二、專業或相關科系延伸</h5>
                   <p>資料處理科學生若想繼續學習資料處理的專業技術，可以選擇就讀資訊管理系或資訊工程系，也有學生選讀商業與管理學門其他相關科系。除此之外，也有學生轉往設計領域繼續深造。大專院校的相關科系，整理如下：</p>
@@ -940,7 +940,7 @@
                   <p>學生畢業後可直接進入就業市場，其大多任職於各企業單位的資訊部門，從事資料登錄員、文書處理員及文書排版員等職務。</p>
                   <p>繼續升學者，由於繼續深造資訊相關技能，就業面向以資訊軟體產業為主，可擔任程式設計師、網頁設計師、網路管理工程師、程式修復員等職務。由於各行業對資訊人員的需求增加，畢業生投入金融業、電子業及文教業的比例也逐漸升高。</p>
                   <p class="text-primary"><i class="bi bi-bookmark-star-fill"></i>代表人物：</p>
-                  <div class="row">
+                  <div class="row g-4">
                     <div class="col-lg futuristic-shadow">
                       <div class="futuristic-frame-digital">
                         <h5 class="futuristic-frame-title">臺灣IBM總經理－于弘鼎</h5>
@@ -970,7 +970,7 @@
               <div class="card guide7" id="guide7">
                 <div class="card-body">
                   <h3 class="card-title">經驗分享談</h3>
-                  <div class="row">
+                  <div class="row g-4">
                     <div class="col-lg futuristic-shadow">
                       <div class="futuristic-frame-digital">
                         <h4 class="futuristic-frame-title">在資訊領域 廣中求精</h4>
@@ -1020,8 +1020,12 @@
 <!-- This web Javascript -->
 <script src="Content/js/fn.js"></script>
 <script src="Content/js/main.js"></script>
+<script src="Content/js/explore-scrollspy.js"></script>
 <script>
-
+$(document).ready(function () {
+	// nav當前頁active
+	navActive('explore');
+});	
 </script>
 </body>
 </html>
