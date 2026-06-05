@@ -497,8 +497,8 @@ background-position: center center;*/ }
 .school .region-section-list a { border: 1px solid rgba(253, 126, 20, 0.25); color: rgba(33, 37, 41, 0.75); display: block; padding: 0.375rem 1rem; text-decoration: none; font-size: 0.875rem; border-radius: 50rem; background-color: rgba(255, 255, 255, 0.75); transition: all 0.2s ease-in-out; }
 .school .region-section-list a:hover, .school .region-section-list a:focus, .school .region-section-list a:active { color: #fd7e14 !important; background-color: rgba(253, 126, 20, 0.08) !important; border-color: rgba(253, 126, 20, 0.75); box-shadow: 0 0.35rem 1rem rgba(253, 126, 20, 0.12); }
 
-.guide3-interest { border: 0.5rem solid #fff; margin: -1.5rem -2rem .75rem -2rem; position: relative; }
-.guide3-interest img { max-width: 100%; max-height: 100%; }
+.guide3-interest { border: 0.5rem solid #fff; margin: -1.5rem -2rem .75rem -2rem; position: relative; width: calc(100% + 2rem*2); height: 0; padding-bottom: calc((100% + 2rem*2)* 9/16); position: relative; }
+.guide3-interest img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .guide3-interest::before { content: ""; display: block; width: 0; height: 0; border-top: 1.5rem solid #fff; border-right: 1.5rem solid transparent; position: absolute; top: 0; left: 0; z-index: 5; }
 
 .guide6-studies { max-width: 66.6666666667%; margin: 0 auto 1rem auto; display: block; filter: drop-shadow(0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)); }
