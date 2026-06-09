@@ -70,17 +70,50 @@
 			}
 		}
 		.xmind{
-			margin-top: 3rem;
-			padding: 1rem;
+			width: 100%;
+			margin: 0 auto;
 			text-align: center;
+			position: relative;
+			@media screen and (min-width: 992px) {
+			width: 10/12*100%;	
+			}
 			.futuristic-frame-digital{
-				display: inline-block;	
+				background-color: rgba($white, .85);
+			}
+			svg {
+				[id^="guide"] {
+					cursor: pointer;
+					transition: filter .2s ease, transform .2s ease;
+					transform-box: fill-box;
+					transform-origin: center;
+
+					rect {
+						transition: fill .2s ease, stroke .2s ease;
+					}
+
+					&:hover,
+					&:focus {
+						filter: drop-shadow(0 8px 14px rgba($secondary, .22));
+						transform: translateY(-2px);
+						outline: none;
+
+						rect:first-of-type {
+							fill: rgba($tertiary, .65);
+							stroke: $primary;
+						}
+					}
+				}
 			}
 			.xmind-remark{
 				color: $body-tertiary-color;
 				font-size: $font-size-sm;
 				margin-top: .5rem;
+				position: absolute;
+				left: 50%;
+				bottom: .75rem;
+				transform: translateX(-50%);
 			}
+			
 		}
 	}
 	.page-content{
@@ -140,6 +173,7 @@
 						color: $primary;
 						font-family: $font-family-monospace;
 						margin-left: .5rem;
+						text-transform: capitalize;
 					}
 				}
 				p{

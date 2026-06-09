@@ -2,63 +2,64 @@
   'use strict';
 
   const navSelector = '.explore-list-group .list-group-item-action[href^="#guide"]';
-  const sectionSelector = '[id^="guide"]';
+  const sectionSelector = '.page-content .card[id^="guide"]';
+  const svgGuideSelector = '.xmind svg [id^="guide"]';
+
   const navLinks = Array.from(document.querySelectorAll(navSelector));
-  const sections = navLinks
-    .map(function (link) {
-      return document.querySelector(link.getAttribute('href'));
-    })
-    .filter(Boolean);
+  const sections = Array.from(document.querySelectorAll(sectionSelector));
+
+  const sectionMap = sections.reduce(function (map, section) {
+    map[section.id] = section;
+    return map;
+  }, {});
 
   if (!navLinks.length || !sections.length) return;
 
   let isClickScrolling = false;
   let clickScrollTimer = null;
 
-  /*function getHeaderOffset() {
-    const header = document.querySelector('header');
-    const headerStyle = header ? window.getComputedStyle(header) : null;
-    const hasFixedHeader = header && ['fixed', 'sticky'].includes(headerStyle.position);
-    const headerHeight = hasFixedHeader ? header.offsetHeight : 0;
+  function getHeaderOffset() {
+    const stickyHeader = document.querySelector('header .sticky-top');
+    const stickyHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
 
-    // 保留一點呼吸空間，避免標題貼齊視窗頂端。
-    return headerHeight + 100;
-  }*/
-	function getHeaderOffset() {
-		const stickyHeader = document.querySelector('header .sticky-top');
-		const stickyHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
+    return stickyHeight;
+  }
 
-		return stickyHeight;
-	}
-	
-	function setActive(targetId) {
-		// 單選式 active：不論是點擊或捲動觸發，先移除全部 active 與 focus，再只啟用目前對應項目。
-		navLinks.forEach(function (link) {
-			link.classList.remove('active');
-			link.removeAttribute('aria-current');
-			
-			if (document.activeElement === link) {
-				link.blur();
-			}
-		});
+  function clearActive() {
+    navLinks.forEach(function (link) {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
 
-		const currentLink = navLinks.find(function (link) {
-			return link.getAttribute('href') === '#' + targetId;
-		});
+      if (document.activeElement === link) {
+        link.blur();
+      }
+    });
+  }
 
-		if (currentLink) {
-			currentLink.classList.add('active');
-			currentLink.setAttribute('aria-current', 'true');
-			
-			// 保險處理：若目前啟用項目剛好仍持有焦點，也同步移除 focus。
-			if (document.activeElement === currentLink) {
-				currentLink.blur();
-			}
-		}
-	}
+  function setActive(targetId) {
+    clearActive();
+
+    if (!targetId) return;
+
+    const currentLink = navLinks.find(function (link) {
+      return link.getAttribute('href') === '#' + targetId;
+    });
+
+    if (currentLink) {
+      currentLink.classList.add('active');
+      currentLink.setAttribute('aria-current', 'true');
+
+      if (document.activeElement === currentLink) {
+        currentLink.blur();
+      }
+    }
+  }
 
   function scrollToSection(target) {
-    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
+    const targetTop =
+      target.getBoundingClientRect().top +
+      window.pageYOffset -
+      getHeaderOffset();
 
     window.scrollTo({
       top: targetTop,
@@ -67,98 +68,121 @@
   }
 
   function getCurrentSectionId() {
-		const offsetLine = getHeaderOffset() + Math.round(window.innerHeight * 0.25);
-		let current = null;
+    const offsetLine =
+      getHeaderOffset() +
+      Math.round(window.innerHeight * 0.25);
 
-		sections.forEach(function (section) {
-			if (section.getBoundingClientRect().top <= offsetLine) {
-				current = section;
-			}
-		});
+    let current = null;
 
-		// 尚未捲到第一個 guide 區塊前，不預設啟用任何導覽項目。
-		return current ? current.id : null;
-	}
+    sections.forEach(function (section) {
+      if (section.getBoundingClientRect().top <= offsetLine) {
+        current = section;
+      }
+    });
+
+    // 尚未捲到第一個 guide 區塊前，不預設啟用任何導覽項目。
+    return current ? current.id : null;
+  }
 
   function updateActiveByScroll() {
     if (isClickScrolling) return;
+
     setActive(getCurrentSectionId());
   }
 
-  // 讓直接以網址 #guide* 進入頁面時，也能避開固定 header。
-  sections.forEach(function (section) {
-    section.style.scrollMarginTop = getHeaderOffset() + 'px';
-  });
+  function updateScrollMarginTop() {
+    const offset = getHeaderOffset();
+
+    sections.forEach(function (section) {
+      section.style.scrollMarginTop = offset + 'px';
+    });
+  }
+
+  function goToGuide(targetId) {
+    const target = sectionMap[targetId];
+
+    if (!target) return;
+
+    isClickScrolling = true;
+    setActive(targetId);
+    scrollToSection(target);
+
+    if (history.pushState) {
+      history.pushState(null, '', '#' + targetId);
+    }
+
+    window.clearTimeout(clickScrollTimer);
+    clickScrollTimer = window.setTimeout(function () {
+      isClickScrolling = false;
+      setActive(getCurrentSectionId());
+    }, 700);
+  }
+
+  updateScrollMarginTop();
 
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {
       const targetId = link.getAttribute('href').replace('#', '');
-      const target = document.getElementById(targetId);
-
-      if (!target) return;
 
       event.preventDefault();
-      isClickScrolling = true;
-      setActive(targetId);
-      scrollToSection(target);
-
-      // 更新網址 hash，但不觸發瀏覽器預設跳動。
-      if (history.pushState) {
-        history.pushState(null, '', '#' + targetId);
-      }
-
-      window.clearTimeout(clickScrollTimer);
-      clickScrollTimer = window.setTimeout(function () {
-        isClickScrolling = false;
-        setActive(getCurrentSectionId());
-      }, 700);
+      goToGuide(targetId);
     });
   });
 
-  // 心智圖 area 也沿用同一套平滑滑動與 active 同步。
-  document.querySelectorAll('map area[href^="#guide"]').forEach(function (area) {
-    area.addEventListener('click', function (event) {
-      const targetId = area.getAttribute('href').replace('#', '');
-      const target = document.getElementById(targetId);
+  // SVG 心智圖：使用 SVG 內 id="guide*" 的元素作為連結。
+  document.querySelectorAll(svgGuideSelector).forEach(function (svgGuide) {
+    const targetId = svgGuide.id;
 
-      if (!target) return;
+    if (!sectionMap[targetId]) return;
+
+    svgGuide.style.cursor = 'pointer';
+    svgGuide.setAttribute('role', 'link');
+    svgGuide.setAttribute('tabindex', '0');
+
+    svgGuide.addEventListener('click', function (event) {
+      event.preventDefault();
+      goToGuide(targetId);
+    });
+
+    svgGuide.addEventListener('keydown', function (event) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
 
       event.preventDefault();
-      setActive(targetId);
-      scrollToSection(target);
-
-      if (history.pushState) {
-        history.pushState(null, '', '#' + targetId);
-      }
+      goToGuide(targetId);
     });
   });
 
   let ticking = false;
-  window.addEventListener('scroll', function () {
-    if (ticking) return;
 
-    window.requestAnimationFrame(function () {
-      updateActiveByScroll();
-      ticking = false;
-    });
+  window.addEventListener(
+    'scroll',
+    function () {
+      if (ticking) return;
 
-    ticking = true;
-  }, { passive: true });
+      window.requestAnimationFrame(function () {
+        updateActiveByScroll();
+        ticking = false;
+      });
+
+      ticking = true;
+    },
+    { passive: true }
+  );
 
   window.addEventListener('resize', function () {
-    sections.forEach(function (section) {
-      section.style.scrollMarginTop = getHeaderOffset() + 'px';
-    });
+    updateScrollMarginTop();
     updateActiveByScroll();
   });
 
-  // 頁面載入時若已有 hash，平滑校正位置並同步 active。
   window.addEventListener('load', function () {
     const targetId = window.location.hash.replace('#', '');
-    const target = targetId ? document.getElementById(targetId) : null;
+    const target = targetId ? sectionMap[targetId] : null;
+
+    clearActive();
 
     if (target && /^guide\d+$/.test(targetId)) {
       setActive(targetId);
+
       window.setTimeout(function () {
         scrollToSection(target);
       }, 0);
