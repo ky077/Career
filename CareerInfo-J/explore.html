@@ -50,10 +50,31 @@
     <!-- page-header Start -->
     <div class="container-fluid page-header">
       <div class="container-md">
-        <h2 class="page-header-title wow animate__animated animate__slideInDown">探索高中職科</h2>
-        <div class="row justify-content-center mt-4">
-          <div class="col-lg-6">
-            <input type="text" class="form-control rounded-pill form-search" placeholder="輸入關鍵字搜尋群職科...">
+        <div class="row align-items-center">
+          <div class="col-3 wow animate__animated animate__fadeInLeft"><img src="Content/img/explore/explore-IP.png" class="img-fluid" alt=""/></div>
+          <div class="col-9 wow animate__animated animate__slideInDown">
+            <h2 class="page-header-title">探索高中職科</h2>
+            <div class="row">
+              <div class="col-lg-9">
+                <input type="text" class="form-control rounded-pill form-search" placeholder="輸入關鍵字搜尋群職科...">
+              </div>
+            </div>
+            <!-- 探索介紹 開始 -->
+            <div class="explore-intro  wow animate__animated animate__fadeIn animate__delay-1s">
+              <div class="container-md explore-intro-frame">
+                <div class="row">
+                  <div class="col explore-intro-item">
+                    <strong>16</strong>群科總數 </div>
+                  <div class="col explore-intro-item">
+                    <strong>72</strong>職科類別 </div>
+                  <div class="col explore-intro-item">
+                    <strong>07</strong>核心導覽
+                    <a href="#" role="button" class="link-sky" data-bs-toggle="modal" data-bs-target="#guideModal"><i class="bi bi-question-circle-fill"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 探索介紹 結束 -->
           </div>
         </div>
       </div>
@@ -61,294 +82,305 @@
     <!-- page-header End -->
     
     <!-- page-content Start -->
-    <div class="page-content">
-      <!-- 探索介紹 開始 -->
-      <div class="explore-intro">
-        <div class="container-md explore-intro-frame">
-          <div class="row">
-            <div class="col explore-intro-item">
-              <strong>16</strong>群科總數 </div>
-            <div class="col explore-intro-item">
-              <strong>72</strong>職科類別 </div>
-            <div class="col explore-intro-item">
-              <strong>07</strong>核心導覽
-              <a href="#" role="button" class="link-sky" data-bs-toggle="modal" data-bs-target="#guideModal"><i class="bi bi-question-circle-fill"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 探索介紹 結束 -->
-      
+    <div class="page-content  wow animate__animated animate__slideInUp">
       <!-- 群科、職科 開始 -->
       <div class="explore-card">
-        <div class="container-md py-5">
-          <div class="explore-card-remark">
-            <span class="ms-3"><span class="explore-badge VS">職</span>高職設有此職科</span>
-            <span class="ms-3"><span class="explore-badge JC">專</span>五專設有此職科</span>
-          </div>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <!-- 機械群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h3 class="card-title">機械群</h3>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item">
-                    <span class="explore-card-title">模具科</span>
-                    <span class="explore-badge VS">職</span>
-                    </a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">機電科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">機械木模科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">製圖科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">機械科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">板金科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">鑄造科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">生物產業機電科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">配管科</span><span class="explore-badge VS">職</span></a>
+        <div class="container-md">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="explore-card-remark">
+                <span class="ms-3"><span class="explore-badge VS">職</span>高職設有此職科</span>
+                <span class="ms-3"><span class="explore-badge JC">專</span>五專設有此職科</span>
+              </div>
+              <div class="explore-card-list">
+                <!-- 機械群 -->
+                <div class="card" data-disc-code="01">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">機械群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-01" aria-expanded="true">收合職科</button>
+                    </h3>
+                    <div class="collapse show" id="collapse-01">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail-55.html" class="list-group-item">
+                        <span class="explore-card-title">模具科</span>
+                        <span class="explore-badge VS">職</span>
+                        </a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">機電科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">機械木模科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">製圖科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">機械科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">板金科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">鑄造科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">生物產業機電科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">配管科</span><span class="explore-badge VS">職</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 動力機械群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h3 class="card-title">動力機械群</h3>
-                  <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item"><span class="explore-card-title">飛機修護科</span><span class="explore-badge VS">職</span></a>
-                    <a href="#" class="list-group-item"><span class="explore-card-title">農業機械科</span><span class="explore-badge VS">職</span></a>
-                    <a href="#" class="list-group-item"><span class="explore-card-title">重機科</span><span class="explore-badge VS">職</span></a>
-                    <a href="#" class="list-group-item"><span class="explore-card-title">汽車科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="#" class="list-group-item"><span class="explore-card-title">動力機械科</span><span class="explore-badge VS">職</span></a>
+                
+                <!-- 動力機械群 -->
+                <div class="card" data-disc-code="02">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">動力機械群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-02" aria-expanded="false">展開職科</button>
+                    </h3>
+                    <div class="collapse" id="collapse-02">
+                      <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item"><span class="explore-card-title">飛機修護科</span><span class="explore-badge VS">職</span></a>
+                        <a href="#" class="list-group-item"><span class="explore-card-title">農業機械科</span><span class="explore-badge VS">職</span></a>
+                        <a href="#" class="list-group-item"><span class="explore-card-title">重機科</span><span class="explore-badge VS">職</span></a>
+                        <a href="#" class="list-group-item"><span class="explore-card-title">汽車科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="#" class="list-group-item"><span class="explore-card-title">動力機械科</span><span class="explore-badge VS">職</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 電機與電子群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h3 class="card-title">電機與電子群</h3>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">冷凍空調科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">電機科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">控制科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">電子科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">資訊科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 電機與電子群 -->
+                <div class="card" data-disc-code="03">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">電機與電子群<span class="myRecommend-badge TA">我的優勢</span>
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-03" aria-expanded="false">展開職科</button>
+                    </h3>
+                    <div class="collapse" id="collapse-03">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">冷凍空調科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">電機科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">控制科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">電子科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">資訊科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 化工群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h3 class="card-title">化工群</h3>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">紡織科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">化工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">染整科</span><span class="explore-badge VS">職</span></a>
+                
+                <!-- 化工群 -->
+                <div class="card" data-disc-code="04">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">化工群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-04" aria-expanded="false">展開職科</button>
+                    </h3>
+                    <div class="collapse" id="collapse-04">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">紡織科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">化工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">染整科</span><span class="explore-badge VS">職</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 土木與建築群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">土木與建築群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">土木科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">消防工程科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">建築科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 土木與建築群 -->
+                <div class="card" data-disc-code="05">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">土木與建築群<span class="myRecommend-badge TA">我的優勢</span>
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-05" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="collapse" id="collapse-05">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">土木科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">消防工程科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">建築科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 商業與管理群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">商業與管理群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">航運管理科</span><span class="explore-badge VS">職</span></a>
-                    <a href="#" class="list-group-item"><span class="explore-card-title">資料處理科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">會計事務科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">國際貿易科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">商業經營科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">流通管理科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 商業與管理群 -->
+                <div class="card" data-disc-code="06">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">商業與管理群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-06" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="collapse" id="collapse-06">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail-60.html" class="list-group-item"><span class="explore-card-title">航運管理科</span><span class="explore-badge VS">職</span></a>
+                        <a href="#" class="list-group-item"><span class="explore-card-title">資料處理科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">會計事務科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">國際貿易科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">商業經營科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">流通管理科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 外語群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">外語群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">應用英語科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">應用日語科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 外語群 -->
+                <div class="card" data-disc-code="07">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">外語群<span class="myRecommend-badge TI">我的興趣</span>
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-07" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="collapse" id="collapse-07">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">應用英語科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">應用日語科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 設計群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">設計群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">陶瓷工程科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">室內空間設計科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">圖文傳播科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">廣告設計科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">美工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">家具設計科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">室內設計科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">金屬工藝科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">多媒體設計科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 設計群 -->
+                <div class="card" data-disc-code="08">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">設計群<span class="myRecommend-badge TI">我的興趣</span>
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-08" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class=" collapse" id="collapse-08">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">陶瓷工程科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">室內空間設計科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">圖文傳播科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">廣告設計科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">美工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">家具設計科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">室內設計科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">金屬工藝科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">多媒體設計科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 農業群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">農業群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">農場經營科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">野生動物保育科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">森林科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">園藝科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">造園科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">畜產保健科</span><span class="explore-badge VS">職</span></a>
+                
+                <!-- 農業群 -->
+                <div class="card" data-disc-code="09">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">農業群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-09" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="collapse" id="collapse-09">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">農場經營科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">野生動物保育科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">森林科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">園藝科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">造園科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">畜產保健科</span><span class="explore-badge VS">職</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 食品群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">食品群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">水產食品科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">食品加工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">食品科*</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 食品群 -->
+                <div class="card" data-disc-code="10">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">食品群<span class="myRecommend-badge TA">我的優勢</span>
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-10" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class=" collapse" id="collapse-10">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">水產食品科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">食品加工科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">食品科*</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 家政群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">家政群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">時尚模特兒科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">幼兒保育科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">流行服飾科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">服裝科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">美容科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">家政科</span><span class="explore-badge VS">職</span></a>
+                
+                <!-- 家政群 -->
+                <div class="card" data-disc-code="11">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">家政群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-11" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="collapse" id="collapse-11">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">時尚模特兒科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">幼兒保育科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">流行服飾科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">服裝科</span><span class="explore-badge VS">職</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">美容科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">家政科</span><span class="explore-badge VS">職</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 餐旅群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">餐旅群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">觀光事業科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">餐飲管理科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 餐旅群 -->
+                <div class="card" data-disc-code="12">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">餐旅群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-12" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="collapse" id="collapse-12">
+                      <div class="list-group list-group-flush">
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">觀光事業科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                        <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">餐飲管理科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 水產群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">水產群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">水產養殖科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">漁業科</span><span class="explore-badge VS">職</span></a>
+                
+                <!-- 水產群 -->
+                <div class="card" data-disc-code="13">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">水產群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-13" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="list-group list-group-flush collapse" id="collapse-13">
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">水產養殖科</span><span class="explore-badge VS">職</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">漁業科</span><span class="explore-badge VS">職</span></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 海事群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">海事群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">輪機科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">航海科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 海事群 -->
+                <div class="card" data-disc-code="14">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">海事群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-14" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="list-group list-group-flush collapse" id="collapse-14">
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">輪機科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">航海科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 藝術群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">藝術群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">多媒體動畫科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">音樂科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">美術科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">影劇科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">舞蹈科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">表演藝術科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">時尚工藝科</span><span class="explore-badge VS">職</span></a>
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">電影電視科</span><span class="explore-badge VS">職</span></a>
+                
+                <!-- 藝術群 -->
+                <div class="card" data-disc-code="15">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">藝術群<span class="myRecommend-badge TI">我的興趣</span>
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-15" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="list-group list-group-flush collapse" id="collapse-15">
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">多媒體動畫科</span><span class="explore-badge VS">職</span><span class="explore-badge JC">專</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">音樂科</span><span class="explore-badge VS">職</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">美術科</span><span class="explore-badge VS">職</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">影劇科</span><span class="explore-badge VS">職</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">舞蹈科</span><span class="explore-badge VS">職</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">表演藝術科</span><span class="explore-badge VS">職</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">時尚工藝科</span><span class="explore-badge VS">職</span></a>
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">電影電視科</span><span class="explore-badge VS">職</span></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            <!-- 護理群 -->
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-icon"></div>
-                  <h5 class="card-title">護理群</h5>
-                  <div class="list-group list-group-flush">
-                    <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">護理科</span><span class="explore-badge JC">專</span></a>
+                
+                <!-- 護理群 -->
+                <div class="card" data-disc-code="16">
+                  <div class="card-body">
+                    <div class="card-icon"></div>
+                    <h5 class="card-title">護理群
+                      <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-16" aria-expanded="false">展開職科</button>
+                    </h5>
+                    <div class="list-group list-group-flush collapse" id="collapse-16">
+                      <a href="exploreDetail.html" class="list-group-item"><span class="explore-card-title">護理科</span><span class="explore-badge JC">專</span></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -518,7 +550,6 @@
 <script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
 <script src="Content/lib/WOW-master/dist/wow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
 <!-- This web Javascript -->
 <script src="Content/js/fn.js"></script>
@@ -527,11 +558,6 @@
 $(document).ready(function () {
 	// nav當前頁active
 	navActive('explore');
-	
-	// explore-card 瀑布流
-	$('.explore-card .row').masonry({
-		itemSelector: '.col'
-	});
 });		
 </script>
 <script>
