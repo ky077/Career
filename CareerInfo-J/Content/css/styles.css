@@ -1,7 +1,7 @@
 @charset "UTF-8";
 header { display: inline; position: relative; }
 header .navbar.sticky-top { top: 0; transition: .5s; }
-header .navbar { background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border-bottom: 1px solid #dee2e6; -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%); clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%); }
+header .navbar { background-color: rgba(255, 255, 255, 0.75); box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border-bottom: 1px solid #dee2e6; border-radius: 0 0 2rem 2rem; }
 header .navbar .navbar-brand { max-width: calc(100% - 0.75rem*2 - 1.2rem - 1rem); overflow: hidden; }
 header .navbar .navbar-brand .logo { margin-bottom: 0; }
 header .navbar .navbar-toggler { border-color: transparent; padding-left: .5rem; padding-right: .5rem; }
@@ -20,7 +20,7 @@ header .navbar .navbar-nav .nav-others.dropdown-toggle::after { display: none; }
 header .navbar .navbar-nav .nav-others.btn { width: calc(1em + .75rem*2); height: calc(1em + .75rem*2); display: flex; justify-content: center; align-items: center; }
 header .navbar .navbar-nav .nav-user .avater { width: calc(1em*1.5 + 0.375rem*2 + 2px); height: calc(1em*1.5 + 0.375rem*2 + 2px); font-size: calc((1em*1.5 + 0.375rem*2 + 2px)*.4); }
 
-footer .infomation { background-color: rgba(255, 255, 255, 0.75); border-top: 1px solid #dee2e6; font-size: .85rem; padding-top: 1rem; padding-bottom: 1rem; -webkit-clip-path: polygon(2rem 0%, 100% 0%, 100% 100%, 0 100%, 0% 2rem); clip-path: polygon(2rem 0%, 100% 0%, 100% 100%, 0 100%, 0% 2rem); }
+footer .infomation { background-color: rgba(255, 255, 255, 0.75); border-top: 1px solid #dee2e6; font-size: .85rem; padding-top: 1rem; padding-bottom: 1rem; border-radius: 2rem 2rem 0 0; }
 footer .infomation .logo { margin-bottom: 1.5rem; }
 footer .infomation .infomation-data { padding-left: 13%; margin-bottom: 1.5rem; }
 footer .infomation .infomation-data p { margin-bottom: .25rem; }
@@ -411,9 +411,15 @@ background-position: center center;*/ }
 .intro .intro-help .intro-help-4:hover .card-body .card-title { color: #a155e8; }
 .intro .intro-help .intro-help-4:hover .card-body .card-title i { box-shadow: 0 0 0.75rem rgba(161, 85, 232, 0.1); }
 
-.explore { background: linear-gradient(transparent 0%, transparent 10%, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.5) 100%); }
-.explore .page-header .page-header-title, .explore .page-header h2 { text-align: left; }
+.explore { background: linear-gradient(transparent 0%, transparent 10%, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.5) 95%, transparent 100%); }
+.explore .page-header .page-header-title, .explore .page-header h2 { text-align: left; position: relative; }
+@media screen and (min-width: 992px) { .explore .page-header .explore-IP-block { position: absolute; top: 50%; left: 0; transform: translateY(-50%); } }
 .explore .page-header .explore-intro { margin-top: 1.5rem; }
+.explore .helper { display: none; position: fixed; bottom: 400px; right: 1rem; }
+@media screen and (min-width: 992px) { .explore .helper { display: block; } }
+.explore .helper .helper-dialogue { background-color: #fff; border-radius: 50%; color: #0068b7; display: inline-block; font-size: .75rem; font-weight: 500; filter: drop-shadow(0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)); padding: 1.5rem; position: relative; max-width: 240px; }
+.explore .helper .helper-dialogue::before { content: ""; display: block; position: absolute; bottom: 0; left: 50%; background-color: transparent; width: 3rem; height: 1.5rem; border-radius: 50%; border-right: 1rem solid #fff; transform: translate(-100%, 50%) rotate(-10deg); }
+.explore .helper img { display: block; margin: 1rem auto; width: 150px; height: auto; }
 
 .explore-intro .explore-intro-frame { background-color: #001a2e; border: 1px solid #a1ddf1; border-radius: 1rem; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); padding: .5rem; position: relative; }
 .explore-intro .explore-intro-frame::before { content: ""; display: none; width: 100%; height: 100%; border: 4px solid rgba(255, 255, 255, 0.25); border-radius: 1rem; position: absolute; top: 0; left: 0; transform: translate(calc(-.5rem - 4px), calc(-.5rem - 4px)); }
@@ -429,18 +435,21 @@ background-position: center center;*/ }
 .explore-card .explore-card-list { margin-bottom: 3rem; }
 .explore-card .explore-card-list .card { background-color: transparent; border-color: transparent; margin-bottom: 1.5rem; }
 .explore-card .explore-card-list .card .card-body { background-color: rgba(var(--bs-body-bg-rgb), 0.75); padding: 1rem 1rem 1rem 2rem; }
-.explore-card .explore-card-list .card .card-body .card-title { color: #0068b7; display: flex; align-items: center; justify-content: space-around; font-size: 1.25rem; font-weight: 600; margin-bottom: 0; position: relative; }
+.explore-card .explore-card-list .card .card-body .card-title { color: #0068b7; display: flex; align-items: center; justify-content: space-around; font-size: 1.25rem; font-weight: 600; margin-bottom: 0; position: relative; cursor: pointer; }
 .explore-card .explore-card-list .card .card-body .card-title::before { content: ""; display: inline-block; width: 2.4rem; height: 2.4rem; margin-right: .5rem; background-repeat: no-repeat; background-size: 100%; background-position: center center; background-color: #0068b7; border-radius: 50%; }
 .explore-card .explore-card-list .card .card-body .card-title .btn-link { font-size: 0.875rem; margin-left: auto; text-decoration: none; }
 .explore-card .explore-card-list .card .card-body .card-title .btn-link::after { content: "\F282"; display: inline-block; font-family: "bootstrap-icons"; vertical-align: middle; margin-left: .25rem; transition: 0.2s ease-in-out transform; }
 .explore-card .explore-card-list .card .card-body .card-title .btn-link[aria-expanded="true"]::after { transform: rotate(180deg); }
 .explore-card .explore-card-list .card .list-group { --bs-list-group-color: var(--bs-body-secondarycolor); padding-top: 1rem; display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem; }
 .explore-card .explore-card-list .card .list-group .list-group-item { display: flex; align-items: center; justify-content: space-between; border: 1px solid #dee2e6; text-decoration: none; border-radius: 1rem; }
+.explore-card .explore-card-list .card .list-group .list-group-item::before { content: ""; display: block; width: 0; height: 100%; background-color: #fff799; border-radius: 1rem; position: absolute; top: 0; left: 0; }
+.explore-card .explore-card-list .card .list-group .list-group-item > * { position: relative; z-index: 1; }
 .explore-card .explore-card-list .card .list-group .list-group-item .explore-card-title { color: rgba(33, 37, 41, 0.75); margin-right: auto; }
 .explore-card .explore-card-list .card .list-group .list-group-item .explore-badge { margin-left: .25rem; }
-.explore-card .explore-card-list .card .list-group .list-group-item:hover::before { content: ""; display: block; width: 100%; height: 100%; background-color: #fff799; border-radius: 1rem; position: absolute; top: 0; left: 0; z-index: -1; animation: scanWidth .5s linear; }
+.explore-card .explore-card-list .card .list-group .list-group-item:hover::before { width: 100%; animation: scanWidth .5s linear; }
 .explore-card .explore-card-list .card .list-group .list-group-item:hover .explore-card-title { font-weight: 600; }
-.explore-card .explore-card-list .card:hover .card-body { background-color: rgba(var(--bs-body-bg-rgb), 1); }
+.explore-card .explore-card-list .card:hover .card-body { background-color: #f3fbfd; }
+.explore-card .explore-card-list .card:hover .list-group .list-group-item { background-color: #fff; }
 .explore-card .explore-card-list .card[data-disc-code="01"] .card-body .card-title::before { background-image: url("../img/explore/disc-01.svg"); }
 .explore-card .explore-card-list .card[data-disc-code="02"] .card-body .card-title::before { background-image: url("../img/explore/disc-02.svg"); }
 .explore-card .explore-card-list .card[data-disc-code="03"] .card-body .card-title::before { background-image: url("../img/explore/disc-03.svg"); }
