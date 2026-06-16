@@ -583,7 +583,6 @@ background-position: center center;*/ }
 @media screen and (min-width: 992px) { .myRecommend-TA .myRecommend-card { min-height: 300px; } }
 .myRecommend-TA .myRecommend-card .card-body { padding: 1.5rem 2.5rem; }
 .myRecommend-TA .myRecommend-title { font-size: 1.5rem; color: #212529; }
-.myRecommend-TA .data-empty { display: none; }
 .myRecommend-TA .data-empty .myRecommend-card .card-body { display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .myRecommend-TA .data-empty .myRecommend-title { margin-bottom: 1rem; }
 .myRecommend-TA .data-empty .myRecommend-title::before { content: "\F333"; display: block; font-family: "bootstrap-icons"; font-size: 5rem; text-align: center; color: #99e4ff; margin-bottom: .5rem; }
@@ -617,7 +616,6 @@ background-position: center center;*/ }
 @media screen and (min-width: 992px) { .myRecommend-TI .myRecommend-card { min-height: 300px; } }
 .myRecommend-TI .myRecommend-card .card-body { padding: 1.5rem 2.5rem; }
 .myRecommend-TI .myRecommend-title { font-size: 1.5rem; color: #212529; }
-.myRecommend-TI .data-empty { display: none; }
 .myRecommend-TI .data-empty .myRecommend-card .card-body { display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .myRecommend-TI .data-empty .myRecommend-title { margin-bottom: 1rem; }
 .myRecommend-TI .data-empty .myRecommend-title::before { content: "\F333"; display: block; font-family: "bootstrap-icons"; font-size: 5rem; text-align: center; color: #99dda9; margin-bottom: .5rem; }
