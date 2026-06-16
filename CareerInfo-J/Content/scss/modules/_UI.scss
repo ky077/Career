@@ -83,11 +83,39 @@ a {
     transform: scale(1.1);
   }
 }
-.form-search{
-	background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$gray-500}' class='bi bi-search' viewBox='0 0 16 16'%3E %3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E %3C/svg%3E"));
+.form-search{ // +放大鏡
+	background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$border-color-translucent}' class='bi bi-search' viewBox='0 0 16 16'%3E %3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E %3C/svg%3E"));
 	background-position: left .75rem center;
 	background-repeat: no-repeat;
 	padding-left: calc(.75rem + 16px + .5rem);
+}
+.input-group.rounded-pill{
+	position: relative;
+	.form-control{
+		border-radius: $border-radius-pill !important;
+		z-index: 1;
+	}
+	.btn{
+		border-radius: 0 $border-radius-pill $border-radius-pill 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$border-color-translucent}' class='bi bi-x-lg' viewBox='0 0 16 16'%3E %3Cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z'/%3E %3C/svg%3E"));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 50% auto;
+		text-indent: -9999px;
+		overflow: hidden;
+		padding: .375rem .75rem*2 .375rem .75rem;
+		min-width: 2rem;
+		z-index: 2;
+		border-color: transparent;
+		background-color: transparent;
+		&:hover, &:focus, &:active{
+			background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$primary}' class='bi bi-x-lg' viewBox='0 0 16 16'%3E %3Cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z'/%3E %3C/svg%3E"));
+		}
+	}
 }
 .img-deafult {
   background-color: $gray-500;

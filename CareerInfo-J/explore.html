@@ -53,12 +53,22 @@
         <div class="row align-items-center position-relative">
           <div class="col-12 col-lg-9 offset-lg-3">
             <div class="row align-items-center">
-              <div class="col-3 explore-IP-block"><img src="Content/img/explore/explore-IP.png" class="img-fluid wow animate__animated animate__fadeInLeft" alt=""/></div>
-              <div class="col-9">
+              <div class="col-3 explore-IP-block"><img src="Content/img/explore/explore-IP.apng" class="img-fluid wow animate__animated animate__fadeInLeft" alt=""/></div>
+              <div class="col-9 col-lg-12">
                 <h2 class="page-header-title wow animate__animated animate__slideInDown">探索職群</h2>
-                <div class="row">
-                  <div class="col-lg-9">
-                    <input type="text" class="form-control rounded-pill form-search wow animate__animated animate__slideInDown" placeholder="輸入關鍵字搜尋職群科...">
+                <div class="row gx-2 align-items-center">
+                  <div class="col-lg-8">
+                    <div class="input-group rounded-pill wow animate__animated animate__slideInDown">
+                      <input type="text" class="form-control form-search" placeholder="輸入關鍵字搜尋職群科，例如：機械、設計..." id="exploreSearch" autocomplete="off">
+                      <button class="btn btn-outline-primary" type="button" id="exploreSearchClear" title="清除" style="display: none;">清除</button>
+                    </div>
+                  </div>
+                  <div class="col-lg">
+                    <div class="explore-quick-search">或試試
+                      <a role="button" class="explore-quick-link" data-quick-filter="popular">熱門職科</a>
+                      、
+                      <a role="button" class="explore-quick-link"  data-quick-filter="recommend">我的推薦</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -94,9 +104,14 @@
         <div class="container-md">
           <div class="row justify-content-center">
             <div class="col-lg-12">
-              <div class="explore-card-remark">
-                <span class="ms-3"><span class="explore-badge VS">職</span>高職設有此職科</span>
-                <span class="ms-3"><span class="explore-badge JC">專</span>五專設有此職科</span>
+              <div class="row justify-content-around">
+                <div class="col"><div class="explore-card-search-remark"> 目前查看：<strong>全部職群</strong>  </div></div>
+                <div class="col">
+                  <div class="explore-card-badge-remark">
+                    <span class="ms-3"><span class="explore-badge VS">職</span>高職設有此職科</span>
+                    <span class="ms-3"><span class="explore-badge JC">專</span>五專設有此職科</span>
+                  </div>
+                </div>
               </div>
               <div class="explore-card-list">
                 <!-- 機械群 -->
@@ -598,6 +613,274 @@ $(document).ready(function () {
       placement: "bottom"
     });
   });
+	
+  // 探索職群 / 職科關鍵字搜尋
+  const $exploreSearch = $('#exploreSearch');
+	const $exploreSearchClear = $('#exploreSearchClear');
+  const $exploreList = $('.explore-card-list');
+  const $exploreCards = $exploreList.find('> .card');
+  const $exploreSearchRemarkStrong = $('.explore-card-search-remark strong');
+  const $exploreQuickLinks = $('.explore-quick-link');
+
+  // 熱門職科 TOP 5：之後若改由後端/API 提供，只要替換這份資料即可
+  const popularMajorsTop5 = [
+    { rank: 1, name: '化工科' },
+    { rank: 2, name: '控制科' },
+    { rank: 3, name: '製圖科' },
+    { rank: 4, name: '商業經營科' },
+    { rank: 5, name: '機械木模科' }
+  ];
+
+
+  // 我的推薦群科：之後若改由後端/API 提供，只要替換這份資料即可
+  const recommendGroups = [
+    { name: '電機與電子群', type: '我的優勢' },
+    { name: '土木與建築群', type: '我的優勢' },
+    { name: '食品群', type: '我的優勢' },
+    { name: '藝術群', type: '我的興趣' },
+    { name: '外語群', type: '我的興趣' },
+    { name: '設計群', type: '我的興趣' }
+  ];
+
+  function setExploreViewRemark(text) {
+    $exploreSearchRemarkStrong.text(text);
+  }
+
+  function clearQuickFilterActive() {
+    $exploreQuickLinks.removeClass('active');
+  }
+
+  function clearPopularRankBadges() {
+    $exploreList.find('.popular-rank-badge').remove();
+    $exploreList.find('.is-popular-major').removeClass('is-popular-major');
+  }
+
+  function setQuickFilterActive(filterName) {
+    clearQuickFilterActive();
+    $exploreQuickLinks.filter('[data-quick-filter="' + filterName + '"]').addClass('active');
+  }
+
+  // 記錄原本展開狀態，清空搜尋時可還原
+  $exploreCards.each(function () {
+    const $card = $(this);
+    const $collapse = $card.find('.collapse').first();
+    const isOpen = $collapse.hasClass('show');
+    $card.data('original-open', isOpen);
+  });
+
+  // 無搜尋結果提示
+  if ($('#exploreSearchEmpty').length === 0) {
+    $exploreList.after('<div id="exploreSearchEmpty" class="text-center py-5" style="display:none;">找不到符合的群科或職科，請換個關鍵字試試看。</div>');
+  }
+
+  function getCardTitleText($card) {
+    const $title = $card.find('.card-title').first().clone();
+    $title.find('button, .myRecommend-badge').remove();
+    return $.trim($title.text());
+  }
+
+  function setCollapseState($card, open) {
+    const $title = $card.find('.card-title').first();
+    const $button = $title.find('.btn').first();
+    const $collapse = $card.find('.collapse').first();
+    const collapseEl = $collapse[0];
+
+    if (!collapseEl) return;
+
+    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
+
+    if (open) {
+      bsCollapse.show();
+      $title.attr('aria-expanded', 'true');
+      $button.text('收合職科');
+    } else {
+      bsCollapse.hide();
+      $title.attr('aria-expanded', 'false');
+      $button.text('展開職科');
+    }
+  }
+
+  function resetExploreSearch() {
+    $exploreSearchClear.hide();
+    clearQuickFilterActive();
+    clearPopularRankBadges();
+    setExploreViewRemark('全部職群');
+
+    $exploreCards.each(function () {
+      const $card = $(this);
+      $card.show();
+      $card.find('.list-group-item').show();
+      setCollapseState($card, $card.data('original-open') === true);
+    });
+    $('#exploreSearchEmpty').hide();
+  }
+
+  function filterExploreCards(keyword) {
+    const rawQuery = $.trim(keyword);
+    const query = rawQuery.toLowerCase();
+    let visibleCardCount = 0;
+
+    if (query === '') {
+      resetExploreSearch();
+      return;
+    }
+		
+		$exploreSearchClear.show();
+    clearQuickFilterActive();
+    clearPopularRankBadges();
+    setExploreViewRemark('搜尋：' + rawQuery);
+
+    $exploreCards.each(function () {
+      const $card = $(this);
+      const cardTitleText = getCardTitleText($card).toLowerCase();
+      const isCardTitleMatch = cardTitleText.indexOf(query) !== -1;
+      let hasItemMatch = false;
+
+      $card.find('.list-group-item').each(function () {
+        const $item = $(this);
+        const itemTitleText = $.trim($item.find('.explore-card-title').first().text()).toLowerCase();
+        const isItemMatch = itemTitleText.indexOf(query) !== -1;
+
+        // 若職群名稱符合，保留該職群底下全部職科；否則只顯示符合的職科
+        if (isCardTitleMatch || isItemMatch) {
+          $item.show();
+        } else {
+          $item.hide();
+        }
+
+        if (isItemMatch) {
+          hasItemMatch = true;
+        }
+      });
+
+      if (isCardTitleMatch || hasItemMatch) {
+        $card.show();
+        setCollapseState($card, true);
+        visibleCardCount += 1;
+      } else {
+        $card.hide();
+        setCollapseState($card, false);
+      }
+    });
+
+    $('#exploreSearchEmpty').toggle(visibleCardCount === 0);
+  }
+
+  function filterPopularMajors() {
+    const popularMap = {};
+    let visibleCardCount = 0;
+
+    popularMajorsTop5.forEach(function (major) {
+      popularMap[major.name] = major.rank;
+    });
+
+    $exploreSearch.val('熱門職科');
+    $exploreSearchClear.show();
+    setQuickFilterActive('popular');
+    clearPopularRankBadges();
+    setExploreViewRemark('熱門職科 TOP 5');
+
+    $exploreCards.each(function () {
+      const $card = $(this);
+      let hasPopularMajor = false;
+
+      $card.find('.list-group-item').each(function () {
+        const $item = $(this);
+        const $itemTitle = $item.find('.explore-card-title').first();
+        const itemTitleText = $.trim($itemTitle.text());
+        const rank = popularMap[itemTitleText];
+
+        if (rank) {
+          hasPopularMajor = true;
+          $item.show().addClass('is-popular-major');
+          $itemTitle.before('<span class="popular-rank-badge">TOP ' + rank + '</span>');
+        } else {
+          $item.hide();
+        }
+      });
+
+      if (hasPopularMajor) {
+        $card.show();
+        setCollapseState($card, true);
+        visibleCardCount += 1;
+      } else {
+        $card.hide();
+        setCollapseState($card, false);
+      }
+    });
+
+    $('#exploreSearchEmpty').toggle(visibleCardCount === 0);
+  }
+
+  function filterRecommendGroups() {
+    const recommendMap = {};
+    let visibleCardCount = 0;
+
+    recommendGroups.forEach(function (group) {
+      recommendMap[group.name] = group.type;
+    });
+
+    $exploreSearch.val('我的推薦');
+    $exploreSearchClear.show();
+    setQuickFilterActive('recommend');
+    clearPopularRankBadges();
+    setExploreViewRemark('我的推薦');
+
+    $exploreCards.each(function () {
+      const $card = $(this);
+      const cardTitleText = getCardTitleText($card);
+      const isRecommended = Object.prototype.hasOwnProperty.call(recommendMap, cardTitleText);
+
+      if (isRecommended) {
+        $card.show();
+        $card.find('.list-group-item').show();
+        setCollapseState($card, true);
+        visibleCardCount += 1;
+      } else {
+        $card.hide();
+        $card.find('.list-group-item').hide();
+        setCollapseState($card, false);
+      }
+    });
+
+    $('#exploreSearchEmpty').toggle(visibleCardCount === 0);
+  }
+
+  // 使用 input 事件，支援鍵盤輸入、貼上、手機輸入法
+  $exploreSearch.on('input', function () {
+    filterExploreCards(this.value);
+  });
+	
+  // 清除搜尋關鍵字，並還原原本的卡片顯示與展開狀態
+  $exploreSearchClear.on('click', function () {
+    $exploreSearch.val('');
+    resetExploreSearch();
+    $exploreSearch.trigger('focus');
+  });	
+
+  $exploreQuickLinks.on('click', function (event) {
+    event.preventDefault();
+
+    const filterName = $(this).data('quick-filter');
+
+    if (filterName === 'popular') {
+      filterPopularMajors();
+    } else if (filterName === 'recommend') {
+      filterRecommendGroups();
+    }
+  });
+
+  // 使用者手動展開 / 收合時，同步按鈕文字與 aria-expanded
+  $exploreList.on('shown.bs.collapse hidden.bs.collapse', '.collapse', function (event) {
+    const isOpen = event.type === 'shown';
+    const $card = $(this).closest('.card');
+    const $title = $card.find('.card-title').first();
+    const $button = $title.find('.btn').first();
+
+    $title.attr('aria-expanded', isOpen ? 'true' : 'false');
+    $button.text(isOpen ? '收合職科' : '展開職科');
+  });
+
 });		
 </script>
 <script>

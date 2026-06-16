@@ -60,6 +60,18 @@
 	}
 }
 
+.explore-quick-search{
+	display: flex;
+  align-items: center;
+	gap: .25rem;
+	color: $body-tertiary-color;
+	font-size: $font-size-sm;
+	.explore-quick-link{
+		text-decoration: underline;
+		
+	}
+}
+
 .explore-intro{
 	.explore-intro-frame{
 		background-color: mix($secondary, $black, 25%);
@@ -134,11 +146,19 @@
 }
 
 .explore-card{
-	.explore-card-remark{
-		text-align: right;
-		margin-bottom: 1.5rem;
-		font-size: $font-size-sm;
+	.explore-card-search-remark{
 		color: $body-secondary-color;
+		font-size: $font-size-sm;
+		> strong{
+			color: $red;
+			font-weight: $font-weight-normal;
+		}
+	}
+	.explore-card-badge-remark{
+		color: $body-secondary-color;
+		font-size: $font-size-sm;
+		margin-bottom: 1.5rem;
+		text-align: right;
 		.explore-badge{
 			margin-right: .25rem;
 		}
@@ -230,6 +250,19 @@
 					}
 					.explore-badge{
 						margin-left: .25rem;
+					}
+					.popular-rank-badge {
+						display: inline-flex;
+						align-items: center;
+						margin-right: .35rem;
+						padding: .12rem .42rem;
+						border-radius: 999px;
+						background: #fd7e14;
+						color: #fff;
+						font-size: .75rem;
+						font-weight: 700;
+						line-height: 1.2;
+						vertical-align: middle;
 					}
 				}
 				.list-group-item:hover{
