@@ -13,9 +13,14 @@
 		display: block;	
 		}
 		position: fixed;
-		bottom: 400px;
+		bottom: 4rem;
 		right: $spacer;
 		filter: drop-shadow($box-shadow-sm);
+		transition: bottom 0.35s ease, opacity 0.25s ease;
+  	will-change: bottom, opacity;
+		&.is-near-footer {
+			bottom: var(--helper-footer-bottom, 4rem);
+		}
 		.helper-dialogue{
 			background-color: $white;
 			border-radius: 50%;
@@ -47,7 +52,7 @@
 			height: auto;
 		}
 		.helper-close{
-			font-size: .75rem;
+			font-size: .7rem;
 			padding: .125rem .75rem;
 		}
 	}

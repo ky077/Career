@@ -51,14 +51,14 @@
     <div class="container-fluid page-header">
       <div class="container-md">
         <div class="row g-3 align-items-center position-relative">
-          <div class="col-3 explore-IP-block"><img src="Content/img/explore/explore-IP.apng" class="img-fluid" alt=""/></div>
-          <div class="col-9 offset-sm-3">
+          <div class="col-3 explore-IP-block wow animate__animated animate__slideInLeft"><img src="Content/img/explore/explore-IP.apng" class="img-fluid" alt=""/></div>
+          <div class="col-9 offset-sm-3 wow animate__animated animate__slideInDown">
             <h2 class="page-header-title">探索職群</h2>
           </div>
-          <div class="col-12 col-sm-9 offset-sm-3">
+          <div class="col-12 col-sm-9 offset-sm-3 wow animate__animated animate__slideInDown">
             <div class="row g-2 align-items-center">
               <div class="col-12 col-lg-8">
-                <div class="input-group rounded-pill wow animate__animated animate__slideInDown">
+                <div class="input-group rounded-pill">
                   <input type="text" class="form-control form-search" placeholder="輸入關鍵字搜尋職群科，例如：機械、設計..." id="exploreSearch" autocomplete="off">
                   <button class="btn btn-outline-primary btn-clear" type="button" title="清除" style="display: none;"><span class="me-1 visually-hidden">清除</span></button>
                 </div>
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="col-12 col-lg-9 offset-lg-3">
-            <div class="explore-intro">
+            <div class="explore-intro wow animate__animated animate__slideInRight">
               <div class="explore-intro-item">
                 <strong>16</strong>群科總數 </div>
               <div class="explore-intro-item">
@@ -90,7 +90,7 @@
     <!-- page-header End -->
     
     <!-- page-content Start -->
-    <div class="page-content  wow animate__animated animate__slideInUp">
+    <div class="page-content wow animate__animated animate__slideInUp">
       <!-- 群科、職科 開始 -->
       <div class="explore-card">
         <div class="container-md">
@@ -625,6 +625,7 @@ $(document).ready(function () {
   const $helper = $('.helper');
   const $helperClose = $('#helperClose');
   let helperDismissed = false;
+  let helperActivated = false;
 
   // 熱門職科 TOP 5：之後若改由後端/API 提供，只要替換這份資料即可
   const popularMajorsTop5 = [
@@ -646,15 +647,44 @@ $(document).ready(function () {
   ];
 
   // 本頁 helper 出現時機：
-  // 只有「沒有搜尋條件」時，捲動到頁面中段才出現。
+  // 1. 沒有搜尋 / 熱門職科 / 我的推薦條件時，捲動到頁面中段才出現。
+  // 2. helper 出現後會保持顯示，不會因為捲回 50% 以前而消失。
+  // 3. 使用者關閉 helper，或進入搜尋 / 熱門職科 / 我的推薦狀態時，helper 會隱藏。
   // 若 Content/js/main.js 仍保留原本「各頁helper出現時機」那段，建議刪除 main.js 內該段，避免兩邊重複控制。
   function hasExploreSearchCondition() {
     return $.trim($exploreSearch.val()) !== '';
   }
 
+  function updateExploreHelperPosition() {
+		const footerHeight = $('footer').outerHeight() || 0;
+		const scrollTop = $(window).scrollTop();
+		const windowHeight = $(window).height();
+		const documentHeight = $(document).height();
+		const distanceToBottom = documentHeight - (scrollTop + windowHeight);
+
+		if (distanceToBottom <= footerHeight) {
+			$helper
+				.addClass('is-near-footer')
+				.css('--helper-footer-bottom', footerHeight + 'px');
+		} else {
+			$helper
+				.removeClass('is-near-footer')
+				.css('--helper-footer-bottom', '');
+		}
+	}
+
+  function showExploreHelper() {
+    updateExploreHelperPosition();
+    $helper.stop(true, true).fadeIn('slow').css('display', 'block');
+  }
+
+  function hideExploreHelper() {
+    $helper.stop(true, true).fadeOut('slow');
+  }
+
   function updateExploreHelper() {
     if (hasExploreSearchCondition() || helperDismissed) {
-      $helper.stop(true, true).fadeOut('slow');
+      hideExploreHelper();
       return;
     }
 
@@ -662,12 +692,13 @@ $(document).ready(function () {
     const triggerHeight = ($(document).height() - $(window).height()) * 0.5;
 
     if (scrollTop > triggerHeight) {
-      $helper.stop(true, true).fadeIn('slow').css({
-        'display': 'block',
-        'bottom': $('footer').height()
-      });
+      helperActivated = true;
+    }
+
+    if (helperActivated) {
+      showExploreHelper();
     } else {
-      $helper.stop(true, true).fadeOut('slow');
+      hideExploreHelper();
     }
   }
 
