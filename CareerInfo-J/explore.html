@@ -50,34 +50,31 @@
     <!-- page-header Start -->
     <div class="container-fluid page-header">
       <div class="container-md">
-        <div class="row align-items-center position-relative">
-          <div class="col-12 col-lg-9 offset-lg-3">
-            <div class="row align-items-center">
-              <div class="col-3 explore-IP-block"><img src="Content/img/explore/explore-IP.apng" class="img-fluid wow animate__animated animate__fadeInLeft" alt=""/></div>
-              <div class="col-9 col-lg-12">
-                <h2 class="page-header-title wow animate__animated animate__slideInDown">探索職群</h2>
-                <div class="row gx-2 align-items-center">
-                  <div class="col-lg-8">
-                    <div class="input-group rounded-pill wow animate__animated animate__slideInDown">
-                      <input type="text" class="form-control form-search" placeholder="輸入關鍵字搜尋職群科，例如：機械、設計..." id="exploreSearch" autocomplete="off">
-                      <button class="btn btn-outline-primary" type="button" id="exploreSearchClear" title="清除" style="display: none;">清除</button>
-                    </div>
-                  </div>
-                  <div class="col-lg">
-                    <div class="explore-quick-search">或試試
-                      <a role="button" class="explore-quick-link" data-quick-filter="popular">熱門職科</a>
-                      、
-                      <a role="button" class="explore-quick-link"  data-quick-filter="recommend">我的推薦</a>
-                    </div>
-                  </div>
+        <div class="row g-3 align-items-center position-relative">
+          <div class="col-3 explore-IP-block"><img src="Content/img/explore/explore-IP.apng" class="img-fluid" alt=""/></div>
+          <div class="col-9 offset-sm-3">
+            <h2 class="page-header-title">探索職群</h2>
+          </div>
+          <div class="col-12 col-sm-9 offset-sm-3">
+            <div class="row g-2 align-items-center">
+              <div class="col-12 col-lg-8">
+                <div class="input-group rounded-pill wow animate__animated animate__slideInDown">
+                  <input type="text" class="form-control form-search" placeholder="輸入關鍵字搜尋職群科，例如：機械、設計..." id="exploreSearch" autocomplete="off">
+                  <button class="btn btn-outline-primary" type="button" id="exploreSearchClear" title="清除" style="display: none;">清除</button>
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="explore-quick-search">或試試
+                  <a role="button" class="explore-quick-link" data-quick-filter="popular">熱門職科</a>
+                  、
+                  <a role="button" class="explore-quick-link"  data-quick-filter="recommend">我的推薦</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-lg-9 offset-lg-3">
-            <!-- 探索介紹 開始 -->
             <div class="explore-intro wow animate__animated animate__fadeInRight">
-              <div class="container-md explore-intro-frame">
+              <div class="explore-intro-frame">
                 <div class="row">
                   <div class="col explore-intro-item">
                     <strong>16</strong>群科總數 </div>
@@ -90,7 +87,6 @@
                 </div>
               </div>
             </div>
-            <!-- 探索介紹 結束 -->
           </div>
         </div>
       </div>
@@ -104,8 +100,11 @@
         <div class="container-md">
           <div class="row justify-content-center">
             <div class="col-lg-12">
-              <div class="row justify-content-around">
-                <div class="col"><div class="explore-card-search-remark"> 目前查看：<strong>全部職群</strong>  </div></div>
+              <div class="row align-items-end justify-content-around">
+                <div class="col-auto">
+                  <div class="explore-card-search-remark">目前查看：<strong>全部職群</strong>
+                  </div>
+                </div>
                 <div class="col">
                   <div class="explore-card-badge-remark">
                     <span class="ms-3"><span class="explore-badge VS">職</span>高職設有此職科</span>

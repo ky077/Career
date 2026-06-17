@@ -6,6 +6,17 @@
 			position: relative;
 			margin-bottom: 0;
 		}
+		.explore-IP-block{
+			@media screen and (min-width: 992px) {
+				position: absolute;
+				top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+			}
+		}
+		.explore-intro{
+			//margin-top: map-get($spacers, 4);
+		}
 	}
 	
 	.helper{ 
@@ -50,37 +61,17 @@
 	}
 }
 
-.explore-IP-block{
-	@media screen and (min-width: 576px) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		transform: translateY(-10%);
-	}
-	@media screen and (min-width: 768px) {
-		transform: translateY(0);
-	}
-	@media screen and (min-width: 992px) {
-		top: 50%;
-		transform: translateY(-50%);
-	}
-}
 .explore-quick-search{
 	display: flex;
-	align-items: center;
-	justify-content: flex-start;	
+  align-items: center;
 	gap: .25rem;
 	color: $body-tertiary-color;
 	font-size: $font-size-sm;
-	padding-left: calc(.75rem + 16px + .5rem);
-	@media screen and (min-width: 992px) {
-	padding-left: 0;
-	}
 	.explore-quick-link{
 		text-decoration: underline;
+		
 	}
 }
-
 
 .explore-intro{
 	.explore-intro-frame{
