@@ -195,10 +195,16 @@
 						background-color: $secondary;
 						border-radius: 50%;
 					}
-					.btn-link{
+					.btn-link{ 
 						font-size: $font-size-sm;
 						margin-left: auto;
 						text-decoration: none;
+						position: relative;
+						text-indent: -9999px;
+						padding-right: calc(#{$btn-padding-x} + 1em);
+						@media screen and (min-width: 576px) {
+						text-indent: 0;	
+						}
 						&::after{
 							content: "\F282";
 							display: inline-block;
@@ -206,13 +212,20 @@
 							vertical-align: middle;
 							margin-left: .25rem;
 							transition: $icon-link-icon-transition;
+							position: absolute;
+							top: 50%;
+							right: calc(#{$btn-padding-x} - .25rem);
+							transform:  translateY(-50%);
+							text-indent: 0;
 						}
 					}
-					.btn-link[aria-expanded="true"]{
+				}
+				.card-title[aria-expanded="true"]{
+					.btn-link{
 						&::after{
-							transform: rotate(180deg);
+							transform: translateY(-50%) rotate(180deg);
 						}	
-					}
+					}	
 				}
 			}	
 			.list-group{
