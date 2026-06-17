@@ -60,14 +60,14 @@
               <div class="col-12 col-lg-8">
                 <div class="input-group rounded-pill wow animate__animated animate__slideInDown">
                   <input type="text" class="form-control form-search" placeholder="輸入關鍵字搜尋職群科，例如：機械、設計..." id="exploreSearch" autocomplete="off">
-                  <button class="btn btn-outline-primary" type="button" id="exploreSearchClear" title="清除" style="display: none;">清除</button>
+                  <button class="btn btn-outline-primary btn-clear" type="button" title="清除" style="display: none;"><span class="me-1 visually-hidden">清除</span></button>
                 </div>
               </div>
               <div class="col-12 col-lg">
                 <div class="explore-quick-search">或試試
-                  <a role="button" class="explore-quick-link" data-quick-filter="popular">熱門職科</a>
+                  <a role="button" class="explore-quick-link link-underline" data-quick-filter="popular">熱門職科</a>
                   、
-                  <a role="button" class="explore-quick-link"  data-quick-filter="recommend">我的推薦</a>
+                  <a role="button" class="explore-quick-link link-underline" data-quick-filter="recommend">我的推薦</a>
                 </div>
               </div>
             </div>
@@ -99,6 +99,7 @@
               <div class="row align-items-end justify-content-around mb-2">
                 <div class="col col-sm-auto">
                   <div class="explore-card-search-remark">目前查看：<strong>全部職群</strong>
+                    <button class="btn btn-sm btn-clear btn-light" type="button" title="清除" style="display: none;"><span class="me-1">清除</span></button>
                   </div>
                 </div>
                 <div class="col">
@@ -418,8 +419,13 @@
     
     <!-- 讚小幫手 -->
     <div class="helper" style="display: none;">
-      <div class="helper-dialogue">不知道從哪裡開始嗎？<br>
-        先選一個你有興趣的職群看看吧！</div>
+      <div class="helper-dialogue">
+        <div>不知道從哪裡開始嗎？<br>
+          先選一個你有興趣的職群看看吧！</div>
+        <div class="text-center mt-1">
+          <button type="button" class="btn btn-primary rounded-pill helper-close" id="helperClose">我瞭解了，關閉</button>
+        </div>
+      </div>
       <img src="Content/img/nice-hi.png" class="img-fluid" alt=""/>
     </div>
     <!-- 讚小幫手 -->
@@ -608,14 +614,17 @@ $(document).ready(function () {
       placement: "bottom"
     });
   });
-	
+
   // 探索職群 / 職科關鍵字搜尋
   const $exploreSearch = $('#exploreSearch');
-	const $exploreSearchClear = $('#exploreSearchClear');
+  const $exploreSearchClear = $('.btn-clear');
   const $exploreList = $('.explore-card-list');
   const $exploreCards = $exploreList.find('> .card');
   const $exploreSearchRemarkStrong = $('.explore-card-search-remark strong');
   const $exploreQuickLinks = $('.explore-quick-link');
+  const $helper = $('.helper');
+  const $helperClose = $('#helperClose');
+  let helperDismissed = false;
 
   // 熱門職科 TOP 5：之後若改由後端/API 提供，只要替換這份資料即可
   const popularMajorsTop5 = [
@@ -626,7 +635,6 @@ $(document).ready(function () {
     { rank: 5, name: '機械木模科' }
   ];
 
-
   // 我的推薦群科：之後若改由後端/API 提供，只要替換這份資料即可
   const recommendGroups = [
     { name: '電機與電子群', type: '我的優勢' },
@@ -636,6 +644,32 @@ $(document).ready(function () {
     { name: '外語群', type: '我的興趣' },
     { name: '設計群', type: '我的興趣' }
   ];
+
+  // 本頁 helper 出現時機：
+  // 只有「沒有搜尋條件」時，捲動到頁面中段才出現。
+  // 若 Content/js/main.js 仍保留原本「各頁helper出現時機」那段，建議刪除 main.js 內該段，避免兩邊重複控制。
+  function hasExploreSearchCondition() {
+    return $.trim($exploreSearch.val()) !== '';
+  }
+
+  function updateExploreHelper() {
+    if (hasExploreSearchCondition() || helperDismissed) {
+      $helper.stop(true, true).fadeOut('slow');
+      return;
+    }
+
+    const scrollTop = $(window).scrollTop();
+    const triggerHeight = ($(document).height() - $(window).height()) * 0.5;
+
+    if (scrollTop > triggerHeight) {
+      $helper.stop(true, true).fadeIn('slow').css({
+        'display': 'block',
+        'bottom': $('footer').height()
+      });
+    } else {
+      $helper.stop(true, true).fadeOut('slow');
+    }
+  }
 
   function setExploreViewRemark(text) {
     $exploreSearchRemarkStrong.text(text);
@@ -707,7 +741,9 @@ $(document).ready(function () {
       $card.find('.list-group-item').show();
       setCollapseState($card, $card.data('original-open') === true);
     });
+
     $('#exploreSearchEmpty').hide();
+    updateExploreHelper();
   }
 
   function filterExploreCards(keyword) {
@@ -719,8 +755,8 @@ $(document).ready(function () {
       resetExploreSearch();
       return;
     }
-		
-		$exploreSearchClear.show();
+
+    $exploreSearchClear.show();
     clearQuickFilterActive();
     clearPopularRankBadges();
     setExploreViewRemark('搜尋：' + rawQuery);
@@ -759,6 +795,7 @@ $(document).ready(function () {
     });
 
     $('#exploreSearchEmpty').toggle(visibleCardCount === 0);
+    updateExploreHelper();
   }
 
   function filterPopularMajors() {
@@ -805,6 +842,7 @@ $(document).ready(function () {
     });
 
     $('#exploreSearchEmpty').toggle(visibleCardCount === 0);
+    updateExploreHelper();
   }
 
   function filterRecommendGroups() {
@@ -839,19 +877,21 @@ $(document).ready(function () {
     });
 
     $('#exploreSearchEmpty').toggle(visibleCardCount === 0);
+    updateExploreHelper();
   }
 
   // 使用 input 事件，支援鍵盤輸入、貼上、手機輸入法
   $exploreSearch.on('input', function () {
     filterExploreCards(this.value);
   });
-	
+
   // 清除搜尋關鍵字，並還原原本的卡片顯示與展開狀態
+  // 上方搜尋欄的清除按鈕與 explore-card-search-remark 內的清除按鈕共用同一段功能
   $exploreSearchClear.on('click', function () {
     $exploreSearch.val('');
     resetExploreSearch();
     $exploreSearch.trigger('focus');
-  });	
+  });
 
   $exploreQuickLinks.on('click', function (event) {
     event.preventDefault();
@@ -864,6 +904,18 @@ $(document).ready(function () {
       filterRecommendGroups();
     }
   });
+
+  // helper 可由使用者主動關閉；之後即使無搜尋條件也不再自動出現
+  $helperClose.on('click', function () {
+    helperDismissed = true;
+    $helper.stop(true, true).fadeOut('slow');
+  });
+
+  $(window).on('scroll.exploreHelper resize.exploreHelper', function () {
+    updateExploreHelper();
+  });
+
+  updateExploreHelper();
 
   // 使用者手動展開 / 收合時，同步按鈕文字與 aria-expanded
   $exploreList.on('shown.bs.collapse hidden.bs.collapse', '.collapse', function (event) {

@@ -93,22 +93,6 @@
     });
   });
 
-  //各頁helper出現時機 80%
-  $(window).scroll(function () {
-    var scrollTop = $(this).scrollTop();
-
-    var triggerHeight = ($(document).height() - $(window).height()) * 0.5;
-
-    if (scrollTop > triggerHeight) {
-      $('.helper').fadeIn('slow').css({
-				'display': 'block',
-				'bottom':  $('footer').height()
-			});
-    } else {
-      $('.helper').fadeOut('slow');
-    }
-  });
-
   //學門、學類、學系是什麼？modal
   /*$('[data-bs-target="#modal-exploreTip"]').click(function(e) {
         e.preventDefault();
