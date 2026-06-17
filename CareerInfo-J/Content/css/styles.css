@@ -432,7 +432,7 @@ background-position: center center;*/ }
 @media screen and (min-width: 992px) { .explore-quick-search { padding-left: 0; } }
 .explore-quick-search .explore-quick-link { text-decoration: underline; }
 
-.explore-intro { background-color: #001a2e; border: 1px solid #a1ddf1; border-radius: 1rem; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); display: flex; flex-direction: row; position: relative; }
+.explore-intro { background-color: #001a2e; border: 1px solid #a1ddf1; border-radius: 1rem; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); display: flex; flex-direction: row; margin-bottom: 1rem; position: relative; }
 .explore-intro::after { content: ""; display: block; width: 100%; height: 100%; border-bottom: 4px solid #15a9dd; border-right: 4px solid #15a9dd; background-color: rgba(21, 169, 221, 0.25); border-radius: 1rem; position: absolute; bottom: 0; right: 0; transform: translate(calc(.5rem + 4px), calc(.5rem + 4px)); z-index: -1; }
 .explore-intro .explore-intro-item { color: #15a9dd; font-family: "Orbitron", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.875rem; flex: 1; text-align: center; padding-top: 1rem; padding-bottom: 1rem; position: relative; }
 .explore-intro .explore-intro-item:not(:first-child)::before { content: ""; display: block; width: 1px; height: 60%; background-color: rgba(21, 169, 221, 0.25); position: absolute; top: 50%; left: 0; transform: translateY(-50%); }
@@ -442,12 +442,12 @@ background-position: center center;*/ }
 
 .explore-card .explore-card-search-remark { color: rgba(33, 37, 41, 0.75); font-size: 0.875rem; }
 .explore-card .explore-card-search-remark > strong { color: #d62839; font-weight: 400; }
-.explore-card .explore-card-badge-remark { color: rgba(33, 37, 41, 0.75); font-size: 0.875rem; margin-bottom: 1.5rem; text-align: right; }
+.explore-card .explore-card-badge-remark { color: rgba(33, 37, 41, 0.75); font-size: 0.875rem; text-align: right; }
 .explore-card .explore-card-badge-remark .explore-badge { margin-right: .25rem; }
 .explore-card .explore-card-list { margin-bottom: 3rem; }
 .explore-card .explore-card-list .card { background-color: transparent; border-color: transparent; margin-bottom: 1.5rem; }
 .explore-card .explore-card-list .card .card-body { background-color: rgba(var(--bs-body-bg-rgb), 0.75); padding: 1rem 1rem 1rem 2rem; }
-.explore-card .explore-card-list .card .card-body .card-title { color: #0068b7; display: flex; align-items: center; justify-content: space-around; font-size: 1.25rem; font-weight: 600; margin-bottom: 0; position: relative; cursor: pointer; }
+.explore-card .explore-card-list .card .card-body .card-title { color: #0068b7; display: flex; align-items: center; justify-content: space-around; flex: 1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0; position: relative; cursor: pointer; }
 .explore-card .explore-card-list .card .card-body .card-title::before { content: ""; display: inline-block; width: 2.4rem; height: 2.4rem; margin-right: .5rem; background-repeat: no-repeat; background-size: 100%; background-position: center center; background-color: #0068b7; border-radius: 50%; }
 .explore-card .explore-card-list .card .card-body .card-title .btn-link { font-size: 0.875rem; margin-left: auto; text-decoration: none; }
 .explore-card .explore-card-list .card .card-body .card-title .btn-link::after { content: "\F282"; display: inline-block; font-family: "bootstrap-icons"; vertical-align: middle; margin-left: .25rem; transition: 0.2s ease-in-out transform; }

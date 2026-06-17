@@ -89,6 +89,7 @@
 	box-shadow: $box-shadow-sm;
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 1rem;
 	position: relative;
 	&::after{
 		content: "";
@@ -155,7 +156,7 @@
 	.explore-card-badge-remark{
 		color: $body-secondary-color;
 		font-size: $font-size-sm;
-		margin-bottom: 1.5rem;
+		//margin-bottom: 1.5rem;
 		text-align: right;
 		.explore-badge{
 			margin-right: .25rem;
@@ -176,6 +177,7 @@
 					display: flex;
 					align-items: center;
 					justify-content: space-around;
+					flex: 1;
 					font-size: $h5-font-size;
 					font-weight: 600;
 					margin-bottom: 0;
