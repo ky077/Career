@@ -1,0 +1,61 @@
+.academic { 
+	display: flex;
+	flex-direction: column;
+	transition: .35s ease;
+	//max-width: 160px;
+	margin: auto;
+	.academic-img{  
+		width: 100%;
+		height: 100%;
+		max-width: 160px;
+		max-height: 160px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	.academic-name{
+		color: #fff;
+		background-color: inherit;
+		border-radius: 5rem;
+		padding: $btn-padding-y $btn-padding-x;
+		font-size: .95rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		white-space: nowrap;
+	}
+	
+	&.disc, &.discipline{
+		.academic-name{ 
+			//background-color: $blue-300;  
+			background: $gradient-disc;
+		}
+	}
+	&.cate, &.category{
+		.academic-name{ 
+			//background-color: $pink-400;
+			background: $gradient-cate;
+		}
+	}
+	&.dept, &.department{
+		.academic-name{ 
+			//background-color: $orange-400;
+			background: $gradient-dept;
+		} 
+	}
+	
+}
+a.academic {
+	&:hover{
+		transform: scale(1.1);
+		transition: .35s ease;
+		filter: brightness(1.05);
+		text-decoration: none;
+	}
+}

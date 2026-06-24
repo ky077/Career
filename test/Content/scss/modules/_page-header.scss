@@ -1,0 +1,30 @@
+.page-header {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	.page-header-title, h2{
+		color: $body-color;
+    filter: opacity(0.9);
+		font-size: map-get($display-font-sizes, 5);
+		font-weight: $font-weight-bold;
+		text-align: center;
+		margin-bottom: map-get($spacers, 3);
+	}
+	nav{
+		filter: opacity(.75);
+	}
+	.breadcrumb{
+		color: $body-secondary-color;
+		--bs-breadcrumb-divider-color: var(--bs-body-secondary-color);
+		--bs-breadcrumb-item-active-color: var(--bs-body-secondary-color);
+		a{
+			color: $body-secondary-color;
+			&:hover{
+				color: $body-secondary-color;
+			}
+		}
+	}
+}
