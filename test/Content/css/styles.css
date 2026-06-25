@@ -410,7 +410,7 @@ background-position: center center;*/ }
 .intro .intro-help .card .card-body .card-title i { margin-right: .75rem; color: #fd7e14; background: linear-gradient(135deg, rgba(253, 126, 20, 0.25) 0%, rgba(253, 126, 20, 0) 100%); display: inline-flex; justify-content: center; align-items: center; width: 2em; height: 2em; border: 1px solid rgba(253, 126, 20, 0.25); border-radius: 0.375rem; vertical-align: middle; }
 .intro .intro-help .card .card-body .card-text { border-left: 2px solid rgba(253, 126, 20, 0.5); padding-left: 1rem; font-size: .9rem; }
 .intro .intro-help .card:hover { background-color: rgba(255, 255, 255, 0.075); filter: brightness(1.25); box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
-.intro .intro-help .card:hover .card-body:after { opacity: 1; animation: scanMove 2.5s linear infinite; }
+.intro .intro-help .card:hover .card-body::after { opacity: 1; animation: scanMove 2.5s linear infinite; }
 .intro .intro-help .card:hover .card-body .card-title { color: #fd7e14; }
 .intro .intro-help .card:hover .card-body .card-title i { transform: scale(1.2); }
 .intro .intro-help .intro-help-1 .card-body::before { content: "01"; }
@@ -600,6 +600,7 @@ position: relative;
 .explore-list-group .list-group-item:active::before, .explore-list-group .list-group-item.active::before { filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.5)) drop-shadow(-1px -1px rgba(255, 255, 255, 0.5)) drop-shadow(-1px 1px rgba(255, 255, 255, 0.5)) drop-shadow(1px -1px rgba(255, 255, 255, 0.5)); }
 
 .guide-card { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.guide-card:last-child { padding-bottom: 3rem; }
 .guide-card .guide-title { font-size: 1.75rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: row; align-items: center; }
 .guide-card .guide-title::before { content: ""; display: block; width: 2.5rem; height: 2.5rem; border-radius: 100%; background-color: rgba(253, 126, 20, 0.25); margin-right: .5rem; }
 .guide-card .guide-title::after { flex: 1; content: ""; display: block; width: 100%; height: 2px; background: -webkit-linear-gradient(left, #fd7e14 0%, #fff799 75%, transparent 100%); background: -o-linear-gradient(left, #fd7e14 0%, #fff799 75%, transparent 100%); background: linear-gradient(to right, #fd7e14 0%, #fff799 75%, transparent 100%); margin-left: .75rem; }
@@ -648,6 +649,33 @@ position: relative;
 .guide-school .region-section-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
 .guide-school .region-section-list a { border: 1px solid rgba(253, 126, 20, 0.25); color: rgba(33, 37, 41, 0.75); display: block; padding: 0.375rem 1rem; text-decoration: none; font-size: 0.875rem; border-radius: 50rem; background-color: rgba(255, 255, 255, 0.75); transition: all 0.2s ease-in-out; }
 .guide-school .region-section-list a:hover, .guide-school .region-section-list a:focus, .guide-school .region-section-list a:active { color: #fd7e14 !important; background-color: rgba(253, 126, 20, 0.08) !important; border-color: rgba(253, 126, 20, 0.75); box-shadow: 0 0.35rem 1rem rgba(253, 126, 20, 0.12); }
+
+.guide2-knowledge { /*.futuristic-frame{
+	position: relative;
+	&::before{
+		content: "\F468";
+		display: inline-block;
+		font-family: "bootstrap-icons";
+		color: rgba($golden, .25);
+		font-size: 10rem;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+	}
+	&:after{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(to right, transparent, $golden, transparent);
+		position: absolute;
+		top: -2px;
+		left: 0;
+		opacity: 0;
+	}	
+}*/ }
+.guide2-knowledge .futuristic-frame:hover::after, .guide2-knowledge .explore-card .explore-card-list .card .card-body:hover::after, .explore-card .explore-card-list .card .guide2-knowledge .card-body:hover::after { opacity: 1; animation: scanMove 2.5s linear infinite; }
 
 .guide3-interest { border: 0.5rem solid #fff; margin: -1.5rem -2rem .75rem -2rem; position: relative; width: calc(100% + 2rem*2); height: 0; padding-bottom: calc((100% + 2rem*2)* 9/16); position: relative; border-top-right-radius: 1rem; }
 .guide3-interest img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-top-right-radius: 0.5rem; }

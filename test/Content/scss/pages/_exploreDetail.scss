@@ -239,6 +239,9 @@
 .guide-card{
 	padding-top: map-get($spacers, 4);
 	padding-bottom: map-get($spacers, 4);
+	&:last-child{
+		padding-bottom: map-get($spacers, 4) + map-get($spacers, 4);	
+	}
 	.guide-title{
 		font-size: $h3-font-size;
 		font-weight: $font-weight-bold;
@@ -478,6 +481,51 @@
 }
 
 
+.guide2-knowledge{
+	/*.futuristic-frame{
+		position: relative;
+		&::before{
+			content: "\F468";
+			display: inline-block;
+			font-family: "bootstrap-icons";
+			color: rgba($golden, .25);
+			font-size: 10rem;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+		}
+		&:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(to right, transparent, $golden, transparent);
+			position: absolute;
+			top: -2px;
+			left: 0;
+			opacity: 0;
+		}	
+	}*/
+	.futuristic-frame:hover{
+		&::after{
+			opacity: 1;
+			animation: scanMove 2.5s linear infinite;
+		}
+	}
+
+}
+
+.guide2-skills{
+	.futuristic-frame-title{
+		//color: $blue;
+	}
+}
+.guide2-abilities{
+	.futuristic-frame-title{
+		//color: $blue;
+	}
+}
 
 .guide3-interest{
 	border: .5rem solid $white;
