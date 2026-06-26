@@ -2,6 +2,7 @@
   'use strict';
 
   const xmindFrameSelector = '.xmind .futuristic-frame-digital';
+  const xlinkNamespace = 'http://www.w3.org/1999/xlink';
 
   function getExploreIdFromUrl() {
     const fileName = window.location.pathname.split('/').pop() || '';
@@ -36,6 +37,7 @@
         }
 
         return {
+          basePath: basePath,
           source: svgPath,
           markup: svgText
         };
@@ -47,11 +49,59 @@
           }
 
           return {
+            basePath: basePath,
             source: txtPath,
             markup: txtText
           };
         });
       });
+  }
+
+  function isAbsoluteOrEmbeddedPath(path) {
+    return /^(data:|blob:|https?:\/\/|\/)/i.test(path || '');
+  }
+
+  function getImageHref(image) {
+    return (
+      image.getAttribute('href') ||
+      image.getAttributeNS(xlinkNamespace, 'href') ||
+      image.getAttribute('xlink:href') ||
+      ''
+    );
+  }
+
+  function setImageHref(image, href) {
+    image.setAttribute('href', href);
+    image.setAttributeNS(xlinkNamespace, 'xlink:href', href);
+  }
+
+  function prefixRelativeAssetPaths(svg, basePath) {
+    svg.querySelectorAll('image').forEach(function (image) {
+      const href = getImageHref(image).trim();
+
+      if (!href || isAbsoluteOrEmbeddedPath(href)) return;
+      if (href.indexOf(basePath) === 0) return;
+
+      setImageHref(image, basePath + href.replace(/^\.\//, ''));
+    });
+  }
+
+  function parseSvgMarkup(markup, basePath) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(markup, 'image/svg+xml');
+    const svg = doc.documentElement;
+
+    if (!svg || svg.nodeName.toLowerCase() !== 'svg') {
+      throw new Error('Loaded xmind markup is not SVG.');
+    }
+
+    if (doc.querySelector('parsererror')) {
+      throw new Error('Loaded xmind SVG has parser error.');
+    }
+
+    prefixRelativeAssetPaths(svg, basePath);
+
+    return svg;
   }
 
   function dispatchLoaded(detail) {
@@ -81,7 +131,10 @@
 
     loadXmindMarkup(exploreId)
       .then(function (result) {
-        frame.innerHTML = result.markup;
+        const svg = parseSvgMarkup(result.markup, result.basePath);
+
+        frame.innerHTML = '';
+        frame.appendChild(document.importNode(svg, true));
         frame.setAttribute('data-xmind-source', result.source);
 
         dispatchLoaded({
