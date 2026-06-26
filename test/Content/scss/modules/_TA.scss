@@ -1,0 +1,64 @@
+$TA-color:		   #0039ac;
+$TA-light-color: #00bbff;
+
+$TA-A-color : #3B88C9; //美感
+$TA-C-color : #B4D349; //創意
+$TA-L-color : #EF8AA0; //語文
+$TA-LR-color: #00A8C6; //邏輯推理
+$TA-M-color : #FACB00; //數學
+$TA-O-color : #9072B1; //觀察
+$TA-S-color : #00AE86; //空間
+$TA-SR-color: #F39800; //科學推理
+
+@mixin TAsymbolStyles($color) {
+  //.TA-symbol{
+  width: $font-size-base*6;
+  height: $font-size-base*6;
+	min-width: $font-size-base*6;
+  min-height: $font-size-base*6;
+	max-width: $font-size-base*6;
+  max-height: $font-size-base*6;
+  border-radius: 100%;
+  color: $white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-base;
+  font-weight: 500;
+	background-color: $color;
+	box-shadow: 0 .5rem 1rem rgba($color, .25), inset -.325rem -.325rem .5rem rgba($black, 0.1), inset .325rem .325rem .5rem rgba($white, 0.2);
+	text-shadow: 0px 0px 5px rgba($black, .25);
+	border: .325rem solid tint-color($color, 40%);
+}
+//美感
+.TA-symbol.A {
+  @include TAsymbolStyles($TA-A-color);
+}
+//創意
+.TA-symbol.C {
+  @include TAsymbolStyles($TA-C-color);
+}
+//語文
+.TA-symbol.L {
+  @include TAsymbolStyles($TA-L-color);
+}
+//邏輯推理
+.TA-symbol.LR {
+  @include TAsymbolStyles($TA-LR-color);
+}
+//數學
+.TA-symbol.M {
+  @include TAsymbolStyles($TA-M-color);
+}
+//觀察
+.TA-symbol.O {
+  @include TAsymbolStyles($TA-O-color);
+}
+//空間
+.TA-symbol.S {
+  @include TAsymbolStyles($TA-S-color);
+}
+//科學推理
+.TA-symbol.SR {
+  @include TAsymbolStyles($TA-SR-color);
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1d135;
+      }
+
+      .cls-2 {
+        fill: #00ab28;
+      }
+
+      .cls-3 {
+        font-family: AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std';
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #344154;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g id="_圖層_1-2" data-name="_圖層_1">
+        <g id="_圖層_1-2">
+          <g id="_圖層_1-2-2" data-name="_圖層_1-2">
+            <g>
+              <path class="cls-4" d="M53,102.2h-1.8C23.8,102.2,1.5,80,1.5,52.6S23.8,2.9,51.3,2.9s35.1,10.3,43.6,25.6"/>
+              <path class="cls-4" d="M100.7,46.5c.2,2,.4,4,.4,6.1,0,23-15.7,42.4-37,48"/>
+              <path class="cls-4" d="M126.5,114.2V41.4c0-4-3.2-7.2-7.2-7.2h-53.5c-4,0-7.2,3.2-7.2,7.2v79.7c0,2.3,1.8,4.1,4.1,4.1h59.6c2.3,0,4.1-1.8,4.1-4.1v-6.8"/>
+              <path class="cls-4" d="M80.1,34.1v3.5c0,2.2,1.8,3.9,3.9,3.9h17.4c2.2,0,3.9-1.8,3.9-3.9v-3.5"/>
+              <path class="cls-1" d="M25.9,88.5c14-30-7-41.9-17.7-45.8-.7,3.2-1.1,6.4-1.1,9.8,0,14.9,7.4,28,18.7,36h.1Z"/>
+              <path class="cls-2" d="M26.9,15.9c7.7,4.9,23.6,11.3,38.6-5.1-4.5-1.5-9.2-2.4-14.2-2.4-9,0-17.5,2.7-24.4,7.3h0v.2Z"/>
+              <line class="cls-4" x1="89.5" y1="109.6" x2="112.6" y2="109.6"/>
+              <line class="cls-4" x1="89.5" y1="100.5" x2="112.6" y2="100.5"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <text class="cls-3" transform="translate(40 157.6)"><tspan x="0" y="0">國際事務</tspan></text>
+    </g>
+  </g>
+</svg>
