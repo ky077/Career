@@ -28,45 +28,11 @@
 				}	
 			}
 			.exploreDetail-header-img{
-				margin-right: .75rem;
+				margin-right: .25rem;
 				img{
 					width: 3.6rem;
 					height: 3.6rem;
 				}
-				/*border-radius: $border-radius-lg;
-				border: 1px solid $border-color;
-				box-shadow: $box-shadow;
-				margin-left: .5rem;
-				margin-right: 1rem;
-				margin-bottom: auto;
-				position: relative;
-				
-				&::before{
-					content: "";
-					display: block;
-					width: 100%;
-					height: 100%;
-					border-radius: $border-radius-lg;
-					background-color: rgba($tertiary, .75);
-					position: absolute;
-					top: 0%;
-					left: 0%;
-					transform: translate(-.5rem, -.5rem);
-					z-index: -1;
-				}
-				&::after{
-					content: "";
-					display: block;
-					width: 100%;
-					height: 100%;
-					border-radius: $border-radius-lg;
-					background-color: rgba($primary, .5);
-					position: absolute;
-					bottom: 0%;
-					right: 0%;
-					transform: translate(.5rem, .5rem);
-					z-index: -1;
-				}*/
 			}
 		}
 		.xmind{
@@ -81,46 +47,67 @@
 				[id^="g"] {
 					cursor: pointer;
 					position: relative;
-					/*transition: filter .2s ease, transform .2s ease;
-					transform-box: fill-box;
+					transition: transform .2s ease;
 					transform-origin: center;
-
 					rect {
-						transition: fill .2s ease, stroke .2s ease;
+						transition: filter .2s ease,;
 					}
-
-					&:hover,
-					&:focus {
-						filter: drop-shadow(0 8px 14px rgba($secondary, .22));
+					&:hover, &:focus {
 						transform: translateY(-2px);
-						outline: none;
-
 						rect:first-of-type {
-							fill: rgba($tertiary, .65);
-							stroke: $primary;
+							//filter: drop-shadow(0 8px 10px rgba($black, .22));
 						}
-					}*/
-					&::after{
-						content: "";
-						display: block;
-						width: 50px;
-						height: 50px;
-						background-color: red;
-						position: absolute;
-						top: 50%;
-						right: 0;
-							
 					}
 				}
 				#g1{
-					
+					&:hover, &:focus {
+						rect:first-of-type {
+							filter: drop-shadow(0 8px 10px rgba(#ff5252, .5));
+						}
+					}
 				}
-				#g2{}
-				#g3{}
-				#g4{}
-				#g5{}
-				#g6{}
-				#g7{}
+				#g2{
+					&:hover, &:focus {
+						rect:first-of-type {
+							filter: drop-shadow(0 8px 10px rgba(#ff6f00, .5));
+						}
+					}
+				}
+				#g3{
+					&:hover, &:focus {
+						rect:first-of-type {
+							filter: drop-shadow(0 8px 10px rgba(#ffc009, .5));
+						}
+					}
+				}
+				#g4{
+					&:hover, &:focus {
+						rect:first-of-type {
+							filter: drop-shadow(0 8px 10px rgba(#19a719, .5));
+						}
+					}
+				}
+				#g5{
+					&:hover, &:focus {
+						rect:first-of-type {
+							filter: drop-shadow(0 8px 10px rgba(#40e0d0, .5));
+						}
+					}
+				}
+				#g6{
+					&:hover, &:focus {
+						rect:first-of-type {
+							filter: drop-shadow(0 8px 10px rgba(#6a6aff, .5));
+						}
+					}
+				}
+				#g7{
+					&:hover, &:focus {
+						rect:first-of-type {
+							filter: drop-shadow(0 8px 10px rgba(#7b1fa2, .5));
+						}
+					}
+				}
 			}
 			.xmind-remark{
 				color: $body-tertiary-color;
@@ -240,7 +227,7 @@
 	padding-top: map-get($spacers, 4);
 	padding-bottom: map-get($spacers, 4);
 	&:last-child{
-		padding-bottom: map-get($spacers, 4) + map-get($spacers, 4);	
+		padding-bottom: map-get($spacers, 4)*3;	
 	}
 	.guide-title{
 		font-size: $h3-font-size;
@@ -395,7 +382,7 @@
 .guide-card:nth-child(6) .guide-title::before{
 	background-image: url("../img/exploreDetail/guide-6.svg");
 }
-.guide-card:nth-child(7) ::before{
+.guide-card:nth-child(7) .guide-title::before{
 	background-image: url("../img/exploreDetail/guide-7.svg");
 }
 

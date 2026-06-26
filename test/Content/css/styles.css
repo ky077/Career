@@ -524,63 +524,20 @@ background-position: center center;*/ }
 .exploreDetail .page-header .page-header-title .explore-badge, .exploreDetail .page-header h2 .explore-badge { margin-top: .5rem; margin-left: .5rem; }
 @media screen and (min-width: 1200px) { .exploreDetail .page-header .page-header-title .explore-badge, .exploreDetail .page-header h2 .explore-badge { position: absolute; top: 0; left: 100%; }
   .exploreDetail .page-header .page-header-title .explore-badge + .explore-badge, .exploreDetail .page-header h2 .explore-badge + .explore-badge { transform: translateX(calc(100% + .25rem)); } }
-.exploreDetail .page-header .page-header-title .exploreDetail-header-img, .exploreDetail .page-header h2 .exploreDetail-header-img { margin-right: .75rem; /*border-radius: $border-radius-lg;
-border: 1px solid $border-color;
-box-shadow: $box-shadow;
-margin-left: .5rem;
-margin-right: 1rem;
-margin-bottom: auto;
-position: relative;
-
-&::before{
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	border-radius: $border-radius-lg;
-	background-color: rgba($tertiary, .75);
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	transform: translate(-.5rem, -.5rem);
-	z-index: -1;
-}
-&::after{
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	border-radius: $border-radius-lg;
-	background-color: rgba($primary, .5);
-	position: absolute;
-	bottom: 0%;
-	right: 0%;
-	transform: translate(.5rem, .5rem);
-	z-index: -1;
-}*/ }
+.exploreDetail .page-header .page-header-title .exploreDetail-header-img, .exploreDetail .page-header h2 .exploreDetail-header-img { margin-right: .25rem; }
 .exploreDetail .page-header .page-header-title .exploreDetail-header-img img, .exploreDetail .page-header h2 .exploreDetail-header-img img { width: 3.6rem; height: 3.6rem; }
 .exploreDetail .page-header .xmind { width: 100%; margin: 0 auto; text-align: center; position: relative; }
 @media screen and (min-width: 992px) { .exploreDetail .page-header .xmind { width: 83.3333333333%; } }
-.exploreDetail .page-header .xmind svg [id^="g"] { cursor: pointer; position: relative; 					/*transition: filter .2s ease, transform .2s ease;
-					transform-box: fill-box;
-					transform-origin: center;
-
-					rect {
-						transition: fill .2s ease, stroke .2s ease;
-					}
-
-					&:hover,
-					&:focus {
-						filter: drop-shadow(0 8px 14px rgba($secondary, .22));
-						transform: translateY(-2px);
-						outline: none;
-
-						rect:first-of-type {
-							fill: rgba($tertiary, .65);
-							stroke: $primary;
-						}
-					}*/ }
-.exploreDetail .page-header .xmind svg [id^="g"]::after { content: ""; display: block; width: 50px; height: 50px; background-color: red; position: absolute; top: 50%; right: 0; }
+.exploreDetail .page-header .xmind svg [id^="g"] { cursor: pointer; position: relative; transition: transform .2s ease; transform-origin: center; }
+.exploreDetail .page-header .xmind svg [id^="g"] rect { transition: filter 0.2s ease; }
+.exploreDetail .page-header .xmind svg [id^="g"]:hover, .exploreDetail .page-header .xmind svg [id^="g"]:focus { transform: translateY(-2px); }
+.exploreDetail .page-header .xmind svg #g1:hover rect:first-of-type, .exploreDetail .page-header .xmind svg #g1:focus rect:first-of-type { filter: drop-shadow(0 8px 10px rgba(255, 82, 82, 0.5)); }
+.exploreDetail .page-header .xmind svg #g2:hover rect:first-of-type, .exploreDetail .page-header .xmind svg #g2:focus rect:first-of-type { filter: drop-shadow(0 8px 10px rgba(255, 111, 0, 0.5)); }
+.exploreDetail .page-header .xmind svg #g3:hover rect:first-of-type, .exploreDetail .page-header .xmind svg #g3:focus rect:first-of-type { filter: drop-shadow(0 8px 10px rgba(255, 192, 9, 0.5)); }
+.exploreDetail .page-header .xmind svg #g4:hover rect:first-of-type, .exploreDetail .page-header .xmind svg #g4:focus rect:first-of-type { filter: drop-shadow(0 8px 10px rgba(25, 167, 25, 0.5)); }
+.exploreDetail .page-header .xmind svg #g5:hover rect:first-of-type, .exploreDetail .page-header .xmind svg #g5:focus rect:first-of-type { filter: drop-shadow(0 8px 10px rgba(64, 224, 208, 0.5)); }
+.exploreDetail .page-header .xmind svg #g6:hover rect:first-of-type, .exploreDetail .page-header .xmind svg #g6:focus rect:first-of-type { filter: drop-shadow(0 8px 10px rgba(106, 106, 255, 0.5)); }
+.exploreDetail .page-header .xmind svg #g7:hover rect:first-of-type, .exploreDetail .page-header .xmind svg #g7:focus rect:first-of-type { filter: drop-shadow(0 8px 10px rgba(123, 31, 162, 0.5)); }
 .exploreDetail .page-header .xmind .xmind-remark { color: rgba(33, 37, 41, 0.5); font-size: 0.875rem; margin-top: .5rem; position: absolute; left: 50%; bottom: .75rem; transform: translateX(-50%); }
 .exploreDetail .page-content { background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) 0%, transparent 100%); background: -o-linear-gradient(rgba(255, 255, 255, 0.75) 0%, transparent 100%); background: linear-gradient(rgba(255, 255, 255, 0.75) 0%, transparent 100%); }
 
@@ -600,7 +557,7 @@ position: relative;
 .explore-list-group .list-group-item:active::before, .explore-list-group .list-group-item.active::before { filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.5)) drop-shadow(-1px -1px rgba(255, 255, 255, 0.5)) drop-shadow(-1px 1px rgba(255, 255, 255, 0.5)) drop-shadow(1px -1px rgba(255, 255, 255, 0.5)); }
 
 .guide-card { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-.guide-card:last-child { padding-bottom: 3rem; }
+.guide-card:last-child { padding-bottom: 4.5rem; }
 .guide-card .guide-title { font-size: 1.75rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: row; align-items: center; }
 .guide-card .guide-title::before { content: ""; display: block; width: 2.5rem; height: 2.5rem; border-radius: 100%; background-color: rgba(253, 126, 20, 0.25); margin-right: .5rem; }
 .guide-card .guide-title::after { flex: 1; content: ""; display: block; width: 100%; height: 2px; background: -webkit-linear-gradient(left, #fd7e14 0%, #fff799 75%, transparent 100%); background: -o-linear-gradient(left, #fd7e14 0%, #fff799 75%, transparent 100%); background: linear-gradient(to right, #fd7e14 0%, #fff799 75%, transparent 100%); margin-left: .75rem; }
@@ -635,7 +592,7 @@ position: relative;
 
 .guide-card:nth-child(6) .guide-title::before { background-image: url("../img/exploreDetail/guide-6.svg"); }
 
-.guide-card:nth-child(7) ::before { background-image: url("../img/exploreDetail/guide-7.svg"); }
+.guide-card:nth-child(7) .guide-title::before { background-image: url("../img/exploreDetail/guide-7.svg"); }
 
 .guide-dictionary { border-radius: 1rem; background-color: rgba(253, 126, 20, 0.1); border: 1px solid rgba(253, 126, 20, 0.25); display: flex; flex-direction: row; align-items: center; }
 .guide-dictionary .dictionary-title { font-size: 0.875rem; font-weight: 500; text-align: center; padding: 1rem; border-right: 1px solid rgba(253, 126, 20, 0.25); color: #fd7e14; white-space: nowrap; }
