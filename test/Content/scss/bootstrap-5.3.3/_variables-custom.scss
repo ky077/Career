@@ -45,7 +45,7 @@ $orange:  #fd7e14 !default;//cg. #fd7e14 !default;
 $yellow:  #fff799 !default;//cg. #ffc107 !default;
 $green:   #38b39a !default;//cg. #198754 !default;
 $teal:    #20c997 !default;//cg. #20c997 !default;
-$cyan:    #15a9dd !default;//cg. #0dcaf0 !default;
+$cyan:    #15a9dd !default;//cg. #0dcaf0 !default; 
 $golden:  #ffb703 !default;//cg. 
 // scss-docs-end color-variables
 
@@ -815,7 +815,7 @@ $initialism-font-size:        $small-font-size !default;
 
 $blockquote-margin-y:         $spacer !default;
 $blockquote-font-size:        $font-size-base * 1.25 !default;
-$blockquote-footer-color:     $gray-600 !default;
+$blockquote-footer-color:     $gray-500 !default;// cg.  $gray-600 !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
 $hr-margin-y:                 $spacer !default;
