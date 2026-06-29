@@ -533,6 +533,7 @@ background-position: center center;*/ }
 .exploreDetail .page-header .page-header-title .exploreDetail-header-img img, .exploreDetail .page-header h2 .exploreDetail-header-img img { width: 3.6rem; height: 3.6rem; }
 .exploreDetail .page-header .xmind { width: 100%; margin: 0 auto; text-align: center; position: relative; }
 @media screen and (min-width: 992px) { .exploreDetail .page-header .xmind { width: 83.3333333333%; } }
+.exploreDetail .page-header .xmind [class*="futuristic-frame"] { padding: 1rem 2rem; }
 .exploreDetail .page-header .xmind svg [id^="g"] { cursor: pointer; position: relative; transition: transform .2s ease; transform-origin: center; }
 .exploreDetail .page-header .xmind svg [id^="g"] rect { transition: filter 0.2s ease; }
 .exploreDetail .page-header .xmind svg [id^="g"]:hover, .exploreDetail .page-header .xmind svg [id^="g"]:focus { transform: translateY(-2px); }

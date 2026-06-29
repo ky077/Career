@@ -43,6 +43,9 @@
 			@media screen and (min-width: 992px) {
 			width: 10/12*100%;	
 			}
+			[class*="futuristic-frame"] {
+				padding: 1rem 2rem;
+			}
 			svg {
 				[id^="g"] {
 					cursor: pointer;
