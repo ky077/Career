@@ -196,12 +196,6 @@
 		}
 	}
 	.list-group-item:hover {
-		&::before{
-			filter: drop-shadow( 1px  1px rgba($white, .5))
-							drop-shadow(-1px -1px rgba($white, .5))
-							drop-shadow(-1px  1px rgba($white, .5))
-							drop-shadow( 1px -1px rgba($white, .5));
-		}
 		.explore-list-label{
 			display: block;
 			position: absolute;
@@ -214,12 +208,7 @@
 		}
 	}
 	.list-group-item:active, .list-group-item.active {
-		&::before{
-			filter: drop-shadow( 1px  1px rgba($white, .5))
-							drop-shadow(-1px -1px rgba($white, .5))
-							drop-shadow(-1px  1px rgba($white, .5))
-							drop-shadow( 1px -1px rgba($white, .5));
-		}
+		box-shadow: 0 0 .75rem rgba($primary, .5);
 	}
 }
 
@@ -502,9 +491,6 @@
 	filter: drop-shadow(0 0 1rem rgba($cyan, .15));
 }
 
-
-
-
 .guide-school {
   .region-section {
 		&:not(:last-child){
@@ -547,7 +533,6 @@
     }
   }
 }
-
 
 .guide3-interest{
 	border: .5rem solid $white;
@@ -596,6 +581,32 @@
 		max-width: 3/12*100%;
 		margin: 0 auto 1rem 1rem;
 	}
+}
+.guide6-industries{
+	max-width: 10/12*100%;
+	margin: 0 auto 1rem auto;
+  display: block;
+	filter: drop-shadow($box-shadow-sm);
+	@media screen and (min-width: 768px) {
+		float: right;
+		max-width: 4/12*100%;
+		margin: 0 auto 1rem 1rem;
+	}
+	@media screen and (min-width: 992px) {
+		float: right;
+		max-width: 5/12*100%;
+		margin: 0 auto 1rem 1rem;
+	}
+}
+
+.text-bg-BM{ //膽大心細
+	background-color: #5b6ee1;
+}
+.text-bg-P{ //有耐心
+	background-color: #2fa86f;
+}
+.text-bg-R{ //情緒穩定
+	background-color: #1f9bb4;
 }
 
 
