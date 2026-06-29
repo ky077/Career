@@ -596,7 +596,7 @@
 $(document).ready(function () {
 	// nav當前頁active
 	navActive('explore');
-
+	
 	// 高職設有此職科 Tooltips
   const vsElements = document.querySelectorAll('.explore-card-list .explore-badge.VS');
   vsElements.forEach(el => {
@@ -614,7 +614,6 @@ $(document).ready(function () {
       placement: "bottom"
     });
   });
-
   // 探索職群 / 職科關鍵字搜尋
   const $exploreSearch = $('#exploreSearch');
   const $exploreSearchClear = $('.btn-clear');
@@ -646,11 +645,9 @@ $(document).ready(function () {
     { name: '設計群', type: '我的興趣' }
   ];
 
-  // 本頁 helper 出現時機：
-  // 1. 沒有搜尋 / 熱門職科 / 我的推薦條件時，捲動到頁面中段才出現。
-  // 2. helper 出現後會保持顯示，不會因為捲回 50% 以前而消失。
-  // 3. 使用者關閉 helper，或進入搜尋 / 熱門職科 / 我的推薦狀態時，helper 會隱藏。
-  // 若 Content/js/main.js 仍保留原本「各頁helper出現時機」那段，建議刪除 main.js 內該段，避免兩邊重複控制。
+  // helper =================================================
+  // 沒有搜尋 / 熱門職科 / 我的推薦條件時，捲動到頁面中段才出現。
+  // 使用者關閉 helper，或進入搜尋 / 熱門職科 / 我的推薦狀態時，helper 會隱藏。
   function hasExploreSearchCondition() {
     return $.trim($exploreSearch.val()) !== '';
   }
@@ -917,7 +914,7 @@ $(document).ready(function () {
   });
 
   // 清除搜尋關鍵字，並還原原本的卡片顯示與展開狀態
-  // 上方搜尋欄的清除按鈕與 explore-card-search-remark 內的清除按鈕共用同一段功能
+  // 上方搜尋欄的清除按鈕與 目前查看 的清除按鈕共用同一段功能
   $exploreSearchClear.on('click', function () {
     $exploreSearch.val('');
     resetExploreSearch();

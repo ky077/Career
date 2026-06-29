@@ -86,7 +86,6 @@
 	}
 }
 
-
 .explore-intro{
 	background-color: mix($secondary, $black, 25%);
 	border: 1px solid $info-200;
@@ -96,7 +95,7 @@
 	flex-direction: row;
 	margin-bottom: 1rem;
 	position: relative;
-	&::after{
+	&::before{
 		content: "";
 		display: block;
 		width: 100%;

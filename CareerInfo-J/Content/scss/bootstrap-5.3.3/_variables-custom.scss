@@ -45,7 +45,7 @@ $orange:  #fd7e14 !default;//cg. #fd7e14 !default;
 $yellow:  #fff799 !default;//cg. #ffc107 !default;
 $green:   #38b39a !default;//cg. #198754 !default;
 $teal:    #20c997 !default;//cg. #20c997 !default;
-$cyan:    #15a9dd !default;//cg. #0dcaf0 !default;
+$cyan:    #15a9dd !default;//cg. #0dcaf0 !default; 
 $golden:  #ffb703 !default;//cg. 
 // scss-docs-end color-variables
 
@@ -710,6 +710,7 @@ $transition-collapse-width:   width .35s ease !default;
 $aspect-ratios: (
   "1x1": 100%,
   "4x3": calc(3 / 4 * 100%),
+	"6x4": calc(4 / 6 * 100%),
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%)
 ) !default;
@@ -814,7 +815,7 @@ $initialism-font-size:        $small-font-size !default;
 
 $blockquote-margin-y:         $spacer !default;
 $blockquote-font-size:        $font-size-base * 1.25 !default;
-$blockquote-footer-color:     $gray-600 !default;
+$blockquote-footer-color:     $gray-500 !default;// cg.  $gray-600 !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
 $hr-margin-y:                 $spacer !default;
@@ -857,13 +858,13 @@ $table-cell-padding-x:        .5rem !default;
 $table-cell-padding-y-sm:     .25rem !default;
 $table-cell-padding-x-sm:     .25rem !default;
 
-$table-cell-vertical-align:   top !default;
+$table-cell-vertical-align:   middle !default;//cg. top !default;
 
 $table-color:                 var(--#{$prefix}emphasis-color) !default;
 $table-bg:                    var(--#{$prefix}body-bg) !default;
 $table-accent-bg:             transparent !default;
 
-$table-th-font-weight:        null !default;
+$table-th-font-weight:        $font-weight-medium !default;//cg. null !default;
 
 $table-striped-color:         $table-color !default;
 $table-striped-bg-factor:     .05 !default;
@@ -1529,7 +1530,7 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 $tooltip-font-size:                 $font-size-sm*.85 !default;//cg. $font-size-sm !default;
 $tooltip-max-width:                 300px !default;//cg. 200px !default;
 $tooltip-color:                     var(--#{$prefix}body-bg) !default;
-$tooltip-bg:                        var(--#{$prefix}emphasis-color) !default;
+$tooltip-bg:                        mix($secondary, $black, 25%) !default; //var(--#{$prefix}emphasis-color) !default;
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   .9 !default;
 $tooltip-padding-y:                 $spacer * .25 !default;

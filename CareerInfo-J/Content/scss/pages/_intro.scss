@@ -125,7 +125,7 @@
 				filter: brightness(1.25);
 				box-shadow: $box-shadow;
 				.card-body{
-					&:after{
+					&::after{
 						opacity: 1;
 						animation: scanMove 2.5s linear infinite;
 					}
