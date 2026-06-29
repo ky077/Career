@@ -420,40 +420,90 @@
 
 .guide-dictionary{
 	border-radius: $border-radius-xl;
-	background-color: rgba($primary, .1);
-	border: 1px solid rgba($primary, .25);
+	background-color: $cyan-100;
+	border: 1px solid rgba($secondary, .5);
+	filter: drop-shadow(0 0 1rem rgba($cyan, .15));
 	display: flex;
-	flex-direction: row;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: $spacer;
 	.dictionary-title{
 		font-size: $font-size-sm;
 		font-weight: $font-weight-medium;
-		text-align: center;
-		padding: $spacer;
-		border-right: 1px solid rgba($primary, .25);
-		color: $primary;
-		white-space: nowrap;
+		color: $white;
+		display: inline-block;
+		background-color: $secondary;
+		padding-left: .25rem;
+		padding-right: .75rem;
+		border-radius: 0 $border-radius-pill $border-radius-pill 0;
+		position: relative;
+		margin-top: -1.75rem;
+    margin-bottom: .5rem;
 		&::before{
-			content: "\F193";
+			content: "\F192";
 			display: block;
 			font-family: "bootstrap-icons";
-			font-size: 3rem;
-			line-height: 1;
+			font-size: 2.5em;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(calc(-100% + 1px), -50%);
+			color: $secondary;
+		}
+		&::after{
+			content: "\F504";
+			display: block;
+			font-family: "bootstrap-icons";
+			font-size: 1em;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(calc(-100% + 1px - (2.5em - 1em)/2), calc(-50% - .125em));
+			color: $white;
 		}
 	}
+	.dictionary-subtitle{
+		font-size: $h5-font-size;
+		font-weight: $font-weight-semibold;
+		color: $primary;
+	}
 	.dictionary-body{
-		padding: $spacer;
-		.dictionary-subtitle{
-			font-size: $h5-font-size;
-			font-weight: $font-weight-semibold;
-			
-		}
+		color: $primary;
 		p:last-child{
 			margin-bottom: 0;
 		}
 	}
-	
 }
+@media screen and (min-width: 992px) {
+.guide-dictionary{
+	background-color: transparent;
+	border: none;
+	filter: none;
+	.dictionary-title{
+		font-size: $tooltip-font-size;
+		margin-top: 0;
+		margin-left: 1.5em;
+	}
+	.dictionary-subtitle{
+		font-size: $font-size-base;
+		text-align: left;
+	}
+	.dictionary-body{
+		color: $white;
+		text-align: left;
+		/*color: $primary;
+		p:last-child{
+			margin-bottom: 0;
+		}*/
+	}
+}	
+}
+.dictionary-tooltip-wrap{
+	filter: drop-shadow(0 0 1rem rgba($cyan, .15));
+}
+
+
+
 
 .guide-school {
   .region-section {

@@ -124,8 +124,8 @@
                     <div class="collapse" id="collapseIntro-1">
                       <div class="guide-dictionary">
                         <div class="dictionary-title">名詞小辭典</div>
+												<div class="dictionary-subtitle">銑床加工</div>
                         <div class="dictionary-body">
-                          <div class="dictionary-subtitle">銑床加工</div>
                           <p>用旋轉的銑刀，對被固定的工件進行銑削加工。能加工比較複雜的型面，效率較車床高。</p>
                         </div>
                       </div>
@@ -143,8 +143,8 @@
                     <div class="collapse" id="collapseIntro-2">
                       <div class="guide-dictionary">
                         <div class="dictionary-title">名詞小辭典</div>
+												<div class="dictionary-subtitle">沖壓模具</div>
                         <div class="dictionary-body">
-                          <div class="dictionary-subtitle">沖壓模具</div>
                           <p>常見的沖壓製程包含沖切、彎曲及引伸。利用金屬本身的可塑性，在強壓之下，可以塑造成模具設計的形狀。</p>
                         </div>
                       </div>
@@ -244,8 +244,8 @@
                 <div class="collapse" id="collapseTech-2">
                   <div class="guide-dictionary">
                     <div class="dictionary-title">名詞小辭典</div>
-                    <div class="dictionary-body">
-                      <div class="dictionary-subtitle">塑膠射出成型機</div>
+										<div class="dictionary-subtitle">塑膠射出成型機</div>
+                    <div class="dictionary-body"> 
                       <p>利用電熱器將塑膠原料融化，再將融化的塑膠射入預備好的模子內，經過冷卻後，模子打開即為成型的產品。</p>
                     </div>
                   </div>
@@ -347,13 +347,13 @@
             <div class="row gx-5 gy-4 mt-4 justify-content-evenly">
               <div class="col-8 col-md-4">
                 <figure class="guide-figure-img">
-                  <div class="ratio ratio-4x3"><img src="Content/img/senior/55/competition-1.jpg" class="figure-img" alt="全國技能競賽－機具控制職類金牌"></div>
+                  <div class="ratio ratio-6x4"><img src="Content/img/senior/55/competition-1.jpg" class="figure-img" alt="全國技能競賽－機具控制職類金牌"></div>
                   <figcaption class="figure-caption">全國技能競賽－機具控制職類金牌</figcaption>
                 </figure>
               </div>
               <div class="col-8 col-md-4">
                 <figure class="guide-figure-img">
-                  <div class="ratio ratio-4x3"><img src="Content/img/senior/55/competition-2.jpg" class="figure-img" alt="全國技能競賽－模具工職類銀牌"></div>
+                  <div class="ratio ratio-6x4"><img src="Content/img/senior/55/competition-2.jpg" class="figure-img" alt="全國技能競賽－模具工職類銀牌"></div>
                   <figcaption class="figure-caption">全國技能競賽－模具工職類銀牌</figcaption>
                 </figure>
               </div>
@@ -478,7 +478,7 @@
                 <p>學生畢業後可直接進入就業市場，可從事的行業主要以模具製造與設計為主，可擔任模具師傅或工程師。</p>
                 <p>繼續升學者，由於深造的領域多元化，因此學生就業面向，可包括半導體產業、電子零組件製造業、電腦手機業、重機械、光電、資訊服務業等。如果以高級技術人員為例，可投入半導體產業擔任模具設計師。</p>
               </div>
-              <div class="col-8 col-md-4">
+              <div class="col-12 col-sm-8 col-md-4">
                 <figure class="guide-figure-img" >
                   <img src="Content/img/senior/55/industries.jpg" class="img-fluid" alt="">
                   <figcaption class="figure-caption"> 模具產業跨足七大領域 </figcaption>
@@ -584,12 +584,110 @@ $(document).ready(function () {
       placement: "top"
     });
   });
-	
-	//collapse >992px 改成 tooltips
-	
-	//loading YT IFrame Player API
-
 });	
 </script>
+<script>
+//collapse >992px 改成 tooltips
+var dictionaryBreakpoint = window.matchMedia('(min-width: 993px)');
+
+var dictionaryLinks = Array.from(
+  document.querySelectorAll('[data-bs-toggle="collapse"][href^="#"], [data-bs-toggle="collapse"][data-bs-target^="#"]')
+).filter(function (link) {
+  var targetSelector = link.getAttribute('href') || link.getAttribute('data-bs-target');
+  var target = targetSelector ? document.querySelector(targetSelector) : null;
+
+  return target && target.querySelector('.guide-dictionary');
+});
+
+function getDictionaryTooltipHtml(target) {
+  var titleEl = target.querySelector('.dictionary-title');
+  var subtitleEl = target.querySelector('.dictionary-subtitle');
+  var bodyEl = target.querySelector('.dictionary-body p');
+
+  var title = titleEl ? titleEl.textContent.trim() : '名詞小辭典';
+  var subtitle = subtitleEl ? subtitleEl.textContent.trim() : '';
+  var body = bodyEl ? bodyEl.textContent.trim() : '';
+
+	return (
+    '<div class="guide-dictionary">' +
+      '<div class="dictionary-title">' + title + '</div>' +
+      (subtitle ? '<div class="dictionary-subtitle">' + subtitle + '</div>' : '') +
+      (body ? '<div class="dictionary-body">' + body + '</div>' : '') +
+    '</div>'
+  );
+}
+
+function disposeDictionaryTooltip(link) {
+  var tooltip = bootstrap.Tooltip.getInstance(link);
+
+  if (tooltip) {
+    tooltip.dispose();
+  }
+}
+
+function initDictionaryTooltip(link, target) {
+  disposeDictionaryTooltip(link);
+
+  var tooltip = new bootstrap.Tooltip(link, {
+    title: getDictionaryTooltipHtml(target),
+    html: true,
+    placement: 'right',
+    trigger: 'click',
+    customClass: 'dictionary-tooltip-wrap',
+    container: 'body'
+  });
+
+  return tooltip;
+}
+
+function setDictionaryMode() {
+  var isDesktop = dictionaryBreakpoint.matches;
+
+  dictionaryLinks.forEach(function (link) {
+    var targetSelector = link.getAttribute('href') || link.getAttribute('data-bs-target');
+    var target = targetSelector ? document.querySelector(targetSelector) : null;
+
+    if (!target) return;
+
+    if (isDesktop) {
+      var collapse = bootstrap.Collapse.getInstance(target);
+
+      if (collapse) {
+        collapse.hide();
+      }
+
+      target.classList.remove('show');
+
+      link.setAttribute('data-bs-toggle', 'tooltip');
+      link.setAttribute('aria-expanded', 'false');
+
+      initDictionaryTooltip(link, target);
+    } else {
+      disposeDictionaryTooltip(link);
+
+      link.setAttribute('data-bs-toggle', 'collapse');
+      link.removeAttribute('data-bs-original-title');
+      link.removeAttribute('aria-describedby');
+      link.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+dictionaryLinks.forEach(function (link) {
+  link.addEventListener('click', function (event) {
+    if (!dictionaryBreakpoint.matches) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+  });
+});
+
+setDictionaryMode();
+
+dictionaryBreakpoint.addEventListener('change', function () {
+  setDictionaryMode();
+});	
+</script>	
+<script>//loading YT IFrame Player API</script>	
 </body>
 </html>

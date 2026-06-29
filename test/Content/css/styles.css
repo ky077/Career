@@ -605,12 +605,22 @@ background-position: center center;*/ }
 .guide-figure-img .figure-img { border-radius: 0.5rem; }
 .guide-figure-img .figure-caption { text-align: center; margin-top: .5rem; }
 
-.guide-dictionary { border-radius: 1rem; background-color: rgba(253, 126, 20, 0.1); border: 1px solid rgba(253, 126, 20, 0.25); display: flex; flex-direction: row; align-items: center; }
-.guide-dictionary .dictionary-title { font-size: 0.875rem; font-weight: 500; text-align: center; padding: 1rem; border-right: 1px solid rgba(253, 126, 20, 0.25); color: #fd7e14; white-space: nowrap; }
-.guide-dictionary .dictionary-title::before { content: "\F193"; display: block; font-family: "bootstrap-icons"; font-size: 3rem; line-height: 1; }
-.guide-dictionary .dictionary-body { padding: 1rem; }
-.guide-dictionary .dictionary-body .dictionary-subtitle { font-size: 1.25rem; font-weight: 600; }
+.guide-dictionary { border-radius: 1rem; background-color: #d0eef8; border: 1px solid rgba(0, 104, 183, 0.5); filter: drop-shadow(0 0 1rem rgba(21, 169, 221, 0.15)); display: flex; flex-direction: column; align-items: flex-start; padding: 1rem; }
+.guide-dictionary .dictionary-title { font-size: 0.875rem; font-weight: 500; color: #fff; display: inline-block; background-color: #0068b7; padding-left: .25rem; padding-right: .75rem; border-radius: 0 50rem 50rem 0; position: relative; margin-top: -1.75rem; margin-bottom: .5rem; }
+.guide-dictionary .dictionary-title::before { content: "\F192"; display: block; font-family: "bootstrap-icons"; font-size: 2.5em; position: absolute; top: 50%; left: 0; transform: translate(calc(-100% + 1px), -50%); color: #0068b7; }
+.guide-dictionary .dictionary-title::after { content: "\F504"; display: block; font-family: "bootstrap-icons"; font-size: 1em; position: absolute; top: 50%; left: 0; transform: translate(calc(-100% + 1px - (2.5em - 1em)/2), calc(-50% - .125em)); color: #fff; }
+.guide-dictionary .dictionary-subtitle { font-size: 1.25rem; font-weight: 600; color: #fd7e14; }
+.guide-dictionary .dictionary-body { color: #fd7e14; }
 .guide-dictionary .dictionary-body p:last-child { margin-bottom: 0; }
+
+@media screen and (min-width: 992px) { .guide-dictionary { background-color: transparent; border: none; filter: none; }
+  .guide-dictionary .dictionary-title { font-size: 0.74375rem; margin-top: 0; margin-left: 1.5em; }
+  .guide-dictionary .dictionary-subtitle { font-size: 1rem; text-align: left; }
+  .guide-dictionary .dictionary-body { color: #fff; text-align: left; /*color: $primary;
+p:last-child{
+	margin-bottom: 0;
+}*/ } }
+.dictionary-tooltip-wrap { filter: drop-shadow(0 0 1rem rgba(21, 169, 221, 0.15)); }
 
 .guide-school .region-section:not(:last-child) { margin-bottom: 1.5rem; }
 .guide-school .region-section-title { color: #0068b7; font-weight: 500; margin-bottom: .5rem; font-size: .9rem; position: relative; padding-left: .75rem; }

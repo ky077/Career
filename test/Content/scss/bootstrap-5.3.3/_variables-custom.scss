@@ -1530,7 +1530,7 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 $tooltip-font-size:                 $font-size-sm*.85 !default;//cg. $font-size-sm !default;
 $tooltip-max-width:                 300px !default;//cg. 200px !default;
 $tooltip-color:                     var(--#{$prefix}body-bg) !default;
-$tooltip-bg:                        var(--#{$prefix}emphasis-color) !default;
+$tooltip-bg:                        mix($secondary, $black, 25%) !default; //var(--#{$prefix}emphasis-color) !default;
 $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
 $tooltip-opacity:                   .9 !default;
 $tooltip-padding-y:                 $spacer * .25 !default;
