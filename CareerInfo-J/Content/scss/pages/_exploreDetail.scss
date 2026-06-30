@@ -410,91 +410,134 @@
 	}
 }
 
+.guide-link{
+	display: inline-flex;
+  align-items: center;
+	color: $info;
+	&[data-bs-toggle="collapse"], &[data-bs-toggle="tooltip"] {
+		&::after{
+			content: "";
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#{$info}' class='bi bi-question-circle-fill' viewBox='0 0 16 16'%3E %3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z'/%3E %3C/svg%3E"));
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			vertical-align: middle;
+			margin-left: .125rem;
+			margin-right: .125rem;
+		}
+	}
+	&:hover, &:active, &:focus{
+		color: $info;
+	}
+}
 .guide-dictionary{
-	border-radius: $border-radius-xl;
-	background-color: $cyan-100;
-	border: 1px solid rgba($secondary, .5);
-	filter: drop-shadow(0 0 1rem rgba($cyan, .15));
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+	background-color: rgba($tooltip-bg, $tooltip-opacity);
+	border: 1px solid $info;
+	border-radius: $tooltip-border-radius;
+	filter: drop-shadow(0 0 1rem rgba($info, .15));
 	padding: $spacer;
 	.dictionary-title{
 		font-size: $font-size-sm;
 		font-weight: $font-weight-medium;
 		color: $white;
 		display: inline-block;
-		background-color: $secondary;
-		padding-left: .25rem;
+		background-color: $info;
+		padding-left: .75rem;
 		padding-right: .75rem;
-		border-radius: 0 $border-radius-pill $border-radius-pill 0;
-		position: relative;
-		margin-top: -1.75rem;
-    margin-bottom: .5rem;
-		&::before{
-			content: "\F192";
-			display: block;
-			font-family: "bootstrap-icons";
-			font-size: 2.5em;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translate(calc(-100% + 1px), -50%);
-			color: $secondary;
-		}
-		&::after{
-			content: "\F504";
-			display: block;
-			font-family: "bootstrap-icons";
-			font-size: 1em;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translate(calc(-100% + 1px - (2.5em - 1em)/2), calc(-50% - .125em));
-			color: $white;
-		}
+		border-radius: $border-radius-pill;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate($spacer*.5, -50%);
 	}
 	.dictionary-subtitle{
-		font-size: $h5-font-size;
-		font-weight: $font-weight-semibold;
-		color: $primary;
+		color: $tertiary;
+		font-size: $font-size-base;
+	  font-weight: $font-weight-semibold;
+		margin-top: .5rem;
 	}
 	.dictionary-body{
-		color: $primary;
-		p:last-child{
-			margin-bottom: 0;
+		color: $tooltip-color;
+		font-size: $font-size-sm;
+		p{
+			color: $tooltip-color;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) { //便tooltips時
 .guide-dictionary{
 	background-color: transparent;
 	border: none;
 	filter: none;
+	padding: $spacer*.75 $spacer*.5;
 	.dictionary-title{
-		font-size: $tooltip-font-size;
-		margin-top: 0;
-		margin-left: 1.5em;
+		font-size: $font-size-sm.9;
 	}
 	.dictionary-subtitle{
-		font-size: $font-size-base;
+		font-size: $font-size-base*.9;
 		text-align: left;
+		margin-top: .25rem;
+		margin-bottom: .25rem;
 	}
 	.dictionary-body{
-		color: $white;
+		font-size: $font-size-sm*.9;
 		text-align: left;
-		/*color: $primary;
-		p:last-child{
-			margin-bottom: 0;
-		}*/
 	}
-}	
+}
 }
 .dictionary-tooltip-wrap{
-	filter: drop-shadow(0 0 1rem rgba($cyan, .15));
+	.tooltip-inner{
+		border: 1px solid $info;	
+	}
 }
 
-.guide-school {
+.guide2-source{
+	color: $body-tertiary-color;
+	font-size: .75rem;
+	font-weight: $font-weight-normal;
+	text-align: right;
+	margin: .75rem 0;
+	&::before {
+    content: "\2014\00A0";
+	}
+}
+.guide3-interest{
+	border: .5rem solid $white;
+	margin: -1.5rem -2rem .75rem -2rem;
+	position: relative;
+	width: calc(100% + 2rem*2);
+	height: 0;
+	padding-bottom: calc((100% + 2rem*2)* 9/16);
+	position: relative;
+	border-top-right-radius: $border-radius-xl;
+	img{
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		border-top-right-radius: $border-radius-lg;
+	}
+	&::before{
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-top: 1.5rem solid $white;
+		border-right: 1.5rem solid transparent;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+}
+.guide5-school {
   .region-section {
 		&:not(:last-child){
 			margin-bottom: 1.5rem;	
@@ -536,39 +579,6 @@
     }
   }
 }
-
-.guide3-interest{
-	border: .5rem solid $white;
-	margin: -1.5rem -2rem .75rem -2rem;
-	position: relative;
-	width: calc(100% + 2rem*2);
-	height: 0;
-	padding-bottom: calc((100% + 2rem*2)* 9/16);
-	position: relative;
-	border-top-right-radius: $border-radius-xl;
-	img{
-		position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-		border-top-right-radius: $border-radius-lg;
-	}
-	&::before{
-		content: "";
-		display: block;
-		width: 0;
-		height: 0;
-		border-top: 1.5rem solid $white;
-		border-right: 1.5rem solid transparent;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 5;
-	}
-}
-
-
 .guide6-studies{
 	max-width: 8/12*100%;
 	margin: 0 auto 1rem auto;
@@ -602,14 +612,41 @@
 	}
 }
 
-.text-bg-BM{ //膽大心細
-	background-color: #5b6ee1;
+///* 膽大心細 Brave & Careful：藍紫，表現冷靜判斷與行動力 */
+.text-bg-BRC {
+  color: #3f4bb8;
+  background-color: #eef0ff;
+  border: 1px solid #cfd5ff;
 }
-.text-bg-P{ //有耐心
-	background-color: #2fa86f;
+///* 有耐心 Patient：綠色，表現穩定、持續、等待 */
+.text-bg-PAT {
+  color: #1f7a4f;
+  background-color: #e9f8f0;
+  border: 1px solid #bee8d0;
 }
-.text-bg-R{ //情緒穩定
-	background-color: #1f9bb4;
+///* 情緒穩定 Emotionally Stable：青藍，表現平衡、安心、穩定 */
+.text-bg-EMO {
+  color: #087184;
+  background-color: #e7f8fb;
+  border: 1px solid #b9e8ef;
+}
+///* 有條理 Organized：靛藍灰，表現邏輯、秩序、整理能力 */
+.text-bg-ORG {
+  color: #35405f;
+  background-color: #eef2f8;
+  border: 1px solid #cbd5e8;
+}
+///* 精確 Accurate：棕金色，表現精準、細節、可靠 */
+.text-bg-ACC {
+  color: #7a4f13;
+  background-color: #fff3dc;
+  border: 1px solid #f2d39a;
+}
+///* 思想開放 Open-minded：紫紅，表現彈性、創意、接納新想法 */
+.text-bg-OPN {
+  color: #8a3d68;
+  background-color: #fdebf5;
+  border: 1px solid #efbfd8;
 }
 
 
