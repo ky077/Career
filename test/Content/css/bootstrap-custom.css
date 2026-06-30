@@ -862,7 +862,7 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + calc(var(--bs-border-
 
 .valid-feedback { display: none; width: 100%; margin-top: 0.25rem; font-size: 0.875em; color: var(--bs-form-valid-color); }
 
-.valid-tooltip { position: absolute; top: 100%; z-index: 5; display: none; max-width: 100%; padding: 0.25rem 0.5rem; margin-top: .1rem; font-size: 0.74375rem; color: #fff; background-color: var(--bs-success); border-radius: var(--bs-border-radius); }
+.valid-tooltip { position: absolute; top: 100%; z-index: 5; display: none; max-width: 100%; padding: 0.25rem 0.5rem; margin-top: .1rem; font-size: 0.7875rem; color: #fff; background-color: var(--bs-success); border-radius: var(--bs-border-radius-xl); }
 
 .was-validated :valid ~ .valid-feedback, .was-validated :valid ~ .valid-tooltip, .is-valid ~ .valid-feedback, .is-valid ~ .valid-tooltip { display: block; }
 
@@ -888,7 +888,7 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + calc(var(--bs-border-
 
 .invalid-feedback { display: none; width: 100%; margin-top: 0.25rem; font-size: 0.875em; color: var(--bs-form-invalid-color); }
 
-.invalid-tooltip { position: absolute; top: 100%; z-index: 5; display: none; max-width: 100%; padding: 0.25rem 0.5rem; margin-top: .1rem; font-size: 0.74375rem; color: #fff; background-color: var(--bs-danger); border-radius: var(--bs-border-radius); }
+.invalid-tooltip { position: absolute; top: 100%; z-index: 5; display: none; max-width: 100%; padding: 0.25rem 0.5rem; margin-top: .1rem; font-size: 0.7875rem; color: #fff; background-color: var(--bs-danger); border-radius: var(--bs-border-radius-xl); }
 
 .was-validated :invalid ~ .invalid-feedback, .was-validated :invalid ~ .invalid-tooltip, .is-invalid ~ .invalid-feedback, .is-invalid ~ .invalid-tooltip { display: block; }
 
@@ -1546,7 +1546,7 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + calc(var(--bs-border-
   .modal-fullscreen-xxxxl-down .modal-content { height: 100%; border: 0; border-radius: 0; }
   .modal-fullscreen-xxxxl-down .modal-header, .modal-fullscreen-xxxxl-down .modal-footer { border-radius: 0; }
   .modal-fullscreen-xxxxl-down .modal-body { overflow-y: auto; } }
-.tooltip { --bs-tooltip-zindex: 1080; --bs-tooltip-max-width: 300px; --bs-tooltip-padding-x: 0.5rem; --bs-tooltip-padding-y: 0.25rem; --bs-tooltip-margin: ; --bs-tooltip-font-size: 0.74375rem; --bs-tooltip-color: var(--bs-body-bg); --bs-tooltip-bg: #001a2e; --bs-tooltip-border-radius: var(--bs-border-radius); --bs-tooltip-opacity: 0.9; --bs-tooltip-arrow-width: 0.8rem; --bs-tooltip-arrow-height: 0.4rem; z-index: var(--bs-tooltip-zindex); display: block; margin: var(--bs-tooltip-margin); font-family: var(--bs-font-sans-serif); font-style: normal; font-weight: 400; line-height: 1.5; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; word-break: normal; white-space: normal; word-spacing: normal; line-break: auto; font-size: var(--bs-tooltip-font-size); word-wrap: break-word; opacity: 0; }
+.tooltip { --bs-tooltip-zindex: 1080; --bs-tooltip-max-width: 300px; --bs-tooltip-padding-x: 0.5rem; --bs-tooltip-padding-y: 0.25rem; --bs-tooltip-margin: ; --bs-tooltip-font-size: 0.7875rem; --bs-tooltip-color: var(--bs-white); --bs-tooltip-bg: #001a2e; --bs-tooltip-border-radius: var(--bs-border-radius-xl); --bs-tooltip-opacity: 0.9; --bs-tooltip-arrow-width: 0.8rem; --bs-tooltip-arrow-height: 0.4rem; z-index: var(--bs-tooltip-zindex); display: block; margin: var(--bs-tooltip-margin); font-family: var(--bs-font-sans-serif); font-style: normal; font-weight: 400; line-height: 1.5; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; word-break: normal; white-space: normal; word-spacing: normal; line-break: auto; font-size: var(--bs-tooltip-font-size); word-wrap: break-word; opacity: 0; }
 .tooltip.show { opacity: var(--bs-tooltip-opacity); }
 .tooltip .tooltip-arrow { display: block; width: var(--bs-tooltip-arrow-width); height: var(--bs-tooltip-arrow-height); }
 .tooltip .tooltip-arrow::before { position: absolute; content: ""; border-color: transparent; border-style: solid; }
