@@ -122,6 +122,33 @@
 				right: 0;
 				bottom: .75rem;
 			}
+			/*.xmind-remark{
+				background-color: $cyan-100;
+				border-radius: 50%;
+				color: $secondary;
+				display: inline-block;
+				font-size: .75rem !important;
+				font-weight: $font-weight-medium;
+				padding: 1.5rem;
+				position: absolute;
+				top: 10%;
+				left: 50%;
+				transform: translateX(-40%);
+				max-width: 200px;
+				&::before{
+					content: "";
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					background-color: transparent;
+					width: 3rem;
+					height: 1.5rem;
+					border-radius: 50%;
+					border-right: 1rem solid $cyan-100;;
+					transform: translate(-100%, 50%) rotate(-10deg);
+				}
+			}*/
 		}
 	}
 	.page-content{
@@ -194,6 +221,7 @@
 		&:nth-child(7)::before{
 			background-image: url("../img/exploreDetail/guide-7.svg");
 		}
+		/* https://fontawesome.com/ + https://icons.getbootstrap.com/ */
 		.explore-list-label{
 			display: none;
 		}

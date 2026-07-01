@@ -471,7 +471,7 @@ background-position: center center;*/ }
 .explore-card .explore-card-search-remark .btn-clear { margin-left: .5rem; padding: 0 .375rem; transform: scale(0.875); transform-origin: left center; }
 .explore-card .explore-card-badge-remark { color: rgba(33, 37, 41, 0.75); font-size: 0.875rem; text-align: right; }
 .explore-card .explore-card-badge-remark .explore-badge { margin-right: .25rem; }
-.explore-card .explore-card-list { margin-bottom: 3rem; }
+.explore-card .explore-card-list { margin-bottom: 3rem; /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
 .explore-card .explore-card-list .card { background-color: transparent; border-color: transparent; margin-bottom: 1.5rem; }
 .explore-card .explore-card-list .card .card-body { background-color: rgba(var(--bs-body-bg-rgb), 0.75); padding: 1rem 1rem 1rem 2rem; }
 .explore-card .explore-card-list .card .card-body .card-title { color: #0068b7; display: flex; align-items: center; justify-content: space-around; flex: 1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0; position: relative; cursor: pointer; }
@@ -533,7 +533,33 @@ background-position: center center;*/ }
   .exploreDetail .page-header .page-header-title .explore-badge + .explore-badge, .exploreDetail .page-header h2 .explore-badge + .explore-badge { transform: translateX(calc(100% + .25rem)); } }
 .exploreDetail .page-header .page-header-title .exploreDetail-header-img, .exploreDetail .page-header h2 .exploreDetail-header-img { margin-right: .25rem; }
 .exploreDetail .page-header .page-header-title .exploreDetail-header-img img, .exploreDetail .page-header h2 .exploreDetail-header-img img { width: 3.6rem; height: 3.6rem; }
-.exploreDetail .page-header .xmind { width: 100%; margin: 0 auto; text-align: center; position: relative; }
+.exploreDetail .page-header .xmind { width: 100%; margin: 0 auto; text-align: center; position: relative; /*.xmind-remark{
+	background-color: $cyan-100;
+	border-radius: 50%;
+	color: $secondary;
+	display: inline-block;
+	font-size: .75rem !important;
+	font-weight: $font-weight-medium;
+	padding: 1.5rem;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-40%);
+	max-width: 200px;
+	&::before{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		background-color: transparent;
+		width: 3rem;
+		height: 1.5rem;
+		border-radius: 50%;
+		border-right: 1rem solid $cyan-100;;
+		transform: translate(-100%, 50%) rotate(-10deg);
+	}
+}*/ }
 @media screen and (min-width: 992px) { .exploreDetail .page-header .xmind { width: 83.3333333333%; } }
 .exploreDetail .page-header .xmind [class*="futuristic-frame"] { padding: 1rem 2rem; }
 .exploreDetail .page-header .xmind svg [id^="g"] { cursor: pointer; position: relative; transition: transform .2s ease; transform-origin: center; }
@@ -550,7 +576,7 @@ background-position: center center;*/ }
 .exploreDetail .page-content { background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) 0%, transparent 100%); background: -o-linear-gradient(rgba(255, 255, 255, 0.75) 0%, transparent 100%); background: linear-gradient(rgba(255, 255, 255, 0.75) 0%, transparent 100%); }
 
 .explore-list-group { --bs-list-group-color: var(--bs-primary); --bs-list-group-bg: var(--bs-white); --bs-list-group-border-color: var(--bs-primary); --bs-list-group-border-radius: 0; --bs-list-group-item-padding-x: 0; --bs-list-group-item-padding-y: 0; --bs-list-group-action-color: var(--bs-primary); --bs-list-group-action-hover-color: var(--bs-white); --bs-list-group-action-active-color: var(--bs-primary); --bs-list-group-action-hover-bg: var(--bs-primary); width: auto; padding: 0; margin: 0; position: fixed; right: 0.75rem; bottom: 7rem; z-index: 99; }
-.explore-list-group .list-group-item { width: 2.5rem; height: 2.5rem; display: flex; justify-content: center; align-items: center; border: 1px solid #fd7e14; border-radius: 50%; margin-top: .5rem !important; position: relative; }
+.explore-list-group .list-group-item { width: 2.5rem; height: 2.5rem; display: flex; justify-content: center; align-items: center; border: 1px solid #fd7e14; border-radius: 50%; margin-top: .5rem !important; position: relative; /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
 .explore-list-group .list-group-item::before { content: ""; display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 50%; background-repeat: no-repeat; background-position: center; }
 .explore-list-group .list-group-item:nth-child(1)::before { background-image: url("../img/exploreDetail/guide-1.svg"); }
 .explore-list-group .list-group-item:nth-child(2)::before { background-image: url("../img/exploreDetail/guide-2.svg"); }
