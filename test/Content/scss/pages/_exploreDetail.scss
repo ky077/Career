@@ -122,6 +122,33 @@
 				right: 0;
 				bottom: .75rem;
 			}
+			/*.xmind-remark{
+				background-color: $cyan-100;
+				border-radius: 50%;
+				color: $secondary;
+				display: inline-block;
+				font-size: .75rem !important;
+				font-weight: $font-weight-medium;
+				padding: 1.5rem;
+				position: absolute;
+				top: 10%;
+				left: 50%;
+				transform: translateX(-40%);
+				max-width: 200px;
+				&::before{
+					content: "";
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					background-color: transparent;
+					width: 3rem;
+					height: 1.5rem;
+					border-radius: 50%;
+					border-right: 1rem solid $cyan-100;;
+					transform: translate(-100%, 50%) rotate(-10deg);
+				}
+			}*/
 		}
 	}
 	.page-content{
@@ -194,6 +221,7 @@
 		&:nth-child(7)::before{
 			background-image: url("../img/exploreDetail/guide-7.svg");
 		}
+		/* https://fontawesome.com/ + https://icons.getbootstrap.com/ */
 		.explore-list-label{
 			display: none;
 		}
@@ -365,31 +393,28 @@
 	background-image: url("../img/exploreDetail/guide-7.svg");
 }
 
-
 .guide-figure-video{
-	background-color: $white;
+	background-color: $black;
 	border: 1px solid $border-color;
 	border-radius: $border-radius-xl;
-	box-shadow: $box-shadow-sm; 
+	box-shadow: 0 .125rem .25rem rgba($info, .075);
 	padding: .5rem;
 	margin-bottom: 0;
 	.figure-caption{
 		font-size: $h6-font-size;
 		font-weight: $font-weight-medium;
 		margin-bottom: .25rem;
+		color: $primary;
 		&::before{
 			content: "\F4F4";
 			display: inline-block;
 			font-family: "bootstrap-icons";
 			margin-right: .25rem;
-			color: $primary;
 			vertical-align: middle;
 		}
 	}
 	.figure-radio{
 		border-radius: $border-radius-xl;
-		//background-color: $black;
-		//padding: 0 $spacer;
 		overflow: hidden;
 	}
 }
@@ -397,7 +422,6 @@
 	background-color: $white;
 	border: 1px solid $border-color;
 	border-radius: $border-radius-xl;
-	box-shadow: $box-shadow-sm; 
 	padding: .5rem;
 	margin-bottom: 0;
 	position: relative;
@@ -611,44 +635,3 @@
 		margin: 0 auto 1rem 1rem;
 	}
 }
-
-///* 膽大心細 Brave & Careful：藍紫，表現冷靜判斷與行動力 */
-.text-bg-BRC {
-  color: #3f4bb8;
-  background-color: #eef0ff;
-  border: 1px solid #cfd5ff;
-}
-///* 有耐心 Patient：綠色，表現穩定、持續、等待 */
-.text-bg-PAT {
-  color: #1f7a4f;
-  background-color: #e9f8f0;
-  border: 1px solid #bee8d0;
-}
-///* 情緒穩定 Emotionally Stable：青藍，表現平衡、安心、穩定 */
-.text-bg-EMO {
-  color: #087184;
-  background-color: #e7f8fb;
-  border: 1px solid #b9e8ef;
-}
-///* 有條理 Organized：靛藍灰，表現邏輯、秩序、整理能力 */
-.text-bg-ORG {
-  color: #35405f;
-  background-color: #eef2f8;
-  border: 1px solid #cbd5e8;
-}
-///* 精確 Accurate：棕金色，表現精準、細節、可靠 */
-.text-bg-ACC {
-  color: #7a4f13;
-  background-color: #fff3dc;
-  border: 1px solid #f2d39a;
-}
-///* 思想開放 Open-minded：紫紅，表現彈性、創意、接納新想法 */
-.text-bg-OPN {
-  color: #8a3d68;
-  background-color: #fdebf5;
-  border: 1px solid #efbfd8;
-}
-
-
-
-

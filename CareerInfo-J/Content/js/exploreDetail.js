@@ -67,7 +67,7 @@ function initDictionaryTooltip(link, target) {
     title: getDictionaryTooltipHtml(target),
     html: true,
     placement: 'right',
-    trigger: 'click',
+    trigger: 'click hover',
     customClass: 'dictionary-tooltip-wrap',
     container: 'body'
   });

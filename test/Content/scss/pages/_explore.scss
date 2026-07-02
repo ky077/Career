@@ -274,7 +274,6 @@
 						margin-left: .25rem;
 					}
 					.popular-rank-badge {
-						//display: inline-flex;
 						color: $primary;
 						font-size: .75rem;
 						font-weight: $font-weight-bold;
@@ -299,7 +298,6 @@
 			@extend .futuristic-shadow;
 			.card-body{
 				background-color: tint-color($cyan, 95%);
-				//background-color: rgba(var(--bs-body-bg-rgb), 1);
 			}
 			.list-group{
 				.list-group-item{ 
@@ -307,86 +305,87 @@
 				}
 			}
 		}
-			.card[data-disc-code="01"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-01.svg");
-				}
+		.card[data-disc-code="01"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-01.svg");
 			}
-			.card[data-disc-code="02"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-02.svg");	
-				}
+		}
+		.card[data-disc-code="02"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-02.svg");	
 			}
-			.card[data-disc-code="03"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-03.svg");	
-				}
+		}
+		.card[data-disc-code="03"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-03.svg");	
 			}
-			.card[data-disc-code="04"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-04.svg");
-				}
+		}
+		.card[data-disc-code="04"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-04.svg");
 			}
-			.card[data-disc-code="05"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-05.svg");
-				}
+		}
+		.card[data-disc-code="05"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-05.svg");
 			}
-			.card[data-disc-code="06"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-06.svg");
-				}
+		}
+		.card[data-disc-code="06"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-06.svg");
 			}
-			.card[data-disc-code="07"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-07.svg");
-				}
+		}
+		.card[data-disc-code="07"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-07.svg");
 			}
-			.card[data-disc-code="08"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-08.svg");
-				}
+		}
+		.card[data-disc-code="08"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-08.svg");
 			}
-			.card[data-disc-code="09"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-09.svg");
-				}
+		}
+		.card[data-disc-code="09"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-09.svg");
 			}
-			.card[data-disc-code="10"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-10.svg");
-				}
+		}
+		.card[data-disc-code="10"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-10.svg");
 			}
-			.card[data-disc-code="11"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-11.svg");
-				}
+		}
+		.card[data-disc-code="11"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-11.svg");
 			}
-			.card[data-disc-code="12"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-12.svg");
-				}
+		}
+		.card[data-disc-code="12"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-12.svg");
 			}
-			.card[data-disc-code="13"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-13.svg");
-				}
+		}
+		.card[data-disc-code="13"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-13.svg");
 			}
-			.card[data-disc-code="14"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-14.svg");
-				}
+		}
+		.card[data-disc-code="14"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-14.svg");
 			}
-			.card[data-disc-code="15"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-15.svg");
-				}
+		}
+		.card[data-disc-code="15"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-15.svg");
 			}
-			.card[data-disc-code="16"]{
-				.card-body .card-title::before{
-					background-image: url("../img/explore/disc-16.svg");
-				}
-			}	
+		}
+		.card[data-disc-code="16"]{
+			.card-body .card-title::before{
+				background-image: url("../img/explore/disc-16.svg");
+			}
+		}	
+	  /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */
 	}	
 }
 

@@ -21,7 +21,6 @@
 		width: 100%;
 		height: 3rem;
 		@extend .bg-primary-gradient;
-		@extend .clip-path-triangle-down;
 	}
 	.feature-item{
 		display: flex;
@@ -69,7 +68,6 @@
 	.exam-item{
 		filter: drop-shadow(0 0 .5rem rgba($tertiary, .08));
 		.exam-body{
-			@extend .clip-path-card;
 		}
 		.exam-title{
 			display: flex;

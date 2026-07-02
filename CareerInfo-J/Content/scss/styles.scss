@@ -4,22 +4,24 @@
 @import "bootstrap-5.3.3/scss/maps";
 @import "bootstrap-5.3.3/scss/mixins";
 @import "bootstrap-5.3.3/scss/utilities";
-
-@import "modules/var"; 
  
 @import "master/header";   
 @import "master/footer";
 @import "master/main";
 
+@import "modules/TA";  
+@import "modules/TI";  
+@import "modules/UI";  
+
 @import "modules/animate"; 
 @import "modules/back-to-top";  
+@import "modules/badge"; 
 @import "modules/mend-bs"; 
 @import "modules/page-header"; 
 @import "modules/spinner"; 
-@import "modules/UI";  
-@import "modules/TA";  
-@import "modules/TI";  
-@import "modules/badge";  
+@import "modules/trait"; 
+
+
 
 @import "pages/index"; 
 @import "pages/news"; 
