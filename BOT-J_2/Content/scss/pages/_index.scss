@@ -1,0 +1,17 @@
+.robot-frame.index{
+	height: 100vh;
+	max-height: 100vh;
+	.dialog{ 
+		background-color: transparent;
+		border-radius: $border-radius-xl;
+		border-top-left-radius: 0;
+		box-shadow: none;
+		.dialog-text{
+			max-height: none;
+			overflow-y: visible;
+		}
+		&::before, &::after{ 
+			display: none;
+		}
+	}
+}
