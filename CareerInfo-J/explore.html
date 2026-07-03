@@ -417,18 +417,22 @@
     </div>
     <!-- page-content End -->
     
-    <!-- 讚小幫手 -->
-    <div class="helper" style="display: none;">
-      <div class="helper-dialogue">
-        <div>不知道從哪裡開始嗎？<br>
-          先選一個你有興趣的職群看看吧！</div>
-        <div class="text-center mt-1">
-          <button type="button" class="btn btn-primary rounded-pill helper-close" id="helperClose">我瞭解了，關閉</button>
+    <!-- 讚小幫手 Toast -->
+    <div class="toast-container helper-toast-container position-fixed p-3">
+      <div id="exploreHelperToast" class="toast helper-toast" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
+        <div class="toast-header helper-toast-header">
+          <strong class="me-auto helper-toast-title">小幫手提醒</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="關閉小幫手提醒" id="helperClose"></button>
+        </div>
+        <div class="toast-body helper-toast-body">
+          <div class="helper-text">不知道從哪裡開始嗎？先選一個你有興趣的職群看看吧！</div>
+          <div class="helper-actions mt-2">
+            <button type="button" class="btn btn-outline-primary btn-sm rounded-pill" data-bs-dismiss="toast">我知道了</button>
+          </div>
         </div>
       </div>
-      <img src="Content/img/nice-hi.png" class="img-fluid" alt=""/>
     </div>
-    <!-- 讚小幫手 -->
+    <!-- 讚小幫手 Toast -->
     
     <!-- Modal#guideModal Start -->
     <div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="guideModalLabel" aria-hidden="true">
@@ -614,6 +618,7 @@ $(document).ready(function () {
       placement: "bottom"
     });
   });
+	
   // 探索職群 / 職科關鍵字搜尋
   const $exploreSearch = $('#exploreSearch');
   const $exploreSearchClear = $('.btn-clear');
@@ -621,12 +626,16 @@ $(document).ready(function () {
   const $exploreCards = $exploreList.find('> .card');
   const $exploreSearchRemarkStrong = $('.explore-card-search-remark strong');
   const $exploreQuickLinks = $('.explore-quick-link');
-  const $helper = $('.helper');
-  const $helperClose = $('#helperClose');
+  const $helper = $('.helper-toast-container');
+	const helperToastEl = document.getElementById('exploreHelperToast');
+	const helperToast = bootstrap.Toast.getOrCreateInstance(helperToastEl, {
+		autohide: false
+	});
   let helperDismissed = false;
-  let helperActivated = false;
+	let helperActivated = false;
+	let helperVisible = false;
 
-  // 熱門職科 TOP 5：之後若改由後端/API 提供，只要替換這份資料即可
+  // 熱門職科 TOP 5 (需後端/API 提供)
   const popularMajorsTop5 = [
     { rank: 1, name: '化工科' },
     { rank: 2, name: '控制科' },
@@ -635,7 +644,7 @@ $(document).ready(function () {
     { rank: 5, name: '機械木模科' }
   ];
 
-  // 我的推薦群科：之後若改由後端/API 提供，只要替換這份資料即可
+  // 我的推薦群科 (需後端/API 提供)
   const recommendGroups = [
     { name: '電機與電子群', type: '我的優勢' },
     { name: '土木與建築群', type: '我的優勢' },
@@ -646,12 +655,13 @@ $(document).ready(function () {
   ];
 
   // helper =================================================
-  // 沒有搜尋 / 熱門職科 / 我的推薦條件時，捲動到頁面中段才出現。
   // 使用者關閉 helper，或進入搜尋 / 熱門職科 / 我的推薦狀態時，helper 會隱藏。
   function hasExploreSearchCondition() {
     return $.trim($exploreSearch.val()) !== '';
   }
 
+	// 更新小幫手 Toast 的垂直位置
+	// (當頁面捲動接近 footer 時，加入 .is-near-footer，並用 CSS 變數 --helper-footer-bottom 設定 footer 高度，讓 Toast 往上移，避免擋住 footer。)
   function updateExploreHelperPosition() {
 		const footerHeight = $('footer').outerHeight() || 0;
 		const scrollTop = $(window).scrollTop();
@@ -670,34 +680,46 @@ $(document).ready(function () {
 		}
 	}
 
+	// 顯示小幫手 Toast
   function showExploreHelper() {
-    updateExploreHelperPosition();
-    $helper.stop(true, true).fadeIn('slow').css('display', 'block');
-  }
+		updateExploreHelperPosition();
 
-  function hideExploreHelper() {
-    $helper.stop(true, true).fadeOut('slow');
-  }
+		if (helperVisible) return;
 
+		helperToast.show();
+		helperVisible = true;
+	}
+
+	// 隱藏小幫手 Toast
+	function hideExploreHelper() {
+		if (!helperVisible) return;
+
+		helperToast.hide();
+		helperVisible = false;
+	}
+
+	// 依據目前狀態決定是否顯示小幫手
+	// 顯示條件：1. 沒有搜尋條件 2. 使用者尚未手動關閉 3. 使用者已經捲動超過頁面中段 
+	// 關閉條件：1. 使用者關閉 helper 2. 或進入搜尋 / 熱門職科 / 我的推薦狀態時
   function updateExploreHelper() {
-    if (hasExploreSearchCondition() || helperDismissed) {
-      hideExploreHelper();
-      return;
-    }
+		if (hasExploreSearchCondition() || helperDismissed) {
+			hideExploreHelper();
+			return;
+		}
 
-    const scrollTop = $(window).scrollTop();
-    const triggerHeight = ($(document).height() - $(window).height()) * 0.5;
+		const scrollTop = $(window).scrollTop();
+		const triggerHeight = ($(document).height() - $(window).height()) * 0.5;
 
-    if (scrollTop > triggerHeight) {
-      helperActivated = true;
-    }
+		if (scrollTop > triggerHeight) {
+			helperActivated = true;
+		}
 
-    if (helperActivated) {
-      showExploreHelper();
-    } else {
-      hideExploreHelper();
-    }
-  }
+		if (helperActivated) {
+			showExploreHelper();
+		} else {
+			hideExploreHelper();
+		}
+	}
 
   function setExploreViewRemark(text) {
     $exploreSearchRemarkStrong.text(text);
@@ -933,15 +955,25 @@ $(document).ready(function () {
     }
   });
 
-  // helper 可由使用者主動關閉；之後即使無搜尋條件也不再自動出現
-  $helperClose.on('click', function () {
-    helperDismissed = true;
-    $helper.stop(true, true).fadeOut('slow');
-  });
+  // 小幫手 可由使用者主動關閉；之後即使無搜尋條件也不再自動出現
+  $('#exploreHelperToast [data-bs-dismiss="toast"]').on('click', function () {
+		helperDismissed = true;
+		helperVisible = false;
+	});
 
-  $(window).on('scroll.exploreHelper resize.exploreHelper', function () {
-    updateExploreHelper();
-  });
+	// 捲動與縮放時更新小幫手狀態
+  let helperTicking = false;
+
+	$(window).on('scroll.exploreHelper resize.exploreHelper', function () {
+		if (helperTicking) return;
+
+		helperTicking = true;
+
+		window.requestAnimationFrame(function () {
+			updateExploreHelper();
+			helperTicking = false;
+		});
+	});
 
   updateExploreHelper();
 

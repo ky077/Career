@@ -7,7 +7,7 @@
 			margin-bottom: 0;
 		}
 	}
-	.helper{ 
+	/*.helper{ 
 		display: none;
 		@media screen and (min-width: 992px) {
 		display: block;	
@@ -17,45 +17,11 @@
 		right: $spacer;
 		filter: drop-shadow($box-shadow-sm);
 		transition: bottom 0.35s ease, opacity 0.25s ease;
-  	will-change: bottom, opacity;
+		will-change: bottom, opacity;
 		&.is-near-footer {
 			bottom: var(--helper-footer-bottom, 4rem);
 		}
-		.helper-dialogue{
-			background-color: $white;
-			border-radius: 50%;
-			color: $secondary;
-			display: inline-block;
-			font-size: .75rem !important;
-			font-weight: $font-weight-medium;
-			padding: 1.5rem;
-			position: relative;
-			max-width: 240px;
-			&::before{
-				content: "";
-				display: block;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				background-color: transparent;
-				width: 3rem;
-				height: 1.5rem;
-				border-radius: 50%;
-				border-right: 1rem solid $white;
-				transform: translate(-100%, 50%) rotate(-10deg);
-			}
-		}
-		img{
-			display: block;
-			margin: 1rem auto;
-			width: 150px;
-			height: auto;
-		}
-		.helper-close{
-			font-size: .7rem;
-			padding: .125rem .75rem;
-		}
-	}
+	}	*/
 }
 
 .explore-IP-block{

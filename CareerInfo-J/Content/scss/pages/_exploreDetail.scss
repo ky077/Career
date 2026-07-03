@@ -393,6 +393,38 @@
 	background-image: url("../img/exploreDetail/guide-7.svg");
 }
 
+.guide-helper-btn{
+	position: absolute;
+	right: 0;
+	background-color: $white;
+	border: 1px solid $info;
+	font-size: .75rem;
+	color: $info;
+	padding: .125rem 3.25rem .125rem .5rem;
+	border-radius: $border-radius-pill;
+	&::after{
+		content: "";
+		display: block;
+		width: 3rem;
+		height: 3rem;
+		background-image: url("../img/nice-hi.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		position: absolute;
+		bottom: -25%;
+		right: 0;
+	}
+}
+.guide-helper-btn:hover{
+	> span{
+		visibility: visible;
+	}
+	&::after{
+		background-image: url("../img/nice-hi.apng");	
+	}
+}
+
 .guide-figure-video{
 	background-color: $black;
 	border: 1px solid $border-color;
@@ -634,4 +666,100 @@
 		max-width: 5/12*100%;
 		margin: 0 auto 1rem 1rem;
 	}
+}
+
+//
+.xmind .futuristic-frame-digital {
+  position: relative;
+}
+
+/* 心智圖內讚寶提示框 */
+.xmind-ip-helper {
+  position: absolute;
+  z-index: 20;
+  min-width: $toast-max-width;
+  max-width: $toast-max-width;
+  background: $toast-background-color;
+  border: 1px solid rgba($info, .5);
+  border-radius: $border-radius-xl;
+  box-shadow: 0 .5rem 1rem rgba($info, 0.15);
+  opacity: 1;
+  transform: translate(-50%, calc(-100% - 1rem));
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+	font-size: $toast-font-size;
+	&::before{
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-top: .75rem solid $white;
+		border-right: .75rem solid transparent;
+		border-left: .75rem solid transparent;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(calc(-100% - .75rem), -1px);
+		z-index: 2;
+	}
+	&::after{
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-top: .75rem solid rgba($info, .5);
+		border-right: calc(.75rem + 1px) solid transparent;
+		border-left: calc(.75rem + 1px) solid transparent;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(calc(-100% - .75rem + 1px));
+		z-index: 1;
+	}
+	.xmind-ip-helper-header {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		padding: $toast-padding-y $toast-padding-x;
+		.xmind-ip-helper-title{
+			color: $secondary;
+		}
+		.btn-close {
+			width: .5em;
+    	height: .5em;
+		}
+	}
+	.xmind-ip-helper-body {
+		padding: $toast-padding-x;
+		padding-top: 0;
+		text-align: left;
+		.xmind-ip-helper-text {
+		}
+		.xmind-ip-helper-actions {
+		}
+	}
+}
+
+/* 隱藏狀態 */
+.xmind-ip-helper.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% + .5rem));
+}
+
+
+.xmind-ip-helper::after {
+  
+}
+
+/* 手機版：避免對話框太寬或超出畫面 */
+@media (max-width: 575.98px) {
+  .xmind-ip-helper {
+    min-width: 220px;
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .xmind-ip-helper-text {
+    font-size: .9rem;
+  }
 }

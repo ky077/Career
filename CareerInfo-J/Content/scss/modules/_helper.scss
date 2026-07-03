@@ -1,0 +1,82 @@
+.helper-toast-container {
+  right: 1rem;
+  bottom: 4rem;
+  z-index: 1080;
+  transition: bottom .25s ease;
+	.helper-toast {
+		--bs-toast-zindex: 1090;
+    --bs-toast-padding-x: 0.75rem;
+    --bs-toast-padding-y: 0.5rem;
+    --bs-toast-spacing: 1.5rem;
+    --bs-toast-max-width: 300px;
+    --bs-toast-font-size: 0.875rem;
+    --bs-toast-color: ;
+    --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);
+    --bs-toast-border-width: var(--bs-border-width);
+    --bs-toast-border-color: rgba(var(--bs-info-rgb), 0.5);
+    --bs-toast-border-radius: var(--bs-border-radius-xl);
+    --bs-toast-box-shadow: 0 .5rem 1rem rgba(var(--bs-info-rgb), 0.15);
+    --bs-toast-header-color: var(--bs-secondary);
+    --bs-toast-header-bg: transparent;
+    --bs-toast-header-border-color: var(--bs-border-color-translucent);
+		position: relative;
+		&::before{
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: .75rem solid $white;
+			border-right: .75rem solid transparent;
+			border-left: .75rem solid transparent;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(calc(-100% - .75rem));
+			z-index: 2;
+		}
+		&::after{
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: calc(.75rem + 1px) solid $info;
+			border-right: calc(.75rem + 1px) solid transparent;
+			border-left: calc(.75rem + 1px) solid transparent;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(calc(-100% - .75rem + 1px));
+			z-index: 1;
+		}
+	}
+	.helper-toast-header {
+		border-bottom: 0;
+		.btn-close{
+			width: .5em;
+    	height: .5em;
+		}
+	}
+	.helper-toast-body{
+		padding-top: 0;
+	}
+	
+	&::after{ 
+		content: "";
+		display: block;
+		width: 50%;
+		height: 0;
+		padding-bottom: 50% * 432/476;
+		background-image: url("../img/nice-hi.apng");
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		margin: .5rem auto 0 auto;
+	}
+}
+
+.helper-toast-container.is-near-footer {
+  bottom: calc(var(--helper-footer-bottom, 0px) + 1rem);
+}
+
+
+
+
