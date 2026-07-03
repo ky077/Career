@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let helperDismissed = false;
   let userClosedCurrentToast = false;
   let internalToastHide = false;
-  let xmindSpeechDismissed = false;
-  let xmindSpeechEl = null;
+  let xmindHelperDismissed = false;
+  let xmindHelperEl = null;
 
   // 取得目前職科名稱；未來同版型替換成其他職科時，讚寶文案會自動帶入目前 breadcrumb 的 active 項目。
   const currentMajorNameEl = document.querySelector('.breadcrumb-item.active[aria-current="page"]') || document.querySelector('.breadcrumb-item.active');
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  // xmind 對話框相關 CSS 請寫在原本 CSS 檔，本 JS 只負責建立 DOM、定位與互動。
+  // xmind 小幫手相關 CSS 請寫在原本 CSS 檔，本 JS 只負責建立 DOM、定位與互動。
 
   // 計算固定 header 高度，讓按鈕捲動定位不被上方導覽列遮住。
   function getHeaderOffset() {
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (helperDismissed && !isManualOpen && !helperVisible && !helperToastEl.classList.contains('show')) return;
     if (settings.once && seenGuideIds.has(messageKey)) return;
 
-    hideXmindSpeech();
+    hideXmindHelper();
     userClosedCurrentToast = false;
     seenGuideIds.add(messageKey);
 
@@ -198,45 +198,49 @@ document.addEventListener('DOMContentLoaded', function () {
     helperVisible = true;
   }
 
-  // 建立心智圖內的對話框；此提示不放在右下角 Toast 內。
-  function createXmindSpeech() {
+  // 建立心智圖內的小幫手；此提示不放在右下角 Toast 內。
+  function createXmindHelper() {
     if (!xmindFrame) return null;
-    if (xmindSpeechEl) return xmindSpeechEl;
+    if (xmindHelperEl) return xmindHelperEl;
 
-    xmindSpeechEl = document.createElement('div');
-    xmindSpeechEl.className = 'xmind-ip-helper is-hidden';
-    xmindSpeechEl.setAttribute('role', 'status');
-    xmindSpeechEl.setAttribute('aria-live', 'polite');
-    xmindSpeechEl.innerHTML =
-      '<button type="button" class="btn-close xmind-ip-helper-close" aria-label="關閉讚寶心智圖提示"></button>' +
-      '<div class="xmind-ip-speech-title"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i><span>讚寶提醒</span></div>' +
-      '<p class="xmind-ip-helper-text">不知道從哪裡開始？點選心智圖七大核心結點，就能快速連結至下方導覽內容。</p>' +
-      '<div class="xmind-ip-helper-actions">' +
-        '<button type="button" class="btn btn-primary btn-sm rounded-pill" data-xmind-helper-scroll-to="guide1">從第一站開始</button>' +
+    xmindHelperEl = document.createElement('div');
+    xmindHelperEl.className = 'xmind-ip-helper is-hidden';
+    xmindHelperEl.setAttribute('role', 'status');
+    xmindHelperEl.setAttribute('aria-live', 'polite');
+    xmindHelperEl.innerHTML =
+      '<div class="xmind-ip-helper-title">' +
+        '<button type="button" class="btn-close xmind-ip-helper-close" aria-label="關閉讚寶心智圖提示"></button>' +
+        '<span>讚寶提醒</span>' +
+      '</div>' +
+      '<div class="xmind-ip-helper-body">' +
+        '<p class="xmind-ip-helper-text">不知道從哪裡開始？點選心智圖七大核心結點，就能快速連結至下方導覽內容。</p>' +
+        '<div class="xmind-ip-helper-actions">' +
+          '<button type="button" class="btn btn-primary btn-sm rounded-pill" data-xmind-helper-scroll-to="guide1">從第一站開始</button>' +
+        '</div>' +
       '</div>';
 
-    xmindFrame.appendChild(xmindSpeechEl);
+    xmindFrame.appendChild(xmindHelperEl);
 
-    xmindSpeechEl.querySelector('.xmind-ip-helper-close').addEventListener('click', function () {
-      xmindSpeechDismissed = true;
-      hideXmindSpeech();
+    xmindHelperEl.querySelector('.xmind-ip-helper-close').addEventListener('click', function () {
+      xmindHelperDismissed = true;
+      hideXmindHelper();
     });
 
-    xmindSpeechEl.querySelector('[data-xmind-speech-scroll-to]').addEventListener('click', function () {
-      const targetId = this.getAttribute('data-xmind-speech-scroll-to');
+    xmindHelperEl.querySelector('[data-xmind-helper-scroll-to]').addEventListener('click', function () {
+      const targetId = this.getAttribute('data-xmind-helper-scroll-to');
 
-      xmindSpeechDismissed = true;
-      hideXmindSpeech();
+      xmindHelperDismissed = true;
+      hideXmindHelper();
       scrollToTarget(targetId);
       showDetailHelper(targetId, { manual: true });
     });
 
-    return xmindSpeechEl;
+    return xmindHelperEl;
   }
 
   // 將心智圖提示定位到 SVG 內 id="IP" 的上方。
-  function positionXmindSpeech() {
-    const speech = createXmindSpeech();
+  function positionXmindHelper() {
+    const speech = createXmindHelper();
     const ipNode = xmindFrame ? xmindFrame.querySelector('svg #IP') : null;
 
     if (!speech || !ipNode || speech.classList.contains('is-hidden')) return;
@@ -261,26 +265,26 @@ document.addEventListener('DOMContentLoaded', function () {
     speech.style.top = Math.max(top, 24) + 'px';
   }
 
-  function showXmindSpeech(options) {
+  function showXmindHelper(options) {
     const settings = options || {};
     const force = settings.force === true;
-    const speech = createXmindSpeech();
+    const speech = createXmindHelper();
     const ipNode = xmindFrame ? xmindFrame.querySelector('svg #IP') : null;
 
     if (!speech || !ipNode) return;
-    if (xmindSpeechDismissed && !force) return;
+    if (xmindHelperDismissed && !force) return;
 
     hideToastWithoutDismiss();
     setGuideHelperButtonsVisible(false);
     speech.classList.remove('is-hidden');
 
-    window.requestAnimationFrame(positionXmindSpeech);
+    window.requestAnimationFrame(positionXmindHelper);
   }
 
-  function hideXmindSpeech() {
-    if (!xmindSpeechEl) return;
+  function hideXmindHelper() {
+    if (!xmindHelperEl) return;
 
-    xmindSpeechEl.classList.add('is-hidden');
+    xmindHelperEl.classList.add('is-hidden');
   }
 
   // Toast 內的按鈕：可帶學生跳至下一個導覽區塊。
@@ -299,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
       hideToastWithoutDismiss();
 
       window.setTimeout(function () {
-        showXmindSpeech({ force: true });
+        showXmindHelper({ force: true });
       }, 450);
       return;
     }
@@ -387,8 +391,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const guideId = getGuideIdFromSvgNode(svgGuide);
     if (!guideId) return;
 
-    xmindSpeechDismissed = true;
-    hideXmindSpeech();
+    xmindHelperDismissed = true;
+    hideXmindHelper();
 
     window.setTimeout(function () {
       showDetailHelper(guideId);
@@ -423,15 +427,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // xmind-loader.js 載入 SVG 後，再把第一則提示定位到 SVG 內的 id="IP" 上方。
   document.addEventListener('xmind:loaded', function () {
-    showXmindSpeech();
+    showXmindHelper();
   });
 
   // 若 SVG 載入速度較快，或其他程式沒有派發 xmind:loaded，也嘗試補一次定位。
   window.setTimeout(function () {
-    showXmindSpeech();
+    showXmindHelper();
   }, 900);
 
-  // 捲動與縮放時更新 Toast 與心智圖對話框位置。
+  // 捲動與縮放時更新 Toast 與心智圖小幫手位置。
   let helperTicking = false;
   window.addEventListener('scroll', function () {
     if (helperTicking) return;
@@ -439,14 +443,14 @@ document.addEventListener('DOMContentLoaded', function () {
     helperTicking = true;
     window.requestAnimationFrame(function () {
       updateDetailHelperPosition();
-      positionXmindSpeech();
+      positionXmindHelper();
       helperTicking = false;
     });
   }, { passive: true });
 
   window.addEventListener('resize', function () {
     updateDetailHelperPosition();
-    positionXmindSpeech();
+    positionXmindHelper();
   });
 
   updateDetailHelperPosition();
