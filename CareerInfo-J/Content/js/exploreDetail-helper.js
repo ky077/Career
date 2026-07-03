@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     guide1: {
       text: `第一站先認識${currentMajorName}！看完這裡，可以先了解它在學什麼、和生活中的產品有什麼關係。`,
       actions: [
-        { label: '下一站：知識技能能力', scrollTo: 'guide2' }
+        { label: '下一站：知識技能與能力', scrollTo: 'guide2' }
       ]
     },
     guide2: {
