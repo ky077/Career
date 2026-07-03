@@ -110,8 +110,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .spinner.show { transition: opacity .5s ease-out, visibility 0s linear 0s; visibility: visible; opacity: 1; }
 .spinner .spinner-border { /*部旋轉， 強制改放IP*/ animation: none; border: none; width: 10rem; height: auto; }
 .spinner .spinner-border .visually { display: block; width: 100%; background-color: #fff; border: 1px solid rgba(21, 169, 221, 0.75); border-radius: 50rem; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); padding: .75rem; text-align: center; position: relative; }
-.spinner .spinner-border .visually::before { content: ""; display: block; width: 0; height: 0; border-top: 0.5rem solid #fff; border-right: .5rem solid transparent; border-left: .5rem solid transparent; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); z-index: 2; }
-.spinner .spinner-border .visually::after { content: ""; display: block; width: 0; height: 0; border-top: calc(.5rem + 1px) solid rgba(21, 169, 221, 0.75); border-right: calc(.5rem + 1px) solid transparent; border-left: calc(.5rem + 1px) solid transparent; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); z-index: 1; }
+.spinner .spinner-border .visually::before { content: ""; display: block; width: 0; height: 0; border-top: 0.5rem solid #fff; border-right: .5rem solid transparent; border-left: .5rem solid transparent; position: absolute; top: 100%; left: 25%; z-index: 2; }
+.spinner .spinner-border .visually::after { content: ""; display: block; width: 0; height: 0; border-top: calc(.5rem + 1px) solid rgba(21, 169, 221, 0.75); border-right: calc(.5rem + 1px) solid transparent; border-left: calc(.5rem + 1px) solid transparent; position: absolute; top: 100%; left: calc(25% - 1px); z-index: 1; }
 .spinner .spinner-border::after { content: ""; display: block; width: 100%; height: 0; padding-bottom: 90.756302521%; background-image: url("../images/nice-hi.apng"); background-repeat: no-repeat; background-size: contain; margin-top: .5rem; }
 
 .hideText { background-color: transparent; color: transparent; user-select: none; }
