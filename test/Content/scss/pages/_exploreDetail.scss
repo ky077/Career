@@ -393,6 +393,38 @@
 	background-image: url("../img/exploreDetail/guide-7.svg");
 }
 
+.guide-helper-btn{
+	position: absolute;
+	right: 0;
+	background-color: $white;
+	border: 1px solid $info;
+	font-size: .75rem;
+	color: $info;
+	padding: .125rem 3.25rem .125rem .5rem;
+	border-radius: $border-radius-pill;
+	&::after{
+		content: "";
+		display: block;
+		width: 3rem;
+		height: 3rem;
+		background-image: url("../img/nice-hi.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		position: absolute;
+		bottom: -25%;
+		right: 0;
+	}
+}
+.guide-helper-btn:hover{
+	> span{
+		visibility: visible;
+	}
+	&::after{
+		background-image: url("../img/nice-hi.apng");	
+	}
+}
+
 .guide-figure-video{
 	background-color: $black;
 	border: 1px solid $border-color;
@@ -634,4 +666,192 @@
 		max-width: 5/12*100%;
 		margin: 0 auto 1rem 1rem;
 	}
+}
+
+//
+.xmind {
+  position: relative;
+}
+.zanbo-guide, .zanbo-xmind-guide {
+  font-family: inherit;
+}
+.zanbo-guide {
+  position: fixed;
+  right: 1rem;
+  bottom: 5.25rem;
+  z-index: 1031;
+  display: flex;
+  align-items: flex-end;
+  gap: .65rem;
+  pointer-events: none;
+}
+.zanbo-guide.is-open {
+  pointer-events: auto;
+}
+.zanbo-avatar {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 .75rem 1.5rem rgba(0, 104, 183, .16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .35rem;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.zanbo-avatar:hover, .zanbo-avatar:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 1.75rem rgba(0, 104, 183, .2);
+  outline: 0;
+}
+.zanbo-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.zanbo-avatar-fallback {
+  font-weight: 700;
+  color: #0068b7;
+  font-size: 1.1rem;
+}
+.zanbo-bubble {
+  width: min(22rem, calc(100vw - 6.5rem));
+  background: #fff;
+  border: 2px solid rgba(0, 104, 183, .16);
+  border-radius: 1.15rem;
+  box-shadow: 0 1rem 2rem rgba(0, 104, 183, .16);
+  padding: 1rem 1rem .85rem;
+  transform: translateY(.5rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+.zanbo-guide.is-open .zanbo-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.zanbo-bubble-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .35rem;
+}
+.zanbo-bubble-title {
+  font-weight: 700;
+  color: #0068b7;
+  font-size: 1rem;
+}
+.zanbo-close {
+  border: 0;
+  background: transparent;
+  color: #666;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: .1rem .2rem;
+}
+.zanbo-bubble-text {
+  margin: 0;
+  color: #333;
+  line-height: 1.7;
+  font-size: .95rem;
+}
+.zanbo-bubble-actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: .75rem;
+}
+.zanbo-next, .zanbo-secondary {
+  border-radius: 999px;
+  border: 1px solid rgba(0, 104, 183, .22);
+  background: #eef8ff;
+  color: #0068b7;
+  padding: .35rem .75rem;
+  font-size: .875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.zanbo-secondary {
+  background: #fff7ed;
+  color: #c65f00;
+  border-color: rgba(253, 126, 20, .28);
+}
+.zanbo-inline-tip {
+	position: absolute;
+	right: 0;
+  display: inline-flex;
+  background: transparent;
+	border: none;
+  color: $primary;
+  font-size: .875rem;
+  font-weight: 600;
+  vertical-align: middle;
+  cursor: pointer;
+	&:hover, &:focus {
+		outline: 0;
+	}
+}
+
+.zanbo-guide-highlight {
+  animation: zanboGuidePulse 1.8s ease 1;
+}
+@keyframes zanboGuidePulse {
+  0%, 100% {
+    box-shadow: inherit;
+  }
+  40% {
+    box-shadow: 0 0 0 .35rem rgba(253, 126, 20, .16), 0 .75rem 1.5rem rgba(0, 104, 183, .12);
+  }
+}
+.zanbo-xmind-guide {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: flex-end;
+  gap: .6rem;
+  z-index: 2;
+  max-width: min(26rem, calc(100% - 2rem));
+}
+.zanbo-xmind-guide .zanbo-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  width: min(22rem, calc(100vw - 7rem));
+}
+.zanbo-xmind-guide.is-hidden .zanbo-bubble {
+  display: none;
+}
+@media (max-width:575.98px) {
+  .zanbo-guide {
+    right: .75rem;
+    bottom: 4.75rem;
+  }
+  .zanbo-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .zanbo-bubble {
+    width: calc(100vw - 5.25rem);
+    padding: .85rem;
+  }
+  .zanbo-inline-tip {
+    display: inline-flex;
+    margin-left: .35rem;
+    margin-top: .35rem;
+  }
+  .zanbo-xmind-guide {
+    position: static;
+    margin-top: .75rem;
+    max-width: 100%;
+  }
+  .zanbo-xmind-guide .zanbo-bubble {
+    width: 100%;
+  }
 }

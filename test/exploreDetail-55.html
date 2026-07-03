@@ -73,7 +73,7 @@
           <div class="futuristic-frame-digital">
             <div class="xmind-placeholder" role="status">心智圖載入中...</div>
           </div>
-          <div class="xmind-remark">點選心智圖七大核心結點，可快速連結至導覽內容。</div>
+          <!--<div class="xmind-remark">點選心智圖七大核心結點，可快速連結至導覽內容。</div>-->
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
     <!-- page-content Start -->
     <div class="page-content">
       <!--右方漂浮 開始 -->
-      <div class="explore-list-group list-group">
+      <div class="explore-list-group list-group" style="display: none;">
         <a class="list-group-item list-group-item-action" href="#guide1"><span class="explore-list-label">職科介紹</span></a>
         <a class="list-group-item list-group-item-action" href="#guide2"><span class="explore-list-label">知識、技能與能力</span></a>
         <a class="list-group-item list-group-item-action" href="#guide3"><span class="explore-list-label">興趣及特質</span></a>
@@ -578,6 +578,22 @@
       </div>
     </div>
     <!-- page-content End -->
+		
+		<!-- 讚寶小幫手 helper Toast Start -->
+    <div class="toast-container helper-toast-container position-fixed p-3">
+      <div id="exploreDetailHelperToast" class="toast helper-toast" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
+        <div class="toast-header helper-toast-header">
+          <strong class="me-auto helper-toast-title">讚寶提醒</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="關閉讚寶提醒" id="detailHelperClose"></button>
+        </div>
+        <div class="toast-body helper-toast-body">
+          <div class="helper-text">點選心智圖七大核心結點，可快速連結至導覽內容。</div>
+          <div class="helper-actions mt-2">  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 讚寶小幫手 helper Toast End -->
   </main>
   <footer>
   </footer>
@@ -600,5 +616,6 @@
 <script src="Content/js/exploreDetail.js"></script>
 <script src="Content/js/xmind-loader.js"></script>
 <script src="Content/js/exploreDetail-scrollspy.js"></script>
+<script src="Content/js/exploreDetail-helper.js"></script>
 </body>
 </html>
