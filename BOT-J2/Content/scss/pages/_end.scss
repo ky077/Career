@@ -1,0 +1,101 @@
+.record-summary{
+	@media screen and (min-width: 576px) and (max-width: 991px) {
+	margin-left: -3rem;
+	margin-right: -3rem;
+	}
+	.record-title{
+		color: $body-color;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		>span{  
+			border-bottom: 2px solid $primary-100;	
+			padding: 0 1rem .5rem 1rem;
+			position: relative;
+		}
+		&::before, &::after{  //左右框線
+			content: "";
+			display: block;
+			flex: 1;
+			border-top: 2px solid $primary-100;
+			transform-origin: bottom;
+		}
+		&::before{ 
+			border-right: 2px solid $primary-100;
+			transform: skewX(30deg);
+		}
+		&::after{
+			border-left: 2px solid $primary-100;
+			transform: skewX(-30deg);
+		}
+	}
+	.record-val{
+		color: $primary;
+		font-size: 2.5rem;
+		font-weight: 900;
+		text-align: center;
+		border-bottom: 2px solid $primary-100;
+		padding: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.end-animate{
+	margin-bottom: 1rem;
+	text-align: center;
+	.end-title{
+		color: $primary;
+		font-size: 2rem;
+	}
+	.end-an{  
+		display: inline-block;
+		width: 335px;
+		max-width: 75%;
+		position: relative;
+		@media screen and (min-width: 768px) {
+		width: 335px;
+		max-width: 50%;
+		}
+		.end-an-robot{  
+			width: 100%;
+			height: auto;
+		}
+		.end-an-ball{ 
+			border-radius: 100%;
+			border: 1px solid $primary;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: radial-gradient(circle at 90% 90%,  rgba($primary,.75) 0%,rgba(255,255,255,.75) 100%); 
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(-25%, -100%);
+			animation: ballMove 2s infinite;
+			animation-delay: 1s;
+			.task-complete{
+				background-color: transparent;
+				border-color: transparent;
+				color: red;
+				width: 5rem;
+				height: 5rem;
+				font-size: 5rem;
+				.done{
+					color: red;
+				}
+			}
+		}	
+	}
+}
+@keyframes ballMove {
+  0% {transform: translate(-25%, -150%);}
+ 50% {transform: translate(-25%, -100%);}
+100% {transform: translate(-25%, -150%);}	
+}
+
+.record-summary +.end-animate {
+	@media screen and (min-width: 768px) {
+	margin-top: calc((2rem*1.2 + 0.5rem)*2*-1);
+	}
+}
+
