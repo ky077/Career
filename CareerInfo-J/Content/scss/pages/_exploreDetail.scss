@@ -668,17 +668,15 @@
 	}
 }
 
-//
-.xmind .futuristic-frame-digital {
-  position: relative;
+.xmind {
+  overflow: visible;
 }
-
 /* 心智圖內讚寶提示框 */
 .xmind-ip-helper {
   position: absolute;
   z-index: 20;
-  min-width: $toast-max-width;
-  max-width: $toast-max-width;
+  width: $toast-max-width;
+  max-width: 100%;
   background: $toast-background-color;
   border: 1px solid rgba($info, .5);
   border-radius: $border-radius-xl;

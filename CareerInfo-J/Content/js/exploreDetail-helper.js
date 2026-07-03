@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     guide1: {
       text: `第一站先認識${currentMajorName}！看完這裡，可以先了解它在學什麼、和生活中的產品有什麼關係。`,
       actions: [
-        { label: '下一站：知識技能與能力', scrollTo: 'guide2' }
+        { label: '下一站：知識、技能與能力', scrollTo: 'guide2' }
       ]
     },
     guide2: {
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 建立心智圖內的小幫手；此提示不放在右下角 Toast 內。
   function createXmindHelper() {
-    if (!xmindFrame) return null;
+    if (!xmindBlock || !xmindFrame) return null;
     if (xmindHelperEl) return xmindHelperEl;
 
     xmindHelperEl = document.createElement('div');
@@ -213,13 +213,15 @@ document.addEventListener('DOMContentLoaded', function () {
         '<button type="button" class="btn-close xmind-ip-helper-close" aria-label="關閉讚寶心智圖提示"></button>' +
       '</div>' +
       '<div class="xmind-ip-helper-body">' +
-        '<p class="xmind-ip-helper-text">不知道從哪裡開始？點選心智圖七大核心結點，就能快速連結至下方導覽內容。</p>' +
-        '<div class="xmind-ip-helper-actions">' +
+        '<div class="xmind-ip-helper-text">不知道從哪裡開始？點選心智圖七大核心結點，就能快速連結至下方導覽內容。</div>' +
+        '<div class="xmind-ip-helper-actions mt-2">' +
           '<button type="button" class="btn btn-primary btn-sm rounded-pill" data-xmind-helper-scroll-to="guide1">從第一站開始</button>' +
         '</div>' +
       '</div>';
 
-    xmindFrame.appendChild(xmindHelperEl);
+    // 不插入 .futuristic-frame-digital 內，避免被該區塊的 clip-path 裁切。
+    // 改插入 .xmind 內、.futuristic-frame-digital 後方，讓提示框可超出心智圖框線。
+    xmindFrame.insertAdjacentElement('afterend', xmindHelperEl);
 
     xmindHelperEl.querySelector('.xmind-ip-helper-close').addEventListener('click', function () {
       xmindHelperDismissed = true;
@@ -239,26 +241,27 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 將心智圖提示定位到 SVG 內 id="IP" 的上方。
+  // 提示框本身是 .xmind 的子層，不在 .futuristic-frame-digital 內，避免被 clip-path 裁切。
   function positionXmindHelper() {
     const speech = createXmindHelper();
     const ipNode = xmindFrame ? xmindFrame.querySelector('svg #IP') : null;
 
     if (!speech || !ipNode || speech.classList.contains('is-hidden')) return;
 
-    const frameRect = xmindFrame.getBoundingClientRect();
+    const xmindRect = xmindBlock.getBoundingClientRect();
     const ipRect = ipNode.getBoundingClientRect();
 
-    if (!frameRect.width || !ipRect.width) return;
+    if (!xmindRect.width || !ipRect.width) return;
 
-    let left = ipRect.left + (ipRect.width / 2) - frameRect.left;
-    const top = ipRect.top - frameRect.top;
+    let left = ipRect.left + (ipRect.width / 2) - xmindRect.left;
+    const top = ipRect.top - xmindRect.top;
 
-    // 避免對話框在窄版時超出心智圖左右邊界。
+    // 避免對話框在窄版時超出 .xmind 左右邊界。
     const safePadding = 160;
-    if (frameRect.width > safePadding * 2) {
-      left = Math.max(safePadding, Math.min(left, frameRect.width - safePadding));
+    if (xmindRect.width > safePadding * 2) {
+      left = Math.max(safePadding, Math.min(left, xmindRect.width - safePadding));
     } else {
-      left = frameRect.width / 2;
+      left = xmindRect.width / 2;
     }
 
     speech.style.left = left + 'px';
