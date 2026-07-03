@@ -214,35 +214,39 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 		content: "Hard";
 	}	
 }
-
 .spinner{
-    position: fixed;
-    z-index: 9999; 
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#fff, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity .5s ease-out, visibility 0s linear .5s; 
-    &.show { 
-        transition: opacity .5s ease-out, visibility 0s linear 0s; 
-        visibility: visible; 
-        opacity: 1; 
-    }
-    .spinner-border{
-        width: 3rem; 
-        height: 3rem;
-    }
-	 .spinner-img{
-		 	width: 10rem; 
-      height: 10rem;
-			border-color: transparent;
+	position: fixed;
+	z-index: 9999; 
+	width: 100%;
+	height: 100%;
+	background-color: rgba(#fff, .5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0; 
+	visibility: hidden; 
+	transition: opacity .5s ease-out, visibility 0s linear .5s; 
+	&.show { 
+			transition: opacity .5s ease-out, visibility 0s linear 0s; 
+			visibility: visible; 
+			opacity: 1; 
+	}
+	.spinner-border{ /*部旋轉， 強制改放IP*/
+		animation: none;
+		border: none;
+    width: 10rem; 
+    height: auto;
+		&::after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 0;
+			padding-bottom: 432/476*100%;
 			background-image: url("../images/nice-hi.apng");
 			background-repeat: no-repeat;
 			background-size: contain;
+			margin-top: .75rem;
+		}
 	}
 }
 
