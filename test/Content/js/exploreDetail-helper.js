@@ -208,8 +208,8 @@ document.addEventListener('DOMContentLoaded', function () {
     xmindSpeechEl.setAttribute('role', 'status');
     xmindSpeechEl.setAttribute('aria-live', 'polite');
     xmindSpeechEl.innerHTML =
-      '<button type="button" class="btn-close" aria-label="關閉讚寶提醒"></button>' +
-      '<div class="xmind-ip-speech-title"><span>讚寶提醒</span></div>' +
+      '<button type="button" class="btn-close xmind-ip-speech-close" aria-label="關閉讚寶心智圖提示"></button>' +
+      '<div class="xmind-ip-speech-title"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i><span>讚寶提醒</span></div>' +
       '<p class="xmind-ip-speech-text">不知道從哪裡開始？點選心智圖七大核心結點，就能快速連結至下方導覽內容。</p>' +
       '<div class="xmind-ip-speech-actions">' +
         '<button type="button" class="btn btn-primary btn-sm rounded-pill" data-xmind-speech-scroll-to="guide1">從第一站開始</button>' +
