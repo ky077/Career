@@ -231,7 +231,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 			visibility: visible; 
 			opacity: 1; 
 	}
-	.spinner-border{ /*部旋轉， 強制改放IP*/
+	.spinner-border{ /*不旋轉， 強制改放IP圖*/
 		animation: none;
 		border: none;
     width: 10rem; 
@@ -256,8 +256,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 				border-left: .5rem solid transparent;	
 				position: absolute;
 				top: 100%;
-				left: 50%;
-				transform: translateX(-50%);
+				left: 25%;
 				z-index: 2;
 			}
 			&::after{
@@ -270,8 +269,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 				border-left: calc(.5rem + 1px)solid transparent;	
 				position: absolute;
 				top: 100%;
-				left: 50%;
-				transform: translateX(-50%);
+				left: calc(25% - 1px);
 				z-index: 1;
 			}
 		}

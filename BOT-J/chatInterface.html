@@ -354,10 +354,10 @@ function chat_analyze(method) {
 			// 捲軸捲動至最底部
 			$('.futuristic-frame-content').animate({
 				scrollTop: $('.futuristic-frame-content')[0].scrollHeight
-			}, 500000); 
+			}, 5000); 
 
 			chat_robot();
-		}, 100000000); // 模擬 loading 時間：1 秒	
+		}, 1000); // 模擬 loading 時間：1 秒	
 	}
 }
 	
@@ -394,7 +394,7 @@ function chat_robot() {
 			scrollTop: $('.futuristic-frame-content')[0].scrollHeight
 		}, 500); 
 		
-    }, 100000000); // 模擬 loading 時間：1 秒
+    }, 1000); // 模擬 loading 時間：1 秒
 }
 </script>
 <script>
