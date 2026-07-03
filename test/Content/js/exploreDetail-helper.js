@@ -76,79 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  function injectDetailHelperStyles() {
-    if (document.getElementById('exploreDetailHelperStyle')) return;
-
-    const style = document.createElement('style');
-    style.id = 'exploreDetailHelperStyle';
-    style.textContent = `
-      .xmind .futuristic-frame-digital {
-        position: relative;
-      }
-
-      .xmind-ip-speech {
-        position: absolute;
-        z-index: 8;
-        width: min(320px, calc(100% - 2rem));
-        padding: .8rem .9rem;
-        color: #1f2d3d;
-        background: rgba(255, 255, 255, .96);
-        border: 2px solid rgba(0, 104, 183, .18);
-        border-radius: 1rem;
-        box-shadow: 0 .75rem 1.5rem rgba(0, 104, 183, .14);
-        transform: translate(-50%, calc(-100% - 14px));
-        transition: opacity .18s ease, transform .18s ease;
-      }
-
-      .xmind-ip-speech::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: -10px;
-        width: 18px;
-        height: 18px;
-        background: rgba(255, 255, 255, .96);
-        border-right: 2px solid rgba(0, 104, 183, .18);
-        border-bottom: 2px solid rgba(0, 104, 183, .18);
-        transform: translateX(-50%) rotate(45deg);
-      }
-
-      .xmind-ip-speech-title {
-        display: flex;
-        align-items: center;
-        gap: .35rem;
-        margin-bottom: .25rem;
-        color: #0068b7;
-        font-weight: 700;
-      }
-
-      .xmind-ip-speech-text {
-        margin: 0;
-        font-size: .95rem;
-        line-height: 1.55;
-      }
-
-      .xmind-ip-speech-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: .4rem;
-        margin-top: .6rem;
-      }
-
-      .xmind-ip-speech-close {
-        position: absolute;
-        top: .45rem;
-        right: .45rem;
-        z-index: 1;
-      }
-
-      .xmind-ip-speech.is-hidden {
-        display: none;
-      }
-    `;
-
-    document.head.appendChild(style);
-  }
+  // xmind 對話框相關 CSS 請寫在原本 CSS 檔，本 JS 只負責建立 DOM、定位與互動。
 
   // 計算固定 header 高度，讓按鈕捲動定位不被上方導覽列遮住。
   function getHeaderOffset() {
@@ -252,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     hideXmindSpeech();
     userClosedCurrentToast = false;
-
     seenGuideIds.add(messageKey);
 
     if (messageKey === 'guide7') {
@@ -275,8 +202,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function createXmindSpeech() {
     if (!xmindFrame) return null;
     if (xmindSpeechEl) return xmindSpeechEl;
-
-    injectDetailHelperStyles();
 
     xmindSpeechEl = document.createElement('div');
     xmindSpeechEl.className = 'xmind-ip-speech is-hidden';
