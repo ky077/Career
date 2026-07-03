@@ -672,7 +672,7 @@
 .xmind {
   position: relative;
 }
-.xmind-ip-speech{
+.xmind-ip-helper{
 	position: absolute;
 	z-index: 8;
 	width: min(320px, calc(100% - 2rem));
@@ -684,49 +684,52 @@
 	box-shadow: 0 .75rem 1.5rem rgba(0, 104, 183, .14);
 	transform: translate(-50%, calc(-100% - 14px));
 	transition: opacity .18s ease, transform .18s ease;
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: -10px;
+		width: 18px;
+		height: 18px;
+		background: rgba(255, 255, 255, .96);
+		border-right: 2px solid rgba(0, 104, 183, .18);
+		border-bottom: 2px solid rgba(0, 104, 183, .18);
+		transform: translateX(-50%) rotate(45deg);
+	}
+	.xmind-ip-helper-title {
+		display: flex;
+		align-items: center;
+		gap: .35rem;
+		margin-bottom: .25rem;
+		color: #0068b7;
+		font-weight: 700;
+	}
+
+	.xmind-ip-helper-text {
+		margin: 0;
+		font-size: .95rem;
+		line-height: 1.55;
+		text-align: left;
+	}
+
+	.xmind-ip-helper-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: .4rem;
+		margin-top: .6rem;
+	}
+
+	.xmind-ip-helper-close {
+		position: absolute;
+		top: .45rem;
+		right: .45rem;
+		z-index: 1;
+	}
 }
-.xmind-ip-speech::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: -10px;
-        width: 18px;
-        height: 18px;
-        background: rgba(255, 255, 255, .96);
-        border-right: 2px solid rgba(0, 104, 183, .18);
-        border-bottom: 2px solid rgba(0, 104, 183, .18);
-        transform: translateX(-50%) rotate(45deg);
-      }
 
-      .xmind-ip-speech-title {
-        display: flex;
-        align-items: center;
-        gap: .35rem;
-        margin-bottom: .25rem;
-        color: #0068b7;
-        font-weight: 700;
-      }
 
-      .xmind-ip-speech-text {
-        margin: 0;
-        font-size: .95rem;
-        line-height: 1.55;
-      }
+      
 
-      .xmind-ip-speech-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: .4rem;
-        margin-top: .6rem;
-      }
-
-      .xmind-ip-speech-close {
-        position: absolute;
-        top: .45rem;
-        right: .45rem;
-        z-index: 1;
-      }
-
-      .xmind-ip-speech.is-hidden {
+      .xmind-ip-helper.is-hidden {
         display: none;
       }
