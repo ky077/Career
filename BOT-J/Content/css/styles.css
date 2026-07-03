@@ -108,6 +108,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .spinner { position: fixed; z-index: 9999; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0); display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: opacity .5s ease-out, visibility 0s linear .5s; }
 .spinner.show { transition: opacity .5s ease-out, visibility 0s linear 0s; visibility: visible; opacity: 1; }
 .spinner .spinner-border { width: 3rem; height: 3rem; }
+.spinner .spinner-img { width: 10rem; height: 10rem; border-color: transparent; background-image: url("../images/nice-hi.apng"); background-repeat: no-repeat; background-size: contain; }
 
 .hideText { background-color: transparent; color: transparent; user-select: none; }
 .hideText * { background-color: transparent; color: transparent; user-select: none; }
@@ -215,7 +216,7 @@ samp { font-family: 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei',  'PingFan
 .btn__playTitle::before { content: "\f028"; display: inline-block; font-family: "Font Awesome 6 Free"; font-weight: 900; width: 1.3em; height: 1.3em; line-height: 1.3em; vertical-align: middle; overflow: hidden; text-align: left; margin-top: -.125em; margin-right: .25rem; border-radius: 0; font-size: 1.25rem; }
 
 .btn__playTitle.current::before { width: .7em; margin-right: calc(.25rem + .2em + .2em + .2em); }
-.btn__playTitle.current::after { content: ""; display: inline-block; width: .6em; height: 1.3em; position: absolute; top: 50%; left: .7em; margin-top: -.7em; background-image: url("../../images/volume-3.svg"); background-size: 100% 100%; background-repeat: no-repeat; animation: volume 3s infinite; }
+.btn__playTitle.current::after { content: ""; display: inline-block; width: .6em; height: 1.3em; position: absolute; top: 50%; left: .7em; margin-top: -.7em; background-image: url("../images/volume-3.svg"); background-size: 100% 100%; background-repeat: no-repeat; animation: volume 3s infinite; }
 .btn__playTitle.current.disabled, .btn__playTitle.current:disabled, .btn__playTitle.current[disabled], .btn__playTitle.current[disabled="disabled"] { filter: opacity(1); opacity: 1.0; color: #00918e; }
 
 .btn__playRec, .btn__next, .btn-next, .btn__end, .btn-end { border-radius: 100%; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0.2rem #00ded9; background-color: #fff; border-color: transparent; }

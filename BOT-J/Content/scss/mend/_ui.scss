@@ -236,6 +236,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
         width: 3rem; 
         height: 3rem;
     }
+	 .spinner-img{
+		 	width: 10rem; 
+      height: 10rem;
+			border-color: transparent;
+			background-image: url("../images/nice-hi.apng");
+			background-repeat: no-repeat;
+			background-size: contain;
+	}
 }
 
 .hideText{
