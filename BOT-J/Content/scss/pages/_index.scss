@@ -1,6 +1,11 @@
 .robot-frame.index{
 	height: 100vh;
 	max-height: 100vh;
+	flex-direction: column;
+  justify-content: center;
+	@media screen and (min-width: 768px) {
+	flex-direction: row;	
+	}
 	.dialog{ 
 		background-color: transparent;
 		border-radius: $border-radius-xl;

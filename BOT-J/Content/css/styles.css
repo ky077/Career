@@ -496,7 +496,8 @@ samp { font-family: 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei',  'PingFan
 .log-modal.chat .log-accordion1 > .accordion-item > .accordion-header > .accordion-button:not(.collapsed) { background-color: rgba(0, 145, 142, 0.1); }
 .log-modal.chat .log-accordion1 > .accordion-item > .accordion-collapse.collapse.show { background-color: rgba(0, 145, 142, 0.1); }
 
-.robot-frame.index { height: 100vh; max-height: 100vh; }
+.robot-frame.index { height: 100vh; max-height: 100vh; flex-direction: column; justify-content: center; }
+@media screen and (min-width: 768px) { .robot-frame.index { flex-direction: row; } }
 .robot-frame.index .dialog { background-color: transparent; border-radius: 1rem; border-top-left-radius: 0; box-shadow: none; }
 .robot-frame.index .dialog .dialog-text { max-height: none; overflow-y: visible; }
 .robot-frame.index .dialog::before, .robot-frame.index .dialog::after { display: none; }
