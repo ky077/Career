@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html, body { width: 100%; height: 100%; min-width: 100%; min-height: 100%; font-family: 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei',  'PingFang TC', 'Heiti TC',  'LiHei Pro', sans-serif !important; letter-spacing: 0.05em; font-size: 14px; }
+html, body { width: 100%; height: 100%; min-width: 100%; min-height: 100%; font-family: 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Heiti TC', 'LiHei Pro', sans-serif !important; letter-spacing: 0.05em; font-size: 14px; }
 @media screen and (min-width: 768px) { html, body { font-size: 16px; } }
 @media screen and (min-width: 1200px) { html, body { font-size: 18px; } }
 @media screen and (min-width: 1400px) { html, body { font-size: 20px; } }
@@ -48,11 +48,9 @@ main > [class*="container"] { height: 100%; }
 
 .robot-frame + .futuristic-frame { padding-top: 1rem; height: calc(80% - 1rem); max-height: calc(80% - 1rem); }
 
-.report-frame { height: 41.66666667vh; max-height: 41.66666667vh; padding: 0; background-color: #fff; z-index: 1; }
-@media screen and (min-width: 768px) { .report-frame { height: 100%; max-height: 100%; width: 41.66666667%; max-width: 41.66666667%; } }
+.report-frame { background-color: #fff; padding: 0; z-index: 1; }
 
-.report-frame + .futuristic-frame { padding-top: 0; height: 58.33333333%; max-height: 58.33333333%; }
-@media screen and (min-width: 768px) { .report-frame + .futuristic-frame { height: 100%; max-height: 100%; width: 58.33333333%; max-width: 58.33333333%; } }
+.report-frame + .futuristic-frame { padding-top: 0; }
 
 .iframeBlock { position: relative; height: 100% !important; overflow-y: auto; }
 
@@ -258,6 +256,11 @@ samp { font-family: 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei',  'PingFan
 .btn__record.current > i { color: #fff; }
 .btn__record.current::after { display: none; }
 
+@media screen and (orientation: portrait) { .report-frame { width: 100%; height: 41.6666666667%; max-height: 41.6666666667%; padding: 0; z-index: 1; }
+  .report-frame + .futuristic-frame { width: 100%; height: 58.3333333333%; max-height: 58.3333333333%; } }
+@media screen and (orientation: landscape) { .flex-landscape-row { flex-direction: row !important; }
+  .report-frame { width: 41.6666666667%; max-width: 41.6666666667%; height: 100%; max-height: 100%; }
+  .report-frame + .futuristic-frame { width: 58.3333333333%; max-width: 58.3333333333%; height: 100%; max-height: 100%; } }
 [id*="TEEMI-Bot-"] #face { fill: #fff; }
 [id*="TEEMI-Bot-"] #body, [id*="TEEMI-Bot-"] #rightHand, [id*="TEEMI-Bot-"] #leftHand { fill: #0ADA86; }
 [id*="TEEMI-Bot-"] #foot, [id*="TEEMI-Bot-"] #rightEye, [id*="TEEMI-Bot-"] #leftEye, [id*="TEEMI-Bot-"] #mouth, [id*="TEEMI-Bot-"] #tele, [id*="TEEMI-Bot-"] #bodyShadow { fill: #237DAF; }
