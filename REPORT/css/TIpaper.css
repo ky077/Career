@@ -212,7 +212,8 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-mark .mark-title { color: #4f4c3f; font-size: 1.2em; padding: 0 25px; }
 .table-mark .mark-content { font-size: .75em; color: #036eb8; text-align: left; line-height: 1.5; }
 
-@media print { .line-forPrint { margin-top: 12px; }
+@media print { .bg-white { width: 950px; height: 1344px; overflow: hidden; }
+  .line-forPrint { margin-top: 12px; }
   /*PAGE 1.*/
   .Holland-result { margin-top: 4px; }
   .Holland-graph { margin-top: 24px; margin-bottom: 20px; }
