@@ -139,7 +139,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .graph .bar .table-bar { border-collapse: collapse; border-spacing: 0; }
 .graph .bar .table-bar td { width: 130px !important; font-size: 0.9em; overflow: visible; }
 .graph .bar .table-bar .percent-bar { background-color: #666; display: inline-block; height: 8px; width: auto; position: relative; }
-.graph .bar .table-bar .percent-bar .percent-num { width: 1.8em; display: inline-block; font-size: 1em; font-weight: bold; position: absolute; top: -.25em; }
+.graph .bar .table-bar .percent-bar .percent-num { width: 1.8em; display: inline-block; font-size: 1em; font-weight: bold; position: absolute; top: -.5em; }
 .graph .bar.Humanities .percent-bar .percent-num, .graph .bar.LawPolitics .percent-bar .percent-num, .graph .bar.Art .percent-bar .percent-num, .graph .bar.Commerce .percent-bar .percent-num, .graph .bar.Services .percent-bar .percent-num, .graph .bar.Society .percent-bar .percent-num { left: -2em; }
 .graph .bar.Science .percent-bar .percent-num, .graph .bar.Engineering .percent-bar .percent-num, .graph .bar.PhysicalFitness .percent-bar .percent-num { right: -2em; }
 .graph .bar.Humanities .table-bar th, .graph .bar.LawPolitics .table-bar th, .graph .bar.Art .table-bar th, .graph .bar.Commerce .table-bar th, .graph .bar.Services .table-bar th, .graph .bar.Society .table-bar th { text-align: left; padding-left: 5px; }
