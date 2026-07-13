@@ -1,0 +1,719 @@
+//2026.07 修改 for 興趣 4.0
+@import "styles";
+$paper-name:"TI";
+.header {
+  @include headerStyle($paper-name);
+}
+.footer {
+  @include footerStyle($paper-name);
+}
+.Holland-result {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #4f4c3f;
+  margin-bottom: 10px;
+  .Holland-result-title {
+    float: left;
+  }
+  .Holland-result-content {
+    > .row {
+      > div {
+        width: calc((100% - 8em)/3);
+        padding-left: 0;
+        padding-right: 20px;
+      }
+    }
+  }
+  small { 
+    display: inline-block;
+		min-width: auto;
+    text-align: center;
+		font-family: Arial, Helvetica, "Helvetica Neue", "sans-serif";
+    font-size: .8em;
+		font-weight: 900;	
+  }
+  .RIASEC-title {
+    display: inline-block;
+    border-bottom: 1px solid #4f4c3f;
+    padding: 0px 10px;
+    &.R{ color:#0068b7; }
+		&.I{ color:#ea6097; }
+		&.A{ color:#92308d; }
+		&.S{ color:#007686; }
+		&.E{ color:#f39800; }
+		&.C{ color:#00a73c; }
+  }
+}
+.Holland-graph {
+  position: relative;
+  height: 1011px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image:url(../images/senior/#{$paper-name}/Holland.png);
+  background-size: 100% auto;
+  margin-left: -30px;
+  margin-right: -30px;
+  @media print {
+    margin-top: 15px;
+    margin-bottom: 29px;
+  }
+  .radar {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 50%;
+    width: 580px;
+    margin-left: -290px;
+    height: auto; ///*290px*/
+    margin-top: -145px;
+    #myChart {
+      position: relative;
+      z-index: 1000;
+      overflow: visible;
+    }
+    .RIASEC-circle {
+      position: absolute;
+      width: 114px;
+      height: 114px;
+      background-position: 0px 0px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      &.top3 {
+        background-position: 0px -150px;
+      }
+      &.R {
+        background-image: url(../images/senior/TI/Holland-R.png);
+        top: -114px + 4px;
+        left: 50%;
+        margin-left: -57px;
+      }
+      &.I {
+        background-image: url(../images/senior/TI/Holland-I.png);
+        top: -10px;
+        left: 404px;
+      }
+      &.A {
+        background-image: url(../images/senior/TI/Holland-A.png);
+        top: 188px;
+        left: 404px;
+      }
+      &.S {
+        background-image: url(../images/senior/TI/Holland-S.png);
+        bottom: -114px + 4px;
+        left: 50%;
+        margin-left: -57px;
+      }
+      &.E {
+        background-image: url(../images/senior/TI/Holland-E.png);
+        top: 188px;
+        left: 62px;
+      }
+      &.C {
+        background-image: url(../images/senior/TI/Holland-C.png);
+        top: -10px;
+        left: 62px;
+      }
+    }
+  }
+  .RIASEC-content {
+    position: absolute;
+    .icon {
+      font-size: 1.2em;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 0px;
+    }
+    .text {
+      text-align: justify;
+      height: 9em*1.4;
+      overflow: hidden;
+      font-size: .9em;
+    }
+    &.R {
+      width: 27%;
+      top: 10px + 10px + 10px;
+      left: 50%;
+      margin-left: -13%;
+      .icon {
+        color: #0068b7;
+      }
+    }
+    &.I {
+      width: 23%;
+      top: 10px + 120px;
+      right: 20px + 15px;
+      .icon {
+        color: #ea6097;
+      }
+    }
+    &.A {
+      width: 23%;
+      top: 585px;
+      right: 20px + 15px;
+      .icon {
+        color: #92308d;
+      }
+    }
+    &.S {
+      width: 27%;
+      top: 745px + 5px;
+      left: 50%;
+      margin-left: -13%;
+      .icon {
+        color: #007686;
+      }
+    }
+    &.E {
+      width: 23%;
+      top: 585px;
+      left: 20px + 15px;
+      .icon {
+        color: #f39800;
+      }
+    }
+    &.C {
+      width: 23%;
+      top: 10px + 120px;
+      left: 20px + 15px;
+      .icon {
+        color: #00a73c;
+      }
+    }
+  }
+}
+.graph {
+  position: relative;
+  height: 726px;
+  background-image:url(../images/senior/#{$paper-name}/graph.jpg);
+  background-position: center top;
+  margin-left: -30px;
+  margin-right: -30px;
+  .score {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    color: #FFF;
+    text-align: center;
+    padding-top: 36px;
+    font-size: 1.4em;
+    position: absolute;
+    /*set score position*/
+    &.Humanities {
+      left: 267px;
+      top: 446px;
+    }
+    &.LawPolitics {
+      left: 250px;
+      top: 358px;
+    }
+    &.Art {
+      left: 278px;
+      top: 264px;
+    }
+    &.Commerce {
+      left: 352px;
+      top: 196px;
+    }
+    &.Services {
+      left: 455px;
+      top: 177px;
+    }
+    &.Society {
+      left: 543px;
+      top: 208px;
+    }
+    &.Science {
+      left: 626px;
+      top: 362px;
+    }
+    &.Engineering {
+      left: 562px;
+      top: 504px;
+    }
+    &.PhysicalFitness {
+      left: 402px;
+      top: 548px;
+    }
+  }
+  $barWidth: 215px;
+  .bar {
+    width: $barWidth;
+    height: auto;
+    position: absolute;
+    background-repeat: no-repeat;
+    padding-bottom: 17px;
+    overflow: visible;
+    border-radius: 0;
+    &.Humanities, &.LawPolitics, &.Art, &.Commerce, &.Services, &.Society {
+      background-image: url(../images/senior/#{$paper-name}/percent-left.png);
+     	background-position: left bottom;
+			background-size: 140px 17px;
+      padding-left: 10px;
+    }
+    &.Science, &.Engineering, &.PhysicalFitness {
+      background-image:url(../images/senior/#{$paper-name}/percent-right.png);
+      background-position: right bottom;
+			background-size: 140px 17px;
+      padding-right: 10px;
+    }
+    /*set bar position*/
+    &.Humanities {
+      left: 240px;
+      top: 514px;
+      transform: translate(-100%, -50%);
+      margin-top: 17px;
+    }
+    &.LawPolitics {
+      left: 213px;
+      top: 400px;
+      transform: translate(-100%, -50%);
+      margin-left: 1em*2;
+      margin-top: 17px;
+    }
+    &.Art {
+      left: 245px;
+      top: 252px;
+      transform: translate(-100%, -50%);
+      margin-top: 17px;
+    }
+    &.Commerce {
+      left: 336px;
+      top: 161px;
+      transform: translate(-100%, -100%);
+      margin-top: 17px;
+    }
+    &.Services {
+      left: 492px;
+      top: 123px;
+      transform: translate(-50%, -100%);
+      margin-left: -1em*2;
+    }
+    &.Society {
+      left: 671px;
+      top: 135px;
+      transform: translate(-50%, -100%);
+      margin-left: 1em;
+    }
+    &.Science {
+      left: 725px;
+      top: 400px;
+      transform: translate(0, -50%);
+      margin-left: -1em*.25;
+    }
+    &.Engineering {
+      left: 641px;
+      top: 588px;
+      transform: translate(0, -50%);
+      margin-left: -1em*2;
+    }
+    &.PhysicalFitness {
+      left: 441px;
+      top: 643px;
+      transform: translate(-50%, 0);
+      margin-left: 1em*3.25;
+      margin-top: 5px;
+    }
+    .table-bar {
+      border-collapse: collapse;
+      border-spacing: 0;
+      th { 
+        //width: 75px; 
+      }
+      td { 
+        width: 130px !important;
+        font-size: 0.9em;
+        overflow: visible;
+      }
+      .percent-bar {
+        background-color: #666;
+        display: inline-block;
+        height: 8px;
+        width: auto;
+        position: relative;
+        .percent-num {
+          width: 1.8em;
+          display: inline-block;
+          font-size: 1em;
+          font-weight: bold;
+          position: absolute;
+          top: -.25em;
+        }
+      }
+    }
+    &.Humanities, &.LawPolitics, &.Art, &.Commerce, &.Services, &.Society {
+      .percent-bar {
+        .percent-num {
+          left: -2em;
+        }
+      }
+    }
+    &.Science, &.Engineering, &.PhysicalFitness {
+      .percent-bar {
+        .percent-num {
+          right: -2em;
+        }
+      }
+    }
+    &.Humanities, &.LawPolitics, &.Art, &.Commerce, &.Services, &.Society {
+      .table-bar {
+        th {
+          text-align: left;
+          padding-left: 5px;
+        }
+        td {
+          text-align: right;
+        }
+      }
+      .percent {}
+    }
+    &.Science, &.Engineering, &.PhysicalFitness {
+      .table-bar {
+        th {
+          text-align: right;
+          padding-right: 5px;
+        }
+        td {
+          text-align: left;
+        }
+      }
+    }
+    /*set bar-pre color*/
+    &.Humanities {
+      .percent-bar {
+        background-color: #b75830;
+      }
+    }
+    &.LawPolitics {
+      .percent-bar {
+        background-color: #fac44b;
+      }
+    }
+    &.Art {
+      .percent-bar {
+        background-color: #f08c42;
+      }
+    }
+    &.Commerce {
+      .percent-bar {
+        background-color: #eb6866;
+      }
+    }
+    &.Services {
+      .percent-bar {
+        background-color: #e96097;
+      }
+    }
+    &.Society {
+      .percent-bar {
+        background-color: #eb613b;
+      }
+    }
+    &.Science {
+      .percent-bar {
+        background-color: #0068b6;
+      }
+    }
+    &.Engineering {
+      .percent-bar {
+        background-color: #0092d7;
+      }
+    }
+    &.PhysicalFitness {
+      .percent-bar {
+        background-color: #92308d;
+      }
+    }
+  }
+}
+.favorite { 
+  .padding {
+    padding: 0;
+  }
+	.table-default > tbody > tr > th > .border > .block{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.img-types {
+		vertical-align: middle;
+		margin: 8px 20px 8px 0;
+	}
+}
+
+
+.table-suitable {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  thead {
+    tr {
+      th {
+        width: 40%;
+        .suitable-title {
+          background-color: #2fa172;
+          color: #fff;
+          font-size: 1.7em;
+          font-weight: bold;
+          border-radius: 0 5rem 5rem 0;
+          padding: 10px 0;
+          margin: 10px 0;
+          position: relative;
+          &::before {
+            content: "";
+            display: block;
+            width: 88px;
+            height: 88px;
+            border-radius: 100%;
+            background-color: #2fa172;
+            border: 5px solid #fff;
+            box-shadow: 1px 1px #2fa172, -1px -1px #2fa172, -1px 1px #2fa172, 1px -1px #2fa172;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, calc(-50% - 2px));
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+      td {
+        width: 60%;
+        .suitable-describe {
+          color: #007f6d;
+          padding: .5rem;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      th, td {
+        padding: .625rem;
+      }
+      .suitable-icon {
+        width: 10%;
+        background-color: #2fa172;
+        border-top-left-radius: 1.4rem;
+        border-bottom-left-radius: 1.4rem;
+        img {
+          max-width: 72px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      .suitable-subtitle {
+        background-color: #fff;
+        .suitable-disc {
+          color: #2fa172;
+          font-size: 1.4em;
+          font-weight: bold;
+        }
+        .suitable-cate {
+          color: #006a68;
+          font-size: 1.3em;
+          font-weight: bold;
+        }
+      }
+      .suitable-text {
+        background-color: #fff;
+        border-top-right-radius: 1.4rem;
+        border-bottom-right-radius: 1.4rem;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 3px;
+          height: 75%;
+          background-color: #2fa172;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-100%, -50%);
+        }
+      }
+    }
+  }
+}
+.suitable-H {
+  background-color: #e7f2e1;
+  border: 1px solid #2fa172;
+  border-radius: 1.4rem;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  .table-suitable {
+    thead {
+      tr {
+        th {
+          .suitable-title {
+            background-color: #2fa172;
+            &::before {
+              background-color: #2fa172;
+              box-shadow: 1px 1px #2fa172, -1px -1px #2fa172, -1px 1px #2fa172, 1px -1px #2fa172;
+              background-image: url("../images/senior/TI/suitable-H-icon.png");
+            }
+          }
+        }
+        td {
+          .suitable-describe {
+            color: #007f6d;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        .suitable-icon {
+          background-color: #2fa172;
+          position: relative;
+          > span {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #333;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -35%);
+          }
+        }
+        .suitable-subtitle {
+          .suitable-disc {
+            color: #2fa172;
+          }
+          .suitable-cate {
+            color: #006a68;
+          }
+        }
+        .suitable-text {
+          &::before {
+            background-color: #2fa172;
+          }
+        }
+      }
+    }
+  }
+}
+.suitable-L {
+  background-color: #fdf5eb;
+  border: 1px solid #ea5514;
+  border-radius: 1.4rem;
+  padding: 0 15px;
+  .table-suitable {
+    thead {
+      tr {
+        th {
+          .suitable-title {
+            background-color: #e97718;
+            &::before {
+              background-color: #e97718;
+              box-shadow: 1px 1px #e97718, -1px -1px #e97718, -1px 1px #e97718, 1px -1px #e97718;
+              background-image:
+                url("../images/senior/TI/suitable-L-icon.png");
+            }
+          }
+        }
+        td {
+          .suitable-describe {
+            color: #e97718;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        .suitable-icon {
+          background-color: #e97718;
+          > span {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            width: 2.1em;
+            height: 2.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+          }
+        }
+        .suitable-subtitle {
+          .suitable-disc {
+            color: #e97718;
+          }
+          .suitable-cate {
+            color: #7f4f21;
+          }
+        }
+        .suitable-text {
+          &::before {
+            background-color: #e97918;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.info {
+  .col-xs-12.col-sm-12.col-md-6.col-lg-6:first-child {
+    border-right: 1px dashed #4e4b3e;
+  }
+  .table-info {
+    border-spacing: 6px;
+    > tbody {
+      > tr {
+        > th {
+          > .border {
+						margin-right: 10px;
+            > .block {
+              padding: 10px;
+							font-size: 1.4em;
+            }
+          }
+        }
+        > td {
+          border-bottom: none;
+					font-size: 1.2em;
+					font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.bar {
+  &.green {
+    background-color: #00a8c6;
+  }
+  &.blue {
+    background-color: #3a88c9;
+  }
+  &.purple {
+    background-color: #9071b0;
+  }
+}
+.mark {
+  color: #007685;
+}
+.table-mark{
+	width: auto;
+	margin: 0 auto;
+	.mark-icon{
+		img{
+			width: 85px;
+			height: auto;	
+		}
+	}
+	.mark-title{
+		color: #4f4c3f;
+		font-size: 1.2em;
+		padding: 0 25px;
+	}
+	.mark-content{
+		font-size: .75em;
+		color: #036eb8;
+		text-align: left;
+		line-height: 1.5;
+
+	}
+}
+
+@import "TIpaper-print";

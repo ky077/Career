@@ -1,0 +1,779 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電腦化生涯興趣測驗報表 高中版</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="css/TIpaper.css">
+<link href="css/TIpaper-pad.css" rel="stylesheet" type="text/css" media="screen and (max-width: 992px)">
+<link rel="stylesheet" type="text/css" href="css/print-md.css">
+</head>
+
+<body>
+<div class="container">
+<!-- PAGE 1. START ------- ------- ------- ------- ------- ------- ------- -->
+<div class="bg-white">
+  <!-- 表頭 start -->
+  <div class="header block">
+    <img src="images/senior/logo.png" class="header-logo" alt="Nice Career 讚生涯" >
+    <img src="images/senior/TI/headerTitle.png" class="header-title" alt="電腦化生涯興趣測驗報表" >
+    <img src="images/senior/s-version.png" class="header-version" alt="高中版">
+  </div>
+  <!-- 表頭 end -->
+  <!-- 個人資料 start -->
+  <div class="data block">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3"> 姓名：蕭小孟 </div>
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"> 學校：私立師範高級實驗中學 </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4"> 施測日期：2026/8/20 </div>
+      </div>
+    </div>
+  </div>
+  <div class="data block">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3"> 性別：女 </div>
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"> 班級：9年10班 </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4"> 學號：89113016 </div>
+      </div>
+    </div>
+  </div>
+  <!-- 個人資料 end -->
+  <div class="section block">
+    <!-- Holland興趣類型分析 start -->
+    <h3><span>Holland興趣類型分析</span></h3>
+    <div class="Holland-result">
+      <div class="container-fluid">
+        <div class="Holland-result-title"> 你的興趣結果：</div>
+        <div class="Holland-result-content">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <small><i>1st</i></small><span class="RIASEC-title R">實用型：(R)</span>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <small><i>2nd</i></small><span class="RIASEC-title A">藝術型：(A)</span>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <small><i>3rd</i></small><span class="RIASEC-title C">事務型：(C)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Holland-graph">
+      <div class="radar">
+        <canvas id="myChart"></canvas>
+        <div class="RIASEC-circle R top3">
+        </div>
+        <div class="RIASEC-circle I">
+        </div>
+        <div class="RIASEC-circle A top3">
+        </div>
+        <div class="RIASEC-circle S">
+        </div>
+        <div class="RIASEC-circle E">
+        </div>
+        <div class="RIASEC-circle C top3">
+        </div>
+      </div>
+      <div class="RIASEC-content R">
+        <div class="icon">
+          <img src="images/senior/TI/icon-R.png" class="center-block">實用型<span class="hidden-md hidden-lg">(R)</span>
+        </div>
+        <div class="text"> 代表你喜歡動手解決問題，並按照訂定的規則，逐步製造出成品。對於操作機械、電子產品，或使用手工具有高度的興趣。也喜歡從事需要身體力行的活動，例如：參加運動競賽、飼養動物。相較於其他興趣類型，較喜歡從事接觸實際物體的工作。 </div>
+      </div>
+      <div class="RIASEC-content I">
+        <div class="icon">
+          <img src="images/senior/TI/icon-I.png" class="center-block">研究型<span class="hidden-md hidden-lg">(I)</span>
+        </div>
+        <div class="text"> 代表你喜歡以觀察、分析、推理等方式，找出事物的原理原則，並運用語言、符號、數字或概念來解決問題。也喜歡花時間去鑽研感興趣的議題，以及提出新的觀念與構想，例如：觀察自然界的變化、操弄小型實驗。相較於其他興趣類型，較喜歡從事抽象思考或探索性質的工作。</div>
+      </div>
+      <div class="RIASEC-content A">
+        <div class="icon">
+          <img src="images/senior/TI/icon-A.png" class="center-block">藝術型<span class="hidden-md hidden-lg">(A)</span>
+        </div>
+        <div class="text"> 代表你喜歡用文字、聲音、影像、色彩與動作等方式，進行藝術相關的創作活動，例如：繪畫、音樂演奏、舞蹈表演。也喜歡依循個人的審美觀或靈感，進行創意性的表達，例如：編寫劇本、演戲。相較於其他興趣類型，較喜歡從事運用直覺和想像來表達感受的工作。 </div>
+      </div>
+      <div class="RIASEC-content S">
+        <div class="icon">
+          <img src="images/senior/TI/icon-S.png" class="center-block">社會型<span class="hidden-md hidden-lg">(S)</span>
+        </div>
+        <div class="text"> 代表你喜歡與人群互動，重視人的需求感受。對於運用自身的知識教導他人有高度的興趣。也喜歡聆聽別人的困難，並主動提供關懷和協助。相較於其他興趣類型，更看重人際間的和諧，較喜歡從事與人相處或幫助他人的工作。 </div>
+      </div>
+      <div class="RIASEC-content E">
+        <div class="icon">
+          <img src="images/senior/TI/icon-E.png" class="center-block">企業型<span class="hidden-md hidden-lg">(E)</span>
+        </div>
+        <div class="text"> 代表你喜歡領導或遊說他人，以達到個人或團體的目標。對於獲得他人的注意、在團體中得到權力，或是改善現狀有高度的興趣，例如：帶領團隊參與競賽、爭取權益。相較於其他興趣類型，較喜歡從事影響他人或社會的工作。 </div>
+      </div>
+      <div class="RIASEC-content C">
+        <div class="icon">
+          <img src="images/senior/TI/icon-C.png" class="center-block">事務型<span class="hidden-md hidden-lg">(C)</span>
+        </div>
+        <div class="text"> 代表你喜歡執行具有明確標準與規則的任務。對於運用數字或機器進行計算、查核、排程、記錄，或聯繫等工作有高度的興趣，例如：校對數字、會議記錄。也喜歡將龐雜的資料統整為有條理的資訊。相較於其他興趣類型，較喜歡從事處理精確事務及規律性高的工作。 </div>
+      </div>
+    </div>
+    <!-- Holland興趣類型分析 end -->
+  </div>
+  <!-- 表尾 start -->
+  <div class="footer block visible-print-block"> 版權所有 ‧ 翻印必究<span class="version">v4.0</span>
+  </div>
+  <!-- 表尾 end -->
+</div>
+<!-- PAGE 1. END ------- ------- ------- ------- ------- ------- ------- -->
+
+<div style="page-break-after:always">
+</div>
+
+<!-- PAGE 2. START ------- ------- ------- ------- ------- ------- ------- -->
+<div class="bg-white">
+  <!-- 表頭 start -->
+  <div class="header block visible-print-block">
+    <img src="images/senior/logo.png" class="header-logo" alt="Nice Career 讚生涯" >
+    <img src="images/senior/TI/headerTitle.png" class="header-title" alt="電腦化生涯興趣測驗報表" >
+    <img src="images/senior/s-version.png" class="header-version" alt="高中版">
+  </div>
+  <!-- 表頭 end -->
+  <div class="section block">
+    <!-- 讚生涯興趣類型推薦與說明 start -->
+    <h3><span>讚生涯興趣類型推薦與說明</span></h3>
+    <div class="graph">
+      <!--人文 -->
+      <div class="score Humanities">
+        <div class="score-title hidden-md hidden-lg"> 人文 </div>
+        59 </div>
+      <div class="bar Humanities">
+        <table class="table-bar">
+          <tr>
+            <td><span class="percent-bar" style="width:54%;">
+              <div class="percent-num"> 54 </div>
+              </span></td>
+            <th>文史哲</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:63%;">
+              <div class="percent-num"> 63 </div>
+              </span></td>
+            <th>外國語言</th>
+          </tr>
+        </table>
+      </div>
+      <!--法政 -->
+      <div class="score LawPolitics">
+        <div class="score-title hidden-md hidden-lg"> 法政 </div>
+        27 </div>
+      <div class="bar LawPolitics">
+        <table class="table-bar">
+          <tr>
+            <td><span class="percent-bar" style="width:22%;">
+              <div class="percent-num"> 22 </div>
+              </span></td>
+            <th>政治</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:9%;">
+              <div class="percent-num"> 9 </div>
+              </span></td>
+            <th>法律</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:40%;">
+              <div class="percent-num"> 40 </div>
+              </span></td>
+            <th>經濟</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:37%;">
+              <div class="percent-num"> 37 </div>
+              </span></td>
+            <th>國際事務</th>
+          </tr>
+        </table>
+      </div>
+      <!--藝術 -->
+      <div class="score Art">
+        <div class="score-title hidden-md hidden-lg"> 藝術 </div>
+        63 </div>
+      <div class="bar Art">
+        <table class="table-bar">
+          <tr>
+            <td><span class="percent-bar" style="width:74%;">
+              <div class="percent-num"> 74 </div>
+              </span></td>
+            <th>美術</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:53%;">
+              <div class="percent-num"> 53 </div>
+              </span></td>
+            <th>設計</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:84%;">
+              <div class="percent-num"> 84 </div>
+              </span></td>
+            <th>表演</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:49%;">
+              <div class="percent-num"> 49 </div>
+              </span></td>
+            <th>視覺藝術</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:55%;">
+              <div class="percent-num"> 55 </div>
+              </span></td>
+            <th>傳播</th>
+          </tr>
+        </table>
+      </div>
+      <!--商業 -->
+      <div class="score Commerce">
+        <div class="score-title hidden-md hidden-lg"> 商業 </div>
+        33 </div>
+      <div class="bar Commerce">
+        <table class="table-bar">
+          <tr>
+            <td><span class="percent-bar" style="width:21%;">
+              <div class="percent-num"> 21 </div>
+              </span></td>
+            <th>經營管理</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:43%;">
+              <div class="percent-num"> 43 </div>
+              </span></td>
+            <th>商業行政</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:34%;">
+              <div class="percent-num"> 34 </div>
+              </span></td>
+            <th>貿易行銷</th>
+          </tr>
+        </table>
+      </div>
+      <!--服務 -->
+      <div class="score Services">
+        <div class="score-title hidden-md hidden-lg"> 服務 </div>
+        60 </div>
+      <div class="bar Services">
+        <table class="table-bar">
+          <tr>
+            <td><span class="percent-bar" style="width:51%;">
+              <div class="percent-num"> 51 </div>
+              </span></td>
+            <th>服飾美容</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:68%;">
+              <div class="percent-num"> 68 </div>
+              </span></td>
+            <th>餐飲</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:61%;">
+              <div class="percent-num"> 61 </div>
+              </span></td>
+            <th>觀光</th>
+          </tr>
+        </table>
+      </div>
+      <!--社會 -->
+      <div class="score Society">
+        <div class="score-title hidden-md hidden-lg"> 社會 </div>
+        60 </div>
+      <div class="bar Society">
+        <table class="table-bar">
+          <tr>
+            <td><span class="percent-bar" style="width:71%;">
+              <div class="percent-num"> 71 </div>
+              </span></td>
+            <th>助人照護</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:51%;">
+              <div class="percent-num"> 51 </div>
+              </span></td>
+            <th>心理</th>
+          </tr>
+          <tr>
+            <td><span class="percent-bar" style="width:59%;">
+              <div class="percent-num"> 59 </div>
+              </span></td>
+            <th>教育</th>
+          </tr>
+        </table>
+      </div>
+      <!--科學 -->
+      <div class="score Science">
+        <div class="score-title hidden-md hidden-lg"> 科學 </div>
+        32 </div>
+      <div class="bar Science">
+        <table class="table-bar">
+          <tr>
+            <th>生命科學</th>
+            <td><span class="percent-bar" style="width:29%;">
+              <div class="percent-num"> 29 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>環境科學</th>
+            <td><span class="percent-bar" style="width:45%;">
+              <div class="percent-num"> 45 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>物理</th>
+            <td><span class="percent-bar" style="width:10%;">
+              <div class="percent-num"> 10 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>化學</th>
+            <td><span class="percent-bar" style="width:12%;">
+              <div class="percent-num"> 12 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>數學</th>
+            <td><span class="percent-bar" style="width:24%;">
+              <div class="percent-num"> 24 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>農業科學</th>
+            <td><span class="percent-bar" style="width:43%;">
+              <div class="percent-num"> 43 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>醫藥</th>
+            <td><span class="percent-bar" style="width:60%;">
+              <div class="percent-num"> 60 </div>
+              </span></td>
+          </tr>
+        </table>
+      </div>
+      <!--工程 -->
+      <div class="score Engineering">
+        <div class="score-title hidden-md hidden-lg"> 工程 </div>
+        19 </div>
+      <div class="bar Engineering">
+        <table class="table-bar">
+          <tr>
+            <th>建築</th>
+            <td><span class="percent-bar" style="width:45%;">
+              <div class="percent-num"> 45 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>土木</th>
+            <td><span class="percent-bar" style="width:23%;">
+              <div class="percent-num"> 23 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>資訊</th>
+            <td><span class="percent-bar" style="width:19%;">
+              <div class="percent-num"> 19 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>電資</th>
+            <td><span class="percent-bar" style="width:12%;">
+              <div class="percent-num"> 12 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>機械</th>
+            <td><span class="percent-bar" style="width:7%;">
+              <div class="percent-num"> 7 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>化工</th>
+            <td><span class="percent-bar" style="width:9%;">
+              <div class="percent-num"> 9 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>材料</th>
+            <td><span class="percent-bar" style="width:18%;">
+              <div class="percent-num"> 18 </div>
+              </span></td>
+          </tr>
+        </table>
+      </div>
+      <!--體能 -->
+      <div class="score PhysicalFitness">
+        <div class="score-title hidden-md hidden-lg"> 體能 </div>
+        28 </div>
+      <div class="bar PhysicalFitness">
+        <table class="table-bar">
+          <tr>
+            <th>運動</th>
+            <td><span class="percent-bar" style="width:25%;">
+              <div class="percent-num"> 25 </div>
+              </span></td>
+          </tr>
+          <tr>
+            <th>安全</th>
+            <td><span class="percent-bar" style="width:31%;">
+              <div class="percent-num"> 31 </div>
+              </span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- 讚生涯興趣類型推薦與說明 end -->
+    <!-- 最喜好的三種興趣類型 start -->
+    <h3><span>最喜好的三種興趣類型</span></h3>
+    <div class="favorite">
+      <div class="padding">
+        <table class="table-default">
+          <thead>
+            <tr>
+              <th width="20%"><div class="border">
+                  <div class="block"> 興趣類型<span class="hidden-xs hidden-sm">名稱</span>
+                  </div>
+                </div></th>
+              <th><div class="border">
+                  <div class="block"> 敘述 </div>
+                </div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><div class="border">
+                  <div class="block">
+                    <img src="images/senior/TI/img-types/Art.png" class="img-types">藝術 </div>
+                </div></th>
+              <td>這個類型的分數越高，代表你越喜歡透過不同形式（如繪畫、音樂、舞蹈、戲劇等）表現自我創意且重視美感的展現，傾向從事想像或情感表達性質的工作，對於製作與設計影片、動畫以及商業產品感到興趣。</td>
+            </tr>
+						<tr>
+              <th><div class="border">
+                  <div class="block">
+                    <img src="images/senior/TI/img-types/Services.png" class="img-types">服務 </div>
+                </div></th>
+              <td>這個類型的分數越高，代表你樂於與人互動，喜歡協助他人滿足具體的需求，並使他人於互動過程中感到滿意。傾向從事美容服飾、餐飲與觀光等相關工作，如學習彩妝技術、服飾配件設計與製作餐點，或旅遊行程規劃、旅館運作管理等。</td>
+            </tr>
+            <tr>
+              <th><div class="border">
+                  <div class="block">
+                    <img src="images/senior/TI/img-types/Society.png" class="img-types">社會 </div>
+                </div></th>
+              <td>這個類型的分數越高，代表你對瞭解人類行為與心理狀態、幫助與服務他人等活動越感興趣。傾向從事關懷性質的工作，如進行心理實驗、照顧弱勢族群、幫助他人解決心理問題、指導他人學習與關心當前教育問題。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+    </div>
+    <!-- 最喜好的三種興趣類型 end -->
+  </div>
+  <!-- 表尾 start -->
+  <div class="footer block visible-print-block"> 版權所有 ‧ 翻印必究<span class="version">v4.0</span>
+  </div>
+  <!-- 表尾 end -->
+</div>
+<!-- PAGE 2. END ------- ------- ------- ------- ------- ------- ------- -->
+
+<div style="page-break-after:always">
+</div>
+
+<!-- PAGE 3. START ------- ------- ------- ------- ------- ------- ------- -->
+<div class="bg-white">
+<!-- 表頭 start -->
+<div class="header block visible-print-block">
+  <img src="images/senior/logo.png" class="header-logo" alt="Nice Career 讚生涯" >
+  <img src="images/senior/TI/headerTitle.png" class="header-title" alt="電腦化生涯興趣測驗報表" >
+  <img src="images/senior/s-version.png" class="header-version" alt="高中版">
+</div>
+<!-- 表頭 end -->
+<div class="section block">
+  <!-- 學類推薦與說明 start -->
+  <h3><span>學類推薦與說明</span></h3>
+  <div class="padding">
+    <!-- 高度偏好學類 start -->
+    <div class="suitable-H">
+      <table class="table-suitable">
+        <thead>
+          <tr>
+            <th colspan="2"><div class="suitable-title">高度偏好學類</div></th>
+            <td><div class="suitable-describe">這些學類的學習內容與環境，較符合你目前的興趣投入方向與學習偏好，未來學習的動機與投入感可能較高。</div></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="suitable-icon"><img src="images/senior/TI/1.png" alt="排序1"/>
+              <span>1</span>
+            </th>
+            <td class="suitable-subtitle"><div class="suitable-disc">藝術學門</div>
+              <div class="suitable-cate">視覺藝術學類</div></td>
+            <td class="suitable-text">在此學類可以學習藝術與資訊科技結合的方法，透過多媒體技術整合聲音、影像與動畫，以呈現情節畫面與視覺效果。未來可從事電視影劇、電影實務創作與廣電研究之工作。</td>
+          </tr>
+          <tr>
+            <th class="suitable-icon"> <img src="images/senior/TI/2.png" alt="排序2"/><span>2</span>
+            </th>
+            <td class="suitable-subtitle"><div class="suitable-disc">民生學門</div>
+              <div class="suitable-cate">運動休閒及休閒管理學類</div></td>
+            <td class="suitable-text">在此學類可學習公共關係、行銷公關理論、人力資源管理等知識。此學類多數學生對於創意思考、設計行銷策略、溝通與管理危機議題等感興趣。未來可從事公關人員、廣告創意與媒體企劃等。</td>
+          </tr>
+          <tr>
+            <th class="suitable-icon"> <img src="images/senior/TI/3.png" alt="排序3"/><span>3</span></th>
+            <td class="suitable-subtitle"><div class="suitable-disc">商業學門</div>
+              <div class="suitable-cate">貿易學類</div></td>
+            <td class="suitable-text">在此學類可學習營養學、照顧服務、設計與製作養生膳食以及家庭管理等知能，此學類多數學生喜歡規劃家庭生活、居家照顧等服務與照護他人的活動。未來可從事專業管家、家政教師、安養照護員。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- 高度偏好學類 end -->
+    <!-- 目前低偏好學類 start -->
+    <div class="suitable-L">
+      <table class="table-suitable">
+        <thead>
+          <tr>
+            <th colspan="2"><div class="suitable-title">目前低偏好學類</div></th>
+            <td><div class="suitable-describe">這些學類的學習內容與環境，較符合你目前的興趣投入方向與學習偏好，未來學習的動機與投入感可能較高。</div></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="suitable-icon"><span>1</span></th>
+            <td class="suitable-subtitle"><div class="suitable-disc">自然科學學門</div>
+              <div class="suitable-cate">物理學類</div></td>
+            <td class="suitable-text">在此學類中可以學習到家庭教育、課程設計、文教事業、多元文化教育、比較教育等教育相關知識。此學類多數學生喜歡與人的互動、指導他人學習，且重視學習、輔導理論在教學現場的應用性。</td>
+          </tr>
+          <tr>
+            <th class="suitable-icon"><span>2</span></th>
+            <td class="suitable-subtitle"><div class="suitable-disc">民生學門</div>
+              <div class="suitable-cate">生活應用科學學類</div></td>
+            <td class="suitable-text">在此學類可以學習幼兒教育的專業知識與技能，如幼兒課程設計與教學、兒童身心發展、學齡前教育行政等，此學類學生對於與兒童相處，協助他們學習生活常規等感興趣。</td>
+          </tr>
+          <tr>
+            <th class="suitable-icon"><span>3</span></th>
+            <td class="suitable-subtitle"><div class="suitable-disc">建築及都市規劃學門</div>
+              <div class="suitable-cate">景觀設計學類</div></td>
+            <td class="suitable-text">在此學類可以學習特殊教育相關專業知能與態度，透過瞭解資優生、身心障礙生等特殊兒童的需求，研發適用教材與輔具。此學類學生對特殊教育及相關輔導工作的推展感興趣。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- 目前低偏好學類 end -->
+  </div>
+  <!-- 學類推薦與說明 end -->
+  
+  <!-- 相關測驗資訊 start -->
+  <h3><span>相關測驗資訊</span></h3>
+  <div class="padding">
+    <div class="info">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <table class="table-default table-info">
+            <tbody>
+              <tr>
+                <th width="40%"><div class="border">
+                    <div class="block"> 作答速度 </div>
+                  </div></th>
+                <td width="20%" align="center"><div class="people">
+                  </div>
+                  <div class="bar green">
+                  </div>
+                  稍快</td>
+                <td width="20%" align="center"><div class="people">
+                    <img src="images/senior/people.png">
+                  </div>
+                  <div class="bar blue">
+                  </div>
+                  適中</td>
+                <td width="20%" align="center"><div class="people">
+                  </div>
+                  <div class="bar purple">
+                  </div>
+                  稍慢</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <table class="table-default table-info">
+            <tbody>
+              <tr>
+                <th width="40%"><div class="border">
+                    <div class="block"> 分化指標 </div>
+                  </div></th>
+                <td width="20%" align="center"><div class="people">
+                  </div>
+                  <div class="bar green">
+                  </div>
+                  不明顯</td>
+                <td width="20%" align="center"><div class="people">
+                    <img src="images/senior/people.png">
+                  </div>
+                  <div class="bar blue">
+                  </div>
+                  一般</td>
+                <td width="20%" align="center"><div class="people">
+                  </div>
+                  <div class="bar purple">
+                  </div>
+                  明顯</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 相關測驗資訊 end -->
+  <!-- 備註說明 start -->
+  <div class="mark">
+    <table class="table-mark">
+      <tbody>
+        <tr>
+          <th class="mark-icon"><img src="images/senior/trumpet.png" class="img-responsive" alt=""/></th>
+          <th class="mark-title">溫馨提醒</th>
+          <td class="mark-content">測驗結果僅供參考，幫助你更了解自己。<br>
+            選擇未來方向時，請一起考量自己的能力、興趣、價值觀與未來發展。<br>
+            有疑問時，歡迎和老師、家長或信任的人聊聊，一起找到更適合你的方向！</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- 備註說明 end -->
+  <!-- 表尾 start -->
+  <div class="footer block"> 版權所有 ‧ 翻印必究<span class="version">v4.0</span>
+  </div>
+  <!-- 表尾 end -->
+  <!-- PAGE 3. END ------- ------- ------- ------- ------- ------- ------- -->
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="widgets/Chart.js-master/dist/Chart.min.js"></script>
+<script>
+var ctx = document.getElementById("myChart");
+Chart.defaults.global.defaultFontFamily = 'Arial, Helvetica, sans-serif,  "Microsoft JhengHei"';
+Chart.defaults.global.defaultFontSize = 15;
+Chart.defaults.global.defaultFontColor = "rgba(255,255,255,0.0)";//轉pdf時，會顯示，故透明
+var myChart = new Chart(ctx, {
+	type: 'radar',
+	data: {
+		//labels: ["實用型（R）", "研究型（I）", "藝術型（A）", "社會型（S）", "企業型（E）", "事務型（C）"],
+		labels: ["", "", "", "", "", ""],	//轉pdf時，會顯示，故空白	
+		datasets: [{
+			data: [80, 40, 80, 20, 40, 60],
+			label:	"Holland興趣類型分析",
+			backgroundColor:	"rgba(0,0,0,0.2)",
+			borderColor:	"rgba(0,0,0,0.0)",
+			borderWidth:	3,
+			pointBackgroundColor:	["#00afec", "#ea6097", "#92308d", "#007686", "#fabe00", "#00a73c"],
+			pointBorderColor:	["#00afec", "#ea6097", "#92308d", "#007686", "#fabe00", "#00a73c"],
+			pointBorderWidth:	10,
+		}]
+	},
+	options: {
+		title: {
+			display: false,
+		},
+		legend: {
+			display: false,
+		},
+		scale: {
+			display: true,	
+			pointLabels: 
+			{
+			  fontSize: 0,
+			  fontColor: "rgba(255,255,255,0.0)",//轉pdf時，會顯示，故透明
+			},
+			angleLines: false,
+			gridLines: {
+                color: '#9fa0a0',
+            },
+			ticks: {
+                beginAtZero: true,
+				max: 100,
+				min: 0,
+				stepSize: 20,
+				fontSize: 0,
+				backdropColor: "transparent", 
+				
+            },
+		},
+		tooltips: true,
+		hover: {
+		  animationDuration: 1
+		},
+		animation: {
+			duration: 1,
+			onComplete: function() {
+				var chartInstance = this.chart,
+				  	ctx = chartInstance.ctx;
+		
+				ctx.font = Chart.helpers.fontString(24, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+				ctx.fillStyle = '#333';
+				ctx.textAlign = 'center';
+				ctx.textBaseline = 'center';
+		
+				this.data.datasets.forEach(function(dataset, i) {
+						var meta = chartInstance.controller.getDatasetMeta(i);
+				 		meta.data.forEach(function(bar, index) {
+							var data = dataset.data[index];
+							switch (index) {
+								case 0: //R
+									if(data<45){
+										ctx.fillText(data, bar._model.x, bar._model.y-5);
+									}else{
+										ctx.fillText(data, bar._model.x, bar._model.y+32);
+									}
+									break;
+								case 1://I
+									if(data<45){
+										ctx.fillText(data, bar._model.x+25, bar._model.y+15);
+									}else{
+										ctx.fillText(data, bar._model.x-30, bar._model.y+15);
+									}
+									break;
+								case 2://A
+									if(data<45){
+										ctx.fillText(data, bar._model.x+25, bar._model.y+15);
+									}else{
+										ctx.fillText(data, bar._model.x-30, bar._model.y+15);
+									}
+									break;
+								case 3://s
+									if(data<45){
+										ctx.fillText(data, bar._model.x, bar._model.y+32);
+									}else{
+										ctx.fillText(data, bar._model.x, bar._model.y-5);
+									}
+									break;
+								case 4://E
+									if(data<45){
+										ctx.fillText(data, bar._model.x-25, bar._model.y+15);
+									}else{
+										ctx.fillText(data, bar._model.x+30, bar._model.y+15);
+									}
+									break;
+								case 5://C
+									if(data<45){
+										ctx.fillText(data, bar._model.x-25, bar._model.y+15);
+									}else{
+										ctx.fillText(data, bar._model.x+30, bar._model.y+15);	
+									}
+									break;
+							}
+				  		});
+				});
+			}
+		},
+	},
+	
+});
+</script>
+</body>
+</html>
