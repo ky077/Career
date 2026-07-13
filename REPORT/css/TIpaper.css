@@ -171,8 +171,8 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-suitable tbody tr .suitable-icon { width: 10%; background-color: #2fa172; border-top-left-radius: 1.4rem; border-bottom-left-radius: 1.4rem; }
 .table-suitable tbody tr .suitable-icon img { max-width: 72px; display: block; margin: 0 auto; }
 .table-suitable tbody tr .suitable-subtitle { background-color: #fff; }
-.table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #2fa172; font-size: 1.4em; font-weight: bold; }
-.table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #006a68; font-size: 1.3em; font-weight: bold; }
+.table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #2fa172; font-size: 1.3em; font-weight: bold; }
+.table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #006a68; font-size: 1.2em; font-weight: bold; }
 .table-suitable tbody tr .suitable-text { background-color: #fff; border-top-right-radius: 1.4rem; border-bottom-right-radius: 1.4rem; position: relative; }
 .table-suitable tbody tr .suitable-text::before { content: ""; display: block; width: 3px; height: 75%; background-color: #2fa172; position: absolute; top: 50%; left: 0; transform: translate(-100%, -50%); }
 
