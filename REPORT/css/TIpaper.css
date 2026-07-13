@@ -85,7 +85,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .Holland-result .RIASEC-title.E { color: #f39800; }
 .Holland-result .RIASEC-title.C { color: #00a73c; }
 
-.Holland-graph { position: relative; height: 1011px; background-repeat: no-repeat; background-position: center center; background-image: url(../images/senior/TI/Holland.png); background-size: 100% auto; margin-left: -30px; margin-right: -30px; }
+.Holland-graph { position: relative; width: calc(100% + 30px + 30px); height: 0; padding-bottom: calc(1011/974*(100% + 30px + 30px)); background-repeat: no-repeat; background-position: center center; background-image: url(../images/senior/TI/Holland.png); background-size: 100% auto; margin-left: -30px; margin-right: -30px; margin-top: 20px; }
 @media print { .Holland-graph { margin-top: 15px; margin-bottom: 29px; } }
 .Holland-graph .radar { position: absolute; top: calc(50% - 10px); left: 50%; width: 580px; margin-left: -290px; height: auto; margin-top: -145px; }
 .Holland-graph .radar #myChart { position: relative; z-index: 1000; overflow: visible; }
@@ -100,20 +100,20 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .Holland-graph .RIASEC-content { position: absolute; }
 .Holland-graph .RIASEC-content .icon { font-size: 1.2em; text-align: center; font-weight: 700; margin-bottom: 0px; }
 .Holland-graph .RIASEC-content .text { text-align: justify; height: 12.6em; overflow: hidden; font-size: .9em; }
-.Holland-graph .RIASEC-content.R { width: 27%; top: 30px; left: 50%; margin-left: -13%; }
+.Holland-graph .RIASEC-content.R { width: 27%; top: 20px; left: 50%; margin-left: -13%; }
 .Holland-graph .RIASEC-content.R .icon { color: #0068b7; }
-.Holland-graph .RIASEC-content.I { width: 23%; top: 130px; right: 35px; }
+.Holland-graph .RIASEC-content.I { width: 22%; top: 130px; right: 35px; }
 .Holland-graph .RIASEC-content.I .icon { color: #ea6097; }
-.Holland-graph .RIASEC-content.A { width: 23%; top: 585px; right: 35px; }
+.Holland-graph .RIASEC-content.A { width: 22%; top: 585px; right: 35px; }
 .Holland-graph .RIASEC-content.A .icon { color: #92308d; }
-.Holland-graph .RIASEC-content.S { width: 27%; top: 750px; left: 50%; margin-left: -13%; }
+.Holland-graph .RIASEC-content.S { width: 27%; top: 745px; left: 50%; margin-left: -13%; }
 .Holland-graph .RIASEC-content.S .icon { color: #007686; }
-.Holland-graph .RIASEC-content.E { width: 23%; top: 585px; left: 35px; }
+.Holland-graph .RIASEC-content.E { width: 22%; top: 585px; left: 35px; }
 .Holland-graph .RIASEC-content.E .icon { color: #f39800; }
-.Holland-graph .RIASEC-content.C { width: 23%; top: 130px; left: 35px; }
+.Holland-graph .RIASEC-content.C { width: 22%; top: 130px; left: 35px; }
 .Holland-graph .RIASEC-content.C .icon { color: #00a73c; }
 
-.graph { position: relative; height: 726px; background-image: url(../images/senior/TI/graph.jpg); background-position: center top; margin-left: -30px; margin-right: -30px; }
+.graph { position: relative; width: calc(100% + 30px + 30px); height: 0; padding-bottom: calc(726/974 * (100% + 30px + 30px)); background-image: url(../images/senior/TI/graph.jpg); background-position: center top; margin-left: -30px; margin-right: -30px; }
 .graph .score { width: 76px; height: 76px; border-radius: 50%; color: #FFF; text-align: center; padding-top: 36px; font-size: 1.4em; position: absolute; /*set score position*/ }
 .graph .score.Humanities { left: 267px; top: 446px; }
 .graph .score.LawPolitics { left: 250px; top: 358px; }
@@ -156,6 +156,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .graph .bar.Engineering .percent-bar { background-color: #0092d7; }
 .graph .bar.PhysicalFitness .percent-bar { background-color: #92308d; }
 
+.favorite { padding-bottom: 20px; }
 .favorite .padding { padding: 0; }
 .favorite .table-default > tbody > tr > th > .border > .block { padding-left: 0; padding-right: 0; }
 .favorite .img-types { vertical-align: middle; margin: 8px 20px 8px 0; }
@@ -166,7 +167,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-suitable thead tr th .suitable-title::before { content: ""; display: block; width: 88px; height: 88px; border-radius: 100%; background-color: #2fa172; border: 5px solid #fff; box-shadow: 1px 1px #2fa172, -1px -1px #2fa172, -1px 1px #2fa172, 1px -1px #2fa172; position: absolute; top: 50%; left: 0; transform: translate(-50%, calc(-50% - 2px)); background-position: center; background-repeat: no-repeat; background-size: 100%; }
 .table-suitable thead tr td { width: 60%; }
 .table-suitable thead tr td .suitable-describe { color: #007f6d; padding: .5rem; }
-.table-suitable tbody tr th, .table-suitable tbody tr td { padding: .625rem; }
+.table-suitable tbody tr th, .table-suitable tbody tr td { padding: 10px; }
 .table-suitable tbody tr .suitable-icon { width: 10%; background-color: #2fa172; border-top-left-radius: 1.4rem; border-bottom-left-radius: 1.4rem; }
 .table-suitable tbody tr .suitable-icon img { max-width: 72px; display: block; margin: 0 auto; }
 .table-suitable tbody tr .suitable-subtitle { background-color: #fff; }

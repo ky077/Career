@@ -78,7 +78,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .Holland-result .RIASEC-title.E { color: #f39800; }
 .Holland-result .RIASEC-title.C { color: #00a73c; }
 
-.Holland-graph { position: relative; height: auto; background-repeat: no-repeat; background-position: center center; background-image: none; }
+.Holland-graph { position: relative; width: 100%; height: auto; padding-bottom: 0; background-repeat: no-repeat; background-position: center center; background-image: none; margin-left: auto; margin-right: auto; margin-top: 0px; }
 .Holland-graph .radar { position: relative; top: 0; left: 0; width: 100%; margin-left: 0px; height: auto; margin-top: 63px; margin-bottom: 63px; }
 .Holland-graph .radar .RIASEC-circle { position: absolute; width: 48px; height: 48px; background-position: 0px 0px; background-repeat: no-repeat; background-size: 100% auto; }
 .Holland-graph .radar .RIASEC-circle.top3 { background-position: 0px -63px; }
@@ -104,7 +104,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .Holland-graph .RIASEC-content.C { width: 100%; top: 0px; left: 0px; }
 .Holland-graph .RIASEC-content.C .icon { color: #00a73c; }
 
-.graph { position: relative; height: auto; background-image: none; zoom: 1; padding-left: 15px; padding-right: 15px; padding-top: 15px; }
+.graph { position: relative; width: 100%; height: auto; padding-bottom: 0; background-image: none; margin-left: auto; margin-right: auto; }
 .graph:before, .graph:after { content: ""; display: table; }
 .graph:after { clear: both; }
 .graph .score { width: 76px; height: 76px; border-radius: 50%; color: #FFF; text-align: center; padding-top: 0px; font-size: 1.4em; position: relative; /*set score position*/ }
@@ -152,6 +152,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .graph .bar.Engineering .percent-bar { background-color: #0092d7; }
 .graph .bar.PhysicalFitness .percent-bar { background-color: #92308d; }
 
+.favorite { padding-bottom: 20px; }
 .favorite .padding { padding: 0; }
 .favorite .table-default > tbody > tr > th > .border > .block { padding-left: 0; padding-right: 0; }
 .favorite .img-types { vertical-align: middle; margin: 8px auto 8px auto; }
@@ -166,10 +167,10 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-suitable thead tr td .suitable-describe { color: #007f6d; padding: .5rem; }
 .table-suitable tbody { display: block; }
 .table-suitable tbody tr { display: block; background-color: #fff; border-radius: 1.4rem; }
-.table-suitable tbody tr th, .table-suitable tbody tr td { display: block; padding: .625rem; }
-.table-suitable tbody tr .suitable-icon { display: inline-block; width: 92px; height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + .625rem*2); background-color: #2fa172; border-top-left-radius: 1.4rem; border-bottom-left-radius: 0; }
+.table-suitable tbody tr th, .table-suitable tbody tr td { display: block; padding: 10px; }
+.table-suitable tbody tr .suitable-icon { display: inline-block; width: 92px; height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + 10px*2); background-color: #2fa172; border-top-left-radius: 1.4rem; border-bottom-left-radius: 0; }
 .table-suitable tbody tr .suitable-icon img { max-width: 72px; display: block; margin: 0 auto; }
-.table-suitable tbody tr .suitable-subtitle { display: inline-block; width: calc(100% - ( 72px + 20px) - 8px); height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + .625rem*2); background-color: #fff; border-top-right-radius: 1.4rem; }
+.table-suitable tbody tr .suitable-subtitle { display: inline-block; width: calc(100% - ( 72px + 20px) - 8px); height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + 10px*2); background-color: #fff; border-top-right-radius: 1.4rem; }
 .table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #2fa172; font-size: 1.4em; font-weight: bold; }
 .table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #006a68; font-size: 1.3em; font-weight: bold; }
 .table-suitable tbody tr .suitable-text { width: 100%; background-color: #fff; border-top-right-radius: 0; border-bottom-right-radius: 1.4rem; border-bottom-left-radius: 1.4rem; margin-bottom: 10px; position: relative; }

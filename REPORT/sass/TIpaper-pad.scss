@@ -47,11 +47,15 @@ $paper-name:"TI";
 }
 .Holland-graph{ 
 	position: relative;
+	width: 100%;
 	height: auto;
+	padding-bottom: 0;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: none;
-	
+	margin-left: auto;
+  margin-right: auto;
+	margin-top: 0px;
 	.radar{
 		position: relative;
 		top: 0;
@@ -171,14 +175,14 @@ $paper-name:"TI";
 		}
 	}
 }
-.graph{
+.graph{ 
 	position: relative;
+	width: 100%;
 	height: auto;
+	padding-bottom: 0;
 	background-image: none;
-	zoom: 1;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
+	margin-left: auto;
+  margin-right: auto;
 	&:before, &:after {
 		content:"";
 		display:table;
@@ -465,6 +469,7 @@ $paper-name:"TI";
   }
 }
 .favorite {
+	padding-bottom: 20px;
   .padding {
     padding: 0;
   }
@@ -535,12 +540,12 @@ $paper-name:"TI";
     	border-radius: 1.4rem;
       th, td {
 				display: block;
-        padding: .625rem;
+        padding: 10px;
       }
       .suitable-icon {
 				display: inline-block;
         width: 72px + 20px;
-				height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + .625rem*2);
+				height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + 10px*2);
         background-color: #2fa172;
         border-top-left-radius: 1.4rem;
         border-bottom-left-radius: 0;
@@ -553,7 +558,7 @@ $paper-name:"TI";
       .suitable-subtitle {
 				display: inline-block;
 				width: calc(100% - ( 72px + 20px) - 8px);
-				height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + .625rem*2);
+				height: calc(1.4em*1.42857143 + 1.3em*1.42857143 + 10px*2);
         background-color: #fff;
 				border-top-right-radius: 1.4rem;
         .suitable-disc {
