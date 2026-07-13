@@ -213,8 +213,5 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-mark .mark-title { color: #4f4c3f; font-size: 1.2em; padding: 0 25px; }
 .table-mark .mark-content { font-size: .75em; color: #036eb8; text-align: left; line-height: 1.5; }
 
-@media print { .bg-white { width: 950px; height: 1344px; overflow: hidden; }
-  /*PAGE 1.*/
-  /*PAGE 2.*/
-  /*PAGE 3.*/
-  /*.table-suitable{ 	td{ 		.hidden-xs.hidden-sm{ 			display: block !important; 		} 	} }*/ }
+@media print { .bg-white { width: 950px; height: 1344px; overflow: hidden; position: relative; }
+  .bg-white .footer { position: absolute; bottom: 0; left: 0; right: 0; width: 100%; } }

@@ -3,35 +3,22 @@
 	width: 950px;
 	height: 1344px;
 	overflow: hidden;
-}
-.line-forPrint{
-	//margin-top:12px;
-}	
-/*PAGE 1.*/	
-.Holland-result{
-	//margin-top:4px;
-	
-}
-.Holland-graph{
-	//margin-top:24px;
-	//margin-bottom:20px;
-}	
-
-/*PAGE 2.*/	
-.graph{
-	//margin-top:20px;
-	//margin-bottom:30px;
-}
-.favorite{
-	//margin-bottom:35px;
-}
-/*PAGE 3.*/	
-/*.table-suitable{
-	td{
-		.hidden-xs.hidden-sm{
-			display: block !important;
-		}
+	position: relative;
+	.footer{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
 	}
-}*/
+}
+
+///*PAGE 1.*/	
+
+
+///*PAGE 2.*/	
+
+///*PAGE 3.*/	
+
 }
 
