@@ -218,7 +218,5 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
   .Holland-result { margin-top: 4px; }
   .Holland-graph { margin-top: 24px; margin-bottom: 20px; }
   /*PAGE 2.*/
-  .graph { margin-top: 20px; margin-bottom: 30px; }
-  .favorite { margin-bottom: 35px; }
   /*PAGE 3.*/
-  .table-suitable td .hidden-xs.hidden-sm { display: block !important; } }
+  /*.table-suitable{ 	td{ 		.hidden-xs.hidden-sm{ 			display: block !important; 		} 	} }*/ }
