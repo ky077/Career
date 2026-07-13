@@ -78,7 +78,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .Holland-result .RIASEC-title.E { color: #f39800; }
 .Holland-result .RIASEC-title.C { color: #00a73c; }
 
-.Holland-graph { position: relative; width: 100%; height: auto; padding-bottom: 0; background-repeat: no-repeat; background-position: center center; background-image: none; margin-left: auto; margin-right: auto; margin-top: 0px; }
+.Holland-graph { position: relative; width: 100%; height: auto; padding-bottom: 0; background-repeat: no-repeat; background-position: center center; background-image: none; margin-left: auto; margin-right: auto; }
 .Holland-graph .radar { position: relative; top: 0; left: 0; width: 100%; margin-left: 0px; height: auto; margin-top: 63px; margin-bottom: 63px; }
 .Holland-graph .radar .RIASEC-circle { position: absolute; width: 48px; height: 48px; background-position: 0px 0px; background-repeat: no-repeat; background-size: 100% auto; }
 .Holland-graph .radar .RIASEC-circle.top3 { background-position: 0px -63px; }
