@@ -133,7 +133,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .graph .bar.Commerce { left: 336px; top: 161px; transform: translate(-100%, -100%); margin-top: 17px; }
 .graph .bar.Services { left: 492px; top: 123px; transform: translate(-50%, -100%); margin-left: -2em; }
 .graph .bar.Society { left: 671px; top: 135px; transform: translate(-50%, -100%); margin-left: 1em; }
-.graph .bar.Science { left: 725px; top: 400px; transform: translate(0, -50%); margin-left: -0.25em; }
+.graph .bar.Science { left: 715px; top: 400px; transform: translate(0, -50%); margin-left: -0.25em; }
 .graph .bar.Engineering { left: 641px; top: 588px; transform: translate(0, -50%); margin-left: -2em; }
 .graph .bar.PhysicalFitness { left: 441px; top: 643px; transform: translate(-50%, 0); margin-left: 3.25em; margin-top: 5px; }
 .graph .bar .table-bar { border-collapse: collapse; border-spacing: 0; }
