@@ -84,6 +84,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .Holland-result .RIASEC-title.S { color: #007686; }
 .Holland-result .RIASEC-title.E { color: #f39800; }
 .Holland-result .RIASEC-title.C { color: #00a73c; }
+.Holland-result .RIASEC-title .ms-1 { margin-left: .25em; }
 
 .Holland-graph { position: relative; width: calc(100% + 30px + 30px); height: 0; padding-bottom: calc(1011/974*(100% + 30px + 30px)); background-repeat: no-repeat; background-position: center center; background-image: url(../images/senior/TI/Holland.png); background-size: 100% auto; margin-left: -30px; margin-right: -30px; }
 @media print { .Holland-graph { margin-top: 15px; margin-bottom: 29px; } }
