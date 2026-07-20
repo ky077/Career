@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/template-logged-2018.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 高中版</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<script src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/table-color.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/TI.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-modal.min.css">
+<script>
+$(function(){
+	$(".aptitude").addClass('active');
+});
+</script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="wrapper">
+    <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="../index.html" class="headIcon home"  alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right">
+      <span class="sexybutton brown accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton brown"><span><span>登出</span></span></a>
+    </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="wrapper">
+    <div class="welcome">
+      XX老師，歡迎光臨"生涯測驗系統"！
+    </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="wrapper clearfix">
+    <!-- nav START -->
+    <div class="nav clearfix">
+      <ul>
+        <li class="nav-item TA aptitude"><a href="NoteIntroduce.html">適性化生涯性向測驗</a></li>
+        <li class="nav-item TI interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+        <li class="nav-item WV workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+        <li class="nav-float SD studentData"><a href="../StudentData/StudentNotes.html">學生資料庫</a></li>
+        <li class="nav-float TEST"><a href="">學生測驗</a></li>
+      </ul>
+    </div>
+    <!-- nav END -->
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-top START -->
+<div class="main-top">
+  <div class="wrapper">
+  </div>
+</div>
+<!-- main-top START --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="wrapper">
+    <div class="content">
+      <!-- InstanceBeginEditable name="EditRegion-main" -->
+      <ul class="menu">
+        <li class="m_1"><a href="NoteIntroduce.html">測驗簡介</a></li>
+        <li class="m_2"><a href="NoteGuide.html">測驗指南</a></li>
+        <li class="m_3"><a href="Online.html">線上體驗</a></li>
+        <li class="m_4"><a href="Apply.html">申請條件</a></li>
+        <li class="m_5 active"><a href="TestNotes.html">登記測驗</a></li>
+        <li class="m_6"><a href="ReportNote.html">學生報表</a></li>
+        <li class="m_7"><a href="#">指導手冊</a></li>
+      </ul>
+      <div class="content_position">
+        <!-- -->
+        <div class="subMenu sub5">
+          <div class="subMenu-arrow">
+          </div>
+          <div class="subMenu-bg">
+            <span><span><a href="TestNotes.html">登記測驗須知</a>│<a href="TestBookin.html">登記場次</a>│<a href="TestList.html" class="active">查詢與修改</a>│<a href="ResitList.html">登記補測</a></span></span>
+          </div>
+        </div>
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt>查詢與修改</dt>
+              <dd style="padding:10px 20px; border-bottom:dotted 1px #999;">時間：
+                <input type="text" class="datepicker" readonly >
+                &nbsp;&nbsp;              狀態：
+                <select name="select" id="select">
+                  <option>請選擇...</option>
+                  <option>預約未完成</option>
+                  <option>預約已完成</option>
+                  <option>測驗進行中</option>
+                  <option>測驗已完成</option>
+                  <option>待補測</option>
+                </select>
+                <input name="textfield" type="text" id="textfield" value="請輸入關鍵字" onclick="javascript:this.value=''" />
+                <input type="submit" value="搜尋" />
+              </dd>
+              <dd>
+                <table width="100%" class="table2 tableTRColor">
+                  <tr>
+                    <th rowspan="2" class="NoBorder_Left">編號</th>
+                    <th rowspan="2">班級</th>
+                    <th colspan="2">第一堂課</th>
+                    <th colspan="2">第二堂課</th>
+                    <th rowspan="2">人數</th>
+                    <th rowspan="2">狀態</th>
+                    <th rowspan="2">修改時間</th>
+                    <th rowspan="2">增刪學生</th>
+                    <th rowspan="2">取消預約</th>
+                    <th rowspan="2">下載文件</th>
+                  </tr>
+                  <tr>
+                    <th>日期</th>
+                    <th>節次</th>
+                    <th>日期</th>
+                    <th>節次</th>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left"> 617 </td>
+                    <td> 20110420 </td>
+                    <td> 2011/04/20 </td>
+                    <td> 2 </td>
+                    <td> 2011/04/20 </td>
+                    <td> 8 </td>
+                    <td> 0</td>
+                    <td> 預約未完成 </td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html" data-toggle="modal" data-target="#myModal">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">564</td>
+                    <td> 55年5班501~550 </td>
+                    <td>2011/04/04</td>
+                    <td>1</td>
+                    <td>2011/04/05</td>
+                    <td>1</td>
+                    <td>55</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">565</td>
+                    <td>20110404-55年5班551~599</td>
+                    <td>2011/04/04</td>
+                    <td>1</td>
+                    <td>2011/04/05</td>
+                    <td>1</td>
+                    <td>54</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">567</td>
+                    <td>55年6班601~650</td>
+                    <td>2011/04/04</td>
+                    <td>2</td>
+                    <td>2011/04/05</td>
+                    <td>2</td>
+                    <td>53</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">568</td>
+                    <td>55年6班651~699</td>
+                    <td>2011/04/04</td>
+                    <td>2</td>
+                    <td>2011/04/05</td>
+                    <td>2</td>
+                    <td>54</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">569</td>
+                    <td>55年7班701~750</td>
+                    <td>2011/04/04</td>
+                    <td>3</td>
+                    <td>2011/04/05</td>
+                    <td>3</td>
+                    <td>55</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">570</td>
+                    <td>55年7班751~799</td>
+                    <td>2011/04/04</td>
+                    <td>3</td>
+                    <td>2011/04/05</td>
+                    <td>3</td>
+                    <td>56</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">571</td>
+                    <td>55年8班801~850</td>
+                    <td>2011/04/04</td>
+                    <td>4</td>
+                    <td>2011/04/05</td>
+                    <td>4</td>
+                    <td>55</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">572</td>
+                    <td>55年8班851~899</td>
+                    <td>2011/04/04</td>
+                    <td>4</td>
+                    <td>2011/04/05</td>
+                    <td>4</td>
+                    <td>54</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">573</td>
+                    <td>55年9班901~950</td>
+                    <td>2011/04/04</td>
+                    <td>5</td>
+                    <td>2011/04/05</td>
+                    <td>5</td>
+                    <td>53</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">574</td>
+                    <td>55年9班902~952</td>
+                    <td>2011/04/04</td>
+                    <td>5</td>
+                    <td>2011/04/05</td>
+                    <td>5</td>
+                    <td>55</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.htmll">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">575</td>
+                    <td>55年9班903~953</td>
+                    <td>2011/04/04</td>
+                    <td>5</td>
+                    <td>2011/04/05</td>
+                    <td>5</td>
+                    <td>54</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">576</td>
+                    <td>55年9班904~954</td>
+                    <td>2011/04/04</td>
+                    <td>6</td>
+                    <td>2011/04/05</td>
+                    <td>6</td>
+                    <td>55</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">577</td>
+                    <td>55年9班905~955</td>
+                    <td>2011/04/04</td>
+                    <td>6</td>
+                    <td>2011/04/05</td>
+                    <td>6</td>
+                    <td>53</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">578</td>
+                    <td>55年9班906~956</td>
+                    <td>2011/04/04</td>
+                    <td>6</td>
+                    <td>2011/04/05</td>
+                    <td>6</td>
+                    <td>52</td>
+                    <td>待補測</td>
+                    <td><a href="TestBookin.html">修改</a></td>
+                    <td><a href="#">增刪</a></td>
+                    <td><a href="#">取消</a></td>
+                    <td><a href="TestNameList.html">下載</a></td>
+                  </tr>
+                </table>
+                <div class="pages">
+                  <a id="GV_ctl13_LB_PageFirst" disabled="disabled">第一頁</a> <a id="GV_ctl13_LB_PagePrev" disabled="disabled">上一頁</a> 第
+                  <select name="GV$ctl13$Drop_Page" onchange="javascript:setTimeout('__doPostBack(\'GV$ctl13$Drop_Page\',\'\')', 0)" id="GV_ctl13_Drop_Page">
+                    <option selected="selected" value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                  頁 / 共<span id="GV_ctl13_Label1">2</span>頁 <a id="GV_ctl13_LB_PageNext" href="javascript:__doPostBack('GV$ctl13$LB_PageNext','')">下一頁</a> <a id="GV_ctl13_LB_PageLast" href="javascript:__doPostBack('GV$ctl13$LB_PageLast','')">最後頁</a> <a href="#" class="goTopIndex">goTop</a>
+                </div>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        <!-- -->
+      </div>
+      <div class="content_footer">
+      </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h3 class="modal-title" id="myModalLabel">王小明</h3>
+            </div>
+            <div class="modal-body">
+              <br>
+              轉換班級：
+              <select name="select" id="">
+                <option>請選擇...</option>
+                <option>000</option>
+                <option>111</option>
+                <option>222</option>
+              </select>
+              <br>
+              <br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="" data-dismiss="modal">取消</button>
+              <button type="button" class="">確認轉班</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- InstanceEndEditable -->
+    </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-bottom START -->
+<div class="main-bottom">
+  <div class="wrapper">
+  </div>
+</div>
+<!-- main-bottom START --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="wrapper">
+    <div class="link">
+      <a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a>
+    </div>
+    <div class="copyright">
+      本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號
+    </div>
+  </div>
+</div>
+<!-- footer END -->
+
+</body>
+<!-- InstanceEnd -->
+</html>

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/*表格樣式*/
+table tr.oddalt td {/*表格換行顏色-偶數行顏色*/
+	background-color: #FBFBFB;
+}
+table tr.alt td {/*表格換行顏色-奇數行顏色*/
+	background-color: #FFF;
+}
+table tr.over td {/*表格換行顏色-hover顏色*/
+	background-color: #eff5e5;
+}
+/*橫向表格樣式 th→td*/
+.table0 td {
+	border: 0px;
+}
+.table1 {
+	margin-right: auto;
+	margin-left: auto;
+	color: #333;
+	font-size: 14px;
+	line-height: 24px;
+}
+.table1 th {
+	text-align: right;
+	background-color: #ECE9D8;
+	padding: 5px;
+	border-bottom: 1px dotted #999;
+}
+.table1 td {
+	background-color: #FBFBFB;
+	padding: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999;
+}
+.table1 tfoot td {
+	background-color: #FFF;
+	border: 0px;
+}
+/*縱向表格樣式th↓td*/
+.table2 {
+	margin-right: auto;
+	margin-left: auto;
+	color: #333;
+	font-size: 14px;
+	line-height: 24px;
+}
+.table2 th {
+	background-color: #7B5E3E;
+	padding: 5px;
+	border-bottom: 1px dotted #999;
+	border-left: 1px dotted #999;
+	line-height: 20px;
+	color:#FFF;
+}
+.table2 th a {
+	color: #FFF;
+	text-decoration: underline;
+}
+.table2 th a:hover {
+	color: #000;
+}
+.table2 td {
+	background-color: #FBFBFB;
+	padding: 5px;
+	border-bottom: 1px dotted #999;
+	border-left: 1px dotted #999;
+	text-align: center;
+}
+.table2 .NoBorder_Left {
+	border-left: 0px;
+}
+.table3 {
+	border: dotted 1px #EAEAEA;
+	line-height: 24px;
+}
+.table3 th{
+	color:#000;
+	font-weight:bold;
+}
+.table3 td {
+	border: 0px;
+	text-align: center;
+	border: 1px dotted #DCDCDC;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+}
+.table3 tr.oddalt td {/*表格換行顏色-偶數行顏色*/
+	background-color: #FFF;
+}
+.table3 tr.alt td {/*表格換行顏色-奇數行顏色*/
+	background-color: #FFF;
+}
+.table3 tr.over td {/*表格換行顏色-hover顏色*/
+	background-color: #eff5e5;
+}
+.table3 th {
+	background-color: #EAEAEA;
+	text-align: center;
+	font-weight: normal;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-right-style: dotted;
+	border-right-color: #DCDCDC;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+}

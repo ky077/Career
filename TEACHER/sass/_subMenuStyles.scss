@@ -1,0 +1,91 @@
+@mixin subMenuStyles($get-path: " ") { 
+	margin:-10px -10px 10px -10px;
+	color:#FFF; 
+	.subMenu-arrow{  
+		width: 10px;
+		height: 10px;
+		background-image:url(../images/#{$get-path}/UI.png);
+		background-position: 0px -96px;
+	}
+	.subMenu-bg{ 
+		width:100%;
+		span{	
+			display: inline-block;
+			background-image:url(../images/#{$get-path}/UI.png);
+			background-position: right -200px;
+			background-repeat: no-repeat;
+			span{ 
+				background-repeat: no-repeat;
+				background-position: 0px -150px;
+				padding:0px 10px;
+				height: 25px;
+			line-height: 25px;
+			}
+		}
+	}
+	a { 
+		color:#FFF; 
+		text-decoration:none;
+		margin:0px 4px;
+		&:hover, &.active{
+			color:#fced03;
+		}
+	}
+	
+	&.sub1{
+		.subMenu-arrow{ margin-left: calc(938px/7*1 - 938px/7/2 - 10px/2);}
+		.subMenu-bg{ padding-left:10px;}
+	}
+	&.sub2{
+		.subMenu-arrow{ margin-left: calc(938px/7*2 - 938px/7/2 - 10px/2);}
+		.subMenu-bg{ padding-left: calc(938px/7*1);}		
+	}
+	&.sub3{
+		.subMenu-arrow{ margin-left: calc(938px/7*3 - 938px/7/2 - 10px/2);}
+		.subMenu-bg{ padding-left: calc(938px/7*2);}		
+	}
+	&.sub4{
+		.subMenu-arrow{ margin-left: calc(938px/7*4 - 938px/7/2 - 10px/2);}
+		.subMenu-bg{ padding-left: calc(938px/7*3);}		
+	}
+	&.sub5{
+		.subMenu-arrow{ margin-left: calc(938px/7*5 - 938px/7/2 - 10px/2);}
+		.subMenu-bg{ padding-left: calc(938px/7*4);}		
+	}
+	&.sub6{
+		.subMenu-arrow{ margin-left: calc(938px/7*6 - 938px/7/2 - 10px/2);}
+		.subMenu-bg{ padding-left: calc(938px/7*5);}		
+	}
+	&.sub7{
+		.subMenu-arrow{ margin-left: calc(938px/7*7 - 938px/7/2 - 10px/2);}
+		.subMenu-bg{ padding-left: calc(938px/7*6);}		
+	}
+}
+
+@mixin subsubMenuStyles($get-subsubcolor: #000, $get-path: " "){ 
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	span{
+		margin:0px 4px;
+		display: inline-block;
+		background-image:url(../images/#{$get-path}/UI.png);
+		background-position: right -350px;
+		background-repeat: repeat-x;
+		span{ 
+			margin:0px;
+			background-repeat: no-repeat;
+			background-position: 0px -300px;
+			padding:0px 10px;
+			height: 24px;
+			line-height:24px;
+		}
+	}
+	a { 
+		color:$get-subsubcolor; 
+		text-decoration:none;
+		&:hover{
+			color:#fced03;
+		}
+	}
+}

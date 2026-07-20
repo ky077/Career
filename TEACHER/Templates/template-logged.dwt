@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 高中版</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<script src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/table-color.js"></script>
+<!-- TemplateBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="wrapper"> <a href="" target="_blank">國中版</a> | <a href="#">高中版</a> | <a href="#" onclick="alert('[大學版]暫時不開放！')">大學版</a>
+    <div class="pull-right"> <span class="sexybutton brown accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../--index.html" class="sexybutton brown"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="wrapper">
+    <div class="welcome"> XX老師，歡迎光臨"生涯測驗系統"！ </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="wrapper clearfix"> 
+    <!-- nav START -->
+    <div class="nav">
+      <div class="nav-decoration"></div>
+      <ul>
+        <li class="news"><a href="../--index.html">最新消息</a></li>
+        <li class="studentData"><a href="../StudentData/StudentNotes.html">學生資料庫</a></li>
+        <li class="aptitude"><a href="../TestAptitude/NoteIntroduce.html">適性化生涯性向測驗</a></li>
+        <li class="interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+        <li class="workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+      </ul>
+    </div>
+    <!-- nav END --> 
+    <!-- ad START -->
+    <div class="ad">
+      <div class="ad-decoration"></div>
+      <!-- TemplateBeginEditable name="EditRegion-ad" --><img src="../images/ad-index.png"><!-- TemplateEndEditable --></div>
+    <!-- ad END --> 
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="wrapper">
+    <div class="content"> <!-- TemplateBeginEditable name="EditRegion-main" -->000<!-- TemplateEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="wrapper">
+    <div class="link"><a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a></div>
+    <div class="copyright">本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2013 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+
+</body>
+</html>

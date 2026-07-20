@@ -1,0 +1,351 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template-logged-2018.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 高中版</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<script src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/table-color.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<script>
+$(function(){
+	$(".studentData").addClass('active');
+});
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="wrapper"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="../index.html" class="headIcon home"  alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton brown accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton brown"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="wrapper">
+    <div class="welcome"> XX老師，歡迎光臨"生涯測驗系統"！ </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="wrapper clearfix"> 
+    <!-- nav START -->
+    <div class="nav clearfix">
+      
+      <ul>
+        <li class="nav-item TA aptitude"><a href="../TestAptitude/NoteIntroduce.html">適性化生涯性向測驗</a></li>
+        <li class="nav-item TI interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+        <li class="nav-item WV workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+        <li class="nav-float SD studentData"><a href="StudentNotes.html">學生資料庫</a></li>
+        <li class="nav-float TEST"><a href="">學生測驗</a></li>
+        
+      </ul>
+      
+    </div>
+    <!-- nav END --> 
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-top START -->
+<div class="main-top">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-top START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="wrapper">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" --> <img src="../images/title_StudentData.png" title="學生資料庫" class="center-block">
+      <div class="content_position"> 
+        <!-- -->
+        <div class="subMenu">
+          <div class="subMenu-bg"> <span><span><a href="StudentNotes.html">學生資料須知</a>│<a href="StudentUpload.html">新增學生資料</a>│<a href="StudentList.html" class="active">查詢與修改</a></span></span> </div>
+        </div>
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt>查詢與修改</dt>
+              <dd style="padding:10px 20px; border-bottom:dotted 1px #999;"> 入學年
+                <select name="select" id="select">
+                  <option>全部</option>
+                  <option>100</option>
+                  <option>98</option>
+                  <option>97</option>
+                </select>
+                年級
+                <select name="select" id="select">
+                  <option>全部</option>
+                </select>
+                班級
+                <select name="select" id="select">
+                  <option>全部</option>
+                </select>
+                <input name="textfield" type="text" id="textfield" value="請輸入關鍵字" onclick="javascript:this.value='';"/>
+                <input type="submit" value="搜尋" />
+              </dd>
+              <dd>
+                <table width="100%" class="table2 tableTRColor">
+                  <tr>
+                    <th class="NoBorder_Left"><a href="#">身份字號</a></th>
+                    <th>姓名</th>
+                    <th>學號</th>
+                    <th>入學年</th>
+                    <th>年級</th>
+                    <th>班級</th>
+                    <th>科系</th>
+                    <th>性別</th>
+                    <th>生日</th>
+                    <th>修改</th>
+                    <th>刪除</th>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A127995698</td>
+                    <td>LALA543</td>
+                    <td>543543</td>
+                    <td>100</td>
+                    <td>98</td>
+                    <td>2</td>
+                    <td>普通班</td>
+                    <td>男</td>
+                    <td>2010/01/01</td>
+                    <td><a href="StudentRenew.html">修改</a></td>
+                    <td><a href="#" onclick="javascript:alert('是否確認刪除該筆資料？')">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A123456783</td>
+                    <td>歐陽菲菲</td>
+                    <td>pw1001</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/02/26</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A123456782</td>
+                    <td>除非五個字</td>
+                    <td>pw1002</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/02/27</td>
+                    <td><a href="StudentRenew.html">修改</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A123456781</td>
+                    <td>周杰人</td>
+                    <td>pw1001</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/02/28</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A123456784</td>
+                    <td>林大同君</td>
+                    <td>pw1003</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/02/29</td>
+                    <td><a href="StudentRenew.html">修改</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A135896412</td>
+                    <td>黃綠紅</td>
+                    <td>pw1004</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/01</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">H165897410</td>
+                    <td>黃一</td>
+                    <td>pw1005</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/02</td>
+                    <td><a href="StudentRenew.html">修改</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">P124587569</td>
+                    <td>賀小美</td>
+                    <td>pw1006</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/03</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A135859265</td>
+                    <td>王小明</td>
+                    <td>pw1007</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/04</td>
+                    <td><a href="StudentRenew.html">修改</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A157489632</td>
+                    <td>陶小瑋</td>
+                    <td>pw1008</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/05</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A158963472</td>
+                    <td>范姜名字</td>
+                    <td>pw1009</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>1</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>1998/10/14</td>
+                    <td><a href="StudentRenew.html">修改</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A114578963</td>
+                    <td>佐藤一</td>
+                    <td>pw101</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>1</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>1998/10/14</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A175456896</td>
+                    <td>溫差凡</td>
+                    <td>pw102</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/06</td>
+                    <td><a href="StudentRenew.html">修改</a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A135856954</td>
+                    <td>動態1011</td>
+                    <td>pw1010</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/07</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                  <tr>
+                    <td class="NoBorder_Left">A120356984</td>
+                    <td>動態1012</td>
+                    <td>pw1011</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>10</td>
+                    <td>原住民藝能班</td>
+                    <td>男</td>
+                    <td>2000/03/08</td>
+                    <td><a href="StudentRenew.html">修改</a><a href="#"></a></td>
+                    <td><a href="#">刪除</a></td>
+                  </tr>
+                </table>
+                <div class="pages"><a id="GV_ctl13_LB_PageFirst" disabled="disabled">第一頁</a> <a id="GV_ctl13_LB_PagePrev" disabled="disabled">上一頁</a> 第
+                  <select name="GV$ctl13$Drop_Page" onchange="javascript:setTimeout('__doPostBack(\'GV$ctl13$Drop_Page\',\'\')', 0)" id="GV_ctl13_Drop_Page">
+                    <option selected="selected" value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                  頁 / 共<span id="GV_ctl13_Label1">2</span>頁 <a id="GV_ctl13_LB_PageNext" href="javascript:__doPostBack('GV$ctl13$LB_PageNext','')">下一頁</a> <a id="GV_ctl13_LB_PageLast" href="javascript:__doPostBack('GV$ctl13$LB_PageLast','')">最後頁</a> <a href="#" class="goTopIndex">goTop</a> </div>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <!-- --> 
+      </div>
+      <div class="content_footer"></div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-bottom START -->
+<div class="main-bottom">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-bottom START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="wrapper">
+    <div class="link"><a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a></div>
+    <div class="copyright">本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+
+</body>
+<!-- InstanceEnd --></html>

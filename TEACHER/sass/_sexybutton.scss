@@ -1,0 +1,97 @@
+.sexybutton {
+	display: inline-block;
+	text-decoration: none !important;
+	background: none;
+	border: none;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+	/* Fix extra width padding in IE */
+	_width: 0;
+	overflow: visible;
+	line-height: 25px;
+	padding: 0;
+	margin: 0;
+}
+
+.sexybutton span {
+	background-image: url(../images/btn_right.png);
+	display: block;
+	height: 25px;
+	background-repeat: no-repeat;
+	padding-right: 8px;
+	margin: 0px;
+}	
+.sexybutton span span {
+	background-image: url(../images/btn_left.png);
+	color: #FFF;
+	display: block;
+	height: 25px;
+	background-repeat: no-repeat;
+	padding-left: 16px;
+	_padding-left: 8px;
+}
+
+
+
+.brown span { background-position: right 0px;}
+.brown:hover span,
+.brown:focus span {
+	background-position: 100% -25px;
+}
+.brown span span { background-position: left 0px;}
+.brown:hover span span,
+.brown:focus span span {
+	background-position: 0% -25px;
+}
+
+.black span { background-position: right -50px;}
+.black:hover span,
+.black:focus span {
+	background-position: 100% -75px;
+}		
+.black span span { background-position: left -50px;}
+.black:hover span span,
+.black:focus span span {
+	background-position: 0% -75px;
+}	
+
+.gray span { background-position: right -100px;}
+.gray:hover span,
+.gray:focus span {
+	background-position: 100% -125px;
+}	
+.gray span span { background-position: left -100px;}
+.gray:hover span span,
+.gray:focus span span {
+	background-position: 0% -125px;
+}	
+
+.sky span { background-position: right -150px;}
+.sky:hover span,
+.sky:focus span {
+	background-position: 100% -175px;
+}
+.sky span span { background-position: left -150px;}
+.sky:hover span span,
+.sky:focus span span {
+	background-position: 0% -175px;
+}	
+
+.blue span { background-position: right -200px;}
+.blue:hover span,
+.blue:focus span {
+	background-position: 100% -225px;
+}	
+.blue span span { background-position: left -200px;}
+.blue:hover span span,
+.blue:focus span span {
+	background-position: 0% -225px;
+}	
+
+.gray span span, 
+.sky span span, 
+.blue span span {
+	color: #333;
+}

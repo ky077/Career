@@ -1,0 +1,281 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template-2018.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 高中版</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<script src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/table-color.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="wrapper"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="../index.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <a href="Register.html">學校帳號註冊申請</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Login.html" class="sexybutton brown"><span><span>登入</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="wrapper">
+    <div class="welcome"> XX老師，歡迎光臨"生涯測驗系統"！ </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="wrapper clearfix"> 
+    <!-- nav START -->
+    <div class="nav clearfix">
+      <ul>
+        <li class="nav-item TA aptitude"><a href="../TestAptitude/NoteIntroduce.html">適性化生涯性向測驗</a></li>
+        <li class="nav-item TI interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+        <li class="nav-item WV workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+        <li class="nav-float SD studentData"><a href="../StudentData/StudentNotes.html">學生資料庫</a></li>
+        <li class="nav-float TEST"><a href="">學生測驗</a></li>
+      </ul>
+    </div>
+    <!-- nav END --> 
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-top START -->
+<div class="main-top">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-top START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="wrapper">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" --> <img src="../images/title_Register.png" title="註冊申請" class="center-block">
+      <div class="content_position"> 
+        <!-- -->
+        <ul class="content_block">
+          <li>
+            <dl class="padding0">
+              <table class="table1" width="100%">
+                <!--學校帳號-->
+                <tbody>
+                  <tr>
+                    <th colspan="2" style="background-color:#d1b6a2; text-align:left;">學校 / 帳號</th>
+                  </tr>
+                  <!--服務學校-->
+                  <tr>
+                    <th width="150" valign="top" style="background-color:#ebebeb;">服務學校：</th>
+                    <td><select name="DropDownList_Contury" onchange="javascript:setTimeout('__doPostBack(\'DropDownList_Contury\',\'\')', 0)" id="DropDownList_Contury">
+                        <option selected="selected" value="0">選擇：縣市</option>
+                        <option value="台中市       ">台中市 </option>
+                        <option value="台中縣       ">台中縣 </option>
+                        <option value="台北市       ">台北市 </option>
+                        <option value="台北縣       ">台北縣 </option>
+                        <option value="台東縣       ">台東縣 </option>
+                        <option value="台南市       ">台南市 </option>
+                        <option value="台南縣       ">台南縣 </option>
+                        <option value="宜蘭縣       ">宜蘭縣 </option>
+                        <option value="花蓮縣       ">花蓮縣 </option>
+                        <option value="金門縣       ">金門縣 </option>
+                        <option value="南投縣       ">南投縣 </option>
+                        <option value="屏東縣       ">屏東縣 </option>
+                        <option value="苗栗縣       ">苗栗縣 </option>
+                        <option value="桃園縣       ">桃園縣 </option>
+                        <option value="高雄市       ">高雄市 </option>
+                        <option value="高雄縣       ">高雄縣 </option>
+                        <option value="基隆市       ">基隆市 </option>
+                        <option value="連江縣       ">連江縣 </option>
+                        <option value="雲林縣       ">雲林縣 </option>
+                        <option value="新竹市       ">新竹市 </option>
+                        <option value="新竹縣       ">新竹縣 </option>
+                        <option value="嘉義市       ">嘉義市 </option>
+                        <option value="嘉義縣       ">嘉義縣 </option>
+                        <option value="彰化縣       ">彰化縣 </option>
+                        <option value="澎湖縣       ">澎湖縣 </option>
+                      </select>
+                      &nbsp;&nbsp;
+                      <select name="DropDownList_Degree" onchange="javascript:setTimeout('__doPostBack(\'DropDownList_Degree\',\'\')', 0)" id="DropDownList_Degree">
+                        <option selected="selected" value="0">選擇：各級學校</option>
+                      </select>
+                      &nbsp;&nbsp;
+                      <select name="DropDownList_Belong" onchange="javascript:setTimeout('__doPostBack(\'DropDownList_Belong\',\'\')', 0)" id="DropDownList_Belong">
+                        <option selected="selected" value="0">選擇：公私立</option>
+                      </select>
+                      &nbsp;&nbsp;
+                      <select name="DropDownList_School" onchange="javascript:setTimeout('__doPostBack(\'DropDownList_School\',\'\')', 0)" id="DropDownList_School">
+                        <option selected="selected" value="0">選擇：學校名稱</option>
+                      </select>
+                      &nbsp;&nbsp;
+                      <input name="TextBox_School" type="text" readonly id="TextBox_School" style="color:Blue;width:200px; border: #EBEBEB 1px solid;" />
+                      <span id="Label_School" style="color:Red;font-size:10pt;"></span> <span id="RequiredFieldValidator1" style="color:Red;font-size:10pt;visibility:hidden;">請選擇學校</span>
+                      <input type="hidden" name="Hidden_schoolSN" id="Hidden_schoolSN"></td>
+                  </tr>
+                  <!--帳號密碼-->
+                  <tr>
+                    <th style="background-color:#ebebeb;">帳　　號：</th>
+                    <td><div id="UpdatePanel10">
+                        <input name="TextBox_ID" type="text" onchange="javascript:setTimeout('__doPostBack(\'TextBox_ID\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="TextBox_ID">
+                        <span id="Label4" style="font-size:10pt;">以英數字元設置3-20位的帳號</span> <span id="Label_Id_msg" style="font-size:10pt;"></span> <span id="joinIdChka" style="color:Red;font-size:10pt;display:none;">不可空白</span> <span id="RegularExpressionValidator2" style="color:Red;font-size:10pt;display:none;">請正確填寫!以英數字元設置3-20位的帳號</span>
+                        <input type="hidden" name="Hidden_idOK" id="Hidden_idOK">
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">密　　碼：</th>
+                    <td><input name="TextBox_Pwd" type="password" id="TextBox_Pwd">
+                      <span id="Label1" style="font-size:10pt;">以英數字元設置5-10位的密碼</span> <span id="joinPswChka" style="color:Red;font-size:10pt;display:none;">不可空白</span> <span id="joinPswChkb" style="color:Red;font-size:10pt;display:none;">請正確填寫!以英數字元設置5-10位的密碼</span></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">密碼確認：</th>
+                    <td><input name="TextBox_Pwd2" type="password" id="TextBox_Pwd2">
+                      <span id="joinPsw2Check" style="color:Red;font-size:10pt;visibility:hidden;">兩次輸入密碼必須相同！</span></td>
+                  </tr>
+                  <!--聯絡人資料-->
+                  <tr>
+                    <th colspan="2" style=" background-color:#d1b6a2; text-align:left;">聯絡人資料</th>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">姓　　名：</th>
+                    <td><input name="TextBox_name" type="text" id="TextBox_name">
+                      <span id="mem_nameChka" style="color:Red;font-size:10pt;display:none;">不可空白</span></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">性　　別：</th>
+                    <td><table id="RBL_sex" >
+                        <tbody>
+                          <tr>
+                            <td style="border:0px;"><input id="RBL_sex_0" type="radio" name="RBL_sex" value="1" checked="checked">
+                              <label for="RBL_sex_0">男</label></td>
+                            <td style="border:0px;"><input id="RBL_sex_1" type="radio" name="RBL_sex" value="2">
+                              <label for="RBL_sex_1">女</label></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                  <!--聯絡方式-->
+                  <tr>
+                    <th style="background-color:#ebebeb;">處室名稱：</th>
+                    <td><input name="TextBox_Dep" type="text" id="TextBox_Dep">
+                      <span id="Label2" style="font-size:10pt;">例如：教務處</span> <span id="RequiredFieldValidator2" style="color:Red;font-size:10pt;display:none;">不可空白</span></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">職　　稱：</th>
+                    <td><input name="TextBox_Title" type="text" id="TextBox_Title">
+                      <span id="Label3" style="font-size:10pt;">例如：教務主任</span> <span id="RequiredFieldValidator3" style="color:Red;font-size:10pt;display:none;">不可空白</span></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">聯絡電話：</th>
+                    <td><input name="TextBox_tel" type="text" id="TextBox_tel">
+                      分機
+                      <input type="text" name="textfield" id="textfield" style=" width:50px;"/>
+                      輸入格式：02-2351-7160</td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">電子信箱：
+                      <input type="hidden" name="Hidden_oldMail" id="Hidden_oldMail">
+                      <input type="hidden" name="Hidden_mailType" id="Hidden_mailType">
+                    </th>
+                    <td><input name="TextBox_email" type="text" id="TextBox_email">
+                      <span id="mem_emailchkd" style="color:Red;display:none;">不可空白</span> <span id="mem_emailchk" style="color:Red;display:none;">請正確填寫!</span></td>
+                  </tr>
+                  <tr>
+                    <th colspan="2" style=" background-color:#d1b6a2; text-align:left;">施測電腦配備</th>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">注意事項：</th>
+                    <td style=" color:Purple"> 請根據同學測驗時，會使用的電腦設備，確實選填以下資料。謝謝！ </td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">記 憶 體 ：</th>
+                    <td><select name="Drop_RAM" id="Drop_RAM">
+                        <option value="0">低於512</option>
+                        <option value="1">512~1G</option>
+                        <option value="2">1G~2G</option>
+                        <option value="3">2G以上</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">I.E 版 本 ：</th>
+                    <td><select name="Drop_IE" id="Drop_IE">
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9以上</option>
+                        <option value="0">其他</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">Flash版本：</th>
+                    <td><select name="Drop_Flash" id="Drop_Flash">
+                        <option value="8">8以下</option>
+                        <option value="9">9</option>
+                        <option value="10">10以上</option>
+                        <option value="0">其他</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <th style="background-color:#ebebeb;">下載速率：</th>
+                    <td><input name="TextBox_Speed" type="text" id="TextBox_Speed">
+                      <select name="Drop_Speed" id="Drop_Speed">
+                        <option value="Kb">Kbps</option>
+                        <option value="Mb">Mbps</option>
+                      </select>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://speed.hinet.net/" target="_blank" style="text-decoration:underline; color:Blue">測試傳送速率，請點選這裡。</a> <span id="RequiredFieldValidator4" style="color:Red;display:none;">不可空白</span> <span id="RegularExpressionValidator1" style="color:Red;display:none;">僅填寫數字(含.)</span></td>
+                  </tr>
+                  <tr>
+                    <th colspan="2" style=" background-color:#d1b6a2; text-align:left;"> <span style="color:Purple;font-size:9pt;">
+                      <input id="CheckBox_agree" type="checkbox" name="CheckBox_agree" onclick="javascript:setTimeout('__doPostBack(\'CheckBox_agree\',\'\')', 0)">
+                      <label for="CheckBox_agree">以上選填之電腦設備資料與實際情況相符，若有不符之處，校方願意自行承擔測驗無法順利進行的責任。</label>
+                      </span>
+                      </td>
+                  </tr>
+                  <!--驗證碼-->
+                  <tr>
+                    <th style="background-color:#ebebeb;">驗 證 碼 ：</th>
+                    <td><input name="TextBox_Code" type="text" id="TextBox_Code">
+                      <img src="../ValidateCode.aspx" width="91" height="27" align="absmiddle" id="codeImage" style="border-width:0px;"> <span id="CustomValidator2" style="color:Red;visibility:hidden;">驗證碼填入錯誤</span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2" align="center"><input type="submit" name="button" id="button" value="註冊" />
+                      <input type="reset" name="button2" id="button2" value="取消" /></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </dl>
+          </li>
+        </ul>
+        <!-- --> 
+      </div>
+      <div class="content_footer"></div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-bottom START -->
+<div class="main-bottom">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-bottom START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="wrapper">
+    <div class="link"><a href="Process.html">使用流程</a>｜<a href="QA.html">常見問題</a>｜<a href="Contact.html">聯絡我們</a>｜<a href="Map.html">網站地圖</a>｜<a href="Privacy.html">隱私權與資訊安全</a>｜<a href="Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a></div>
+    <div class="copyright">本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+
+</body>
+<!-- InstanceEnd --></html>

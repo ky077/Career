@@ -1,0 +1,317 @@
+* {
+  box-sizing: border-box; }
+
+body, dl, dt, dd, ul, li, table {
+  margin: 0px;
+  padding: 0px; }
+
+ul, li {
+  list-style-type: none; }
+
+table {
+  border-collapse: collapse; }
+
+.clearfloat {
+  clear: both; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both;
+  /* For IE 6/7 (trigger hasLayout) */ }
+
+.clearfix {
+  zoom: 1; }
+
+a {
+  /*IE outline*/
+  outline: none;
+  /* for Firefox */
+  hlbr: expression(this.onFocus=this.blur());
+  /* for IE */ }
+
+a img {
+  border: none;
+  vertical-align: middle; }
+
+.sexybutton {
+  display: inline-block;
+  text-decoration: none !important;
+  background: none;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  /* Fix extra width padding in IE */
+  _width: 0;
+  overflow: visible;
+  line-height: 25px;
+  padding: 0;
+  margin: 0; }
+
+.sexybutton span {
+  background-image: url(../images/btn_right.png); }
+
+.sexybutton span {
+  display: block;
+  height: 25px;
+  /*	padding-right: 12px;*/
+  background-repeat: no-repeat;
+  padding-right: 8px;
+  margin: 0px; }
+
+.sexybutton span span {
+  color: #FFF;
+  display: block;
+  height: 25px;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  _padding-left: 8px; }
+
+.sexybutton span span {
+  background-image: url(../images/btn_left.png); }
+
+.brown span {
+  background-position: right 0px; }
+
+.brown:hover span, .sexybutton:focus span {
+  background-position: 100% -25px; }
+
+.brown span span {
+  background-position: left 0px; }
+
+.brown:hover span span, .sexybutton:focus span span {
+  background-position: 0% -25px; }
+
+.black span {
+  background-position: right -50px; }
+
+.black:hover span, .black:focus span {
+  background-position: 100% -75px; }
+
+.black span span {
+  background-position: left -50px; }
+
+.black:hover span span, .black:focus span span {
+  background-position: 0% -75px; }
+
+.gray span {
+  background-position: right -100px; }
+
+.gray:hover span, .black:focus span {
+  background-position: 100% -125px; }
+
+.gray span span {
+  background-position: left -100px; }
+
+.gray:hover span span, .black:focus span span {
+  background-position: 0% -125px; }
+
+.sky span {
+  background-position: right -150px; }
+
+.sky:hover span, .black:focus span {
+  background-position: 100% -175px; }
+
+.sky span span {
+  background-position: left -150px; }
+
+.sky:hover span span, .black:focus span span {
+  background-position: 0% -175px; }
+
+.blue span {
+  background-position: right -200px; }
+
+.blue:hover span, .black:focus span {
+  background-position: 100% -225px; }
+
+.blue span span {
+  background-position: left -200px; }
+
+.blue:hover span span, .black:focus span span {
+  background-position: 0% -225px; }
+
+.gray span span, .sky span span, .blue span span {
+  color: #333; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+body {
+  font-family: Arial, Helvetica, sans-serif, "Microsoft JhengHei";
+  font-size: 15px;
+  line-height: 1.5em;
+  background-image: url(../images/bg.jpg);
+  background-repeat: repeat-x; }
+
+.wrapper {
+  width: 980px;
+  height: auto;
+  margin: 0px auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.pull-right {
+  float: right; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.head {
+  height: 40px;
+  line-height: 40px;
+  background-color: #4d7353;
+  font-size: 0.9em;
+  color: #FFF; }
+  .head a {
+    color: #FFF; }
+
+.banner .wrapper {
+  height: 160px;
+  background-image: url(../images/banner.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative; }
+  .banner .wrapper .welcome {
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+
+.toolSection .wrapper {
+  background-image: url(../images/mainBg.jpg);
+  background-repeat: repeat-y;
+  background-position: center;
+  padding: 0px 10px; }
+.toolSection .nav {
+  width: 240px;
+  height: 240px;
+  float: left;
+  background-image: url(../images/navBg.png);
+  padding-left: 10px;
+  padding-right: 10px; }
+  .toolSection .nav .nav-decoration {
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 50px;
+    background-image: url(../images/nav-decoration.jpg); }
+  .toolSection .nav ul li {
+    height: 35px;
+    background-image: url(../images/nav.png);
+    text-indent: -9999px;
+    overflow: hidden; }
+    .toolSection .nav ul li a {
+      display: block; }
+    .toolSection .nav ul li.news {
+      background-position: 0px 0px; }
+      .toolSection .nav ul li.news:hover {
+        background-position: -300px 0px; }
+      .toolSection .nav ul li.news:active, .toolSection .nav ul li.news.active {
+        background-position: -600px 0px; }
+    .toolSection .nav ul li.studentData {
+      background-position: 0px -35px; }
+      .toolSection .nav ul li.studentData:hover {
+        background-position: -300px -35px; }
+      .toolSection .nav ul li.studentData:active, .toolSection .nav ul li.studentData.active {
+        background-position: -600px -35px; }
+    .toolSection .nav ul li.aptitude {
+      background-position: 0px -70px; }
+      .toolSection .nav ul li.aptitude:hover {
+        background-position: -300px -70px; }
+      .toolSection .nav ul li.aptitude:active, .toolSection .nav ul li.aptitude.active {
+        background-position: -600px -70px; }
+    .toolSection .nav ul li.interest {
+      background-position: 0px -105px; }
+      .toolSection .nav ul li.interest:hover {
+        background-position: -300px -105px; }
+      .toolSection .nav ul li.interest:active, .toolSection .nav ul li.interest.active {
+        background-position: -600px -105px; }
+    .toolSection .nav ul li.workValue {
+      background-position: 0px -140px; }
+      .toolSection .nav ul li.workValue:hover {
+        background-position: -300px -140px; }
+      .toolSection .nav ul li.workValue:active, .toolSection .nav ul li.workValue.active {
+        background-position: -600px -140px; }
+.toolSection .ad {
+  width: 720px;
+  height: 240px;
+  float: left;
+  background-image: url(../images/adBg.png);
+  position: relative; }
+  .toolSection .ad .ad-decoration {
+    width: 100%;
+    height: 50px;
+    background-image: url(../images/ad-decoration.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100; }
+
+.main .wrapper {
+  background-image: url(../images/mainBg.jpg);
+  background-repeat: repeat-y;
+  background-position: center; }
+
+.footer {
+  font-size: 0.9em;
+  text-align: center; }
+  .footer .link {
+    height: 25px;
+    line-height: 25px;
+    background-image: url(../images/footer-linkBg.png);
+    background-repeat: no-repeat;
+    color: #3f6994; }
+    .footer .link a {
+      color: #3f6994;
+      text-decoration: none; }
+      .footer .link a:hover {
+        color: #224a70;
+        text-decoration: underline; }
+  .footer .copyright {
+    height: 73px;
+    line-height: 1.4em;
+    padding-top: 8px;
+    background-image: url(../images/footer-copyrightBg.png);
+    background-repeat: no-repeat;
+    color: #FFF; }
+    .footer .copyright a {
+      color: #FFF; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+/* ******* ******* ******* ******* ******* ******* ******* */
+.content {
+  padding: 0px 10px; }
+  .content .content_position {
+    border-left: 1px solid #919191;
+    border-right: 1px solid #919191; }
+  .content .content_footer {
+    width: 100%;
+    height: 15px;
+    background-image: url(../images/content_footerBg.jpg); }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+ul.menu {
+  background-image: url(../images/WV.png);
+  width: 100%;
+  height: 70px;
+  padding-left: 1px;
+  padding-right: 1px; }
+  ul.menu li {
+    background-color: transparent;
+    width: 134px;
+    height: 100%;
+    float: left;
+    text-indent: -9999px;
+    overflow: hidden;
+    border-bottom: 4px solid #aaa7a7; }
+    ul.menu li:hover {
+      border-bottom-color: #ea4402; }
+    ul.menu li a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+
+/*# sourceMappingURL=WV.css.map */

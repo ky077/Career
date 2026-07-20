@@ -1,0 +1,283 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template-logged-2018.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 高中版</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<script src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/table-color.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<script>
+$(function(){
+	$(".studentData").addClass('active');
+});
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="wrapper"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="../index.html" class="headIcon home"  alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton brown accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton brown"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="wrapper">
+    <div class="welcome"> XX老師，歡迎光臨"生涯測驗系統"！ </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="wrapper clearfix"> 
+    <!-- nav START -->
+    <div class="nav clearfix">
+      
+      <ul>
+        <li class="nav-item TA aptitude"><a href="../TestAptitude/NoteIntroduce.html">適性化生涯性向測驗</a></li>
+        <li class="nav-item TI interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+        <li class="nav-item WV workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+        <li class="nav-float SD studentData"><a href="StudentNotes.html">學生資料庫</a></li>
+        <li class="nav-float TEST"><a href="">學生測驗</a></li>
+        
+      </ul>
+      
+    </div>
+    <!-- nav END --> 
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-top START -->
+<div class="main-top">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-top START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="wrapper">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" --> <img src="../images/title_StudentData.png" title="學生資料庫" class="center-block">
+      <div class="content_position"> 
+        <!-- -->
+        <div class="subMenu">
+          <div class="subMenu-bg"> <span><span><a href="StudentNotes.html">學生資料須知</a>│<a href="StudentUpload.html">新增學生資料</a>│<a href="StudentList.html" class="active">查詢與修改</a></span></span> </div>
+        </div>
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt>修改學生資料</dt>
+              <dd>
+                <table width="100%" class="table1">
+                  <tr>
+                    <th width="30%" valign="top">身份字號：</th>
+                    <td width="80%"><input name="textfield" type="text" id="textfield" value="A127995698" /></td>
+                  </tr>
+                  <tr>
+                    <th valign="top">姓名：</th>
+                    <td><input name="textfield2" type="text" id="textfield2" value="LALA543" /></td>
+                  </tr>
+                  <tr>
+                    <th valign="top">學號：</th>
+                    <td><input name="textfield3" type="text" id="textfield3" value="543543" /></td>
+                  </tr>
+                  <tr>
+                    <th valign="top">入學年度：</th>
+                    <td><input name="textfield4" type="text" id="textfield4" value="100" /></td>
+                  </tr>
+                  <tr>
+                    <th valign="top">年級：</th>
+                    <td><input name="textfield5" type="text" id="textfield5" value="98" /></td>
+                  </tr>
+                  <tr>
+                    <th valign="top">班級：</th>
+                    <td><input name="textfield6" type="text" id="textfield6" value="2" /></td>
+                  </tr>
+                  <tr>
+                    <th valign="top">科系別：</th>
+                    <td><select name="DDL_degree2" onchange="javascript:setTimeout('__doPostBack(\'DDL_degree2\',\'\')', 0)" id="DDL_degree2">
+                        <option value="0">請選擇</option>
+                        <option value="1" selected="selected">國中</option>
+                        <option value="2">高中</option>
+                        <option value="3">高職</option>
+                      </select>
+                      <select name="DDL_dep2" onchange="javascript:setTimeout('__doPostBack(\'DDL_dep2\',\'\')', 0)" id="DDL_dep2">
+                        <option value="請選擇">請選擇</option>
+                        <option value="1" selected="selected">普通班</option>
+                        <option value="2">音樂班</option>
+                        <option value="3">美術班</option>
+                        <option value="4">舞蹈班</option>
+                        <option value="5">體育班</option>
+                        <option value="6">數理資優班</option>
+                        <option value="7">科學班</option>
+                        <option value="8">原住民藝能班</option>
+                        <option value="9">雙語部(98)</option>
+                        <option value="10">戲劇班</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <th valign="top">性別：</th>
+                    <td><input name="radio3" type="radio" id="radio3" value="1" checked="checked" />
+                      男
+                      <input type="radio" name="radio3" id="radio4" value="2" />
+                      女</td>
+                  </tr>
+                  <tr>
+                    <th valign="top">生日：</th>
+                    <td>西元
+                      <select name="Drop_birth1" id="Drop_birth1">
+                        <option value="2011">2011</option>
+                        <option value="2010" selected="selected">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="1989">1989</option>
+                        <option value="1988">1988</option>
+                        <option value="1987">1987</option>
+                        <option value="1986">1986</option>
+                        <option value="1985">1985</option>
+                        <option value="1984">1984</option>
+                        <option value="1983">1983</option>
+                        <option value="1982">1982</option>
+                        <option value="1981">1981</option>
+                        <option value="1980">1980</option>
+                        <option value="1979">1979</option>
+                        <option value="1978">1978</option>
+                        <option value="1977">1977</option>
+                        <option value="1976">1976</option>
+                        <option value="1975">1975</option>
+                        <option value="1974">1974</option>
+                        <option value="1973">1973</option>
+                        <option value="1972">1972</option>
+                        <option value="1971">1971</option>
+                        <option value="1970">1970</option>
+                        <option value="1969">1969</option>
+                        <option value="1968">1968</option>
+                        <option value="1967">1967</option>
+                        <option value="1966">1966</option>
+                        <option value="1965">1965</option>
+                        <option value="1964">1964</option>
+                        <option value="1963">1963</option>
+                        <option value="1962">1962</option>
+                        <option value="1961">1961</option>
+                      </select>
+                      年
+                      <select name="Drop_birth2" id="Drop_birth2">
+                        <option selected="selected" value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      月
+                      <select name="Drop_birth3" id="Drop_birth3">
+                        <option selected="selected" value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                      </select>
+                      日</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style=" text-align:center; background-color:#FFF; border-bottom:0px;"><input type="submit" name="button" id="button" value="確定" onclick="window.location='StudentList.html'"/>
+                      <input type="submit" name="button2" id="button2" value="取消" onclick="window.location='StudentList.html'"/></td>
+                  </tr>
+                </table>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <!-- --> 
+      </div>
+      <div class="content_footer"></div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-bottom START -->
+<div class="main-bottom">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-bottom START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="wrapper">
+    <div class="link"><a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a></div>
+    <div class="copyright">本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+
+</body>
+<!-- InstanceEnd --></html>

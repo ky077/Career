@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>生涯測驗系統 - 高中版</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/index2018.css">
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="wrapper"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="index.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <a href="Default/Register.html">學校帳號註冊申請</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Default/Login.html" class="sexybutton brown"><span><span>登入</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="indexBanner">
+  <div class="wrapper"> <img src="images/index2018/banner.png" width="100%"> <a href="TestAptitude/NoteIntroduce.html" class="btn-go TA">性向go</a> <a href="TestInterest/NoteIntroduce.html" class="btn-go TI">興趣go</a> <a href="TestWorkvalue/NoteIntroduce.html" class="btn-go WV">工作go</a> <a href="StudentData/StudentNotes.html" class="btn-float SD">學生資料庫</a> <a href="" class="btn-float TEST">學生測驗</a> </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="wrapper clearfix"> 
+  <!-- news START -->
+  <div class="indexSection news">
+    <div class="block">
+      <h2><img src="images/index2018/icon-news.png">最新公告</h2>
+      <div class="item"><a href="Default/News_Content.html">適性化職涯性向測驗指導手冊第5版進行資料修正</a></div>
+      <div class="item"><a href="">適性化職涯性向測驗指導手冊第5版更新--歡迎下載使用適下載使用<span class="icon-download"><img src="images/index2018/icon-download.png"></span></a></div>
+      <div class="item"><a href="Default/News_Content.html">提供非學生名單進行測驗--相關事宜通知</a></div>
+      <div class="item"><a href="Default/News_Content.html">職涯測驗系統105/11/11(五)12:00~11/14(一)12:00暫停職涯系統網站服務</a></div>
+      <div class="pages">
+        <input type="button" id="Btn_first" name="Btn_first" value="第一頁" onclick="toFirstPage()" disabled="">
+        <input type="button" id="Btn_pre" name="Btn_pre" value="上一頁" onclick="toPrePage()" disabled="">
+        <input type="button" id="Btn_page1" name="Btn_page1" value="1" class="on" onclick="toTargetPage('Btn_page1', 1)" style="display: inline;">
+        <input type="button" id="Btn_page2" name="Btn_page2" value="2" onclick="toTargetPage('Btn_page2', 2)" style="display: inline;">
+        <input type="button" id="Btn_page3" name="Btn_page3" value="3" onclick="toTargetPage('Btn_page3', 3)" style="display: none;">
+        <input type="button" id="Btn_page4" name="Btn_page4" value="4" onclick="toTargetPage('Btn_page4', 4)" style="display: none;">
+        <input type="button" id="Btn_page5" name="Btn_page5" value="5" onclick="toTargetPage('Btn_page5', 5)" style="display: none;">
+        <input type="button" id="Btn_next" name="Btn_next" value="下一頁" onclick="toNextPage()">
+        <input type="button" id="Btn_last" name="Btn_last" value="最後頁" onclick="toLastPage()">
+      </div>
+    </div>
+  </div>
+  <!-- news END --> 
+  <!-- activity START -->
+  <div class="indexSection activity">
+    <div class="block">
+      <h2><img src="images/index2018/icon-activity.png">活動資訊</h2>
+      <div class="item"><a href="Default/News_Content.html">2017年新型態電腦化生涯測驗研習會</a> <small>期間：7月10日至8月18日，北中南區名額有限，敬請把握，線上報名。 </small></div>
+      <div class="item"><a href="Default/News_Content.html">2017.5.16臺師大生涯測評系統推廣培訓會</a> <small>期間：7月10日至8月18日，將另以E-mail通知報到事宜，敬請留意信件。</small> </div>
+      <div class="item"><a href="Default/News_Content.html">2014新型態生涯測驗研習2014新型態生涯測驗研習2014新型態生涯測驗研習</a> <small>期間：7月10日至8月18日，將另以E-mail通知報到事宜，敬請留意信件。期間：7月10日至8月18日，將另以E-mail通知報到事宜，敬請留意信件。期間：7月10日至8月18日，將另以E-mail通知報到事宜，敬請留意信件。</small> </div>
+      <div class="pages">
+        <input type="button" id="Btn_first" name="Btn_first" value="第一頁" onclick="toFirstPage()" disabled="">
+        <input type="button" id="Btn_pre" name="Btn_pre" value="上一頁" onclick="toPrePage()" disabled="">
+        <input type="button" id="Btn_page1" name="Btn_page1" value="1" class="on" onclick="toTargetPage('Btn_page1', 1)" style="display: inline;">
+        <input type="button" id="Btn_page2" name="Btn_page2" value="2" onclick="toTargetPage('Btn_page2', 2)" style="display: inline;">
+        <input type="button" id="Btn_page3" name="Btn_page3" value="3" onclick="toTargetPage('Btn_page3', 3)" style="display: none;">
+        <input type="button" id="Btn_page4" name="Btn_page4" value="4" onclick="toTargetPage('Btn_page4', 4)" style="display: none;">
+        <input type="button" id="Btn_page5" name="Btn_page5" value="5" onclick="toTargetPage('Btn_page5', 5)" style="display: none;">
+        <input type="button" id="Btn_next" name="Btn_next" value="下一頁" onclick="toNextPage()">
+        <input type="button" id="Btn_last" name="Btn_last" value="最後頁" onclick="toLastPage()">
+      </div>
+    </div>
+  </div>
+  <!-- activity END --> 
+  
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="indexFooter">
+  <div class="wrapper">
+    <div class="link"><a href="">使用流程</a>｜<a href="">常見問題</a>｜<a href="">連絡我們</a>｜<a href="">網站地圖</a>｜<a href="">隱私權與資訊安全</a>｜<a href="">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WinRAR 解壓縮</a>｜<a href="">下載 Flash Player</a> </div>
+    <div class="copyright"> 本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│ </div>
+  </div>
+</div>
+<!-- footer END -->
+</body>
+</html>

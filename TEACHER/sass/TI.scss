@@ -1,0 +1,24 @@
+@import "menuStyles";
+@import "subMenuStyles";
+@import "stepStyles";
+@import "content_blockStyles";
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+$test-name: "TI";
+
+ul.menu{
+	@include menuStyles($get-color:#27a078, $get-path:$test-name);
+}
+
+.subMenu{
+	@include subMenuStyles($get-path:$test-name);
+}
+.subsubMenu{
+	@include subsubMenuStyles($get-subsubcolor:#04634B, $get-path:$test-name);
+}
+.step{
+	@include stepStyles($get-path:$test-name);
+}
+.content_block{
+	@include content_blockStyles($get-Dtcolor:#04684f, $get-path:$test-name, $get-subtitlecolor:#398006);
+}

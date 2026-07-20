@@ -1,0 +1,21 @@
+@mixin menuStyles($get-color: #aaa7a7, $get-path: " ") {
+	background-image: url(../images/#{$get-path}/UI.png);
+	width:100%;
+	height: 70px;
+	padding-left:1px;
+	padding-right:1px;
+	li{ background-color: transparent;
+		width:134px;
+		height: 100%;
+		float: left;
+		text-indent:-9999px;
+		overflow:hidden;
+		border-bottom: 4px solid #aaa7a7;
+		&:hover, &:active, &.active {border-bottom-color: $get-color;}
+		a{ 
+			display:block;
+			width:100%;
+			height:100%;
+		}
+	}
+}

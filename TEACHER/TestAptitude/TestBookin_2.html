@@ -1,0 +1,414 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template-logged-2018.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 高中版</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<script src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/table-color.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/TA.css">
+<script>
+$(function(){
+	$(".aptitude").addClass('active');
+});
+</script>
+<script type="text/livescript">
+function checkCase(obj){
+  if(obj.value==1){
+    menu1.style.display = "";
+	menu2.style.display = "none";
+  }else if(obj.value==2){
+    menu1.style.display = "none";
+	menu2.style.display = "";
+  }
+}
+</script>
+<link rel="stylesheet" href="../widget-calendar/jquery.ui.core.css">
+<link rel="stylesheet" href="../widget-calendar/jquery.ui.datepicker.css">
+<link rel="stylesheet" href="../widget-calendar/jquery.ui.theme.css">
+<script src="../widget-calendar/jquery.ui.core.js"></script>
+<script src="../widget-calendar/jquery.ui.widget.js"></script>
+<script src="../widget-calendar/jquery.ui.datepicker.js"></script>
+<script src="../widget-calendar/jquery.ui.datepicker-zh-TW.js"></script>
+<script>
+$(function() {
+    $( ".datepicker" ).datepicker({
+        showOn: "both",
+        buttonImage: "../widget-calendar/images/calendar.gif",
+        buttonImageOnly: true,
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        showButtonPanel: true,
+        minDate: +0, 
+        <!--maxDate: "+1M +10D"-->
+    });
+});
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="wrapper"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="../index.html" class="headIcon home"  alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton brown accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton brown"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="wrapper">
+    <div class="welcome"> XX老師，歡迎光臨"生涯測驗系統"！ </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="wrapper clearfix"> 
+    <!-- nav START -->
+    <div class="nav clearfix">
+      
+      <ul>
+        <li class="nav-item TA aptitude"><a href="NoteIntroduce.html">適性化生涯性向測驗</a></li>
+        <li class="nav-item TI interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+        <li class="nav-item WV workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+        <li class="nav-float SD studentData"><a href="../StudentData/StudentNotes.html">學生資料庫</a></li>
+        <li class="nav-float TEST"><a href="">學生測驗</a></li>
+        
+      </ul>
+      
+    </div>
+    <!-- nav END --> 
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-top START -->
+<div class="main-top">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-top START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="wrapper">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+      <ul class="menu">
+        <li class="m_1"><a href="NoteIntroduce.html">測驗簡介</a></li>
+        <li class="m_2"><a href="NoteGuide.html">測驗指南</a></li>
+        <li class="m_3"><a href="Online.html">線上體驗</a></li>
+        <li class="m_4"><a href="Apply.html">申請條件</a></li>
+        <li class="m_5 active"><a href="TestNotes.html">登記測驗</a></li>
+        <li class="m_6"><a href="ReportNote.html">學生報表</a></li>
+        <li class="m_7"><a href="#">指導手冊</a></li>
+      </ul>
+      <div class="content_position"> 
+        <!-- -->
+        <div class="subMenu sub5">
+          <div class="subMenu-arrow"></div>
+          <div class="subMenu-bg"> <span><span><a href="TestNotes.html">登記測驗須知</a>│<a href="TestBookin.html" class="active">登記場次</a>│<a href="TestList.html">查詢與修改</a>│<a href="ResitList.html">登記補測</a></span></span> </div>
+        </div>
+        <div class="step"><span class="Normal" style=" color:#299bff;">您所在的登記場次步驟：</span>登記場次時間 <img src="../images/step_arrow.png" width="20" height="20" /> <span style="color:#0368d4; font-weight:bold;">登記受測學生</span> <img src="../images/step_arrow.png" width="20" height="20" /> 完成登記測驗</div>
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt> 登記受測學生</dt>
+              <dd>
+                <table width="100%" class="table2">
+                  <tr>
+                    <td class="NoBorder_Left" style=" text-align:right; background-color:#ECE9D8;"><strong>您所選的場次</strong></td>
+                    <td style="background-color:#ECE9D8; text-align:left;">第一堂：2010/04/29 第5節課</td>
+                    <td style="background-color:#ECE9D8; text-align:left;">第二堂：2010/04/29 第6節課</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="NoBorder_Left" style=" background-color:#FFF; text-align:left; padding-left:40px;">※請搜尋班級後，勾選名單加入右邊方框中，成為參加測驗之學生名單。</td>
+                  </tr>
+                  <tr>
+                    <th colspan="2" class="NoBorder_Left">搜尋班級</th>
+                    <th>參加測驗學生名單</th>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="NoBorder_Left">入學年：
+                      <select name="select" id="select">
+                        <option>請選擇</option>
+                        <option>100</option>
+                        <option>98</option>
+                        <option>97</option>
+                      </select>
+                      <select name="select2" id="select2">
+                        <option>請選擇</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                      年
+                      <select name="select4" id="select4">
+                        <option>請選擇</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                      班
+                      <input type="submit" name="button2" id="button2" value="搜尋" /></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <!--<tr>
+		                <td colspan="2" style=" text-align:right;" class="NoBorder_Left"><input type="submit" name="button4" id="button4" value="全班加入測驗->" /></td>
+		                <td style=" text-align:left;"><input type="submit" name="button5" id="button5" value="<-全班退出測驗" /></td>
+	                  </tr>-->
+                  <tr>
+                    <td colspan="2" valign="top" class="NoBorder_Left" ><div style="text-align:right;padding-bottom:5px;">
+                        <input type="submit" name="button7" id="button7" value="全班加入測驗-&gt;" />
+                      </div>
+                      <div style=" background-color:#FFF; border: dotted 1px #ACACAC; min-height:540px; width:100%;">
+                        <table width="100%" align="center" class="table3 tableTRColor">
+                          <tr>
+                            <th>編號</th>
+                            <th>姓名</th>
+                            <th>身份字號</th>
+                            <th>入學年</th>
+                            <th>年級</th>
+                            <th>班級</th>
+                            <th>選取
+                              <input type="checkbox" name="checkbox" id="checkbox" /></th>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox2" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三四</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox3" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox4" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox5" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox6" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox7" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox8" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox9" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox10" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox11" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox7" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox8" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox9" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox10" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox11" /></td>
+                          </tr>
+                        </table>
+                        <div class="page"><a href="" class="on">1</a> <a href="">2</a> <a href="">3</a> <a href="">4</a> <a href="">5</a></div>
+                      </div>
+                      <div style=" text-align:center; padding-top:5px;">
+                        <input type="submit" name="button3" id="button3" value="加入測驗-&gt;" />
+                      </div></td>
+                    <td valign="top" ><div style="text-align:left; padding-bottom:5px;">
+                        <input type="submit" name="button8" id="button8" value="&lt;-全班退出測驗"  onclick="location.href='AptitudeTest_Add_3_demo1.html'"/>
+                      </div>
+                      <div style=" background-color:#FFF; border: dotted 1px #ACACAC; min-height:540px; width:100%;">
+                        <table width="100%" align="center" class="table3 tableTRColor">
+                          <tr>
+                            <th>編號</th>
+                            <th>姓名</th>
+                            <th>身份字號</th>
+                            <th>入學年</th>
+                            <th>年級</th>
+                            <th>班級</th>
+                            <th>選取
+                              <input type="checkbox" name="checkbox2" id="checkbox12" /></th>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox2" id="checkbox13" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox2" id="checkbox15" /></td>
+                          </tr>
+                          <tr>
+                            <td>12646</td>
+                            <td>一二三</td>
+                            <td>A123456783</td>
+                            <td>100</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="checkbox" name="checkbox2" id="checkbox16" /></td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div style=" text-align:center; padding-top:5px;">
+                        <input type="submit" name="button6" id="button6" value="&lt;-退出測驗" onclick="location.href='AptitudeTest_Add_3_demo4.html'"/>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" style=" text-align:center; background-color:#FFF; border-bottom:0px;" class="NoBorder_Left"><input type="submit" name="button" id="button" value="上一步" onclick="window.location='TestBookin.html'"/>
+                      <input type="submit" name="button" id="button" value="下一步，送出資料" onclick="window.location='TestBookin_3.html'"/>
+                      &nbsp;&nbsp;&nbsp;</td>
+                  </tr>
+                </table>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        <!-- --> 
+      </div>
+      <div class="content_footer"></div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main-bottom START -->
+<div class="main-bottom">
+	<div class="wrapper">
+    </div>
+</div>
+<!-- main-bottom START -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="wrapper">
+    <div class="link"><a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a></div>
+    <div class="copyright">本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+
+</body>
+<!-- InstanceEnd --></html>
