@@ -150,12 +150,12 @@ a img {
 	margin-top: -1px;
 	position: relative;
 	z-index: 10;
-	width:2664px; /*888px*3*/
+	width: calc(918px * 3);
 	height:auto;
 }
 .tab-compare .tab-content .boxs { 
 	float:left;
-	width: 888px;
+	width: 918px;
 	height:auto;
 	position:relative;
 	z-index:11;
