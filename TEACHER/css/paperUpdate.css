@@ -162,7 +162,8 @@ a img {
 	padding-top:5px;
 }
 .tab-compare .tab-content .boxs > dd {
-	    margin-left: 0px;
+	margin-left: 0px;
+	width: calc(100% - 30px);
 }
 /***/
 .subsubMenu span.disabled {
