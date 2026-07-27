@@ -226,7 +226,9 @@ main {
       left: 0;
       right: 0;
       z-index: 9;
+			width: 30%;
       height: calc(1.5rem + 0.325rem);
+			
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -245,6 +247,36 @@ main {
         }
       }
     }
+		.chatInterface-bar{ 
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 9;
+			width: 70%;
+			height: calc(1.5rem + .325rem);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-end;
+			gap: $spacer;
+			padding: 0 .75rem;
+			color: $white;
+			.btn{
+				margin-top: -.25rem;
+			}
+			.btn-outline-primary{
+				&:hover, &:active{
+					background-color: $tertiary-300;
+					color: $primary;
+				}
+			}
+			[class*="btn-outline-"]{
+				background-color: $white;
+			}
+			[class*="btn-sm"]{
+				--bs-btn-padding-y: 0;
+			}
+		}
   }
 }
 .futuristic-frame {

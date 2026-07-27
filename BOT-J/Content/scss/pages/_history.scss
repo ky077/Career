@@ -300,6 +300,34 @@
 }
 
 
+//202607 for 國中諮詢系統
+.btn-float{
+	background-color: transparent;
+	border: 0;
+	color: $primary;
+	font-size: .75rem; 
+	position: fixed;
+	top: 50%;
+	right: $spacer*1.5;
+	transform: translateY(-50%);
+	transition: .35s ease;
+	> i{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 3rem;
+		height: 3rem;	
+		background-color: $primary;
+		border-radius: 100%;
+		color: $white;
+		font-size: 1.5rem; 
+	}
+	&:hover{
+		transform: translateY(-50%) scale(1.1);
+	}
+}
+
+
 
 
 

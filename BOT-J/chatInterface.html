@@ -63,10 +63,14 @@
         <div class="futuristic-frame-content px-0">
           <!-- -->
           <div class="futuristic-frame-tool">
-            <a href="chatEnd.html" id="END"><i class="fa-solid fa-arrow-right-from-bracket me-1" aria-hidden="true" title="結束聊天"></i><span>結束聊天</span></a>
+            <a href="chatEnd.html" id="END"><i class="fa-solid fa-arrow-right-from-bracket me-1" aria-hidden="true" title="結束聊天"></i><span class="d-inline-block d-lg-none">返回</span><span class="d-none d-lg-inline-block">結束聊天</span></a>
           </div>
           <!-- -->
           <div class="chatInterface-bar">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+              <label class="form-check-label" for="switchCheckDefault">語音回應</label>
+            </div>
           </div>
           <!-- -->
           <div class="chatInterface-content">
@@ -122,35 +126,35 @@
                   <div class="avatar">
                     <img src="Content/images/nice-hi.apng" alt=""/>
                   </div>
-									<div class="mission-list">
-                  <button type="button" class="mission-btn done">
-                  <div class="mission-btn-icon"><i class="fa-solid fa-heart"></i></div>
-                  <div class="mission-btn-text">興趣類型導覽</div>
-										<div class="mission-btn-progress">已完成</div>	
-                  <div class="mission-btn-note">MISSION 1</div>
-                  </button>
-                  <button type="button" class="mission-btn doing">
-                  <div class="mission-btn-icon"><i class="fa-solid fa-trophy"></i></div>
-                  <div class="mission-btn-text">我的前三名興趣</div>
-										<div class="mission-btn-progress">進行中</div>	
-                  <div class="mission-btn-note">MISSION 2</div>
-                  </button>
-                  <button type="button" class="mission-btn">
-                  <div class="mission-btn-icon"><i class="fa-solid fa-map"></i></div>
-                  <div class="mission-btn-text">我的興趣地圖</div>
-									<div class="mission-btn-progress">尚未開始</div>	
-                  <div class="mission-btn-note">MISSION 3</div>
-                  </button>
-                  <button type="button" class="mission-btn done">
-                  <div class="mission-btn-icon"><i class="fa-solid fa-flag"></i></div>
-                  <div class="mission-btn-text">升學與職涯探索</div>
-									<div class="mission-btn-progress">已完成</div>		
-                  <div class="mission-btn-note">MISSION 4</div>
-                  </button>
-									</div>	
+                  <div class="mission-list">
+                    <button type="button" class="mission-btn done">
+                    <div class="mission-btn-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div class="mission-btn-text">興趣類型導覽</div>
+                    <div class="mission-btn-progress">已完成</div>
+                    <div class="mission-btn-note">MISSION 1</div>
+                    </button>
+                    <button type="button" class="mission-btn doing">
+                    <div class="mission-btn-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="mission-btn-text">我的前三名興趣</div>
+                    <div class="mission-btn-progress">進行中</div>
+                    <div class="mission-btn-note">MISSION 2</div>
+                    </button>
+                    <button type="button" class="mission-btn">
+                    <div class="mission-btn-icon"><i class="fa-solid fa-map"></i></div>
+                    <div class="mission-btn-text">我的興趣地圖</div>
+                    <div class="mission-btn-progress">尚未開始</div>
+                    <div class="mission-btn-note">MISSION 3</div>
+                    </button>
+                    <button type="button" class="mission-btn done">
+                    <div class="mission-btn-icon"><i class="fa-solid fa-flag"></i></div>
+                    <div class="mission-btn-text">升學與職涯探索</div>
+                    <div class="mission-btn-progress">已完成</div>
+                    <div class="mission-btn-note">MISSION 4</div>
+                    </button>
+                  </div>
                 </div>
                 <hr class="text-primary my-5">
-								<!-- DOM由JS判定顯示 -->
+                <!-- DOM由JS判定顯示 -->
                 <div class="my-5 d-flex flex-column flex-sm-row justify-content-center">
                   <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-title="完成上方MISSION 2、3、4 探索任務，<br>即可看諮詢總結！">
                   <a class="btn btn-primary btn-lg rounded-pill m-2 px-4 link-scale result-btn disabled" href="#" id="start">點我看諮詢總結<i class="fa-regular fa-file-lines ms-1"></i></a>
@@ -159,12 +163,12 @@
                   <a class="btn btn-primary btn-lg rounded-pill m-2 px-4 link-scale result-btn disabled" href="#" id="start2">找出適合我的方向<i class="fa-regular fa-compass ms-1"></i></a>
                   </span>
                 </div>
-								<!-- 開啟樣式 - unwrap [data-bs-toggle="tooltip"]、顯示<i>、鎖icon由css隱藏-->
-								<!--<div class="my-5 d-flex flex-column flex-sm-row justify-content-center">
+                <!-- 開啟樣式 - unwrap [data-bs-toggle="tooltip"]、顯示<i>、鎖icon由css隱藏-->
+                <!--<div class="my-5 d-flex flex-column flex-sm-row justify-content-center">
                   <a class="btn btn-primary btn-lg rounded-pill m-2 px-4 link-scale result-btn" href="#" id="start">點我看諮詢總結<i class="fa-regular fa-file-lines ms-1"></i></a>
                   <a class="btn btn-primary btn-lg rounded-pill m-2 px-4 link-scale result-btn" href="#" id="start2">找出適合我的方向<i class="fa-regular fa-compass ms-1"></i></a>
                 </div>-->
-								<!-- 鎖住樣式 - wrap [data-bs-toggle="tooltip"]、隱藏<i>、鎖icon由css產生 -->
+                <!-- 鎖住樣式 - wrap [data-bs-toggle="tooltip"]、隱藏<i>、鎖icon由css產生 -->
                 <!--<div class="my-5 d-flex flex-column flex-sm-row justify-content-center">
                   <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-title="完成上方MISSION 2、3、4 探索任務，<br>即可看諮詢總結！">
                   <a class="btn btn-primary btn-lg rounded-pill m-2 px-4 link-scale result-btn disabled" href="#" id="start">點我看諮詢總結</a>
@@ -218,7 +222,7 @@
     </div>
   </div>
 </div>
-	
+
 <!-- ------- ------- ------- ------- ------- ------- ------- -->
 <!-- ------- ------- ------- ------- ------- ------- ------- -->
 <!-- ------- ------- ------- ------- ------- ------- ------- -->
@@ -354,10 +358,10 @@ function chat_analyze(method) {
 			// 捲軸捲動至最底部
 			$('.futuristic-frame-content').animate({
 				scrollTop: $('.futuristic-frame-content')[0].scrollHeight
-			}, 5000); 
+			}, 500); 
 
 			chat_robot();
-		}, 1000); // 模擬 loading 時間：1 秒	
+		}, 1000000); // 模擬 loading 時間：1 秒	
 	}
 }
 	
@@ -366,7 +370,7 @@ function chat_robot() {
     $('body').prepend(`
         <div id="spinner" class="spinner show">
 			<div class="spinner-border" role="status">
-			  <span class="visually-hidden-focusable">Loading...</span>
+			  <span class="visually">Loading...</span>
 			</div>
 		</div>
     `);
@@ -514,6 +518,6 @@ function unlockResultButtonsIfReady(status) {
     }
   });
 }
-</script>	
+</script>
 </body>
 </html>
