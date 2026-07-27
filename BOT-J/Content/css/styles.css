@@ -79,7 +79,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .form-switch .form-check-input, .form-switch .form-check-label { cursor: pointer; }
 .form-switch .form-check-input { position: relative; }
-.form-switch .form-check-input::after { content: "OFF"; display: inline-block; font-size: .6em; font-weight: 700; color: rgba(0, 0, 0, 0.5); position: absolute; top: 50%; right: .325em; transform: translateY(-50%); }
+.form-switch .form-check-input::after { content: "OFF"; display: inline-block; font-size: .6em; font-weight: 700; color: rgba(0, 0, 0, 0.5); position: absolute; top: 50%; right: .325em; transform: translateY(-50%); line-height: 1; }
 .form-switch .form-check-input:checked { background-color: #fffac2; }
 .form-switch .form-check-input:checked::after { content: "ON"; color: #007472; left: .5em; }
 
