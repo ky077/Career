@@ -88,7 +88,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.form-check-input:checked{
 		background-color: $tertiary-300;
-		
 		&::after{
 			content: "ON";
 			color: $primary-600;
