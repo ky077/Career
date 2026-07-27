@@ -309,6 +309,7 @@
 	position: fixed;
 	top: 50%;
 	right: $spacer*1.5;
+	z-index: 10;
 	transform: translateY(-50%);
 	transition: .35s ease;
 	> i{

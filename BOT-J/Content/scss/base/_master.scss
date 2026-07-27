@@ -228,23 +228,15 @@ main {
       z-index: 9;
 			width: 30%;
       height: calc(1.5rem + 0.325rem);
-			
       display: flex;
       flex-direction: row;
       align-items: center;
       padding: 0 .75rem;
+			font-size: $font-size-sm;
       a {
         color: shade-color($color, 5%);
         line-height: 1;
-        > span {
-          display: none;
-          @media screen and (min-width: 992px) {
-            display: inline;
-          }
-        }
-        i {
-          font-size: 1.25rem;
-        }
+				white-space: nowrap;
       }
     }
 		.chatInterface-bar{ 
@@ -261,6 +253,7 @@ main {
 			gap: $spacer;
 			padding: 0 .75rem;
 			color: $white;
+			font-size: $font-size-sm;
 			.btn{
 				margin-top: -.25rem;
 			}
