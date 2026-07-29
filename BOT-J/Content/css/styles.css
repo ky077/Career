@@ -457,10 +457,7 @@ samp { font-family: 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei',  'PingFan
 .chatInterface-frame.right .dialog .dialog-text::before { border-width: 1rem 1rem 0 0; border-color: #fff transparent transparent transparent; left: auto; right: -1rem; }
 .chatInterface-frame.right .dialog .dialog-text::after { border-width: 1rem 1rem 0 0; border-color: rgba(0, 0, 0, 0.15) transparent transparent transparent; left: auto; right: -1rem; }
 
-.chatInterface-footer { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; padding: 1rem; margin-bottom: 1rem; display: flex; /*.btn{
-	margin-left: 1rem;
-	margin-right: 1rem;
-}*/ }
+.chatInterface-footer { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; padding: 1rem; margin-bottom: 1rem; display: flex; }
 
 .completion-section.chat .task-complete.easy.done, .completion-section.chat .task-complete.medium.done, .completion-section.chat .task-complete.hard.done { color: #00918e; }
 
@@ -558,6 +555,11 @@ samp { font-family: 'Noto Sans', 'Noto Sans TC', 'Microsoft JhengHei',  'PingFan
 .result-btn.disabled > i, .result-btn[disabled] > i, .result-btn[disabled="disabled"] > i { display: none; }
 .result-btn.disabled::after, .result-btn[disabled]::after, .result-btn[disabled="disabled"]::after { content: "\f023"; font-family: "Font Awesome 6 Free"; font-weight: 900; margin-left: .25em; }
 
+.btn-one-chat { position: sticky; bottom: 1rem; margin-top: calc((5rem + 1rem*3) * -1 ); margin-left: auto; margin-right: calc((5rem + 1rem*2) * -1 ); display: flex; flex-direction: column; align-items: center; justify-content: center; width: 5rem; height: 5rem; z-index: 2; font-size: 0.875rem; white-space: nowrap; }
+.btn-one-chat > i { font-size: 1.75rem; margin-top: .125rem; }
+
+@media screen and (min-width: 992px) { .btn-one-chat { position: static; margin-top: -1.5rem; margin-left: auto; margin-right: auto; display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%; height: auto; font-size: 1rem; }
+  .btn-one-chat > i { font-size: 1rem; margin-top: 0; margin-left: .25rem; } }
 @media screen and (min-width: 576px) and (max-width: 991px) { .record-summary { margin-left: -3rem; margin-right: -3rem; } }
 .record-summary .record-title { color: #212529; display: flex; justify-content: center; overflow: hidden; }
 .record-summary .record-title > span { border-bottom: 2px solid #cce9e8; padding: 0 1rem .5rem 1rem; position: relative; }
