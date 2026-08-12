@@ -6,6 +6,7 @@
 		height: 10px;
 		background-image:url(../images/#{$get-path}/UI.png);
 		background-position: 0px -96px;
+		transform: translateX(-50%);
 	}
 	.subMenu-bg{ 
 		width:100%;
@@ -33,32 +34,32 @@
 	}
 	
 	&.sub1{
-		.subMenu-arrow{ margin-left: calc(938px/7*1 - 938px/7/2 - 10px/2);}
-		.subMenu-bg{ padding-left:10px;}
+		.subMenu-arrow{ margin-left: 100%/7*1 - 100%/7*.5; }
+		.subMenu-bg{   padding-left: 10px; }
 	}
 	&.sub2{
-		.subMenu-arrow{ margin-left: calc(938px/7*2 - 938px/7/2 - 10px/2);}
-		.subMenu-bg{ padding-left: calc(938px/7*1);}		
+		.subMenu-arrow{ margin-left: 100%/7*2 - 100%/7*.5; }
+		.subMenu-bg{   padding-left: 100%/7*1; }		
 	}
 	&.sub3{
-		.subMenu-arrow{ margin-left: calc(938px/7*3 - 938px/7/2 - 10px/2);}
-		.subMenu-bg{ padding-left: calc(938px/7*2);}		
+		.subMenu-arrow{ margin-left: 100%/7*3 - 100%/7*.5; }
+		.subMenu-bg{   padding-left: 100%/7*2; }		
 	}
 	&.sub4{
-		.subMenu-arrow{ margin-left: calc(938px/7*4 - 938px/7/2 - 10px/2);}
-		.subMenu-bg{ padding-left: calc(938px/7*3);}		
+		.subMenu-arrow{ margin-left: 100%/7*4 - 100%/7*.5; }
+		.subMenu-bg{   padding-left: 100%/7*3; }		
 	}
 	&.sub5{
-		.subMenu-arrow{ margin-left: calc(938px/7*5 - 938px/7/2 - 10px/2);}
-		.subMenu-bg{ padding-left: calc(938px/7*4);}		
+		.subMenu-arrow{ margin-left: 100%/7*5 - 100%/7*.5; }
+		.subMenu-bg{   padding-left: 100%/7*4; }		
 	}
 	&.sub6{
-		.subMenu-arrow{ margin-left: calc(938px/7*6 - 938px/7/2 - 10px/2);}
-		.subMenu-bg{ padding-left: calc(938px/7*5);}		
+		.subMenu-arrow{ margin-left: 100%/7*6 - 100%/7*.5; }
+		.subMenu-bg{   padding-left: 100%/7*5; }	 	
 	}
 	&.sub7{
-		.subMenu-arrow{ margin-left: calc(938px/7*7 - 938px/7/2 - 10px/2);}
-		.subMenu-bg{ padding-left: calc(938px/7*6);}		
+		.subMenu-arrow{ margin-left: 100%/7*7 - 100%/7*.5; }
+		.subMenu-bg{   padding-left: 100%/7*6; }		
 	}
 }
 
