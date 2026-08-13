@@ -155,7 +155,7 @@ a img {
 }
 .tab-compare .tab-content .boxs { 
 	float:left;
-	width: 888px;
+	width: calc(918px - 30px);
 	height:auto;
 	position:relative;
 	z-index:11;
@@ -181,4 +181,11 @@ a img {
 .img-responsive {
 	max-width:100%;
 	height:auto;
+}
+
+
+.content_block > .tab-compare > .tab-content > .boxs { 
+	width: 918px;
+
+
 }
