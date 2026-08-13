@@ -150,20 +150,19 @@ a img {
 	margin-top: -1px;
 	position: relative;
 	z-index: 10;
-	width: calc(918px * 3);
+	width:2664px; /*888px*3*/
 	height:auto;
 }
 .tab-compare .tab-content .boxs { 
 	float:left;
-	width: 918px;
+	width: 888px;
 	height:auto;
 	position:relative;
 	z-index:11;
 	padding-top:5px;
 }
 .tab-compare .tab-content .boxs > dd {
-	margin-left: 0px;
-	width: calc(100% - 30px);
+	    margin-left: 0px;
 }
 /***/
 .subsubMenu span.disabled {
@@ -182,48 +181,4 @@ a img {
 .img-responsive {
 	max-width:100%;
 	height:auto;
-}
-
-/*2026 4.0 update*/
-.tab-menu-slider {
-  position: relative;
-  padding: 0 32px;
-  overflow: hidden;
-}
-.tab-menu-slider .tab-menu-viewport {
-  width: 100%;
-  overflow: hidden;
-}
-.tab-menu-slider ul.tab-menu {
-  margin: 0;
-  padding: 0;
-}
-.tab-menu-slider ul.tab-menu li {
-  box-sizing: border-box;
-}
-.tab-menu-slider .tab-menu-arrow {
-  position: absolute;
-  top: 50%;
-  width: 26px;
-  height: 32px;
-  margin-top: -16px;
-  border: 1px solid #919191;
-  background: #fff;
-  color: #398006;
-  font-size: 18px;
-  line-height: 28px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 30;
-}
-.tab-menu-slider .tab-menu-arrow-left {
-  left: 0;
-}
-.tab-menu-slider .tab-menu-arrow-right {
-  right: 0;
-}
-.tab-menu-slider .tab-menu-arrow.disabled {
-  color: #888;
-  opacity: .35;
-  cursor: default;
 }

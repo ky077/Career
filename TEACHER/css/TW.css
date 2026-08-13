@@ -27,8 +27,7 @@ ul.menu {
     width: 10px;
     height: 10px;
     background-image: url(../images/TW/UI.png);
-    background-position: 0px -96px;
-    transform: translateX(-50%); }
+    background-position: 0px -96px; }
   .subMenu .subMenu-bg {
     width: 100%; }
     .subMenu .subMenu-bg span {
@@ -49,33 +48,33 @@ ul.menu {
     .subMenu a:hover, .subMenu a.active {
       color: #fced03; }
   .subMenu.sub1 .subMenu-arrow {
-    margin-left: 7.1428571429%; }
+    margin-left: calc(938px/7*1 - 938px/7/2 - 10px/2); }
   .subMenu.sub1 .subMenu-bg {
     padding-left: 10px; }
   .subMenu.sub2 .subMenu-arrow {
-    margin-left: 21.4285714286%; }
+    margin-left: calc(938px/7*2 - 938px/7/2 - 10px/2); }
   .subMenu.sub2 .subMenu-bg {
-    padding-left: 14.2857142857%; }
+    padding-left: calc(938px/7*1); }
   .subMenu.sub3 .subMenu-arrow {
-    margin-left: 35.7142857143%; }
+    margin-left: calc(938px/7*3 - 938px/7/2 - 10px/2); }
   .subMenu.sub3 .subMenu-bg {
-    padding-left: 28.5714285714%; }
+    padding-left: calc(938px/7*2); }
   .subMenu.sub4 .subMenu-arrow {
-    margin-left: 50%; }
+    margin-left: calc(938px/7*4 - 938px/7/2 - 10px/2); }
   .subMenu.sub4 .subMenu-bg {
-    padding-left: 42.8571428571%; }
+    padding-left: calc(938px/7*3); }
   .subMenu.sub5 .subMenu-arrow {
-    margin-left: 64.2857142857%; }
+    margin-left: calc(938px/7*5 - 938px/7/2 - 10px/2); }
   .subMenu.sub5 .subMenu-bg {
-    padding-left: 57.1428571429%; }
+    padding-left: calc(938px/7*4); }
   .subMenu.sub6 .subMenu-arrow {
-    margin-left: 78.5714285714%; }
+    margin-left: calc(938px/7*6 - 938px/7/2 - 10px/2); }
   .subMenu.sub6 .subMenu-bg {
-    padding-left: 71.4285714286%; }
+    padding-left: calc(938px/7*5); }
   .subMenu.sub7 .subMenu-arrow {
-    margin-left: 92.8571428571%; }
+    margin-left: calc(938px/7*7 - 938px/7/2 - 10px/2); }
   .subMenu.sub7 .subMenu-bg {
-    padding-left: 85.7142857143%; }
+    padding-left: calc(938px/7*6); }
 
 .subsubMenu {
   padding-top: 10px;
@@ -146,3 +145,5 @@ ul.menu {
         .content_block li dl dd .subtitle {
           color: #ff4301;
           font-size: 1.05em; }
+
+/*# sourceMappingURL=TW.css.map */
