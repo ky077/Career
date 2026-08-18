@@ -83,11 +83,6 @@ body::before, body::after { content: ""; display: block; position: fixed; top: 0
 body::before { background: radial-gradient(circle at 0% 10%, #fd7e14, transparent 40%), radial-gradient(circle at 100% 0%, #73cbeb, transparent 30%), radial-gradient(circle at 65% 90%, #fff799, transparent 40%), radial-gradient(circle at 0% 100%, #fff, transparent 30%); filter: blur(100px); z-index: -1; animation: floatBlob 12s ease-in-out infinite alternate; }
 body::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3C!--!https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/--%3E%3Crect fill='none' width='800' height='800'/%3E%3Cg fill='none' stroke='%23dee2e6' stroke-opacity='0.75' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23dee2e6' fill-opacity='0.75' %3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E"); /* https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ */ z-index: -2; }
 
-@keyframes floatBlob { 0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  25% { transform: translate(-5vw, -5vh) scale(1.05) rotate(15deg); }
-  50% { transform: translate(0, 0) scale(1.25) rotate(30deg); }
-  75% { transform: translate(5vw, 5vh) scale(0.97) rotate(15deg); }
-  100% { transform: translate(0, 0) scale(1) rotate(0deg); } }
 a { text-underline-offset: 5px; word-break: break-all; transition: all 0.2s ease-in-out; }
 
 .bg-opacity-5 { --bs-bg-opacity: .05; }
@@ -190,6 +185,11 @@ a { text-underline-offset: 5px; word-break: break-all; transition: all 0.2s ease
 .futuristic-img .futuristic-img-body { background-color: #fff; border: 1px solid #dee2e6; border-radius: 1rem; padding: .5rem; position: relative; z-index: 2; }
 .futuristic-img .futuristic-img-body > * { border-radius: 0.5rem; overflow: hidden; }
 
+@keyframes floatBlob { 0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  25% { transform: translate(-5vw, -5vh) scale(1.05) rotate(15deg); }
+  50% { transform: translate(0, 0) scale(1.25) rotate(30deg); }
+  75% { transform: translate(5vw, 5vh) scale(0.97) rotate(15deg); }
+  100% { transform: translate(0, 0) scale(1) rotate(0deg); } }
 @keyframes fadeIn { 0% { opacity: 0; }
   100% { opacity: 1; } }
 @keyframes fadeOut { 0% { opacity: 1; }
@@ -427,6 +427,8 @@ z-index: 1;*/ }
 .index .hero .hero-ip img { max-width: 100%; max-height: 100%; }
 .index .media { background-color: #f9fafb; padding-top: 3rem; padding-bottom: 3rem; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
 @media screen and (min-width: 1200px) { .index .media .ranking-section { margin-left: 3rem; } }
+.index .media .ranking-section h2 { position: relative; }
+.index .media .ranking-section h2::after { content: ""; display: block; width: 48px; height: 48px; background-image: url("../img/index/crown.png"); background-size: cover; position: absolute; top: 0; right: 0; transform: translate(25%, -75%); }
 .index .media .ranking-section .ranking-list { counter-reset: rank-counter; }
 .index .media .ranking-section .ranking-list li { counter-increment: rank-counter; padding-left: 0; }
 .index .media .ranking-section .ranking-list li > a { display: block; color: #212529; text-decoration: none; }
@@ -438,19 +440,20 @@ z-index: 1;*/ }
 .index .feature { background-color: #fff; padding-top: 3rem; padding-bottom: 3rem; }
 .index .feature .feature-title { font-size: 2.5rem; font-weight: 800; margin-top: 3rem; margin-bottom: 3rem; text-align: center; position: relative; }
 .index .feature .feature-title::before { content: ""; display: block; width: 3.75rem; height: 2px; background: -webkit-linear-gradient(left, #fd7e14 0%, #fff799 100%); background: -o-linear-gradient(left, #fd7e14 0%, #fff799 100%); background: linear-gradient(to right, #fd7e14 0%, #fff799 100%); position: absolute; top: 0; left: 50%; transform: translate(-50%, -0.75rem); }
-.index .feature .feature-title > small { display: block; text-align: center; font-size: 0.875rem; font-weight: 400; color: rgba(33, 37, 41, 0.5); margin-top: 1rem; }
+.index .feature .feature-title > small { display: block; text-align: center; font-size: 1rem; font-weight: 400; color: rgba(33, 37, 41, 0.5); margin-top: 1rem; }
 .index .feature .feature-content { margin: 0 2rem; }
 .index .feature .feature-heading { color: #0068b7; font-weight: 800; display: flex; align-items: center; margin-bottom: 1rem; }
 .index .feature .feature-number { font-family: "Orbitron", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1.5em; font-weight: 400; color: #fecba1; margin-right: .5rem; }
 .index .feature .feature-description { color: rgba(33, 37, 41, 0.75); font-size: .9rem; line-height: 2; }
+.index .feature .feature-IP { max-width: 40%; position: absolute; bottom: 0; left: -12.5%; }
 .index .testimonial { background-color: #f8f9fa; padding-top: 3rem; padding-bottom: 3rem; }
 .index .testimonial .testimonial-carousel::before { position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 0; background: linear-gradient(to right, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%); z-index: 1; }
 @media screen and (min-width: 992px) { .index .testimonial .testimonial-carousel::before { width: 25%; } }
 .index .testimonial .testimonial-carousel::after { position: absolute; content: ""; top: 0; right: 0; height: 100%; width: 0; background: linear-gradient(to left, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%); z-index: 1; }
 @media screen and (min-width: 992px) { .index .testimonial .testimonial-carousel::after { width: 25%; } }
 .index .testimonial .testimonial-carousel .item { padding-top: 2.5rem; }
-.index .testimonial .testimonial-carousel .item .testimonial-avatar { position: relative; z-index: 1; }
-.index .testimonial .testimonial-carousel .item .testimonial-avatar img { width: 5rem; height: 5rem; border: 1px solid #dee2e6; }
+.index .testimonial .testimonial-carousel .item .testimonial-avatar { filter: drop-shadow(0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)); position: relative; z-index: 1; }
+.index .testimonial .testimonial-carousel .item .testimonial-avatar img { width: 5rem; height: 5rem; border: 3px solid #fd7e14; }
 .index .testimonial .testimonial-carousel .item .testimonial-avatar .testimonial-icon { color: #fd7e14; font-size: 2rem; position: absolute; top: 100%; left: 50%; transform: translate(-50%, -50%); }
 .index .testimonial .testimonial-carousel .item .testimonial-avatar .testimonial-icon::before { content: ""; display: block; width: 75%; height: 1rem; background-color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
 .index .testimonial .testimonial-carousel .item .testimonial-content { margin-left: 1rem; margin-right: 1rem; margin-bottom: 1.5rem; margin-top: -2.5rem; }
@@ -467,14 +470,11 @@ z-index: 1;*/ }
 .index .testimonial .testimonial-carousel .owl-nav .owl-prev:hover, .index .testimonial .testimonial-carousel .owl-nav .owl-next:hover { color: #212529; }
 .index .testimonial .testimonial-carousel .owl-item.center .testimonial-text { transform: scale(1); }
 .index .testimonial .testimonial-carousel:hover .owl-nav { width: 300px; opacity: 1; }
-.index .join-us { /*background-image: url("../img/index/join-us.jpg");
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-background-position: center center;*/ }
-.index .join-us > [class*="container-"] { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 680px; }
-.index .join-us > [class*="container-"] > * { filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.75)) drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5)); }
-.index .join-us > [class*="container-"] .btn-light:hover { background-color: #fff799; }
+.index .join-us { width: 100%; height: 0; padding-bottom: 35.4166666667%; background-image: url("../img/index/join-us.jpg"); background-repeat: no-repeat; background-size: 100% 100%; background-position: center center; position: relative; }
+.index .join-us .join-us-dialog { background-color: #fff; border-radius: 100%; position: absolute; top: 50%; left: 25%; transform: translateY(-50%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; filter: drop-shadow(0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)); }
+.index .join-us .join-us-dialog::after { content: ""; display: block; width: 0; height: 0; border-style: solid; border-width: 1.5rem 0 1.5rem 5rem; border-color: transparent transparent transparent #fff; position: absolute; bottom: 10%; right: 5%; transform: rotate(45deg); z-index: -1; }
+.index .join-us .join-us-IP { width: auto; height: 33%; position: absolute; top: 50%; left: 62.5%; }
+.index .join-us .join-us-IP > img { max-width: 100%; max-height: 100%; }
 
 .news-nav .nav-link { font-size: 1.25rem; }
 .news-nav .nav-link.active { color: #fd7e14; position: relative; }
@@ -576,7 +576,7 @@ background-position: center center;*/ }
 .explore-card .explore-card-search-remark .btn-clear { margin-left: .5rem; padding: 0 .375rem; transform: scale(0.875); transform-origin: left center; }
 .explore-card .explore-card-badge-remark { color: rgba(33, 37, 41, 0.75); font-size: 0.875rem; text-align: right; }
 .explore-card .explore-card-badge-remark .explore-badge { margin-right: .25rem; }
-.explore-card .explore-card-list { margin-bottom: 3rem; /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list { margin-bottom: 3rem; }
 .explore-card .explore-card-list .card { background-color: transparent; border-color: transparent; margin-bottom: 1.5rem; }
 .explore-card .explore-card-list .card .card-body { background-color: rgba(var(--bs-body-bg-rgb), 0.75); padding: 1rem 1rem 1rem 2rem; }
 .explore-card .explore-card-list .card .card-body .card-title { color: #0068b7; display: flex; align-items: center; justify-content: space-around; flex: 1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0; position: relative; cursor: pointer; }
@@ -596,22 +596,23 @@ background-position: center center;*/ }
 .explore-card .explore-card-list .card .list-group .list-group-item:hover .explore-card-title { font-weight: 600; }
 .explore-card .explore-card-list .card:hover .card-body { background-color: #f3fbfd; }
 .explore-card .explore-card-list .card:hover .list-group .list-group-item { background-color: #fff; }
-.explore-card .explore-card-list .card[data-disc-code="01"] .card-body .card-title::before { background-image: url("../img/explore/disc-01.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="02"] .card-body .card-title::before { background-image: url("../img/explore/disc-02.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="03"] .card-body .card-title::before { background-image: url("../img/explore/disc-03.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="04"] .card-body .card-title::before { background-image: url("../img/explore/disc-04.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="05"] .card-body .card-title::before { background-image: url("../img/explore/disc-05.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="06"] .card-body .card-title::before { background-image: url("../img/explore/disc-06.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="07"] .card-body .card-title::before { background-image: url("../img/explore/disc-07.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="08"] .card-body .card-title::before { background-image: url("../img/explore/disc-08.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="09"] .card-body .card-title::before { background-image: url("../img/explore/disc-09.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="10"] .card-body .card-title::before { background-image: url("../img/explore/disc-10.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="11"] .card-body .card-title::before { background-image: url("../img/explore/disc-11.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="12"] .card-body .card-title::before { background-image: url("../img/explore/disc-12.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="13"] .card-body .card-title::before { background-image: url("../img/explore/disc-13.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="14"] .card-body .card-title::before { background-image: url("../img/explore/disc-14.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="15"] .card-body .card-title::before { background-image: url("../img/explore/disc-15.svg"); }
-.explore-card .explore-card-list .card[data-disc-code="16"] .card-body .card-title::before { background-image: url("../img/explore/disc-16.svg"); }
+.explore-card .explore-card-list .card[data-disc-code="00"] .card-body .card-title::before { background-image: url("../img/explore/disc-00.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="01"] .card-body .card-title::before { background-image: url("../img/explore/disc-01.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="02"] .card-body .card-title::before { background-image: url("../img/explore/disc-02.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="03"] .card-body .card-title::before { background-image: url("../img/explore/disc-03.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="04"] .card-body .card-title::before { background-image: url("../img/explore/disc-04.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="05"] .card-body .card-title::before { background-image: url("../img/explore/disc-05.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="06"] .card-body .card-title::before { background-image: url("../img/explore/disc-06.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="07"] .card-body .card-title::before { background-image: url("../img/explore/disc-07.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="08"] .card-body .card-title::before { background-image: url("../img/explore/disc-08.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="09"] .card-body .card-title::before { background-image: url("../img/explore/disc-09.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="10"] .card-body .card-title::before { background-image: url("../img/explore/disc-10.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="11"] .card-body .card-title::before { background-image: url("../img/explore/disc-11.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="12"] .card-body .card-title::before { background-image: url("../img/explore/disc-12.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="13"] .card-body .card-title::before { background-image: url("../img/explore/disc-13.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="14"] .card-body .card-title::before { background-image: url("../img/explore/disc-14.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="15"] .card-body .card-title::before { background-image: url("../img/explore/disc-15.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.explore-card .explore-card-list .card[data-disc-code="16"] .card-body .card-title::before { background-image: url("../img/explore/disc-16.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
 
 .explore-guide { position: relative; padding: 1rem; margin: .75rem 0; }
 .explore-guide .guide-timeline { position: absolute; z-index: 0; top: 0; left: 2.25rem; bottom: 0; width: 2px; background-color: #dee2e6; }
@@ -799,8 +800,7 @@ background-position: center center;*/ }
 /* 手機版：避免對話框太寬或超出畫面 */
 @media (max-width: 575.98px) { .xmind-ip-helper { min-width: 220px; max-width: calc(100vw - 1.5rem); }
   .xmind-ip-helper-text { font-size: .9rem; } }
-.user-data { background-color: #fff; padding: 1rem; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); text-align: center; }
-.user-data::before { content: ""; display: block; width: 2rem; height: 2rem; border-top: 4px solid #fd7e14; border-left: 4px solid #fd7e14; position: absolute; top: 0; left: 0; transform: translate(calc(-.5rem - 4px), calc(-.5rem - 4px)); filter: drop-shadow(0 0 0.25rem rgba(255, 255, 255, 0.325)); }
+.user-data { background-color: #fff; border: 1px solid #dee2e6; border-radius: 1rem; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); padding: 1rem; }
 .user-data.sticky-top { top: 1rem; }
 .user-data .avater { width: 5rem; height: 5rem; font-size: calc(5rem*.4); margin: 0 auto; background-color: #fd7e14; color: #fff; }
 .user-data .user-data-name { font-weight: 500; text-align: center; margin-top: .25rem; margin-bottom: 1rem; }
@@ -839,10 +839,29 @@ background-position: center center;*/ }
 .myRecommend-TA .data-tested .myRecommend-group { display: flex; flex-direction: column; gap: 1rem; background-color: rgba(222, 226, 230, 0.2); border-radius: 1rem; padding: 1.5rem; }
 .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-title { font-size: 0.875rem; color: #0039ac; margin-bottom: 0; }
 .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn { text-align: left; display: flex; align-items: center; justify-content: flex-start; border-color: #dee2e6; color: rgba(33, 37, 41, 0.75); transition: all 0.2s ease-in-out; padding: 0.5rem 1rem; border-radius: 1rem; background-color: #fff; }
-.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn::before { content: ""; display: inline-block; width: .325rem; height: .325rem; border-radius: 100%; background-color: #00bbff; margin-right: .75rem; }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn::before { content: ""; display: inline-block; width: 2.4rem; height: 2.4rem; margin-right: .5rem; background-repeat: no-repeat; background-size: 100%; background-position: center center; background-color: #0068b7; border-radius: 50%; }
 .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn::after { content: "\F285"; display: inline; font-family: "bootstrap-icons"; color: #dee2e6; margin-left: auto; }
-.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn:hover { border-color: #0039ac; background-color: #fff; transform: translateY(-0.5rem); box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn:hover { border-color: #0039ac; background-color: #fff; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); color: #0039ac; transform: translateY(-0.5rem); }
 .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn:hover::after { color: #0039ac; }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn:disabled, .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn.disabled { opacity: 1.0; }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn:disabled::after, .myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn.disabled::after { display: none; }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="00"]::before { background-image: url("../img/explore/disc-00.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="01"]::before { background-image: url("../img/explore/disc-01.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="02"]::before { background-image: url("../img/explore/disc-02.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="03"]::before { background-image: url("../img/explore/disc-03.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="04"]::before { background-image: url("../img/explore/disc-04.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="05"]::before { background-image: url("../img/explore/disc-05.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="06"]::before { background-image: url("../img/explore/disc-06.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="07"]::before { background-image: url("../img/explore/disc-07.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="08"]::before { background-image: url("../img/explore/disc-08.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="09"]::before { background-image: url("../img/explore/disc-09.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="10"]::before { background-image: url("../img/explore/disc-10.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="11"]::before { background-image: url("../img/explore/disc-11.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="12"]::before { background-image: url("../img/explore/disc-12.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="13"]::before { background-image: url("../img/explore/disc-13.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="14"]::before { background-image: url("../img/explore/disc-14.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="15"]::before { background-image: url("../img/explore/disc-15.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TA .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="16"]::before { background-image: url("../img/explore/disc-16.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
 
 .myRecommend-TI > .row:not(:last-child) { margin-bottom: 3rem; }
 .myRecommend-TI .myRecommend-card { border-color: transparent; background-color: transparent; height: 100%; min-height: 250px; }
@@ -872,12 +891,30 @@ background-position: center center;*/ }
 .myRecommend-TI .data-tested .myRecommend-group { display: flex; flex-direction: column; gap: 1rem; background-color: rgba(222, 226, 230, 0.2); border-radius: 1rem; padding: 1.5rem; }
 .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-title { font-size: 0.875rem; color: #006500; margin-bottom: 0; }
 .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn { text-align: left; display: flex; align-items: center; justify-content: flex-start; border-color: #dee2e6; color: rgba(33, 37, 41, 0.75); transition: all 0.2s ease-in-out; padding: 0.5rem 1rem; border-radius: 1rem; background-color: #fff; }
-.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn::before { content: ""; display: inline-block; width: .325rem; height: .325rem; border-radius: 100%; background-color: #00ab28; margin-right: .75rem; }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn::before { content: ""; display: inline-block; width: 2.4rem; height: 2.4rem; margin-right: .5rem; background-repeat: no-repeat; background-size: 100%; background-position: center center; background-color: #0068b7; border-radius: 50%; }
 .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn::after { content: "\F285"; display: inline; font-family: "bootstrap-icons"; color: #dee2e6; margin-left: auto; }
-.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn:hover { border-color: #006500; background-color: #fff; transform: translateY(-0.5rem); box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn:hover { border-color: #006500; background-color: #fff; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); color: #006500; transform: translateY(-0.5rem); }
 .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn:hover::after { color: #006500; }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn:disabled, .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn.disabled { opacity: 1.0; }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn:disabled::after, .myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn.disabled::after { display: none; }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="00"]::before { background-image: url("../img/explore/disc-00.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="01"]::before { background-image: url("../img/explore/disc-01.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="02"]::before { background-image: url("../img/explore/disc-02.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="03"]::before { background-image: url("../img/explore/disc-03.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="04"]::before { background-image: url("../img/explore/disc-04.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="05"]::before { background-image: url("../img/explore/disc-05.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="06"]::before { background-image: url("../img/explore/disc-06.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="07"]::before { background-image: url("../img/explore/disc-07.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="08"]::before { background-image: url("../img/explore/disc-08.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="09"]::before { background-image: url("../img/explore/disc-09.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="10"]::before { background-image: url("../img/explore/disc-10.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="11"]::before { background-image: url("../img/explore/disc-11.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="12"]::before { background-image: url("../img/explore/disc-12.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="13"]::before { background-image: url("../img/explore/disc-13.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="14"]::before { background-image: url("../img/explore/disc-14.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="15"]::before { background-image: url("../img/explore/disc-15.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
+.myRecommend-TI .data-tested .myRecommend-group .myRecommend-group-btn[data-disc-code="16"]::before { background-image: url("../img/explore/disc-16.svg"); /* https://fontawesome.com/ + https://icons.getbootstrap.com/ */ }
 
-/* CSS Document */
 .login { display: flex; justify-content: center; align-items: center; }
 
 .login-panel .futuristic-frame, .login-panel .explore-card .explore-card-list .card .card-body, .explore-card .explore-card-list .card .login-panel .card-body { background-color: rgba(255, 255, 255, 0.75); }
@@ -891,5 +928,5 @@ background-position: center center;*/ }
 .resetPD-panel { background-color: rgba(255, 255, 255, 0.85); border-radius: 0.375rem; padding: 2rem; }
 
 /* ******* ******* ******* ******* ******* ******* ******* 
-[References] =>  Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/ =>  Bootstrap Icons - https://icons.getbootstrap.com/ =>  Solartec - Renewable Energy Website Template - https://htmlcodex.com/renewable-energy-website-template =>  SVGBackgrounds - https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ =>  Font Awesome - https://fontawesome.com/
+[References] =>  Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/ =>  Bootstrap Icons - https://icons.getbootstrap.com/ =>  Font Awesome - https://fontawesome.com/ =>  Solartec - Renewable Energy Website Template - https://htmlcodex.com/renewable-energy-website-template =>  SVGBackgrounds - https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/
 ******* ******* ******* ******* ******* ******* ******* */

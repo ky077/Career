@@ -1,22 +1,10 @@
 //左
 .user-data{
-	background-color:$white;
+	background-color: $white;
+	border: 1px solid $border-color;
+	border-radius: $border-radius-xl;
+	box-shadow: $box-shadow-sm;
 	padding: $spacer;
-	box-shadow: $box-shadow;
-	text-align: center;
-	&::before{
-		content: "";
-		display: block;
-		width: 2rem;
-		height: 2rem;
-		border-top: 4px solid $primary;
-		border-left: 4px solid $primary;
-		position: absolute;
-		top: 0;
-		left: 0;
-		transform: translate(calc(-.5rem - 4px), calc(-.5rem - 4px));
-		filter: drop-shadow(0 0 .25rem rgba($white, .325));
-	}
 	&.sticky-top{
 		top: 1rem;
 	}
@@ -218,14 +206,17 @@
 			  padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
 				border-radius: $border-radius-xl;
 				background-color: $white;
-				&::before{
+				&::before{ 
 					content: "";
 					display: inline-block;
-					width: .325rem;
-					height: .325rem;
-					border-radius: 100%;
-					background-color: $light-color;
-					margin-right: .75rem;
+					width: 2.4rem;
+					height: 2.4rem;
+					margin-right: .5rem;
+					background-repeat: no-repeat;
+					background-size: 100%;
+					background-position: center center;
+					background-color: $secondary;
+					border-radius: 50%;
 				}
 				&::after{
 					content: "\F285";
@@ -237,13 +228,28 @@
 				&:hover{
 					border-color: $color;	
 					background-color: $white;
-					transform: translateY(-.5rem);
 					box-shadow: $box-shadow;
+					color: $color;	
+					transform: translateY(-.5rem);
 					&::after{
 						color: $color;	
 					}
 				}
+				&:disabled, &.disabled {
+					opacity: 1.0;
+					&::after{
+						display: none;
+					}
+				}
 			}	
+			
+			@for $i from 0 through 16 {
+			$code: if($i < 10, "0#{$i}", "#{$i}");
+			.myRecommend-group-btn[data-disc-code="#{$code}"]::before {
+				background-image: url("../img/explore/disc-#{$code}.svg");
+				/* https://fontawesome.com/ + https://icons.getbootstrap.com/ */
+			}
+			}
 		}
 	}
 }

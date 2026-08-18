@@ -1,3 +1,22 @@
+// use in body
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg)
+  }
+  25% {
+    transform: translate(-5vw, -5vh) scale(1.05) rotate(15deg)
+  }
+  50% {
+    transform: translate(0, 0) scale(1.25) rotate(30deg)
+  }
+  75% {
+    transform: translate(5vw, 5vh) scale(0.97) rotate(15deg)
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg)
+  }
+}
+
 // use in index
 @keyframes fadeIn {
   0% { opacity: 0;   }
