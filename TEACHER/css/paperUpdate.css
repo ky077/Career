@@ -38,6 +38,18 @@
 	font-size:110%;
 	line-height:1.6em;
 }
+.updateAlert hr{
+	display: block;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	color: gray;
+	unicode-bidi: isolate;
+	overflow: hidden;
+	border-style: inset;
+	border-width: 1px;
+}
 /* ******* ******* ******* ******* ******* ******* ******* */
 
 
@@ -186,6 +198,18 @@ a img {
 
 .content_block > .tab-compare > .tab-content > .boxs { 
 	width: 918px;
+}
 
+/**/
+.content_block > .tab-compare > .tab-content {
+  width: 100%;
+}
 
+.content_block > .tab-compare > .tab-content > .boxs {
+  float: none;
+  width: 100%;
+}
+
+.content_block > .tab-compare > .tab-content > #history {
+  display: none;
 }
