@@ -6,7 +6,7 @@
 			.item{ 
 				width: 100%;
 				height: 0;
-   			padding-bottom: 640/1920 * 100%;
+   			padding-bottom: calc((640/1920) * 100%);
 				margin-bottom: 1.5rem;
 				.item-bg {
 					position: absolute;
@@ -443,7 +443,7 @@
 	.join-us{
 		width: 100%;
 		height: 0;
-		padding-bottom: 680/1920*100%;
+		padding-bottom: calc((680/1920)*100%);
 		background-image: url("../img/index/join-us.jpg");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;

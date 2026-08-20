@@ -274,9 +274,9 @@ z-index: 1;*/ }
 .modal .modal-content { background-color: rgba(255, 255, 255, 0.85); box-shadow: 0 0 1rem rgba(0, 104, 183, 0.25); }
 
 .page-header { padding-top: 3rem; padding-bottom: 3rem; background-repeat: no-repeat; background-position: center center; background-size: cover; position: relative; }
-.page-header .page-header-title, .page-header h2 { color: #212529; filter: opacity(0.9); font-size: 3rem; font-weight: 700; text-align: center; margin-bottom: 1rem; }
+.page-header .page-header-title, .page-header h2 { color: #001525; filter: opacity(0.9); font-size: 3rem; font-weight: 700; text-align: center; margin-bottom: 1rem; }
 .page-header nav { filter: opacity(0.75); }
-.page-header .breadcrumb { color: rgba(33, 37, 41, 0.75); --bs-breadcrumb-divider-color: var(--bs-body-secondary-color); --bs-breadcrumb-item-active-color: var(--bs-body-secondary-color); }
+.page-header .breadcrumb { color: rgba(33, 37, 41, 0.75); --bs-breadcrumb-divider-color: var(--bs-body-secondary-color); --bs-breadcrumb-item-active-color: var(--bs-body-secondary-color); justify-content: center; }
 .page-header .breadcrumb a { color: rgba(33, 37, 41, 0.75); }
 .page-header .breadcrumb a:hover { color: rgba(33, 37, 41, 0.75); }
 
@@ -376,7 +376,7 @@ z-index: 1;*/ }
 .text-bg-SOC { color: #0f7280; background-color: #e8f8f9; border: 1px solid #bde6ea; }
 
 .index { width: 100%; overflow-x: hidden; }
-.index .hero .hero-carousel .item { width: 100%; height: 0; padding-bottom: 33.3333333333%; margin-bottom: 1.5rem; }
+.index .hero .hero-carousel .item { width: 100%; height: 0; padding-bottom: calc((640/1920) * 100%); margin-bottom: 1.5rem; }
 .index .hero .hero-carousel .item .item-bg { position: absolute; width: 100%; height: 100%; object-fit: cover; top: 0; left: 0; right: 0; bottom: 0; }
 .index .hero .hero-carousel .item .item-text { position: absolute; width: 100%; height: auto; top: auto; left: 0; right: 0; bottom: 20%; /*&::before, &::after{ 
 	content: "";
@@ -470,7 +470,7 @@ z-index: 1;*/ }
 .index .testimonial .testimonial-carousel .owl-nav .owl-prev:hover, .index .testimonial .testimonial-carousel .owl-nav .owl-next:hover { color: #212529; }
 .index .testimonial .testimonial-carousel .owl-item.center .testimonial-text { transform: scale(1); }
 .index .testimonial .testimonial-carousel:hover .owl-nav { width: 300px; opacity: 1; }
-.index .join-us { width: 100%; height: 0; padding-bottom: 35.4166666667%; background-image: url("../img/index/join-us.jpg"); background-repeat: no-repeat; background-size: 100% 100%; background-position: center center; position: relative; }
+.index .join-us { width: 100%; height: 0; padding-bottom: calc((680/1920)*100%); background-image: url("../img/index/join-us.jpg"); background-repeat: no-repeat; background-size: 100% 100%; background-position: center center; position: relative; }
 .index .join-us .join-us-dialog { background-color: #fff; border-radius: 100%; position: absolute; top: 50%; left: 25%; transform: translateY(-50%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; filter: drop-shadow(0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)); }
 .index .join-us .join-us-dialog::after { content: ""; display: block; width: 0; height: 0; border-style: solid; border-width: 1.5rem 0 1.5rem 5rem; border-color: transparent transparent transparent #fff; position: absolute; bottom: 10%; right: 5%; transform: rotate(45deg); z-index: -1; }
 .index .join-us .join-us-IP { width: auto; height: 33%; position: absolute; top: 50%; left: 62.5%; }
@@ -495,11 +495,24 @@ z-index: 1;*/ }
 .news-list .list-group-item:hover::before { opacity: 1; left: 0; }
 .news-list .list-group-item:hover .news-date { font-weight: 400; }
 
+.news .page-header::before { content: ""; display: block; width: 100%; height: 100%; position: absolute; top: auto; left: 50%; bottom: -9%; transform: translateX(-50%); background-image: url("../img/news/page-header-IP.png"); background-position: right 1rem bottom; background-repeat: no-repeat; background-size: auto calc(160/232*100%); z-index: 1; }
+@media screen and (min-width: 576px) { .news .page-header::before { background-image: url("../img/news/page-header-IP.png"), url("../img/news/page-header-star.png"); background-position: right 2rem bottom, left 2rem center; background-repeat: no-repeat; background-size: auto calc(160/232*100%), calc(416/1320*100%) auto; } }
+@media screen and (min-width: 768px) { .news .page-header::before { width: 720px; } }
+@media screen and (min-width: 992px) { .news .page-header::before { width: 960px; } }
+@media screen and (min-width: 1200px) { .news .page-header::before { width: 1140px; } }
+@media screen and (min-width: 1400px) { .news .page-header::before { width: 1320px; } }
+@media screen and (min-width: 1600px) { .news .page-header::before { width: 1320px; } }
+@media screen and (min-width: 1900px) { .news .page-header::before { width: 1320px; } }
+.news .page-header .page-header-title, .news .page-header h2 { position: relative; z-index: 2; text-align: left; }
+@media screen and (min-width: 576px) { .news .page-header .page-header-title, .news .page-header h2 { text-align: center; margin-top: 0; } }
+.news .page-header .breadcrumb { justify-content: flex-start; }
+@media screen and (min-width: 576px) { .news .page-header .breadcrumb { justify-content: center; } }
+
 .news-content .news-title { line-height: 1.5; }
 .news-content .news-date { margin-top: -1.5rem; text-align: right; }
 
 .intro .intro-why { background-color: rgba(255, 255, 255, 0.75); }
-.intro .intro-why .intro-why-title { font-weight: 800; margin-bottom: 1rem; }
+.intro .intro-why .intro-why-title { color: #001525; font-weight: 800; margin-bottom: 1rem; }
 .intro .intro-why .intro-why-title::before { content: ""; display: inline-block; width: 2.5rem; height: 3px; background: -webkit-linear-gradient(left, #fd7e14 0%, #fff799 100%); background: -o-linear-gradient(left, #fd7e14 0%, #fff799 100%); background: linear-gradient(to right, #fd7e14 0%, #fff799 100%); margin-right: .75rem; vertical-align: middle; }
 .intro .intro-why .intro-why-content { color: rgba(33, 37, 41, 0.75); line-height: 2; }
 .intro .intro-why .intro-why-content strong { font-weight: 600; color: #fd7e14; display: inline-block; position: relative; }

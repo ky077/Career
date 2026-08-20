@@ -6,7 +6,7 @@
 	background-size: cover;
 	position: relative;
 	.page-header-title, h2{
-		color: $body-color;
+		color: $secondary-900;
     filter: opacity(0.9);
 		font-size: map-get($display-font-sizes, 5);
 		font-weight: $font-weight-bold;
@@ -20,6 +20,7 @@
 		color: $body-secondary-color;
 		--bs-breadcrumb-divider-color: var(--bs-body-secondary-color);
 		--bs-breadcrumb-item-active-color: var(--bs-body-secondary-color);
+		justify-content: center;
 		a{
 			color: $body-secondary-color;
 			&:hover{
