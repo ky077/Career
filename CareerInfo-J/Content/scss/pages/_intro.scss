@@ -85,7 +85,7 @@
 		//.intro-help-*
 		@mixin introCardStyles($color, $counter){
 			&.futuristic-shadow{
-				filter: drop-shadow(0 .125rem .5rem rgba($color, .5));
+				filter: drop-shadow(0 .125rem .5rem rgba($color, .75));
 			}
 			.card{
 				background-color: rgba($blue-800, .9);
