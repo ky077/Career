@@ -35,9 +35,12 @@
 				}
 			}
 		}
+		.breadcrumb{
+			justify-content: flex-start;
+		}
 		.xmind{
 			width: 100%;
-			margin: 0 auto;
+			margin: map-get($spacers, 3) auto 0 auto;
 			text-align: center;
 			position: relative;
 			@media screen and (min-width: 992px) {

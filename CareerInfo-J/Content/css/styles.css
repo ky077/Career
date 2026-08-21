@@ -443,7 +443,7 @@ z-index: 1;*/ }
 .index .feature .feature-title > small { display: block; text-align: center; font-size: 1rem; font-weight: 400; color: rgba(33, 37, 41, 0.5); margin-top: 1rem; }
 .index .feature .feature-content { margin: 0 2rem; }
 .index .feature .feature-heading { color: #0068b7; font-weight: 800; display: flex; align-items: center; margin-bottom: 1rem; }
-.index .feature .feature-number { font-family: "Orbitron", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1.5em; font-weight: 400; color: #fecba1; margin-right: .5rem; }
+.index .feature .feature-number { font-family: "Orbitron", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1.5em; font-weight: 400; color: #fd9843; margin-right: .5rem; }
 .index .feature .feature-description { color: rgba(33, 37, 41, 0.75); font-size: .9rem; line-height: 2; }
 .index .feature .feature-IP { max-width: 40%; position: absolute; bottom: 0; left: -12.5%; }
 .index .testimonial { background-color: #f8f9fa; padding-top: 3rem; padding-bottom: 3rem; }
@@ -652,7 +652,8 @@ z-index: 1;*/ }
   .exploreDetail .page-header .page-header-title .explore-badge + .explore-badge, .exploreDetail .page-header h2 .explore-badge + .explore-badge { transform: translateX(calc(100% + .25rem)); } }
 .exploreDetail .page-header .page-header-title .exploreDetail-header-img, .exploreDetail .page-header h2 .exploreDetail-header-img { margin-right: .25rem; }
 .exploreDetail .page-header .page-header-title .exploreDetail-header-img img, .exploreDetail .page-header h2 .exploreDetail-header-img img { width: 3.6rem; height: 3.6rem; }
-.exploreDetail .page-header .xmind { width: 100%; margin: 0 auto; text-align: center; position: relative; /*.xmind-remark{
+.exploreDetail .page-header .breadcrumb { justify-content: flex-start; }
+.exploreDetail .page-header .xmind { width: 100%; margin: 1rem auto 0 auto; text-align: center; position: relative; /*.xmind-remark{
 	background-color: $cyan-100;
 	border-radius: 50%;
 	color: $secondary;
