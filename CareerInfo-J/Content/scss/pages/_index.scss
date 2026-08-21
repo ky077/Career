@@ -234,21 +234,31 @@
 			margin-top: map-get($spacers, 5);
 			margin-bottom: map-get($spacers, 5);
 			text-align: center;
-			position: relative;
-			&::before{
-				content: "";
-				display: block;
-				width: 5rem*.75;
-				height: 2px;
-				background: -webkit-linear-gradient(left,     $primary 0%, $tertiary 100%);
-				background:      -o-linear-gradient(left,     $primary 0%, $tertiary 100%);
-				background:         linear-gradient(to right, $primary 0%, $tertiary 100%); 
-				position: absolute;
-				top: 0;
-				left: 50%;
-				transform: translate(-50%, -.75rem);
+			> span{
+				&::before{
+					content: "";
+					display: inline-block;
+					width: 2.5rem*1.5;
+					height: 3px;
+					background: -webkit-linear-gradient(left,     $tertiary 0%, $primary 100%);
+					background:      -o-linear-gradient(left,     $tertiary 0%, $primary 100%);
+					background:         linear-gradient(to right, $tertiary 0%, $primary 100%); 
+					margin-right: .75rem;
+					vertical-align: middle;
+				}
+				&::after{
+					content: "";
+					display: inline-block;
+					width: 2.5rem*1.5;
+					height: 3px;
+					background: -webkit-linear-gradient(left,     $primary 0%, $tertiary 100%);
+					background:      -o-linear-gradient(left,     $primary 0%, $tertiary 100%);
+					background:         linear-gradient(to right, $primary 0%, $tertiary 100%); 
+					margin-left: .75rem;
+					vertical-align: middle;
+				}	
 			}
-			>small{
+			> small{
 				display: block;
 				text-align: center;
 				font-size: $font-size-base;
