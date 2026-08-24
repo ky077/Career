@@ -1,6 +1,6 @@
 .index{
 	width: 100%;
-	overflow-x: hidden;
+	overflow: hidden;
 	.hero{
 		.hero-carousel{
 			.item{ 
@@ -162,18 +162,20 @@
 				margin-left: map-get($spacers, 5);
 			}	
 			h2{
-				position: relative;
-				&::after{
-					content: "";
-					display: block;
-					width: 48px;
-					height: 48px;
-					background-image: url("../img/index/crown.png");
-					background-size: cover;
-					position: absolute;
-					top: 0;
-					right: 0;
-					transform: translate(25%, -75%);
+				> small{
+					position: relative;	
+					&::after{
+						content: "";
+						display: block;
+						width: 48px;
+						height: 48px;
+						background-image: url("../img/index/crown.png");
+						background-size: cover;
+						position: absolute;
+						top: 0;
+						right: 0;
+						transform: translate(75%, -75%);
+					}
 				}
 			}
 			.ranking-list{
@@ -234,28 +236,39 @@
 			margin-top: map-get($spacers, 5);
 			margin-bottom: map-get($spacers, 5);
 			text-align: center;
-			> span{
+			> span{  
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				@media screen and (min-width: 992px) {
+				flex-direction: row;	
+				}
 				&::before{
 					content: "";
-					display: inline-block;
+					display: inline-block;	
 					width: 2.5rem*1.5;
 					height: 3px;
 					background: -webkit-linear-gradient(left,     $tertiary 0%, $primary 100%);
 					background:      -o-linear-gradient(left,     $tertiary 0%, $primary 100%);
 					background:         linear-gradient(to right, $tertiary 0%, $primary 100%); 
-					margin-right: .75rem;
-					vertical-align: middle;
+					margin: .75rem auto;
+					@media screen and (min-width: 992px) {
+					margin: 0 .75rem 0 0;	
+					}
 				}
 				&::after{
 					content: "";
-					display: inline-block;
+					display: inline-block;	
 					width: 2.5rem*1.5;
 					height: 3px;
 					background: -webkit-linear-gradient(left,     $primary 0%, $tertiary 100%);
 					background:      -o-linear-gradient(left,     $primary 0%, $tertiary 100%);
 					background:         linear-gradient(to right, $primary 0%, $tertiary 100%); 
-					margin-left: .75rem;
-					vertical-align: middle;
+					margin: .75rem auto;
+					@media screen and (min-width: 992px) {
+					margin: 0 0 0 .75rem;	
+					}
 				}	
 			}
 			> small{
