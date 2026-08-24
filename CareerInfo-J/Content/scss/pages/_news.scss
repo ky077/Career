@@ -168,12 +168,12 @@
 			position: absolute;
 			top: auto;
 			left: 50%;
-			bottom:-9%;
+			bottom:-9%*.8;
 			transform: translateX(-50%);
 			background-image: url("../img/news/page-header-IP.png");	
 			background-position: right $spacer bottom;
 			background-repeat: no-repeat;
-			background-size: auto calc(160/232*100%*.82);
+			background-size: auto calc(160/232*100%*.8);
 			z-index: 1;
 			@media screen and (min-width: 576px) {
 			background-image: url("../img/news/page-header-IP.png"), url("../img/news/page-header-star.png");	
