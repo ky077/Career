@@ -516,6 +516,20 @@ z-index: 1;*/ }
 @media screen and (min-width: 576px) { .news .page-header .page-header-title, .news .page-header h2 { text-align: center; margin-top: 0; } }
 .news .page-header .breadcrumb { justify-content: flex-start; }
 @media screen and (min-width: 576px) { .news .page-header .breadcrumb { justify-content: center; } }
+.news .futuristic-frame-digital, .news .myRecommend-TA .myRecommend-card .card-body, .myRecommend-TA .myRecommend-card .news .card-body, .news .myRecommend-TI .myRecommend-card .card-body, .myRecommend-TI .myRecommend-card .news .card-body { padding-left: 1rem; padding-right: 1rem; }
+
+.newsContent .page-header::before { content: ""; display: block; width: 100%; height: 100%; position: absolute; top: auto; left: 50%; bottom: -9%; transform: translateX(-50%); background-image: url("../img/news/page-header-IP.png"); background-position: right 1rem bottom; background-repeat: no-repeat; background-size: auto calc(160/232*100%*.82); z-index: 1; }
+@media screen and (min-width: 576px) { .newsContent .page-header::before { background-image: url("../img/news/page-header-IP.png"), url("../img/news/page-header-star.png"); background-position: right 2rem bottom, left 2rem center; background-repeat: no-repeat; background-size: auto calc(160/232*100%*.8), calc(416/1320*100%) auto; } }
+@media screen and (min-width: 768px) { .newsContent .page-header::before { width: 720px; } }
+@media screen and (min-width: 992px) { .newsContent .page-header::before { width: 960px; } }
+@media screen and (min-width: 1200px) { .newsContent .page-header::before { width: 1140px; } }
+@media screen and (min-width: 1400px) { .newsContent .page-header::before { width: 1320px; } }
+@media screen and (min-width: 1600px) { .newsContent .page-header::before { width: 1320px; } }
+@media screen and (min-width: 1900px) { .newsContent .page-header::before { width: 1320px; } }
+.newsContent .page-header .page-header-title, .newsContent .page-header h2 { position: relative; z-index: 2; text-align: left; }
+@media screen and (min-width: 576px) { .newsContent .page-header .page-header-title, .newsContent .page-header h2 { text-align: center; margin-top: 0; } }
+.newsContent .page-header .breadcrumb { justify-content: flex-start; }
+@media screen and (min-width: 576px) { .newsContent .page-header .breadcrumb { justify-content: center; } }
 
 .news-content .news-title { line-height: 1.5; }
 .news-content .news-date { margin-top: -1.5rem; text-align: right; }
