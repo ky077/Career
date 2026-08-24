@@ -79,8 +79,8 @@
               <div class="explore-intro-item">
                 <strong>72</strong>職科類別 </div>
               <div class="explore-intro-item">
-                <strong>07</strong>核心導覽
-                <a href="#" role="button" class="link-sky" data-bs-toggle="modal" data-bs-target="#guideModal"><i class="bi bi-question-circle-fill"></i></a>
+                <strong>07</strong>
+                <a href="#" role="button" class="link-sky" data-bs-toggle="modal" data-bs-target="#guideModal">核心導覽<i class="bi bi-question-circle-fill ms-1"></i></a>
               </div>
             </div>
           </div>
@@ -930,6 +930,26 @@ $(document).ready(function () {
     updateExploreHelper();
   }
 
+  function scrollToExploreCard(discCode) {
+    if (!discCode) return;
+
+    // 等推薦群科展開動畫完成後再計算位置，避免捲動目標因前方卡片展開而偏移。
+    window.setTimeout(function () {
+      const $targetCard = $exploreCards.filter(function () {
+        return $(this).attr('data-disc-code') === discCode;
+      }).first();
+
+      if (!$targetCard.length || !$targetCard.is(':visible')) return;
+
+      const headerHeight = $('header').outerHeight() || 0;
+      const targetTop = Math.max(0, $targetCard.offset().top - headerHeight - 20);
+
+      $('html, body').stop().animate({
+        scrollTop: targetTop
+      }, 500);
+    }, 450);
+  }
+
   // 使用 input 事件，支援鍵盤輸入、貼上、手機輸入法
   $exploreSearch.on('input', function () {
     filterExploreCards(this.value);
@@ -954,6 +974,15 @@ $(document).ready(function () {
       filterRecommendGroups();
     }
   });
+
+  // 從「我的推薦」頁面的群科按鈕進入時，直接套用相同的推薦篩選。
+  const initialParams = new URLSearchParams(window.location.search);
+  const initialFilter = initialParams.get('filter');
+  const initialDiscCode = initialParams.get('disc');
+  if (initialFilter === 'recommend') {
+    filterRecommendGroups();
+    scrollToExploreCard(initialDiscCode);
+  }
 
   // 小幫手 可由使用者主動關閉；之後即使無搜尋條件也不再自動出現
   $('#exploreHelperToast [data-bs-dismiss="toast"]').on('click', function () {
