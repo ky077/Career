@@ -512,10 +512,9 @@ z-index: 1;*/ }
 @media screen and (min-width: 1400px) { .news .page-header::before { width: 1320px; } }
 @media screen and (min-width: 1600px) { .news .page-header::before { width: 1320px; } }
 @media screen and (min-width: 1900px) { .news .page-header::before { width: 1320px; } }
-.news .page-header .page-header-title, .news .page-header h2 { position: relative; z-index: 2; text-align: left; }
+.news .page-header > [class*="container"] { position: relative; z-index: 2; transform: translateY(-1.5rem); }
+.news .page-header .page-header-title, .news .page-header h2 { text-align: left; }
 @media screen and (min-width: 576px) { .news .page-header .page-header-title, .news .page-header h2 { text-align: center; margin-top: 0; } }
-.news .page-header .breadcrumb { justify-content: flex-start; }
-@media screen and (min-width: 576px) { .news .page-header .breadcrumb { justify-content: center; } }
 .news .futuristic-frame-digital, .news .myRecommend-TA .myRecommend-card .card-body, .myRecommend-TA .myRecommend-card .news .card-body, .news .myRecommend-TI .myRecommend-card .card-body, .myRecommend-TI .myRecommend-card .news .card-body { padding-left: 1rem; padding-right: 1rem; }
 
 .newsContent .page-header::before { content: ""; display: block; width: 100%; height: 100%; position: absolute; top: auto; left: 50%; bottom: -7.2%; transform: translateX(-50%); background-image: url("../img/news/page-header-IP.png"); background-position: right 1rem bottom; background-repeat: no-repeat; background-size: auto calc(160/232*100%*.8); z-index: 1; }
@@ -526,7 +525,8 @@ z-index: 1;*/ }
 @media screen and (min-width: 1400px) { .newsContent .page-header::before { width: 1320px; } }
 @media screen and (min-width: 1600px) { .newsContent .page-header::before { width: 1320px; } }
 @media screen and (min-width: 1900px) { .newsContent .page-header::before { width: 1320px; } }
-.newsContent .page-header .page-header-title, .newsContent .page-header h2 { position: relative; z-index: 2; text-align: left; }
+.newsContent .page-header > [class*="container"] { position: relative; z-index: 2; transform: translateY(-1.5rem); }
+.newsContent .page-header .page-header-title, .newsContent .page-header h2 { text-align: left; }
 @media screen and (min-width: 576px) { .newsContent .page-header .page-header-title, .newsContent .page-header h2 { text-align: center; margin-top: 0; } }
 .newsContent .page-header .breadcrumb { justify-content: flex-start; }
 @media screen and (min-width: 576px) { .newsContent .page-header .breadcrumb { justify-content: center; } }

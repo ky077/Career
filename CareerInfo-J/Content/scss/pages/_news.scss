@@ -134,19 +134,16 @@
 				}
 			}	
 		}
-		.page-header-title, h2{
+		> [class*="container"] {
 			position: relative;
 			z-index: 2;
+			    transform: translateY(-1.5rem);
+		}
+		.page-header-title, h2{
 			text-align: left;
 			@media screen and (min-width: 576px) {
 			text-align: center;	
 			margin-top: 0;	
-			}
-		}
-		.breadcrumb{
-			justify-content: flex-start;
-			@media screen and (min-width: 576px) {
-			justify-content: center;		
 			}
 		}
 	}
@@ -194,9 +191,12 @@
 				}
 			}	
 		}
-		.page-header-title, h2{
+		> [class*="container"] {
 			position: relative;
 			z-index: 2;
+			    transform: translateY(-1.5rem);
+		}
+		.page-header-title, h2{
 			text-align: left;
 			@media screen and (min-width: 576px) {
 			text-align: center;	
