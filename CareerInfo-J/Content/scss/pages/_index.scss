@@ -487,22 +487,31 @@
 			justify-content: center;
 			filter: drop-shadow($box-shadow-sm);
 			.join-us-title{
-				font-size: 2.5vw;
+				font-size: 3vw;
 				color: $secondary;
 				font-weight: $font-weight-bold; 
 				margin-top: 1vw;
 				margin-bottom: 1vw;
+				@media screen and (min-width: 1600px) {
+				font-size: 2.5vw;	
+				}
 			}
 			.join-us-text{
-				font-size: 1.25vw;
+				font-size: 1.5vw;
 				color: $body-secondary-color;
 				margin-bottom: 1vw;
+				@media screen and (min-width: 1600px) {
+				font-size: 1.25vw;	
+				}
 			}
 			.join-us-btn{
-				font-size: 1vw;
+				font-size: 1.5vw;
 				padding: .325vw 1.5vw;
 				margin-top: .5vw;
 				transition: $transition-base;
+				@media screen and (min-width: 1600px) {
+				font-size: 1vw;	
+				}
 			}
 			&::after{ 
 				content: "";
