@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
     helperButton.type = 'button';
     helperButton.className = 'guide-helper-btn';
     helperButton.setAttribute('aria-label', '開啟讚寶小幫手：' + guideTitle.textContent.trim());
-    helperButton.innerHTML = '讚寶提示';
+    helperButton.innerHTML = '<span>讚寶提示</span>';
     // Toast 未被使用者關閉前，標題旁按鈕先隱藏；使用者關閉 Toast 後才顯示。
     helperButton.hidden = true;
 

@@ -450,10 +450,10 @@
                 <div class="step-content">
                   <div class="card step-card">
                     <div class="row g-0">
-                      <div class="col-md-3">
+                      <div class="col-lg-3">
                         <div class="card-img"><img class="" src="Content/img/explore/senior_intro_01.jpg" alt=""></div>
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-lg-8">
                         <div class="card-body">
                           <h5 class="card-title">職科介紹</h5>
                           <p class="card-text">以淺顯易懂的文字說明，並搭配各職科常使用的儀器或場地照片，幫助同學認識各職科所學在日常生活中的應用及重要性。</p>
@@ -468,10 +468,10 @@
                 <div class="step-content">
                   <div class="card step-card">
                     <div class="row g-0">
-                      <div class="col-md-3">
+                      <div class="col-lg-3">
                         <div class="card-img"><img class="" src="Content/img/explore/senior_intro_02.jpg" alt=""></div>
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-lg-8">
                         <div class="card-body">
                           <h5 class="card-title">知識、技能與能力</h5>
                           <p class="card-text">在各職科將學習哪些知識及技能呢？以表格清楚呈現各職科重點課程及學習內容，同學並可透過實習課照片先一探究竟！</p>
@@ -486,10 +486,10 @@
                 <div class="step-content">
                   <div class="card step-card">
                     <div class="row g-0">
-                      <div class="col-md-3">
+                      <div class="col-lg-3">
                         <div class="card-img"><img class="" src="Content/img/explore/senior_intro_03.jpg" alt=""></div>
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-lg-8">
                         <div class="card-body">
                           <h5 class="card-title">興趣及特質</h5>
                           <p class="card-text">若就讀的職科能符合自己性向及興趣，那學習將變成一件快樂的事！可參考各職科建議學生具備的能力、特質，同時配合你/妳做的性向、興趣測驗結果，選擇適合自己的職科。</p>
@@ -504,10 +504,10 @@
                 <div class="step-content">
                   <div class="card step-card">
                     <div class="row g-0">
-                      <div class="col-md-3">
+                      <div class="col-lg-3">
                         <div class="card-img"><img class="" src="Content/img/explore/senior_intro_04.jpg" alt=""></div>
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-lg-8">
                         <div class="card-body">
                           <h5 class="card-title">證照及競賽</h5>
                           <p class="card-text">進入各職科之後，將培養不同的專業能力，透過參加技能檢定及各項技能競賽，不僅能檢視自己的學習狀況，更能為升學加分喔!</p>
@@ -522,10 +522,10 @@
                 <div class="step-content">
                   <div class="card step-card">
                     <div class="row g-0">
-                      <div class="col-md-3">
+                      <div class="col-lg-3">
                         <div class="card-img"><img class="" src="Content/img/explore/senior_intro_05.jpg" alt=""></div>
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-lg-8">
                         <div class="card-body">
                           <h5 class="card-title">如何進入此職科</h5>
                           <p class="card-text">找到自己想念的職科了嗎?哪些學校設有這些職科呢?依分發區列出設有各職科的高職及五專學校，方便同學查詢，並可直接連結到各校網站，取得更多資訊。</p>
@@ -540,10 +540,10 @@
                 <div class="step-content">
                   <div class="card step-card">
                     <div class="row g-0">
-                      <div class="col-md-3">
+                      <div class="col-lg-3">
                         <div class="card-img"><img class="" src="Content/img/explore/senior_intro_06.jpg" alt=""></div>
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-lg-8">
                         <div class="card-body">
                           <h5 class="card-title">未來進路</h5>
                           <p class="card-text">分別介紹各職科未來的升學及就業方向，升學部分包括升學管道、大學相關科系的整理，就業部分除了介紹可從事的相關產業及職務，同時以兩位成功人士的奮鬥故事，作為同學的學習典典範。</p>
@@ -558,10 +558,10 @@
                 <div class="step-content">
                   <div class="card step-card">
                     <div class="row g-0">
-                      <div class="col-md-3">
+                      <div class="col-lg-3">
                         <div class="card-img"><img class="" src="Content/img/explore/senior_intro_07.jpg" alt=""></div>
                       </div>
-                      <div class="col-md-8">
+                      <div class="col-lg-8">
                         <div class="card-body">
                           <h5 class="card-title">經驗分享談</h5>
                           <p class="card-text">藉由學長姐的心得分享、老師提供的學習建議與相關新聞報導，同學可以更充分了解各職科，也瞭解進入各職科之前可以先做的準備，未來學習路上將更能得心應手。</p>
@@ -930,24 +930,81 @@ $(document).ready(function () {
     updateExploreHelper();
   }
 
+  function getExploreHeaderHeight() {
+    return $('header .navbar').outerHeight() || $('header').outerHeight() || 0;
+  }
+
+  function waitForExploreLayout() {
+    const pageContent = document.querySelector('.explore .page-content');
+    const startedAt = Date.now();
+    const maxWait = 2500;
+
+    function hasRunningAnimation() {
+      if (!pageContent || typeof pageContent.getAnimations !== 'function') {
+        return false;
+      }
+
+      return pageContent.getAnimations({ subtree: true }).some(function (animation) {
+        return animation.playState === 'running';
+      });
+    }
+
+    return new Promise(function (resolve) {
+      let stableFrames = 0;
+
+      function checkLayout() {
+        const headerReady = $('header .navbar').length > 0;
+        const collapseAnimating = $exploreList.find('.collapsing').length > 0;
+        const motionFinished = !hasRunningAnimation();
+        const timedOut = Date.now() - startedAt >= maxWait;
+
+        if ((!collapseAnimating && motionFinished && headerReady) || timedOut) {
+          stableFrames += 1;
+        } else {
+          stableFrames = 0;
+        }
+
+        // 連續兩個畫格都穩定後才計算位置，避免剛完成動畫時仍有版面重排。
+        if (stableFrames >= 2 || timedOut) {
+          resolve();
+          return;
+        }
+
+        window.requestAnimationFrame(checkLayout);
+      }
+
+      const fontsReady = document.fonts && document.fonts.ready
+        ? document.fonts.ready.catch(function () {})
+        : Promise.resolve();
+
+      fontsReady.then(function () {
+        window.requestAnimationFrame(checkLayout);
+      });
+    });
+  }
+
   function scrollToExploreCard(discCode) {
     if (!discCode) return;
 
-    // 等推薦群科展開動畫完成後再計算位置，避免捲動目標因前方卡片展開而偏移。
-    window.setTimeout(function () {
+    waitForExploreLayout().then(function () {
       const $targetCard = $exploreCards.filter(function () {
         return $(this).attr('data-disc-code') === discCode;
       }).first();
 
       if (!$targetCard.length || !$targetCard.is(':visible')) return;
 
-      const headerHeight = $('header').outerHeight() || 0;
-      const targetTop = Math.max(0, $targetCard.offset().top - headerHeight - 20);
+      const targetRect = $targetCard[0].getBoundingClientRect();
+      const targetTop = Math.max(
+        0,
+        Math.round(targetRect.top + window.pageYOffset - getExploreHeaderHeight() - 20)
+      );
 
-      $('html, body').stop().animate({
-        scrollTop: targetTop
-      }, 500);
-    }, 450);
+      // 只發出一次捲動命令，避免 CSS scroll-behavior 與 jQuery animate 疊加造成位置偏移。
+      window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth'
+      });
+    });
   }
 
   // 使用 input 事件，支援鍵盤輸入、貼上、手機輸入法

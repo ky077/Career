@@ -405,6 +405,13 @@
 	color: $info;
 	padding: .125rem 3.25rem .125rem .5rem;
 	border-radius: $border-radius-pill;
+	min-height: 1em;
+	> span{
+		display: none;
+		@media screen and (min-width: 576px) {
+		display: inline;	
+		}
+	}
 	&::after{
 		content: "";
 		display: block;
