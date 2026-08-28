@@ -18,7 +18,6 @@
 				transform: translate(-50%, 0);
 			}
 		}
-		
 	}
 }
 
@@ -108,7 +107,7 @@
 			position: absolute;
 			top: auto;
 			left: 50%;
-			bottom:-9%;
+			bottom: -9%;
 			transform: translateX(-50%);
 			background-image: url("../img/news/news-header-IP.png");	
 			background-position: right $spacer bottom;
@@ -137,7 +136,10 @@
 		> [class*="container"] {
 			position: relative;
 			z-index: 2;
-			    transform: translateY(-1.5rem);
+			transform: translateY(-1.5rem);
+			@media screen and (min-width: 576px) {
+			transform: translateY(0);	
+			}
 		}
 		.page-header-title, h2{
 			text-align: left;
