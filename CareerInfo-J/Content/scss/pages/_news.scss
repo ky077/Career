@@ -196,7 +196,10 @@
 		> [class*="container"] {
 			position: relative;
 			z-index: 2;
-			    transform: translateY(-1.5rem);
+			transform: translateY(-1.5rem);
+			@media screen and (min-width: 576px) {
+			transform: translateY(0);	
+			}
 		}
 		.page-header-title, h2{
 			text-align: left;

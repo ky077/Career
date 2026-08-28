@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>註冊 | 讚生涯高中生生涯資訊系統</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" name="description">
+<meta content="生涯,資訊,讚,高中生,讚生涯,系統,找學門,找學類,找學系" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="讚生涯高中生生涯資訊系統" />
+<meta property="og:description" content="生涯規劃不再迷惘！讚生涯帶你掌握精彩職涯旅程！" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="Content/lib/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="Content/lib/animate.css-main/animate.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body>
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-border" role="status"> <span class="visually-hidden">載入中...</span> </div>
+</div>
+<!-- Spinner End -->
+
+<header> </header>
+<main class="register"> 
+  <!-- Content Start -->
+  <div class="container-fluid h-100">
+    <div class="row h-100 justify-content-center py-5">
+      <div class="col-10 col-sm-8 col-lg-6 col-xl-5 col-xxxl-4 register-panel wow animate__animated animate__fadeInUp">
+        <h2 class="text-center">註冊</h2>
+        <p class="small text-center text-secondary mb-4">註冊即可查看更多詳細資訊及個人化服務。</p>
+        <div class="mb-4">
+          <label for="inputName" class="form-label mb-1">姓名</label>
+          <input type="text" class="form-control" id="inputName" placeholder="請填寫真實中文姓名">
+        </div>
+        <div class="mb-4">
+          <label for="inputEmail" class="form-label mb-1">帳號</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="請輸入您的Email">
+        </div>
+        <div class="mb-4">
+          <label for="inputPassword" class="form-label mb-1">密碼</label>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" id="inputPassword" placeholder="請輸入6至15位英數字混和之密碼" aria-label="密碼" aria-describedby="passwordHelp">
+            <button class="btn btn-showHidePD" type="button" id="togglePassword" aria-label="顯示或隱藏密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="inputCheckPassword" class="form-label mb-1">確認密碼</label>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" id="inputCheckPassword" placeholder="請再次輸入密碼" aria-label="確認密碼" aria-describedby="passwordCheckHelp">
+            <button class="btn btn-showHidePD" type="button" id="toggleCheckPassword" aria-label="顯示或隱藏確認密碼"> <i class="bi bi-eye-slash-fill"></i> </button>
+          </div>
+        </div>
+        <div class="mb-1">
+          <button type="button" class="btn btn-primary w-100" id="register">註冊</button>
+        </div>
+        <div class="form-text text-center mb-4"> 已有生涯系統帳號？<a href="login.html">立即登入</a> </div>
+      </div>
+    </div>
+  </div>
+  <!-- Content End --> 
+</main>
+<footer> </footer>
+<!-- Back to Top --> 
+<a href="#" class="btn btn-outline-primary rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- JavaScript Libraries --> 
+<script src="Content/js/jquery-3.4.1.min.js"></script> 
+<script src="Content/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
+<script src="Content/lib/OwlCarousel2-2.3.4/owl.carousel.min.js"></script> 
+<script src="Content/lib/WOW-master/dist/wow.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.min.js"></script> 
+
+<!-- This web Javascript --> 
+<script src="Content/js/fn.js"></script> 
+<script src="Content/js/main.js"></script> 
+<script>
+
+//[註冊]
+$('#register').click(function(){
+	alertModalDOM('<div class="text-center">恭喜成功註冊，您現在可立即登入！</div>', size='md', btnOkText='確定');
+	$('#ALERT_OK').click(function(){
+		window.location.href = 'login.html';	
+	});
+});
+	
+</script>
+</body>
+</html>

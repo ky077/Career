@@ -535,6 +535,7 @@ z-index: 1;*/ }
 @media screen and (min-width: 1600px) { .newsContent .page-header::before { width: 1320px; } }
 @media screen and (min-width: 1900px) { .newsContent .page-header::before { width: 1320px; } }
 .newsContent .page-header > [class*="container"] { position: relative; z-index: 2; transform: translateY(-1.5rem); }
+@media screen and (min-width: 576px) { .newsContent .page-header > [class*="container"] { transform: translateY(0); } }
 .newsContent .page-header .page-header-title, .newsContent .page-header h2 { text-align: left; }
 @media screen and (min-width: 576px) { .newsContent .page-header .page-header-title, .newsContent .page-header h2 { text-align: center; margin-top: 0; } }
 .newsContent .page-header .breadcrumb { justify-content: flex-start; }
@@ -1015,6 +1016,24 @@ z-index: 1;*/ }
 .testSchedule-modal .modal-title { position: relative; padding-left: 7rem; }
 .testSchedule-modal .modal-title .modal-title-img { width: auto; height: calc(100% + 1rem + 1rem); position: absolute; z-index: 2; transform: translate(calc(-100% - .5rem), calc(19 / 160 * 100% * -1)); }
 .testSchedule-modal .modal-body { padding-top: 1.5rem; }
+
+.map .page-content { background-color: rgba(255, 255, 255, 0.75); }
+.map a { display: inline-block; border-radius: 0.375rem; color: #0068b7; text-decoration: none; padding: .25rem .5rem; }
+.map a:hover { background-color: #fff799; }
+
+.map-nav { list-style: decimal; list-style-position: inside; }
+.map-nav > li { margin-bottom: 1rem; }
+
+.map-explore-nav { border-left: 1px solid #dee2e6; list-style: none; margin-left: .25rem; padding-left: 1rem; position: relative; }
+.map-explore-nav > li { margin-bottom: 1rem; position: relative; }
+.map-explore-nav > li .explore-nav-title { display: flex; flex-direction: row; align-items: center; margin-left: -1rem; }
+.map-explore-nav > li .explore-nav-title::before, .map-explore-nav > li .explore-nav-title::after { content: ""; display: inline-block; height: 1px; background-color: #dee2e6; }
+.map-explore-nav > li .explore-nav-title::before { width: 1rem; margin-right: .5rem; }
+.map-explore-nav > li .explore-nav-title::after { flex: 1; margin-left: .5rem; }
+.map-explore-nav > li > ul { display: flex; flex-direction: row; flex-wrap: wrap; }
+.map-explore-nav > li > ul > li { width: 100%; margin-bottom: 0.5rem; color: #005392; }
+@media screen and (min-width: 576px) { .map-explore-nav > li > ul > li { width: 50%; } }
+@media screen and (min-width: 1200px) { .map-explore-nav > li > ul > li { width: 25%; } }
 
 .login { display: flex; justify-content: center; align-items: center; }
 
