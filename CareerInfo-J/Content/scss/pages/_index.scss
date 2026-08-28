@@ -43,41 +43,6 @@
 						width: 60%;	
 						}
 					}
-					/*&::before, &::after{ 
-						content: "";
-						display: block;
-						width: 35%;
-						height: 0;
-						padding-bottom: calc((75/780)*35%);
-						background-repeat: no-repeat;
-						background-size: 100% 100%;
-						filter: drop-shadow(0 0 .25rem rgba(0,0,0, .5));
-						position: absolute;
-					}
-					&::before{
-						background-image: url("../img/index/hero-left.svg");
-						top: auto;
-						left: 0;
-						right: auto;
-						bottom: 0;
-						animation: slideInLeft 2.5s forwards;
-						transform: translateY(120%);
-						@media screen and (min-width: 1200px) {
-						transform: translateY(85%);
-						}
-					}
-					&::after{  
-						background-image: url("../img/index/hero-right.svg");
-						top: 0;
-						left: auto;
-						right: 0;
-						bottom: auto;
-						animation: slideInRight 2.5s forwards;
-						transform: translateY(-100%);
-						@media screen and (min-width: 1200px) {
-						transform: translateY(-75%);
-						}
-					}*/
 				}
 			}
 			.owl-nav{
@@ -473,44 +438,59 @@
 		background-position: center center;
 		position: relative;
 		.join-us-dialog{
-			width: 50%;
-			height: 50%;
+			width: 70%;
+			height: 70%;
 			background-color: $white;
 			border-radius: 100%;
 			position: absolute;
 			top: 50%;
-			left: 20%;
+			left: 10%;
 			transform: translateY(-50%);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			filter: drop-shadow($box-shadow-sm);
+			@media screen and (min-width: 1200px) {
+			width: 50%;
+			height: 50%;
+			top: 50%;
+			left: 20%;	
+			}
 			.join-us-title{
-				font-size: 3vw;
+				font-size: 4vw;
 				color: $secondary;
 				font-weight: $font-weight-bold; 
 				margin-top: 1vw;
 				margin-bottom: 1vw;
-				@media screen and (min-width: 1600px) {
-				font-size: 2.5vw;	
+				@media screen and (min-width: 1200px) {
+				font-size: 3vw;	
+				}
+				@media screen and (min-width: 1400px) {
+				font-size: $h1-font-size;	
 				}
 			}
 			.join-us-text{
-				font-size: 1.5vw;
+				font-size: 2vw;
 				color: $body-secondary-color;
 				margin-bottom: 1vw;
-				@media screen and (min-width: 1600px) {
-				font-size: 1.25vw;	
+				@media screen and (min-width: 1200px) {
+				font-size: 1.5vw;	
+				}
+				@media screen and (min-width: 1400px) {
+				font-size: $h5-font-size;	
 				}
 			}
 			.join-us-btn{
-				font-size: 1.5vw;
+				font-size: 2vw;
 				padding: .325vw 1.5vw;
 				margin-top: .5vw;
 				transition: $transition-base;
-				@media screen and (min-width: 1600px) {
-				font-size: 1vw;	
+				@media screen and (min-width: 992px) {
+				font-size: 1.5vw;	
+				}
+				@media screen and (min-width: 1200px) {
+				font-size: $font-size-base;	
 				}
 			}
 			&::after{ 
@@ -533,7 +513,10 @@
 			height: 33%;
 			position: absolute;
 			top: 50%;
+			left: 80%;
+			@media screen and (min-width: 1200px) {
 			left: 70%;
+			}
 			> img{
 				max-width: 100%;
 				max-height: 100%;
