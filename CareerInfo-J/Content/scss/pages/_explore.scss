@@ -7,21 +7,6 @@
 			margin-bottom: 0;
 		}
 	}
-	/*.helper{ 
-		display: none;
-		@media screen and (min-width: 992px) {
-		display: block;	
-		}
-		position: fixed;
-		bottom: 4rem;
-		right: $spacer;
-		filter: drop-shadow($box-shadow-sm);
-		transition: bottom 0.35s ease, opacity 0.25s ease;
-		will-change: bottom, opacity;
-		&.is-near-footer {
-			bottom: var(--helper-footer-bottom, 4rem);
-		}
-	}	*/
 }
 
 .explore-IP-block{
@@ -286,120 +271,133 @@
 	}	
 }
 
-.explore-guide{
-	position: relative;
-	padding: 1rem;
-	margin: .75rem 0;
-	.guide-timeline{
-		position: absolute;
-		z-index: 0;
-		top: 0;
-		left: 1rem + 2.5rem*.5;
-		bottom: 0;
-		width: 2px;
-		background-color: $gray-300;
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: var(--line-height, 0%);
-			background: linear-gradient(to bottom, $primary, $info);
-			transition: height 0.3s ease-out;
-		}
-	}
-	.guide-step{
+.guide-modal{
+	.modal-title{ 
 		position: relative;
-		z-index: 1;
-		display: flex;
-		align-items: flex-start;
-    gap: map-get($spacers, 4);
-		&:not(:last-child){
-			margin-bottom: map-get($spacers, 5);	
-		}
-//		&:nth-of-type(1) .step-num{
-//			letter-spacing: .25em;
-//		}
-		.step-num{
-			display: flex;
-			flex-shrink: 0;
-			align-items: center;
-			justify-content: center;
-			background-color: $primary;
-			border-radius: 100%;
-			color: $white;
-			font-family: $font-family-monospace;
-			font-weight: 600;
-			width: 2.5rem;
-			height: 2.5rem;
-		}
-		.step-content{
-			.step-card{
-				--bs-card-border-radius: 0;
-				.card-img{
-					position: relative;
-					width: 100%;
-					height: 100%;
-					> img{
-							width: 100%;
-					height: 100%;	
-					}
-					&:after{
-						content: "";
-						display: block;
-						width: 100%;
-						height: 2px;
-						background: linear-gradient(to right, transparent, $cyan, transparent);
-						position: absolute;
-						top: -2px;
-						left: 0;
-						opacity: 0;
-					}
-				}
-				.card-title{
-					color: $secondary;
-					font-weight: 800;
-					font-size: 1.125rem;
-					border-left: .25rem solid $primary;
-					padding-left: .5rem;
-				}
-				.card-text{
-					color: $body-secondary-color;
-					line-height: $line-height-lg;
-					font-size: .9rem;
-				}
-			}	
+		padding-left: 6rem ;
+		.modal-title-img{
+			width: 6rem;
+			height: auto;
+			position: absolute;
+			top: calc(#{$modal-header-padding-y} * .5 * -1);
+			left: calc(#{$modal-header-padding-x} * .5 * -1);
+			z-index: 2;
 		}
 	}
-	.guide-step:hover{
-		.step-num{
-			transform: scale(1.15);
-			&::after {
-				content: "";
+	.modal-body{
+		.guide-content{
+			position: relative;
+			padding: 1rem;
+			margin: .75rem 0;
+			.guide-timeline{
 				position: absolute;
-				inset: -4px;
-				border-radius: 50%;
-				border: 2px solid $primary;
-				box-shadow: 0 0 .75rem rgba($primary, 0.5);
-				animation: pulse-ring 1.5s infinite;	
+				z-index: 0;
+				top: 0;
+				left: 1rem + 2.5rem*.5;
+				bottom: 0;
+				width: 2px;
+				background-color: $gray-300;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: var(--line-height, 0%);
+					background: linear-gradient(to bottom, $primary, $info);
+					transition: height 0.3s ease-out;
+				}
 			}
-		}
-		.step-content{
-			.step-card{
-				--bs-card-border-radius: 0;
-				--bs-card-border-color: var(--bs-primary);
-				--bs-card-bg: rgba(var(--bs-tertiary-rgb), .1);
-				transform: translateX(.5rem);
-				transition: $transition-base;
-				box-shadow: $box-shadow-sm;
-				.card-img{
-					&:after{
-						opacity: 1;
-						animation: scanMove 2.5s linear infinite;
+			.guide-step{
+				position: relative;
+				z-index: 1;
+				display: flex;
+				align-items: flex-start;
+				gap: map-get($spacers, 4);
+				&:not(:last-child){
+					margin-bottom: map-get($spacers, 5);	
+				}
+				.step-num{
+					display: flex;
+					flex-shrink: 0;
+					align-items: center;
+					justify-content: center;
+					background-color: $primary;
+					border-radius: 100%;
+					color: $white;
+					font-family: $font-family-monospace;
+					font-weight: 600;
+					width: 2.5rem;
+					height: 2.5rem;
+				}
+				.step-content{
+					.step-card{
+						--bs-card-border-radius: 0;
+						.card-img{
+							position: relative;
+							width: 100%;
+							height: 100%;
+							> img{
+									width: 100%;
+							height: 100%;	
+							}
+							&:after{
+								content: "";
+								display: block;
+								width: 100%;
+								height: 2px;
+								background: linear-gradient(to right, transparent, $cyan, transparent);
+								position: absolute;
+								top: -2px;
+								left: 0;
+								opacity: 0;
+							}
+						}
+						.card-title{
+							color: $secondary;
+							font-weight: 800;
+							font-size: 1.125rem;
+							border-left: .25rem solid $primary;
+							padding-left: .5rem;
+						}
+						.card-text{
+							color: $body-secondary-color;
+							line-height: $line-height-lg;
+							font-size: .9rem;
+						}
+					}	
+				}
+			}
+			.guide-step:hover{
+				.step-num{
+					transform: scale(1.15);
+					&::after {
+						content: "";
+						position: absolute;
+						inset: -4px;
+						border-radius: 50%;
+						border: 2px solid $primary;
+						box-shadow: 0 0 .75rem rgba($primary, 0.5);
+						animation: pulse-ring 1.5s infinite;	
 					}
 				}
-			}	
+				.step-content{
+					.step-card{
+						--bs-card-border-radius: 0;
+						--bs-card-border-color: var(--bs-primary);
+						--bs-card-bg: rgba(var(--bs-tertiary-rgb), .1);
+						transform: translateX(.5rem);
+						transition: $transition-base;
+						box-shadow: $box-shadow-sm;
+						.card-img{
+							&:after{
+								opacity: 1;
+								animation: scanMove 2.5s linear infinite;
+							}
+						}
+					}	
+				}
+			}				
 		}
 	}
 }

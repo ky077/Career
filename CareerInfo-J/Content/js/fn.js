@@ -17,33 +17,12 @@ function logState(){
 		//header
 		$('.nav-login').hide(); 
 		$('.nav-logout, .nav-user').show(); 
-		
-		//探索學類
-		/*if( fileName == 'explore2.html' || fileName == 'explore3.html'){
-			$('.login-divider').hide();						 
-										 
-			$('.card').show();   
-		 }*/
-		
 	} 
 	//未登入
 	else{ 
 		//header
 		$('.nav-login').show(); 
 		$('.nav-logout, .nav-user').hide(); 
-		
-		//探索
-		/*if (fileName.indexOf('explore') !== -1){
-			$('.btn-favorite').porp('disabled', true);
-		}*/
-		
-		//探索學類、探索學系
-		/*if( fileName == 'explore2.html' || fileName == 'explore3.html'){
-			$('.login-divider').show();						 
-										 
-			$('#introCate').show().siblings('.card').hide();   
-		 }*/
-		
 	}
 }
 
@@ -51,130 +30,6 @@ function logState(){
 function navActive(page){ 
 	$('.nav-' + page).addClass('active'); 
 }
-	
-
-//探索 [展開/收合]按鈕狀態
-function toggleCarouselState($btn, $targetCarousel) {
-  if ($btn.attr('aria-expanded') === 'true') {
-    $btn.attr('aria-expanded', 'false').find('span').html('展開');
-    $targetCarousel
-      .removeClass('row mx-0 gy-4')
-      .addClass('owl-carousel');
-    initCarousel('#' + $targetCarousel.attr('id'));
-
-  } else { // [false 收合狀態中]
-    $btn.attr('aria-expanded', 'true').find('span').html('收合');
-    $targetCarousel
-      .removeClass('owl-carousel')
-      .addClass('row mx-0 gy-4');
-    $targetCarousel.owlCarousel('destroy');
-  }
-}
-
-//探索 [展開/收合]按鈕顯示與否
-function checkCarouselItems($btn, $targetCarousel) {
-  var itemCount = $targetCarousel.children().length;
-  var responsiveSettings = {
-    0: 2,
-    576: 3,
-    768: 4,
-    992: 5,
-    1200: 6,
-    1400: 7,
-    1600: 8,
-    1900: 9
-  };
-
-  var windowWidth = $(window).width();
-  var itemsToShow;
-
-  $.each(responsiveSettings, function (breakpoint, items) {
-    if (windowWidth >= breakpoint) {
-      itemsToShow = items;
-    }
-  });
-
-  if (itemCount <= itemsToShow) {
-    $btn.hide();
-  } else {
-    $btn.show();
-  }
-}
-
-//探索 initCarousel
-function initCarousel(el) {
-  $(el).owlCarousel({
-    autoplay: false,
-    smartSpeed: 300,
-    loop: false,
-    nav: true,
-    navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>'],
-    dots: false,
-	autoWidth: true,  
-    responsiveClass: true,
-  });
-}
-
-//探索 explore-slider [加入/取消最愛]、[加入/取消比較]位置
-function sliderToolPosition() {
-	if ($('[class*="explore-content"]:visible').length > 0){ 
-		var toolTop = $('.explore-slider-tool').offset().top;	
-										
-		$(window).on('scroll resize', function() {
-			if ($(window).width() < 1200) {
-				var windowTop = $(window).scrollTop(); 
-				var footerOffset = $('footer').offset().top;
-    			var windowHeight = $(window).height();	
-				
-				if (windowTop > toolTop) { 
-					$('.explore-slider-tool').addClass('position-fixed'); 
-					if( windowTop + windowHeight >= footerOffset){  
-						$('.explore-slider-tool').removeClass('position-fixed')
-												 .addClass('position-absolute');   
-					} else{
-					   $('.explore-slider-tool').removeClass('position-absolute')   
-					}
-				} else { 
-					$('.explore-slider-tool').removeClass('position-fixed'); 
-				}
-			} else { 
-				$('.explore-slider-tool').removeClass('position-fixed'); 
-			}
-		});												
-	} 
-}
-
-//收合特效
-function collectAn(fromEl, toEl){ 
-	let clone = fromEl.clone().css({
-						'position': 'absolute', 
-						'top':      fromEl.offset().top, 
-						'left':     fromEl.offset().left, 
-						'width':    fromEl.width(),
-						'height':   fromEl.height(),
-						'z-index':  999999999
-					});
-	
-	let box_top = toEl.offset().top;
-	let box_left = toEl.offset().left;
-	
-	
-	clone.appendTo('body').animate({
-		'top':     box_top, 
-		'left':    box_left, 
-		'width':   20, 
-		height:    'auto' 
-	}, 
-	{
-		duration: 500, 
-		complete: function(){ 
-			clone.remove();
-		} 
-	}); 
-}
-
-
-
 
 
 //alertModal 警報視窗 (無右上X，不可點黑處關閉)  [sm|md|lg|xl]

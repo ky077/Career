@@ -108,9 +108,51 @@
 
 .modal {
 	backdrop-filter: blur(10px);
-	box-shadow: 0 .125rem .25rem rgba($secondary, .075);
   .modal-content {
-		background-color: rgba($white, .85);
-		box-shadow: 0 0 1rem rgba($secondary, .25);
+		box-shadow: 0 .125rem .5rem rgba($info, .5) ;
   }
 }
+.modal-dialog-scrollable .modal-body {
+	&::-webkit-scrollbar {
+		width: 11px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $white;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $info;
+    border-radius: 17px;
+		border: 3px solid $white;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .modal-lg,
+  .modal-xl,
+	.modal-xxl, 
+	.modal-xxxl  {
+    --#{$prefix}modal-width: #{$modal-lg};
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .modal-xl,
+	.modal-xxl, 
+	.modal-xxxl {
+    --#{$prefix}modal-width: #{$modal-xl};
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .modal-xl,
+	.modal-xxl {
+    --#{$prefix}modal-width: #{$modal-xxl};
+  }
+}
+@include media-breakpoint-up(xxxl) {
+	.modal-xxxl {
+    --#{$prefix}modal-width: #{$modal-xxxl};
+  }
+}		
+

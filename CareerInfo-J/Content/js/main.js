@@ -93,116 +93,27 @@
     });
   });
 
-  //學門、學類、學系是什麼？modal
-  /*$('[data-bs-target="#modal-exploreTip"]').click(function(e) {
-        e.preventDefault();
-		
-        // 檢查是否已經加載了模態框
-        if ($('#modal-exploreTip').length === 0) {
-            // 動態載入模態框內容
-            $.get('exploreTip.html', function(data) {
-                $('body').append(data);
-                $('#modal-exploreTip').modal('show');
-            });
-        } else {
-            // 顯示已經加載的模態框
-            $('#modal-exploreTip').modal('show');
-        }
-    });*/
+  //認識讚生涯測驗、如何安排測驗？modal
+  $('body').on('click', '[data-bs-target="#modal-myRecommend"]', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
 
-  //如何安排測驗？modal
-  $('[data-bs-target="#modal-testSchedule"]').click(function (e) {
-    e.preventDefault();
+		const href = $(this).attr('href');
 
-    // 檢查是否已經加載了模態框
-    if ($('#modal-testSchedule').length === 0) {
-      // 動態載入模態框內容
-      $.get('testSchedule.html', function (data) {
-        $('body').append(data);
-        $('#modal-testSchedule').modal('show');
-      });
-    } else {
-      // 顯示已經加載的模態框
-      $('#modal-testSchedule').modal('show');
-    }
-  });
+		const pageName = href.replace('.html', '');
+		const modalSelector = '#modal-' + pageName;
 
-  /////////////////////////////////////////////////
-  //探索[展開/收合]按鈕
-  if ($('.explore-collapse-btn').length) {
-    // 檢查初始狀態
-    $('.explore-collapse-btn').each(function () {
-      var $btn = $(this);
-      var $targetCarousel = $btn.parent().next('.explore-collapse-body');
-      toggleCarouselState($btn, $targetCarousel);
-      checkCarouselItems($btn, $targetCarousel);
-    });
+		// 已經載入過，直接顯示
+		if ($(modalSelector).length > 0) {
+			$(modalSelector).modal('show');
+			return;
+		}
 
-    // 點擊事件處理
-    $('.explore-collapse-btn').click(function (e) {
-      e.preventDefault();
-      var $btn = $(this);
-      var $targetCarousel = $btn.parent().next('.explore-collapse-body');
-      toggleCarouselState($btn, $targetCarousel);
-    });
-  }
+		// 尚未載入，載入後顯示
+		$.get(href, function (data) {
+			$('body').append(data);
+			$(modalSelector).modal('show');
+		});
+	});
 
-  //探索內文左方list a
-  $('.explore-slider-list a').click(function (e) {
-    e.preventDefault();
-
-    var target = $(this).attr('href');
-    $('html,body').animate({
-      scrollTop: $(target).offset().top - $('header').outerHeight() - 50
-    }, 500);
-  });
-
-  /////////////////////////////////////////////////
-  //[加入/取消最愛]點擊
-  $('.btn-favorite').click(function () {
-    $(this).toggleClass('active');
-
-    if ($(this).hasClass('active')) {
-      $(this).find('span').text('取消');
-
-      //收合特效
-      collectAn($(this), $('.nav-collection'));
-
-      setTimeout(function () {
-        //吐司推播通知
-        toastDOM('成功加入最愛。');
-      }, 100);
-    } else {
-      $(this).find('span').text('加入');
-
-      setTimeout(function () {
-        //吐司推播通知
-        toastDOM('已取消最愛。');
-      }, 100);
-    }
-  });
-
-  //[加入/取消比較]點擊
-  $('.btn-compare').click(function () {
-    $(this).toggleClass('active');
-
-    if ($(this).hasClass('active')) {
-      $(this).find('span').text('取消');
-
-      //收合特效
-      collectAn($(this), $('.compare-offcanvas'));
-
-      setTimeout(function () {
-        //吐司推播通知
-        toastDOM('成功加入比較。');
-      }, 100);
-    } else {
-      $(this).find('span').text('加入');
-
-      setTimeout(function () {
-        //吐司推播通知
-        toastDOM('已取消比較。');
-      }, 100);
-    }
-  });
 })(jQuery);

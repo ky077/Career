@@ -1635,14 +1635,14 @@ $modal-title-line-height:           $line-height-base !default;
 
 $modal-content-color:               null !default;
 $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
-$modal-content-border-color:        transparent !default;//cg. var(--#{$prefix}border-color-translucent) !default;
+$modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       var(--#{$prefix}box-shadow-sm) !default;
 $modal-content-box-shadow-sm-up:    var(--#{$prefix}box-shadow) !default;
 
-$modal-backdrop-bg:                 $white !default;//cg. $black !default;
+$modal-backdrop-bg:                 $secondary-900 !default;//cg. $black !default;
 $modal-backdrop-opacity:            .75 !default;//cg. .5 !default;
 
 $modal-header-border-color:         var(--#{$prefix}border-color) !default;
@@ -1659,6 +1659,8 @@ $modal-sm:                          300px !default;
 $modal-md:                          500px !default;
 $modal-lg:                          800px !default;
 $modal-xl:                          1140px !default;
+$modal-xxl:                         1320px !default; //cg. add	
+$modal-xxxl:                        1600px !default; //cg. add		
 
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              none !default;

@@ -1,6 +1,6 @@
 .intro{
 	.page-header{ 
-		&::before{/* background-color: rgba(255,0,4,.05);*/
+		&::before{
 			content: "";
 			display: block;
 			width: 100%;
@@ -16,10 +16,6 @@
 			z-index: 1;
 			@media screen and (min-width: 576px) {
 			height: 150%;
-			//background-image: url("../img/intro/intro-why-IP.png"), url("../img/news/page-header-star.png");	
-//			background-position: right $spacer*2 bottom, left $spacer*2 center;
-//			background-repeat: no-repeat;
-//			background-size: auto calc(160/232*100%), calc(416/1320*100%) auto;	
 			}
 			
 			// md 斷點以上 (>= 768px)：動態控制寬度
@@ -37,14 +33,6 @@
 		> [class*="container"] {
 			position: relative;
 			z-index: 2;
-			//transform: translateY(-1.5rem);
-		}
-		.page-header-title, h2{
-			//text-align: left;
-			@media screen and (min-width: 576px) {
-			//text-align: center;	
-//			margin-top: 0;	
-			}
 		}
 	}
 	
@@ -212,9 +200,6 @@
 			}
 			
 			&:hover{
-				&.futuristic-shadow{
-					//filter: drop-shadow(0 1rem 3rem rgba($black, 1.0));
-				}
 				.card{
 					background-color: rgba($white, .1);
 					color: $gray-400;
