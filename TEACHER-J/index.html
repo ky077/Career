@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生涯測驗系統 - 國中版</title>
+<link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+<script src="js/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap-modal.min.css">
+<script src="js/bootstrap-modal.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/indexStyles_2018.css">
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="container"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="index.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <a href="Default/Register.html">學校帳號註冊申請</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Default/Login.html" class="sexybutton brown"><span><span>登入</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="banner">
+  <div class="TA"><a href="TestAptitude/NoteIntroduce.html" class="banner-btn btn-TA">適性化職涯性向測驗</a></div>
+  <div class="logo"></div>
+  <div class="TI"><a href="TestInterest/NoteIntroduce.html" class="banner-btn btn-TI">情境式職涯興趣測驗</a></div>
+  <a href="StudentData/StudentNotes.html" class="btn-float SD">學生資料庫</a> 
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="indexMain">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <div class="section news">
+          <h3><img src="images/index/icon-news.png" alt="最新消息與公告">&nbsp;最新消息與公告</h3>
+          <ul class="section-content">
+            <li><a href="" role="button" data-toggle="modal" data-target="#modal-news">適性化職涯性向測驗指導手冊第5版進行資料修正</a></li>
+            <li><a href="" role="button" data-toggle="modal" data-target="#modal-news">適性化職涯性向測驗指導手冊第5版更新--歡迎下載使用<span class="icon-download"><img src="images/icon-download.png"></span></a></li>
+            <li><a href="" role="button" data-toggle="modal" data-target="#modal-news">提供非學生名單進行測驗--相關事宜通知</a></li>
+            <li><a href="" role="button" data-toggle="modal" data-target="#modal-news">本測驗系統專線(02)23517160於4月5日全天暫停通話服務</a></li>
+            <li><a href="" role="button" data-toggle="modal" data-target="#modal-news">105/11/11(五)12:00~11/14(一)12:00暫停職涯系統網站服務</a></li>
+            <li><a href="" role="button" data-toggle="modal" data-target="#modal-news">105/11/11(五)12:00~11/14(一)12:00暫停職涯系統網站服務暫停職涯系統網站服務暫停職涯系統網站服務</a></li>
+            
+            <div class="pages">
+              <input type="button" id="Btn_first" name="Btn_first" value="第一頁" onclick="toFirstPage()" disabled="">
+              <input type="button" id="Btn_pre" name="Btn_pre" value="上一頁" onclick="toPrePage()" disabled="">
+              <input type="button" id="Btn_page1" name="Btn_page1" value="1" class="on" onclick="toTargetPage('Btn_page1', 1)" style="display: inline;">
+              <input type="button" id="Btn_page2" name="Btn_page2" value="2" onclick="toTargetPage('Btn_page2', 2)" style="display: inline;">
+              <input type="button" id="Btn_page3" name="Btn_page3" value="3" onclick="toTargetPage('Btn_page3', 3)" style="display: none;">
+              <input type="button" id="Btn_page4" name="Btn_page4" value="4" onclick="toTargetPage('Btn_page4', 4)" style="display: none;">
+              <input type="button" id="Btn_page5" name="Btn_page5" value="5" onclick="toTargetPage('Btn_page5', 5)" style="display: none;">
+              <input type="button" id="Btn_next" name="Btn_next" value="下一頁" onclick="toNextPage()">
+              <input type="button" id="Btn_last" name="Btn_last" value="最後頁" onclick="toLastPage()">
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="section info">
+          <h3><img src="images/index/icon-info.png" alt="各項資訊">&nbsp;各項資訊</h3>
+          <ul class="section-content">
+            <li><a href="Default/Process.html">使用流程</a></li>
+            <li><a href="Default/QA.html">常見問題</a></li>
+            <li><a href="Default/Map.html">網站地圖</a></li>
+            <li><a href="Default/Privacy.html">隱私權與資訊安全</a></li>
+            <li><a href="Default/Terms.html">專利及版權說明</a></li>
+            <li><a href="">下載Adobe Reader</a></li>
+            <li><a href="">下載WinRAR 解壓縮軟體</a></li>
+            <li><a href="">下載Flash Player</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="section contact">
+          <h3><img src="images/index/icon-contact.png" alt="聯絡我們">&nbsp;聯絡我們</h3>
+          <ul class="section-content">
+            <li>電話：(02)2351-7160</li>
+            <li>傳真：(02)2351-7160</li>
+            <li>地址：台北市和平東路一段129號</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="indexFooter">
+  <div class="container">
+    <div class="copyright"> 本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學心理與教育測驗研究發展中心/數位學習研究室 版權所有</div>
+  </div>
+</div>
+<!-- footer END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- Modal -->
+<div class="modal fade" id="modal-news" tabindex="-1" role="dialog" aria-labelledby="modal-news">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">適性化職涯性向測驗指導手冊第5版進行資料修正</h3>
+      </div>
+      <div class="modal-body"> 
+        <!-- --> 
+        適性化生涯性向測驗指導手冊V2.2版於2018年5月上線，版本修正內容如下:<br>
+        <br>
+        1.新增各分測驗之題庫量資訊。<br>
+        2.新增生涯測驗系統-高中版-學生端功能說明。<br>
+        3.更新常模相關資訊。<br>
+        <br>
+        歡迎各位教師下載指導手冊V2.2版使用。<br>
+        <span class="icon-download-content"><img src="images/icon-download.png">&nbsp;<a href="">檔案名稱.pdf</a></span>
+        <!-- --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script>
+$(window).on('resize',function() {
+	if($(window).width() > 800){
+		$(".banner").outerHeight( $(window).height()-$(".head").height() );
+	}else{
+		$(".banner").outerHeight("auto");
+	}
+});
+$(document).ready(function() {
+    $(window).trigger('resize');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@import "menuStyles";
+@import "content_blockStyles";
+@import "table";
+/* ******* ******* ******* ******* ******* ******* ******* */
+$test-name: "TA";
+
+$word-color: #0e5bc2;
+$bgDark-color: #0387f3;
+$bgLight-color: #e2f1f5;
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.menu{
+	@include menuStyles($bg-color: #e2f1f5, $word-color: #0e5bc2, $active-color: #0387f3);
+}
+.content_block{
+	@include content_blockStyles($floor-color:#e3fffe);
+}
+.subtitle {
+	color:$word-color;
+	background-image:url(../images/#{$test-name}/spot.gif);
+}
+
+.table, .table1, .table2{
+	@include tableStyles($dark-color: #0e5bc2, $light-color: #e2f1f5);	
+}
+
+.pages, .page{
+	 a, input[type=button] {
+		&:hover,&:active,&:focus { 
+			background-color: $bgLight-color;
+			color:$word-color;
+			border-color:$word-color;
+		}
+		&.on, &.on:hover, &.on:active, &.on:focus{ 
+			background-color:$word-color;
+			border-color:$word-color;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

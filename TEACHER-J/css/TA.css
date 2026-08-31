@@ -1,0 +1,250 @@
+.table3 > thead > tr > th {
+  background-color: #999;
+  text-align: center;
+  font-weight: normal;
+  color: #FFF;
+  padding: 3px 5px;
+  border: 1px solid #ebebeb;
+  text-shadow: none; }
+.table3 > tbody > tr > td {
+  text-align: center;
+  padding: 3px 5px;
+  border: 1px solid #ebebeb; }
+.table3 > tfoot > tr > th, .table3 > tfoot > tr > td,
+.table3 > tfoot > tr > th:hover, .table3 > tfoot > tr > td:hover {
+  border: 0px;
+  text-align: center;
+  padding: 10px 0px;
+  background-color: transparent; }
+
+.table0 > thead > tr > th, .table0 > thead > tr > td, .table0 > tbody > tr > th, .table0 > tbody > tr > td, .table0 > tfoot > tr > th, .table0 > tfoot > tr > td {
+  border: 0px;
+  padding: 5px; }
+
+.tableTRColor tbody tr:nth-child(even) td {
+  background-color: #f5f5f5; }
+.tableTRColor tbody tr:hover td {
+  background-color: #f8f5e2; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+/* ******* ******* ******* ******* ******* ******* ******* */
+.menu {
+  background-color: #e2f1f5; }
+  .menu > ul {
+    display: table;
+    margin: 0px auto; }
+    .menu > ul > li {
+      float: left;
+      border-bottom: 10px solid #e2f1f5; }
+      .menu > ul > li:hover, .menu > ul > li:active, .menu > ul > li.active {
+        border-bottom-color: #0387f3; }
+      .menu > ul > li a {
+        color: #0e5bc2;
+        display: block;
+        padding: 8px 10px;
+        text-decoration: none; }
+  .menu .dropdown:hover .dropdown-menu {
+    display: block; }
+  .menu .dropdown-menu {
+    border-radius: 0px;
+    margin-top: 9px;
+    border: 1px solid #0387f3;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: none; }
+
+.content_block {
+  height: auto; }
+  .content_block > li {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .content_block > li:nth-child(odd) {
+      background-color: #FFF; }
+    .content_block > li:nth-child(even) {
+      background-color: #efefef; }
+    .content_block > li:nth-child(4) {
+      background-color: #e3fffe; }
+    .content_block > li.content-footer {
+      text-align: center; }
+    .content_block > li dl dt {
+      display: table;
+      margin: 0px auto;
+      background-image: url(../images/h2-line.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% 10px;
+      padding: 0px 30px 15px 30px;
+      font-size: 1.5em;
+      font-weight: 700;
+      line-height: 1em; }
+      .content_block > li dl dt::before {
+        content: url(../images/arrow.png);
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 10px; }
+        @media screen and (max-width: 640px) {
+          .content_block > li dl dt::before {
+            display: none; } }
+    .content_block > li dl dd {
+      line-height: 28px;
+      color: #333;
+      min-height: 44px;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px rgba(255, 255, 255, 0.5); }
+      .content_block > li dl dd blockquote {
+        margin-left: 2.4em;
+        border-left: 0.2em solid #ccc;
+        padding-left: 0.4em; }
+  @media screen and (min-width: 1024px) {
+    .content_block.NoteIntroduce > li:nth-child(1) {
+      background-image: url(../images/Introduce-bg1.png), url(../images/Introduce-bg1-gray.png);
+      background-position: left -8% bottom 1%, right -15% top 1%;
+      background-repeat: no-repeat							 , no-repeat;
+      background-size: 192px auto							 , 288px auto; }
+    .content_block.NoteIntroduce > li:nth-child(2) {
+      background-image: url(../images/Introduce-bg2-gray.png), url(../images/Introduce-bg2.png);
+      background-position: left -15% bottom 1%, right -8% top 1%;
+      background-repeat: no-repeat							 , no-repeat;
+      background-size: 288px auto							 , 192px auto; }
+    .content_block.NoteIntroduce > li:nth-child(3) {
+      background-image: url(../images/Introduce-bg3.png);
+      background-position: left -8% bottom 1%;
+      background-repeat: no-repeat;
+      background-size: 192px auto; }
+    .content_block.NoteIntroduce > li:nth-child(4) {
+      background-image: url(../images/Introduce-bg4-gray.png), url(../images/Introduce-bg4.png);
+      background-position: left -15% bottom 1%, right -8% top 1%;
+      background-repeat: no-repeat							 , no-repeat;
+      background-size: 288px auto							 , 192px auto; }
+    .content_block.NoteIntroduce > li:nth-child(5) {
+      background-image: url(../images/Introduce-bg5.png);
+      background-position: left -8% bottom 1%;
+      background-repeat: no-repeat;
+      background-size: 192px auto; }
+    .content_block.NoteGuide > li:nth-child(1) {
+      background-image: url(../images/Guide-bg1.png), url(../images/Guide-bg1-gray.png);
+      background-position: left -8% bottom 1%, right -15% top 1%;
+      background-repeat: no-repeat							, no-repeat;
+      background-size: 192px auto							, 288px auto; }
+    .content_block.NoteGuide > li:nth-child(2) {
+      background-image: url(../images/Guide-bg2.png);
+      background-position: right -8% top 1%;
+      background-repeat: no-repeat;
+      background-size: 192px auto; }
+    .content_block.NoteGuide > li:nth-child(3) {
+      background-image: url(../images/Guide-bg3.png);
+      background-position: left -8% bottom 1%;
+      background-repeat: no-repeat;
+      background-size: 192px auto; }
+    .content_block.NoteGuide > li:nth-child(4) {
+      background-image: url(../images/Guide-bg4.png);
+      background-position: right -8% top 1%;
+      background-repeat: no-repeat;
+      background-size: 192px auto; }
+    .content_block.NoteGuide > li:nth-child(5) {
+      background-image: url(../images/Guide-bg5.png);
+      background-position: left -8% bottom 1%;
+      background-repeat: no-repeat;
+      background-size: 192px auto; }
+    .content_block.NoteGuide > li:nth-child(6) {
+      background-image: url(../images/Guide-bg6.png);
+      background-position: right -8% top 1%;
+      background-repeat: no-repeat;
+      background-size: 192px auto; } }
+  @media screen and (min-width: 1280px) {
+    .content_block.NoteIntroduce > li:nth-child(1) {
+      background-position: left 0% bottom 1%, right 0% top 1%; }
+    .content_block.NoteIntroduce > li:nth-child(2) {
+      background-position: left 0% bottom 1%, right 0% top 1%; }
+    .content_block.NoteIntroduce > li:nth-child(3) {
+      background-position: left 0% bottom 1%; }
+    .content_block.NoteIntroduce > li:nth-child(4) {
+      background-position: left 0% bottom 1%, right 0% top 1%; }
+    .content_block.NoteIntroduce > li:nth-child(5) {
+      background-position: left 0% bottom 1%; }
+    .content_block.NoteGuide > li:nth-child(1) {
+      background-position: left 0% bottom 1%, right 0% top 1%; }
+    .content_block.NoteGuide > li:nth-child(2) {
+      background-position: right 0% top 1%; }
+    .content_block.NoteGuide > li:nth-child(3) {
+      background-position: left 0% bottom 1%; }
+    .content_block.NoteGuide > li:nth-child(4) {
+      background-position: right 0% top 1%; }
+    .content_block.NoteGuide > li:nth-child(5) {
+      background-position: left 0% bottom 1%; }
+    .content_block.NoteGuide > li:nth-child(6) {
+      background-position: right 0% top 1%; } }
+  @media screen and (min-width: 1366px) {
+    .content_block.NoteIntroduce > li:nth-child(1) {
+      background-position: left 5% bottom 1%, right 5% top 1%; }
+    .content_block.NoteIntroduce > li:nth-child(2) {
+      background-position: left 5% bottom 1%, right 5% top 1%; }
+    .content_block.NoteIntroduce > li:nth-child(3) {
+      background-position: left 5% bottom 1%; }
+    .content_block.NoteIntroduce > li:nth-child(4) {
+      background-position: left 5% bottom 1%, right 5% top 1%; }
+    .content_block.NoteIntroduce > li:nth-child(5) {
+      background-position: left 5% bottom 1%; }
+    .content_block.NoteGuide > li:nth-child(1) {
+      background-position: left 5% bottom 1%, right 5% top 1%; }
+    .content_block.NoteGuide > li:nth-child(2) {
+      background-position: right 5% top 1%; }
+    .content_block.NoteGuide > li:nth-child(3) {
+      background-position: left 5% bottom 1%; }
+    .content_block.NoteGuide > li:nth-child(4) {
+      background-position: right 5% top 1%; }
+    .content_block.NoteGuide > li:nth-child(5) {
+      background-position: left 5% bottom 1%; }
+    .content_block.NoteGuide > li:nth-child(6) {
+      background-position: right 5% top 1%; } }
+
+.subtitle {
+  color: #0e5bc2;
+  background-image: url(../images/TA/spot.gif); }
+
+.table, .table1, .table2 {
+  margin-right: auto;
+  margin-left: auto;
+  color: #333; }
+  .table > thead > tr > th, .table1 > thead > tr > th, .table2 > thead > tr > th {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #0e5bc2;
+    color: #FFF;
+    vertical-align: middle;
+    text-shadow: none; }
+    .table > thead > tr > th input, .table1 > thead > tr > th input, .table2 > thead > tr > th input {
+      color: #333; }
+  .table > thead > tr > td, .table1 > thead > tr > td, .table2 > thead > tr > td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #FFF; }
+  .table > tbody > tr > th, .table1 > tbody > tr > th, .table2 > tbody > tr > th {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #e2f1f5;
+    vertical-align: top; }
+  .table > tbody > tr > td, .table1 > tbody > tr > td, .table2 > tbody > tr > td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #FFF; }
+  .table > tfoot > tr > th, .table > tfoot > tr > td,
+  .table > tfoot > tr > th:hover, .table > tfoot > tr > td:hover, .table1 > tfoot > tr > th, .table1 > tfoot > tr > td,
+  .table1 > tfoot > tr > th:hover, .table1 > tfoot > tr > td:hover, .table2 > tfoot > tr > th, .table2 > tfoot > tr > td,
+  .table2 > tfoot > tr > th:hover, .table2 > tfoot > tr > td:hover {
+    border: 0px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: transparent; }
+
+.pages a:hover, .pages a:active, .pages a:focus, .pages input[type=button]:hover, .pages input[type=button]:active, .pages input[type=button]:focus, .page a:hover, .page a:active, .page a:focus, .page input[type=button]:hover, .page input[type=button]:active, .page input[type=button]:focus {
+  background-color: #e2f1f5;
+  color: #0e5bc2;
+  border-color: #0e5bc2; }
+.pages a.on, .pages a.on:hover, .pages a.on:active, .pages a.on:focus, .pages input[type=button].on, .pages input[type=button].on:hover, .pages input[type=button].on:active, .pages input[type=button].on:focus, .page a.on, .page a.on:hover, .page a.on:active, .page a.on:focus, .page input[type=button].on, .page input[type=button].on:hover, .page input[type=button].on:active, .page input[type=button].on:focus {
+  background-color: #0e5bc2;
+  border-color: #0e5bc2; }
+
+/*# sourceMappingURL=TA.css.map */

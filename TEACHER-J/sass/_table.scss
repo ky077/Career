@@ -1,0 +1,101 @@
+@mixin tableStyles($dark-color: #666, $light-color: #ECE9D8) {
+	margin-right: auto;
+	margin-left: auto;
+	color: #333;
+	> thead > tr{
+		> th{
+			padding: 5px;
+			border: 1px solid #ccc;
+			background-color: $dark-color;
+			color:#FFF;
+			vertical-align:middle;
+			text-shadow:none;
+			input{ color:#333;}
+		}
+		> td{
+			padding: 5px;
+			border: 1px solid #ccc;
+			background-color: #FFF;
+		}
+	}
+	> tbody > tr{
+		> th{
+			padding: 5px;
+			border: 1px solid #ccc;
+			background-color: $light-color;
+			vertical-align:top;
+		}
+		> td{
+			padding: 5px;
+			border: 1px solid #ccc;
+			background-color: #FFF;
+		}
+	}
+	> tfoot > tr{
+		> th, > td,
+		> th:hover, > td:hover {
+			border: 0px;
+			text-align:center;
+			padding:10px 0px;
+			background-color: transparent;
+		}
+	}
+}
+
+.table3 {
+	> thead > tr {
+		> th {
+			background-color: #999;
+			text-align: center;
+			font-weight: normal;
+			color:#FFF;
+			padding:3px 5px;
+			border: 1px solid #ebebeb;
+			text-shadow:none;
+		}
+	}
+	> tbody > tr{
+		> td {
+			text-align: center;
+			padding:3px 5px;
+			border: 1px solid #ebebeb;
+
+		}
+	}
+	> tfoot > tr{
+		> th, > td,
+		> th:hover, > td:hover {
+			border: 0px;
+			text-align:center;
+			padding:10px 0px;
+			background-color: transparent;
+		}
+	}
+}
+
+.table0 {
+	> thead, > tbody, >tfoot{
+		> tr{
+			> th, >td {
+				border: 0px;
+				padding:5px;
+			}
+		}
+	}
+}
+
+.tableTRColor{
+	tbody{
+		tr:nth-child(even) {
+			td{
+				background-color: #f5f5f5;
+			}
+		}
+		tr:hover {
+			td{
+				background-color: #f8f5e2;
+			}
+		}
+	}
+}
+

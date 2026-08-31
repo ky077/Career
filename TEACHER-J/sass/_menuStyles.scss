@@ -1,0 +1,31 @@
+@mixin menuStyles($bg-color: #ebebeb, $word-color: #ccc, $active-color: #666) {
+	background-color:$bg-color;
+	
+	> ul{
+		display: table;
+		margin: 0px auto;
+		> li{ 
+			float: left;
+			border-bottom: 10px solid $bg-color;
+			&:hover, &:active, &.active { border-bottom-color: $active-color; }
+			a{ 
+				color:$word-color;
+				display:block;
+				padding:8px 10px;
+				text-decoration:none;
+			}
+		}
+	}
+	.dropdown:hover .dropdown-menu {
+		display: block;
+	}
+	
+	.dropdown-menu{
+		border-radius:0px;
+		margin-top:9px;
+		border:1px solid $active-color;
+		padding-top:0px;
+		padding-bottom:0px;
+		box-shadow:none;
+	}
+}

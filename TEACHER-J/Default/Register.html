@@ -1,0 +1,367 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template-2018.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 國中版</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.min.css">
+<script src="../js/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-dropdown.min.css">
+<script src="../js/jquery.bootstrap-dropdown-hover.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="container"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="../index.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <a href="Register.html">學校帳號註冊申請</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Login.html" class="sexybutton brown"><span><span>登入</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="versionSection">
+	<div class="container"> 
+		<img src="../images/version-NTPC.png" class="versionSection-img" alt="新北市政府教育局 × 國立臺灣師範大學"/>
+  </div>
+</div>
+<div class="toolSection">
+  <div class="container-fluid"> 
+    <!-- nav START -->
+    <div class="nav">
+      <ul class="clearfix">
+        <li class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+          <div class="nav-item aptitude"><a href="../TestAptitude/NoteIntroduce.html" class="nav-btn nav-TA">適性化生涯性向測驗</a></div>
+        </li>
+        <li class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+          <div class="nav-item interest"><a href="../TestInterest/NoteIntroduce.html" class="nav-btn nav-TI">適性化生涯興趣測驗</a></div>
+        </li>
+        <a href="../StudentData/StudentNotes.html" class="btn-float SD">學生資料庫</a>
+      </ul>
+    </div>
+    <!-- nav END --> 
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+  <div class="content_position"> 
+    <!-- -->
+    <ul class="content_block">
+      <li>
+        <dl class="container">
+          <dt>註冊申請</dt>
+        </dl>
+      </li>
+      <li>
+        <dl class="container">
+          <div class="table-responsive">
+            <table class="table1">
+              <!--            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$CPH_Main$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['fctl00$CPH_Main$UpdatePanel6','fctl00$CPH_Main$UpdatePanel7','fctl00$CPH_Main$UpdatePanel1','fctl00$CPH_Main$UpdatePanel2','fctl00$CPH_Main$UpdatePanel3','fctl00$CPH_Main$UpdatePanel4','tctl00$CPH_Main$UpdatePanel5'], ['ctl00$CPH_Main$Drop_Contury','ctl00$CPH_Main$Drop_Degree','ctl00$CPH_Main$Drop_Belong','ctl00$CPH_Main$Drop_School'], [], 90);
+//]]>
+</script> --> 
+              
+              <!--申請人身分確認-->
+              <thead>
+                <tr>
+                  <th colspan="2">申請人身分確認</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="toRight" style="width:20%;">身　　分：</th>
+                  <td><table>
+                      <tbody>
+                        <tr>
+                          <td style="color:Purple" colspan="2">您需為輔導室之人員才能進行註冊。</td>
+                        </tr>
+                        <tr>
+                          <td><table id="ctl00_CPH_Main_RBL_isCounseling" style="width:auto;">
+                              <tbody>
+                                <tr>
+                                  <td><input id="ctl00_CPH_Main_RBL_isCounseling_0" type="radio" name="ctl00$CPH_Main$RBL_isCounseling" value="1" onclick="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$RBL_isCounseling$0\',\'\')', 0)">
+                                    <label for="ctl00_CPH_Main_RBL_isCounseling_0">我是</label>
+                                    &nbsp;&nbsp;</td>
+                                  <td>&nbsp;&nbsp;
+                                    <input id="ctl00_CPH_Main_RBL_isCounseling_1" type="radio" name="ctl00$CPH_Main$RBL_isCounseling" value="0" onclick="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$RBL_isCounseling$1\',\'\')', 0)">
+                                    <label for="ctl00_CPH_Main_RBL_isCounseling_1">我不是</label></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                          <td><div id="ctl00_CPH_Main_UpdatePanel6"> <span id="ctl00_CPH_Main_Label_who" style="color:Red;"></span> </div></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+                <!--協助-->
+                <tr>
+                  <th class="toRight"></th>
+                  <td><table>
+                      <tbody>
+                        <tr>
+                          <td style=" color:Purple" colspan="2">貴校是否願意協助、參與相關研究(如施測、訪談)？</td>
+                        </tr>
+                        <tr>
+                          <td><table id="ctl00_CPH_Main_RBL_help" style="width:auto;">
+                              <tbody>
+                                <tr>
+                                  <td><input id="ctl00_CPH_Main_RBL_help_0" type="radio" name="ctl00$CPH_Main$RBL_help" value="1" onclick="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$RBL_help$0\',\'\')', 0)">
+                                    <label for="ctl00_CPH_Main_RBL_help_0">願意</label>
+                                    &nbsp;&nbsp;</td>
+                                  <td>&nbsp;&nbsp;
+                                    <input id="ctl00_CPH_Main_RBL_help_1" type="radio" name="ctl00$CPH_Main$RBL_help" value="0" onclick="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$RBL_help$1\',\'\')', 0)">
+                                    <label for="ctl00_CPH_Main_RBL_help_1">不願意</label></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                          <td><div id="ctl00_CPH_Main_UpdatePanel7"> <span id="ctl00_CPH_Main_Label5" style="color:Red;"></span> </div></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+              </tbody>
+              <!--學校帳號-->
+              <thead>
+                <tr>
+                  <th colspan="2" >學校 / 帳號</th>
+                </tr>
+              </thead>
+              <!--服務學校-->
+              <tbody>
+                <tr>
+                  <th class="toRight">服務學校：</th>
+                  <td><table class="table0" style="width:auto;">
+                      <tbody>
+                        <tr>
+                          <td><select name="ctl00$CPH_Main$Drop_Contury" onchange="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$Drop_Contury\',\'\')', 0)" id="ctl00_CPH_Main_Drop_Contury">
+                              <option selected="selected" value="0">選擇：縣市</option>
+                              <option value="台中市">台中市</option>
+                              <option value="台北市">台北市</option>
+                              <option value="台東縣">台東縣</option>
+                              <option value="台南市">台南市</option>
+                              <option value="宜蘭縣">宜蘭縣</option>
+                              <option value="花蓮縣">花蓮縣</option>
+                              <option value="金門縣">金門縣</option>
+                              <option value="南投縣">南投縣</option>
+                              <option value="屏東縣">屏東縣</option>
+                              <option value="苗栗縣">苗栗縣</option>
+                              <option value="桃園市">桃園市</option>
+                              <option value="高雄市">高雄市</option>
+                              <option value="基隆市">基隆市</option>
+                              <option value="連江縣">連江縣</option>
+                              <option value="雲林縣">雲林縣</option>
+                              <option value="新北市">新北市</option>
+                              <option value="新竹市">新竹市</option>
+                              <option value="新竹縣">新竹縣</option>
+                              <option value="嘉義市">嘉義市</option>
+                              <option value="嘉義縣">嘉義縣</option>
+                              <option value="彰化縣">彰化縣</option>
+                              <option value="澎湖縣">澎湖縣</option>
+                            </select></td>
+                          <td><div id="ctl00_CPH_Main_UpdatePanel1">
+                              <select name="ctl00$CPH_Main$Drop_Degree" onchange="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$Drop_Degree\',\'\')', 0)" id="ctl00_CPH_Main_Drop_Degree">
+                                <option selected="selected" value="0">選擇：各級學校</option>
+                              </select>
+                            </div></td>
+                          <td><div id="ctl00_CPH_Main_UpdatePanel2">
+                              <select name="ctl00$CPH_Main$Drop_Belong" onchange="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$Drop_Belong\',\'\')', 0)" id="ctl00_CPH_Main_Drop_Belong">
+                                <option selected="selected" value="0">選擇：公私立</option>
+                              </select>
+                            </div></td>
+                          <td><div id="ctl00_CPH_Main_UpdatePanel3">
+                              <select name="ctl00$CPH_Main$Drop_School" onchange="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$Drop_School\',\'\')', 0)" id="ctl00_CPH_Main_Drop_School">
+                                <option selected="selected" value="0">選擇：學校名稱</option>
+                              </select>
+                            </div></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4"><div id="ctl00_CPH_Main_UpdatePanel4">
+                              <input name="ctl00$CPH_Main$TB_School" type="text" readonly id="ctl00_CPH_Main_TB_School" style="color:Blue;border-style:None;width:200px;">
+                              <span id="ctl00_CPH_Main_Label_School" style="color:Red;font-size:10pt;"></span> <span id="ctl00_CPH_Main_RequiredFieldValidator1" style="color:Red;font-size:10pt;visibility:hidden;">請選擇學校</span>
+                              <input type="hidden" name="ctl00$CPH_Main$Hidden_schoolSN" id="ctl00_CPH_Main_Hidden_schoolSN">
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+                
+                <!--帳號密碼-->
+                <tr>
+                  <th class="toRight">帳　　號：</th>
+                  <td><div id="ctl00_CPH_Main_UpdatePanel5">
+                      <input name="ctl00$CPH_Main$TB_ID" type="text" onchange="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$TB_ID\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_CPH_Main_TB_ID">
+                      <span id="ctl00_CPH_Main_Label4" style="font-size:10pt;">請以英數字元設置3-20位的帳號。帳號申請後不可更改。</span> <span id="ctl00_CPH_Main_Label_Id_msg" style="font-size:10pt;"></span> <span id="ctl00_CPH_Main_joinIdChka" style="color:Red;font-size:10pt;display:none;">不可空白。</span> <span id="ctl00_CPH_Main_RegularExpressionValidator2" style="color:Red;font-size:10pt;display:none;">請正確填寫！以英數字元設置3-20位的帳號。</span> </div></td>
+                </tr>
+                <tr>
+                  <th class="toRight">密　　碼：</th>
+                  <td><input name="ctl00$CPH_Main$TB_Pwd" type="password" id="ctl00_CPH_Main_TB_Pwd">
+                    <span id="ctl00_CPH_Main_Label1" style="font-size:10pt;">請以英數字元設置5-20位的密碼。</span> <span id="ctl00_CPH_Main_joinPswChka" style="color:Red;font-size:10pt;display:none;">不可空白。</span> <span id="ctl00_CPH_Main_joinPswChkb" style="color:Red;font-size:10pt;display:none;">請正確填寫！以英數字元設置5-20位的密碼。</span></td>
+                </tr>
+                <tr>
+                  <th class="toRight">密碼確認：</th>
+                  <td><input name="ctl00$CPH_Main$TB_Pwd2" type="password" id="ctl00_CPH_Main_TB_Pwd2">
+                    <span id="ctl00_CPH_Main_joinPswChka2" style="color:Red;font-size:10pt;display:none;">不可空白。</span> <span id="ctl00_CPH_Main_joinPsw2Check" style="color:Red;font-size:10pt;visibility:hidden;">兩次輸入密碼必須相同！</span></td>
+                </tr>
+              </tbody>
+              <!--聯絡人資料-->
+              <thead>
+                <tr>
+                  <th colspan="2">聯絡人資料</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="toRight">姓　　名：</th>
+                  <td><input name="ctl00$CPH_Main$TB_name" type="text" id="ctl00_CPH_Main_TB_name">
+                    <span id="ctl00_CPH_Main_mem_nameChka" style="color:Red;font-size:10pt;display:none;">不可空白。</span></td>
+                </tr>
+                <tr>
+                  <th class="toRight">性　　別：</th>
+                  <td><table id="ctl00_CPH_Main_RBL_sex" style="width:auto;">
+                      <tbody>
+                        <tr>
+                          <td><input id="ctl00_CPH_Main_RBL_sex_0" type="radio" name="ctl00$CPH_Main$RBL_sex" value="1" checked="checked">
+                            <label for="ctl00_CPH_Main_RBL_sex_0">男</label>
+                            &nbsp;&nbsp;</td>
+                          <td>&nbsp;&nbsp;
+                            <input id="ctl00_CPH_Main_RBL_sex_1" type="radio" name="ctl00$CPH_Main$RBL_sex" value="2">
+                            <label for="ctl00_CPH_Main_RBL_sex_1">女</label></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+                
+                <!--聯絡方式-->
+                <tr>
+                  <th class="toRight">處室名稱：</th>
+                  <td><input name="ctl00$CPH_Main$TB_Dep" type="text" id="ctl00_CPH_Main_TB_Dep">
+                    <span id="ctl00_CPH_Main_Label2" style="font-size:10pt;">例如：輔導室</span> <span id="ctl00_CPH_Main_RequiredFieldValidator2" style="color:Red;font-size:10pt;display:none;">不可空白。</span></td>
+                </tr>
+                <tr>
+                  <th class="toRight">職　　稱：</th>
+                  <td><input name="ctl00$CPH_Main$TB_Title" type="text" id="ctl00_CPH_Main_TB_Title">
+                    <span id="ctl00_CPH_Main_Label3" style="font-size:10pt;">例如：資料組長</span> <span id="ctl00_CPH_Main_RequiredFieldValidator3" style="color:Red;font-size:10pt;display:none;">不可空白。</span></td>
+                </tr>
+                <tr>
+                  <th class="toRight">聯絡電話：</th>
+                  <td><input name="ctl00$CPH_Main$TB_tel" type="text" id="ctl00_CPH_Main_TB_tel">
+                    分機
+                    <input name="ctl00$CPH_Main$TB_ext" type="text" id="ctl00_CPH_Main_TB_ext" style="width:50px;">
+                    &nbsp;<span style="color:Purple">若有分機，請務必填寫分機號碼。</span><br>
+                    <span class="small">輸入格式：02-2351-7160</span><span id="ctl00_CPH_Main_mem_telchkd" style="color:Red;display:none;">不可空白。</span> <span id="ctl00_CPH_Main_Telchk" style="color:Red;display:none;">請正確填寫!</span></td>
+                </tr>
+                <tr>
+                  <th class="toRight">電子信箱：
+                    <input type="hidden" name="ctl00$CPH_Main$Hidden_mailType" id="ctl00_CPH_Main_Hidden_mailType">
+                  </th>
+                  <td><input name="ctl00$CPH_Main$TB_email" type="text" id="ctl00_CPH_Main_TB_email">
+                    <span id="ctl00_CPH_Main_mem_emailchkd" style="color:Red;display:none;">不可空白。</span> <span id="ctl00_CPH_Main_mem_emailchk" style="color:Red;display:none;">請正確填寫!</span></td>
+                </tr>
+              </tbody>
+              <!--施測電腦配備 -->
+              <thead>
+                <tr>
+                  <th colspan="2">施測電腦配備</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="toRight">注意事項：</th>
+                  <td style="color:Purple"> 請根據同學測驗時，會使用的電腦設備，確實選填以下資料。謝謝！ </td>
+                </tr>
+                <tr>
+                  <th class="toRight">記 憶 體 ：</th>
+                  <td><select name="ctl00$CPH_Main$Drop_RAM" id="ctl00_CPH_Main_Drop_RAM">
+                      <option value="0">低於512</option>
+                      <option value="1">512~1G</option>
+                      <option value="2">1G~2G</option>
+                      <option value="3">2G以上</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <th class="toRight">I.E 版 本 ：</th>
+                  <td><select name="ctl00$CPH_Main$Drop_IE" id="ctl00_CPH_Main_Drop_IE">
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9以上</option>
+                      <option value="0">其他</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <th class="toRight">Flash版本：</th>
+                  <td><select name="ctl00$CPH_Main$Drop_Flash" id="ctl00_CPH_Main_Drop_Flash">
+                      <option value="8">8以下</option>
+                      <option value="9">9</option>
+                      <option value="10">10以上</option>
+                      <option value="0">其他</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <th class="toRight">下載速率：</th>
+                  <td><input name="ctl00$CPH_Main$TB_Speed" type="text" id="ctl00_CPH_Main_TB_Speed">
+                    <select name="ctl00$CPH_Main$Drop_Speed" id="ctl00_CPH_Main_Drop_Speed">
+                      <option value="Kb">Kbps</option>
+                      <option value="Mb">Mbps</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://speed.hinet.net/" target="_blank" style="text-decoration:underline; color:Blue">測試傳送速率，請點選這裡。</a> <span id="ctl00_CPH_Main_RequiredFieldValidator5" style="color:Red;display:none;">不可空白。</span> <span id="ctl00_CPH_Main_RegularExpressionValidator3" style="color:Red;display:none;">僅可填寫數字(含.)。</span></td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th colspan="2"> <span class="small">
+                    <input id="ctl00_CPH_Main_CB_agree" type="checkbox" name="ctl00$CPH_Main$CB_agree" onclick="CB_agreeClick();">
+                    <label for="ctl00_CPH_Main_CB_agree">以上選填之電腦設備資料與實際情況相符，若有不符之處，校方願意自行承擔測驗無法順利進行的責任。</label>
+                    </span> <span style="color:Red">( 請勾選，方可註冊。)</span> </th>
+                </tr>
+              </thead>
+              <!--驗證碼-->
+              <tbody>
+                <tr>
+                  <th class="toRight">驗 證 碼 ：</th>
+                  <td><input name="ctl00$CPH_Main$TB_Code" type="text" id="ctl00_CPH_Main_TB_Code">
+                    <img id="ctl00_CPH_Main_codeImage" src="../ValidateCode.aspx" style="border-width:0px;"> <span id="ctl00_CPH_Main_CustomValidator2" style="color:Red;display:none;">驗證碼填入錯誤。</span> <span id="ctl00_CPH_Main_RequiredFieldValidator4" style="color:Red;display:none;">不可空白。</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2" align="center"><input type="submit" name="ctl00$CPH_Main$Btn_Register" value="註冊" id="ctl00_CPH_Main_Btn_Register" disabled="disabled">
+                    <input type="submit" name="ctl00$CPH_Main$Btn_Cancel" value="取消" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$CPH_Main$Btn_Cancel&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_CPH_Main_Btn_Cancel">
+                    <input type="hidden" name="ctl00$CPH_Main$Hidden_state" id="ctl00_CPH_Main_Hidden_state" value="-1"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </dl>
+      </li>
+    </ul>
+    <!-- --> 
+  </div>
+  <div class="content_footer"></div>
+  <!-- InstanceEndEditable --> </div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="container">
+    <div class="link"><a href="Process.html">使用流程</a>｜<a href="QA.html">常見問題</a>｜<a href="Contact.html">聯絡我們</a>｜<a href="Map.html">網站地圖</a>｜<a href="Privacy.html">隱私權與資訊安全</a>｜<a href="Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a></div>
+    <div class="copyright">本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+</body>
+<!-- InstanceEnd --></html>

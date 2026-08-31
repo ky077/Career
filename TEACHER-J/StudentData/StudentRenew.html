@@ -1,0 +1,292 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template-logged-2018.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 國中版</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.min.css">
+<script src="../js/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-dropdown.min.css">
+<script src="../js/jquery.bootstrap-dropdown-hover.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<script>
+$(function(){
+	$(".SD").addClass('active');
+});
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- head START -->
+<div class="head">
+  <div class="container"> <a href="" class="headIcon entrance" alt="入口網" title="入口網">入口網</a> | <a href="../index.html" class="headIcon home"  alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <b>五四三</b>老師&nbsp;&nbsp;&nbsp;<a class="sexybutton brown" href="../Default/Register_Update.html"><span><span>修改會員資料</span></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton brown"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="versionSection">
+	<div class="container"> 
+		<img src="../images/version-NTPC.png" class="versionSection-img" alt="新北市政府教育局 × 國立臺灣師範大學"/>
+  </div>
+</div>	
+<div class="toolSection">
+  <div class="container-fluid"> 
+    <!-- nav START -->
+    <div class="nav">
+      <ul class="clearfix">
+        <li class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+          <div class="nav-item aptitude"><a href="../TestAptitude/NoteIntroduce.html" class="nav-btn nav-TA">適性化生涯性向測驗</a></div>
+        </li>
+        <li class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+          <div class="nav-item interest"><a href="../TestInterest/NoteIntroduce.html" class="nav-btn nav-TI">適性化生涯興趣測驗</a></div>
+        </li>
+        <a href="StudentNotes.html" class="btn-float SD">學生資料庫</a>
+      </ul>
+    </div>
+    <!-- nav END --> 
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+  <div class="menu">
+    <ul class="clearfix">
+      <li class="m_1"><a href="StudentNotes.html">學生資料須知</a></li>
+      <li class="m_2"><a href="StudentUpload.html">新增學生資料</a></li>
+      <li class="m_3 active"><a href="StudentList.html">查詢與修改</a></li>
+    </ul>
+  </div>
+  <div class="content_position"> 
+    <!-- -->
+    <ul class="content_block">
+      <li>
+        <dl class="container">
+          <dt>修改學生資料</dt>
+        </dl>
+      </li>
+      <li>
+        <dl class="container">
+          <dd>
+            <div class="table-responsive">
+              <table class="table1">
+                <!--單筆-->
+                <tbody>
+                  <tr>
+                    <th style="width:20%;" class="toRight">學生身分：</th>
+                    <td style="width:80%;"><table id="ctl00_CPH_Main_RBL_isCitizen" style="width:auto;">
+                        <tbody>
+                          <tr>
+                            <td><input id="ctl00_CPH_Main_RBL_isCitizen_0" type="radio" name="ctl00$CPH_Main$RBL_isCitizen" value="1">
+                              <label for="ctl00_CPH_Main_RBL_isCitizen_0">一般生</label>
+                              &nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;
+                              <input id="ctl00_CPH_Main_RBL_isCitizen_1" type="radio" name="ctl00$CPH_Main$RBL_isCitizen" value="0" checked="checked">
+                              <label for="ctl00_CPH_Main_RBL_isCitizen_1">外籍生</label></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">身份字號：</th>
+                    <td><input name="ctl00$CPH_Main$TB_sID" type="text" value="AA10005" readonly id="ctl00_CPH_Main_TB_sID" disabled>
+                      <span style="color:Red">*身份字號不可變更。</span></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">姓名：</th>
+                    <td><input name="ctl00$CPH_Main$TB_name" type="text" value="三三田" id="ctl00_CPH_Main_TB_name">
+                      <span id="ctl00_CPH_Main_RequiredFieldValidator2" style="color:Red;font-size:10pt;display:none;">不可空白。</span></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">學號：</th>
+                    <td><input name="ctl00$CPH_Main$TB_subjectID" type="text" value="S2891034" id="ctl00_CPH_Main_TB_subjectID">
+                      <span id="ctl00_CPH_Main_RequiredFieldValidator3" style="color:Red;font-size:10pt;display:none;">不可空白。</span></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">入學年度：</th>
+                    <td><input name="ctl00$CPH_Main$TB_entranceYear" type="text" value="100" id="ctl00_CPH_Main_TB_entranceYear">
+                      <span id="ctl00_CPH_Main_RequiredFieldValidator4" style="color:Red;font-size:10pt;display:none;">不可空白。</span> <span id="ctl00_CPH_Main_RegularExpressionValidator2" style="color:Red;font-size:10pt;display:none;">最多三位數字。</span></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">年級：</th>
+                    <td><input name="ctl00$CPH_Main$TB_year" type="text" value="8" id="ctl00_CPH_Main_TB_year">
+                      <span id="ctl00_CPH_Main_RequiredFieldValidator5" style="color:Red;font-size:10pt;display:none;">不可空白。</span></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">班級：</th>
+                    <td><input name="ctl00$CPH_Main$TB_class" type="text" value="A" id="ctl00_CPH_Main_TB_class">
+                      <span id="ctl00_CPH_Main_RequiredFieldValidator6" style="color:Red;font-size:10pt;display:none;">不可空白。</span></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">科系別：</th>
+                    <td><select name="ctl00$CPH_Main$Drop_dep1" onchange="javascript:setTimeout('__doPostBack(\'ctl00$CPH_Main$Drop_dep1\',\'\')', 0)" id="ctl00_CPH_Main_Drop_dep1">
+                        <option value="0">請選擇</option>
+                        <option selected="selected" value="1">普通班</option>
+                        <option value="2">音樂班</option>
+                        <option value="3">美術班</option>
+                        <option value="4">舞蹈班</option>
+                        <option value="5">體育班</option>
+                        <option value="6">數理資優班</option>
+                        <option value="7">科學班</option>
+                        <option value="8">原住民藝能班</option>
+                        <option value="9">雙語部(98)</option>
+                        <option value="10">戲劇班</option>
+                        <option value="30">技藝班</option>
+                      </select>
+                      <div id="ctl00_CPH_Main_UpdatePanel2">
+                        <input type="hidden" name="ctl00$CPH_Main$Hidden_dep" id="ctl00_CPH_Main_Hidden_dep" value="1">
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">性別：</th>
+                    <td><table id="ctl00_CPH_Main_RBL_sex" style="width:auto;">
+                        <tbody>
+                          <tr>
+                            <td><input id="ctl00_CPH_Main_RBL_sex_0" type="radio" name="ctl00$CPH_Main$RBL_sex" value="1" checked="checked">
+                              <label for="ctl00_CPH_Main_RBL_sex_0">男</label>
+                              &nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;
+                              <input id="ctl00_CPH_Main_RBL_sex_1" type="radio" name="ctl00$CPH_Main$RBL_sex" value="2">
+                              <label for="ctl00_CPH_Main_RBL_sex_1">女</label></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">生日：</th>
+                    <td> 西元
+                      <select name="ctl00$CPH_Main$Drop_birth1" id="ctl00_CPH_Main_Drop_birth1">
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option selected="selected" value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="1989">1989</option>
+                        <option value="1988">1988</option>
+                        <option value="1987">1987</option>
+                        <option value="1986">1986</option>
+                        <option value="1985">1985</option>
+                        <option value="1984">1984</option>
+                        <option value="1983">1983</option>
+                        <option value="1982">1982</option>
+                        <option value="1981">1981</option>
+                      </select>
+                      年
+                      <select name="ctl00$CPH_Main$Drop_birth2" id="ctl00_CPH_Main_Drop_birth2">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option selected="selected" value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      月
+                      <select name="ctl00$CPH_Main$Drop_birth3" id="ctl00_CPH_Main_Drop_birth3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option selected="selected" value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                      </select>
+                      日 </td>
+                  </tr>
+                  <tr>
+                    <th class="toRight">在校生：</th>
+                    <td><span id="ctl00_CPH_Main_Lb_isInSchool">是</span>
+                      <input type="submit" name="ctl00$CPH_Main$Btn_isInSchool" value="轉出" id="ctl00_CPH_Main_Btn_isInSchool"></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"><input type="submit" name="ctl00$CPH_Main$Btn_Upload" value="確定" onclick="window.location='StudentList.html'" id="ctl00_CPH_Main_Btn_Upload">
+                      <input type="submit" name="ctl00$CPH_Main$Btn_Cancel" value="取消" onclick="window.location='StudentList.html'" id="ctl00_CPH_Main_Btn_Cancel" ></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </dd>
+        </dl>
+      </li>
+    </ul>
+    <!-- --> 
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="container">
+    <div class="link"><a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a>｜<a href="">下載 Flash Player</a></div>
+    <div class="copyright">本站最佳解析度1024×768 建議以IE8以上版本搭配瀏覽 <br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+</body>
+<!-- InstanceEnd --></html>

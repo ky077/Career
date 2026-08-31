@@ -1,0 +1,39 @@
+@import "menuStyles";
+@import "content_blockStyles";
+@import "table";
+/* ******* ******* ******* ******* ******* ******* ******* */
+$test-name: "TI";
+
+$word-color: #05624c;
+$bgDark-color: #58ba2f;
+$bgLight-color: #e1f6e3;
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.menu{
+	@include menuStyles($bg-color: #e1f6e3, $word-color: #05624c, $active-color: #58ba2f);
+}
+.content_block{
+	@include content_blockStyles($floor-color:#e3fff4);
+}
+.subtitle {
+	color:$word-color;
+	background-image:url(../images/#{$test-name}/spot.gif);
+}
+
+.table, .table1, .table2{
+	@include tableStyles($dark-color: #05624c, $light-color: #e1f6e3);	
+}
+
+.pages, .page{
+	 a, input[type=button] {
+		&:hover,&:active,&:focus { 
+			background-color: $bgLight-color;
+			color:$word-color;
+			border-color:$word-color;
+		}
+		&.on, &.on:hover, &.on:active, &.on:focus{ 
+			background-color:$word-color;
+			border-color:$word-color;
+		}
+	}
+}
