@@ -1,280 +1,184 @@
 @charset "UTF-8";
-/* line 1, ../sass/_reset.scss */
 * { box-sizing: border-box; }
 
-/* line 4, ../sass/_reset.scss */
 body, dl, dt, dd, ul, li, table, blockquote { margin: 0px; padding: 0px; }
 
-/* line 8, ../sass/_reset.scss */
 ul, li { list-style-type: none; }
 
-/* line 11, ../sass/_reset.scss */
 table { border-collapse: collapse; }
 
-/* line 14, ../sass/_reset.scss */
 .clearfloat { clear: both; }
 
-/* line 17, ../sass/_reset.scss */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 
-/* line 21, ../sass/_reset.scss */
 .clearfix:after { clear: both; /* For IE 6/7 (trigger hasLayout) */ }
 
-/* line 24, ../sass/_reset.scss */
 .clearfix { zoom: 1; }
 
-/* line 27, ../sass/_reset.scss */
 a { /*IE outline*/ outline: none; /* for Firefox */ hlbr: expression(this.onFocus=this.blur()); /* for IE */ }
 
-/* line 31, ../sass/_reset.scss */
 a img { border: none; vertical-align: middle; }
 
-/* line 1, ../sass/_sexybutton.scss */
 .sexybutton { display: inline-block; text-decoration: none !important; background: none; border: none; white-space: nowrap; cursor: pointer; user-select: none; -moz-user-select: none; /* Fix extra width padding in IE */ _width: 0; overflow: visible; line-height: 25px; padding: 0; margin: 0; }
 
-/* line 18, ../sass/_sexybutton.scss */
 .sexybutton span { background-image: url(../images/btn_right.png); display: block; height: 25px; background-repeat: no-repeat; padding-right: 8px; margin: 0px; }
 
-/* line 26, ../sass/_sexybutton.scss */
 .sexybutton span span { background-image: url(../images/btn_left.png); color: #FFF; display: block; height: 25px; background-repeat: no-repeat; padding-left: 16px; _padding-left: 8px; }
 
-/* line 38, ../sass/_sexybutton.scss */
 .brown span { background-position: right 0px; }
 
-/* line 39, ../sass/_sexybutton.scss */
 .brown:hover span, .brown:focus span { background-position: 100% -25px; }
 
-/* line 43, ../sass/_sexybutton.scss */
 .brown span span { background-position: left 0px; }
 
-/* line 44, ../sass/_sexybutton.scss */
 .brown:hover span span, .brown:focus span span { background-position: 0% -25px; }
 
-/* line 49, ../sass/_sexybutton.scss */
 .black span { background-position: right -50px; }
 
-/* line 50, ../sass/_sexybutton.scss */
 .black:hover span, .black:focus span { background-position: 100% -75px; }
 
-/* line 54, ../sass/_sexybutton.scss */
 .black span span { background-position: left -50px; }
 
-/* line 55, ../sass/_sexybutton.scss */
 .black:hover span span, .black:focus span span { background-position: 0% -75px; }
 
-/* line 60, ../sass/_sexybutton.scss */
 .gray span { background-position: right -100px; }
 
-/* line 61, ../sass/_sexybutton.scss */
 .gray:hover span, .gray:focus span { background-position: 100% -125px; }
 
-/* line 65, ../sass/_sexybutton.scss */
 .gray span span { background-position: left -100px; }
 
-/* line 66, ../sass/_sexybutton.scss */
 .gray:hover span span, .gray:focus span span { background-position: 0% -125px; }
 
-/* line 71, ../sass/_sexybutton.scss */
 .sky span { background-position: right -150px; }
 
-/* line 72, ../sass/_sexybutton.scss */
 .sky:hover span, .sky:focus span { background-position: 100% -175px; }
 
-/* line 76, ../sass/_sexybutton.scss */
 .sky span span { background-position: left -150px; }
 
-/* line 77, ../sass/_sexybutton.scss */
 .sky:hover span span, .sky:focus span span { background-position: 0% -175px; }
 
-/* line 82, ../sass/_sexybutton.scss */
 .blue span { background-position: right -200px; }
 
-/* line 83, ../sass/_sexybutton.scss */
 .blue:hover span, .blue:focus span { background-position: 100% -225px; }
 
-/* line 87, ../sass/_sexybutton.scss */
 .blue span span { background-position: left -200px; }
 
-/* line 88, ../sass/_sexybutton.scss */
 .blue:hover span span, .blue:focus span span { background-position: 0% -225px; }
 
-/* line 93, ../sass/_sexybutton.scss */
 .gray span span, .sky span span, .blue span span { color: #333; }
 
 /*表格樣式*/
-/* line 3, ../sass/_table.scss */
 table tr.oddalt td { /*表格換行顏色-偶數行顏色*/ background-color: #FBFBFB; }
 
-/* line 6, ../sass/_table.scss */
 table tr.alt td { /*表格換行顏色-奇數行顏色*/ background-color: #FFF; }
 
-/* line 9, ../sass/_table.scss */
 table tr.over td { /*表格換行顏色-hover顏色*/ background-color: #eff5e5; }
 
 /*橫向表格樣式 th→td*/
-/* line 13, ../sass/_table.scss */
 .table0 td { border: 0px; }
 
-/* line 16, ../sass/_table.scss */
 .table1 { margin-right: auto; margin-left: auto; color: #333; font-size: 14px; line-height: 24px; }
 
-/* line 23, ../sass/_table.scss */
 .table1 th { text-align: right; background-color: #ECE9D8; padding: 5px; border-bottom: 1px dotted #999; }
 
-/* line 29, ../sass/_table.scss */
 .table1 td { background-color: #FBFBFB; padding: 5px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: #999; }
 
-/* line 36, ../sass/_table.scss */
 .table1 tfoot td { background-color: #FFF; border: 0px; }
 
 /*縱向表格樣式th↓td*/
-/* line 41, ../sass/_table.scss */
 .table2 { margin-right: auto; margin-left: auto; color: #333; font-size: 14px; line-height: 24px; }
 
-/* line 48, ../sass/_table.scss */
 .table2 th { background-color: #7B5E3E; padding: 5px; border-bottom: 1px dotted #999; border-left: 1px dotted #999; line-height: 20px; color: #FFF; }
 
-/* line 56, ../sass/_table.scss */
 .table2 th a { color: #FFF; text-decoration: underline; }
 
-/* line 60, ../sass/_table.scss */
 .table2 th a:hover { color: #000; }
 
-/* line 63, ../sass/_table.scss */
 .table2 td { background-color: #FBFBFB; padding: 5px; border-bottom: 1px dotted #999; border-left: 1px dotted #999; text-align: center; }
 
-/* line 70, ../sass/_table.scss */
 .table2 .NoBorder_Left { border-left: 0px; }
 
-/* line 73, ../sass/_table.scss */
 .table3 { border: dotted 1px #EAEAEA; line-height: 24px; }
 
-/* line 77, ../sass/_table.scss */
 .table3 th { color: #000; font-weight: bold; }
 
-/* line 81, ../sass/_table.scss */
 .table3 td { border: 0px; text-align: center; border: 1px dotted #DCDCDC; padding-top: 3px; padding-right: 0px; padding-bottom: 3px; padding-left: 0px; }
 
-/* line 90, ../sass/_table.scss */
 .table3 tr.oddalt td { /*表格換行顏色-偶數行顏色*/ background-color: #FFF; }
 
-/* line 93, ../sass/_table.scss */
 .table3 tr.alt td { /*表格換行顏色-奇數行顏色*/ background-color: #FFF; }
 
-/* line 96, ../sass/_table.scss */
 .table3 tr.over td { /*表格換行顏色-hover顏色*/ background-color: #eff5e5; }
 
-/* line 99, ../sass/_table.scss */
 .table3 th { background-color: #EAEAEA; text-align: center; font-weight: normal; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 0px; border-left-width: 0px; border-right-style: dotted; border-right-color: #DCDCDC; padding-top: 3px; padding-right: 0px; padding-bottom: 3px; padding-left: 0px; }
 
 /* ******* ******* ******* ******* ******* ******* ******* */
-/* line 5, ../sass/styles.scss */
 html { background-color: #ebe3da; /*2018*/ }
 
-/* line 8, ../sass/styles.scss */
 body { font-family: Arial, Helvetica, sans-serif, "Microsoft JhengHei"; font-size: 16px; line-height: 1.5em; background-image: url(../images/bg.jpg); background-repeat: no-repeat; background-position: center top 40px; background-color: #fef9d1; /*2018*/ }
 
-/* line 18, ../sass/styles.scss */
 .wrapper { width: 980px; height: auto; margin: 0px auto; padding-left: 10px; padding-right: 10px; }
 
 /* ******* ******* ******* ******* ******* ******* ******* */
-/* line 26, ../sass/styles.scss */
 a, a:visited { color: #0000ff; }
 
-/* line 29, ../sass/styles.scss */
 a:hover, a:active { color: #F30; }
 
-/* line 32, ../sass/styles.scss */
 .pull-right { float: right; }
 
-/* line 35, ../sass/styles.scss */
 .center-block { display: block; margin: 0px auto; }
 
-/* line 39, ../sass/styles.scss */
 .subtitle { color: #930; font-weight: bold; }
 
-/* line 43, ../sass/styles.scss */
 .point { color: #FC6532; font-weight: bold; }
 
-/* line 47, ../sass/styles.scss */
 .red { color: #F00; }
 
-/* line 50, ../sass/styles.scss */
 .toLeft { text-align: left; }
 
-/* line 53, ../sass/styles.scss */
 .toRight { text-align: right; }
 
-/* line 56, ../sass/styles.scss */
 .toCenter { text-align: center; }
 
-/* line 59, ../sass/styles.scss */
 .Bold { font-weight: bold; }
 
-/* line 62, ../sass/styles.scss */
 .Normal { font-weight: normal; }
 
-/* line 65, ../sass/styles.scss */
 .BgWhite { background-color: #FFF; }
 
-/* line 68, ../sass/styles.scss */
 .BgGray { background-color: #F7F6F3; }
 
-/* line 71, ../sass/styles.scss */
 .BgSky { background-color: #EEF9FD; }
 
-/* line 74, ../sass/styles.scss */
 .BgBlue { background-color: #CFEEFA; }
 
-/* line 77, ../sass/styles.scss */
 .noBolderBottom { border-bottom: 0px; }
 
-/* line 80, ../sass/styles.scss */
 .noBolderLeft { border-left: 0px; }
 
-/* line 83, ../sass/styles.scss */
 .noBolderRight { border-right: 0px; }
 
 /* ******* ******* ******* ******* ******* ******* ******* */
-/* line 87, ../sass/styles.scss */
 .head { height: 40px; line-height: 40px; background-color: #524932; font-size: 0.9em; color: #FFF; /*2018*/ }
-/* line 93, ../sass/styles.scss */
 .head a { color: #FFF; text-decoration: none; }
-/* line 96, ../sass/styles.scss */
 .head a:hover { color: #faed92; }
-/* line 101, ../sass/styles.scss */
 .head .accountTools-btn { position: relative; z-index: 1000; }
-/* line 104, ../sass/styles.scss */
 .head .accountTools-btn:hover .accountTools-toggle { display: block; }
-/* line 108, ../sass/styles.scss */
 .head .accountTools-toggle { display: none; position: absolute; width: 113px; text-align: center; margin-top: -5px; background-image: url(../images/forBtnSpace.png); background-position: bottom center; padding-bottom: 5px; }
-/* line 118, ../sass/styles.scss */
 .head .accountTools-toggle .forBtnSpace { height: 5px; background-image: url(../images/forBtnSpace.png); background-position: top center; }
-/* line 123, ../sass/styles.scss */
 .head .accountTools-toggle li { border-bottom: 1px solid #d4a979; }
-/* line 125, ../sass/styles.scss */
 .head .accountTools-toggle li:first-child, .head .accountTools-toggle li:last-child { border-bottom: none; }
-/* line 128, ../sass/styles.scss */
 .head .accountTools-toggle li a { color: #824e02; text-decoration: none; }
-/* line 131, ../sass/styles.scss */
 .head .accountTools-toggle li a:hover { color: #FC6532; }
-/* line 138, ../sass/styles.scss */
 .head .headIcon { display: inline-block; width: 24px; height: 24px; text-indent: -9999px; overflow: hidden; vertical-align: middle; background-image: url(../images/headIcon.png); background-repeat: no-repeat; }
-/* line 147, ../sass/styles.scss */
 .head .headIcon.home { background-position: 0px 0px; }
-/* line 149, ../sass/styles.scss */
 .head .headIcon.home:hover { background-position: 0px -25px; }
-/* line 153, ../sass/styles.scss */
 .head .headIcon.entrance { background-position: -75px 0px; }
-/* line 155, ../sass/styles.scss */
 .head .headIcon.entrance:hover { background-position: -75px -25px; }
 
-/* line 163, ../sass/styles.scss */
 .banner .wrapper { height: 160px; background-image: url(../images/banner.png); background-position: center top; background-repeat: no-repeat; position: relative; }
-/* line 170, ../sass/styles.scss */
 .banner .wrapper .welcome { display: none; position: absolute; bottom: 30px; right: 30px; color: #FFF; font-weight: bold; font-size: 1.2em; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
 
-/* line 183, ../sass/styles.scss */
 .toolSection { /*.ad{
 	width: 720px;
 	height: 240px;
@@ -292,54 +196,32 @@ a:hover, a:active { color: #F30; }
 		z-index:100;
 	}
 }*/ /*2018 delete*/ }
-/* line 184, ../sass/styles.scss */
 .toolSection .wrapper { /*background-image: url(../images/mainBg.jpg);
 background-repeat:repeat-y;
 background-position:center;*/ /*2018*/ padding: 0px 10px; margin-bottom: 5px; }
-/* line 192, ../sass/styles.scss */
 .toolSection .nav { position: relative; }
-/* line 194, ../sass/styles.scss */
 .toolSection .nav .nav-item { width: 270px; height: 205px; float: left; text-indent: -9999px; overflow: hidden; background-repeat: no-repeat; }
-/* line 201, ../sass/styles.scss */
 .toolSection .nav .nav-item a { background-repeat: no-repeat; background-position: 0px 0px; }
-/* line 204, ../sass/styles.scss */
 .toolSection .nav .nav-item a:hover, .toolSection .nav .nav-item a.hover, .toolSection .nav .nav-item a:active, .toolSection .nav .nav-item a.active, .toolSection .nav .nav-item a:focus, .toolSection .nav .nav-item a.focus { background-position: 0px -205px; }
-/* line 210, ../sass/styles.scss */
 .toolSection .nav .nav-item.TA a { background-image: url(../images/nav-TA.png); }
-/* line 213, ../sass/styles.scss */
 .toolSection .nav .nav-item.TI a { background-image: url(../images/nav-TI.png); }
-/* line 216, ../sass/styles.scss */
 .toolSection .nav .nav-item.WV a { background-image: url(../images/nav-WV.png); }
-/* line 220, ../sass/styles.scss */
 .toolSection .nav .nav-item.TA.active { background-image: url(../images/nav-TA-hover.png); background-position: left 0px top 0px; }
-/* line 226, ../sass/styles.scss */
 .toolSection .nav .nav-item.TI.active { background-image: url(../images/nav-TI-hover.png); }
-/* line 231, ../sass/styles.scss */
 .toolSection .nav .nav-item.WV.active { background-image: url(../images/nav-WV-hover.png); }
-/* line 238, ../sass/styles.scss */
 .toolSection .nav .nav-float { width: 124px; height: 109px; float: left; background-position: 0px 0px; position: absolute; right: 0px; text-indent: -9999px; overflow: hidden; }
-/* line 247, ../sass/styles.scss */
 .toolSection .nav .nav-float.INFO { background-image: url(../images/index2018/btn-float_INFO.png); bottom: calc(5px + 109px + 10px + 109px + 10px); }
-/* line 250, ../sass/styles.scss */
 .toolSection .nav .nav-float.INFO:hover, .toolSection .nav .nav-float.INFO:focus, .toolSection .nav .nav-float.INFO.hover, .toolSection .nav .nav-float.INFO.focus { background-position: 0px -150px; }
-/* line 255, ../sass/styles.scss */
 .toolSection .nav .nav-float.SD { background-image: url(../images/index2018/btn-float_SD.png); bottom: calc(5px + 109px + 10px); }
-/* line 258, ../sass/styles.scss */
 .toolSection .nav .nav-float.SD:active, .toolSection .nav .nav-float.SD.active { background-position: 0px -300px; }
-/* line 263, ../sass/styles.scss */
 .toolSection .nav .nav-float.TEST { background-image: url(../images/index2018/btn-float_TEST.png); bottom: 5px; }
-/* line 267, ../sass/styles.scss */
 .toolSection .nav .nav-float:hover, .toolSection .nav .nav-float:focus, .toolSection .nav .nav-float.hover, .toolSection .nav .nav-float.focus { background-position: 0px -150px; }
-/* line 272, ../sass/styles.scss */
 .toolSection .nav a { display: block; width: 100%; height: 100%; }
 
-/* line 297, ../sass/styles.scss */
 .main-top .wrapper { height: 15px; background-image: url(../images/main-top.png); background-repeat: no-repeat; background-position: top center; }
 
-/* line 305, ../sass/styles.scss */
 .main .wrapper { background-image: url(../images/mainBg.jpg); background-repeat: repeat-y; background-position: center; }
 
-/* line 312, ../sass/styles.scss */
 .main-bottom .wrapper { height: 15px; background-image: url(../images/main-bottom.png); background-repeat: no-repeat; background-position: bottom center; margin-bottom: 20px; }
 
 /*.footer{
@@ -372,65 +254,44 @@ background-position:center;*/ /*2018*/ padding: 0px 10px; margin-bottom: 5px; }
 		a{ color:#FFF;}
 	}
 }*/
-/* line 352, ../sass/styles.scss */
 .footer { background-color: #ebe3da; border-top: 1px solid #4f4d4d; padding: 15px 0px; font-size: 14px; }
 
-/* line 358, ../sass/styles.scss */
 .footer .link, .footer .copyright { border-left: 10px solid #b3b0ad; padding-left: 10px; }
 
-/* line 365, ../sass/styles.scss */
 .footer .link, .footer .link a { color: #633e1a; text-decoration: none; }
 
-/* line 370, ../sass/styles.scss */
 .footer .link a:hover, .footer .link a:active, .footer .link a:focus { text-decoration: underline; }
 
-/* line 375, ../sass/styles.scss */
 .footer .copyright { padding-top: 10px; color: #524932; font-size: 13px; line-height: 1.4em; }
 
 /* ******* ******* ******* ******* ******* ******* ******* */
 /* ******* ******* ******* ******* ******* ******* ******* */
-/* line 383, ../sass/styles.scss */
 .content { padding: 0px 10px; }
-/* line 386, ../sass/styles.scss */
 .content .content_position { border-left: 1px solid #919191; border-right: 1px solid #919191; padding: 10px; background-color: #FFF; /*2018*/ }
-/* line 392, ../sass/styles.scss */
 .content .content_footer { width: 100%; height: 15px; background-image: url(../images/content_footerBg.png); /*2018*/ }
 
 /* ******* ******* ******* ******* ******* ******* ******* */
-/* line 399, ../sass/styles.scss */
 .step { height: 40px; background-image: url(../images/step_bg.jpg); text-align: center; color: #999; line-height: 40px; margin-bottom: 10px; _padding-top: 8px; _height: 32px; background-repeat: no-repeat; background-position: center center; }
 
-/* line 411, ../sass/styles.scss */
 .step img { vertical-align: text-bottom; }
 
-/* line 414, ../sass/styles.scss */
 .step_terms { overflow-y: scroll; width: 680px; height: 265px; padding-top: 10px; padding-right: 40px; padding-bottom: 10px; padding-left: 40px; margin: 5px; border: 1px solid #D6D6D6; background-color: #FFF; }
 
 /**/
-/* line 429, ../sass/styles.scss */
 .page { padding-top: 10px; padding-bottom: 10px; text-align: center; }
-/* line 433, ../sass/styles.scss */
 .page a { text-decoration: none; color: #666; font-weight: bold; padding-top: 2px; padding-right: 5px; padding-bottom: 2px; padding-left: 5px; border: 1px solid #E0E0E0; }
-/* line 442, ../sass/styles.scss */
 .page a:hover, .page a:active { color: #000; background-repeat: repeat-x; background-color: #eff5e5; }
-/* line 448, ../sass/styles.scss */
 .page .on { background: #d7c6ba; color: #000; border-color: #666; }
-/* line 452, ../sass/styles.scss */
 .page .on:hover, .page .on:active { background: #d7c6ba; }
 
-/* line 459, ../sass/styles.scss */
 .pages { text-align: center; }
-/* line 461, ../sass/styles.scss */
 .pages a { color: #333; text-decoration: none; }
-/* line 464, ../sass/styles.scss */
 .pages a:hover { color: #40955e; }
 
-/* line 469, ../sass/styles.scss */
 .goTopIndex { display: inline-block; width: 44px; height: 25px; background-image: url(../images/goTop.jpg); text-indent: 9999px; overflow: hidden; vertical-align: middle; }
 
-/* line 479, ../sass/styles.scss */
 .gotop { text-align: right; }
-/* line 481, ../sass/styles.scss */
 .gotop a { display: inline-block; width: 44px; height: 25px; background-image: url(../images/goTop.jpg); text-indent: 9999px; overflow: hidden; }
-/* line 488, ../sass/styles.scss */
 .gotop a:hover { background-position: 0px -25px; }
+
+/*# sourceMappingURL=styles.css.map */
