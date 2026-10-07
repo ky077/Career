@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 大學版</title>
+<!-- TemplateEndEditable -->
+<link rel="icon" href="../images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- TemplateBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<div class="goTop"></div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- head START -->
+<div class="head">
+  <div class="container-fluid"><a href="http://career.ntnu.edu.tw/" class="headIcon entrance" alt="入口網" title="入口網">入口網</a>&nbsp;|&nbsp;<a href="../index.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <a href="../Default/Register.html">學校帳號註冊申請</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../Default/Login.html" class="sexybutton gray"><span><span>登入</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- btn-float START -->
+<div class="btn-floatArea">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12"> <a href="../StudentData/StudentNotes.html" class="btn-float SD">學生資料庫</a> <a href="../StudentData/StudentNotes.html" class="btn-float TEST">學生測驗</a> </div>
+    </div>
+  </div>
+</div>
+<!-- btn-float END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+        <div class="logo"><img src="../images/logo.png" class="img-responsive center-block"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<div class="toolSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-12"> 
+        <!-- nav START -->
+        <div class="nav clearfix">
+          <ul>
+            <li class="interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+            <li class="workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+          </ul>
+        </div>
+        <!-- nav END --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="container">
+    <div class="content"> <!-- TemplateBeginEditable name="EditRegion-main" -->000<!-- TemplateEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="link">
+    <div class="container"> <a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a></div>
+  </div>
+  <div class="copyright">
+    <div class="container">本站最佳解析度1024×768建議以IE9以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END -->
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/min_height.js"></script>
+<script src="../js/navbar-toggle.js"></script>
+<script src="../js/goTop.js"></script>
+<!-- TemplateBeginEditable name="EditRegion-JS" -->
+
+<!-- TemplateEndEditable -->
+</body>
+</html>

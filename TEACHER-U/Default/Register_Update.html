@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/template-logged.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 大學版</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="../images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/Default.css">
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div class="goTop"></div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- head START -->
+<div class="head">
+  <div class="container-fluid"><a href="http://career.ntnu.edu.tw/" class="headIcon entrance" alt="入口網" title="入口網">入口網</a>&nbsp;|&nbsp;<a href="../index-logged.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton gray accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="Register_Update.html">修改會員資料</a></li>
+        <li><a href="Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton gray"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- btn-float START -->
+<div class="btn-floatArea">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12"> <a href="../StudentData/StudentNotes.html" class="btn-float SD">學生資料庫</a> <a href="../StudentData/StudentNotes.html" class="btn-float TEST">學生測驗</a> </div>
+    </div>
+  </div>
+</div>
+<!-- btn-float END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+        <div class="logo"><img src="../images/logo.png" class="img-responsive center-block"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-12"> 
+        <!-- nav START -->
+        <div class="nav clearfix">
+          <ul>
+            <li class="interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+            <li class="workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+          </ul>
+        </div>
+        <!-- nav END --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="container">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+      <div class="navbar">資料更新</div>
+      <!-- ------- ------- ------- ------- ------- ------- ------- -->
+      <div class="content_position">
+        <ul class="content_block">
+          <li>
+            <dl>
+              <!-- 學校 / 帳號START-->
+              <div class="table-responsive">
+                <table id="table_attn" class="table1">
+                  <thead>
+                    <tr>
+                      <th colspan="2">學校 / 帳號</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th style="width:150px;" class="toRight">服務學校：</th>
+                      <td id="td_school">展示學校</td>
+                    </tr>
+                    <tr>
+                      <th class="toRight">帳　　號：</th>
+                      <td id="td_id">demo4220</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2" style="text-align:center"><input type="button" id="Btn_pwd" value="更新密碼" onclick="SetLayout(0)" class="normalBtn style3">
+                        <input type="button" id="Btn_attn" value="更新聯絡人資料" onclick="SetLayout(1)" class="normalBtn style3">
+                        <input type="button" id="Btn_pc" value="更新電腦配備" onclick="SetLayout(2)" class="normalBtn style3"></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- 學校 / 帳號END--> 
+              
+              <!-- 更新密碼START-->
+              <form id="form_pwd" method="get" action="" style="display: block;" novalidate>
+                <div class="table-responsive">
+                  <table class="table1">
+                    <thead>
+                      <tr>
+                        <th colspan="2" >密　　碼</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th style="width:150px;" class="toRight">新 密 碼：</th>
+                        <td><input id="Text_pwd" name="Text_pwd" type="password">
+                          <small class="text-muted">以英數字元設置4-10位的密碼</small></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">密碼確認：</th>
+                        <td><input id="Text_pwd2" name="Text_pwd2" type="password"></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2" style="text-align:center"><input id="Btn_pwdRenew" name="Btn_pwdRenew" type="submit" value="修改" class="normalBtn style2 big">
+                          <input name="Btn_cancel" type="button" value="取消" onclick="toIndex()" class="normalBtn style2 big"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </form>
+              <!-- 更新密碼END--> 
+              
+              <!-- 更新聯絡人資料START-->
+              <form id="form_attn" method="get" action="" style="display: block;" novalidate>
+                <div class="table-responsive">
+                  <table class="table1">
+                    <thead>
+                      <tr>
+                        <th colspan="2">聯絡人資料</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th style="width:150px;" class="toRight">姓　　名：</th>
+                        <td><input id="Text_attn" name="Text_attn" type="text"></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">性　　別：</th>
+                        <td><label>
+                            <input id="Radio1" type="radio" name="Radio_sex" value="1">
+                            男</label>
+                          <label>
+                            <input id="Radio2" type="radio" name="Radio_sex" value="2">
+                            女</label></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">處室名稱：</th>
+                        <td><input id="Text_dep" name="Text_dep" type="text">
+                          
+                          <!--<small class="text-muted">例如：教務處</small>--></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">職　　稱：</th>
+                        <td><input id="Text_title" name="Text_title" type="text">
+                          
+                          <!--<small class="text-muted">例如：教務主任</small>--></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">聯絡電話：</th>
+                        <td><input id="Text_tel1" name="Text_tel1" type="text" style="width:60px">
+                          -
+                          <input id="Text_tel2" name="Text_tel2" type="text">
+                          分機
+                          <input id="Text_ext" name="Text_ext" type="text" style=" width:50px;">
+                          <small class="text-muted">輸入格式：02-2351-7160</small></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">電子信箱：</th>
+                        <td><input id="Text_email" name="Text_email" type="text" style="width:300px"></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2" style="text-align:center"><input id="Btn_attnRenew" name="Btn_attnRenew" type="submit" value="修改" class="normalBtn style2 big">
+                          <input name="Btn_cancel" type="button" value="取消" onclick="toIndex()" class="normalBtn style2 big"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </form>
+              <!-- 更新聯絡人資料END--> 
+              
+              <!-- 更新電腦配備START-->
+              <form id="form_pc" method="get" action="" style="display: block;" novalidate>
+                <div class="table-responsive">
+                  <table class="table1">
+                    <thead>
+                      <tr>
+                        <th colspan="2">施測電腦配備</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th style="width:150px;" class="toRight">注意事項：</th>
+                        <td style=" color:Purple"> 請根據同學測驗時，會使用的電腦設備，確實選填以下資料。謝謝！ </td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">記 憶 體 ：</th>
+                        <td><select id="Drop_ram" name="Drop_ram">
+                            <option value="0">低於512</option>
+                            <option value="1">512~1G</option>
+                            <option value="2">1G~2G</option>
+                            <option value="3">2G以上</option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">I.E 版 本 ：</th>
+                        <td><select id="Drop_ie" name="Drop_ie">
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11以上</option>
+                            <option value="0">其他</option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">下載速率：</th>
+                        <td><input id="Text_speed" name="Text_speed" type="text">
+                          <select id="Drop_speed" name="Drop_speed">
+                            <option value="Kb">Kbps</option>
+                            <option value="Mb">Mbps</option>
+                          </select>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://speed.hinet.net/" target="_blank" class="normalBtn style3">測試傳送速率，請點選這裡。</a></td>
+                      </tr>
+                    </tbody>
+                    <thead>
+                      <tr>
+                        <th colspan="2" > <label>
+                            <input id="CB_agree" name="CB_agree" type="checkbox" onclick="checkAgree()" style="margin:0px;">
+                            <small> 以上選填之電腦設備資料與實際情況相符，若有不符之處，校方願意自行承擔測驗無法順利進行的責任。</small> </label>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2" style="text-align:center"><input id="Btn_register" name="Btn_register" type="submit" value="修改" disabled="disabled" class="normalBtn style2 big">
+                          <input name="Btn_cancel" type="button" value="取消" onclick="toIndex()" class="normalBtn style2 big"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </form>
+              <!-- 更新電腦配備END-->
+              
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="link">
+    <div class="container"> <a href="Process.html">使用流程</a>｜<a href="QA.html">常見問題</a>｜<a href="Contact.html">聯絡我們</a>｜<a href="Map.html">網站地圖</a>｜<a href="Privacy.html">隱私權與資訊安全</a>｜<a href="Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a></div>
+  </div>
+  <div class="copyright">
+    <div class="container">本站最佳解析度1024×768建議以IE9以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/min_height.js"></script> 
+<script src="../js/navbar-toggle.js"></script> 
+<script src="../js/goTop.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion-JS" --> <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+</html>

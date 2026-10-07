@@ -1,0 +1,18 @@
+@mixin stepStyles($get-path: " ") {
+	> .sexybutton {
+		span {
+			background-image: url(../images/#{$get-path}/UI.png);
+			background-position:right -200px;
+		}
+		span span {
+			background-image: url(../images/#{$get-path}/UI.png);
+			background-position:left -150px;
+			color: #FFF;
+		}
+	}
+	> .sexybutton:hover, .sexybutton.active {
+		span span {
+			color: #fced03;
+		}		
+	}
+}

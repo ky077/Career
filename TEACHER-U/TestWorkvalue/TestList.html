@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/template-logged.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 大學版</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="../images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/TW.css">
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div class="goTop"></div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- head START -->
+<div class="head">
+  <div class="container-fluid"><a href="http://career.ntnu.edu.tw/" class="headIcon entrance" alt="入口網" title="入口網">入口網</a>&nbsp;|&nbsp;<a href="../index-logged.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton gray accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton gray"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- btn-float START -->
+<div class="btn-floatArea">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12"> <a href="../StudentData/StudentNotes.html" class="btn-float SD">學生資料庫</a> <a href="../StudentData/StudentNotes.html" class="btn-float TEST">學生測驗</a> </div>
+    </div>
+  </div>
+</div>
+<!-- btn-float END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+        <div class="logo"><img src="../images/logo.png" class="img-responsive center-block"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-12"> 
+        <!-- nav START -->
+        <div class="nav clearfix">
+          <ul>
+            <li class="interest"><a href="NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+            <li class="workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+          </ul>
+        </div>
+        <!-- nav END --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="container">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+      <div class="navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav nav-tabs nav-justified">
+            <li><a href="NoteIntroduce.html">測驗簡介</a></li>
+            <li><a href="NoteGuide.html">測驗指南</a></li>
+            <li><a href="Online.html">線上體驗</a></li>
+            <li><a href="Apply.html">申請條件</a></li>
+            <li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登記測驗</a>
+              <ul class="dropdown-menu">
+                <li><a href="TestNotes.html">登記測驗須知</a></li>
+                <li><a href="TestBookin.html">登記場次</a></li>
+                <li><a href="TestList.html">查詢與修改</a></li>
+                <li><a href="ResitList.html">登記補測</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">學生報表</a>
+              <ul class="dropdown-menu">
+                <li><a href="ReportNote.html">報表須知</a></li>
+                <li><a href="Form_List.html">報表申請與下載</a></li>
+              </ul>
+            </li>
+            <li><a href="">指導手冊</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- ------- ------- ------- ------- ------- ------- ------- -->
+      <div class="content_position">
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt>查詢與修改</dt>
+              <dd> 班級搜尋：
+                <select id="Drop_dep1" name="Drop_dep1" onchange="LoadEnterYear()">
+                  <option value="-1">科系</option>
+                  <option value="3973">展示系</option>
+                  <option value="">應用數學系</option>
+                  <option value="">資訊管理與財務金融學系</option>
+                </select>
+                <select id="Drop_enterY" name="Drop_enterY" onchange="LoadYear()">
+                  <option value="-1">入學年</option>
+                  <option value="107">107</option>
+                  <option value="106">106</option>
+                  <option value="105">105</option>
+                  <option value="104">104</option>
+                </select>
+                <select id="Drop_year" name="Drop_year" onchange="LoadClass()">
+                  <option value="-1">年級</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <select id="Drop_class" name="Drop_class" onchange="LoadStudent()">
+                  <option value="-1">班級</option>
+                  <option value="YA">YA</option>
+                  <option value="">B</option>
+                  <option value="">程式組</option>
+                </select>
+              </dd>
+              <dd> 時間搜尋：
+                <input id="Text_datepicker" type="text" readonly onchange="LoadTestInfo()" class="hasDatepicker">
+                &nbsp;&nbsp;/&nbsp;&nbsp;
+                <input type="button" value="顯示全部" onclick="ShowAll()" class="normalBtn style3">
+              </dd>
+              <hr>
+              <dd>
+                <div class="table-responsive">
+                  <table class="table2 tableTRColor tableCenter">
+                    <tbody>
+                      <tr>
+                        <th rowspan="2" style="vertical-align:middle; width:50px;">場次編號</th>
+                        <th rowspan="2" style="vertical-align:middle;">科系</th>
+                        <th rowspan="2" style="vertical-align:middle; width:65px;">入學年</th>
+                        <th rowspan="2" style="vertical-align:middle;">班級</th>
+                        <th colspan="2">測驗時間</th>
+                        <th rowspan="2" style="vertical-align:middle; width:50px;">人數</th>
+                        <th colspan="2">測驗狀況</th>
+                        <th rowspan="2" style="vertical-align:middle; width:50px;">修改時間</th>
+                        <th rowspan="2" style="vertical-align:middle; width:50px;">增刪學生</th>
+                        <th rowspan="2" style="vertical-align:middle; width:50px;">取消預約</th>
+                        <th rowspan="2" style="vertical-align:middle; width:50px;">下載文件</th>
+                      </tr>
+                      <tr>
+                        <th style="width:13%;">日期</th>
+                        <th style="width:13%;">時段</th>
+                        <th style="width:50px;">完成</th>
+                        <th style="width:50px;">未完</th>
+                      </tr>
+                    </tbody>
+                    <tbody id="tbody_list">
+                      <tr>
+                        <td>14</td>
+                        <td></td>
+                        <td>104</td>
+                        <td>3年A班</td>
+                        <td>2018/10/31</td>
+                        <td>8:00 - 9:00</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td><a href="TW_TestBookin.aspx?testSN=1014&amp;type=renew">修改</a></td>
+                        <td><a href="TW_TestBookinTester.aspx?testSN=1014&amp;type=renew">增刪</a></td>
+                        <td><a href="javascript:" onclick="CancelBookin(1014)">取消</a></td>
+                        <td><a href="TestNameList.html">下載</a></td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>家庭研究與兒童發展學系</td>
+                        <td>105</td>
+                        <td>2年資訊管理組班</td>
+                        <td>2018/10/30</td>
+                        <td>14:00 - 15:00</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td><a href="TW_TestBookin.aspx?testSN=1013&amp;type=renew">修改</a></td>
+                        <td><a href="TW_TestBookinTester.aspx?testSN=1013&amp;type=renew">增刪</a></td>
+                        <td><a href="javascript:" onclick="CancelBookin(1013)">取消</a></td>
+                        <td><a href="TestNameList.html">下載</a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>展示展示展示展示展示系</td>
+                        <td>106</td>
+                        <td>1年YA班</td>
+                        <td>2017/05/09</td>
+                        <td>9:00 - 10:00</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>100</td>
+                        <td><a style="color:gray" class="disabled">修改</a></td>
+                        <td><a style="color:gray" class="disabled">增刪</a></td>
+                        <td><a style="color:gray" class="disabled">取消</a></td>
+                        <td><a href="TestNameList.html">下載</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="div_page" class="page" style="display: block;">
+                  <input type="button" id="Btn_first" name="Btn_first" value="第一頁" onclick="toFirstPage()" disabled="">
+                  <input type="button" id="Btn_pre" name="Btn_pre" value="上一頁" onclick="toPrePage()" disabled="">
+                  <input type="button" id="Btn_page1" name="Btn_page1" value="1" class="on" onclick="toTargetPage('Btn_page1', 1)" style="display: inline;">
+                  <input type="button" id="Btn_page2" name="Btn_page2" value="2" onclick="toTargetPage('Btn_page2', 2)" style="display: none;">
+                  <input type="button" id="Btn_page3" name="Btn_page3" value="3" onclick="toTargetPage('Btn_page3', 3)" style="display: none;">
+                  <input type="button" id="Btn_page4" name="Btn_page4" value="4" onclick="toTargetPage('Btn_page4', 4)" style="display: none;">
+                  <input type="button" id="Btn_page5" name="Btn_page5" value="5" onclick="toTargetPage('Btn_page5', 5)" style="display: none;">
+                  <input type="button" id="Btn_next" name="Btn_next" value="下一頁" onclick="toNextPage()" disabled="">
+                  <input type="button" id="Btn_last" name="Btn_last" value="最後頁" onclick="toLastPage()" disabled="">
+                </div>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="link">
+    <div class="container"> <a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a></div>
+  </div>
+  <div class="copyright">
+    <div class="container">本站最佳解析度1024×768建議以IE9以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/min_height.js"></script> 
+<script src="../js/navbar-toggle.js"></script> 
+<script src="../js/goTop.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion-JS" --> 
+<script>
+$(function(){
+	$(".interest").addClass('active');
+});
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+</html>

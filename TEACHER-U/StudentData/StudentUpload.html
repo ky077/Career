@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/template-logged.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 大學版</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="../images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/SD.css">
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div class="goTop"></div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- head START -->
+<div class="head">
+  <div class="container-fluid"><a href="http://career.ntnu.edu.tw/" class="headIcon entrance" alt="入口網" title="入口網">入口網</a>&nbsp;|&nbsp;<a href="../index-logged.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton gray accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton gray"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- btn-float START -->
+<div class="btn-floatArea">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12"> <a href="StudentNotes.html" class="btn-float SD">學生資料庫</a> <a href="StudentNotes.html" class="btn-float TEST">學生測驗</a> </div>
+    </div>
+  </div>
+</div>
+<!-- btn-float END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+        <div class="logo"><img src="../images/logo.png" class="img-responsive center-block"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-12"> 
+        <!-- nav START -->
+        <div class="nav clearfix">
+          <ul>
+            <li class="interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+            <li class="workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+          </ul>
+        </div>
+        <!-- nav END --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="container">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+      <div class="navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav nav-tabs nav-justified">
+            <li><a href="StudentNotes.html">學生資料須知</a></li>
+            <li class="active"><a href="StudentUpload.html">新增學生資料</a></li>
+            <li><a href="StudentList.html">查詢與修改</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- ------- ------- ------- ------- ------- ------- ------- -->
+      
+      <div class="content_position">
+        <div class="step"><span class="Normal" style=" color:#299bff;">您所在的新增學生資料步驟：</span><span style="color:#0368d4; font-weight:bold;">新增學生資料</span> <img src="../images/step_arrow.png" width="20" height="20" /> 完成新增學生資料</div>
+        <!-- ------- ------- ------- ------- ------- ------- ------- -->
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt>新增學生資料</dt>
+              <dd> <span class="subtitle">●注意事項</span><br>
+                <blockquote>在匯入學生資料前，請先至<a href="Student_List.aspx">查詢與修改</a>頁面確認是否已增加該學生資料檔案。</blockquote>
+                <span class="subtitle">●新增方式</span>
+                <label>
+                  <input id="Radio5" type="radio" name="Radio_upload" value="batch" onchange="UploadMethod('batch')" checked="">
+                  Excel匯入資料</label>
+                <label>
+                  <input id="Radio6" type="radio" name="Radio_upload" value="single" onchange="UploadMethod('single')">
+                  單筆新增資料</label>
+              </dd>
+              <dd id="dd_batch" style="display: block;">
+                <div class="table-responsive">
+                  <table class="table1">
+                    <tbody>
+                      <tr>
+                        <th style="width:200px" class="toRight">下載範例檔：</th>
+                        <td><a class="sexybutton sky" href="../Download/file/範例_學生資料.xlsx"><span><span>Excel範例檔</span></span></a>&nbsp;&nbsp;&nbsp;
+                          ※請參考<a href="../Download/Files.ashx?isReport=0&amp;fileName=EXCEL上傳指南.pdf">Excel上傳指南</a>並依照範例將學生資料匯入檔案之中 </td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">科系：</th>
+                        <td><select name="Drop_dep1" id="Drop_dep1" onchange="SelectedDep()">
+                            <option selected="selected" value="">請選擇</option>
+                            <option value="3973">[3973]展示系</option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">上傳Excel檔案：</th>
+                        <td><div class="upload clearfix">
+                            <div class="uploadbtnBox clearfix"> <a href="javascript:;" class="a-upload">
+                              <input id="myFile" name="myFile" type="file" value="13" onchange="CheckFile(this)">
+                              選檔上傳 </a> </div>
+                            <div class="filestate"> 檔名</div>
+                            <div class="progresspercent"> </div>
+                            <div class="progress" style="height: 4px;">
+                              <div class="bar" style="width: 0%;"> </div>
+                            </div>
+                          </div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </dd>
+              <dd id="dd_single" style="display: ;">
+                <form id="formMember" method="get" action="" novalidate>
+                  <div class="table-responsive">
+                    <table class="table1">
+                      <tbody>
+                        <tr>
+                          <th style="width:200px" class="toRight">學生身分：</th>
+                          <td><label>
+                              <input type="radio" name="Radio_isCitizen" id="radio1" value="1" checked="checked">
+                              一般生</label>
+                            <label>
+                              <input type="radio" name="Radio_isCitizen" id="radio2" value="0" disabled="disabled">
+                              外籍生(外籍生資料需請生涯團隊協助上傳) </label></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">身分證字號：</th>
+                          <td><input type="text" name="Text_id" id="Text_id"></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">姓名：</th>
+                          <td><input type="text" name="Text_name" id="Text_name"></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">學號：</th>
+                          <td><input type="text" name="Text_subjectID" id="Text_subjectID"></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">科系：</th>
+                          <td><select name="Drop_dep" id="Drop_dep">
+                              <option selected="selected" value="">請選擇</option>
+                              <option value="3973">[3973]展示系</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">入學年度：</th>
+                          <td><input type="text" name="Text_enterYear" id="Text_enterYear"></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">年級：</th>
+                          <td><input type="text" name="Text_grade" id="Text_grade"></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">班級/組別：</th>
+                          <td><input type="text" name="Text_class" id="Text_class"></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">性別：</th>
+                          <td><label>
+                              <input type="radio" name="Radio_gender" id="radio3" value="1" checked="checked">
+                              男</label>
+                            <label>
+                              <input type="radio" name="Radio_gender" id="radio4" value="2">
+                              女</label></td>
+                        </tr>
+                        <tr>
+                          <th class="toRight">生日：</th>
+                          <td> 西元
+                            <input id="Text_birth1" name="Text_birth1" type="text" style="width:60px">
+                            年
+                            <input id="Text_birth2" name="Text_birth2" type="text" style="width:60px">
+                            月
+                            <input id="Text_birth3" name="Text_birth3" type="text" style="width:60px">
+                            日 </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="2"><input type="button" name="Btn_upload" id="Btn_upload" value="送出資料" onclick="window.location='StudentUpload_2.html'"></td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </form>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="link">
+    <div class="container"> <a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a></div>
+  </div>
+  <div class="copyright">
+    <div class="container">本站最佳解析度1024×768建議以IE9以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/min_height.js"></script> 
+<script src="../js/navbar-toggle.js"></script> 
+<script src="../js/goTop.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion-JS" --> 
+<script>
+$(function(){
+	$(".SD").addClass('active');
+});
+</script> 
+<script type="text/livescript">
+function checkCase(obj){
+  if(obj.value==1){
+    menu1.style.display = "";
+	menu2.style.display = "none";
+  }else if(obj.value==2){
+    menu1.style.display = "none";
+	menu2.style.display = "";
+  }
+}
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+</html>

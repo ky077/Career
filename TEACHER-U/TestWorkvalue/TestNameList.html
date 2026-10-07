@@ -1,0 +1,865 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/template-logged.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 大學版</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="../images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/TW.css">
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div class="goTop"></div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- head START -->
+<div class="head">
+  <div class="container-fluid"><a href="http://career.ntnu.edu.tw/" class="headIcon entrance" alt="入口網" title="入口網">入口網</a>&nbsp;|&nbsp;<a href="../index-logged.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton gray accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton gray"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- btn-float START -->
+<div class="btn-floatArea">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12"> <a href="../StudentData/StudentNotes.html" class="btn-float SD">學生資料庫</a> <a href="../StudentData/StudentNotes.html" class="btn-float TEST">學生測驗</a> </div>
+    </div>
+  </div>
+</div>
+<!-- btn-float END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+        <div class="logo"><img src="../images/logo.png" class="img-responsive center-block"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-12"> 
+        <!-- nav START -->
+        <div class="nav clearfix">
+          <ul>
+            <li class="interest"><a href="NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+            <li class="workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+          </ul>
+        </div>
+        <!-- nav END --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="container">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+      <div class="navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav nav-tabs nav-justified">
+            <li><a href="NoteIntroduce.html">測驗簡介</a></li>
+            <li><a href="NoteGuide.html">測驗指南</a></li>
+            <li><a href="Online.html">線上體驗</a></li>
+            <li><a href="Apply.html">申請條件</a></li>
+            <li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登記測驗</a>
+              <ul class="dropdown-menu">
+                <li><a href="TestNotes.html">登記測驗須知</a></li>
+                <li><a href="TestBookin.html">登記場次</a></li>
+                <li><a href="TestList.html">查詢與修改</a></li>
+                <li><a href="ResitList.html">登記補測</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">學生報表</a>
+              <ul class="dropdown-menu">
+                <li><a href="ReportNote.html">報表須知</a></li>
+                <li><a href="Form_List.html">報表申請與下載</a></li>
+              </ul>
+            </li>
+            <li><a href="">指導手冊</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- ------- ------- ------- ------- ------- ------- ------- -->
+      <div class="content_position">
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt>測驗名單</dt>
+              <dd>
+                <div class="table-responsive">
+                  <table class="table1">
+                    <thead>
+                      <tr>
+                        <th colspan="4" class="toRight"> <input type="submit" name="Btn_Print" id="Btn_Print" value="下載施測必要文件" title="請自行列印，並發給受試者" onclick="download()">
+                          <input type="submit" name="Btn_Back" id="Btn_Back" value="回場次列表" onclick="window.location='TestList.html'">
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th style="width:15%" class="toRight">場次編號：</th>
+                        <td style="width:35%">2</td>
+                        <th style="width:15%" class="toRight">科系：</th>
+                        <td style="width:35%">展示展示展示展示展示系</td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">入學年：</th>
+                        <td>106</td>
+                        <th class="toRight">班級：</th>
+                        <td>1年YA班</td>
+                      </tr>
+                      <tr>
+                        <th class="toRight">測驗時間：</th>
+                        <td>2018/05/31&nbsp;&nbsp;8:00 - 9:00</td>
+                        <th class="toRight">人數：</th>
+                        <td>100</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4"><table class="table3 tableTRColor">
+                            <thead>
+                              <tr class="alt">
+                                <th style="width:70px">序號</th>
+                                <th>編號</th>
+                                <th>姓名</th>
+                                <th>帳號</th>
+                                <th>密碼</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tbody_tester">
+                              <tr>
+                                <td>1</td>
+                                <td>13268</td>
+                                <td>王小明001</td>
+                                <td>EXAMDEMO001</td>
+                                <td>demo1</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>13269</td>
+                                <td>王小明002</td>
+                                <td>EXAMDEMO002</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>13270</td>
+                                <td>王小明003</td>
+                                <td>EXAMDEMO003</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>13271</td>
+                                <td>王小明004</td>
+                                <td>EXAMDEMO004</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>13272</td>
+                                <td>王小明005</td>
+                                <td>EXAMDEMO005</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>6</td>
+                                <td>13273</td>
+                                <td>王小明006</td>
+                                <td>EXAMDEMO006</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>7</td>
+                                <td>13274</td>
+                                <td>王小明007</td>
+                                <td>EXAMDEMO007</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>13275</td>
+                                <td>王小明008</td>
+                                <td>EXAMDEMO008</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>9</td>
+                                <td>13276</td>
+                                <td>王小明009</td>
+                                <td>EXAMDEMO009</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>10</td>
+                                <td>13277</td>
+                                <td>王小明010</td>
+                                <td>EXAMDEMO010</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>11</td>
+                                <td>13278</td>
+                                <td>王小明011</td>
+                                <td>EXAMDEMO011</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>12</td>
+                                <td>13279</td>
+                                <td>王小明012</td>
+                                <td>EXAMDEMO012</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>13</td>
+                                <td>13280</td>
+                                <td>王小明013</td>
+                                <td>EXAMDEMO013</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>14</td>
+                                <td>13281</td>
+                                <td>王小明014</td>
+                                <td>EXAMDEMO014</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>15</td>
+                                <td>13282</td>
+                                <td>王小明015</td>
+                                <td>EXAMDEMO015</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>16</td>
+                                <td>13283</td>
+                                <td>王小明016</td>
+                                <td>EXAMDEMO016</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>17</td>
+                                <td>13284</td>
+                                <td>王小明017</td>
+                                <td>EXAMDEMO017</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>18</td>
+                                <td>13285</td>
+                                <td>王小明018</td>
+                                <td>EXAMDEMO018</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>19</td>
+                                <td>13286</td>
+                                <td>王小明019</td>
+                                <td>EXAMDEMO019</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>20</td>
+                                <td>13287</td>
+                                <td>王小明020</td>
+                                <td>EXAMDEMO020</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>21</td>
+                                <td>13288</td>
+                                <td>王小明021</td>
+                                <td>EXAMDEMO021</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>22</td>
+                                <td>13289</td>
+                                <td>王小明022</td>
+                                <td>EXAMDEMO022</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>23</td>
+                                <td>13290</td>
+                                <td>王小明023</td>
+                                <td>EXAMDEMO023</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>24</td>
+                                <td>13291</td>
+                                <td>王小明024</td>
+                                <td>EXAMDEMO024</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>25</td>
+                                <td>13292</td>
+                                <td>王小明025</td>
+                                <td>EXAMDEMO025</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>26</td>
+                                <td>13293</td>
+                                <td>王小明026</td>
+                                <td>EXAMDEMO026</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>27</td>
+                                <td>13294</td>
+                                <td>王小明027</td>
+                                <td>EXAMDEMO027</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>28</td>
+                                <td>13295</td>
+                                <td>王小明028</td>
+                                <td>EXAMDEMO028</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>29</td>
+                                <td>13296</td>
+                                <td>王小明029</td>
+                                <td>EXAMDEMO029</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>30</td>
+                                <td>13297</td>
+                                <td>王小明030</td>
+                                <td>EXAMDEMO030</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>31</td>
+                                <td>13298</td>
+                                <td>王小明031</td>
+                                <td>EXAMDEMO031</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>32</td>
+                                <td>13299</td>
+                                <td>王小明032</td>
+                                <td>EXAMDEMO032</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>33</td>
+                                <td>13300</td>
+                                <td>王小明033</td>
+                                <td>EXAMDEMO033</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>34</td>
+                                <td>13301</td>
+                                <td>王小明034</td>
+                                <td>EXAMDEMO034</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>35</td>
+                                <td>13302</td>
+                                <td>王小明035</td>
+                                <td>EXAMDEMO035</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>36</td>
+                                <td>13303</td>
+                                <td>王小明036</td>
+                                <td>EXAMDEMO036</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>37</td>
+                                <td>13304</td>
+                                <td>王小明037</td>
+                                <td>EXAMDEMO037</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>38</td>
+                                <td>13305</td>
+                                <td>王小明038</td>
+                                <td>EXAMDEMO038</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>39</td>
+                                <td>13306</td>
+                                <td>王小明039</td>
+                                <td>EXAMDEMO039</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>40</td>
+                                <td>13307</td>
+                                <td>王小明040</td>
+                                <td>EXAMDEMO040</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>41</td>
+                                <td>13308</td>
+                                <td>王小明041</td>
+                                <td>EXAMDEMO041</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>42</td>
+                                <td>13309</td>
+                                <td>王小明042</td>
+                                <td>EXAMDEMO042</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>43</td>
+                                <td>13310</td>
+                                <td>王小明043</td>
+                                <td>EXAMDEMO043</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>44</td>
+                                <td>13311</td>
+                                <td>王小明044</td>
+                                <td>EXAMDEMO044</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>45</td>
+                                <td>13312</td>
+                                <td>王小明045</td>
+                                <td>EXAMDEMO045</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>46</td>
+                                <td>13313</td>
+                                <td>王小明046</td>
+                                <td>EXAMDEMO046</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>47</td>
+                                <td>13314</td>
+                                <td>王小明047</td>
+                                <td>EXAMDEMO047</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>48</td>
+                                <td>13315</td>
+                                <td>王小明048</td>
+                                <td>EXAMDEMO048</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>49</td>
+                                <td>13316</td>
+                                <td>王小明049</td>
+                                <td>EXAMDEMO049</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>50</td>
+                                <td>13317</td>
+                                <td>王小明050</td>
+                                <td>EXAMDEMO050</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>51</td>
+                                <td>13318</td>
+                                <td>王小明051</td>
+                                <td>EXAMDEMO051</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>52</td>
+                                <td>13319</td>
+                                <td>王小明052</td>
+                                <td>EXAMDEMO052</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>53</td>
+                                <td>13320</td>
+                                <td>王小明053</td>
+                                <td>EXAMDEMO053</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>54</td>
+                                <td>13321</td>
+                                <td>王小明054</td>
+                                <td>EXAMDEMO054</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>55</td>
+                                <td>13322</td>
+                                <td>王小明055</td>
+                                <td>EXAMDEMO055</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>56</td>
+                                <td>13323</td>
+                                <td>王小明056</td>
+                                <td>EXAMDEMO056</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>57</td>
+                                <td>13324</td>
+                                <td>王小明057</td>
+                                <td>EXAMDEMO057</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>58</td>
+                                <td>13325</td>
+                                <td>王小明058</td>
+                                <td>EXAMDEMO058</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>59</td>
+                                <td>13326</td>
+                                <td>王小明059</td>
+                                <td>EXAMDEMO059</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>60</td>
+                                <td>13327</td>
+                                <td>王小明060</td>
+                                <td>EXAMDEMO060</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>61</td>
+                                <td>13328</td>
+                                <td>王小明061</td>
+                                <td>EXAMDEMO061</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>62</td>
+                                <td>13329</td>
+                                <td>王小明062</td>
+                                <td>EXAMDEMO062</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>63</td>
+                                <td>13330</td>
+                                <td>王小明063</td>
+                                <td>EXAMDEMO063</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>64</td>
+                                <td>13331</td>
+                                <td>王小明064</td>
+                                <td>EXAMDEMO064</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>65</td>
+                                <td>13332</td>
+                                <td>王小明065</td>
+                                <td>EXAMDEMO065</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>66</td>
+                                <td>13333</td>
+                                <td>王小明066</td>
+                                <td>EXAMDEMO066</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>67</td>
+                                <td>13334</td>
+                                <td>王小明067</td>
+                                <td>EXAMDEMO067</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>68</td>
+                                <td>13335</td>
+                                <td>王小明068</td>
+                                <td>EXAMDEMO068</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>69</td>
+                                <td>13336</td>
+                                <td>王小明069</td>
+                                <td>EXAMDEMO069</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>70</td>
+                                <td>13337</td>
+                                <td>王小明070</td>
+                                <td>EXAMDEMO070</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>71</td>
+                                <td>13338</td>
+                                <td>王小明071</td>
+                                <td>EXAMDEMO071</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>72</td>
+                                <td>13339</td>
+                                <td>王小明072</td>
+                                <td>EXAMDEMO072</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>73</td>
+                                <td>13340</td>
+                                <td>王小明073</td>
+                                <td>EXAMDEMO073</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>74</td>
+                                <td>13341</td>
+                                <td>王小明074</td>
+                                <td>EXAMDEMO074</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>75</td>
+                                <td>13342</td>
+                                <td>王小明075</td>
+                                <td>EXAMDEMO075</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>76</td>
+                                <td>13343</td>
+                                <td>王小明076</td>
+                                <td>EXAMDEMO076</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>77</td>
+                                <td>13344</td>
+                                <td>王小明077</td>
+                                <td>EXAMDEMO077</td>
+                                <td>45810</td>
+                              </tr>
+                              <tr>
+                                <td>78</td>
+                                <td>13345</td>
+                                <td>王小明078</td>
+                                <td>EXAMDEMO078</td>
+                                <td>67189</td>
+                              </tr>
+                              <tr>
+                                <td>79</td>
+                                <td>13346</td>
+                                <td>王小明079</td>
+                                <td>EXAMDEMO079</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>80</td>
+                                <td>13347</td>
+                                <td>王小明080</td>
+                                <td>EXAMDEMO080</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>81</td>
+                                <td>13348</td>
+                                <td>王小明081</td>
+                                <td>EXAMDEMO081</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>82</td>
+                                <td>13349</td>
+                                <td>王小明082</td>
+                                <td>EXAMDEMO082</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>83</td>
+                                <td>13350</td>
+                                <td>王小明083</td>
+                                <td>EXAMDEMO083</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>84</td>
+                                <td>13351</td>
+                                <td>王小明084</td>
+                                <td>EXAMDEMO084</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>85</td>
+                                <td>13352</td>
+                                <td>王小明085</td>
+                                <td>EXAMDEMO085</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>86</td>
+                                <td>13353</td>
+                                <td>王小明086</td>
+                                <td>EXAMDEMO086</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>87</td>
+                                <td>13354</td>
+                                <td>王小明087</td>
+                                <td>EXAMDEMO087</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>88</td>
+                                <td>13355</td>
+                                <td>王小明088</td>
+                                <td>EXAMDEMO088</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>89</td>
+                                <td>13356</td>
+                                <td>王小明089</td>
+                                <td>EXAMDEMO089</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>90</td>
+                                <td>13357</td>
+                                <td>王小明090</td>
+                                <td>EXAMDEMO090</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>91</td>
+                                <td>13358</td>
+                                <td>王小明091</td>
+                                <td>EXAMDEMO091</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>92</td>
+                                <td>13359</td>
+                                <td>王小明092</td>
+                                <td>EXAMDEMO092</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>93</td>
+                                <td>13360</td>
+                                <td>王小明093</td>
+                                <td>EXAMDEMO093</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>94</td>
+                                <td>13361</td>
+                                <td>王小明094</td>
+                                <td>EXAMDEMO094</td>
+                                <td>demo</td>
+                              </tr>
+                              <tr>
+                                <td>95</td>
+                                <td>13362</td>
+                                <td>王小明095</td>
+                                <td>EXAMDEMO095</td>
+                                <td>demo1</td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="link">
+    <div class="container"> <a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a></div>
+  </div>
+  <div class="copyright">
+    <div class="container">本站最佳解析度1024×768建議以IE9以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/min_height.js"></script> 
+<script src="../js/navbar-toggle.js"></script> 
+<script src="../js/goTop.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion-JS" --> 
+<script>
+$(function(){
+	$(".interest").addClass('active');
+});
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+</html>

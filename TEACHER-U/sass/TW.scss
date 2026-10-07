@@ -1,0 +1,21 @@
+@import "navbarStyles";
+@import "table";
+@import "content_blockStyles";
+@import "stepStyles";
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+
+$test-name: "TW";
+
+.navbar{
+	@include navbarStyles($word-color: #bd593f, $active-color: #d48647);
+}
+.table, .table1, .table2{
+	@include tableStyles($dark-color: #bd593f, $light-color: #fdedda);	
+}
+.content_block{
+	@include content_blockStyles($get-Dtcolor:#862809, $get-path:$test-name, $get-subtitlecolor:#cd8000);
+}
+.step{
+	@include stepStyles($get-path:$test-name);
+}

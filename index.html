@@ -132,31 +132,6 @@ transform: translate(5%, 5%) scale(1.1);
 	cursor: not-allowed;
 	user-select: none;
 }
-/* --- 高中版配色 --- */
-.hs-gradient-text {
-	background: linear-gradient(135deg, #38bdf8, #a78bfa);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	color: transparent;
-	display: inline-block;
-}
-.hs-card:hover {
-	border-color: rgba(167, 139, 250, 0.3);
-}
-.hs-card .icon-box {
-	background: rgba(167, 139, 250, 0.1);
-	color: #a78bfa;
-}
-.hs-card .sub-link-primary:hover {
-	background: #a78bfa;
-	color: white;
-	border-color: #a78bfa;
-}
-.hs-card .sub-link-secondary:hover {
-	background: rgba(255, 255, 255, 0.1);
-	color: #a78bfa;
-}
 /* --- 國中版配色 --- */
 .js-gradient-text {
 	background: linear-gradient(135deg, #FDE68A, #FB923C);
@@ -182,6 +157,58 @@ transform: translate(5%, 5%) scale(1.1);
 	background: rgba(255, 255, 255, 0.1);
 	color: #fb923c;
 }
+	
+/* --- 高中版配色 --- */
+.hs-gradient-text {
+	background: linear-gradient(135deg, #a78bfa, #38bdf8);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	display: inline-block;
+}
+.hs-card:hover {
+	border-color: rgba(56, 189, 248, 0.3);
+}
+.hs-card .icon-box {
+	background: rgba(167, 139, 250, 0.1);
+	color: #a78bfa;
+}
+.hs-card .sub-link-primary:hover {
+	background: #38bdf8;
+	color: white;
+	border-color: #38bdf8;
+}
+.hs-card .sub-link-secondary:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: #38bdf8;
+}
+/* --- 大學版配色 --- */
+.un-gradient-text {
+	background: linear-gradient(135deg, #80d7cf, #37746f);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	display: inline-block;
+}
+.un-card:hover {
+	border-color: rgba(55, 116, 111, 0.25);
+}
+.un-card .icon-box {
+	background: rgba(128, 215, 207, 0.08);
+	color: #80d7cf;
+}
+.un-card .sub-link-primary:hover {
+	background: #37746f;
+	color: white;
+	border-color: #37746f;
+}
+.un-card .sub-link-secondary:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: #37746f;
+}
+	
 .note-card {
 	background: rgba(255, 255, 255, 0.02);
 	border: 1px solid rgba(255, 255, 255, 0.1);
@@ -199,6 +226,58 @@ transform: translate(5%, 5%) scale(1.1);
 	margin-bottom: 40px;
 }
 }
+/* 頁籤切換 */
+.tab-list {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	max-width: 1024px;
+	margin: -24px 0 24px;
+	padding: 8px;
+	background: rgba(30, 41, 59, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 18px;
+}
+.tab-button {
+	flex: 1;
+	padding: 12px 16px;
+	border: 1px solid transparent;
+	border-radius: 12px;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.6);
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+.tab-button:hover {
+	background: rgba(255, 255, 255, 0.06);
+	color: white;
+}
+.tab-button[aria-selected="true"][aria-controls="panel-junior"] {
+	background: rgba(251, 146, 60, 0.1);
+	border-color: rgba(251, 146, 60, 0.12);
+	color: rgba(251, 146, 60, 1.0);
+}
+.tab-button[aria-selected="true"][aria-controls="panel-senior"] {
+	background: rgba(167, 139, 250, 0.1);
+	border-color: rgba(167, 139, 250, 0.12);
+	color: rgba(167, 139, 250, 1.0);
+}
+.tab-button[aria-selected="true"][aria-controls="panel-university"] {
+	background: rgba(55, 116, 111, 0.1);
+	border-color: rgba(55, 116, 111, 0.12);
+	color: rgba(55, 116, 111, 1.0);
+}	
+	
+.tab-panel[hidden] {
+	display: none;
+}
+.tab-empty-state {
+	padding: 48px 24px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.55);
+}
 </style>
 </head>
 <body>
@@ -207,8 +286,99 @@ transform: translate(5%, 5%) scale(1.1);
 <!-- 大標題 -->
 <h1 class="main-title">Career   |   KyLin @ NTNU</h1>
 
-<!-- Career 讚生涯（高中） -->
-<div class="dashboard mb-8">
+<!-- 頁籤 -->
+<div class="tab-list" role="tablist" aria-label="學段">
+  <button class="tab-button" id="tab-junior" type="button" role="tab" aria-controls="panel-junior" aria-selected="true">國中</button>
+  <button class="tab-button" id="tab-senior" type="button" role="tab" aria-controls="panel-senior" aria-selected="false" tabindex="-1">高中</button>
+  <button class="tab-button" id="tab-university" type="button" role="tab" aria-controls="panel-university" aria-selected="false" tabindex="-1">大學</button>
+</div>
+
+<!-- （國中） -->
+<section class="tab-panel dashboard" id="panel-junior" role="tabpanel" aria-labelledby="tab-junior">
+  <div class="px-10 py-8 border-b border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div>
+      <h2 class="text-3xl font-bold">
+        <span class="js-gradient-text">Career 讚生涯 ˙ 國中</span>
+      </h2>
+      <p class="text-white mt-1 text-sm tracking-widest uppercase">臺灣</p>
+    </div>
+  </div>
+  <div class="nav-grid">
+    <!-- 資訊系統 -->
+    <div class="nav-card js-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">資訊系統</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/CareerInfo-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
+        <a href="#" class="sub-link sub-link-disabled" target="_blank">莘倫</a>
+      </div>
+    </div>
+    
+    <!-- 測驗系統 - 學生端 -->
+    <div class="nav-card js-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">測驗系統 - 學生端</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/STUDENT-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
+        <a href="https://hexam.career.ntnu.edu.tw/catnt/JJ/" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
+      </div>
+    </div>
+    
+    <!-- 測驗系統 - 教師端 -->
+    <div class="nav-card js-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">（新北市）<br>
+          測驗系統 - 教師端</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/TEACHER-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
+        <a href="https://career.ntnu.edu.tw/senior/" class="sub-link sub-link-secondary" target="_blank">線上</a>
+      </div>
+    </div>
+    
+    <!-- 諮詢系統 -->
+    <div class="nav-card js-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg">諮詢系統</h3>
+      </div>
+      <div class="link-group">
+        <a href="https://ky077.github.io/Career/BOT-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
+        <a href="https://hexam.career.ntnu.edu.tw/junior_stu/index.aspx" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--（高中） -->
+<section class="tab-panel dashboard mb-8" id="panel-senior" role="tabpanel" aria-labelledby="tab-senior" hidden>
   <div class="px-10 py-8 border-b border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
     <div>
       <h2 class="text-3xl font-bold">
@@ -253,7 +423,7 @@ transform: translate(5%, 5%) scale(1.1);
         <a href="https://career.ntnu.edu.tw/SS_v2/" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
       </div>
     </div>
-		
+    
     <!-- 測驗系統 - 教師端 -->
     <div class="nav-card hs-card">
       <div class="card-header">
@@ -270,7 +440,7 @@ transform: translate(5%, 5%) scale(1.1);
         <a href="https://ky077.github.io/Career/TEACHER/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
         <a href="https://career.ntnu.edu.tw/senior/" class="sub-link sub-link-secondary" target="_blank">線上</a>
       </div>
-    </div>		
+    </div>
     
     <!-- 諮詢系統 -->
     <div class="nav-card hs-card">
@@ -339,41 +509,22 @@ transform: translate(5%, 5%) scale(1.1);
         <a href="#" class="sub-link sub-link-disabled" target="_blank">工作</a>
       </div>
     </div>
-		
   </div>
-</div>
+</section>
 
-<!-- Career 讚生涯（國中） -->
-<div class="dashboard">
+<!-- （大學） -->
+<section class="tab-panel dashboard" id="panel-university" role="tabpanel" aria-labelledby="tab-university" hidden>
   <div class="px-10 py-8 border-b border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
     <div>
       <h2 class="text-3xl font-bold">
-        <span class="js-gradient-text">Career 讚生涯 ˙ 國中</span>
+        <span class="un-gradient-text">Career 讚生涯 ˙ 大學</span>
       </h2>
       <p class="text-white mt-1 text-sm tracking-widest uppercase">臺灣</p>
     </div>
   </div>
   <div class="nav-grid">
-    <!-- 資訊系統 -->
-    <div class="nav-card js-card">
-      <div class="card-header">
-        <div class="icon-box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="16" x2="12" y2="12"></line>
-            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-          </svg>
-        </div>
-        <h3 class="font-semibold text-white text-lg">資訊系統</h3>
-      </div>
-      <div class="link-group">
-        <a href="https://ky077.github.io/Career/CareerInfo-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
-        <a href="#" class="sub-link sub-link-disabled" target="_blank">莘倫</a>
-      </div>
-    </div>
-    
-    <!-- 測驗系統 - 學生端 -->
-    <div class="nav-card js-card">
+    <!-- 測驗系統 - 教師端 -->
+    <div class="nav-card un-card">
       <div class="card-header">
         <div class="icon-box">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -382,49 +533,33 @@ transform: translate(5%, 5%) scale(1.1);
             <line x1="12" y1="17" x2="12" y2="21"></line>
           </svg>
         </div>
-        <h3 class="font-semibold text-white text-lg">測驗系統 - 學生端</h3>
+        <h3 class="font-semibold text-white text-lg">測驗系統 - 教師端</h3>
       </div>
       <div class="link-group">
-        <a href="https://ky077.github.io/Career/STUDENT-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
-        <a href="https://hexam.career.ntnu.edu.tw/catnt/JJ/" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
+        <a href="https://ky077.github.io/Career/TEACHER-U/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
+        <a href="https://career.ntnu.edu.tw/university/" class="sub-link sub-link-secondary" target="_blank">線上</a>
       </div>
     </div>
-		
-		<!-- 測驗系統 - 教師端 -->
-    <div class="nav-card hs-card">
+
+		<!-- 報表 -->
+    <div class="nav-card un-card">
       <div class="card-header">
         <div class="icon-box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-bar-graph" viewBox="0 0 16 16">
+            <path d="M4.5 12a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5zm3 0a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm3 0a.5.5 0 0 1-.5-.5v-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5z"/>
+            <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
           </svg>
         </div>
-        <h3 class="font-semibold text-white text-lg">（新北市）<br>測驗系統 - 教師端</h3>
+        <h3 class="font-semibold text-white text-lg">報表 v4.0</h3>
       </div>
       <div class="link-group">
-        <a href="https://ky077.github.io/Career/TEACHER-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
-        <a href="https://career.ntnu.edu.tw/senior/" class="sub-link sub-link-secondary" target="_blank">線上</a>
-      </div>
-    </div>		
-    
-    <!-- 諮詢系統 -->
-    <div class="nav-card js-card">
-      <div class="card-header">
-        <div class="icon-box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-          </svg>
-        </div>
-        <h3 class="font-semibold text-white text-lg">諮詢系統</h3>
-      </div>
-      <div class="link-group">
-        <a href="https://ky077.github.io/Career/BOT-J/index.html" class="sub-link sub-link-primary" target="_blank">KyLin's DEMO</a>
-        <a href="https://hexam.career.ntnu.edu.tw/junior_stu/index.aspx" class="sub-link sub-link-secondary" target="_blank">盈芳</a>
+        <a href="https://ky077.github.io/Career/REPORT-U/TIpaper.html" class="sub-link sub-link-primary" target="_blank">興趣</a>
+        <a href="https://ky077.github.io/Career/REPORT-U/WVpaper.html" class="sub-link sub-link-primary" target="_blank">工作</a>
+        <a href="#" class="sub-link sub-link-disabled" target="_blank">人格</a>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- footer -->
 <div class="w-full flex justify-center mt-10">
@@ -436,5 +571,17 @@ transform: translate(5%, 5%) scale(1.1);
   <span class="text-xs font-medium text-slate-400 group-hover:text-slate-200">前往 Career 赞生涯 - 陆版</span>
   </a>
 </div>
+<script>
+document.querySelectorAll('[role="tab"]').forEach((tab) => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('[role="tab"]').forEach((item) => {
+      const selected = item === tab;
+      item.setAttribute('aria-selected', String(selected));
+      item.tabIndex = selected ? 0 : -1;
+      document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
+    });
+  });
+});
+</script>
 </body>
 </html>

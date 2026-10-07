@@ -1,0 +1,48 @@
+.wheelGraph{ 
+	display:block;
+	width:254px;
+	height:78px;
+	margin-left:auto;
+	margin-right:auto;
+	> div { 
+		display:inline-block;
+		vertical-align:middle;
+		float:left;
+		text-align:center;
+		font-weight:700;
+	}
+	
+	.wheelGraph-icon { 
+		background-color: rgba(0,0,0,.1);/*need to be set*/
+		/*background-image:;*/ /*need to be set*/
+		width:78px;
+		height:78px;
+		border-radius:50%;
+	}
+	.wheelGraph-name { 
+		width:120px;
+		height:39px;
+		border-bottom:3px solid  rgba(0,0,0,.1);/*need to be set*/
+		font-size:1.4em;
+		line-height:30px;
+		padding-top:9px;
+	}
+	.wheelGraph-numName {
+		width:120px;
+		height:39px;
+		border-top:3px solid  rgba(0,0,0,.1);/*need to be set*/
+		font-size:0.96em;
+	}
+	.wheelGraph-num { 
+		background-color:  rgba(0,0,0,.1);/*need to be set*/
+		width:56px;
+		height:56px;
+		margin:11px 0px;
+		border-radius:50%;
+		color:#000;
+		font-size:1.8em;
+		line-height:56px;
+		font-weight:normal;
+		text-shadow:1px 1px rgba(255,255,255,.25);
+	}
+}

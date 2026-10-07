@@ -1,0 +1,1627 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/template-logged.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>生涯測驗系統 - 大學版</title>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="../images/favicon.ico" mce_href="../images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../css/SD.css">
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div class="goTop"></div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- head START -->
+<div class="head">
+  <div class="container-fluid"><a href="http://career.ntnu.edu.tw/" class="headIcon entrance" alt="入口網" title="入口網">入口網</a>&nbsp;|&nbsp;<a href="../index-logged.html" class="headIcon home" alt="首頁" title="首頁">首頁</a>
+    <div class="pull-right"> <span class="sexybutton gray accountTools-btn" href="#"><span><span>會員帳號中心</span></span>
+      <ul class="accountTools-toggle">
+        <li class="forBtnSpace"></li>
+        <li><a href="../Default/Register_Update.html">修改會員資料</a></li>
+        <li><a href="../Default/Order_buy.html">購買生涯測驗</a></li>
+        <li><a href="../Default/Order_List.html">消費訂單管理</a></li>
+      </ul>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" class="sexybutton gray"><span><span>登出</span></span></a> </div>
+  </div>
+</div>
+<!-- head END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- btn-float START -->
+<div class="btn-floatArea">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12"> <a href="StudentNotes.html" class="btn-float SD">學生資料庫</a> <a href="StudentNotes.html" class="btn-float TEST">學生測驗</a> </div>
+    </div>
+  </div>
+</div>
+<!-- btn-float END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- banner START -->
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+        <div class="logo"><img src="../images/logo.png" class="img-responsive center-block"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- banner END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="toolSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-12"> 
+        <!-- nav START -->
+        <div class="nav clearfix">
+          <ul>
+            <li class="interest"><a href="../TestInterest/NoteIntroduce.html">電腦化生涯興趣測驗</a></li>
+            <li class="workValue"><a href="../TestWorkvalue/NoteIntroduce.html">工作價值組合</a></li>
+          </ul>
+        </div>
+        <!-- nav END --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- main START -->
+<div class="main">
+  <div class="container">
+    <div class="content"> <!-- InstanceBeginEditable name="EditRegion-main" -->
+      <div class="navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav nav-tabs nav-justified">
+            <li><a href="StudentNotes.html">學生資料須知</a></li>
+            <li><a href="StudentUpload.html">新增學生資料</a></li>
+            <li class="active"><a href="StudentList.html">查詢與修改</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- ------- ------- ------- ------- ------- ------- ------- -->
+      
+      <div class="content_position">
+        <ul class="content_block">
+          <li>
+            <dl>
+              <dt>查詢與修改</dt>
+              <dd> 班級搜尋：
+                <select id="Drop_dep1" name="Drop_dep1" onchange="LoadEnterYear()">
+                  <option value="-1">科系</option>
+                  <option value="3973">展示系</option>
+                  <option value="">應用數學系</option>
+                  <option value="">資訊管理與財務金融學系</option>
+                </select>
+                <select id="Drop_enterY" name="Drop_enterY" onchange="LoadYear()">
+                  <option value="-1">入學年</option>
+                  <option value="107">107</option>
+                  <option value="106">106</option>
+                  <option value="105">105</option>
+                  <option value="104">104</option>
+                </select>
+                <select id="Drop_year" name="Drop_year" onchange="LoadClass()">
+                  <option value="-1">年級</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <select id="Drop_class" name="Drop_class" onchange="LoadStudent()">
+                  <option value="-1">班級</option>
+                  <option value="YA">YA</option>
+                  <option value="">B</option>
+                  <option value="">程式組</option>
+                </select>
+              </dd>
+              <dd> 姓名搜尋：
+                <input type="text" id="Text_nameSearch" name="Text_nameSearch" value="請輸入姓名" onclick="javascript: this.value = '';">
+                <input type="button" value="搜尋" onclick="LoadStudentByName()" class="normalBtn style3">
+              </dd>
+              <hr>
+              <dd>
+                <input type="button" id="Btn_upYear" onclick="UpYear()" value="升年級" disabled="disabled">
+                <span style="color:red">每年8月後，選取學生後再點選此按鈕，符合條件者將全數升上一個年級。</span> </dd>
+              <hr>
+              <dd id="dd_list" style="display: block;">
+                <div class="table-responsive">
+                  <table class="table2 tableTRColor tableCenter small">
+                    <thead>
+                      <tr>
+                        <th>全選&nbsp;
+                          <input name="chooseAll" type="checkbox" value="" class="chooseAll"></th>
+                        <th>序號</th>
+                        <th>編號</th>
+                        <th>身分證字號</th>
+                        <th>姓名</th>
+                        <th>學號</th>
+                        <th>科系</th>
+                        <th>入學年</th>
+                        <th>年級</th>
+                        <th>班級</th>
+                        <th>修改</th>
+                        <th>删除</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody_list">
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>1</td>
+                        <td>13268</td>
+                        <td>A123456781</td>
+                        <td>王小明001</td>
+                        <td>demo322855</td>
+                        <td>展示展示展示展示展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>程式班</td>
+                        <td><a href="StudentRenew.html" onclick="">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13268)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>2</td>
+                        <td>13269</td>
+                        <td>A123456782</td>
+                        <td>王小明002</td>
+                        <td>demo2</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(1)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13269)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>3</td>
+                        <td>13270</td>
+                        <td>A123456783</td>
+                        <td>王小明003</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(2)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13270)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>4</td>
+                        <td>13271</td>
+                        <td>A123456784</td>
+                        <td>王小明004</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(3)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13271)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>5</td>
+                        <td>13272</td>
+                        <td>A123456785</td>
+                        <td>王小明005</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(4)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13272)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>6</td>
+                        <td>13273</td>
+                        <td>A123456786</td>
+                        <td>王小明006</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(5)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13273)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>7</td>
+                        <td>13274</td>
+                        <td>A123456787</td>
+                        <td>王小明007</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(6)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13274)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>8</td>
+                        <td>13275</td>
+                        <td>A123456788</td>
+                        <td>王小明008</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(7)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13275)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>9</td>
+                        <td>13276</td>
+                        <td>A123456789</td>
+                        <td>王小明009</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(8)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13276)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>10</td>
+                        <td>13277</td>
+                        <td>A123456780</td>
+                        <td>王小明010</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(9)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13277)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>11</td>
+                        <td>13278</td>
+                        <td>A123456781</td>
+                        <td>王小明011</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(10)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13278)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>12</td>
+                        <td>13279</td>
+                        <td>A123456782</td>
+                        <td>王小明012</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(11)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13279)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>13</td>
+                        <td>13280</td>
+                        <td>A123456783</td>
+                        <td>王小明013</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(12)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13280)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>14</td>
+                        <td>13281</td>
+                        <td>A123456784</td>
+                        <td>王小明014</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(13)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13281)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>15</td>
+                        <td>13282</td>
+                        <td>A123456785</td>
+                        <td>王小明015</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(14)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13282)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>16</td>
+                        <td>13283</td>
+                        <td>A123456786</td>
+                        <td>王小明016</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(15)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13283)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>17</td>
+                        <td>13284</td>
+                        <td>A123456787</td>
+                        <td>王小明017</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(16)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13284)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>18</td>
+                        <td>13285</td>
+                        <td>A123456788</td>
+                        <td>王小明018</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(17)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13285)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>19</td>
+                        <td>13286</td>
+                        <td>A123456789</td>
+                        <td>王小明019</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(18)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13286)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>20</td>
+                        <td>13287</td>
+                        <td>A123456780</td>
+                        <td>王小明020</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(19)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13287)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>21</td>
+                        <td>13288</td>
+                        <td>A123456781</td>
+                        <td>王小明021</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(20)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13288)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>22</td>
+                        <td>13289</td>
+                        <td>A123456782</td>
+                        <td>王小明022</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(21)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13289)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>23</td>
+                        <td>13290</td>
+                        <td>A123456783</td>
+                        <td>王小明023</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(22)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13290)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>24</td>
+                        <td>13291</td>
+                        <td>A123456784</td>
+                        <td>王小明024</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(23)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13291)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>25</td>
+                        <td>13292</td>
+                        <td>A123456785</td>
+                        <td>王小明025</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(24)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13292)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>26</td>
+                        <td>13293</td>
+                        <td>A123456786</td>
+                        <td>王小明026</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(25)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13293)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>27</td>
+                        <td>13294</td>
+                        <td>A123456787</td>
+                        <td>王小明027</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(26)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13294)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>28</td>
+                        <td>13295</td>
+                        <td>A123456788</td>
+                        <td>王小明028</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(27)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13295)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>29</td>
+                        <td>13296</td>
+                        <td>A123456789</td>
+                        <td>王小明029</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(28)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13296)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>30</td>
+                        <td>13297</td>
+                        <td>A123456780</td>
+                        <td>王小明030</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(29)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13297)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>31</td>
+                        <td>13298</td>
+                        <td>A123456781</td>
+                        <td>王小明031</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(30)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13298)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>32</td>
+                        <td>1324</td>
+                        <td>A123456782</td>
+                        <td>王小明032</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(31)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(1324)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>33</td>
+                        <td>13300</td>
+                        <td>A123456783</td>
+                        <td>王小明033</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(32)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13300)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>34</td>
+                        <td>13301</td>
+                        <td>A123456784</td>
+                        <td>王小明034</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(33)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13301)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>35</td>
+                        <td>13302</td>
+                        <td>A123456785</td>
+                        <td>王小明035</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(34)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13302)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>36</td>
+                        <td>13303</td>
+                        <td>A123456786</td>
+                        <td>王小明036</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(35)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13303)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>37</td>
+                        <td>13304</td>
+                        <td>A123456787</td>
+                        <td>王小明037</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(36)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13304)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>38</td>
+                        <td>13305</td>
+                        <td>A123456788</td>
+                        <td>王小明038</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(37)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13305)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>39</td>
+                        <td>13306</td>
+                        <td>A123456789</td>
+                        <td>王小明039</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(38)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13306)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>40</td>
+                        <td>13307</td>
+                        <td>A123456740</td>
+                        <td>王小明040</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(39)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13307)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>41</td>
+                        <td>13308</td>
+                        <td>A123456741</td>
+                        <td>王小明041</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(40)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13308)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>42</td>
+                        <td>13309</td>
+                        <td>A123456742</td>
+                        <td>王小明042</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(41)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13309)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>43</td>
+                        <td>13310</td>
+                        <td>A123456743</td>
+                        <td>王小明043</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(42)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13310)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>44</td>
+                        <td>13311</td>
+                        <td>A123456744</td>
+                        <td>王小明044</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(43)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13311)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>45</td>
+                        <td>13312</td>
+                        <td>A123456745</td>
+                        <td>王小明045</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(44)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13312)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>46</td>
+                        <td>13313</td>
+                        <td>A123456746</td>
+                        <td>王小明046</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(45)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13313)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>47</td>
+                        <td>13314</td>
+                        <td>A123456747</td>
+                        <td>王小明047</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(46)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13314)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>48</td>
+                        <td>13315</td>
+                        <td>A123456748</td>
+                        <td>王小明048</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(47)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13315)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>49</td>
+                        <td>13316</td>
+                        <td>A123456749</td>
+                        <td>王小明049</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(48)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13316)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>50</td>
+                        <td>13317</td>
+                        <td>A123456750</td>
+                        <td>王小明050</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(49)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13317)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>51</td>
+                        <td>13318</td>
+                        <td>A123456751</td>
+                        <td>王小明051</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(50)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13318)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>52</td>
+                        <td>13319</td>
+                        <td>A123456752</td>
+                        <td>王小明052</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(51)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13319)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>53</td>
+                        <td>13320</td>
+                        <td>A123456753</td>
+                        <td>王小明053</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(52)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13320)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>54</td>
+                        <td>13321</td>
+                        <td>A123456754</td>
+                        <td>王小明054</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(53)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13321)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>55</td>
+                        <td>13322</td>
+                        <td>A123456755</td>
+                        <td>王小明055</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(54)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13322)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>56</td>
+                        <td>13323</td>
+                        <td>A123456756</td>
+                        <td>王小明056</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(55)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13323)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>57</td>
+                        <td>13324</td>
+                        <td>A123456757</td>
+                        <td>王小明057</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(56)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13324)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>58</td>
+                        <td>13325</td>
+                        <td>A123456758</td>
+                        <td>王小明058</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(57)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13325)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>59</td>
+                        <td>13326</td>
+                        <td>A123456759</td>
+                        <td>王小明059</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(58)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13326)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>60</td>
+                        <td>13327</td>
+                        <td>A123456760</td>
+                        <td>王小明060</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(59)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13327)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>61</td>
+                        <td>13328</td>
+                        <td>A123456761</td>
+                        <td>王小明061</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(60)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13328)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>62</td>
+                        <td>13329</td>
+                        <td>A123456762</td>
+                        <td>王小明062</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(61)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13329)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>63</td>
+                        <td>13330</td>
+                        <td>A123456763</td>
+                        <td>王小明063</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(62)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13330)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>64</td>
+                        <td>13331</td>
+                        <td>A123456764</td>
+                        <td>王小明064</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(63)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13331)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>65</td>
+                        <td>13332</td>
+                        <td>A123456765</td>
+                        <td>王小明065</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(64)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13332)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>66</td>
+                        <td>13333</td>
+                        <td>A123456766</td>
+                        <td>王小明066</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(65)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13333)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>67</td>
+                        <td>13334</td>
+                        <td>A123456767</td>
+                        <td>王小明067</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(66)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13334)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>68</td>
+                        <td>13335</td>
+                        <td>A123456768</td>
+                        <td>王小明068</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(67)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13335)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>69</td>
+                        <td>13336</td>
+                        <td>A123456769</td>
+                        <td>王小明069</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(68)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13336)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>70</td>
+                        <td>13337</td>
+                        <td>A123456770</td>
+                        <td>王小明070</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(69)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13337)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>71</td>
+                        <td>13338</td>
+                        <td>A123456771</td>
+                        <td>王小明071</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(70)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13338)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>72</td>
+                        <td>13339</td>
+                        <td>A123456772</td>
+                        <td>王小明072</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(71)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13339)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>73</td>
+                        <td>13340</td>
+                        <td>A123456773</td>
+                        <td>王小明073</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(72)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13340)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>74</td>
+                        <td>13341</td>
+                        <td>A123456774</td>
+                        <td>王小明074</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(73)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13341)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>75</td>
+                        <td>13342</td>
+                        <td>A123456775</td>
+                        <td>王小明075</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(74)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13342)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>76</td>
+                        <td>13343</td>
+                        <td>A123456776</td>
+                        <td>王小明076</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(75)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13343)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>77</td>
+                        <td>13344</td>
+                        <td>A123456777</td>
+                        <td>王小明077</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(76)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13344)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>78</td>
+                        <td>13345</td>
+                        <td>A123456778</td>
+                        <td>王小明078</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(77)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13345)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>79</td>
+                        <td>13346</td>
+                        <td>A123456779</td>
+                        <td>王小明079</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(78)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13346)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>80</td>
+                        <td>13347</td>
+                        <td>A123456780</td>
+                        <td>王小明080</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(79)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13347)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>81</td>
+                        <td>13348</td>
+                        <td>A123456781</td>
+                        <td>王小明081</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(80)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13348)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>82</td>
+                        <td>13349</td>
+                        <td>A123456782</td>
+                        <td>王小明082</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(81)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13349)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>83</td>
+                        <td>13350</td>
+                        <td>A123456783</td>
+                        <td>王小明083</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(82)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13350)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>84</td>
+                        <td>13351</td>
+                        <td>A123456784</td>
+                        <td>王小明084</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(83)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13351)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>85</td>
+                        <td>13352</td>
+                        <td>A123456785</td>
+                        <td>王小明085</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(84)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13352)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>86</td>
+                        <td>13353</td>
+                        <td>A123456786</td>
+                        <td>王小明086</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(85)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13353)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>87</td>
+                        <td>13354</td>
+                        <td>A123456787</td>
+                        <td>王小明087</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(86)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13354)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>88</td>
+                        <td>13355</td>
+                        <td>A123456788</td>
+                        <td>王小明088</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(87)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13355)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>89</td>
+                        <td>13356</td>
+                        <td>A123456789</td>
+                        <td>王小明089</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(88)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13356)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>90</td>
+                        <td>13357</td>
+                        <td>A123456790</td>
+                        <td>王小明090</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(89)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13357)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>91</td>
+                        <td>13358</td>
+                        <td>A123456791</td>
+                        <td>王小明091</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(90)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13358)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>92</td>
+                        <td>13359</td>
+                        <td>A123456792</td>
+                        <td>王小明092</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(91)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13359)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>93</td>
+                        <td>13360</td>
+                        <td>A123456793</td>
+                        <td>王小明093</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(92)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13360)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>94</td>
+                        <td>13361</td>
+                        <td>A123456794</td>
+                        <td>王小明094</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(93)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13361)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>95</td>
+                        <td>13362</td>
+                        <td>A123456795</td>
+                        <td>王小明095</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(94)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13362)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>96</td>
+                        <td>13363</td>
+                        <td>A123456796</td>
+                        <td>王小明096</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(95)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13363)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>97</td>
+                        <td>13364</td>
+                        <td>A123456797</td>
+                        <td>王小明097</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(96)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13364)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>98</td>
+                        <td>13365</td>
+                        <td>A123456798</td>
+                        <td>王小明098</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(97)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13365)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>4</td>
+                        <td>13366</td>
+                        <td>A123456784</td>
+                        <td>王小明04</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(98)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13366)">刪除</a></td>
+                      </tr>
+                      <tr>
+                        <td><input name="checkbox_upgrade" type="checkbox" value=""></td>
+                        <td>100</td>
+                        <td>13367</td>
+                        <td>A123456700</td>
+                        <td>王小明100</td>
+                        <td>demo</td>
+                        <td>展示系</td>
+                        <td>104</td>
+                        <td>4</td>
+                        <td>YA</td>
+                        <td><a href="javascript:" onclick="UpdateStudent(4)">修改</a></td>
+                        <td><a href="javascript:" onclick="DeleteStudent(13367)">刪除</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <!-- InstanceEndEditable --> </div>
+  </div>
+</div>
+<!-- main END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- footer START -->
+<div class="footer">
+  <div class="link">
+    <div class="container"> <a href="../Default/Process.html">使用流程</a>｜<a href="../Default/QA.html">常見問題</a>｜<a href="../Default/Contact.html">聯絡我們</a>｜<a href="../Default/Map.html">網站地圖</a>｜<a href="../Default/Privacy.html">隱私權與資訊安全</a>｜<a href="../Default/Terms.html">專利及版權說明</a>｜<a href="">下載 Adobe Reader</a>｜<a href="">下載 WINZIP 解壓縮軟體</a></div>
+  </div>
+  <div class="copyright">
+    <div class="container">本站最佳解析度1024×768建議以IE9以上版本搭配瀏覽<br>
+      © 2018 College of Education e-Learning Lab, NTNU. All rights reserved. <br>
+      國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室│電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號</div>
+  </div>
+</div>
+<!-- footer END --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="../js/jquery-ui.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/min_height.js"></script> 
+<script src="../js/navbar-toggle.js"></script> 
+<script src="../js/goTop.js"></script> 
+<!-- InstanceBeginEditable name="EditRegion-JS" --> 
+<script>
+$(function(){
+	$(".SD").addClass('active');
+});
+</script> 
+<!-- for DEMO --> 
+<script>
+$(function(){
+	//全選
+	$('input[name="chooseAll"]:checkbox').change(function () {
+		var checkboxes = $('input[name="checkbox_upgrade"]:checkbox');
+		$(this).is(':checked') ? checkboxes.prop('checked', 'checked') : checkboxes.removeAttr('checked');
+	});
+	
+	//反選
+	$('input[name="checkbox_upgrade"]:checkbox').change(function () {
+		if ($('input[name="checkbox_upgrade"]:checked').length == ($('input[name="checkbox_upgrade"]:checkbox').length)) {
+			$('input[name="chooseAll"]:checkbox').prop("checked", "checked");
+		} else {
+			$('input[name="chooseAll"]:checkbox').removeAttr("checked");
+		}
+	});	
+	
+	//顯示按鈕
+	$('input[type="checkbox"]').change(function () {
+		if( $('input[type="checkbox"]:checked').length > 0 ){
+			$('#Btn_upYear').attr("disabled",false);
+		}else{
+			$('#Btn_upYear').attr("disabled",true);
+		}
+	});
+});
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+</html>

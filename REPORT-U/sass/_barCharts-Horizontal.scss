@@ -1,0 +1,30 @@
+.table-barCharts-Horizontal{
+	width:calc(100% - 15px);
+	th{ 
+		width:5em;							/*need to be set*/
+		font-size:0.96em; 
+		padding:0px;
+	}
+	td{ 
+		width:calc(100% - 5em);						/*need to be set*/
+		font-size:0.9em; 
+		overflow:visible;
+		padding:0px;
+	}
+	.percent-bar{ 
+		background-color:rgba(0,0,0,.1);	/*need to be set*/
+		display:inline-block;
+		height:8px;
+		width:auto;
+		position:relative;
+		
+		.percent-num{
+			display:inline-block;
+			font-size:0.9em;
+			width: 2em;
+			position:absolute;
+			top:-.25em;
+			left:0px;						/*need to be set*/
+		}
+	}			
+}

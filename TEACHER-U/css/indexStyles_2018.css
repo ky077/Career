@@ -1,0 +1,304 @@
+body {
+  background-image: none; }
+
+.btn-floatArea {
+  background-color: #80d7cf;
+  height: 0px; }
+  .btn-floatArea .container-fluid > .row > div {
+    position: relative; }
+  .btn-floatArea .btn-float {
+    display: block;
+    width: 15vw;
+    height: 13.1854vw;
+    max-width: 124px;
+    max-height: 109px;
+    position: absolute;
+    z-index: 500;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    right: 10px; }
+    @media screen and (min-width: 768px) {
+      .btn-floatArea .btn-float {
+        right: 15px; } }
+    @media screen and (min-width: 992px) {
+      .btn-floatArea .btn-float {
+        right: 2vw; } }
+    @media screen and (min-width: 1200px) {
+      .btn-floatArea .btn-float {
+        right: 6vw; } }
+    @media screen and (min-width: 1420px) {
+      .btn-floatArea .btn-float {
+        right: 5vw; } }
+    @media screen and (min-width: 1920px) {
+      .btn-floatArea .btn-float {
+        right: 4vw; } }
+    .btn-floatArea .btn-float.SD {
+      background-image: url(../images/btn-float_SD.png);
+      background-size: 100% auto;
+      top: 17px; }
+      .btn-floatArea .btn-float.SD:hover, .btn-floatArea .btn-float.SD:active, .btn-floatArea .btn-float.SD:focus {
+        background-image: url(../images/btn-float_SD_02.png); }
+      .btn-floatArea .btn-float.SD.active {
+        background-image: url(../images/btn-float_SD_03.png); }
+    .btn-floatArea .btn-float.TEST {
+      background-image: url(../images/btn-float_TEST.png);
+      background-size: 100% auto;
+      top: calc(17px + 13.1854vw + 15px); }
+      .btn-floatArea .btn-float.TEST:hover, .btn-floatArea .btn-float.TEST:active, .btn-floatArea .btn-float.TEST:focus {
+        background-image: url(../images/btn-float_TEST_02.png); }
+    @media screen and (min-width: 992px) {
+      .btn-floatArea .btn-float.SD:hover, .btn-floatArea .btn-float.SD:active, .btn-floatArea .btn-float.SD:focus {
+        background-image: url(../images/btn-float_SD.png);
+        background-position: 0px -150px; }
+      .btn-floatArea .btn-float.SD.active {
+        background-image: url(../images/btn-float_SD.png);
+        background-position: 0px -300px; }
+      .btn-floatArea .btn-float.TEST {
+        top: 141px; }
+        .btn-floatArea .btn-float.TEST:hover, .btn-floatArea .btn-float.TEST:active, .btn-floatArea .btn-float.TEST:focus {
+          background-image: url(../images/btn-float_TEST.png);
+          background-position: 0px -150px; } }
+
+.banner {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-image: url(../images/index/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative; }
+  .banner .logo {
+    margin-top: 10px; }
+  @media screen and (min-width: 992px) {
+    .banner .btn-bannerArea {
+      padding-right: 20px; } }
+  .banner .btn-banner {
+    margin-bottom: 20px;
+    position: relative; }
+    .banner .btn-banner .btn-banner-img {
+      position: relative;
+      z-index: 2; }
+    .banner .btn-banner .btn-banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    .banner .btn-banner:hover {
+      -webkit-filter: saturate(1.5);
+      -moz-filter: saturate(1.5);
+      -ms-filter: saturate(1.5);
+      -o-filter: saturate(1.5);
+      filter: saturate(1.5); }
+      .banner .btn-banner:hover .btn-banner-bg {
+        -webkit-transform: rotate(78deg);
+        -moz-transform: rotate(78deg);
+        -ms-transform: rotate(78deg);
+        -o-transform: rotate(78deg);
+        transform: rotate(78deg); }
+
+.index-content {
+  border-top: 10px solid #CCC;
+  margin-top: 3px; }
+  .index-content .news-block h1 {
+    font-size: 1.6em;
+    font-weight: bold;
+    border-bottom: 2px solid #80d7cf;
+    padding: 15px 0px 2px 5px;
+    position: relative;
+    margin-left: 52px; }
+    .index-content .news-block h1:after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 72px;
+      background-image: url(../images/index/icon-news.png);
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 100% auto;
+      position: absolute;
+      top: -5px;
+      left: -72px; }
+  .index-content .news-block .news-list {
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px; }
+    @media screen and (min-width: 768px) {
+      .index-content .news-block .news-list {
+        padding-left: 57px;
+        padding-right: 30px; } }
+    .index-content .news-block .news-list li {
+      margin-bottom: 35px; }
+      .index-content .news-block .news-list li > h3 {
+        font-size: 1.3em;
+        line-height: 1em;
+        font-weight: bold; }
+        .index-content .news-block .news-list li > h3 a, .index-content .news-block .news-list li > h3 a:focus {
+          color: #37746f;
+          margin: 0px;
+          padding: 0px;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 1em;
+          text-decoration: none; }
+          .index-content .news-block .news-list li > h3 a:hover, .index-content .news-block .news-list li > h3 a:active, .index-content .news-block .news-list li > h3 a:focus:hover, .index-content .news-block .news-list li > h3 a:focus:active {
+            color: #3574b0;
+            text-decoration: none; }
+      .index-content .news-block .news-list li > p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #777;
+        margin: 0px 0px;
+        line-height: 1em; }
+        .index-content .news-block .news-list li > p > br {
+          display: none; }
+  .index-content .news-block .pages {
+    margin-bottom: 30px; }
+  .index-content .info-block {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px -1px 5px rgba(0, 0, 0, 0.1), -1px 1px 5px rgba(0, 0, 0, 0.1), 1px -1px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 0 0 2px 2px; }
+    .index-content .info-block h1 {
+      margin: -10px -10px 10px -10px;
+      background-color: #80d7cf;
+      font-size: 1.6em;
+      line-height: 1em;
+      font-weight: bold;
+      padding: 8px 10px 5px 40px;
+      position: relative; }
+      .index-content .info-block h1:after {
+        content: "";
+        display: block;
+        width: 54px;
+        height: 54px;
+        background-image: url(../images/index/icon-file.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 100%;
+        position: absolute;
+        top: -5px;
+        left: -16px;
+        transform: rotate(-15deg); }
+    .index-content .info-block .info-list {
+      padding-left: 30px;
+      font-size: 0.9em; }
+      .index-content .info-block .info-list > li {
+        list-style: square; }
+        .index-content .info-block .info-list > li > a {
+          color: #444;
+          text-decoration: none; }
+          .index-content .info-block .info-list > li > a:hover, .index-content .info-block .info-list > li > a:focus, .index-content .info-block .info-list > li > a:active {
+            color: #37746f;
+            text-decoration: none;
+            box-shadow: 0 1px #37746f; }
+  .index-content .contact-block {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px -1px 5px rgba(0, 0, 0, 0.1), -1px 1px 5px rgba(0, 0, 0, 0.1), 1px -1px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 0 0 2px 2px; }
+    .index-content .contact-block h1 {
+      margin: -10px -10px 10px -10px;
+      background-color: #80d7cf;
+      font-size: 1.6em;
+      line-height: 1em;
+      font-weight: bold;
+      padding: 8px 10px 5px 40px;
+      position: relative; }
+      .index-content .contact-block h1:after {
+        content: "";
+        display: block;
+        width: 54px;
+        height: 42px;
+        background-image: url(../images/index/icon-email.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        position: absolute;
+        top: -4px;
+        left: -20px;
+        transform: rotate(-15deg); }
+    .index-content .contact-block .contact-list {
+      padding-left: 30px;
+      font-size: 0.9em; }
+      .index-content .contact-block .contact-list > li {
+        list-style: square;
+        color: #333;
+        line-height: 1.4em;
+        font-weight: bold; }
+        .index-content .contact-block .contact-list > li p {
+          font-weight: normal;
+          color: #555; }
+
+.modal-news .modal-header {
+  background-color: #29838f;
+  border-radius: 6px 6px 0px 0px;
+  position: relative;
+  padding-right: 41px; }
+.modal-news .modal-title {
+  color: #fff;
+  font-size: 1.3em; }
+.modal-news .modal-body p {
+  line-height: 1.8em;
+  margin-top: 0px; }
+.modal-news .close {
+  opacity: 1;
+  width: 36px;
+  height: 36px;
+  margin-top: -2px;
+  margin-right: -36px;
+  background-image: url(../images/index/close.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+  overflow: hidden; }
+  .modal-news .close:hover, .modal-news .close:focus, .modal-news .close:active {
+    background-position: 0px -36px; }
+.modal-news .icon-download-content {
+  display: block;
+  padding-left: 37px;
+  line-height: 1em; }
+  .modal-news .icon-download-content > img {
+    background-color: #3574b0;
+    vertical-align: middle;
+    border-radius: 4px;
+    padding: 5px;
+    margin-left: -37px; }
+  .modal-news .icon-download-content a {
+    text-decoration: none;
+    color: #3574b0; }
+  .modal-news .icon-download-content:hover > img {
+    background-color: #224a70; }
+  .modal-news .icon-download-content:hover a {
+    color: #224a70; }
+.modal-news .news {
+  border-top: none; }
+  .modal-news .news .news-mark {
+    border-top: 1px solid #ddd;
+    color: #666;
+    font-size: 0.86em;
+    margin-top: 40px; }
+    .modal-news .news .news-mark > div {
+      display: inline-block;
+      padding: 2px 10px; }
+    .modal-news .news .news-mark .news-mark-folder {
+      background-image: url(../images/index/folder.png);
+      background-repeat: no-repeat;
+      background-position: left 5px center;
+      text-indent: 20px; }
+    .modal-news .news .news-mark .news-mark-date {
+      background-image: url(../images/index/calendar.png);
+      background-repeat: no-repeat;
+      background-position: left 5px center;
+      text-indent: 20px;
+      float: right; }
+
+/*# sourceMappingURL=indexStyles_2018.css.map */

@@ -1,0 +1,636 @@
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif, "Microsoft JhengHei";
+  color: #333; }
+
+/**/
+* {
+  box-sizing: border-box; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0px;
+  margin: 0px;
+  width: 100%; }
+
+.clearfloat {
+  clear: both; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both;
+  /* For IE 6/7 (trigger hasLayout) */ }
+
+.clearfix {
+  zoom: 1; }
+
+/**/
+.container {
+  width: 980px;
+  margin: 0px auto;
+  padding: 0px; }
+
+.section {
+  padding: 10px 15px; }
+
+.forVMiddle td {
+  vertical-align: middle; }
+
+/**/
+/**/
+/**/
+.border {
+  border: 1px solid #CCC;
+  padding: 1px;
+  border-radius: 10px;
+  background-color: #FFF; }
+
+.block {
+  border: 1px solid #ccc;
+  margin: 1px;
+  border-radius: 8px; }
+
+.table-default {
+  border-collapse: separate;
+  border-spacing: 10px 0px; }
+  .table-default > thead > tr > th {
+    padding: 5px 0px; }
+    .table-default > thead > tr > th > .border > .block {
+      background-color: #806c4a;
+      color: #FFF;
+      padding: 4px 0px;
+      white-space: nowrap; }
+  .table-default > tbody > tr > th {
+    padding: 5px 0px; }
+    .table-default > tbody > tr > th > .border > .block {
+      background-color: #ddd7c2;
+      font-size: 1.1em;
+      padding: 15px 0px; }
+  .table-default > tbody > tr > td {
+    padding: 5px 0px;
+    border-bottom: 1px solid #000;
+    line-height: 1.5em; }
+
+.table-noBorder > tbody > tr > td {
+  border-bottom: none;
+  padding: 0px; }
+
+.table-dotted > tbody > tr > td {
+  border-bottom: 1px dotted #000;
+  text-align: center;
+  padding: 2px; }
+.table-dotted > tbody > tr:last-child > td {
+  border-bottom: none; }
+
+.table-reference {
+  margin-bottom: 5px; }
+  .table-reference > tbody > tr > th {
+    white-space: nowrap; }
+
+.table-career1 {
+  float: left;
+  width: 62%; }
+  .table-career1 > tbody > tr > td {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: calc((2px + 1.5em + 2px)*3 + 2px); }
+
+.table-career2 {
+  float: left;
+  width: calc(38% - 10px);
+  margin-left: 10px; }
+
+/**/
+.people {
+  width: 43px;
+  height: 64px;
+  margin: 0px auto; }
+
+.bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px; }
+  .bar.blueDark {
+    background-color: #0057a1; }
+  .bar.red {
+    background-color: #c11d3d; }
+  .bar.blueLight {
+    background-color: #00a8c6; }
+  .bar.blue {
+    background-color: #3a88c9; }
+  .bar.purple {
+    background-color: #9071b0; }
+
+/**/
+.mark {
+  text-align: center;
+  line-height: 1.8em;
+  margin: 20px 0px;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.header {
+  height: auto;
+  color: #FFF;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../images/TI/headerBg.jpg); }
+  .header .logo {
+    width: 17.2%;
+    margin: 0px 10px; }
+  .header .h1 {
+    font-size: 82px;
+    vertical-align: middle;
+    line-height: 1em;
+    font-weight: bold; }
+    .header .h1 > small {
+      font-size: 50px;
+      font-weight: normal;
+      position: relative;
+      display: inline-block; }
+      .header .h1 > small .s-version {
+        position: absolute;
+        top: -35px;
+        right: 0px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        background-image: url(../images/TI/s-version.png); }
+        .header .h1 > small .s-version > img {
+          display: block; }
+
+.footer {
+  text-align: center;
+  color: #FFF;
+  height: 30px;
+  line-height: 30px;
+  background-image: url(../images/TI/footerBg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 30px;
+  position: relative; }
+  .footer .version {
+    font-size: 0.8em;
+    letter-spacing: normal;
+    position: absolute;
+    top: 2px;
+    right: 20px; }
+
+.data {
+  color: #FFF;
+  background-color: #007740;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .data .table-data1 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0px auto;
+    font-size: 18px; }
+    .data .table-data1 > tbody > tr > td {
+      border-bottom: 1px solid #FFF; }
+    .data .table-data1 > tbody > tr:last-child td {
+      border-bottom: none; }
+  .data .table-data2 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%; }
+    .data .table-data2 > tbody > tr > th {
+      text-align: left;
+      width: calc(3em + 4px);
+      font-weight: normal;
+      padding: 4px 0px 4px 4px; }
+    .data .table-data2 > tbody > tr > td {
+      padding: 4px; }
+  .data .table-data1 > tbody > tr:last-child > td:last-child .table-data2 > tbody > tr > th {
+    width: calc(5em + 4px); }
+
+h3 {
+  color: #FFF;
+  background-color: #007740;
+  text-align: center;
+  background-image: url(../images/h3Bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0px;
+  padding: 10px 0px; }
+  h3 > span {
+    display: inline-block;
+    padding: 0px 30px;
+    background-color: #007740; }
+
+/**/
+.bgColor {
+  background-color: #f6f9eb; }
+
+.table-color > tbody > tr > th > .border > .block {
+  background-color: #00a768;
+  color: #FFF; }
+
+.mark {
+  color: #007685; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.wheelGraph {
+  display: block;
+  width: 254px;
+  height: 78px;
+  margin-left: auto;
+  margin-right: auto; }
+  .wheelGraph > div {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    text-align: center;
+    font-weight: 700; }
+  .wheelGraph .wheelGraph-icon {
+    background-color: rgba(0, 0, 0, 0.1);
+    /*need to be set*/
+    /*background-image:;*/
+    /*need to be set*/
+    width: 78px;
+    height: 78px;
+    border-radius: 50%; }
+  .wheelGraph .wheelGraph-name {
+    width: 120px;
+    height: 39px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    /*need to be set*/
+    font-size: 1.4em;
+    line-height: 30px;
+    padding-top: 9px; }
+  .wheelGraph .wheelGraph-numName {
+    width: 120px;
+    height: 39px;
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
+    /*need to be set*/
+    font-size: 0.96em; }
+  .wheelGraph .wheelGraph-num {
+    background-color: rgba(0, 0, 0, 0.1);
+    /*need to be set*/
+    width: 56px;
+    height: 56px;
+    margin: 11px 0px;
+    border-radius: 50%;
+    color: #000;
+    font-size: 1.8em;
+    line-height: 56px;
+    font-weight: normal;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.25); }
+
+.table-barCharts-Horizontal {
+  width: calc(100% - 15px); }
+  .table-barCharts-Horizontal th {
+    width: 5em;
+    /*need to be set*/
+    font-size: 0.96em;
+    padding: 0px; }
+  .table-barCharts-Horizontal td {
+    width: calc(100% - 5em);
+    /*need to be set*/
+    font-size: 0.9em;
+    overflow: visible;
+    padding: 0px; }
+  .table-barCharts-Horizontal .percent-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+    /*need to be set*/
+    display: inline-block;
+    height: 8px;
+    width: auto;
+    position: relative; }
+    .table-barCharts-Horizontal .percent-bar .percent-num {
+      display: inline-block;
+      font-size: 0.9em;
+      width: 2em;
+      position: absolute;
+      top: -.25em;
+      left: 0px;
+      /*need to be set*/ }
+
+.TI-graph1 {
+  margin: -10px 0px; }
+  .TI-graph1 > .table-default > tbody > tr {
+    background-repeat: no-repeat;
+    background-position: left center; }
+    .TI-graph1 > .table-default > tbody > tr > td {
+      padding-left: 60px; }
+  .TI-graph1 > .table-default > tbody > tr:nth-child(1) {
+    background-image: url(../images/TI/1st.png); }
+  .TI-graph1 > .table-default > tbody > tr:nth-child(2) {
+    background-image: url(../images/TI/2nd.png); }
+  .TI-graph1 > .table-default > tbody > tr:nth-child(3) {
+    background-image: url(../images/TI/3rd.png); }
+  .TI-graph1 .table-graph1 > tbody > tr:nth-child(1) > td {
+    border-bottom: 1px dotted #000; }
+  .TI-graph1 .table-graph1 .table-graph1-score {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.9em;
+    color: #FFF; }
+  .TI-graph1 .table-graph1 .W-icon {
+    width: 264px; }
+  .TI-graph1 .table-graph1 .W-text {
+    width: 616px; }
+  .TI-graph1 .table-graph1 .W-score > td:nth-child(odd) {
+    width: 114px;
+    text-align: right;
+    padding-right: 5px;
+    white-space: nowrap;
+    padding-top: 5px; }
+  .TI-graph1 .table-graph1 .W-score > td:nth-child(even) {
+    width: 40px;
+    padding-top: 5px; }
+
+.TI-graph2 .item {
+  margin-top: -136px; }
+  .TI-graph2 .item:first-child {
+    margin-top: -39px; }
+  .TI-graph2 .item:last-child {
+    margin-bottom: -39px; }
+.TI-graph2 .item:nth-child(odd) {
+  /*nth-child(1,3,5)=4th,6th,8th*/
+  padding-left: 0px;
+  padding-right: calc(50% - 39px); }
+  .TI-graph2 .item:nth-child(odd) .table-graph2 > tbody > tr > th {
+    width: 254px;
+    padding-top: 78px;
+    padding-bottom: 78px; }
+  .TI-graph2 .item:nth-child(odd) .table-graph2 > tbody > tr > td {
+    text-align: right; }
+  .TI-graph2 .item:nth-child(odd) .table-barCharts-Horizontal {
+    float: right; }
+    .TI-graph2 .item:nth-child(odd) .table-barCharts-Horizontal > tbody > tr > th {
+      text-align: left;
+      padding-left: 2px; }
+    .TI-graph2 .item:nth-child(odd) .table-barCharts-Horizontal > tbody > tr > td {
+      text-align: right; }
+    .TI-graph2 .item:nth-child(odd) .table-barCharts-Horizontal > tbody > tr .percent-bar .percent-num {
+      left: -2.2em;
+      right: inherit;
+      text-align: right; }
+.TI-graph2 .item:nth-child(even) {
+  /*nth-child(2,4,6)=5th,7th,9th*/
+  padding-left: calc(50% - 39px);
+  padding-right: 0px; }
+  .TI-graph2 .item:nth-child(even) .table-graph2 > tbody > tr > th {
+    width: 254px;
+    padding-top: 78px;
+    padding-bottom: 78px; }
+  .TI-graph2 .item:nth-child(even) .table-graph2 > tbody > tr > td {
+    text-align: left; }
+  .TI-graph2 .item:nth-child(even) .table-barCharts-Horizontal {
+    float: left; }
+    .TI-graph2 .item:nth-child(even) .table-barCharts-Horizontal > tbody > tr > th {
+      text-align: right;
+      padding-right: 2px; }
+    .TI-graph2 .item:nth-child(even) .table-barCharts-Horizontal > tbody > tr > td {
+      text-align: left; }
+    .TI-graph2 .item:nth-child(even) .table-barCharts-Horizontal > tbody > tr .percent-bar .percent-num {
+      left: inherit;
+      right: -2.2em;
+      text-align: left; }
+
+/**/
+.Humanities .wheelGraph .wheelGraph-icon {
+  background-color: #b7d200;
+  background-image: url(../images/TI/Humanities.png); }
+.Humanities .wheelGraph .wheelGraph-name {
+  border-bottom-color: #b7d200; }
+.Humanities .wheelGraph .wheelGraph-numName {
+  border-top-color: #b7d200; }
+.Humanities .wheelGraph .wheelGraph-num {
+  background-color: #b7d200; }
+
+.LawPolitics .wheelGraph .wheelGraph-icon {
+  background-color: #2ba638;
+  background-image: url(../images/TI/LawPolitics.png); }
+.LawPolitics .wheelGraph .wheelGraph-name {
+  border-bottom-color: #2ba638; }
+.LawPolitics .wheelGraph .wheelGraph-numName {
+  border-top-color: #2ba638; }
+.LawPolitics .wheelGraph .wheelGraph-num {
+  background-color: #2ba638; }
+
+.Art .wheelGraph .wheelGraph-icon {
+  background-color: #f4c51c;
+  background-image: url(../images/TI/Art.png); }
+.Art .wheelGraph .wheelGraph-name {
+  border-bottom-color: #f4c51c; }
+.Art .wheelGraph .wheelGraph-numName {
+  border-top-color: #f4c51c; }
+.Art .wheelGraph .wheelGraph-num {
+  background-color: #f4c51c; }
+
+.Commerce .wheelGraph .wheelGraph-icon {
+  background-color: #ee7c17;
+  background-image: url(../images/TI/Commerce.png); }
+.Commerce .wheelGraph .wheelGraph-name {
+  border-bottom-color: #ee7c17; }
+.Commerce .wheelGraph .wheelGraph-numName {
+  border-top-color: #ee7c17; }
+.Commerce .wheelGraph .wheelGraph-num {
+  background-color: #ee7c17; }
+
+.Services .wheelGraph .wheelGraph-icon {
+  background-color: #e9506e;
+  background-image: url(../images/TI/Services.png); }
+.Services .wheelGraph .wheelGraph-name {
+  border-bottom-color: #e9506e; }
+.Services .wheelGraph .wheelGraph-numName {
+  border-top-color: #e9506e; }
+.Services .wheelGraph .wheelGraph-num {
+  background-color: #e9506e; }
+
+.Society .wheelGraph .wheelGraph-icon {
+  background-color: #d72f36;
+  background-image: url(../images/TI/Society.png); }
+.Society .wheelGraph .wheelGraph-name {
+  border-bottom-color: #d72f36; }
+.Society .wheelGraph .wheelGraph-numName {
+  border-top-color: #d72f36; }
+.Society .wheelGraph .wheelGraph-num {
+  background-color: #d72f36; }
+
+.Science .wheelGraph .wheelGraph-icon {
+  background-color: #3785c7;
+  background-image: url(../images/TI/Science.png); }
+.Science .wheelGraph .wheelGraph-name {
+  border-bottom-color: #3785c7; }
+.Science .wheelGraph .wheelGraph-numName {
+  border-top-color: #3785c7; }
+.Science .wheelGraph .wheelGraph-num {
+  background-color: #3785c7; }
+
+.Engineering .wheelGraph .wheelGraph-icon {
+  background-color: #41bfed;
+  background-image: url(../images/TI/Engineering.png); }
+.Engineering .wheelGraph .wheelGraph-name {
+  border-bottom-color: #41bfed; }
+.Engineering .wheelGraph .wheelGraph-numName {
+  border-top-color: #41bfed; }
+.Engineering .wheelGraph .wheelGraph-num {
+  background-color: #41bfed; }
+
+.PhysicalFitness .wheelGraph .wheelGraph-icon {
+  background-color: #aa66a6;
+  background-image: url(../images/TI/PhysicalFitness.png); }
+.PhysicalFitness .wheelGraph .wheelGraph-name {
+  border-bottom-color: #aa66a6; }
+.PhysicalFitness .wheelGraph .wheelGraph-numName {
+  border-top-color: #aa66a6; }
+.PhysicalFitness .wheelGraph .wheelGraph-num {
+  background-color: #aa66a6; }
+
+.Humanities .table-graph1-score {
+  background-color: #b7d200; }
+
+.LawPolitics .table-graph1-score {
+  background-color: #2ba638; }
+
+.Art .table-graph1-score {
+  background-color: #f4c51c; }
+
+.Commerce .table-graph1-score {
+  background-color: #ee7c17; }
+
+.Services .table-graph1-score {
+  background-color: #e9506e; }
+
+.Society .table-graph1-score {
+  background-color: #d72f36; }
+
+.Science .table-graph1-score {
+  background-color: #3785c7; }
+
+.Engineering .table-graph1-score {
+  background-color: #41bfed; }
+
+.PhysicalFitness .table-graph1-score {
+  background-color: #aa66a6; }
+
+.Humanities .table-barCharts-Horizontal .percent-bar {
+  background-color: #b7d200; }
+
+.LawPolitics .table-barCharts-Horizontal .percent-bar {
+  background-color: #2ba638; }
+
+.Art .table-barCharts-Horizontal .percent-bar {
+  background-color: #f4c51c; }
+
+.Commerce .table-barCharts-Horizontal .percent-bar {
+  background-color: #ee7c17; }
+
+.Services .table-barCharts-Horizontal .percent-bar {
+  background-color: #e9506e; }
+
+.Society .table-barCharts-Horizontal .percent-bar {
+  background-color: #d72f36; }
+
+.Science .table-barCharts-Horizontal .percent-bar {
+  background-color: #3785c7; }
+
+.Engineering .table-barCharts-Horizontal .percent-bar {
+  background-color: #41bfed; }
+
+.PhysicalFitness .table-barCharts-Horizontal .percent-bar {
+  background-color: #aa66a6; }
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+.table-suit > thead > tr > th.field1 {
+  width: 20%; }
+.table-suit > thead > tr > th.field2 {
+  width: 10%; }
+.table-suit > thead > tr > th.field3 {
+  width: 70%; }
+.table-suit > tbody > tr > th > .border > .block {
+  position: relative; }
+  .table-suit > tbody > tr > th > .border > .block .num {
+    width: 24px;
+    height: 30px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    font-weight: normal; }
+    .table-suit > tbody > tr > th > .border > .block .num > .border {
+      border-top: none;
+      border-left: none;
+      padding: 0px 1px 1px 0px;
+      border-radius: 8px 0px 20px 0px;
+      background-color: #FFF; }
+      .table-suit > tbody > tr > th > .border > .block .num > .border > .block {
+        background-color: #b2d000;
+        margin: 0px 1px 1px 0px;
+        border-radius: 8px 0px 20px 0px; }
+.table-suit > tbody > tr > td.field2 {
+  position: relative; }
+  .table-suit > tbody > tr > td.field2 > .border {
+    margin-top: 1px\9;
+    /* IE6, IE7, IE8, IE9 */ }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .table-suit > tbody > tr > td.field2 > .border {
+        /* IE10+ */
+        margin-top: 1px; } }
+    .table-suit > tbody > tr > td.field2 > .border > .block {
+      text-align: center;
+      font-weight: 700;
+      background-color: #00aab5;
+      color: #FFF;
+      padding: 15px 0px 15px 0px;
+      font-size: 1.1em;
+      line-height: 1.45em;
+      padding: 14px 0px 15px 0px\9;
+      /* IE6, IE7, IE8, IE9 */
+      font-size: 1.1em\9;
+      /* IE6, IE7, IE8, IE9 */
+      line-height: 1.5em\9;
+      /* IE6, IE7, IE8, IE9 */ }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .table-suit > tbody > tr > td.field2 > .border > .block {
+          /* IE10+ */
+          padding: 14px 0px 15px 0px;
+          font-size: 1.1em;
+          line-height: 1.5em; } }
+  .table-suit > tbody > tr > td.field2:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: -1px;
+    left: 50%; }
+.table-suit > tbody > tr > td.field3 {
+  padding-left: 5px;
+  padding-right: 5px; }
+.table-suit > tbody > tr .field1 {
+  width: 20%; }
+.table-suit > tbody > tr .field2 {
+  width: 10%; }
+.table-suit > tbody > tr .field3 {
+  width: 70%; }
+
+.table-suit2 > tbody > tr > th > .border {
+  margin-top: 20px; }
+.table-suit2 > tbody > tr > th > small {
+  font-size: 0.9em;
+  display: block;
+  padding: 4px;
+  text-align: left;
+  font-weight: normal; }
+.table-suit2.titleArea {
+  width: 44%;
+  float: left; }
+.table-suit2.graphArea {
+  width: 56%;
+  float: left; }
+
+/*# sourceMappingURL=TIpaper.css.map */

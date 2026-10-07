@@ -1,0 +1,61 @@
+@mixin content_blockStyles($get-Dtcolor: #000, $get-path: " ", $get-subtitlecolor: #000) {
+	height: auto;
+	> li { 
+		display: block;
+		width: 100%;
+		padding-top:30px;
+		padding-bottom: 30px;
+		border-top:1px solid #FFF;
+		border-bottom:1px solid #ebebeb;
+		&:first-child{
+			padding-top:0px;
+			border-top:none;
+		}
+		&:last-child{
+			border-bottom:none;
+		}
+		> dl {
+			background-color: transparent;
+			> dt {
+				text-shadow:1px 1px rgba(255,255,255,.75);
+				font-size: 1.4em;
+				font-weight: bold;
+				padding-left:30px;
+				background-repeat:no-repeat;
+				background-position:left 5px top 4px;
+				background-image:url(../images/#{$get-path}/dt.png);
+				color:darken($get-Dtcolor, 5%);
+			}
+			> dd { 
+				color: #333;
+				margin-left: 30px;
+				margin-bottom:10px;
+				text-shadow:1px 1px rgba(255,255,255,.75);
+				line-height:1.8em;
+				
+				.subtitle{
+					color:#FFF;
+					text-shadow:none;
+					background-color:$get-subtitlecolor;
+					padding:4px 10px;
+					border-radius:20px;
+					line-height:1em;
+					margin-top:15px;
+					margin-bottom:4px;
+					display:inline-block;
+					&:first-child{margin-top:0px;}
+					
+				}
+			}
+		}
+		
+		img {
+		  border-radius:10px;
+		  border: 1px solid #ccc;
+		  padding: 10px;
+		  box-shadow: 5px 5px #ccc;
+		  background-color: #FFF; 
+		  margin-top:5px;
+		}
+	}
+}

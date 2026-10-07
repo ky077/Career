@@ -1,0 +1,75 @@
+@media print {
+.container{
+	width:980px;
+	height:1386px;
+	overflow:hidden;
+	position:relative;
+}	
+	
+.data{
+	.table-data1 > tbody > tr > td{
+		.table-data2 > tbody > tr > td{ 
+			> div{
+				white-space:nowrap; 
+				overflow:hidden;
+				
+			} 
+		}
+	}
+	
+	.table-data1 > tbody > tr:nth-child(1) > td:nth-child(1){
+		.table-data2 > tbody > tr > td{
+			> div{
+				width:12em;
+			}
+		}
+	}
+	.table-data1 > tbody > tr:nth-child(1) > td:nth-child(2){
+		.table-data2 > tbody > tr > td{
+			> div{
+				width:14em;
+			}
+		}
+	}
+	.table-data1 > tbody > tr:nth-child(1) > td:nth-child(3){
+		.table-data2 > tbody > tr > td{
+			> div{
+				width:14em;
+			}
+		}
+	}
+	
+	.table-data1 > tbody > tr:nth-child(2) > td:nth-child(1){
+		.table-data2 > tbody > tr > td{
+			> div{
+				width:12em;
+			}
+		}
+	}
+	.table-data1 > tbody > tr:nth-child(2) > td:nth-child(2){
+		.table-data2 > tbody > tr > td{
+			> div{
+				width:14em;
+			}
+		}
+	}
+	.table-data1 > tbody > tr:nth-child(2) > td:nth-child(3){
+		.table-data2 > tbody > tr > td{
+			> div{
+				width:12em;
+			}
+		}
+	}
+}
+
+.footer{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+
+	
+}

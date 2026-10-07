@@ -1,0 +1,128 @@
+@mixin tableStyles($dark-color: #666, $light-color: #ECE9D8) {
+	width:100%;
+	margin-right: auto;
+	margin-left: auto;
+	color: #333;
+	@media screen and (max-width: 992px) {
+	white-space: nowrap;
+	}
+	> thead > tr{
+		> th{
+			padding: 5px 4px;
+			border: 1px solid #ccc;
+			background-color: $dark-color;
+			color:#FFF;
+			vertical-align:middle;
+			text-shadow:none;
+			input{ color:#333;}
+		}
+		> td{
+			padding: 5px 4px;
+			border: 1px solid #ccc;
+			background-color: transparent;
+		}
+	}
+	> tbody > tr{
+		> th{
+			padding: 5px 4px;
+			border: 1px solid #ccc;
+			background-color: $light-color;
+			vertical-align:top;
+		}
+		> td{
+			padding: 5px 4px;
+			border: 1px solid #ccc;
+			background-color: transparent;
+			line-height:1.4em;
+		}
+	}
+	> tfoot > tr{
+		> th, > td,
+		> th:hover, > td:hover {
+			border: 0px;
+			text-align:center;
+			padding:10px 0px;
+			background-color: transparent;
+		}
+	}
+}
+
+.table3 {
+	width:100%;
+	background-color:#FFF;
+	> thead > tr {
+		> th {
+			background-color: #999;
+			text-align: center;
+			font-weight: normal;
+			color:#FFF;
+			padding:3px 4px;
+			border: 1px solid #ebebeb;
+			text-shadow:none;
+		}
+	}
+	> tbody > tr{
+		> th {
+			background-color: #999;
+			text-align: center;
+			font-weight: normal;
+			color:#FFF;
+			padding:3px 4px;
+			border: 1px solid #ebebeb;
+			text-shadow:none;
+		}
+		> td {
+			text-align: center;
+			padding:3px 4px;
+			border: 1px solid #ebebeb;
+
+		}
+	}
+	> tfoot > tr{
+		> th, > td,
+		> th:hover, > td:hover {
+			border: 0px;
+			text-align:center;
+			padding:10px 0px;
+			background-color: transparent;
+		}
+	}
+}
+
+.table0 {
+	width:100%;
+	> thead, > tbody, >tfoot{
+		> tr{
+			> th, >td {
+				border: 0px;
+				padding:5px 4px;
+			}
+		}
+	}
+}
+
+.tableTRColor{
+	tbody{
+		tr:nth-child(even) {
+			td{
+				/*background-color: #f5f5f5;*/
+			}
+		}
+		tr:hover {
+			td{
+				background-color: #f8f5e2;
+			}
+		}
+	}
+}
+
+.table {
+	width:100%;
+}
+
+.tableCenter{
+	th, td{
+		text-align:center;
+		vertical-align:middle;
+	}
+}
