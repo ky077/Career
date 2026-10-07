@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="848" height="50" viewBox="0 0 848 50">
+  <defs>
+    <filter id="Ellipse_23" x="416.5" y="-3.5" width="18" height="18" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.749"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-downnoword">
+      <rect width="848" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="downnoword" clip-path="url(#clip-downnoword)">
+    <text id="普通" transform="translate(406 31)" fill="#111" font-size="18" font-family="NewGothic-Bold, 文鼎新粗黑" font-weight="700" letter-spacing="0.05em"><tspan x="0" y="0">普通</tspan></text>
+    <text id="很不相似" transform="translate(0.5 31.5)" fill="#595959" stroke="#595959" stroke-width="0.5" font-size="18" font-family="NewGothic-Meduim, 文鼎新中黑" letter-spacing="0.05em"><tspan x="0" y="0">很不相似</tspan></text>
+    <text id="很相似" transform="translate(790.5 31.5)" fill="#595959" stroke="#595959" stroke-width="0.5" font-size="18" font-family="NewGothic-Meduim, 文鼎新中黑" letter-spacing="0.05em"><tspan x="0" y="0">很相似</tspan></text>
+    <path id="Union_13" data-name="Union 13" d="M1835.987-3984l10.013,5-10.013,5Zm-780.974,10L1045-3979l10.013-5h780.974v10Z" transform="translate(-1021 3984)" fill="#fd577a"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_23)">
+      <circle id="Ellipse_23-2" data-name="Ellipse 23" cx="4.5" cy="4.5" r="4.5" transform="translate(420)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+table td { vertical-align: top; }
+
+.person-td { width: 49px; /*position: relative;*/ }
+
+.person-drag { width: 49px; height: 56px; position: absolute; top: 0; left: 0; z-index: 3; background-repeat: no-repeat; background-size: 100% 100%; cursor: move; }
+
+.person-head { width: 49px; height: 56px; position: absolute; top: 0; left: 0; bottom: 0; z-index: 2; background-image: url("../images/arrqbox.png"); background-repeat: no-repeat; background-size: 100% 100%; }
+
+.person-drag, .person-head { display: flex; align-items: center; justify-content: center; }
+.person-drag > span, .person-head > span { font-size: 30px; transform: translateY(-10%); }
+
+.person-drag.transform { transform: scaleX(-1); }
+.person-drag.transform > span { transform: translateY(-10%) scaleX(-1); }
+
+.person-text { min-height: 56px; background-color: #eee; display: inline-flex; align-items: center; margin-left: -25px; margin-bottom: 15px; padding-left: calc(25px + 10px + 15px); padding-right: 20px; border-radius: 0 112px 112px 0; position: relative; line-height: 1.2; border: 1px solid #fcfcfc; }
+.person-text::before { content: ""; display: block; width: 69px; height: 76px; position: absolute; top: 50%; left: 0; transform: translate(-50%, calc(-50% + 1px)); background-image: url("../images/white.svg"); background-size: 100% 100%; z-index: 1; }
+
+.p1 { /*.person-drag{ background-image: url("../images/arrbox1.png"); }*/ }
+.p1 .person-text { background-color: #FEF0E0; }
+
+.p2 { /*.person-drag{ background-image: url("../images/arrbox2.png"); }*/ }
+.p2 .person-text { background-color: #E4F6F8; }
+
+.p3 { /*.person-drag{ background-image: url("../images/arrbox3.png"); }*/ }
+.p3 .person-text { background-color: #FFF8BE; }
+
+.p4 { /*.person-drag{ background-image: url("../images/arrbox4.png"); }*/ }
+.p4 .person-text { background-color: #EFEFFF; }
+
+.p5 { /*.person-drag{ background-image: url("../images/arrbox5.png"); }*/ }
+.p5 .person-text { background-color: #E0F6E2; }
+
+.gray .person-text { background-color: #eee !important; }
+
+.dragitem, #qbox1, #qbox2, #qbox3, #qbox4, #qbox5 { z-index: 4; position: absolute; }
+
+.dragitem { cursor: move; filter: drop-shadow(rgba(0, 0, 0, 0.1) 1px 1px 2px); }

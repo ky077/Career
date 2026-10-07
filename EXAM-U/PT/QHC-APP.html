@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="whiteBg">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta name="theme-color" content="#e37601">
+<meta name="msapplication-navbutton-color" content="#e37601">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#e37601">
+<title>人格測驗</title>
+<link rel="icon" href="images/APP/favicon.ico" mce_href="images/APP/favicon.ico" type="image/APP/x-icon">
+<link rel="apple-touch-icon" href="images/APP/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles-APP.css">
+<link rel="stylesheet" type="text/css" href="css/personality-table.css">
+</head>
+
+<body><form>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-5"> <img src="images/APP/header.png" class="img-responsive img-header" alt="人格測驗"> </div>
+      <div class="col-xs-7">
+        <table class="table-Qnum pull-right">
+          <tr>
+            <td><span class="Qnum">第 <label>5</label> 題 / 共計 <label>999</label> 題</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="main test">
+  <div class="title"><div>請仔細閱讀以下敘述，依照與你<strong>相似的程度</strong>進行比較，將其拖曳到量尺上的對應位置。</div></div>
+  <!-- -->
+  <div style="padding:15px; border:0px solid black">
+    <table border="0" cellpadding="4" cellspacing="0" style="margin: 0 auto;">
+      <tbody>
+        <tr id="" class="p1 gray">
+          <td id="bbox1" class="person-td">
+              <img src="images/arrbox1r.png" alt="" width="49" height="56" class="dragitem ui-draggable " id="box1" style="position: absolute; top:480px; left: 1030px;">
+             <img src="images/arrqbox1.png" alt="" width="49" height="56" id="qbox1" style="display: ;"></td>
+          <td><span id="Ln1" class="person-text">我會主動向新同事親近，表示善意。</span></td>
+        </tr>
+        <tr id="" class="p2">
+          <td id="bbox2" class="person-td">
+               <img src="images/arrbox2.png" alt="" width="49" height="56" class="dragitem ui-draggable" id="box2">
+            <img src="images/arrqbox2.png" alt="" width="49" height="56" id="qbox2" style="display: none;"></td>
+          <td><span id="Ln2" class="person-text">當我被責罵時，我會調整心態，找出自己的問題點。</span></td>
+        </tr>
+        <tr id="" class="p3">
+          <td id="bbox3" class="person-td">
+               <img src="images/arrbox3.png" alt="" width="49" height="56" class="dragitem ui-draggable" id="box3">
+            <img src="images/arrqbox3.png" alt="" width="49" height="56" id="qbox3" style="display: none;"></td>
+          <td><span id="Ln3" class="person-text">簽署合約時，我會仔細閱讀並釐清有疑問的內容後才簽名。</span></td>
+        </tr>
+        <tr id="" class="p4">
+          <td id="bbox4" class="person-td">
+               <img src="images/arrbox4.png" alt="" width="49" height="56" class="dragitem ui-draggable" id="box4">
+            <img src="images/arrqbox4.png" alt="" width="49" height="56" id="qbox4" style="display: none;"></td>
+          <td><span id="Ln4" class="person-text">我常為團隊下最後的決定。</span></td>
+        </tr>
+        <tr id="" class="p5">
+          <td id="bbox5" class="person-td">
+               <img src="images/arrbox5.png" alt="" width="49" height="56" class="dragitem ui-draggable" id="box5">
+            <img src="images/arrqbox5.png" alt="" width="49" height="56" id="qbox5" style="display: none;"></td>
+          <td><span id="Ln5" class="person-text">我喜歡從事具有挑戰性的工作。</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- -->
+  <div align="left" style="border:0px solid green; padding-top:40px; width: 848px; margin:auto;"> <img src="images/downnoword.svg" id="Panelbar" style="width: 100%; height: auto;"> </div>
+  <!-- --> 
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="footer">
+  <div class="container-fluid"><a href="Endpage.html" class="btn-ok">确定</a> </div>
+</div>
+</form>    
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="js/jquery.min.js" type="text/javascript"></script> 
+<!--<script src="http://140.122.118.47/vasrrp/en/js/jquery.easydrag.handler.beta2.js" type="text/javascript"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-impromptu/6.2.3/jquery-impromptu.min.js" type="text/javascript"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> 
+<script type="text/javascript">
+
+    $(function() {
+
+    document.onselectstart = new Function("event.returnValue=false;"); //禁止選取
+
+
+        var barh = $("#Panelbar").offset().top;
+        var checkdown = 450;
+
+        var downy = 565;
+
+        downy = barh - $("#box1").height() * 0.9
+        var barleft = $("#Panelbar").offset().left;
+        var barright = $("#Panelbar").offset().left + 800;
+
+        $(".dragitem").draggable({
+            containment: "#content",
+            stop: function (touch, ui) {
+                //var xx = $(element).offset().left;
+                //var yy = $(element).offset().top;
+                //var ww = $(element).width();   //49
+                //var hh = $(element).height();  //56
+
+                var uix = ui.offset.left;
+                var uiy = ui.offset.top;
+
+                //var xx1 = $("#Panelbar").offset().left;  //14.999
+              //  var yy1 = $("#Panelbar").offset().top;  //615.241
+                 // console.log(uix,uiy);
+
+               var nowi = this.id.substr(3, 1);
+
+                var xpoint = 0;
+                //拖曳選項
+                if (uiy > checkdown ) {
+                    //$(element).css("top", yy1-30); //下面圖案上移一點點
+                    //hh = $(element).height();
+                    //console.log("top:", yy1 - hh);
+                    $("#box" + nowi).css("top", downy);      //拖曳物件y座標 = bar(y) + 物件高度 
+                    $("#qbox" + nowi).css("display", "block");
+                    $("#box" + nowi).parents("tr").addClass("gray");/*文字灰底*/
+
+                    if (uix < barleft) {
+                        $("#box" + nowi).css("left", barleft);
+                        $("#xbox" + nowi).val(0);
+                        $("#box" + nowi).attr("src", "images\\arrbox" + nowi + ".png");
+                    } else if (uix > barright) {
+                        $("#box" + nowi ).css("left", barright);
+                        $("#xbox" + nowi).val(1);
+                        $("#box" + nowi).attr("src", "images\\arrbox" + nowi + "r.png");
+                    } else {
+                        $("#box" + nowi).css("left", uix);
+                        //console.log(uix, barleft);
+                        xpoint = (uix - barleft)/800 ;
+                        $("#xbox" + nowi).val(xpoint.toFixed(4));
+                        if (uix > 400 + barleft) { $("#box" + nowi).attr("src", "images\\arrbox" + nowi + "r.png"); }
+                        else { $("#box" + nowi).attr("src", "images\\arrbox" + nowi + ".png"); }
+                    }
+                } else {
+                    $("#box" + nowi).css("left", $("#bbox" + nowi).offset().left);
+                    $("#box" + nowi).css("top", $("#bbox" + nowi).offset().top);
+                    $("#xbox" + nowi).val(-1);
+                    $("#qbox" + nowi).css("display", "none");
+                    $("#box" + nowi).attr("src", "images\\arrbox" + nowi + ".png");
+                    $("#box" + nowi).parents("tr").removeClass("gray");
+                }
+                if ($("#xbox" + nowi).val() != -1) {
+                    for (var i = 1; i <= 5; i++) {
+                        if (nowi !=  i) {
+
+                            if ($("#xbox" + nowi).val() != "-1") {
+                                if (Math.abs($("#xbox" + nowi).val() - $("#xbox" + i).val()) < 0.01) {
+                                    ShowMsg("選項 " + getchar(i) + " 與 " + getchar(nowi) + " 重複");
+                                    $("#box" + nowi).css("left", $("#bbox" + nowi).offset().left);
+                                    $("#box" + nowi).css("top", $("#bbox" + nowi).offset().top);
+                                    $("#xbox" + nowi).val(-1);
+                                    $("#qbox" + nowi).css("display", "none");
+                                    $("#box" + nowi).parents("tr").removeClass("gray");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+
+        for (var i = 1; i <= 5; i++) {
+            //設定初始位置
+           // console.log("bbox_left" + i, $("#bbox" + i).offset().left);
+          //  console.log("bbox_top" + i, $("#bbox" + i).offset().top);
+
+
+          //  console.log("box_left" + i, $("#box" + i).offset().left);
+           // console.log("box_top" + i, $("#box" + i).offset().top);
+
+           // $('#box' + i).css("left", $("#bbox" + i).offset().left + 8);
+          /// $('#box' + i).css("top", $("#bbox" + i).offset().top + 8);
+            /*$('#qbox' + i).css("left", $("#bbox" + i).offset().left + 8);
+            $('#qbox' + i).css("top", $("#bbox" + i).offset().top + 8);*/
+        }
+
+
+        //數字回傳字母
+        function getchar(ch) {
+            if (ch == 1) return "A";
+            if (ch == 2) return "B";
+            if (ch == 3) return "C";
+            if (ch == 4) return "D";
+            if (ch == 5) return "E";
+        }
+
+        //檢查作答
+        $("#Bun_submit").click(function() {
+            var x1 = $("#xbox1").val();
+            var x2 = $("#xbox2").val();
+            var x3 = $("#xbox3").val();
+            var x4 = $("#xbox4").val();
+            var x5 = $("#xbox5").val();
+         
+            if (x1 == -1 || x2 == -1 || x3 == -1 || x4 == -1 || x5 == -1 ) {
+               //  $.prompt("Please complete answering all of the items", { show: 'slideDown', prefix: 'jqismooth' });
+               //  return false;
+               //  $.prompt("Please complete answering all of the items", { show: 'slideDown', prefix: 'jqismooth' });
+               //  return false;
+             } else {
+
+         //  $.prompt("A:" + x1 + "<br/>B:" + x2 + "<br/>C:" + x3 + "<br/>D:" + x4 + "<br/>E:" + x5 + "<br/>F:" + x6 + "<br/>", { show: 'slideDown', prefix: 'jqismooth' });
+            }
+
+            if (x1 == -1) { ShowMsg("選項A尚未作答"); return false; }
+            if (x2 == -1) { ShowMsg("選項B尚未作答"); return false; }
+            if (x3 == -1) { ShowMsg("選項C尚未作答"); return false; }
+            if (x4 == -1) { ShowMsg("選項D尚未作答"); return false; }
+            if (x5 == -1) { ShowMsg("選項E尚未作答"); return false; }
+          
+
+
+        });
+
+    });
+
+
+</script>
+</body>
+</html>
