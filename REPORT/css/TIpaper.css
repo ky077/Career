@@ -177,7 +177,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-suitable tbody tr .suitable-text { background-color: #fff; border-top-right-radius: 1.4rem; border-bottom-right-radius: 1.4rem; font-size: .95em; position: relative; }
 .table-suitable tbody tr .suitable-text::before { content: ""; display: block; width: 3px; height: 75%; background-color: #2fa172; position: absolute; top: 50%; left: 0; transform: translate(-100%, -50%); }
 
-.suitable-H { background-color: #e7f2e1; border: 1px solid #2fa172; border-radius: 1.4rem; padding: 0 15px; margin-bottom: 20px; }
+.suitable-H { background-color: #e7f2e1; border: 1px solid #2fa172; border-radius: 1.4rem; padding: 0 15px; margin-bottom: 10px; }
 .suitable-H .table-suitable thead tr th .suitable-title { background-color: #2fa172; }
 .suitable-H .table-suitable thead tr th .suitable-title::before { background-color: #2fa172; box-shadow: 1px 1px #2fa172, -1px -1px #2fa172, -1px 1px #2fa172, 1px -1px #2fa172; background-image: url("../images/senior/TI/suitable-H-icon.png"); }
 .suitable-H .table-suitable thead tr td .suitable-describe { color: #007f6d; }
