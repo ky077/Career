@@ -26,7 +26,7 @@ table { padding: 0px; margin: 0px; width: 100%; }
 .section { border-radius: 0px; margin-top: 2px; margin-bottom: 2px; }
 
 .data { margin-top: 2px; border-radius: 0px; }
-.data > .container-fluid > .row > div { background-image: url(../images/senior/spotBorder_brown.png); background-repeat: no-repeat; background-position: left center; padding: 6px 0px 6px 33px; font-size: 18px; font-weight: bold; color: #4f4c3f; border-bottom: 1px solid #dcdddd; white-space: nowrap; overflow: hidden; }
+.data > .container-fluid > .row > div { background-image: url(../images/senior2/spotBorder_brown.png); background-repeat: no-repeat; background-position: left center; padding: 6px 0px 6px 33px; font-size: 18px; font-weight: bold; color: #4f4c3f; border-bottom: 1px solid #dcdddd; white-space: nowrap; overflow: hidden; }
 
 .item { width: 106px; height: 106px; border: 1px solid #ccc; font-weight: bold; }
 .item > .block { width: calc(100% - 2px); height: calc(100% - 2px); }
@@ -62,7 +62,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 
 .HF-for-print { display: none; }
 
-.header { position: relative; height: 116px; line-height: 116px; text-align: center; background-image: url(../images/senior/TI/headerBg.jpg); background-size: 100% 100%; background-repeat: no-repeat; }
+.header { position: relative; height: 116px; line-height: 116px; text-align: center; background-image: url(../images/senior2/TI/headerBg.jpg); background-size: 100% 100%; background-repeat: no-repeat; }
 .header .header-logo { width: 26.7368421053%; }
 .header .header-title { margin-left: 11.8947368421%; margin-right: 1.2631578947%; width: 41.7894736842%; }
 .header .header-version { width: 9.5789473684%; }
@@ -70,7 +70,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .header .header-title_0 { margin-left: 10px; margin-right: 10px; width: 64.5%; }
 .header .header-version_0 { width: 10.26%; }
 
-.footer { position: relative; text-align: center; color: #FFF; padding: 8px 0px; letter-spacing: .5em; background-image: url(../images/senior/TI/footerBg.jpg); }
+.footer { position: relative; text-align: center; color: #FFF; padding: 8px 0px; letter-spacing: .5em; background-image: url(../images/senior2/TI/footerBg.jpg); }
 .footer .version { font-size: 0.8em; letter-spacing: normal; position: absolute; top: 12px; right: 15px; }
 
 .Holland-result { font-size: 1.6em; font-weight: 700; color: #4f4c3f; margin-bottom: 10px; }
@@ -172,9 +172,9 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-suitable tbody tr .suitable-icon { width: 10%; background-color: #2fa172; border-top-left-radius: 1.4rem; border-bottom-left-radius: 1.4rem; }
 .table-suitable tbody tr .suitable-icon img { max-width: 72px; display: block; margin: 0 auto; }
 .table-suitable tbody tr .suitable-subtitle { background-color: #fff; }
-.table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #2fa172; font-size: 1.3em; font-weight: bold; }
-.table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #006a68; font-size: 1.2em; font-weight: bold; }
-.table-suitable tbody tr .suitable-text { background-color: #fff; border-top-right-radius: 1.4rem; border-bottom-right-radius: 1.4rem; position: relative; }
+.table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #006a68; font-size: 1.1em; font-weight: bold; }
+.table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #2fa172; font-size: 1.3em; font-weight: bold; }
+.table-suitable tbody tr .suitable-text { background-color: #fff; border-top-right-radius: 1.4rem; border-bottom-right-radius: 1.4rem; font-size: .95em; position: relative; }
 .table-suitable tbody tr .suitable-text::before { content: ""; display: block; width: 3px; height: 75%; background-color: #2fa172; position: absolute; top: 50%; left: 0; transform: translate(-100%, -50%); }
 
 .suitable-H { background-color: #e7f2e1; border: 1px solid #2fa172; border-radius: 1.4rem; padding: 0 15px; margin-bottom: 20px; }
@@ -183,8 +183,8 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .suitable-H .table-suitable thead tr td .suitable-describe { color: #007f6d; }
 .suitable-H .table-suitable tbody tr .suitable-icon { background-color: #2fa172; position: relative; }
 .suitable-H .table-suitable tbody tr .suitable-icon > span { font-size: 1.6em; font-weight: bold; color: #333; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -35%); }
-.suitable-H .table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #2fa172; }
-.suitable-H .table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #006a68; }
+.suitable-H .table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #006a68; }
+.suitable-H .table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #2fa172; }
 .suitable-H .table-suitable tbody tr .suitable-text::before { background-color: #2fa172; }
 
 .suitable-L { background-color: #fdf5eb; border: 1px solid #ea5514; border-radius: 1.4rem; padding: 0 15px; }
@@ -193,8 +193,8 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .suitable-L .table-suitable thead tr td .suitable-describe { color: #e97718; }
 .suitable-L .table-suitable tbody tr .suitable-icon { background-color: #e97718; }
 .suitable-L .table-suitable tbody tr .suitable-icon > span { font-size: 1.6em; font-weight: bold; color: #fff; border: 2px solid #fff; border-radius: 100%; width: 2.1em; height: 2.1em; display: flex; justify-content: center; align-items: center; margin: 0 auto; }
-.suitable-L .table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #e97718; }
-.suitable-L .table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #7f4f21; }
+.suitable-L .table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #7f4f21; }
+.suitable-L .table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #e97718; }
 .suitable-L .table-suitable tbody tr .suitable-text::before { background-color: #e97918; }
 
 .info .col-xs-12.col-sm-12.col-md-6.col-lg-6:first-child { border-right: 1px dashed #4e4b3e; }

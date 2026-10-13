@@ -510,13 +510,13 @@ $paper-name:"TI";
       .suitable-subtitle {
         background-color: #fff;
         .suitable-disc {
-          color: #2fa172;
-          font-size: 1.3em;
+          color: #006a68;
+          font-size: 1.1em;
           font-weight: bold;
         }
         .suitable-cate {
-          color: #006a68;
-          font-size: 1.2em;
+          color: #2fa172;
+          font-size: 1.3em;
           font-weight: bold;
         }
       }
@@ -524,6 +524,7 @@ $paper-name:"TI";
         background-color: #fff;
         border-top-right-radius: 1.4rem;
         border-bottom-right-radius: 1.4rem;
+				font-size: .95em;
         position: relative;
         &::before {
           content: "";
@@ -583,10 +584,10 @@ $paper-name:"TI";
         }
         .suitable-subtitle {
           .suitable-disc {
-            color: #2fa172;
+            color: #006a68;
           }
           .suitable-cate {
-            color: #006a68;
+            color: #2fa172;
           }
         }
         .suitable-text {
@@ -644,10 +645,10 @@ $paper-name:"TI";
         }
         .suitable-subtitle {
           .suitable-disc {
-            color: #e97718;
+            color: #7f4f21;
           }
           .suitable-cate {
-            color: #7f4f21;
+            color: #e97718;
           }
         }
         .suitable-text {

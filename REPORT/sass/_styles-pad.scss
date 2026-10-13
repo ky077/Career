@@ -61,7 +61,7 @@ table {
   height: 116px;
   line-height: 116px;
   text-align: center;
-  background-image: url(../images/senior/#{$get-path}/headerBg.jpg);
+  background-image: url(../images/senior2/#{$get-path}/headerBg.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
   .header-logo {
@@ -93,7 +93,7 @@ table {
   color: #FFF;
   padding: 8px 0px;
 	letter-spacing: .5em;
-  background-image: url(../images/senior/#{$get-path}/footerBg.jpg);
+  background-image: url(../images/senior2/#{$get-path}/footerBg.jpg);
 	.version {
     font-size: 0.8em;
     letter-spacing: normal;
@@ -109,7 +109,7 @@ table {
   > .container-fluid {
     > .row {
       > div {
-        background-image: url(../images/senior/spotBorder_brown.png);
+        background-image: url(../images/senior2/spotBorder_brown.png);
         background-repeat: no-repeat;
         background-position: left center;
         padding: 6px 0px 6px 33px;
