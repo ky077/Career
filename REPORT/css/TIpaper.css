@@ -52,7 +52,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 
 .bar { width: 100%; height: 6px; border-radius: 6px; }
 
-.mark { text-align: center; line-height: 1.8em; margin: 20px 0px; font-size: 1.3em; font-weight: bold; }
+.mark { text-align: center; line-height: 1.8em; margin: 15px 0px; font-size: 1.3em; font-weight: bold; }
 
 .mark_v2 { margin: 5px 0px; }
 
@@ -174,7 +174,7 @@ h3 > span::after { content: ""; display: inline-block; width: 8px; height: 8px; 
 .table-suitable tbody tr .suitable-subtitle { background-color: #fff; }
 .table-suitable tbody tr .suitable-subtitle .suitable-disc { color: #006a68; font-size: 1.1em; font-weight: bold; }
 .table-suitable tbody tr .suitable-subtitle .suitable-cate { color: #2fa172; font-size: 1.3em; font-weight: bold; }
-.table-suitable tbody tr .suitable-text { background-color: #fff; border-top-right-radius: 1.4rem; border-bottom-right-radius: 1.4rem; font-size: .95em; position: relative; }
+.table-suitable tbody tr .suitable-text { background-color: #fff; border-top-right-radius: 1.4rem; border-bottom-right-radius: 1.4rem; font-size: .95em; position: relative; padding-top: 5px; padding-bottom: 5px; }
 .table-suitable tbody tr .suitable-text::before { content: ""; display: block; width: 3px; height: 75%; background-color: #2fa172; position: absolute; top: 50%; left: 0; transform: translate(-100%, -50%); }
 
 .suitable-H { background-color: #e7f2e1; border: 1px solid #2fa172; border-radius: 1.4rem; padding: 0 15px; margin-bottom: 10px; }
