@@ -141,7 +141,7 @@
     .table, .table1, .table2 {
       white-space: nowrap; } }
   .table > thead > tr > th, .table1 > thead > tr > th, .table2 > thead > tr > th {
-    padding: 5px 4px;
+    padding: .5em .5em;
     border: 1px solid #ccc;
     background-color: #219653;
     color: #FFF;
@@ -150,16 +150,16 @@
     .table > thead > tr > th input, .table1 > thead > tr > th input, .table2 > thead > tr > th input {
       color: #333; }
   .table > thead > tr > td, .table1 > thead > tr > td, .table2 > thead > tr > td {
-    padding: 5px 4px;
+    padding: .5em .5em;
     border: 1px solid #ccc;
     background-color: transparent; }
   .table > tbody > tr > th, .table1 > tbody > tr > th, .table2 > tbody > tr > th {
-    padding: 5px 4px;
+    padding: .5em .5em;
     border: 1px solid #ccc;
     background-color: #e7f7e0;
     vertical-align: top; }
   .table > tbody > tr > td, .table1 > tbody > tr > td, .table2 > tbody > tr > td {
-    padding: 5px 4px;
+    padding: .5em .5em;
     border: 1px solid #ccc;
     background-color: transparent;
     line-height: 1.4em; }
@@ -196,23 +196,25 @@
         background-repeat: no-repeat;
         background-position: left 5px top 4px;
         background-image: url(../images/TI/dt.png);
-        color: #1c8147; }
+        color: #1c8147;
+        margin-bottom: 10px; }
       .content_block > li > dl > dd {
         color: #333;
         margin-left: 30px;
         margin-bottom: 10px;
         text-shadow: 1px 1px rgba(255, 255, 255, 0.75);
-        line-height: 1.8em; }
+        line-height: 2; }
         .content_block > li > dl > dd .subtitle {
           color: #FFF;
           text-shadow: none;
           background-color: #398006;
           padding: 4px 10px;
           border-radius: 20px;
-          line-height: 1em;
+          line-height: 1;
           margin-top: 15px;
           margin-bottom: 4px;
-          display: inline-block; }
+          display: inline-block;
+          padding: .45em 1em .325em 1em; }
           .content_block > li > dl > dd .subtitle:first-child {
             margin-top: 0px; }
     .content_block > li img {

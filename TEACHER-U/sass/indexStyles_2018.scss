@@ -84,7 +84,9 @@ body {
 	}
 	
 	.btn-bannerArea{
-		@media screen and (min-width: 992px) {padding-right:20px;}
+		@media screen and (min-width: 1600px) {
+		padding-left: 1/12*100%*.5;
+		}
 	}
 	.btn-banner{ 
 		margin-bottom:20px;
@@ -98,6 +100,7 @@ body {
 			top:0;
 			left:0;
 			z-index:1;
+			transition: all .15s ease-in-out;
 		}
 		&:hover {
 			-webkit-filter:saturate(1.5);
@@ -106,11 +109,11 @@ body {
 			-o-filter:saturate(1.5);
 			filter:saturate(1.5);
 			.btn-banner-bg{
-				-webkit-transform:rotate(78deg);
-				-moz-transform:rotate(78deg);
-				-ms-transform:rotate(78deg);
-				-o-transform:rotate(78deg);
-				transform:rotate(78deg);
+				-webkit-transform:rotate(-12deg);
+				-moz-transform:rotate(-12deg);
+				-ms-transform:rotate(-12deg);
+				-o-transform:rotate(-12deg);
+				transform:rotate(-12deg);
 			}
 		}
 	}

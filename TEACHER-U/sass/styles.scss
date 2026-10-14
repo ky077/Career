@@ -115,6 +115,7 @@ label{
 	li{
 		list-style: decimal;
 		list-style-position: outside;
+		margin-bottom: 10px;
 	}
 }
 /* ******* ******* ******* ******* ******* ******* ******* */
@@ -272,41 +273,44 @@ label{
 		@media screen and (min-width: 1580px) {width:100%; }
 		
 		> ul{
-			> li{
-				width:50%;
+			> li{ 
+				width: calc(1/3*100%);
 				float:left;
 				> a {
 					display:block;
 					width:100%;
 					height:0;
-					padding-bottom:25.43%;
+					padding-bottom: calc(145/380*100%);
 					background-image: url(../images/nav-a.png);
-					background-size:cover; 
+					background-size: 300%; 
+					background-repeat: no-repeat;
 					text-indent:-9999px;
 					overflow:hidden;
 					&:hover{
 						background-image: url(../images/nav-hover.png);
 					}
 				}
-				
 				&.active>a, &.active>a:hover{
 					background-image: url(../images/nav-active.png);
 				}
 				&.interest{
 					>a {
-						background-position:left bottom;
+						background-position: left 0 bottom 0;
 					}
-					
 				}
 				&.workValue{
 					>a {
-						background-position:right bottom;
+						background-position: left 50% bottom 0;
+					}
+				}
+				&.personality{
+					>a {
+						background-position: left 100% bottom 0;
 					}
 				}
 			}
 		}
 	}	
-	
 }
 
 

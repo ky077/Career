@@ -8,7 +8,7 @@
 	}
 	> thead > tr{
 		> th{
-			padding: 5px 4px;
+			padding: .5em .5em;
 			border: 1px solid #ccc;
 			background-color: $dark-color;
 			color:#FFF;
@@ -17,20 +17,20 @@
 			input{ color:#333;}
 		}
 		> td{
-			padding: 5px 4px;
+			padding: .5em .5em;
 			border: 1px solid #ccc;
 			background-color: transparent;
 		}
 	}
 	> tbody > tr{
 		> th{
-			padding: 5px 4px;
+			padding: .5em .5em;
 			border: 1px solid #ccc;
 			background-color: $light-color;
 			vertical-align:top;
 		}
 		> td{
-			padding: 5px 4px;
+			padding: .5em .5em;
 			border: 1px solid #ccc;
 			background-color: transparent;
 			line-height:1.4em;

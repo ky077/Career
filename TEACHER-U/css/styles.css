@@ -261,7 +261,8 @@ label {
   padding: 0px 1.5em; }
   .olList li {
     list-style: decimal;
-    list-style-position: outside; }
+    list-style-position: outside;
+    margin-bottom: 10px; }
 
 /* ******* ******* ******* ******* ******* ******* ******* */
 .head {
@@ -409,15 +410,16 @@ label {
       .toolSection .nav {
         width: 100%; } }
     .toolSection .nav > ul > li {
-      width: 50%;
+      width: calc(1/3*100%);
       float: left; }
       .toolSection .nav > ul > li > a {
         display: block;
         width: 100%;
         height: 0;
-        padding-bottom: 25.43%;
+        padding-bottom: calc(145/380*100%);
         background-image: url(../images/nav-a.png);
-        background-size: cover;
+        background-size: 300%;
+        background-repeat: no-repeat;
         text-indent: -9999px;
         overflow: hidden; }
         .toolSection .nav > ul > li > a:hover {
@@ -425,9 +427,11 @@ label {
       .toolSection .nav > ul > li.active > a, .toolSection .nav > ul > li.active > a:hover {
         background-image: url(../images/nav-active.png); }
       .toolSection .nav > ul > li.interest > a {
-        background-position: left bottom; }
+        background-position: left 0 bottom 0; }
       .toolSection .nav > ul > li.workValue > a {
-        background-position: right bottom; }
+        background-position: left 50% bottom 0; }
+      .toolSection .nav > ul > li.personality > a {
+        background-position: left 100% bottom 0; }
 
 .main {
   background-image: url(../images/mainBg.png);

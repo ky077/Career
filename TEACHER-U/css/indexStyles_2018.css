@@ -72,9 +72,9 @@ body {
   position: relative; }
   .banner .logo {
     margin-top: 10px; }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1600px) {
     .banner .btn-bannerArea {
-      padding-right: 20px; } }
+      padding-left: 4.1666666667%; } }
   .banner .btn-banner {
     margin-bottom: 20px;
     position: relative; }
@@ -85,7 +85,8 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 1; }
+      z-index: 1;
+      transition: all .15s ease-in-out; }
     .banner .btn-banner:hover {
       -webkit-filter: saturate(1.5);
       -moz-filter: saturate(1.5);
@@ -93,11 +94,11 @@ body {
       -o-filter: saturate(1.5);
       filter: saturate(1.5); }
       .banner .btn-banner:hover .btn-banner-bg {
-        -webkit-transform: rotate(78deg);
-        -moz-transform: rotate(78deg);
-        -ms-transform: rotate(78deg);
-        -o-transform: rotate(78deg);
-        transform: rotate(78deg); }
+        -webkit-transform: rotate(-12deg);
+        -moz-transform: rotate(-12deg);
+        -ms-transform: rotate(-12deg);
+        -o-transform: rotate(-12deg);
+        transform: rotate(-12deg); }
 
 .index-content {
   border-top: 10px solid #CCC;

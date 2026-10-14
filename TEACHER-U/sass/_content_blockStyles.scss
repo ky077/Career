@@ -25,13 +25,14 @@
 				background-position:left 5px top 4px;
 				background-image:url(../images/#{$get-path}/dt.png);
 				color:darken($get-Dtcolor, 5%);
+				margin-bottom: 10px;
 			}
 			> dd { 
 				color: #333;
 				margin-left: 30px;
 				margin-bottom:10px;
 				text-shadow:1px 1px rgba(255,255,255,.75);
-				line-height:1.8em;
+				line-height: 2;
 				
 				.subtitle{
 					color:#FFF;
@@ -39,12 +40,14 @@
 					background-color:$get-subtitlecolor;
 					padding:4px 10px;
 					border-radius:20px;
-					line-height:1em;
+					line-height: 1;
 					margin-top:15px;
 					margin-bottom:4px;
 					display:inline-block;
-					&:first-child{margin-top:0px;}
-					
+					padding: .45em 1em .325em 1em;
+					&:first-child{
+						margin-top:0px;
+					}
 				}
 			}
 		}
