@@ -593,17 +593,20 @@ transform: translate(5%, 5%) scale(1.1);
 <script>
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 const levelAliases = {
+  j: 'tab-junior',
   junior: 'tab-junior',
+  s: 'tab-senior',
   senior: 'tab-senior',
+  u: 'tab-university',
   university: 'tab-university',
   '國中': 'tab-junior',
   '高中': 'tab-senior',
   '大學': 'tab-university'
 };
 const tabLevels = {
-  'tab-junior': 'junior',
-  'tab-senior': 'senior',
-  'tab-university': 'university'
+  'tab-junior': 'j',
+  'tab-senior': 's',
+  'tab-university': 'u'
 };
 
 function selectTab(tab, updateUrl = false) {
