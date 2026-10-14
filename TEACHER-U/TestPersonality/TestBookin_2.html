@@ -171,6 +171,7 @@
                 <p id="booking-mode-missing" role="alert" hidden>未取得施測方式，請回到上一步重新選擇。</p>
                 <!-- 自主施測 -->
                 <section id="mode-self" data-mode-section="self" hidden>
+									<div class="bookin2-redmark">* 為必填欄位</div>
                   <div class="table-responsive">
                     <table class="table2">
                       <tbody>
@@ -229,6 +230,7 @@
                 
                 <!-- 團體施測 -->
                 <section id="mode-group" data-mode-section="group" hidden>
+									<div class="bookin2-redmark">* 為必填欄位</div>
                   <div class="table-responsive">
                     <table class="table2">
                       <tbody>
@@ -237,11 +239,11 @@
                           <td><span class="bookin2-title">團體施測</span></td>
                         </tr>
                         <tr>
-                          <th class="toRight"><span class="red">*</span>施測名稱：</th>
+                          <th class="toRight"><span class="red">*</span>施測名稱</th>
                           <td><input type="text" name="group_test_name" id="group_test_name" placeholder="必填，例如：115學年度第一學期生涯人格測驗團體施測" required style="width: 100%;"></td>
                         </tr>
                         <tr>
-                          <th class="toRight"><span class="red">*</span>施測對象：</th>
+                          <th class="toRight"><span class="red">*</span>施測對象</th>
                           <td><select name="group_department" id="group_department">
                               <option value="0">系所</option>
                               <option value="3973">展示系</option>
@@ -266,12 +268,8 @@
                           <th class="toRight">可施測人數</th>
                           <td>20</td>
                         </tr>
-                        <!--<tr>
-                          <th class="toRight">學生名單</th>
-                          <td>指定名單</td>
-                        </tr>-->
                         <tr>
-                          <th class="toRight">報表開放預設：</th>
+                          <th class="toRight">報表開放預設</th>
                           <td><select  id="" disabled>
                               <option>完成測驗後立即開放</option>
                               <option selected>指定日期時間開放</option>
@@ -286,6 +284,7 @@
                 
                 <!-- 個別諮商 -->
                 <section id="mode-consult" data-mode-section="consult" hidden>
+									<div class="bookin2-redmark">* 為必填欄位</div>
                   <div class="table-responsive">
                     <table class="table2">
                       <tbody>
@@ -294,7 +293,7 @@
                           <td><span class="bookin2-title">個別諮商</span></td>
                         </tr>
                         <tr>
-                          <th class="toRight">施測名稱：</th>
+                          <th class="toRight">施測名稱</th>
                           <td><input type="text" name="consult_test_name" id="consult_test_name" placeholder="可選填" required style="width: 100%;"></td>
                         </tr>
                         <tr>
@@ -329,7 +328,7 @@
                           <td>1</td>
                         </tr>
                         <tr>
-                          <th class="toRight">報表開放預設：</th>
+                          <th class="toRight">報表開放預設</th>
                           <td><select  id="" disabled>
                               <option>完成測驗後立即開放</option>
                               <option>指定日期時間開放</option>
@@ -409,7 +408,7 @@ $(function(){
 	});
 	document.getElementById('booking-mode-missing').hidden = hasMode;
 	document.getElementById('BookingPrevious').addEventListener('click', function() {
-		window.location.href = hasMode ? 'TestBookin.html?mode=' + encodeURIComponent(mode) : 'TestBookin.html';
+		window.location.href = 'TestBookin.html';
 	});
 	document.getElementById('BookingNext').addEventListener('click', function() {
 		if (hasMode) window.location.href = 'TestBookin_3.html?mode=' + encodeURIComponent(mode);

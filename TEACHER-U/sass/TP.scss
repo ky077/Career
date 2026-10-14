@@ -28,7 +28,6 @@ $test-name: "TP";
 .bookin-btns{
 	margin: 10px 0;
 	text-align: center;
-	
 }
 .bookin1-radio{
 	label{
@@ -59,6 +58,12 @@ $test-name: "TP";
 	
 }
 
+.bookin2-redmark{
+	font-size: 85%;
+	color: red;
+	text-align: right;
+	margin-top: -2em;
+}
 .bookin2-title{
 	color: #5a4cbc;
 	text-shadow: none;

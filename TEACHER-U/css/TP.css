@@ -266,6 +266,12 @@
   font-size: .95em;
   font-weight: normal; }
 
+.bookin2-redmark {
+  font-size: 85%;
+  color: red;
+  text-align: right;
+  margin-top: -2em; }
+
 .bookin2-title {
   color: #5a4cbc;
   text-shadow: none;
