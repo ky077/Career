@@ -591,16 +591,49 @@ transform: translate(5%, 5%) scale(1.1);
   </a>
 </div>
 <script>
-document.querySelectorAll('[role="tab"]').forEach((tab) => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('[role="tab"]').forEach((item) => {
-      const selected = item === tab;
-      item.setAttribute('aria-selected', String(selected));
-      item.tabIndex = selected ? 0 : -1;
-      document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
-    });
+const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+const levelAliases = {
+  junior: 'tab-junior',
+  senior: 'tab-senior',
+  university: 'tab-university',
+  '國中': 'tab-junior',
+  '高中': 'tab-senior',
+  '大學': 'tab-university'
+};
+const tabLevels = {
+  'tab-junior': 'junior',
+  'tab-senior': 'senior',
+  'tab-university': 'university'
+};
+
+function selectTab(tab, updateUrl = false) {
+  tabs.forEach((item) => {
+    const selected = item === tab;
+    item.setAttribute('aria-selected', String(selected));
+    item.tabIndex = selected ? 0 : -1;
+    document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
   });
+
+  if (updateUrl) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('level', tabLevels[tab.id]);
+    window.history.pushState({}, '', url);
+  }
+}
+
+function selectTabFromUrl() {
+  const level = new URLSearchParams(window.location.search).get('level');
+  const tabId = levelAliases[level];
+  const tab = tabs.find((item) => item.id === tabId) || tabs[0];
+  selectTab(tab);
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => selectTab(tab, true));
 });
+
+window.addEventListener('popstate', selectTabFromUrl);
+selectTabFromUrl();
 </script>
 </body>
 </html>
