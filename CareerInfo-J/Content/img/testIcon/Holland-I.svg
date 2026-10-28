@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 145 145">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #344154;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #344154;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.2, SVG Export Plug-In . SVG Version: 1.2.0 Build 154)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g id="_圖層_2">
+        <circle class="cls-3" cx="72.5" cy="72.5" r="34.4"/>
+        <g class="cls-2">
+          <g class="cls-2">
+            <path class="cls-1" d="M72.5,90c-1,0-1.4-.5-1.4-1.4v-32.1c0-1,.5-1.4,1.4-1.4s1.4.5,1.4,1.4v32.1c0,1-.5,1.4-1.4,1.4Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
