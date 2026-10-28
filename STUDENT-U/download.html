@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生涯測驗系統-大學版-學生端</title>
+<link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/rwd-table.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- -->
+<div class="header">
+  <div class="container">
+    <div class="header-tools">
+      <div class="pull-right">
+        <span class="account">account001</span><a class="logout_btn" href="data.html">會員中心</a><a class="logout_btn" href="index.html">登出</a>
+      </div>
+    </div>
+    <img src="images/banner.png" class="img-responsive img-brand center-block">
+  </div>
+</div>
+<!-- -->
+<div class="main">
+  <div class="container">
+    <div class="title">
+      王小明，歡迎進入！
+    </div>
+    <!-- -->
+    <div class="tools clearfix">
+      <ul class="data clearfix pull-left">
+        <li>學校：
+          <label>國立臺灣師範大學</label>
+        </li>
+        <li>學號：
+          <label>12345678</label>
+        </li>
+      </ul>
+      <ul class="nav clearfix pull-right">
+        <li><a href="test-3.html">考試入口</a></li>
+        <li><a href="download.html" class="active">報表下載</a></li>
+      </ul>
+    </div>
+    <!-- -->
+    <h3 class="download">請選擇已完成的測驗進行報表下載：</h3>
+    <div class="contentBlock">
+      <table class="table-download rwd-table whiteBlock">
+        <thead>
+          <tr>
+            <th>測驗名稱</th>
+            <th>測驗日期</th>
+            <th>測驗狀態</th>
+            <th>報表結果</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-th="測驗名稱">情境式職涯興趣測驗 </td>
+            <td data-th="測驗日期">2017/10/31 </td>
+            <td data-th="測驗狀態">未完成</td>
+            <td data-th="報表結果"><input type="button" name="" id="" value="瀏覽" class="btn" disabled="disabled">
+              <input type="button" name="" id="" value="下載" class="btn" disabled="disabled"></td>
+          </tr>
+          <tr>
+            <td data-th="測驗名稱">工作價值觀測驗 </td>
+            <td data-th="測驗日期">2017/10/31 </td>
+            <td data-th="測驗狀態">已完成</td>
+            <td data-th="報表結果"><input type="button" name="" id="" value="瀏覽" class="btn">
+              <input type="button" name="" id="" value="下載" class="btn"></td>
+          </tr>
+					<tr>
+            <td data-th="測驗名稱">人格測驗 </td>
+            <td data-th="測驗日期">2026/10/28 </td>
+            <td data-th="測驗狀態">已完成</td>
+            <td data-th="報表結果"><input type="button" name="" id="" value="瀏覽" class="btn" data-toggle="modal" data-target="#modal-TP">
+              <input type="button" name="" id="" value="下載" class="btn"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="mark">
+        ※若對報表結果有任何問題，請洽學校承辦人員諮詢！<br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -->
+<div class="footer">
+  <div class="container">
+    © 2018 College of Education e-Learning Lab, NTNU. All rights reserved.<br>
+    國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室<br>
+    電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號 <br>
+  </div>
+</div>
+<!-- Modal #modal-TP-->
+<div class="modal fade" id="modal-TP" tabindex="-1" role="dialog" aria-labelledby="modal-TPLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modal-TPLabel">閱讀測驗結果前，請先瞭解</h4>
+      </div>
+      <div class="modal-body">
+        <div class="tp-report-notes">
+          <section class="tp-report-note">
+            <span class="tp-report-note-number">1</span>
+            <div class="tp-report-note-content">
+              <h5>人格特質沒有好壞之分</h5>
+              <p>不同特質在不同學習、人際及生活情境中，各有可能的優勢與需要調整之處。</p>
+            </div>
+          </section>
+          <section class="tp-report-note">
+            <span class="tp-report-note-number">2</span>
+            <div class="tp-report-note-content">
+              <h5>PR 不是考試分數</h5>
+              <p>百分等級代表您與常模群體相比的相對位置，不代表人格表現的好壞。</p>
+            </div>
+          </section>
+          <section class="tp-report-note">
+            <span class="tp-report-note-number">3</span>
+            <div class="tp-report-note-content">
+              <h5>人格類型不是固定標籤</h5>
+              <p>類型說明是依據目前的人格特質組合所提供的整合性描述，不表示一個人只能屬於某種固定人格。</p>
+            </div>
+          </section>
+          <section class="tp-report-note">
+            <span class="tp-report-note-number">4</span>
+            <div class="tp-report-note-content">
+              <h5>結果不等於生涯決定</h5>
+              <p>測驗結果可作為認識自己與生涯探索的參考，不宜單獨作為選系、轉系或職業選擇的唯一依據。</p>
+            </div>
+          </section>
+          <section class="tp-report-note tp-report-note-last">
+            <span class="tp-report-note-number">5</span>
+            <div class="tp-report-note-content">
+              <h5>需要進一步討論時，可尋求學校輔導資源。</h5>
+            </div>
+          </section>
+        </div>
+        <div class="tp-report-confirm">
+          <label for="tp-report-confirmed">
+            <input type="checkbox" id="tp-report-confirmed">
+            <span>我已閱讀並瞭解上述說明</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-default" id="btn-tp-report-browse" disabled="disabled">瀏覽</button>
+      </div>
+    </div>
+  </div>
+</div>		
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function () {
+  var $acknowledgement = $('#tp-report-confirmed');
+  var $browseButton = $('#btn-tp-report-browse');
+
+  $browseButton.prop('disabled', !$acknowledgement.is(':checked'));
+  $acknowledgement.on('change', function () {
+    $browseButton.prop('disabled', !this.checked);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.rwd-table{
+	thead{
+		th, td {display: none;}
+	}
+	tbody, tfoot{
+		th, td {
+			display: block;
+			&:before{
+				display: inline-block;
+				content: attr(data-th) "：";
+				font-weight: bold;
+				width: auto;
+				margin-right:10px;
+			}
+			&.with-no-data-th{
+				&:before{
+					content: attr(data-th) "";
+					margin-right:0px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 970px) {
+	thead{
+		th, td {display: table-cell;}
+	}
+	tbody, tfoot{
+		th, td {
+			display: table-cell;
+			&:before{
+				display: none;
+			}
+		}
+	}
+	}
+}

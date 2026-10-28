@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生涯測驗系統-大學版-學生端</title>
+<link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/rwd-table.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<style>
+html {
+	position: relative;
+	min-height: 100%;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+</style>
+</head>
+
+<body>
+<!-- -->
+<div class="header">
+  <div class="container">
+    <div class="header-tools">
+      <a href=""><span class="headIcon teacher"></span>生涯測驗系統</a>
+    </div>
+    <img src="images/banner.png" class="img-responsive img-brand center-block">
+  </div>
+</div>
+<!-- -->
+<div class="main index-main">
+  <div class="container">
+    <table class="table-forMainCenter">
+      <tr>
+        <td style="vertical-align:top;"><!-- -->
+          
+          <div class="title">
+            &nbsp;
+          </div>
+          
+          <!-- --> 
+          <br>
+          <h2 class="text-center">修改密碼</h2>
+          <hr>
+          <form class="form-horizontal" action="index.html">
+            <div class="form-group">
+              <label for="" class="col-sm-3 col-lg-2 control-label">帳號：</label>
+              <div class="col-sm-9 col-lg-10">
+                <input type="text" class="form-control input-lg" id="" placeholder="請輸入身分證統一編號" value="A123******" disabled>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 col-lg-2 control-label">新密碼：</label>
+              <div class="col-sm-9 col-lg-10">
+                <input type="text" class="form-control input-lg" id="" placeholder="請輸入以英數字元設置6-20位的密碼">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 col-lg-2 control-label">確認新密碼：</label>
+              <div class="col-sm-9 col-lg-10">
+                <input type="text" class="form-control input-lg" id="" placeholder="請再次輸入新密碼">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-3 col-lg-2 control-label">驗證碼：</label>
+              <div class="col-sm-9 col-lg-10">
+                <div class="form-inline">
+                  <input type="text" class="form-control input-lg" id="" placeholder="請輸入驗證碼">
+                  <img id="codeImage" src="https://career.ntnu.edu.tw/junior/Validate/ValidateCode.ashx" style="border-width:0px; width:110px ; height:46px; border:1px solid #ccc; border-radius:6px 0 0 6px;"><img src="https://career.ntnu.edu.tw/junior/images/autorenew.jpg" onclick="RenewCode()" style="border:1px solid #ccc; width:33px ; height:46px; padding:12px 8px; background-color:#FFF; border-radius:0 4px 4px 0; margin-left:-1px;">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-default btn-lg" onClick="alert('已修改密碼，請重新登錄！')">確認修改</button>
+              </div>
+            </div>
+          </form>
+          
+          <!-- --></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- -->
+<div class="footer">
+  <div class="container">
+    © 2018 College of Education e-Learning Lab, NTNU. All rights reserved.<br>
+    國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室<br>
+    電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號 <br>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/countHeight.js"></script>
+</body>
+</html>

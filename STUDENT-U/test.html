@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生涯測驗系統-大學版-學生端</title>
+<link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/rwd-table.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- -->
+<div class="header">
+  <div class="container">
+    <div class="header-tools">
+      <div class="pull-right">
+        <span class="account">account001</span><a class="logout_btn" href="data.html">會員中心</a><a class="logout_btn" href="index.html">登出</a>
+      </div>
+    </div>
+    <img src="images/banner.png" class="img-responsive img-brand center-block">
+  </div>
+</div>
+<!-- -->
+
+<div class="main">
+  <div class="container">
+    <div class="title">
+      王小明，歡迎進入！
+    </div>
+    <!-- -->
+    <div class="tools clearfix">
+      <ul class="data clearfix pull-left">
+        <li>學校：
+          <label>國立臺灣師範大學</label>
+        </li>
+        <li>學號：
+          <label>12345678</label>
+        </li>
+      </ul>
+      <ul class="nav clearfix pull-right">
+        <li><a href="test.html" class="active">考試入口</a></li>
+        <li><a href="download.html">報表下載</a></li>
+      </ul>
+    </div>
+    <!-- -->
+    <h3 class="test">請選擇目前可進行的測驗開始測驗：</h3>
+    <div class="contentBlock">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="test-item whiteBlock">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img src="images/TI.png" class="test-img img-responsive">
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h4>電腦化生涯興趣測驗</h4>
+                <p class="now">2017-10-31&nbsp;&nbsp;第7節</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <input name="button" class="btn btn-block btn-lg" value="開始測驗" type="button" data-toggle="modal" data-target="#modal-TI">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="test-item whiteBlock disabled">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img src="images/WV.png" class="test-img img-responsive">
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h4>工作價值組合</h4>
+                <p>2017-10-31&nbsp;&nbsp;第8節</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <input type="submit" name="button" class="btn btn-block btn-lg" value="已完成" disabled="disabled">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -->
+<div class="footer">
+  <div class="container">
+    © 2018 College of Education e-Learning Lab, NTNU. All rights reserved.<br>
+    國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室<br>
+    電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號 <br>
+  </div>
+</div>
+<!-- --> 
+<!-- Modal #modal-TI-->
+<div class="modal fade" id="modal-TI" tabindex="-1" role="dialog" aria-labelledby="modal-changePDLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">電腦化生涯興趣測驗</h4>
+      </div>
+      <div class="modal-body">
+        <!-- -->
+        <div>
+          <div class="form-group">
+            <label for="">學校：</label>
+            <input type="text" class="form-control  input-lg" id="" value="體驗學校" disabled >
+            <small class="text-muted">若有轉學情況，請<a href="data.html">修改學校資料</a>後，再進行測驗。</small>
+          </div>
+          <div class="form-group">
+            <label for="">班級：</label>
+            <select class="form-control input-lg">
+              <option>請選擇</option>
+              <option>101</option>
+              <option>102</option>
+              <option>201</option>
+              <option>202</option>
+            </select>
+            <small class="text-muted">若欲進行測驗，但無班級可選，請洽貴校老師詢問。</small>
+          </div>
+          <div class="form-group">
+            <label for="">座號：</label>
+            <input type="text" class="form-control input-lg" id="" placeholder="請輸入座號">
+          </div>
+          <div class="form-group">
+            <label for="">測驗通行碼：</label>
+            <input type="text" class="form-control input-lg" id="" placeholder="請輸入測驗通行碼">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-default">開始測驗</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

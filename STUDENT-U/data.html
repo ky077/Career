@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生涯測驗系統-大學版-學生端</title>
+<link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/rwd-table.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- -->
+<div class="header">
+  <div class="container">
+    <div class="header-tools">
+      <div class="pull-right">
+        <span class="account">account001</span><a class="logout_btn" href="data.html">會員中心</a><a class="logout_btn" href="index.html">登出</a>
+      </div>
+    </div>
+    <img src="images/banner.png" class="img-responsive img-brand center-block">
+  </div>
+</div>
+<!-- -->
+<div class="banner">
+  <div class="container">
+  </div>
+</div>
+<!-- -->
+<div class="main">
+  <div class="container">
+    <div class="title">
+      王小明，歡迎進入！
+    </div>
+    <!-- -->
+    <div class="tools clearfix">
+      <ul class="data clearfix pull-left">
+        <li>學校：
+          <label>國立臺灣師範大學</label>
+        </li>
+        <li>學號：
+          <label>12345678</label>
+        </li>
+      </ul>
+      <ul class="nav clearfix pull-right">
+        <li><a href="test-3.html">考試入口</a></li>
+        <li><a href="download.html">報表下載</a></li>
+      </ul>
+    </div>
+    <!-- -->
+    <h2 class="text-center">基本資料</h2>
+    <br>
+    <div class="for-data">
+      <form class="form-horizontal" action="">
+        <div class="form-group">
+          <label for="" class="col-sm-3 col-lg-2 control-label">帳號：</label>
+          <div class="col-sm-9 col-lg-10">
+            <input type="text" class="form-control input-lg" id="" placeholder="請輸入身分統一編號" value="A123******" disabled>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="" class="col-sm-3 col-lg-2 control-label">密碼：</label>
+          <div class="col-sm-9 col-lg-10">
+            <div class="input-group">
+              <input type="text" class="form-control input-lg" value="**********" disabled>
+              <span class="input-group-btn">
+              <button class="btn btn-default btn-lg btn-changePD" type="button" data-toggle="modal" data-target="#modal-changePD">修改密碼</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="" class="col-sm-3 col-lg-2 control-label">姓名：</label>
+          <div class="col-sm-9 col-lg-10">
+            <input type="text" class="form-control input-lg" id="" placeholder="請輸入姓名" value="王小明">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="" class="col-sm-3 col-lg-2 control-label">性別：</label>
+          <div class="col-sm-9 col-lg-10">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="" value="" checked>
+              男 </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="" value="">
+              女 </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-3 col-lg-2 control-label">生日： </label>
+          <div class="col-sm-9 col-lg-10">
+            <div class="form-inline">
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option selected>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+              </select>
+              年
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option selected>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              月
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option selected>5</option>
+              </select>
+              日
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="" class="col-sm-3 col-lg-2 control-label">E-Mail：</label>
+          <div class="col-sm-9 col-lg-10">
+            <input type="email" class="form-control input-lg" id="" placeholder="請輸入E-Mail" value="A123@gmail.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-3 col-lg-2 control-label">學校：</label>
+          <div class="col-sm-9 col-lg-10">
+            <div class="form-inline">
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option selected>台北市</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option selected>高中</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option selected>市、縣立</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option selected>大同高中</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="" class="col-sm-3 col-lg-2 control-label">群組/組別：</label>
+          <div class="col-sm-9 col-lg-10">
+            <div class="form-inline">
+              <select class="form-control input-lg">
+                <option>請選擇</option>
+                <option selected>社會</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+            <button type="submit" class="btn btn-default btn-lg" onclick="alert('基本資料已成功修改！')">確認修改</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- -->
+  </div>
+</div>
+<!-- -->
+<div class="footer">
+  <div class="container">
+    © 2018 College of Education e-Learning Lab, NTNU. All rights reserved.<br>
+    國立臺灣師範大學 心理與教育測驗研究發展中心 • 數位學習研究室<br>
+    電話：(02)2351-7160│傳真：(02)2351-7160│地址：台北市和平東路一段129號 <br>
+  </div>
+</div>
+<!-- --> 
+<!-- Modal #modal-changePD-->
+<div class="modal fade" id="modal-changePD" tabindex="-1" role="dialog" aria-labelledby="modal-changePDLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改密碼</h4>
+      </div>
+      <div class="modal-body">
+        <!-- -->
+        <form>
+          <div class="form-group">
+            <label for="">新密碼：</label>
+            <input type="password" class="form-control  input-lg" id="" placeholder="請輸入以英數位元設置6-20位元的密碼">
+          </div>
+          <div class="form-group">
+            <label for="">確認新密碼：</label>
+            <input type="password" class="form-control  input-lg" id="" placeholder="請再次輸入新密碼">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-default" onclick="alert('密碼已修改！')">確認修改</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
