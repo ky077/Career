@@ -711,5 +711,5 @@
       </g>
     </g>
   </g>
-  <image id="IP" class="st6" width="1100" height="926" transform="translate(297.3 171.9) scale(.1)" xlink:href="xmind_IP.png"/>
+  <image id="IP" class="st6" width="1100" height="926" transform="translate(295 175) scale(.1)" xlink:href="xmind_IP.png"/>
 </svg>
