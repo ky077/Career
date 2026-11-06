@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #344154;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        font-family: AdobeMingStd-Light-B5pc-H, 'Adobe Ming Std';
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      .cls-3 {
+        fill: #0039ac;
+        isolation: isolate;
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g id="_圖層_1-2" data-name="_圖層_1">
+        <g id="_圖層_1-2">
+          <g id="_圖層_1-2-2" data-name="_圖層_1-2">
+            <g>
+              <g>
+                <path class="cls-1" d="M97.2,50.2c0-19.1-16.2-34.5-35.6-33.2-16.3,1.1-29.5,14.2-30.8,30.4-.8,10.2,3,19.5,9.4,26.2,3.7,3.8,5.9,8.6,5.9,13.9h35.7c0-5.3,2-10.1,5.6-13.7,6.1-6.1,9.8-14.4,9.8-23.6h0Z"/>
+                <path class="cls-1" d="M40.9,48c.9-11.3,10.2-20.4,21.5-21.2h1.7c5.9,0,11.2,2.2,15.4,5.8"/>
+                <line class="cls-1" x1="45.9" y1="94.6" x2="82.1" y2="94.6"/>
+                <path class="cls-1" d="M45.9,101.7h36.1v2.1c0,8.3-6.7,15.2-15.2,15.2h-5.8c-8.3,0-15.2-6.7-15.2-15.2v-2.1h0Z"/>
+                <path class="cls-1" d="M58.6,119.3v1.9c0,3,2.4,5.4,5.4,5.4h0c3,0,5.4-2.4,5.4-5.4v-1.9"/>
+                <path class="cls-3" d="M52.8,79.8c-.9-3-2.3-5.8-4.2-8.3,21.8-.5,34.8-11.5,40.7-18.2-.7,5.7-3.3,10.9-7.3,15-3.2,3.2-5.6,7.1-6.7,11.5h-22.5Z"/>
+              </g>
+              <g>
+                <line class="cls-1" x1="64" y1="9.1" x2="64" y2="1.5"/>
+                <line class="cls-1" x1="49.9" y1="11.9" x2="47.3" y2="4.8"/>
+                <line class="cls-1" x1="37.7" y1="19.4" x2="32.8" y2="13.5"/>
+                <line class="cls-1" x1="28.7" y1="30.5" x2="22.1" y2="26.7"/>
+                <line class="cls-1" x1="78.1" y1="11.9" x2="80.7" y2="4.8"/>
+                <line class="cls-1" x1="90.3" y1="19.4" x2="95.3" y2="13.5"/>
+                <line class="cls-1" x1="99.3" y1="30.5" x2="105.9" y2="26.7"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <text class="cls-2" transform="translate(52 157.6)"><tspan x="0" y="0">創意</tspan></text>
+    </g>
+  </g>
+</svg>

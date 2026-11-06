@@ -1,0 +1,69 @@
+.map{
+	.page-content{
+		background-color: rgba($white, .75);
+	}	
+	a{
+		display: inline-block;
+		border-radius: $border-radius;
+		color: $secondary;
+		text-decoration: none;
+		padding: .25rem .5rem;
+		&:hover{
+			background-color: $tertiary;
+		}
+	}
+}
+.map-nav{
+	list-style: decimal;
+	list-style-position: inside;
+	> li{
+		margin-bottom: $spacer;
+	}
+}
+.map-explore-nav{
+	border-left: 1px solid $border-color;
+	list-style: none;
+	margin-left: .25rem;
+	padding-left: 1rem;
+	position: relative;
+	> li{
+		margin-bottom: $spacer;
+		position: relative;
+		.explore-nav-title{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-left: -1rem;
+			&::before, &::after{
+				content: "";
+				display: inline-block;
+				height: 1px;
+				background-color: $border-color;
+			}
+			&::before {
+				width: 1rem;
+				margin-right: .5rem;
+			}
+			&::after{
+				flex: 1;
+				margin-left: .5rem;
+			}
+		}
+		> ul{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			> li{ 
+				width: 100%;
+				margin-bottom: $spacer*.5;
+				color: $secondary-600;
+				@media screen and (min-width: 576px) {
+				width: 50%;	
+				}
+				@media screen and (min-width: 1200px) {
+				width: 25%;	
+				}
+			}
+		}	
+	}
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: MingLiU, MingLiU;
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #344154;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-4 {
+        fill: #0bf;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g id="_圖層_1-2">
+        <g id="_圖層_1-2-2" data-name="_圖層_1-2">
+          <g>
+            <g>
+              <path class="cls-3" d="M54.7,60.3l10.9-10.9,58.7,58.7c3,3,3,7.8,0,10.9h0c-3,3-7.8,3-10.9,0,0,0-58.7-58.7-58.7-58.7Z"/>
+              <polyline class="cls-3" points="65.6 49.5 48.1 43 54.7 60.3"/>
+              <line class="cls-3" x1="118.3" y1="102.3" x2="107.4" y2="113.1"/>
+            </g>
+            <path class="cls-3" d="M101.1,114.9H13.4V2.3h64.7c4.4,0,7.8,3.5,7.8,7.8v14.5h14.5c4.4,0,7.8,3.5,7.8,7.8v51.3"/>
+            <polyline class="cls-3" points="13.4 13.6 1.5 13.6 1.5 125.7 94.8 125.7 94.8 114.9"/>
+            <line class="cls-3" x1="42.8" y1="43" x2="25.6" y2="43"/>
+            <line class="cls-3" x1="45.8" y1="52.7" x2="25.6" y2="52.7"/>
+            <line class="cls-3" x1="49.2" y1="63.2" x2="25.6" y2="63.2"/>
+            <polygon class="cls-4" points="19.2 34.3 45.4 8.1 19.2 8.1 19.2 34.3"/>
+          </g>
+        </g>
+      </g>
+      <g class="cls-2">
+        <text class="cls-1" transform="translate(52 156.6)"><tspan x="0" y="0">語文</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
