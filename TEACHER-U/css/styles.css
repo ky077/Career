@@ -236,7 +236,10 @@ img.noBg {
 
 input, button, select, textarea {
   line-height: normal;
-  font-weight: normal; }
+  font-weight: normal;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px; }
   @media screen and (max-width: 768px) {
     input, button, select, textarea {
       margin-bottom: 4px; } }

@@ -107,14 +107,24 @@
       </div>
       <!-- ------- ------- ------- ------- ------- ------- ------- -->
       <div class="content_position">
-        <div class="step"><span class="Normal" style=" color:#299bff;">您所在的登記場次步驟：</span>選擇施測方式 <img src="../images/step_arrow.png" width="20" height="20" /> 填寫施測資訊 <img src="../images/step_arrow.png" width="20" height="20" /> 設定報表開放方式 <img src="../images/step_arrow.png" width="20" height="20" /> <span style="color:#0368d4; font-weight:bold;">確認並建立</span></div>
+        <div class="step"><span class="Normal" style=" color:#299bff;">您所在的登記場次步驟：</span>選擇施測方式 <img src="../images/step_arrow.png" width="20" height="20" /> 填寫施測資訊 <img src="../images/step_arrow.png" width="20" height="20" /> 報表開放設定 <img src="../images/step_arrow.png" width="20" height="20" /> <span style="color:#0368d4; font-weight:bold;">確認建立</span></div>
         <!-- ------- ------- ------- ------- ------- ------- ------- -->
         <ul class="content_block">
           <li>
             <dl>
-              <dt>確認並建立</dt>
+              <dt>確認建立</dt>
               <dd>
-               恭喜已成功建立。
+                <p>請確認以下登記資料，確認無誤後按「確定登記場次」完成。</p>
+                <p id="booking-summary-missing" role="alert" hidden>找不到本次登記資料，請回到登記流程重新填寫。</p>
+                <div class="table-responsive">
+                  <table class="table2">
+                    <tbody id="booking-summary-rows"></tbody>
+                  </table>
+                </div>
+                <div class="bookin-btns">
+                  <input type="button" name="BookingPrevious" id="BookingPrevious" value="上一步" class="normalBtn style4">
+                  <input type="button" name="BookingConfirm" id="BookingConfirm" value="確定登記場次" class="normalBtn style4">
+                </div>
               </dd>
             </dl>
           </li>
@@ -149,6 +159,98 @@
 <script>
 $(function(){
 	$(".personality").addClass('active');
+	var modeMatch = window.location.search.match(/[?&]mode=(self|group|consult)(?:&|$)/);
+	var mode = modeMatch ? decodeURIComponent(modeMatch[1]) : '';
+	var draft = {};
+	try { draft = JSON.parse(sessionStorage.getItem('careerTestBookingDraft') || '{}'); } catch (error) { draft = {}; }
+	var modeNames = { self: '\u81ea\u4e3b\u65bd\u6e2c', group: '\u5718\u9ad4\u65bd\u6e2c', consult: '\u500b\u5225\u8aee\u5546' };
+	var accessNames = { immediate: '\u5b8c\u6210\u6e2c\u9a57\u5f8c\u7acb\u5373\u958b\u653e', scheduled: '\u6307\u5b9a\u65e5\u671f\u6642\u9593\u958b\u653e', admin: '\u7531\u5b78\u6821\u7ba1\u7406\u8005\u958b\u653e' };
+	var body = document.getElementById('booking-summary-rows');
+	var missingText = '\u672a\u586b\u5beb';
+	function addRow(label, value) {
+		var row = document.createElement('tr');
+		var heading = document.createElement('th');
+		var cell = document.createElement('td');
+		heading.className = 'toRight';
+		heading.textContent = label;
+		if (value) {
+			cell.textContent = value;
+		} else {
+			cell.textContent = missingText;
+			cell.style.color = '#ccc';
+		}
+		row.appendChild(heading);
+		row.appendChild(cell);
+		body.appendChild(row);
+	}
+	function normalizeLabel(label) {
+		return label.replace(/[*\s]/g, '').trim();
+	}
+	function detailValue(labels) {
+		var details = draft.details || [];
+		for (var i = 0; i < details.length; i++) {
+			var label = normalizeLabel(details[i].label);
+			for (var j = 0; j < labels.length; j++) {
+				if (label === normalizeLabel(labels[j])) return details[i].value;
+			}
+		}
+		return '';
+	}
+	if (modeNames[mode] && draft.mode === mode) {
+		var testName = detailValue(['\u65bd\u6e2c\u540d\u7a31', '\u6e2c\u9a57\u540d\u7a31']);
+		var periodLabels = mode === 'self' ? ['\u65bd\u6e2c\u671f\u9593'] : (mode === 'group' ? ['\u9810\u5b9a\u65bd\u6e2c\u671f\u9593'] : ['\u5efa\u8b70\u5b8c\u6210\u671f\u9593']);
+		var period = detailValue(periodLabels);
+		var audience = detailValue(['\u65bd\u6e2c\u5c0d\u8c61']);
+		if (mode === 'group' && audience) {
+			audience = audience.split('\u3001').map(function(item) {
+				return item.replace(/^[^\uff1a]+\uff1a/, '').trim();
+			}).filter(Boolean).join(' ');
+		}
+		var headcount = detailValue(['\u53ef\u65bd\u6e2c\u4eba\u6578', '\u9810\u8a08\u4eba\u6578']);
+		if (mode === 'self') {
+			var separator = '\u3001';
+			var periodParts = period ? period.split(separator).map(function(item) { return item.trim(); }) : [];
+			if (periodParts[0] === '\u4e0d\u9650') period = '\u4e0d\u9650';
+			else if (periodParts[0] === '\u6307\u5b9a\u671f\u9593') period = periodParts.slice(1).filter(Boolean).join(' ' + '\u81f3' + ' ');
+			var audienceParts = audience ? audience.split(separator).map(function(item) { return item.trim(); }) : [];
+			if (audienceParts[0] === '\u4e0d\u9650') audience = '\u4e0d\u9650';
+			else if (audienceParts[0] === '\u6307\u5b9a\u5e74\u7d1a') {
+				audience = audienceParts.slice(1).filter(function(item) { return item && item !== '\u8acb\u9078\u64c7'; }).join(separator);
+			}
+		}
+		if (headcount) {
+			var countParts = headcount.split('\u3001').map(function(item) { return item.trim(); });
+			if (countParts.indexOf('\u4e0d\u9650') >= 0) headcount = '\u4e0d\u9650';
+			else {
+				headcount = countParts.filter(function(item) { return item && item !== '\u4e0a\u9650'; }).join(' ');
+				if (headcount) headcount += ' \u4eba';
+			}
+		}
+		if (mode === 'consult' && !headcount) headcount = '1 \u4eba\uff08\u500b\u5225\u8aee\u5546\u9810\u8a08\uff09';
+		var passcode = detailValue(['\u901a\u884c\u78bc']);
+		var note = detailValue(['\u5099\u8a3b']);
+		var access = accessNames[draft.reportAccess] || '';
+		if (draft.reportAccess === 'scheduled') {
+			access += draft.reportOpenDate ? '\uff08' + draft.reportOpenDate.replace('T', ' ') + '\uff09' : ' \uff08\u5c1a\u672a\u8a2d\u5b9a\u65e5\u671f\uff09';
+		}
+		addRow('\u6e2c\u9a57\u540d\u7a31', testName);
+		addRow('\u65bd\u6e2c\u65b9\u5f0f', modeNames[mode]);
+		addRow('\u65bd\u6e2c\u671f\u9593', period);
+		addRow('\u65bd\u6e2c\u5c0d\u8c61', audience);
+		addRow('\u65bd\u6e2c\u4eba\u6578', headcount);
+		addRow('\u5831\u8868\u958b\u653e', access);
+		addRow('\u6e2c\u9a57\u901a\u884c\u78bc', passcode);
+		addRow('\u5099\u8a3b', note);
+	} else {
+		document.getElementById('booking-summary-missing').hidden = false;
+	}
+	document.getElementById('BookingPrevious').addEventListener('click', function() {
+		window.location.href = mode ? 'TestBookin_3.html?mode=' + encodeURIComponent(mode) + '&restore=1' : 'TestBookin_3.html';
+	});
+	document.getElementById('BookingConfirm').addEventListener('click', function() {
+		alert("\u5df2\u6210\u529f\u5efa\u7acb\u5834\u6b21");
+		window.location.href = 'TestList.html';
+	});
 });
 </script> 
 <!-- InstanceEndEditable -->

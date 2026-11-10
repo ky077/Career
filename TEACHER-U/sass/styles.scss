@@ -39,7 +39,7 @@ a.disabled{
 	font-weight: bold;
 }
 .red {
-	color: #F00
+	color: #F00;
 }
 .toLeft {
 	text-align: left;
@@ -90,6 +90,9 @@ img.noBg{
 input, button, select, textarea {
     line-height: normal;
 	font-weight:normal;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 6px;
 	@media screen and (max-width: 768px) {
 		margin-bottom:4px;
 	}
