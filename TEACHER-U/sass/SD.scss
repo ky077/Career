@@ -1,0 +1,85 @@
+@import "navbarStyles";
+@import "table";
+@import "content_blockStyles";
+@import "stepStyles";
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+
+$test-name: "SD";
+$test-color: #806b51;
+
+.navbar{
+	@include navbarStyles($word-color: $test-color, $active-color: #ac6a00);
+}
+.table, .table1, .table2{
+	@include tableStyles($dark-color: $test-color, $light-color: #e0c7a9);	
+}
+.content_block{
+	@include content_blockStyles($get-Dtcolor:$test-color, $get-path:$test-name, $get-subtitlecolor:#a84200);
+}
+.step{
+	@include stepStyles($get-path:$test-name);
+}
+
+input[type=button],
+input[type=submit], 
+input[type=reset]{
+	border-color: $test-color;
+	background-color: $test-color;
+	&.lightenBtn{
+		color: $test-color;
+	}
+	&:hover{
+		background-color: rgba( lighten($test-color, 20%) ,.5);
+		color: $test-color;
+	}
+}
+.pages{
+	> a, > input{
+		border-color: $test-color;
+		background-color: $test-color;
+		&:hover, &:focus, &:active{
+			background-color:rgba( lighten($test-color, 20%) ,.5);
+			color: $test-color;
+		}
+	}
+	> select{
+		border:1px solid $test-color;
+	}
+}
+
+//only use in StudentData
+.btn-normal, .btn-normal:visited{ 
+	display:inline-block;
+	color:#fff;
+	font-weight:normal;
+	padding: 1px 6px;
+	font-size: .9em;
+  min-height: 34px;
+	vertical-align:middle;
+	text-decoration:none;
+	border: 1px solid #806b51;
+	background-color: #806b51;
+	white-space: pre-wrap;
+	border-radius: 5px;
+	strong{
+		color:#FFFFCC;
+		text-decoration: underline;
+		margin: 0 .25em;
+	}
+	@media screen and (max-width: 768px) {
+		margin-bottom:4px;
+	}
+	&:hover{
+		background-color: rgba( lighten(#806b51, 20%) ,.5);
+		color: #806b51;
+		text-decoration:none;
+		cursor:pointer;
+	}
+	&.disabled{
+		border-color: #d6d6d6;
+		color: #d6d6d6;
+		cursor: not-allowed;
+		background-color: transparent;
+	}		
+}

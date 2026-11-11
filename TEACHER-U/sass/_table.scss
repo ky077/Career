@@ -1,0 +1,140 @@
+@mixin tableStyles($dark-color: #666, $light-color: #ECE9D8) {
+	width:100%;
+	margin-right: auto;
+	margin-left: auto;
+	color: #333;
+	font-size: .9em;
+	text-shadow: none;
+	line-height: 1.25;
+	@media screen and (max-width: 992px) {
+	white-space: nowrap;
+	}
+	> thead > tr{
+		> th{
+			padding: .75em .5em;
+			border: 1px solid darken($light-color, 10%);
+			background-color: $dark-color;
+			color:#FFF;
+			vertical-align: middle;
+			text-shadow:none;
+			font-weight: bold;
+			input[type=button],
+			input[type=submit], 
+			input[type=reset]{ 
+				&.lightenBtn{
+					&:hover{
+						color: #fff;
+					}
+				}
+			}
+		}
+		> td{
+			padding: .75em .5em;
+			border: 1px solid darken($light-color, 10%);
+			background-color: transparent;
+		}
+	}
+	> tbody > tr{
+		> th{
+			padding: .75em .5em;
+			border: 1px solid darken($light-color, 10%);
+			background-color: rgba($light-color, .65);
+			color: $dark-color;
+			font-weight: bolder;
+		}
+		> td{
+			padding: .75em .5em;
+			border: 1px solid darken($light-color, 10%);
+			background-color: transparent;
+		}
+	}
+	> tfoot > tr{
+		> th, > td,
+		> th:hover, > td:hover {
+			border: 0px;
+			text-align:center;
+			padding: .75em 0px;
+			background-color: transparent;
+		}
+	}
+}
+
+.table3 {
+	width:100%;
+	background-color:#FFF;
+	> thead > tr {
+		> th {
+			background-color: #999;
+			text-align: center;
+			font-weight: normal;
+			color:#FFF;
+			padding: .5em;
+			border: 1px solid #ebebeb;
+			text-shadow:none;
+		}
+	}
+	> tbody > tr{
+		> th {
+			background-color: #999;
+			text-align: center;
+			font-weight: normal;
+			color:#FFF;
+			padding: .5em;
+			border: 1px solid #ebebeb;
+			text-shadow:none;
+		}
+		> td {
+			text-align: center;
+			padding: .5em;
+			border: 1px solid #ebebeb;
+
+		}
+	}
+	> tfoot > tr{
+		> th, > td,
+		> th:hover, > td:hover {
+			border: 0px;
+			text-align:center;
+			padding: .5em 0px;
+			background-color: transparent;
+		}
+	}
+}
+
+.table0 {
+	width:100%;
+	> thead, > tbody, >tfoot{
+		> tr{
+			> th, >td {
+				border: 0px;
+				padding:5px 4px;
+			}
+		}
+	}
+}
+
+.tableTRColor{
+	tbody{
+		tr:nth-child(even) {
+			td{
+				/*background-color: #f5f5f5;*/
+			}
+		}
+		tr:hover {
+			td{
+				background-color: #f8f5e2;
+			}
+		}
+	}
+}
+
+.table {
+	width:100%;
+}
+
+.tableCenter{
+	th, td{
+		text-align:center;
+		vertical-align:middle;
+	}
+}

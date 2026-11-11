@@ -1,0 +1,49 @@
+@import "navbarStyles";
+@import "table";
+@import "content_blockStyles";
+@import "stepStyles";
+
+/* ******* ******* ******* ******* ******* ******* ******* */
+
+$test-name: "TW";
+$test-color: #bd593f;
+
+.navbar{
+	@include navbarStyles($word-color: $test-color, $active-color: #d48647);
+}
+.table, .table1, .table2{
+	@include tableStyles($dark-color: $test-color, $light-color: #fdedda);	
+}
+.content_block{
+	@include content_blockStyles($get-Dtcolor:#862809, $get-path:$test-name, $get-subtitlecolor:#cd8000);
+}
+.step{
+	@include stepStyles($get-path:$test-name);
+}
+
+input[type=button],
+input[type=submit], 
+input[type=reset]{
+	border-color: $test-color;
+	background-color: $test-color;
+	&.lightenBtn{
+		color: $test-color;
+	}
+	&:hover{
+		background-color: rgba( lighten($test-color, 20%) ,.5);
+		color: $test-color;
+	}
+}
+.pages{  
+	> a, > input{
+		border-color: $test-color;
+		background-color: $test-color;
+		&:hover, &:focus, &:active{
+			background-color:rgba( lighten($test-color, 20%) ,.5);
+			color: $test-color;
+		}
+	}
+	> select{
+		border:1px solid $test-color;
+	}
+}
